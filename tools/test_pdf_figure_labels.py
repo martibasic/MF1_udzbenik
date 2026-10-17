@@ -50,6 +50,27 @@ class FigureLabelTests(unittest.TestCase):
         self.assertTrue(figure_label_issues(document, {'1.1': ['fluid']}))
         self.assertTrue(figure_font_issues(document))
 
+    def test_index_has_own_minimum_only_next_to_its_label(self):
+        # F_L in a print figure: label 9.5 pt, index about 70 % of it.
+        document = pymupdf.open()
+        self.addCleanup(document.close)
+        page = document.new_page(width=595.276, height=841.89)
+        page.insert_text((75, 100), 'F', fontsize=9.5)
+        width = pymupdf.get_text_length('F', fontsize=9.5)
+        page.insert_text((75 + width, 102), 'L', fontsize=6.65)
+        page.insert_text((75, 140), 'Slika 1.1: Tank', fontsize=9.5)
+        self.assertEqual(figure_font_issues(document), [])
+        self.assertEqual(figure_label_issues(document, {'1.1': ['FL']}), [])
+        lone = self.document([[(100, 'fluid', 6.65), (160, 'Slika 1.1: Tank', 9.5)]])
+        self.assertTrue(figure_font_issues(lone))
+        self.assertTrue(figure_label_issues(lone, {'1.1': ['fluid']}))
+        tiny = pymupdf.open()
+        self.addCleanup(tiny.close)
+        page = tiny.new_page(width=595.276, height=841.89)
+        page.insert_text((75, 100), 'F', fontsize=9.5)
+        page.insert_text((75 + width, 102), 'L', fontsize=5.5)
+        self.assertTrue(figure_font_issues(tiny))
+
     def test_body_text_and_running_header_cannot_supply_label(self):
         document = self.document([[(30, 'header', 9), (100, 'body', 11),
                                    (160, 'Slika 1.1: Tank', 9.5)]])

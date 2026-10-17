@@ -5,6 +5,7 @@
     "title": "Mehanika fluida: modeli, problemi i rješenja",
     "subtitle": "Priručnik za samostalan rad s numeričkim pokusima i primjenama u brodogradnji i strojarstvu",
     "author": "Martina Bašić",
+    "description": "Sveučilišni priručnik iz mehanike fluida s riješenim primjerima, zadatcima za vježbu i numeričkim pokusima u pregledniku, uz primjene u brodogradnji i strojarstvu.",
     "output-file": "mehanika-fluida-1"
   },
   "site_url": "https://martibasic.github.io/MF1_udzbenik/",
@@ -142,12 +143,13 @@
       "equation_topic": "relativno-mirovanje"
     },
     "u05": {
-      "title": "Hidrostatske sile na ravne i zakrivljene plohe",
+      "title": "Hidrostatičke sile na ravne i zakrivljene plohe",
       "source": "source/u05_hidrostatske_sile_na_plohe.md",
       "path": "chapters/u05_hidrostatske_sile_na_plohe.qmd",
       "catalog_title": "Sile na plohe",
       "description": "Ravne i zakrivljene plohe, hvatišta, momenti i predznaci.",
       "title_aliases": [
+        "Hidrostatske sile na ravne i zakrivljene plohe",
         "Hidrostatske sile na ravne plohe",
         "Zakrivljene plohe i rastav sila"
       ],
@@ -369,7 +371,7 @@
       "title": "Numerička mehanika fluida",
       "source": "source/d04_numericka_mehanika_fluida.md",
       "path": "chapters/d04_numericka_mehanika_fluida.qmd",
-      "catalog_title": "Numerika i CFD V&amp;V",
+      "catalog_title": "Numerika i CFD V&V",
       "description": "Očuvanje, konvergencija, verifikacija, validacija i nesigurnost.",
       "role": "numerics"
     },

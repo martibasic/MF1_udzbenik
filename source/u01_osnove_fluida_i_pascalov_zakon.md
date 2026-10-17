@@ -4,23 +4,17 @@ Iako je fluid građen od molekula, u tehničkim proračunima promatramo ga kao n
 
 Tlak je okomita sila po jedinici površine, $p=F_n/A$. U mirujućem fluidu tlak je u istoj točki jednak u svim smjerovima, pa je skalarna veličina, iako se od točke do točke može mijenjati. Porast tlaka s dubinom obrađuje se u []{.mf1-chapter-ref target="u03"}.
 
-Pascalov zakon kaže da se promjena tlaka nametnuta na jednom mjestu zatvorenog mirujućeg fluida prenosi nesmanjena u sve njegove točke. U hidrauličkim sustavima tlak koji stvaraju klipovi mnogo je veći od razlika tlaka zbog visine, pa je tlak u cijelom sustavu praktički isti: $p=F_1/A_1=F_2/A_2$. Mala sila $F_1$ na malom klipu zato daje veliku silu $F_2=(A_2/A_1)F_1$ na velikom klipu. Energija se pritom ne stvara: ulje je nestlačivo, pa su istisnuti volumeni jednaki, $A_1s_1=A_2s_2$, pa veliki klip prijeđe proporcionalno kraći put, a u idealnom modelu bez gubitaka vrijedi $F_1s_1=F_2s_2$.
+Pascalov zakon kaže da se promjena tlaka nametnuta na jednom mjestu zatvorenog mirujućeg fluida prenosi nesmanjena u sve njegove točke. U hidrauličkim sustavima tlak koji stvaraju klipovi mnogo je veći od razlika tlaka zbog visine, pa je porast tlaka u cijelom sustavu praktički isti: $\Delta p=F_1/A_1=F_2/A_2$. Mala sila $F_1$ na malom klipu zato daje veliku silu $F_2=(A_2/A_1)F_1$ na velikom klipu. Energija se pritom ne stvara. Ulje je nestlačivo, pa su istisnuti volumeni jednaki, $A_1s_1=A_2s_2$: veliki klip prijeđe proporcionalno kraći put, a u idealnom modelu bez gubitaka vrijedi $F_1s_1=F_2s_2$.
 
 Na tom se načelu temelje hidrauličke dizalice i preše, kočnice vozila te brodski kormilarski strojevi. Poglavlje redom obrađuje kontinuumski model i tlak, osnovne veličine fluida i Pascalov zakon, a zatim ih primjenjuje na hidraulički prijenos sile. Pritom pokazuje i granice idealnog modela: gubitke, stlačivost, propuštanje i visinske razlike.
 
-Sljedeća slika sažima te tri ideje. Lijevo okolni fluid tlačnim silama sabija mali element sa svih strana. U sredini jednaki volumeni ulja i vode imaju različite gustoće, a time i različite mase i težine. Desno je Pascalov prijenos: sila $F_1$ djeluje na mali klip, a $F_2$ je sila ulja na veliki klip, uz zanemarene visinske razlike, gubitke i stlačivost.
+Slika [-@fig-uvod-u01] sažima te tri ideje. Lijevo okolni fluid tlačnim silama sabija mali element sa svih strana. U sredini jednaki volumeni ulja i vode imaju različite gustoće, a time i različite mase i težine. Desno je Pascalov prijenos: sila $F_1$ djeluje na mali klip, a $F_2$ je sila ulja na veliki klip, uz zanemarene visinske razlike, gubitke i stlačivost.
 
-![Kontinuum i tlačne sile na mali element, svojstva ulja i vode te Pascalov prijenos između povezanih klipova](../assets/print/u01_fig_uvod_pregled.svg){#fig-uvod-u01 fig-align="center" fig-alt="Kontinuum i tlačne sile na mali element, svojstva ulja i vode te Pascalov prijenos između povezanih klipova"}
-
-## Fluid kao kontinuum
-
-::: {.mf1-application}
-<p class="mf1-box-label">Inženjerski kontekst</p>
-
-Hidrauličke dizalice, preše za oblikovanje lima i brodski kormilarski pogoni temelje se na prijenosu tlaka zatvorenim fluidom. U takvim sustavima tlak povezuje ulaznu silu, geometriju cilindara i radnu silu aktuatora.
-:::
+![Okolni fluid tlačnim silama djeluje na mali element kontinuuma, jednaki volumeni ulja i vode imaju različitu težinu, a ulje prenosi tlak s malog na veliki klip.](../assets/print/u01_fig_uvod_pregled.svg){#fig-uvod-u01 fig-align="center" fig-alt="Tri panela: kvadratni element fluida sa strelicama tlaka sa svih strana, dvije posude s po jednom litrom ulja i vode te dva klipa povezana uljem sa silama F1 i F2."}
 
 **Procijenjeno vrijeme rada uz priručnik:** 8 sati.
+
+## Fluid kao kontinuum
 
 ### Kontinuumski model
 
@@ -32,7 +26,9 @@ Polja $p(x,y,z)$ i $\rho(x,y,z)$ matematički opisuju prostornu raspodjelu tlaka
 
 **Rashladni krug: od uređaja do modela.** Zamislimo tekućinsko hlađenje baterije: crpka šalje rashladnu tekućinu kroz razdjelnik u uske kanale hladne ploče. Želimo saznati prima li svaki kanal dovoljno tekućine. Računalna dinamika fluida (CFD, engl. *Computational Fluid Dynamics*) iz zakona očuvanja računa približna polja brzine i tlaka. Najprije izdvajamo prostor unutar razdjelnika i kanala; u metodi konačnih volumena taj prostor dijelimo na male ćelije, povezane protocima i silama.
 
-Za prvi model pretpostavimo potpuno napunjen sustav i stalnu temperaturu. Stijenke, ulaz i izlazi čine granice na kojima zadajemo ponašanje fluida. Takav model može pokazati nejednoliku podjelu toka, a temperaturu baterije dobit ćemo tek kada uključimo i prijenos topline. Ćelija je dio kontinuuma, a ne molekula. Taj krug u nastavku proširujemo svojstvima fluida, gubitcima i crpkom.
+Za prvi model pretpostavimo potpuno napunjen sustav i stalnu temperaturu. Stijenke, ulaz i izlazi čine granice na kojima zadajemo ponašanje fluida. Takav model može pokazati nejednoliku podjelu toka, a temperaturu baterije dobit ćemo tek kada uključimo i prijenos topline. Ćelija je dio kontinuuma, a ne molekula.
+
+Svojstva rashladne tekućine (vode ili smjese vode i glikola) ulazni su podatci modela: gustoću zadajemo u $\mathrm{kg/m^3}$ pri radnoj temperaturi, a za otpor strujanju i odvođenje topline trebaju još viskoznost i toplinska svojstva. Drukčije obojeno polje u prikazu ne ispravlja pogrešno zadana svojstva; pojmove CFD modela sabire @sec-cfd-mapa. Taj krug u nastavku proširujemo svojstvima fluida, gubitcima i crpkom.
 :::
 
 ### Tlak
@@ -87,7 +83,7 @@ $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-02}
 1. Odredi specifičnu težinu $\gamma$.
 2. Odredi relativnu gustoću $s_r$.
 
-![Usporedba gustoće, mase i težine jednakih volumena ulja i vode.](../assets/print/u01_fig_gustoca_sr.svg){#fig-u01-gustoca-sr fig-align="center" fig-alt="Usporedba gustoće, mase i težine jednakih volumena ulja i vode."}
+![Usporedba gustoće, mase i težine jednakih volumena ulja i vode.](../assets/print/u01_fig_gustoca_sr.svg){#fig-u01-gustoca-sr fig-align="center" fig-alt="Lijevo posuda s uljem i strelicom težine u težištu ulja, desno dvije jednako napunjene posude s uljem i vodom i strelicama težina u omjeru gustoća."}
 
 **Uz skicu.** Lijevo je ulje u posudi: težina $F_G$ odnosi se samo na ulje, bez posude, i djeluje u njegovu težištu. Desno su jednaki volumeni ulja i vode, napunjeni do iste razine. Strelice njihovih težina, $F_G$ i $F_{G,v}$, nacrtane su u omjeru gustoća, pa je njihov omjer upravo relativna gustoća $s_r=\rho/\rho_v$.
 
@@ -110,13 +106,6 @@ $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-04}
 Jedinice: $[\rho g]=\mathrm{kg\,m^{-3}\cdot m\,s^{-2}}=\mathrm{N/m^3}$, a $s_r$ je bezdimenzijski; $s_r<1$ znači da je ulje lakše od vode.
 :::
 
-::: {.mf1-cfd title="Računalna dinamika fluida"}
-
-**Voda ili smjesa vode i glikola?** U istom rashladnom krugu izbor tekućine mijenja masu sadržanu u kanalima i sile potrebne za njezino ubrzavanje. U izotermnom CFD modelu zadajemo gustoću pri radnoj temperaturi, a gravitaciju uključujemo kada je važna za promatrani problem. Zadanu relativnu gustoću najprije pretvaramo u gustoću u $\mathrm{kg/m^3}$. Ako uspoređujemo dvije tekućine pri jednakom volumenskom protoku, njihovi maseni protoci ne moraju biti jednaki.
-
-Sama gustoća nije dovoljna za izbor rashladne tekućine: za otpor strujanju trebamo viskoznost, a za odvođenje topline još i toplinska svojstva. Zato valja razlikovati ulazne podatke modela od njegova rezultata. Drukčije obojeno polje u prikazu ne ispravlja pogrešno zadana svojstva.
-:::
-
 ## Pascalov zakon
 
 Pascalov zakon kaže da se promjena tlaka nametnuta zatvorenom fluidu u mirovanju prenosi neumanjena na sve dijelove fluida i na stijenke spremnika. Pri primjeni na sustav s dva klipa pretpostavljamo kvazistatičko stanje, približno jednake visine klipova te zanemarive gubitke i stlačivost. Ako klipovi nisu na istoj visini, u analizu uključujemo hidrostatičku razliku tlaka iz []{.mf1-chapter-ref target="u03"}. U navedenim uvjetima vrijedi
@@ -131,10 +120,10 @@ $$
 F_2 = F_1 \frac{A_2}{A_1}
 $$ {#eq-svojstva-tlak-pascalov-zakon-kao-prvi-inzenjerski-alat-02}
 
-Pascalov zakon ne podrazumijeva stvaranje energije, nego promjenu omjera sile i pomaka. Omjer $A_2/A_1=35$ daje 35 puta veću izlaznu silu, ali i 35 puta manji izlazni pomak; u idealiziranom sustavu ulazni je rad jednak izlaznom.
+Primjerice, omjer $A_2/A_1=35$ daje 35 puta veću izlaznu silu, ali i 35 puta manji izlazni pomak.
 
 ::: {.mf1-interaktivno}
-<p class="mf1-box-label">Interaktivni prikaz — Hidraulička preša</p>
+<p class="mf1-box-label">Numerički pokus — Hidraulička preša</p>
 
 **Predvidi.** Kako udvostručenje promjera velikog klipa mijenja silu i hod, uz isti ulazni pogon?
 
@@ -143,18 +132,10 @@ Pascalov zakon ne podrazumijeva stvaranje energije, nego promjenu omjera sile i 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u01_hidraulicna_presa.ipynb">Pokreni u pregledniku</a>
 <a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u01_hidraulicna_presa.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
-<img class="mf1-interaktivno-qr" src="../assets/qr/u01_hidraulicna_presa.svg" alt="QR kod za interaktivni prikaz hidrauličke preše"/>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u01_hidraulicna_presa.svg" alt="QR kod za numerički pokus hidrauličke preše"/>
 </div>
 
 :::
-
-Uz zanemarive gubitke i stlačivost istisnuti volumen ostaje jednak, pa vrijedi
-
-$$
-A_1 s_1 = A_2 s_2
-$$ {#eq-svojstva-tlak-interaktivni-prikaz-hidraulicna-presa-01}
-
-Manji klip zato mora prijeći dulji put, a veća izlazna sila dolazi uz manji izlazni pomak. Volumenska bilanca ne ovisi o razini tlaka, nego o pretpostavci nestlačivosti fluida.
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Granica modela — Kada stlačivost utječe na pomak klipa?</p>
@@ -241,7 +222,7 @@ vrijedi za svaki omjer površina klipova u idealiziranom sustavu.
 :::
 
 ::: {.mf1-dublje}
-<p class="mf1-box-label">Izotropnost tlaka: Cauchyjev tetraedar</p>
+<p class="mf1-box-label">Dublje — Izotropnost tlaka i Cauchyjev tetraedar</p>
 
 Tvrdnju da u mirujućem fluidu tlak u jednoj točki djeluje jednako u svim smjerovima možemo formalno izvesti iz ravnoteže sila na infinitezimalnom **trodimenzijskom tetraedru**. Tri su mu plohe međusobno okomite, svaka okomita na jednu koordinatnu os, a četvrta je kosa ploha proizvoljne orijentacije s jediničnim vektorom normale $\vec{n} = (n_x, n_y, n_z)$.
 
@@ -284,7 +265,7 @@ Klip promjera $d_k = 160\ \text{mm}$ opterećen je teretom ukupne težine $F_G =
 2. Odredi manometarski tlak $p_M$ u ulju neposredno ispod klipa.
 3. Odredi silu na radnom klipu površine $A_2$.
 
-![Opterećeni klip i tlak u zatvorenom cilindru](../assets/print/u01_val1_klip_manometar.svg){#fig-u01-optereceni-klip-i-tlak-u-zatvorenom-cilindru fig-alt="Opterećeni klip i tlak u zatvorenom cilindru"}
+![Opterećeni klip i tlak u zatvorenom cilindru.](../assets/print/u01_val1_klip_manometar.svg){#fig-u01-optereceni-klip-i-tlak-u-zatvorenom-cilindru fig-alt="Klip promjera 160 mm s teretom težine 3,60 kN povezan je uljem s radnim klipom površine 450 cm², a oznake pM pokazuju isti manometarski tlak ispod obaju klipova."}
 
 **Veza s proračunom.** Težina tereta $F_G$ djeluje na klip promjera $d_k$, a $F_2$ je sila ulja na radni klip; ispuna označuje isti fluid. Hodovi, razmaci i duljine strelica nisu u zajedničkom mjerilu.
 
@@ -332,7 +313,7 @@ Hidraulička dizalica ima upravljački klip površine $A_1 = 6\ \text{cm}^2$ i r
 2. Odredi silu na velikom klipu.
 3. Odredi pomak velikog klipa.
 
-![Servisna hidraulička dizalica](../assets/print/u01_val2_hidraulicna_dizalica.svg){#fig-u01-servisna-hidraulicna-dizalica fig-alt="Servisna hidraulička dizalica"}
+![Servisna hidraulička dizalica.](../assets/print/u01_val2_hidraulicna_dizalica.svg){#fig-u01-servisna-hidraulicna-dizalica fig-alt="Mali klip površine 6 cm² gurnut silom 150 N za 18 cm i veliki klip površine 210 cm² s nepoznatim pomakom; isprekidana crta označuje početni položaj tlačne plohe."}
 
 **Veza s proračunom.** Isprekidana crta označuje početnu tlačnu plohu istoga klipa; hodovi i promjeri prikazani su u zasebnim mjerilima.
 
@@ -378,17 +359,7 @@ $$ {#eq-svojstva-tlak-rijeseni-primjer-servisna-hidraulicna-dizalica-t-06}
 
 Kako je $A_2/A_1=35$, izlazna je sila 35 puta veća, a izlazni pomak 35 puta manji. Bilanca rada: $F_1s_1=150\cdot0{,}18=27\ \mathrm{J}=F_2s_2$.
 
-**Procjena stlačivosti.** U zasebnom pokusu uzmi da je početni ukupni volumen zatvorenog ulja
-$V_0=300\ \mathrm{cm^3}$, a $K=1{,}50\ \mathrm{GPa}$. Ovdje sila i opterećenje
-rastu polako, za razliku od glavnoga primjera, u kojem su teret i tlak stalni. Tijekom tlačenja od nultog pretlaka do $250\ \mathrm{kPa}$ crpni klip
-istisne $\Delta V_p=A_1s_1=108\ \mathrm{cm^3}$. Pri stalnoj temperaturi,
-bez zraka, propuštanja i elastičnosti vodova, smanjenje volumena zbog stlačivanja iznosi
-$\Delta V_c\approx0{,}0500\ \mathrm{cm^3}$. Za radni pomak preostaje
-$107{,}95\ \mathrm{cm^3}$, odnosno $s_{2,c}\approx5{,}1405\ \mathrm{mm}$.
-Odstupanje od idealnog pomaka, izračunano iz nezaokruženih podataka, iznosi
-$0{,}0463\,\%$, što je manje od nastavnog kriterija $1\,\%$. U ovom je pokusu
-nestlačivi model dovoljno točan za pomak, ali se zaključak ne prenosi
-automatski na sustav većeg volumena ili manjeg crpnog hoda.
+Uz početni volumen ulja $V_0=300\ \mathrm{cm^3}$ i $K=1{,}50\ \mathrm{GPa}$ volumen stlačivanja $V_0\Delta p/K$ iznosi samo $0{,}0463\,\%$ istisnutog volumena $A_1s_1=108\ \mathrm{cm^3}$, pa je nestlačivi model ovdje dovoljno točan; istu procjenu za drugi sustav traži Z4.
 :::
 
 ::: {#ex-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom-t3 .mf1-ch}
@@ -407,7 +378,7 @@ Rad je spor, a gubitci, stlačivost i hidrostatičke razlike tlaka zanemaruju se
 3. Odredi zbroj hodova crpnog klipa potreban da se platforma podigne za $s_L$.
 4. Odredi najmanji broj punih tlačnih hodova kojim se platforma podiže barem za zadanu visinu te duljinu zadnjega djelomičnog hoda kojim se postiže točno zadana visina.
 
-![Dvostruka hidraulička platforma s ručnom crpkom](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg){#fig-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom fig-alt="Dvostruka hidraulička platforma s ručnom crpkom"}
+![Dvostruka hidraulička platforma s ručnom crpkom.](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg){#fig-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom fig-alt="Platforma s teretom na dvama radnim cilindrima površine 150 cm² sa zajedničkim pomakom, spojenima vodom s ručnom crpkom površine 5 cm² na koju djeluje sila 460 N."}
 
 **Veza s proračunom.** Prikazan je samo tlačni potez; ventili i spremnik su izostavljeni. Ispuna označuje isti fluid, a hodovi i strelice sila imaju zasebna mjerila.
 
@@ -471,12 +442,11 @@ Bilanca rada: $F_ps_p=460\cdot1{,}5=690\ \mathrm{J}=F_G\,s_L=27\,600\cdot0{,}025
 ::: 
 
 ::: {#ex-u01-hidraulicna-kocnica-vozila-s-razdiobom-na-vise .mf1-we}
-<p class="mf1-box-label">Hidraulička kočnica vozila s razdiobom na više kočnih cilindara &nbsp;<span class="mf1-level">T2</span></p>
-
+<p class="mf1-box-label">Hidraulička kočnica vozila s razdiobom na više kočnih cilindara&nbsp;<span class="mf1-level">T2</span></p>
 
 **Tekst zadatka**
 
-Vozač djeluje na papučicu silom $F_n = 300\ \text{N}$. Poluga papučice ima krakove $a$ i $5a$ od zgloba, pa je njezin prijenosni omjer $i = 5$. Ona tlači klip glavnog cilindra promjera $d_M = 20\ \text{mm}$, a glavni je cilindar povezan s četirima kočnim cilindrima: dva prednja imaju promjer $d_f = 35\ \text{mm}$, a dva stražnja $d_r = 30\ \text{mm}$. Promatra se kvazistatički prijenos kroz nestlačivu tekućinu i krute vodove, bez trenja, gubitaka i razlika visina. Računaju se sile klipova; model diskova i dodira gume s podlogom nije zadan.
+Vozač djeluje na papučicu silom $F_{pap} = 300\ \text{N}$. Poluga papučice ima krakove $a$ i $5a$ od zgloba, pa je njezin prijenosni omjer $i = 5$. Ona tlači klip glavnog cilindra promjera $d_{gc} = 20\ \text{mm}$, a glavni je cilindar povezan s četirima kočnim cilindrima: dva prednja imaju promjer $d_{pr} = 35\ \text{mm}$, a dva stražnja $d_{st} = 30\ \text{mm}$. Promatra se kvazistatički prijenos kroz nestlačivu tekućinu i krute vodove, bez trenja, gubitaka i razlika visina. Računaju se sile klipova; model diskova i dodira gume s podlogom nije zadan.
 
 **Traži se**
 
@@ -486,7 +456,7 @@ Vozač djeluje na papučicu silom $F_n = 300\ \text{N}$. Poluga papučice ima kr
 4. Odredi silu koju razvija klip svakoga **stražnjeg** kočnog cilindra.
 5. Odredi skalarni zbroj iznosa sila svih klipova i omjer toga zbroja i sile kojom vozač djeluje na papučicu.
 
-![Hidraulička kočnica: papučica, glavni cilindar i četiri kočna cilindra. Sile djeluju na klipove; diskovi i kontakti nisu prikazani.](../assets/print/u01_fig_kocnica_vozila.svg){#fig-u01-kocnica-vozila fig-align="center" fig-alt="Hidraulička kočnica: papučica, glavni cilindar i četiri kočna cilindra. Sile djeluju na klipove; diskovi i kontakti nisu prikazani."}
+![Hidraulička kočnica: papučica, glavni cilindar i četiri kočna cilindra; sile djeluju na klipove, a diskovi i kontakti nisu prikazani.](../assets/print/u01_fig_kocnica_vozila.svg){#fig-u01-kocnica-vozila fig-align="center" fig-alt="Papučica s polugom krakova a i 5a tlači glavni cilindar promjera 20 mm, iz kojeg vodovi kočne tekućine vode do dvaju prednjih cilindara promjera 35 mm i dvaju stražnjih promjera 30 mm."}
 
 **Veza s proračunom.** Strelice označuju sile tekućine na klipove. Omjeri promjera provrta jesu u mjerilu, dok su duljine vodova i strelica sila shematske.
 
@@ -495,63 +465,63 @@ Vozač djeluje na papučicu silom $F_n = 300\ \text{N}$. Poluga papučice ima kr
 Poluga papučice mehanički pojačava silu vozača:
 
 $$
-F_M = i \cdot F_n = 5 \cdot 300 = 1500\ \text{N}
+F_{gc} = i \cdot F_{pap} = 5 \cdot 300 = 1500\ \text{N}
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-01}
 
 Površina klipa glavnog cilindra:
 
 $$
-A_M = \frac{\pi d_M^2}{4} = \frac{\pi \cdot 0{,}020^2}{4} = 3{,}142 \cdot 10^{-4}\ \text{m}^2
+A_{gc} = \frac{\pi d_{gc}^2}{4} = \frac{\pi \cdot 0{,}020^2}{4} = 3{,}142 \cdot 10^{-4}\ \text{m}^2
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-02}
 
 Manometarski tlak u kočnoj tekućini:
 
 $$
-p_M = \frac{F_M}{A_M} = \frac{1500}{3{,}142 \cdot 10^{-4}} = 4{,}77 \cdot 10^6\ \text{Pa} \approx 4{,}77\ \text{MPa}
+p_M = \frac{F_{gc}}{A_{gc}} = \frac{1500}{3{,}142 \cdot 10^{-4}} = 4{,}77 \cdot 10^6\ \text{Pa} \approx 4{,}77\ \text{MPa}
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-03}
 
 Površine prednjeg i stražnjeg kočnog cilindra:
 
 $$
-A_f = \frac{\pi d_f^2}{4} = \frac{\pi \cdot 0{,}035^2}{4} = 9{,}621 \cdot 10^{-4}\ \text{m}^2
+A_{pr} = \frac{\pi d_{pr}^2}{4} = \frac{\pi \cdot 0{,}035^2}{4} = 9{,}621 \cdot 10^{-4}\ \text{m}^2
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-04}
 
 $$
-A_r = \frac{\pi d_r^2}{4} = \frac{\pi \cdot 0{,}030^2}{4} = 7{,}069 \cdot 10^{-4}\ \text{m}^2
+A_{st} = \frac{\pi d_{st}^2}{4} = \frac{\pi \cdot 0{,}030^2}{4} = 7{,}069 \cdot 10^{-4}\ \text{m}^2
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-05}
 
 Isti tlak na različitim površinama daje različite sile. Sila jednoga prednjeg kočnog cilindra:
 
 $$
-F_f = p_M A_f = 4{,}77 \cdot 10^6 \cdot 9{,}621 \cdot 10^{-4} \approx 4{,}59\ \text{kN}
+F_{pr} = p_M A_{pr} = 4{,}77 \cdot 10^6 \cdot 9{,}621 \cdot 10^{-4} \approx 4{,}59\ \text{kN}
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-06}
 
 Sila jednoga stražnjeg kočnog cilindra:
 
 $$
-F_r = p_M A_r = 4{,}77 \cdot 10^6 \cdot 7{,}069 \cdot 10^{-4} \approx 3{,}38\ \text{kN}
+F_{st} = p_M A_{st} = 4{,}77 \cdot 10^6 \cdot 7{,}069 \cdot 10^{-4} \approx 3{,}38\ \text{kN}
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-07}
 
 Skalarni zbroj iznosa sila klipova (dva prednja + dva stražnja; nije rezultantni vektor):
 
 $$
-F_{uk} = 2 F_f + 2 F_r = 2 \cdot 4{,}59 + 2 \cdot 3{,}38 = 15{,}94\ \text{kN}
+F_{uk} = 2 F_{pr} + 2 F_{st} = 2 \cdot 4{,}59 + 2 \cdot 3{,}38 = 15{,}94\ \text{kN}
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-08}
 
 Omjer zbroja sila klipova i sile na papučici:
 
 $$
-k = \frac{F_{uk}}{F_n} = \frac{15{,}94 \cdot 10^3}{300} \approx 53
+k = \frac{F_{uk}}{F_{pap}} = \frac{15{,}94 \cdot 10^3}{300} \approx 53
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-09}
 
 **Provjera i tumačenje**
 
-1. Omjer $F_f/F_r=(35/30)^2\approx1{,}36$ slijedi samo iz površina jer je tlak zajednički. Broj $k \approx 53$ omjer je zbroja sila četiriju paralelnih aktuatora i jedne ulazne sile, a ne pojačanje jedne sile; za kočni moment potrebni su još izvedba kliješta, trenje obloge i polumjer diska.
-2. Volumenska bilanca $A_M s_M = 2 A_f s_f + 2 A_r s_r$ određuje hod papučice; „mekana” papučica upućuje na plin, propuštanje ili elastičnost vodova, što sam Pascalov model ne razlikuje.
+1. Omjer $F_{pr}/F_{st}=(35/30)^2\approx1{,}36$ slijedi samo iz površina jer je tlak zajednički. Broj $k \approx 53$ omjer je zbroja sila četiriju paralelnih aktuatora i jedne ulazne sile, a ne pojačanje jedne sile; za kočni moment potrebni su još izvedba kliješta, trenje obloge i polumjer diska.
+2. Volumenska bilanca $A_{gc} s_{gc} = 2 A_{pr} s_{pr} + 2 A_{st} s_{st}$ određuje hod papučice; „mekana” papučica upućuje na plin, propuštanje ili elastičnost vodova, što sam Pascalov model ne razlikuje.
 :::
 
 ::: {#ex-u01-hidraulicka-stezna-naprava-na-robotskoj-liniji-za .mf1-we}
-<p class="mf1-box-label">Hidraulička stezna naprava na robotskoj liniji za montažu baterijskih modula električnog vozila &nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Hidraulička stezna naprava na robotskoj liniji za montažu baterijskih modula električnog vozila&nbsp;<span class="mf1-level">T2</span></p>
 
 **Tekst zadatka**
 
@@ -561,8 +531,7 @@ Hidraulička stezna naprava ima crpni klip promjera $d_p = 14\ \text{mm}$ na koj
 
 1. Odredi manometarski tlak $p_M$ u sustavu.
 2. Odredi silu stezanja jednog cilindra.
-3. Odredi skalarni zbroj iznosa sila šest stega.
-4. Provjeri ostaje li sila po jednoj stezi unutar dopuštene vrijednosti $F_{dop}$.
+3. Provjeri ostaje li sila po jednoj stezi unutar dopuštene vrijednosti $F_{dop}$.
 
 **Rješenje**
 
@@ -590,12 +559,6 @@ $$
 F_s = p_MA_s = F_p\left(\frac{d_s}{d_p}\right)^2 = 420\left(\frac{28}{14}\right)^2\ \text{N} = 1{,}680\ \text{kN}.
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-04}
 
-Kako sustav ima $n = 6$ paralelnih stega, skalarni zbroj iznosa njihovih sila iznosi
-
-$$
-F_{uk} = n \cdot F_s = 6 \cdot 1{,}680 \approx 10{,}08\ \text{kN}.
-$$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-05}
-
 Sila jedne stege $F_s \approx 1{,}68\ \text{kN}$ manja je od zadane granice $F_{dop} = 3{,}5\ \text{kN}$.
 
 **Provjera i tumačenje**
@@ -608,28 +571,39 @@ Omjer $F_s/F_p = 1680/420 = 4$ odgovara omjeru površina $(d_s/d_p)^2 = (28/14)^
 <p class="mf1-box-label">Provjeri sebe</p>
 
 1. Zašto tlak u točki mirujućeg fluida ne ovisi o orijentaciji zamišljene plohe kroz tu točku?
+
+::: {.callout-note collapse="true"}
+### Odgovor
+Izotropnost tlaka slijedi iz ravnoteže sila na malom elementu fluida bez smičnih naprezanja, kako pokazuje izvod s tetraedrom.
+:::
+
 2. U kočnici vozila četiri kočna cilindra imaju različite promjere. Zašto u svima vlada isti manometarski tlak, ali ne i ista sila? Mijenja li se zaključak ako cilindri nisu na istoj visini?
+
+::: {.callout-note collapse="true"}
+### Odgovor
+Nametnuti porast tlaka prenosi se neumanjen kroz istu tekućinu, a sila je umnožak tlaka i površine, pa raste s kvadratom promjera. Razlika visina dodaje hidrostatički član $\rho g\,\Delta z$, zanemariv u kočnici, ali načelno prisutan.
+:::
+
 3. Zašto mala promjena gustoće još ne jamči točan pomak klipa? Koja dva volumena treba usporediti?
+
+::: {.callout-note collapse="true"}
+### Odgovor
+Za pomak klipa treba usporediti volumen stlačivanja s istisnutim volumenom crpke: mali omjer $\Delta p/K$ sam nije dovoljan ako je $V_0$ velik.
+:::
+
 4. Zašto se u Pascalovu zakonu uspoređuju tlakovi, a ne samo sile?
 
 ::: {.callout-note collapse="true"}
-### Odgovori
-
-1. Izotropnost tlaka slijedi iz ravnoteže sila na malom elementu fluida bez smičnih naprezanja, kako pokazuje izvod s tetraedrom.
-
-2. Nametnuti porast tlaka prenosi se neumanjen kroz istu tekućinu, a sila je umnožak tlaka i površine, pa raste s kvadratom promjera. Razlika visina dodaje hidrostatički član $\rho g\,\Delta z$, zanemariv u kočnici, ali načelno prisutan.
-
-3. Za pomak klipa treba usporediti volumen stlačivanja s istisnutim volumenom crpke: mali omjer $\Delta p/K$ sam nije dovoljan ako je $V_0$ velik.
-
-4. Same sile nisu dovoljne jer ovise i o površini na kojoj djeluju.
+### Odgovor
+Same sile nisu dovoljne jer ovise i o površini na kojoj djeluju.
 :::
 :::
 
-## Zadaci za vježbu
+## Zadatci za vježbu {#sec-u01-zadatci}
 
 ::::: {.mf1-vjezbe-list}
 
-U hidrauličkim zadatcima manometarski tlak $p_M$ označuje razliku tlakova preko radnog klipa. Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi. Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim u dopunskom pokusu stlačivosti u Z4 i modelu učinkovitosti u Z6. Sile djeluju izravno na klipove, bez dodatnog prijenosa polugom. Svi su brojčani podatci nastavni; mjerni nizovi u Z1 i Z4 sintetički su podatci, a ne zapis stvarnog pokusa.
+U hidrauličkim zadatcima manometarski tlak $p_M$ označuje razliku tlakova preko radnog klipa. Pretpostavljaju se kvazistatički rad, približno jednake visine klipova i kruti vodovi. Zanemaruju se trenje, propuštanje i stlačivost tekućine, osim u dopunskom pokusu stlačivosti u Z4 i modelu učinkovitosti u Z6. Sile djeluju izravno na klipove, bez dodatnog prijenosa polugom; iznimka je rudo kormila u Z2. Svi su brojčani podatci nastavni; mjerni nizovi u Z1 i Z4 sintetički su podatci, a ne zapis stvarnog pokusa.
 
 <span id="task-u01-na-kruzni-klip-promjera-djeluje-sila-odredi"></span>
 
@@ -781,7 +755,7 @@ Kreni od opterećenja radnog klipa. Jedan zahtjev postavlja gornju, a drugi donj
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$p_M=2{,}00\ \text{MPa}$. Za promjere 8, 9 i 10 mm parovi $(F_p,s_p)$ iznose približno $(100{,}5\ \text{N},0{,}5968\ \text{m})$, $(127{,}2\ \text{N},0{,}4716\ \text{m})$ i $(157{,}1\ \text{N},0{,}3820\ \text{m})$. Odabire se promjer 9 mm: uz 8 mm nije zadovoljen uvjet hoda, a uz 10 mm uvjet sile. Za odabranu crpku $W_p=W_L=60\ \text{J}$.
+$p_M=2{,}00\ \text{MPa}$. Za promjere 8, 9 i 10 mm parovi $(F_p;\,s_p)$ iznose približno $(100{,}5\ \text{N};\ 0{,}5968\ \text{m})$, $(127{,}2\ \text{N};\ 0{,}4716\ \text{m})$ i $(157{,}1\ \text{N};\ 0{,}3820\ \text{m})$. Odabire se promjer 9 mm: uz 8 mm nije zadovoljen uvjet hoda, a uz 10 mm uvjet sile. Za odabranu crpku $W_p=W_L=60\ \text{J}$.
 :::
 ::::
 
@@ -824,12 +798,24 @@ $p_M \approx 947\ \text{kPa}$; $F_G \approx 27{,}0\ \text{kN}$; $s_p \approx 1{,
 
 ![Skice uz Z1–Z6: gustoća, kormilarski stroj, preša i sustavi klipova.](../assets/print/u01_vjezbe_skice.svg){#fig-u01-vjezbe fig-align="center" fig-alt="Šest panela prikazuje praznu i napunjenu posudu na vagi u Z1, četiri cilindra kormilarskog stroja na rudu kormila, od kojih je dijagonalni par pod tlakom, u Z2, ulaznu i izlaznu silu preše u Z3, dovedeni volumen i pomak klipa u Z4, crpku s jednim radnim cilindrom u Z5 te stol s tri jednaka cilindra u Z6."}
 
-**Napomene uz skice.** U Z1 vaga očitava posudu i ulje zajedno. Z2 je tlocrt: na svakom kraku ruda nalazi se par suprotnih cilindara; dijagonalni par pod tlakom gura krakove u suprotnim smjerovima, pa daje moment istoga smisla, a preostala dva cilindra vraćaju ulje u spremnik (povrat). Sile $F$ djeluju na klipove cilindara pod tlakom, a spojni vod označuje isti tlak $p_M$ u njihovim komorama. U Z4 uspoređuju se početni i konačni položaj iste plohe klipa. U Z5 prikazan je samo tlačni potez, bez ventila; crpni klip nacrtan je shematski, ne u mjerilu nijedne ponuđene varijante. U Z6 tri mehanički vođena cilindra imaju isti pomak. Promjeri unutar Z3 i Z6 imaju zajedničko mjerilo; Z2 ima vlastito mjerilo, a sile i pomaci nigdje nisu u mjerilu.
+**Napomene uz skice.** U Z1 vaga očitava posudu i ulje zajedno. Z2 je tlocrt: dijagonalni par pod tlakom gura krakove ruda u suprotnim smjerovima, a druga dva cilindra vraćaju ulje u spremnik. U Z4 uspoređuju se dva položaja iste plohe klipa. U Z5 ventili su izostavljeni, a crpni klip nije nacrtan u mjerilu nijedne ponuđene varijante.
 
 ## Sažetak
 
-U inženjerskoj analizi fluid najčešće opisujemo kontinuumskim modelom, u kojem su gustoća $\rho$, tlak $p$ i druge fizikalne veličine definirane kao polja u prostoru. Gustoća je masa po jedinici volumena, specifična težina težinska sila po jedinici volumena, a relativna gustoća bezdimenzijski omjer gustoće fluida i referentne gustoće vode.
+::: {.mf1-zavrsni-okvir}
+- U kontinuumskom modelu gustoća $\rho$, tlak $p$ i brzina definirani su kao polja u prostoru; računska ćelija dio je kontinuuma, a ne molekula.
+- Gustoća je masa po jedinici volumena, specifična težina $\gamma=\rho g$ težinska sila po jedinici volumena, a relativna gustoća $s_r=\rho/\rho_v$ bezdimenzijski omjer gustoće fluida i referentne gustoće vode.
+- Tlak je normalna sila po jedinici površine; u mirujućem fluidu djeluje jednako u svim smjerovima, pa je skalarna veličina.
+- Pascalov zakon: nametnuta promjena tlaka prenosi se neumanjena kroz zatvoreni mirujući fluid, pa je $F_2/F_1=A_2/A_1$, a omjer sila raste s kvadratom omjera promjera.
+- Za nestlačiv fluid vrijedi $A_1s_1=A_2s_2$: veća izlazna sila dolazi uz razmjerno manji pomak, a u idealnom sustavu $F_1s_1=F_2s_2$.
+- Utjecaj stlačivosti na pomak ne procjenjuje se iz male promjene gustoće, nego usporedbom volumena stlačivanja $V_0\Delta p/K$ s istisnutim volumenom.
+- Idealni model zanemaruje stlačivost, elastičnost vodova, propuštanje, trenje, gubitke u ventilima i visinske razlike; ti utjecaji određuju odstupanje stvarnog sustava od idealnoga prijenosa sile i pomaka.
 
-Tlak je normalna sila po jedinici površine i u mirujućem fluidu djeluje jednako u svim smjerovima. Pascalov zakon opisuje prijenos nametnute promjene tlaka kroz zatvoreni fluid u mirovanju. U idealiziranom hidrauličkom sustavu isti porast tlaka na klipovima različitih površina mijenja omjer sila prema $F_2/F_1=A_2/A_1$. Za nestlačiv fluid istodobno vrijedi $A_1s_1=A_2s_2$, pa povećanje izlazne sile prati razmjerno smanjenje izlaznoga pomaka, a mehanički se rad čuva.
+**Najčešća pogreška.** Usporediti omjer promjera umjesto omjera površina ili očekivati da preša uz veću silu daje i veći pomak, a time i veći rad.
 
-Prikazani model zanemaruje stlačivost fluida, elastičnost vodova, unutarnje propuštanje, trenje i gubitke u ventilima. Ti utjecaji u stvarnim hidrauličkim sustavima određuju odstupanje od idealnoga prijenosa sile i pomaka.
+**Nakon ovoga poglavlja mora biti moguće**
+
+1. razlikovati gustoću, specifičnu težinu i relativnu gustoću te ih odrediti iz mjerenja uz oduzimanje tare;
+2. primijeniti Pascalov zakon i volumensku bilancu na sustav klipova te rezultat provjeriti bilancom rada;
+3. procijeniti smije li se za zadani kriterij pomaka zanemariti stlačivost tekućine.
+:::

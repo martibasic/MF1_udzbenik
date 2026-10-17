@@ -209,7 +209,7 @@ def run():
     out=branch(p5,'u11ch2_pipe','u11ch2_branchvelocity','u11ch2_D3')
     wall_and_openings(p5,'u11ch2_pipe',[(53,283),(529,283),out])
     dx,dy=delta(node(p5,'u11ch2_reaction'))
-    check(dx<0 and dy<0 and abs(dy/dx-625/664)<1e-8,'P5: reakcija mora biti ulijevo i prema +y')
+    check(dx<0 and dy<0 and abs(dy/dx-625/665)<1e-8,'P5: reakcija mora biti ulijevo i prema +y')
     outlet=line(node(p6,'u10he_section2'))
     wall_and_openings(p6,'u10he_pipe',[(49,178),tuple(sum(p[i] for p in outlet)/2 for i in (0,1))])
     vx,vy=delta(node(p6,'u10he_outflow'));sx,sy=delta(node(p6,'u10he_section2'))

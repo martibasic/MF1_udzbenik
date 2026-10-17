@@ -19,6 +19,18 @@ const candidates=[process.env.CHROME_PATH,process.env.PLAYWRIGHT_CHROMIUM_EXECUT
 const executablePath=candidates.find(p=>p&&existsSync(p));
 const browser=await chromium.launch({executablePath,headless:true});
 const issues=[];let rowCount=0,textCount=0,geometryCount=0;
+// Labels keep the 9 pt minimum; indices have their own reviewed minimum
+// (about 70 % of the label size), so that F_L is not read as "FL".
+const labelMin=manifest.tokens['figure-small-label-size'],indexMin=manifest.tokens['figure-index-min-size'];
+if(!(indexMin>=6.5&&indexMin<labelMin&&manifest.tokens['figure-index-size']>=indexMin))
+ issues.push('figure-index-size/figure-index-min-size: index minimum must stay >= 6.5 pt and below the label minimum');
+// A second fluid must differ from water also on a black-and-white copy.
+const luma=h=>{const n=parseInt(h.slice(1),16);return .299*(n>>16)+.587*((n>>8)&255)+.114*(n&255);};
+const paperFluid=manifest.tokens['print-palette']?.['second-fluid'];
+if(!paperFluid||luma(manifest.tokens.palette.fluid)-luma(paperFluid)<25)
+ issues.push('print-palette.second-fluid: grey-level difference from water must be at least 25');
+const screenFluid=manifest.tokens.palette['second-fluid'].toLowerCase();
+const screenFluidRgb=`rgb(${parseInt(screenFluid.slice(1,3),16)}, ${parseInt(screenFluid.slice(3,5),16)}, ${parseInt(screenFluid.slice(5,7),16)})`;
 for(const [file,hash]of Object.entries(manifest.inputs||{})){
  const actual=createHash('sha256').update(readFileSync(join(root,file),'utf8').replace(/\r\n/g,'\n')).digest('hex');
  if(actual!==hash)issues.push(`${file}: changed layout input; regenerate print figures`);
@@ -44,13 +56,14 @@ try{
    rowCount++;
    const file=join(root,'assets/pdf-figures',row.file),svg=readFileSync(file,'utf8').replace(/\r\n/g,'\n');
    if(createHash('sha256').update(svg).digest('hex')!==row.sha256)issues.push(`${row.file}: edited generated artifact`);
+   if(svg.toLowerCase().includes(`"${screenFluid}"`)||svg.includes(screenFluidRgb))issues.push(`${row.file}: screen tone of the second fluid in a print figure`);
    if(row.width>manifest.tokens['text-width-pt']+.01)issues.push(`${row.file}: wider than the text column`);
    await page.goto(pathToFileURL(file).href);await page.evaluate(()=>document.fonts.ready);
    const result=await page.evaluate(()=>{
     const svg=document.querySelector('svg'),v=svg.viewBox.baseVal,inv=svg.getScreenCTM().inverse();
     const box=e=>{const b=e.getBBox(),m=inv.multiply(e.getScreenCTM());const ps=[[b.x,b.y],[b.x+b.width,b.y],[b.x,b.y+b.height],[b.x+b.width,b.y+b.height]].map(([x,y])=>new DOMPoint(x,y).matrixTransform(m));return [Math.min(...ps.map(p=>p.x)),Math.min(...ps.map(p=>p.y)),Math.max(...ps.map(p=>p.x)),Math.max(...ps.map(p=>p.y))];};
     const texts=[...svg.querySelectorAll('text')].map(e=>({i:Number(e.dataset.sourceText),text:e.textContent,box:box(e),font:parseFloat(getComputedStyle(e).fontSize),
-     sizes:[...e.querySelectorAll('tspan')].map(t=>parseFloat(getComputedStyle(t).fontSize)),
+     sizes:[...e.querySelectorAll('tspan')].map(t=>({size:parseFloat(getComputedStyle(t).fontSize),script:!!t.closest('tspan[baseline-shift]')})),
      scripts:[...e.querySelectorAll('tspan[baseline-shift]')].map(t=>({shift:t.getAttribute('baseline-shift'),text:t.textContent.replace(/\s/g,'')}))}));
     const keys=['d','points','x','y','x1','x2','y1','y2','width','height','cx','cy','r','rx','ry'];
     const geometry=[...svg.querySelectorAll('[data-source-geometry]')].map(e=>({i:Number(e.dataset.sourceGeometry),tag:e.tagName,box:box(e),
@@ -61,7 +74,8 @@ try{
    for(const t of result.texts){
     const list=texts.get(t.i)||[];list.push(t.text);texts.set(t.i,list);
     const ss=scripts.get(t.i)||[];ss.push(...t.scripts);scripts.set(t.i,ss);
-    if(Math.min(t.font,...t.sizes)<manifest.tokens['figure-small-label-size']-.01)issues.push(`${row.file}: label ${t.i} below 9 pt`);
+    if(Math.min(t.font,...t.sizes.filter(x=>!x.script).map(x=>x.size))<labelMin-.01)issues.push(`${row.file}: label ${t.i} below ${labelMin} pt`);
+    if(t.sizes.some(x=>x.script&&x.size<indexMin-.01))issues.push(`${row.file}: index in label ${t.i} below ${indexMin} pt`);
     if(t.box[0]<-.25||t.box[1]<-.25||t.box[2]>row.width+.25||t.box[3]>row.height+.25)issues.push(`${row.file}: clipped label ${t.i}: ${t.text}`);
    }
    for(let i=0;i<result.texts.length;i++)for(const b of result.texts.slice(i+1)){
@@ -105,7 +119,6 @@ try{
     if(!got)issues.push(`${name}: missing physical geometry #${e.i}`);
     else for(const [k,value]of Object.entries(e.shape)){
      // Only the outline radius of the dimensional table is stylistic.
-     if(k==='rx'&&name==='u14_fig_pi_buckingham.svg')continue;
      if(got.shape[k]!==value)issues.push(`${name}: changed geometric coordinate ${e.i}.${k}`);
     }
    }
@@ -116,4 +129,4 @@ try{
 const oil=manifest.figures['u01_fig_gustoca_sr.svg'];
 if(!oil.rows.some(r=>r.panels.includes(0)&&r.panels.includes(1)))issues.push('U01 oil/water comparison must share a horizontal row.');
 if(issues.length){console.error(issues.join('\n'));process.exitCode=1;}
-else console.log(`PASS: ${Object.keys(manifest.figures).length} print figures, ${rowCount} rows, ${textCount} unchanged labels, ${geometryCount} unchanged geometric elements; no overlaps or clipping, fonts >= 9 pt.`);
+else console.log(`PASS: ${Object.keys(manifest.figures).length} print figures, ${rowCount} rows, ${textCount} unchanged labels, ${geometryCount} unchanged geometric elements; no overlaps or clipping, labels >= ${labelMin} pt, indices >= ${indexMin} pt, second fluid distinct in grey.`);

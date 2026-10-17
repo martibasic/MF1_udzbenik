@@ -1,10 +1,10 @@
 {
   "version": 2,
   "inputs": {
-    "tools/build_print_figures.mjs": "22705860348828e72bee5f344e81e90cc4464d8147830f93b09b1899d77d3981",
-    "assets/figure-tokens.json": "6480c6aeef3c6a2e275086b7c66cba7280fb14d43eadc41c7ba9aa9a59e182fb",
-    "assets/figure-compositions.json": "e55c7898d8bb45338946f8e4931cceee06e4378dedf0909366f8d54bfe048174",
-    "assets/print-layouts.json": "3fda967888e6bafc5bd45bda54551b41ff6c4104912ab87a4dd7dde63aac30a0"
+    "tools/build_print_figures.mjs": "4b695d1282ac4e91a26f75117596f0fd080dd3312ecc337536fd2be86e50a5e7",
+    "assets/figure-tokens.json": "5d0e62e89920146860914f5b7fd267a3ab2c9d5ba72f2aa4478cc600358c83f8",
+    "assets/figure-compositions.json": "459bf2285c30006742a5ac52457bc045a4cf1ed9e5d058752cd10bd0a993a8ff",
+    "assets/print-layouts.json": "469067faf2c7a075d4a898458776964565cccc8349ea80950dac9cebfaab6722"
   },
   "tokens": {
     "text-width-pt": 447.874,
@@ -13,6 +13,8 @@
     "figure-wide-width": 1,
     "figure-label-size": 9.5,
     "figure-small-label-size": 9,
+    "figure-index-size": 6.65,
+    "figure-index-min-size": 6.5,
     "figure-caption-size": 9.5,
     "figure-stroke": 0.7,
     "figure-arrow-size": 4,
@@ -35,6 +37,9 @@
       "reference-light": "#c5cdd3",
       "reference-dark": "#a8b8c2",
       "paper": "#ffffff"
+    },
+    "print-palette": {
+      "second-fluid": "#d6c597"
     }
   },
   "figures": {
@@ -43,12 +48,12 @@
         {
           "file": "u01_ch1_dvostruka_platforma_manometar--1.svg",
           "width": 277.682,
-          "height": 193.541,
+          "height": 193.41,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "95f655e6ff87b2701c0f8e4495eeb0cb3e275f5950232d7b972d5f015b446e14"
+          "sha256": "b17780d9485b8335675f19917850221847045f1d11be5fcd19d12ee7b5c155e8"
         }
       ],
       "kind": "standard",
@@ -59,7 +64,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 193.54096721311478,
+          "height": 193.41035049681497,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -133,7 +138,7 @@
           ]
         }
       ],
-      "source_sha1": "b1d20f9eb46d50f7790689cce15c9ba133733a07"
+      "source_sha1": "b1fb602789e8504342049651c427cdc9044031be"
     },
     "u01_fig_gustoca_sr.svg": {
       "rows": [
@@ -146,7 +151,7 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "43ed6da447a269a9f9201827acb79a825ce57f7b638a23f74b15b1f5832f6490"
+          "sha256": "9ec59e9d2682910f8428a3d7ba18bc00c834dcef452046902618dfb916544077"
         }
       ],
       "kind": "composite",
@@ -210,19 +215,19 @@
           ]
         }
       ],
-      "source_sha1": "fab48cb4539ff5d4cc97021707e46ce3554455c6"
+      "source_sha1": "fbee99007867ff290f00c075b8fe019e673483ca"
     },
     "u01_fig_kocnica_vozila.svg": {
       "rows": [
         {
           "file": "u01_fig_kocnica_vozila--1.svg",
           "width": 277.682,
-          "height": 280.399,
+          "height": 280.065,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "78bc700f5d0a82282a9160aa14d84bbc2c49cfe264c74375d2345244e921cec9"
+          "sha256": "088f359e2f756f76206bf65007395d589a709c8332c03edf2b5a1a0df4e95174"
         }
       ],
       "kind": "standard",
@@ -233,7 +238,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 280.39858321233464,
+          "height": 280.06549720529324,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -332,7 +337,7 @@
           ]
         }
       ],
-      "source_sha1": "05268f347fdf1000d1a1b19bc5a3d56e01f61aa3"
+      "source_sha1": "bde7710df24ac0154c900ae4258421c5421cebc5"
     },
     "u01_fig_uvod_pregled.svg": {
       "rows": [
@@ -346,7 +351,7 @@
             2
           ],
           "keep_with_next": true,
-          "sha256": "72b403b512d22033770dc674ba8e294a29b691450cc39661381cffcfde95e4ae"
+          "sha256": "e3faf8bb19a14013ad3198987c72bc4703fcd7c0897d07487e109d24f9e363b5"
         }
       ],
       "kind": "composite",
@@ -383,7 +388,7 @@
         },
         {
           "width": 139.958,
-          "height": 142.39407142857144,
+          "height": 141.62681498602566,
           "kind": "mini",
           "conflicts": 0,
           "geometry": [
@@ -443,7 +448,7 @@
           ]
         }
       ],
-      "source_sha1": "99d399f34319d9a724db983a1ca20a91ed6717e4"
+      "source_sha1": "b9d72b0d0a72dce5d15a06173c498e03083372db"
     },
     "u01_val1_klip_manometar.svg": {
       "rows": [
@@ -455,7 +460,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "6944668deaef3839017326bb87644d301c87888d0be6288c5c7dcf5a7ca8892b"
+          "sha256": "055b0f994881d44ff1a4e057057896e6cc820dd7c862335c1dbbd0cc0d68336f"
         }
       ],
       "kind": "standard",
@@ -509,7 +514,7 @@
           ]
         }
       ],
-      "source_sha1": "7dc2613ff0dc64647c7a9b59d9451e6233cf2e38"
+      "source_sha1": "e37c541c9c6f64ae678523e6d194812fe2e1e76d"
     },
     "u01_val2_hidraulicna_dizalica.svg": {
       "rows": [
@@ -521,7 +526,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "a87acd618bfde6fde42e9d0342554d7266bbf20a0e0b24cb8b0a0dea8ad13725"
+          "sha256": "06a16b999a280ba01ec47c3b34a4bcf491c582c75eb02db1165cd4cacb79ea2f"
         }
       ],
       "kind": "standard",
@@ -593,53 +598,53 @@
           ]
         }
       ],
-      "source_sha1": "cfc412d6ff886fa2840bb3cf18814bece224817d"
+      "source_sha1": "10dee84032c2463c357c9ee4b440ad2ca5581351"
     },
     "u01_vjezbe_skice.svg": {
       "rows": [
         {
           "file": "u01_vjezbe_skice--1.svg",
           "width": 447.874,
-          "height": 237.342,
+          "height": 223.185,
           "panels": [
             0,
             1
           ],
           "keep_with_next": false,
-          "sha256": "46405093c4e546ccd5153a7cc102af5dbad2210ead1ca14f70e4841f1c2297e2"
+          "sha256": "670d416c7d7133b9179d26932b9e991b0c1a27483b752283fba939c6f4e05032"
         },
         {
           "file": "u01_vjezbe_skice--2.svg",
           "width": 447.874,
-          "height": 213.307,
+          "height": 214.92,
           "panels": [
             2,
             3
           ],
           "keep_with_next": false,
-          "sha256": "5c27dc50bb5e09ac3dd324a6e11a189aadf297bf6cf21a01ea94ef5118363fce"
+          "sha256": "13fc19e254db57012e80e05880b4576c773d30a48237e94828942ac371dc1bb7"
         },
         {
           "file": "u01_vjezbe_skice--3.svg",
           "width": 447.874,
-          "height": 185.143,
+          "height": 184.923,
           "panels": [
             4,
             5
           ],
           "keep_with_next": true,
-          "sha256": "81a0ff1741322ba9e447e7f5b783b45b9d2bb37a4053317709836e7799662484"
+          "sha256": "c0ddca18f3c4527f4bbfe472afc0240d9a01f5cd65bf58bd2cbbfe51795b90db"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
-      "source_text_count": 57,
+      "source_text_count": 56,
       "source_geometry_count": 186,
       "removed_decorations": [],
       "panels": [
         {
           "width": 216.937,
-          "height": 185.11989393939393,
+          "height": 188.28560606060606,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -684,7 +689,7 @@
         },
         {
           "width": 216.937,
-          "height": 237.34172632641474,
+          "height": 223.1853303892499,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -750,16 +755,16 @@
             19,
             20,
             21,
-            22,
-            23
+            22
           ]
         },
         {
           "width": 216.937,
-          "height": 213.3067164487034,
+          "height": 214.92016174466153,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            97,
             98,
             99,
             100,
@@ -778,17 +783,17 @@
             113,
             114,
             115,
-            116,
+            120,
             121,
             122,
             123,
             124,
             125,
-            126,
-            130,
-            132
+            129,
+            131
           ],
           "texts": [
+            23,
             24,
             25,
             26,
@@ -797,16 +802,16 @@
             29,
             30,
             31,
-            32,
-            33
+            32
           ]
         },
         {
           "width": 216.937,
-          "height": 136.9008609022556,
+          "height": 137.68633834586467,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            134,
             135,
             136,
             137,
@@ -820,30 +825,30 @@
             145,
             146,
             147,
-            148,
+            149,
             150,
             151,
             152,
             153,
             154,
-            155,
-            157
+            156
           ],
           "texts": [
+            33,
             34,
             35,
             36,
             37,
-            38,
-            39
+            38
           ]
         },
         {
           "width": 216.937,
-          "height": 185.14311960416313,
+          "height": 184.92284597910043,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            161,
             162,
             163,
             164,
@@ -862,28 +867,28 @@
             177,
             178,
             179,
-            180,
-            185,
-            187,
-            189
+            184,
+            186,
+            188
           ],
           "texts": [
+            39,
             40,
             41,
             42,
             43,
             44,
             45,
-            46,
-            47
+            46
           ]
         },
         {
           "width": 216.937,
-          "height": 181.82877359905712,
+          "height": 181.36123267485317,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            191,
             192,
             193,
             194,
@@ -919,15 +924,15 @@
             224,
             225,
             226,
-            227,
+            228,
             229,
-            230,
-            232,
-            234,
-            236,
-            239
+            231,
+            233,
+            235,
+            238
           ],
           "texts": [
+            47,
             48,
             49,
             50,
@@ -936,12 +941,11 @@
             53,
             54,
             55,
-            56,
-            57
+            56
           ]
         }
       ],
-      "source_sha1": "dacc44adeb8938878d1027cad8b64005e35d6d1e"
+      "source_sha1": "76ca0959f833e3e1a3b8981858420570e5795e68"
     },
     "u02_ch1_kapilarni_mikrodozator_kapljica.svg": {
       "rows": [
@@ -953,7 +957,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "c62a5bf16494420435394dc7939d6d2daad98744c1dc527e53889a325895ebc6"
+          "sha256": "b08e878562e4a850f0f1572f015706c8344d8b4699ab51445768c057c0f57256"
         }
       ],
       "kind": "standard",
@@ -1042,33 +1046,34 @@
           ]
         }
       ],
-      "source_sha1": "ca3e2699f7789f449f18a26067b748be0c525e0e"
+      "source_sha1": "6d220ced557b75e314380982476b3acc04964ab2"
     },
     "u02_fig_kapilarni_uspon_etanol.svg": {
       "rows": [
         {
           "file": "u02_fig_kapilarni_uspon_etanol--1.svg",
           "width": 277.682,
-          "height": 305.402,
+          "height": 290.402,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "3aa3d7502bcd64b9ea806f9f6c0f62cdacdbbf0c618bbe9c3861539cd467a855"
+          "sha256": "936595ee50219e3f12b77b5b513cc7dfe30aaaa9817ff05463cc746d353f04af"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 9,
+      "source_text_count": 8,
       "source_geometry_count": 31,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 305.4024047272727,
+          "height": 290.40240472727277,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -1083,14 +1088,14 @@
             12,
             13,
             14,
-            15,
+            16,
             17,
             18,
-            19,
+            20,
             21,
             22,
             23,
-            24,
+            28,
             29,
             30,
             31,
@@ -1098,8 +1103,7 @@
             33,
             34,
             35,
-            36,
-            39
+            38
           ],
           "texts": [
             1,
@@ -1109,38 +1113,38 @@
             5,
             6,
             7,
-            8,
-            9
+            8
           ]
         }
       ],
-      "source_sha1": "dad4603239e957368629486de91ab8953e99679e"
+      "source_sha1": "4cbcd698993a2b587edf75cef39e6df932efa47b"
     },
     "u02_fig_kinematicka_viskoznost.svg": {
       "rows": [
         {
           "file": "u02_fig_kinematicka_viskoznost--1.svg",
           "width": 152.277,
-          "height": 135.45,
+          "height": 120.45,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "256a25ed34d06b99b27c53c30d14e51cdcbf29da25a870d7610937fd0435d6ab"
+          "sha256": "97a3fc6f1f066cbc3f8c419e7e4db53533559c7bae42bbca6d2819c25b5d3eb4"
         }
       ],
       "kind": "mini",
       "triptych_conflicts": null,
-      "source_text_count": 9,
+      "source_text_count": 8,
       "source_geometry_count": 15,
       "removed_decorations": [],
       "panels": [
         {
           "width": 152.27716,
-          "height": 135.4495297248719,
+          "height": 120.44953012517385,
           "kind": "mini",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -1150,12 +1154,11 @@
             7,
             8,
             9,
-            10,
-            12,
-            14,
+            11,
+            13,
+            19,
             20,
-            21,
-            22
+            21
           ],
           "texts": [
             1,
@@ -1165,39 +1168,39 @@
             5,
             6,
             7,
-            8,
-            9
+            8
           ]
         }
       ],
-      "source_sha1": "49173e965fa237b041f6a1ae0c221d58e3c3b42b"
+      "source_sha1": "5a354e94cc20264ddfb86214a6428a1f57987292"
     },
     "u02_fig_lezaj_temperatura.svg": {
       "rows": [
         {
           "file": "u02_fig_lezaj_temperatura--1.svg",
           "width": 277.682,
-          "height": 241.088,
+          "height": 226.088,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "cce0bc31be3908d08003e3a54fa88b78a441dfd8b9134f027e5d350fb790d3b8"
+          "sha256": "87894788827b11a9199b3a37c7517edc7672e00edec859cedade96d8bec36be3"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 16,
+      "source_text_count": 15,
       "source_geometry_count": 35,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 241.08826104129267,
+          "height": 226.08826104129264,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
-            2,
+            1,
+            3,
             4,
             5,
             6,
@@ -1205,9 +1208,9 @@
             8,
             9,
             10,
-            11,
-            14,
-            17,
+            13,
+            16,
+            18,
             19,
             20,
             21,
@@ -1215,23 +1218,22 @@
             23,
             24,
             25,
-            26,
-            29,
+            28,
+            30,
             31,
             32,
-            33,
+            34,
             35,
-            36,
+            37,
             38,
             39,
             40,
             41,
-            42,
+            44,
             45,
             46,
-            47,
-            49,
-            50
+            48,
+            49
           ],
           "texts": [
             1,
@@ -1248,12 +1250,11 @@
             12,
             13,
             14,
-            15,
-            16
+            15
           ]
         }
       ],
-      "source_sha1": "5cbb127c82ebbf19110292a3a8dece2fc4fd663c"
+      "source_sha1": "342f7762e3914cad2c177c6a122adf15d597b035"
     },
     "u02_fig_uvod_pregled.svg": {
       "rows": [
@@ -1266,7 +1267,7 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "adc5d4b1dc77a13ef41ab52123bac4dca4ed9c94eb623715c2de71d663d85f14"
+          "sha256": "fe1425b57346f669da7bdd7b3a0b3fb12ed9241eacc8352b2ae3b81ba88a9c79"
         }
       ],
       "kind": "composite",
@@ -1350,33 +1351,34 @@
           ]
         }
       ],
-      "source_sha1": "e8ccbe50d142ab30a3e146898a9b89dd5d467d0b"
+      "source_sha1": "3173c26737a961c88ec14b06fbf621ec1b5dc9de"
     },
     "u02_val2_viskoznost_kapilarnost.svg": {
       "rows": [
         {
           "file": "u02_val2_viskoznost_kapilarnost--1.svg",
           "width": 152.277,
-          "height": 171.713,
+          "height": 156.713,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "be55959165e1d7ddf9e3ec3f713b313d0df34d226898e34bf0d95235b3b632fb"
+          "sha256": "d5d9e2a3102069eb0013d503a3deb9c5e6c9ee7464612c09642522556db999fa"
         }
       ],
       "kind": "mini",
       "triptych_conflicts": null,
-      "source_text_count": 9,
+      "source_text_count": 8,
       "source_geometry_count": 15,
       "removed_decorations": [],
       "panels": [
         {
           "width": 152.27716,
-          "height": 171.7129988542964,
+          "height": 156.7129988542964,
           "kind": "mini",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -1386,12 +1388,11 @@
             7,
             8,
             9,
-            10,
-            12,
-            14,
+            11,
+            13,
+            17,
             18,
-            19,
-            20
+            19
           ],
           "texts": [
             1,
@@ -1401,12 +1402,11 @@
             5,
             6,
             7,
-            8,
-            9
+            8
           ]
         }
       ],
-      "source_sha1": "67efda4ee346d0efe5d6452901c11a855ca639c3"
+      "source_sha1": "63dc0058e0e732766481f86ce4dbaf2dcd9aadd7"
     },
     "u02_vjezbe_skice.svg": {
       "rows": [
@@ -1419,7 +1419,7 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "c953b782fb48a6194c7da5c058bfdef6cd0b1ed3d86eeae4ec6c3f904ad717d9"
+          "sha256": "3702e4e189f14e7faec4ec995b5ebe5d39086eba3bafd91f66f06db6ea945861"
         },
         {
           "file": "u02_vjezbe_skice--2.svg",
@@ -1430,7 +1430,7 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "4031b715a47321261ac290d6ec2f3f60fd39790f496d6f1b4dacd754a39eac46"
+          "sha256": "5eef696793246de26565067e95a3a80232a8a664cc3db9bd953ab1db05e59132"
         },
         {
           "file": "u02_vjezbe_skice--3.svg",
@@ -1441,7 +1441,7 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "88397b4441f9c27839c54d05480d31979ddf0b27e4a6010abedb4a073a402b43"
+          "sha256": "9652634912a5a35a3279630046d23181b4f41826d82c94dc191fee7dc1d6e08d"
         }
       ],
       "kind": "composite",
@@ -1517,7 +1517,7 @@
         },
         {
           "width": 216.937,
-          "height": 206.83120363636365,
+          "height": 206.07143272727274,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -1698,20 +1698,20 @@
           ]
         }
       ],
-      "source_sha1": "3c7fe60b943e5f99c57caf06f31817ce3c3b8c16"
+      "source_sha1": "bd89aad4a3c7d4f3d0da8d8d5828874681061c15"
     },
     "u03_balans_tlaka_i_geff.svg": {
       "rows": [
         {
           "file": "u03_balans_tlaka_i_geff--1.svg",
           "width": 447.874,
-          "height": 248.623,
+          "height": 247.931,
           "panels": [
             0,
             1
           ],
           "keep_with_next": true,
-          "sha256": "02386b81df70310daf9882e49e5be4ac5c5fe2adef1c13ca5257a001a4aace50"
+          "sha256": "c54038af7df919f3d74cf0c149be6b77df7d8aa3d2593374677821526565fbdb"
         }
       ],
       "kind": "composite",
@@ -1722,7 +1722,7 @@
       "panels": [
         {
           "width": 216.937,
-          "height": 180.92818865262524,
+          "height": 181.0347333602259,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -1762,7 +1762,7 @@
         },
         {
           "width": 216.937,
-          "height": 248.622821192053,
+          "height": 247.93097682119208,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -1801,30 +1801,30 @@
           ]
         }
       ],
-      "source_sha1": "1d1bee25d2909ab6c63fe1a522cf6a7b4ee2cb80"
+      "source_sha1": "bcfad0dfa417f6355bc91424a8a3e88fe99e6b56"
     },
     "u03_ch1_zatvoreni_spremnik_ulje_ziva.svg": {
       "rows": [
         {
           "file": "u03_ch1_zatvoreni_spremnik_ulje_ziva--1.svg",
           "width": 447.874,
-          "height": 311.398,
+          "height": 296.398,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "eeec13ad9f1b9ed8cfa443512898ab91119b14cf5c1e402b9bfb276f512cc573"
+          "sha256": "fe80a8a9112df0ab7be9a053bf319685dc66009557cc3764c0eb6552b271a073"
         }
       ],
       "kind": "wide",
       "triptych_conflicts": null,
-      "source_text_count": 17,
+      "source_text_count": 16,
       "source_geometry_count": 36,
       "removed_decorations": [],
       "panels": [
         {
           "width": 447.874,
-          "height": 311.39809661139145,
+          "height": 296.3980966113915,
           "kind": "wide",
           "conflicts": 0,
           "geometry": [
@@ -1850,20 +1850,20 @@
             19,
             20,
             21,
-            31,
+            30,
+            34,
             35,
             36,
             37,
             38,
             39,
             40,
-            41,
+            42,
             43,
             44,
-            45,
+            48,
             49,
-            50,
-            51
+            50
           ],
           "texts": [
             1,
@@ -1881,35 +1881,34 @@
             13,
             14,
             15,
-            16,
-            17
+            16
           ]
         }
       ],
-      "source_sha1": "6fdefdf58e04411d13322afb1a7af04a43d53af1"
+      "source_sha1": "2722f90a99d8df8a80acfc9ea7734d5059851d58"
     },
     "u03_fig_balastni_tank.svg": {
       "rows": [
         {
           "file": "u03_fig_balastni_tank--1.svg",
           "width": 447.874,
-          "height": 386.286,
+          "height": 383.581,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "b99566e0c499dce9b6d1393d7836077a6a3c08c0e2daee7c3c046d67b169d09f"
+          "sha256": "6ab39dfe090808a193675e54a2d760637aefbe83437e502988aa57c69b51b6a9"
         }
       ],
       "kind": "wide",
       "triptych_conflicts": null,
-      "source_text_count": 22,
+      "source_text_count": 21,
       "source_geometry_count": 50,
       "removed_decorations": [],
       "panels": [
         {
           "width": 447.874,
-          "height": 386.2858986386235,
+          "height": 383.58083403901605,
           "kind": "wide",
           "conflicts": 0,
           "geometry": [
@@ -1948,21 +1947,21 @@
             42,
             46,
             47,
+            50,
             51,
             52,
             53,
             54,
-            55,
+            57,
             58,
             59,
             60,
             61,
-            62,
+            64,
             65,
             66,
             67,
-            68,
-            69
+            68
           ],
           "texts": [
             1,
@@ -1985,35 +1984,34 @@
             18,
             19,
             20,
-            21,
-            22
+            21
           ]
         }
       ],
-      "source_sha1": "26fc2616c0e23b60aa63521f0464dc560319802d"
+      "source_sha1": "b258cfb51adb935e0e1dbc4e439fef82a87997b8"
     },
     "u03_fig_pumpa_usis.svg": {
       "rows": [
         {
           "file": "u03_fig_pumpa_usis--1.svg",
           "width": 277.682,
-          "height": 296.85,
+          "height": 281.85,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "e7f66eacd074485db78ab35bd7dc24968e1034459257f2bceeb17e3301fb06be"
+          "sha256": "e79887f47b1ca47330d36541099302a89ea4de86632b07ad59758d4663999ca8"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 12,
+      "source_text_count": 11,
       "source_geometry_count": 28,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 296.8504383475424,
+          "height": 281.8504383475425,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -2041,10 +2039,10 @@
             21,
             22,
             23,
+            35,
             36,
             37,
-            38,
-            39
+            38
           ],
           "texts": [
             1,
@@ -2057,36 +2055,35 @@
             8,
             9,
             10,
-            11,
-            12
+            11
           ]
         }
       ],
-      "source_sha1": "333e1f72aee7241157a0092b213f65d4ecaada6e"
+      "source_sha1": "8f91d8ecf189a4f3647604e23b3a533f6acdf9f6"
     },
     "u03_fig_uvod_pregled.svg": {
       "rows": [
         {
           "file": "u03_fig_uvod_pregled--1.svg",
           "width": 447.874,
-          "height": 330.932,
+          "height": 330.415,
           "panels": [
             0,
             1
           ],
           "keep_with_next": true,
-          "sha256": "ca4106be03f43dbee9f79e7ceb0a64b7a317263f88c9e8f282a39567f90870e7"
+          "sha256": "f76e4cc2d4f734ab4b44d481d67248cef75c487bcfb5beadcb3febbdc715a0ac"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
       "source_text_count": 23,
-      "source_geometry_count": 63,
+      "source_geometry_count": 55,
       "removed_decorations": [],
       "panels": [
         {
           "width": 216.937,
-          "height": 239.9780570738336,
+          "height": 240.73108475603595,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -2123,7 +2120,7 @@
         },
         {
           "width": 216.937,
-          "height": 330.93164925373134,
+          "height": 330.4149607426593,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -2137,15 +2134,15 @@
             35,
             36,
             37,
-            38,
-            39,
+            41,
+            42,
             43,
             44,
             45,
             46,
             47,
-            48,
-            49,
+            51,
+            52,
             53,
             54,
             55,
@@ -2155,21 +2152,13 @@
             59,
             60,
             61,
-            62,
-            63,
-            64,
-            65,
-            66,
-            67,
-            68,
             69,
-            77,
-            78,
-            79,
-            80,
-            81,
-            82,
-            83
+            70,
+            71,
+            72,
+            73,
+            74,
+            75
           ],
           "texts": [
             8,
@@ -2191,30 +2180,30 @@
           ]
         }
       ],
-      "source_sha1": "929825fa2d2480b6e6ab01499568e8c20a48b637"
+      "source_sha1": "a0b3a0cf409b0099d4bed5f180a06ac7e34a5235"
     },
     "u03_fig_zatvoreni_spremnik_tlak.svg": {
       "rows": [
         {
           "file": "u03_fig_zatvoreni_spremnik_tlak--1.svg",
           "width": 277.682,
-          "height": 260.915,
+          "height": 246.462,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "1e4fcf92703c386c03595c5cf2f1e0a925770663bfacb5ed5da1a1a7bf0aef08"
+          "sha256": "a75a4d56935be7dd2741321bb8959ace5130045aa76a56fc0e434312baa50c70"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 9,
+      "source_text_count": 8,
       "source_geometry_count": 20,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 260.9151978306304,
+          "height": 246.46245487036032,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -2247,38 +2236,38 @@
             5,
             6,
             7,
-            8,
-            9
+            8
           ]
         }
       ],
-      "source_sha1": "42ec638e9314d646cebf2168e95ff73a14e7e1f6"
+      "source_sha1": "ab4d6a8f8d6636730e2d756ef41a76e731066392"
     },
     "u03_val1_diferencijalni_manometar.svg": {
       "rows": [
         {
           "file": "u03_val1_diferencijalni_manometar--1.svg",
           "width": 277.682,
-          "height": 221.249,
+          "height": 206.249,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "cbdc39ce6a2c11b9e759cf1fc8e9804b56f2edb1728fcf2bb0285d4f64017ed8"
+          "sha256": "c6508feb78107305eba02d4bf5e755a6b793066f431e231d8ebc3034fcab651b"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 12,
-      "source_geometry_count": 32,
+      "source_text_count": 11,
+      "source_geometry_count": 30,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 221.24916596653617,
+          "height": 206.24916596653614,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -2287,10 +2276,10 @@
             6,
             7,
             8,
-            9,
             10,
-            11,
-            13,
+            16,
+            17,
+            18,
             19,
             20,
             21,
@@ -2299,18 +2288,15 @@
             24,
             25,
             26,
-            27,
             28,
             29,
-            31,
+            30,
             32,
             33,
-            35,
+            34,
             36,
             37,
-            39,
-            40,
-            41
+            38
           ],
           "texts": [
             1,
@@ -2323,12 +2309,11 @@
             8,
             9,
             10,
-            11,
-            12
+            11
           ]
         }
       ],
-      "source_sha1": "0fb3a685b16a9488ecfd669fd898badcd7a4a314"
+      "source_sha1": "fd2297bb014458eafad6938c24dc65ec7faab899"
     },
     "u03_vjezbe_skice.svg": {
       "rows": [
@@ -2341,18 +2326,18 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "38b1f30e9e768f461c4a76145f2564f86e512e829231257396465764548d000b"
+          "sha256": "da9dcf2b81a1877d6cdd0ab2b35259f0087bce5b6e8d86af85009410ac6654c7"
         },
         {
           "file": "u03_vjezbe_skice--2.svg",
           "width": 447.874,
-          "height": 240.802,
+          "height": 239.802,
           "panels": [
             2,
             3
           ],
           "keep_with_next": false,
-          "sha256": "dcaf7b2b8392a48aa1ff0abe117585d2e2a05422a4f324dc0a0e85c986d2beee"
+          "sha256": "dbb879248923eed807f85512ef432ad094cd3853cf807c749b9f815661107cec"
         },
         {
           "file": "u03_vjezbe_skice--3.svg",
@@ -2363,13 +2348,13 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "5bc8f97f0e4a663bb702799b4134a19b4bdb9bf4bdac00fea25505df81193e7e"
+          "sha256": "9d5fd132eb84a10d83ed2fdadd605fc4336afaa45501593de91d1eae82a3fba4"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
       "source_text_count": 51,
-      "source_geometry_count": 95,
+      "source_geometry_count": 93,
       "removed_decorations": [],
       "panels": [
         {
@@ -2429,7 +2414,7 @@
         },
         {
           "width": 216.937,
-          "height": 240.80235856573705,
+          "height": 239.80235856573705,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -2463,7 +2448,7 @@
         },
         {
           "width": 216.937,
-          "height": 212.37009368960332,
+          "height": 211.3697418351478,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -2549,21 +2534,19 @@
             120,
             121,
             122,
-            123,
             124,
             126,
-            128,
+            129,
+            130,
             131,
             132,
             133,
-            134,
             135,
+            136,
             137,
-            138,
             139,
-            141,
-            142,
-            143
+            140,
+            141
           ],
           "texts": [
             42,
@@ -2579,19 +2562,19 @@
           ]
         }
       ],
-      "source_sha1": "97ca62e33de1019f64703bcd393834aefc7f392b"
+      "source_sha1": "e5077e89b0ea53397907beb520dd106ec4a269d5"
     },
     "u04_ch1_rotirajuci_spremnik_paraboloid.svg": {
       "rows": [
         {
           "file": "u04_ch1_rotirajuci_spremnik_paraboloid--1.svg",
           "width": 277.682,
-          "height": 268.375,
+          "height": 234.68,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "f300ae944d90845ec47697955a6301c532d240b08a4aab881d72553a139e6129"
+          "sha256": "d53bf4940c02d7030eb0d5170c79c6f4dc905ce12a3f0ea7ab27eba776ee86cc"
         }
       ],
       "kind": "standard",
@@ -2602,7 +2585,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 268.3752010259706,
+          "height": 234.68009672721345,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -2667,7 +2650,7 @@
           ]
         }
       ],
-      "source_sha1": "9d30d954257a90071ecc3a82d4bac43a108f8ba1"
+      "source_sha1": "f162c699cdca936a5eb1332e8a271b113f68bb16"
     },
     "u04_fig_autocisterna_kocenje.svg": {
       "rows": [
@@ -2679,12 +2662,12 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "3aca9b3fe4bd5fd1fa74fa0eab8c726799bd0e25fe432bc6c0878caf9b577bff"
+          "sha256": "deb7348ce53129a17728e4ac869c845818064822bfcca1927f05c54b7da20434"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 14,
+      "source_text_count": 13,
       "source_geometry_count": 52,
       "removed_decorations": [],
       "panels": [
@@ -2713,26 +2696,27 @@
             16,
             17,
             18,
-            22,
-            24,
+            21,
+            23,
+            25,
             26,
             27,
             28,
             29,
-            30,
+            31,
             32,
             33,
             34,
             35,
-            36,
+            37,
             38,
             39,
             40,
             41,
-            42,
+            43,
             44,
             45,
-            46,
+            47,
             48,
             49,
             50,
@@ -2740,12 +2724,11 @@
             52,
             53,
             54,
-            55,
+            56,
             57,
             58,
-            59,
-            63,
-            64
+            62,
+            63
           ],
           "texts": [
             1,
@@ -2760,35 +2743,34 @@
             10,
             11,
             12,
-            13,
-            14
+            13
           ]
         }
       ],
-      "source_sha1": "32e2bbd84eb7ebb114e8466fee0c012db4eda187"
+      "source_sha1": "0fb937203f11486ca993a592a5ebe580808d0ba4"
     },
     "u04_fig_rotirajuci_cilindar.svg": {
       "rows": [
         {
           "file": "u04_fig_rotirajuci_cilindar--1.svg",
           "width": 277.682,
-          "height": 269.346,
+          "height": 238.953,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "578477a457710b3f505f65534b98055f08180b89fc1f54fd9379c47bfcd5d9f7"
+          "sha256": "2ab2029e5c15c1b1dc1a7c9ac1109c2c7f026a7b187d074e5939634a67835827"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 16,
+      "source_text_count": 14,
       "source_geometry_count": 37,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 269.3456463157895,
+          "height": 238.95302884848485,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -2817,18 +2799,18 @@
             22,
             23,
             24,
+            35,
+            36,
             37,
             38,
-            39,
             40,
+            41,
             42,
-            43,
             44,
-            46,
+            45,
             47,
-            49,
-            50,
-            51
+            48,
+            49
           ],
           "texts": [
             1,
@@ -2844,26 +2826,24 @@
             11,
             12,
             13,
-            14,
-            15,
-            16
+            14
           ]
         }
       ],
-      "source_sha1": "c7223c85aaec4503fa192eb7dd8768d9d03e7ca3"
+      "source_sha1": "e63f92c6a1150fce1b4b319f0a48cd7f07f42db6"
     },
     "u04_fig_uvod_pregled.svg": {
       "rows": [
         {
           "file": "u04_fig_uvod_pregled--1.svg",
           "width": 447.874,
-          "height": 237.914,
+          "height": 236.415,
           "panels": [
             0,
             1
           ],
           "keep_with_next": true,
-          "sha256": "b0bde89d8535fd6e4b3fc46223d26a16021ce08c40b68e90dde6cef3a40b0f00"
+          "sha256": "2ec00083c4811785b2bec44a18845ece61e722a291fe7426665fa8f98e42c230"
         }
       ],
       "kind": "composite",
@@ -2915,7 +2895,7 @@
         },
         {
           "width": 216.937,
-          "height": 237.91403419334787,
+          "height": 236.4146200471027,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -2962,30 +2942,30 @@
           ]
         }
       ],
-      "source_sha1": "13ce958268690d2f758d983cd1c6df28cf5a8728"
+      "source_sha1": "2e641edcfda6dbc2ecd93f6a4936dd4c1e3e2813"
     },
     "u04_val2_laboratorijska_kolica.svg": {
       "rows": [
         {
           "file": "u04_val2_laboratorijska_kolica--1.svg",
           "width": 277.682,
-          "height": 261.703,
+          "height": 246.703,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "a1ec6d96f964b2ef57fc389155b03f32ef7c54f0f9346da3e5ec3fbd924e749e"
+          "sha256": "982b9f84890e502d7ef4cdb406409c1b6e3edbe521a6c4867a3151779e27e831"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 15,
+      "source_text_count": 14,
       "source_geometry_count": 62,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 261.70284000000004,
+          "height": 246.70284000000004,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -3048,9 +3028,9 @@
             56,
             57,
             58,
+            71,
             72,
-            73,
-            74
+            73
           ],
           "texts": [
             1,
@@ -3066,12 +3046,11 @@
             11,
             12,
             13,
-            14,
-            15
+            14
           ]
         }
       ],
-      "source_sha1": "6ee075671f363383274fafd537da806b192fbef7"
+      "source_sha1": "f9e5f2e78b0ca5d38914554a6f2c83f3f8e8ecaa"
     },
     "u04_val3_kosa_stijenka.svg": {
       "rows": [
@@ -3083,7 +3062,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "34fb5dca90f7e1eddb7728434735857ac5dc59024bc0180f292c406743d68d80"
+          "sha256": "65b2110d96fb848fb33e50aeb6e609b5ffaed8409cb09354d5243711401121b7"
         }
       ],
       "kind": "standard",
@@ -3153,53 +3132,53 @@
           ]
         }
       ],
-      "source_sha1": "542b68efb3318ed79a8be9b18c0ea4995e690771"
+      "source_sha1": "796d731105571df7d619aaf01b8ff9aa877eb6af"
     },
     "u04_vjezbe_skice.svg": {
       "rows": [
         {
           "file": "u04_vjezbe_skice--1.svg",
           "width": 447.874,
-          "height": 128.794,
+          "height": 128.285,
           "panels": [
             0,
             1
           ],
           "keep_with_next": false,
-          "sha256": "128773ae042216f426f206f2c81247273c27f2d74182c5d663bab3f4e85c8940"
+          "sha256": "3514e5bf6539c4d1392344e07797215c7eb9063c085c8c633c2039f2a701bb69"
         },
         {
           "file": "u04_vjezbe_skice--2.svg",
           "width": 447.874,
-          "height": 175.117,
+          "height": 174.117,
           "panels": [
             2,
             3
           ],
           "keep_with_next": false,
-          "sha256": "2d208e62c57aa63c7e184fffcf2ef1aa307c300c214fdd48ec1f15b0b383174c"
+          "sha256": "4d307c4a2819184685ca0054e3d4f08d65b368b38e5bc3481e4ad7a58121b400"
         },
         {
           "file": "u04_vjezbe_skice--3.svg",
           "width": 447.874,
-          "height": 164.003,
+          "height": 159.503,
           "panels": [
             4,
             5
           ],
           "keep_with_next": true,
-          "sha256": "c2c97d2bb1d0d542f95ee71488be4287f5f5bd67d20fc786e3c25918a1994538"
+          "sha256": "d3f5917dbd88c0a0205853e69740100e6845da2c3fd1cee9f20efd61346317a4"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
-      "source_text_count": 75,
+      "source_text_count": 74,
       "source_geometry_count": 94,
       "removed_decorations": [],
       "panels": [
         {
           "width": 216.937,
-          "height": 128.79393876104876,
+          "height": 128.28492358184462,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -3232,7 +3211,7 @@
         },
         {
           "width": 216.937,
-          "height": 128.79393876104876,
+          "height": 128.28492358184462,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -3266,7 +3245,7 @@
         },
         {
           "width": 216.937,
-          "height": 154.48501603548186,
+          "height": 152.80980499679697,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -3303,7 +3282,7 @@
         },
         {
           "width": 216.937,
-          "height": 175.11654376764824,
+          "height": 174.11654376764824,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -3340,7 +3319,7 @@
         },
         {
           "width": 216.937,
-          "height": 164.00302564102566,
+          "height": 159.50272307692308,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -3351,19 +3330,19 @@
             107,
             109,
             110,
+            115,
             116,
             117,
-            118,
-            120,
-            122,
-            124,
-            126,
+            119,
+            121,
+            123,
+            125,
+            127,
             128,
             129,
             130,
             131,
-            132,
-            133
+            132
           ],
           "texts": [
             49,
@@ -3380,39 +3359,39 @@
             60,
             61,
             62,
-            63,
-            64
+            63
           ]
         },
         {
           "width": 216.937,
-          "height": 148.08862482655724,
+          "height": 146.6202879686021,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            138,
             139,
             140,
             141,
             142,
             143,
             144,
-            145,
+            146,
             147,
             148,
-            149,
+            150,
             151,
             152,
-            153,
-            155,
-            159,
-            161,
+            154,
+            158,
+            160,
+            162,
             163,
             164,
-            165,
-            167,
-            168
+            166,
+            167
           ],
           "texts": [
+            64,
             65,
             66,
             67,
@@ -3422,35 +3401,34 @@
             71,
             72,
             73,
-            74,
-            75
+            74
           ]
         }
       ],
-      "source_sha1": "b05bbb8627fb0115a1390bc9ca5308f5ec04b75f"
+      "source_sha1": "cb4aa787a1e60c8a4f39cda0fe7e2971a589a16f"
     },
     "u05_ch1_pregrada_ulje_voda.svg": {
       "rows": [
         {
           "file": "u05_ch1_pregrada_ulje_voda--1.svg",
           "width": 277.682,
-          "height": 219.213,
+          "height": 214.462,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "e2003638beff432103ed1223fed8092542b7af0fd0a66f7af1456153116354d0"
+          "sha256": "90fb337eba9a7a2b8892ef26c60bc409939be6b787576397d82387df1e653b1f"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 21,
+      "source_text_count": 20,
       "source_geometry_count": 30,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 219.2133431022251,
+          "height": 214.46246458932734,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -3505,36 +3483,35 @@
             17,
             18,
             19,
-            20,
-            21
+            20
           ]
         }
       ],
-      "source_sha1": "ea5f55bd6c041184a17f0a238a63d1d26ee3e4d4"
+      "source_sha1": "1ce1bea2d8df62aabeba55dcf9c652e8d96067e3"
     },
     "u05_fig_uvod_pregled.svg": {
       "rows": [
         {
           "file": "u05_fig_uvod_pregled--1.svg",
           "width": 447.874,
-          "height": 314.099,
+          "height": 314.392,
           "panels": [
             0,
             1
           ],
           "keep_with_next": true,
-          "sha256": "bb7c710c07e539c5925a7ecf7d29cda255df8317352fde307b62e49004001ecc"
+          "sha256": "0d003ac68afb37d13c2f1e83aa037588f5a0a25cf14feef669735585dc7efd80"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
-      "source_text_count": 23,
+      "source_text_count": 22,
       "source_geometry_count": 54,
       "removed_decorations": [],
       "panels": [
         {
           "width": 216.937,
-          "height": 233.2610900230134,
+          "height": 234.29464682395644,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -3578,7 +3555,7 @@
         },
         {
           "width": 216.937,
-          "height": 314.09880261613284,
+          "height": 314.3924553009318,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -3625,35 +3602,34 @@
             19,
             20,
             21,
-            22,
-            23
+            22
           ]
         }
       ],
-      "source_sha1": "eacc45df82d8f1f35c7838ff3dbecedaa03b7958"
+      "source_sha1": "84d88bc899ca6ab982e964f96c3849a5e70d4861"
     },
     "u05_val1_pravokutna_zaklopka.svg": {
       "rows": [
         {
           "file": "u05_val1_pravokutna_zaklopka--1.svg",
           "width": 277.682,
-          "height": 261.377,
+          "height": 246.377,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "79aa0d86efe5375c8e501feeb8dcf0c95fe3b72143eae0c272f541b5ea5b81fb"
+          "sha256": "209be686da0942dcaf6ddc2ca94f836c1e38e96d02f2613b6210b35f53240547"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 19,
+      "source_text_count": 18,
       "source_geometry_count": 34,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 261.3773774757282,
+          "height": 246.37737747572822,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -3710,35 +3686,34 @@
             15,
             16,
             17,
-            18,
-            19
+            18
           ]
         }
       ],
-      "source_sha1": "858c4e6a467c9bf71d22de2a176541eec8a88273"
+      "source_sha1": "a360bc44538139fa9dc643a928574e6302d9729c"
     },
     "u05_val3_kosi_poklopac.svg": {
       "rows": [
         {
           "file": "u05_val3_kosi_poklopac--1.svg",
           "width": 277.682,
-          "height": 238.699,
+          "height": 222.477,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "939e3fb1c87fdc482750f167b1f44aabf76de0379fc1e3d5dfdddf9f88e3d41c"
+          "sha256": "174ae2ad098ec0733845417bc218b5441373b2bf3ec903b3505a1d2790ea40d8"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 14,
+      "source_text_count": 13,
       "source_geometry_count": 25,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 238.69854030150756,
+          "height": 222.4767472703146,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -3781,37 +3756,27 @@
             10,
             11,
             12,
-            13,
-            14
+            13
           ]
         }
       ],
-      "source_sha1": "3bc19149818a1d19f2898e46dde890b0a7443e71"
+      "source_sha1": "6805fd0b24a69311cbe23bbfc31e490d7b56ad37"
     },
     "u05_vjezbe_skice.svg": {
       "rows": [
         {
           "file": "u05_vjezbe_skice--1.svg",
-          "width": 277.682,
-          "height": 180.824,
+          "width": 443.959,
+          "height": 180.819,
           "panels": [
-            0
-          ],
-          "keep_with_next": false,
-          "sha256": "9e12b281f525c39e0dfdc90f0b9bee5a7ce14c7cca3e5e00af28b713e4e3a731"
-        },
-        {
-          "file": "u05_vjezbe_skice--2.svg",
-          "width": 277.682,
-          "height": 170.072,
-          "panels": [
+            0,
             1
           ],
           "keep_with_next": false,
-          "sha256": "d7c1e87b0ab329d6b15d38aae39eece921936a2947e30d71de547f0824ab7ce7"
+          "sha256": "cd3013e614718134644f44bb7b23be8c03c4fa28b21b348d3fd1a1a2eba3df6c"
         },
         {
-          "file": "u05_vjezbe_skice--3.svg",
+          "file": "u05_vjezbe_skice--2.svg",
           "width": 447.874,
           "height": 165.418,
           "panels": [
@@ -3819,29 +3784,29 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "746f84383b1c3ae5499cb1f7cd57b29fd585592926026362eb5384923464a005"
+          "sha256": "e36304204ff32effc0527b3c3dc1ae610bfb582312d8108e8c21f4985f9c5a52"
         },
         {
-          "file": "u05_vjezbe_skice--4.svg",
+          "file": "u05_vjezbe_skice--3.svg",
           "width": 447.874,
-          "height": 143.464,
+          "height": 143.459,
           "panels": [
             4,
             5
           ],
           "keep_with_next": true,
-          "sha256": "b3edc6a90841da2cc94b50ed14d3b96206549aae8304db0662b6309bf796cc00"
+          "sha256": "aa8d84b4a939fa9611fefad68b1aa1be0ac545c35809bd29355e98a485816369"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
-      "source_text_count": 82,
+      "source_text_count": 79,
       "source_geometry_count": 105,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 180.82403294058113,
+          "height": 180.8189378898541,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -3878,16 +3843,16 @@
             13,
             14,
             15,
-            16,
-            17
+            16
           ]
         },
         {
-          "width": 277.68188000000004,
-          "height": 170.07159969601219,
-          "kind": "standard",
+          "width": 152.27716,
+          "height": 108.87460475737393,
+          "kind": "mini",
           "conflicts": 0,
           "geometry": [
+            34,
             35,
             36,
             37,
@@ -3896,17 +3861,17 @@
             40,
             41,
             42,
-            43,
-            45,
-            47,
+            44,
+            46,
+            48,
             49,
             50,
-            51,
+            52,
             53,
-            54,
-            55
+            54
           ],
           "texts": [
+            17,
             18,
             19,
             20,
@@ -3919,42 +3884,42 @@
             27,
             28,
             29,
-            30,
-            31,
-            32,
-            33
+            30
           ]
         },
         {
           "width": 216.937,
-          "height": 141.4917099494098,
+          "height": 141.48143981356998,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            65,
+            66,
+            67,
             68,
             69,
             70,
             71,
             72,
             73,
-            74,
             75,
-            76,
-            78,
+            77,
+            79,
             80,
+            81,
             82,
             83,
             84,
             85,
             86,
-            87,
             88,
             89,
-            91,
-            92,
-            93
+            90
           ],
           "texts": [
+            31,
+            32,
+            33,
             34,
             35,
             36,
@@ -3963,10 +3928,7 @@
             39,
             40,
             41,
-            42,
-            43,
-            44,
-            45
+            42
           ]
         },
         {
@@ -3975,37 +3937,40 @@
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            99,
+            101,
             102,
+            103,
             104,
             105,
-            106,
             107,
             108,
-            110,
+            109,
             111,
             112,
-            114,
-            115,
-            116
+            113
           ],
           "texts": [
+            43,
+            44,
+            45,
             46,
             47,
             48,
             49,
             50,
-            51,
-            52,
-            53,
-            54
+            51
           ]
         },
         {
           "width": 216.937,
-          "height": 143.46356850292239,
+          "height": 143.45903727565576,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            120,
+            121,
+            122,
             123,
             124,
             125,
@@ -4015,24 +3980,24 @@
             129,
             130,
             131,
-            132,
             133,
-            134,
-            136,
-            138,
-            140,
-            142,
+            135,
+            137,
+            139,
+            141,
             144,
-            147,
+            145,
+            146,
             148,
             149,
+            150,
             151,
-            152,
-            153,
-            154,
-            155
+            152
           ],
           "texts": [
+            52,
+            53,
+            54,
             55,
             56,
             57,
@@ -4046,18 +4011,18 @@
             65,
             66,
             67,
-            68,
-            69,
-            70,
-            71
+            68
           ]
         },
         {
           "width": 216.937,
-          "height": 134.90413598883674,
+          "height": 134.90033454545454,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            162,
+            163,
+            164,
             165,
             166,
             167,
@@ -4065,14 +4030,14 @@
             169,
             170,
             171,
-            172,
             173,
             174,
-            176,
-            177,
-            178
+            175
           ],
           "texts": [
+            69,
+            70,
+            71,
             72,
             73,
             74,
@@ -4080,26 +4045,23 @@
             76,
             77,
             78,
-            79,
-            80,
-            81,
-            82
+            79
           ]
         }
       ],
-      "source_sha1": "42d84ea1f1045a5a235bd6ab50e759b58aa02499"
+      "source_sha1": "97f58d72c737cfb44ff1a31b4b17e8ba97db0f53"
     },
     "u06_ch1_poklopac_spojnica.svg": {
       "rows": [
         {
           "file": "u06_ch1_poklopac_spojnica--1.svg",
           "width": 277.682,
-          "height": 222.773,
+          "height": 221.25,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "4d144e9c2725ea0883633d7e7aa9caa7c0375fb0190c7bac2a0dc5f89745b604"
+          "sha256": "e6204dcfe7a82651038c8ec7cca31feaac369900f4bd521ee1960858c3d705ca"
         }
       ],
       "kind": "standard",
@@ -4110,7 +4072,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 222.77293095246245,
+          "height": 221.24966487668138,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -4163,19 +4125,19 @@
           ]
         }
       ],
-      "source_sha1": "aa796f0c5b1ad92d9b3e1f12f58b85dd831e83ec"
+      "source_sha1": "014906be459bf700157b0e496cf5f9f5aa36e8f6"
     },
     "u06_val1_cetvrtina_kruga.svg": {
       "rows": [
         {
           "file": "u06_val1_cetvrtina_kruga--1.svg",
           "width": 277.682,
-          "height": 301.467,
+          "height": 300.124,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "69ae57a107ae9eb6404bb4fc6a2a3759828adbb5c0b361d848f658d9fbe4a461"
+          "sha256": "e41bea4b678b41581403dc6a6830dfa0534a4e1e6edb9dd84372ef1efaff2cc7"
         }
       ],
       "kind": "standard",
@@ -4186,7 +4148,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 301.46716156664667,
+          "height": 300.1243220746448,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -4236,7 +4198,7 @@
           ]
         }
       ],
-      "source_sha1": "c39fb5b949c43ce2dba1d41b2587827bf16f64e0"
+      "source_sha1": "189cfb4ec3401705e3bd172b1951786909c60265"
     },
     "u06_val3_cetvrtcilindricni_poklopac.svg": {
       "rows": [
@@ -4248,7 +4210,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "41b27519fd5fc0214017a4805c11b6f2b5aa2e51c35702472ed2ac40d48d9c06"
+          "sha256": "742ba95d23ce9665fbccdebb2f31014e5697c772082b9e2288c6b4398eeba3cf"
         }
       ],
       "kind": "standard",
@@ -4305,7 +4267,7 @@
           ]
         }
       ],
-      "source_sha1": "37f0a9aba32cccfbdd355ff9fe571a0deadf9cfe"
+      "source_sha1": "1cd58f3e4ae2806a043ae4fd4938f69981d2dd0e"
     },
     "u07_ch1_platforma_ulje_voda_ormar.svg": {
       "rows": [
@@ -4317,7 +4279,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "7f1c65a9d66b3fe918a87f81e9b08b5eb410ceacf6720b05a4da1d5047f70aa8"
+          "sha256": "caf83bfa29ed3bff88b8a6c52d6b7e2191a9910c2ce903e8e2aea4e6ead444a0"
         }
       ],
       "kind": "standard",
@@ -4375,30 +4337,30 @@
           ]
         }
       ],
-      "source_sha1": "260dd8ac505dd819eb01d44386559dba1a8dee65"
+      "source_sha1": "f396d2782105f77af60b1b04834095fddbc04d82"
     },
     "u07_ch2_poplavljen_tank.svg": {
       "rows": [
         {
           "file": "u07_ch2_poplavljen_tank--1.svg",
           "width": 277.682,
-          "height": 184.246,
+          "height": 169.246,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "edaa002318bc6e2a2bc4510e7306c1d06ca09b0aeb8995da937f70d33268c8a2"
+          "sha256": "c7df0c70eab836d4783e2500033f6c3b470576aa2290cb8e4dfe2f92098a9b91"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 9,
+      "source_text_count": 8,
       "source_geometry_count": 17,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 184.24609372693732,
+          "height": 169.2460937269373,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -4428,35 +4390,34 @@
             5,
             6,
             7,
-            8,
-            9
+            8
           ]
         }
       ],
-      "source_sha1": "bcc33b7ca861e4cab70b33dd2ab274b066ee3533"
+      "source_sha1": "b43bad37d1a320fefb79d868da7cb373bdf5ef54"
     },
     "u07_fig_pumpno_kuciste.svg": {
       "rows": [
         {
           "file": "u07_fig_pumpno_kuciste--1.svg",
           "width": 152.277,
-          "height": 163.046,
+          "height": 148.046,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "ad6d15bcb5c30e040e59a01d5ef912ccb97ae6630ce1cd4120695561ad3e6dff"
+          "sha256": "10c5fb0f2c3fe573706a178ad0f6112ce52aa6c3eca1956647891156f2a685e8"
         }
       ],
       "kind": "mini",
       "triptych_conflicts": null,
-      "source_text_count": 6,
+      "source_text_count": 5,
       "source_geometry_count": 10,
       "removed_decorations": [],
       "panels": [
         {
           "width": 152.27716,
-          "height": 163.04600383233537,
+          "height": 148.04600383233534,
           "kind": "mini",
           "conflicts": 0,
           "geometry": [
@@ -4476,12 +4437,11 @@
             2,
             3,
             4,
-            5,
-            6
+            5
           ]
         }
       ],
-      "source_sha1": "778bdae6654ad1b3eed9105c57f7137461f59b1e"
+      "source_sha1": "adc47d7cfd407035e11ad144d9cd7086aee90e38"
     },
     "u07_fig_uvod_pregled.svg": {
       "rows": [
@@ -4494,7 +4454,7 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "38ba0cdc405c9da6b9b1194483880c23d0d62ed17bfc676acc34bbbc28ef35ec"
+          "sha256": "26e88bd28ffd95fe55cdd10b9c00d364f93678c0ed73da679c9fe023aab6a324"
         }
       ],
       "kind": "composite",
@@ -4505,7 +4465,7 @@
       "panels": [
         {
           "width": 216.937,
-          "height": 178.89763283678093,
+          "height": 178.89763218390806,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -4543,7 +4503,7 @@
         },
         {
           "width": 216.937,
-          "height": 97.20266987864177,
+          "height": 96.18971230570475,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -4569,30 +4529,30 @@
           ]
         }
       ],
-      "source_sha1": "082c9a4437a3981ea1107ca60ddee149aad4c9f9"
+      "source_sha1": "0ad9cb9ec292c7c89bef83bb02e8bf77cbafa316"
     },
     "u07_val1_platforma_kompresor.svg": {
       "rows": [
         {
           "file": "u07_val1_platforma_kompresor--1.svg",
           "width": 277.682,
-          "height": 241.803,
+          "height": 226.803,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "4ed587bcbad3cf7dbcb4ec13c81eff5b9ac8f43dc239a2eb6b6ca11e2100f1c1"
+          "sha256": "acfa791c2aa83712af715b4e701cbcb02533e704c042cecb09016a70199b8dd1"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 12,
+      "source_text_count": 11,
       "source_geometry_count": 20,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 241.8031737531207,
+          "height": 226.8031737531207,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -4628,35 +4588,34 @@
             8,
             9,
             10,
-            11,
-            12
+            11
           ]
         }
       ],
-      "source_sha1": "c029e10a3de8cc18efc37acb0b972a36d7d80f81"
+      "source_sha1": "dd61389935a0d3bdfbf0f7d540659e0597a0a38a"
     },
     "u07_val2_ponton_gaz.svg": {
       "rows": [
         {
           "file": "u07_val2_ponton_gaz--1.svg",
           "width": 277.682,
-          "height": 252.243,
+          "height": 236.227,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "7fb37f034bd281d9ec418b697b752d3edd95f88972814a2758b9fda023d05eac"
+          "sha256": "6daeb09746637312da163afe27dffbb2f5583f09423e8efaddec094b2138a75e"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 11,
+      "source_text_count": 10,
       "source_geometry_count": 17,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 252.24321812807887,
+          "height": 236.22732000000002,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -4688,12 +4647,11 @@
             7,
             8,
             9,
-            10,
-            11
+            10
           ]
         }
       ],
-      "source_sha1": "863acdf812d082bb6f3b67169df32b5ced968b28"
+      "source_sha1": "b49e4c3fe10b5f619bf2858e34f257d436149745"
     },
     "u07_vjezbe_skice.svg": {
       "rows": [
@@ -4706,29 +4664,29 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "42a888111b9a41d4102827884784c073d7dfa1eeaf7955f956907a7158918f51"
+          "sha256": "a956fbfa68549de74cfa7ccb29d7a3b961a3173174b119f13ba33edcb7b9935b"
         },
         {
           "file": "u07_vjezbe_skice--2.svg",
           "width": 447.874,
-          "height": 181.351,
+          "height": 181.742,
           "panels": [
             2,
             3
           ],
           "keep_with_next": false,
-          "sha256": "cf17d623a2330f4e8b598ccebd64c211a8e30f7ee538e4a4d38e08525424997e"
+          "sha256": "409b07a45a190cf4f8f9bc8191c878db59d182dbda4015a6a416d68e27b1866b"
         },
         {
           "file": "u07_vjezbe_skice--3.svg",
           "width": 447.874,
-          "height": 182.879,
+          "height": 181.486,
           "panels": [
             4,
             5
           ],
           "keep_with_next": true,
-          "sha256": "227bf26a9698aa1ef770c0bddbae1b5e2df656f9d2565444635fc22235d9155e"
+          "sha256": "8b1f22cfad5ff3f2dcb58b80494d8172f6d38b52db6c1342f423c7c290c97d3d"
         }
       ],
       "kind": "composite",
@@ -4796,7 +4754,7 @@
         },
         {
           "width": 216.937,
-          "height": 181.35124874700472,
+          "height": 181.74224598504514,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -4860,7 +4818,7 @@
         },
         {
           "width": 216.937,
-          "height": 182.87939281261583,
+          "height": 181.48605506181457,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -4893,7 +4851,7 @@
         },
         {
           "width": 216.937,
-          "height": 177.6905668113559,
+          "height": 173.05474185878168,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -4926,7 +4884,7 @@
           ]
         }
       ],
-      "source_sha1": "600e0f9d297f3ee0d09c81eb0cf3272f74a6e4d9"
+      "source_sha1": "2eedfb98ee9601b6ae0f9ee48d5480bee62e91ff"
     },
     "u08_ch1_mijesajuci_spremnik.svg": {
       "rows": [
@@ -4938,7 +4896,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "4526d0379655ee6b55b0bdc9911b11e8a275513abf4ab69c904629b46e39215f"
+          "sha256": "219242058cdb236f83356cd3a157176487805d9001bf3c72f1ee5c376f87f5c9"
         }
       ],
       "kind": "wide",
@@ -5008,93 +4966,30 @@
           ]
         }
       ],
-      "source_sha1": "d6c10cc86f9a86b2221a7a5353223d8783fe3cbe"
-    },
-    "u08_fig_kinematika.svg": {
-      "rows": [
-        {
-          "file": "u08_fig_kinematika--1.svg",
-          "width": 447.874,
-          "height": 97.158,
-          "panels": [
-            0,
-            1
-          ],
-          "keep_with_next": true,
-          "sha256": "c15afdbd41944cfbd77c69ba310e85c09b5d9b04416ac1d9eeb73d54feabac41"
-        }
-      ],
-      "kind": "composite",
-      "triptych_conflicts": null,
-      "source_text_count": 8,
-      "source_geometry_count": 12,
-      "removed_decorations": [],
-      "panels": [
-        {
-          "width": 216.937,
-          "height": 97.15832142857143,
-          "kind": "subfigure",
-          "conflicts": 0,
-          "geometry": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
-          ],
-          "texts": [
-            1,
-            2,
-            3
-          ]
-        },
-        {
-          "width": 216.937,
-          "height": 56.78191681666519,
-          "kind": "subfigure",
-          "conflicts": 0,
-          "geometry": [
-            11,
-            12,
-            14,
-            16,
-            18
-          ],
-          "texts": [
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "source_sha1": "a3567fa191cd94a09e00d7543b8cf00b53a058c3"
+      "source_sha1": "5df889ca6e92e25c50320dd99a096f14ce8d9ab7"
     },
     "u08_fig_t_komad_hidraulika.svg": {
       "rows": [
         {
           "file": "u08_fig_t_komad_hidraulika--1.svg",
           "width": 277.682,
-          "height": 318.184,
+          "height": 303.185,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "1c0bcdc1d9ca337cbf4988e8af54f4ae77ec9fec706fdac3670ee8ee7216b0d2"
+          "sha256": "ced54c62e017debca9cce315ce64eeb0b610d07183b2574d5df6766dd9b0f7eb"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 12,
+      "source_text_count": 11,
       "source_geometry_count": 20,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 318.1838342623952,
+          "height": 303.1847557377672,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -5130,36 +5025,35 @@
             8,
             9,
             10,
-            11,
-            12
+            11
           ]
         }
       ],
-      "source_sha1": "f097d92ac811439c0c1bf03d172d448a0d17d3b1"
+      "source_sha1": "f4f710aefd5fef5b1256925fb02c50d35394e0e9"
     },
     "u08_fig_uvod_pregled.svg": {
       "rows": [
         {
           "file": "u08_fig_uvod_pregled--1.svg",
           "width": 447.874,
-          "height": 141.691,
+          "height": 124.412,
           "panels": [
             0,
             1
           ],
           "keep_with_next": true,
-          "sha256": "98a0684079de11d1ba650cd1ae46c7bad9a3d5832257d03199d06c069e698ae9"
+          "sha256": "da06caacbd19f5710683a2b9662979cd00e05be71f129b76cccdb9e14e391ba3"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
-      "source_text_count": 14,
+      "source_text_count": 13,
       "source_geometry_count": 23,
       "removed_decorations": [],
       "panels": [
         {
           "width": 216.937,
-          "height": 141.6911670020121,
+          "height": 124.41161100196463,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -5189,16 +5083,16 @@
             9,
             10,
             11,
-            12,
-            13
+            12
           ]
         },
         {
           "width": 216.937,
-          "height": 74.22099681528661,
+          "height": 74.22099681528663,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            25,
             26,
             27,
             28,
@@ -5207,15 +5101,14 @@
             31,
             32,
             33,
-            34,
-            35
+            34
           ],
           "texts": [
-            14
+            13
           ]
         }
       ],
-      "source_sha1": "0dca84a7a2ba8768d4cd1b66f5ccef64efda7671"
+      "source_sha1": "c22144bb94e3c341238b7e758042c68078080a7b"
     },
     "u08_kontrolni_volumen_scene.svg": {
       "rows": [
@@ -5229,7 +5122,7 @@
             2
           ],
           "keep_with_next": true,
-          "sha256": "f22c5eb671a76c87aa1f814c5ff61cd66a278c031b0315682f4bfd5850217819"
+          "sha256": "8e42df55520abb3b02a2209e1ec58a8965b98bf8ce16bfc163064abd59f28de2"
         }
       ],
       "kind": "composite",
@@ -5338,30 +5231,30 @@
           ]
         }
       ],
-      "source_sha1": "7bd0f7f9512fbfbb3f98fa4a0cfb8d2e1029d1f5"
+      "source_sha1": "b691fb025f908af8e616a5c4cd8396c2a606736b"
     },
     "u08_val1_difuzor_kontinuitet.svg": {
       "rows": [
         {
           "file": "u08_val1_difuzor_kontinuitet--1.svg",
           "width": 277.682,
-          "height": 196.326,
+          "height": 181.326,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "bd8159d2a7b56d3ec8a8c4301fc5f04db9716326a0e6097a40c85bcd0af335f5"
+          "sha256": "383750d11396a205e548a342e0b4b54ac2bbce34fa370d216ffb0bd94dcb4ddd"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 14,
+      "source_text_count": 13,
       "source_geometry_count": 35,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 196.3258166334557,
+          "height": 181.3258166334557,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -5414,38 +5307,38 @@
             10,
             11,
             12,
-            13,
-            14
+            13
           ]
         }
       ],
-      "source_sha1": "28c273ba1c37895bbb8ae9d82509f33a05292460"
+      "source_sha1": "625d40d6144765a6effa0be49b57eddc0b23fb32"
     },
     "u08_val3_izjednacni_spremnik.svg": {
       "rows": [
         {
           "file": "u08_val3_izjednacni_spremnik--1.svg",
           "width": 447.874,
-          "height": 272.407,
+          "height": 257.407,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "6748066626b8b18c047d8834785055381f7de357d3cff1fb68dd10b5b91f49f2"
+          "sha256": "2af7dee87d467f4c9ea08e2b330ba520888cbd5fcbaa0c962913a9ee12cf3439"
         }
       ],
       "kind": "wide",
       "triptych_conflicts": null,
-      "source_text_count": 15,
+      "source_text_count": 14,
       "source_geometry_count": 18,
       "removed_decorations": [],
       "panels": [
         {
           "width": 447.874,
-          "height": 272.4073436532508,
+          "height": 257.4073436532508,
           "kind": "wide",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -5456,14 +5349,13 @@
             8,
             9,
             10,
-            11,
-            13,
-            18,
-            21,
+            12,
+            17,
+            20,
+            25,
             26,
             27,
-            28,
-            32
+            31
           ],
           "texts": [
             1,
@@ -5479,12 +5371,11 @@
             11,
             12,
             13,
-            14,
-            15
+            14
           ]
         }
       ],
-      "source_sha1": "02cd6f48321353354073af8742444850835b00c9"
+      "source_sha1": "ea313f65c4e6eb1c96271dec20298b0b4faa71f8"
     },
     "u08_vjezbe_skice.svg": {
       "rows": [
@@ -5497,7 +5388,7 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "ee02a81b3d6d7bab9ca11133eab9ff017d3ed6d897f7047c899a7bc9ab2d134c"
+          "sha256": "b63a538439add61fb05d05a2603d92282f8abcee7676c1c64fe69b44539dbbd8"
         },
         {
           "file": "u08_vjezbe_skice--2.svg",
@@ -5508,18 +5399,18 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "e193b94cd924681866e36384c517a7d83f3cdc450545d14b60f47ab99af38798"
+          "sha256": "9f52449de23e9fa12d5e9d6ef597e205b86c57f537d6495097a1c8b396b980d5"
         },
         {
           "file": "u08_vjezbe_skice--3.svg",
           "width": 447.874,
-          "height": 201.821,
+          "height": 201.212,
           "panels": [
             4,
             5
           ],
           "keep_with_next": true,
-          "sha256": "6987fdb7b53cacfcb1dce02eac24567028b88496dec342ee294c5ff06feb21d6"
+          "sha256": "681195806176ac56067e1f1c7cbb41e5a53a3cf33cbbed07b42b32d3ab38b421"
         }
       ],
       "kind": "composite",
@@ -5661,7 +5552,7 @@
         },
         {
           "width": 216.937,
-          "height": 201.82139998556042,
+          "height": 201.21217483178756,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -5714,33 +5605,34 @@
           ]
         }
       ],
-      "source_sha1": "bd759e301eb0a32a7d40c87af3bc397ff5a93d68"
+      "source_sha1": "ef9daec3516ae9ccaa902003189044cc3b196da1"
     },
     "u09_ch1_bypass_sifon_suzenje_mlaz.svg": {
       "rows": [
         {
           "file": "u09_ch1_bypass_sifon_suzenje_mlaz--1.svg",
           "width": 277.682,
-          "height": 265.574,
+          "height": 238.574,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "a438039400e7657e077a7b2de0adec05b2ce2be266f21ec4986e365112fed512"
+          "sha256": "438bea3561c73e1ff67f2e249ba1552b0e91b47e9a182417a304e44d951a2511"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 23,
+      "source_text_count": 21,
       "source_geometry_count": 45,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 265.5741846873534,
+          "height": 238.57418468735338,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -5759,33 +5651,32 @@
             16,
             17,
             18,
-            19,
-            21,
-            25,
+            20,
+            24,
+            26,
             27,
-            28,
-            33,
-            36,
+            32,
+            35,
+            39,
             40,
             41,
-            42,
+            43,
             44,
             45,
             46,
-            47,
+            48,
             49,
             50,
             51,
-            52,
+            53,
             54,
             55,
             56,
-            57,
+            58,
             59,
             60,
             61,
-            62,
-            66
+            64
           ],
           "texts": [
             1,
@@ -5808,56 +5699,54 @@
             18,
             19,
             20,
-            21,
-            22,
-            23
+            21
           ]
         }
       ],
-      "source_sha1": "1da94f9c0aee2f978f823d99f072d3d627044820"
+      "source_sha1": "a0c4ce6ad8330b9b0ac0505e810056441a327c14"
     },
     "u09_egl_hgl_schema.svg": {
       "rows": [
         {
           "file": "u09_egl_hgl_schema--1.svg",
           "width": 277.682,
-          "height": 227.375,
+          "height": 212.375,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "d01629e271abb0a15914a0815cf8cd9b9cc0fd29ba08493dab5e48ae45260397"
+          "sha256": "ca4510ad802a0bbe259621b98bd2d485fcc8921501502627f2ccba9d25652acb"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 11,
+      "source_text_count": 10,
       "source_geometry_count": 17,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 227.3747965467626,
+          "height": 212.3747965467626,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
-            2,
+            4,
             5,
             6,
             7,
-            8,
+            9,
             10,
             11,
-            12,
+            13,
             14,
             15,
             16,
             17,
-            18,
-            20,
-            22,
-            24
+            19,
+            21,
+            23
           ],
           "texts": [
             1,
@@ -5869,26 +5758,25 @@
             7,
             8,
             9,
-            10,
-            11
+            10
           ]
         }
       ],
-      "source_sha1": "fd4dc0f2c0282478bd224aa263cb415599b8cb61"
+      "source_sha1": "2d6bbbd21851fbec38b4042ab07dd681fae04f44"
     },
     "u09_fig_uvod_kompresibilni_tok.svg": {
       "rows": [
         {
           "file": "u09_fig_uvod_kompresibilni_tok--1.svg",
           "width": 447.874,
-          "height": 136.797,
+          "height": 136.51,
           "panels": [
             0,
             1,
             2
           ],
           "keep_with_next": true,
-          "sha256": "b8332f73fa96f0ddeda0b2eece73063c5a888c52c4dfc7e87a7803bff1122804"
+          "sha256": "97a1135d87feee2bc2c8277ac10dc02d7d398bc8e657f148929f948502e720fb"
         }
       ],
       "kind": "composite",
@@ -5923,7 +5811,7 @@
         },
         {
           "width": 139.958,
-          "height": 111.25464885204778,
+          "height": 109.63633266074058,
           "kind": "mini",
           "conflicts": 0,
           "geometry": [
@@ -5947,7 +5835,7 @@
         },
         {
           "width": 139.958,
-          "height": 136.79686956521738,
+          "height": 136.51000434782608,
           "kind": "mini",
           "conflicts": 0,
           "geometry": [
@@ -5966,43 +5854,49 @@
           ]
         }
       ],
-      "source_sha1": "2d2a1c60fe0bda145ef52ba082f653e734eeba3a"
+      "source_sha1": "599def68d10c30490b278916f924e5093169eb14"
     },
     "u09_fig_uvod_pregled.svg": {
       "rows": [
         {
           "file": "u09_fig_uvod_pregled--1.svg",
           "width": 447.874,
-          "height": 200.589,
+          "height": 224.002,
           "panels": [
             0,
             1
           ],
           "keep_with_next": true,
-          "sha256": "36ef5253016d85cb4bf20c600998f2d1bb47af3c07cfdc1f47bbb59656ee27a6"
+          "sha256": "c9ff314ee5dbcbf16aa9db80a7de3d3a5d5013f49202ee4d90982adcff931aca"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
-      "source_text_count": 19,
-      "source_geometry_count": 16,
+      "source_text_count": 24,
+      "source_geometry_count": 22,
       "removed_decorations": [],
       "panels": [
         {
           "width": 216.937,
-          "height": 200.58907867494827,
+          "height": 224.0022676747188,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
+            2,
             3,
+            4,
             5,
-            7,
-            9,
-            11,
-            13,
-            15,
-            17
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28
           ],
           "texts": [
             1,
@@ -6017,34 +5911,39 @@
             10,
             11,
             12,
-            13
-          ]
-        },
-        {
-          "width": 216.937,
-          "height": 91.30493566734773,
-          "kind": "subfigure",
-          "conflicts": 0,
-          "geometry": [
-            23,
-            24,
-            25,
-            27,
-            31,
-            32,
-            33
-          ],
-          "texts": [
+            13,
             14,
             15,
             16,
             17,
-            18,
-            19
+            18
+          ]
+        },
+        {
+          "width": 216.937,
+          "height": 91.30346777399832,
+          "kind": "subfigure",
+          "conflicts": 0,
+          "geometry": [
+            34,
+            35,
+            36,
+            38,
+            42,
+            43,
+            44
+          ],
+          "texts": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
           ]
         }
       ],
-      "source_sha1": "b01f93b36ab9d76383296a2b454ea74419fcde97"
+      "source_sha1": "901403d4fa6d4db737f76515d8837d9bbc8698c6"
     },
     "u09_fig_venturijeva_cijev.svg": {
       "rows": [
@@ -6056,7 +5955,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "761673dc57fe13d1155595c512fa8aa8ffea6b7030b1e47a5cc3c4be384306e4"
+          "sha256": "fa5526c0b8a1a2ef1e3286b498f9006ec8dcd401c91fda77947e3b55ab8019a6"
         }
       ],
       "kind": "standard",
@@ -6114,20 +6013,20 @@
           ]
         }
       ],
-      "source_sha1": "86f8e14edd130f4045aee2472a82f3490b6cd907"
+      "source_sha1": "39dd769f5b81820fae22af724b0ac9ebe14b00d7"
     },
     "u09_kompresibilni_vjezbe_skice.svg": {
       "rows": [
         {
           "file": "u09_kompresibilni_vjezbe_skice--1.svg",
           "width": 443.959,
-          "height": 146.619,
+          "height": 146.298,
           "panels": [
             0,
             1
           ],
           "keep_with_next": false,
-          "sha256": "71c8a1b76eeec9c9344aab8d363cb9703a12e26ac537fa795f8b3834822302d3"
+          "sha256": "f331fcb0d7d11f5c6c003ddb97e2c8dc662216c870d4485364272f4b1e8acb31"
         },
         {
           "file": "u09_kompresibilni_vjezbe_skice--2.svg",
@@ -6138,18 +6037,18 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "da352841ef4c276296ef37fbb95a03aaa1f30aaa286458242ef6c91bbbb83613"
+          "sha256": "74bd2229ff46158227f859d77ebc9cf0784e5ffc475f9588e83f57696651bfb4"
         },
         {
           "file": "u09_kompresibilni_vjezbe_skice--3.svg",
           "width": 443.959,
-          "height": 167.906,
+          "height": 167.558,
           "panels": [
             4,
             5
           ],
           "keep_with_next": true,
-          "sha256": "4e6f0eaafda0a9076e09968ff15d95e4368fa2c971688f6f9fe3a6e89a67410b"
+          "sha256": "e93b72da977c4ba8638c4888e0e834f7d397ca4eeee9f116f39cb56869195791"
         }
       ],
       "kind": "composite",
@@ -6181,7 +6080,7 @@
         },
         {
           "width": 277.68188000000004,
-          "height": 146.61886457831326,
+          "height": 146.2984182112098,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -6245,7 +6144,7 @@
         },
         {
           "width": 216.937,
-          "height": 116.51348431471229,
+          "height": 113.303309352518,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -6270,7 +6169,7 @@
         },
         {
           "width": 152.27716,
-          "height": 148.69910453149762,
+          "height": 148.82517345359628,
           "kind": "mini",
           "conflicts": 0,
           "geometry": [
@@ -6296,7 +6195,7 @@
         },
         {
           "width": 277.68188000000004,
-          "height": 167.90550681818183,
+          "height": 167.5581377833753,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -6338,33 +6237,77 @@
           ]
         }
       ],
-      "source_sha1": "29c71f332382dfe9d45cb0f386c932d040da0aef"
+      "source_sha1": "06d07d57aefe3fd8966374fcb5d7e7422f3f595b"
     },
     "u09_val2_slobodni_mlaz.svg": {
       "rows": [
         {
           "file": "u09_val2_slobodni_mlaz--1.svg",
           "width": 277.682,
-          "height": 227.068,
+          "height": 212.052,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "b317c6860d8b511b22851ba5aed2affb6e9d0f236373e22a26faeecda1efb5d8"
+          "sha256": "174bc7875e8bbf1fa1ab0466d77ae0f2c4f946907e28a61b6b293d0b118f8973"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 15,
+      "source_text_count": 14,
       "source_geometry_count": 42,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 227.06770954545456,
+          "height": 212.05164640909095,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            15,
+            16,
+            17,
+            20,
+            21,
+            22,
+            24,
+            25,
+            26,
+            27,
+            30,
+            31,
+            32,
+            34,
+            35,
+            36,
+            37,
+            40,
+            41,
+            42,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            52,
+            53,
+            54
+          ],
+          "texts": [
             1,
             2,
             3,
@@ -6377,36 +6320,71 @@
             10,
             11,
             12,
-            16,
+            13,
+            14
+          ]
+        }
+      ],
+      "source_sha1": "fdcaaa438182896ccb791844ef86a241fbd87599"
+    },
+    "u09_val3_idealni_sifon.svg": {
+      "rows": [
+        {
+          "file": "u09_val3_idealni_sifon--1.svg",
+          "width": 277.682,
+          "height": 253.843,
+          "panels": [
+            0
+          ],
+          "keep_with_next": true,
+          "sha256": "37a3ab5159a5ccea7bdfc721b3631c2f2b96ce0c0dda9481f0337e2596cb49b9"
+        }
+      ],
+      "kind": "standard",
+      "triptych_conflicts": null,
+      "source_text_count": 15,
+      "source_geometry_count": 33,
+      "removed_decorations": [],
+      "panels": [
+        {
+          "width": 277.68188000000004,
+          "height": 253.84258386117136,
+          "kind": "standard",
+          "conflicts": 0,
+          "geometry": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            13,
+            14,
+            15,
             17,
             18,
+            19,
+            20,
             21,
             22,
-            23,
-            25,
-            26,
-            27,
             28,
+            30,
             31,
             32,
             33,
-            35,
             36,
             37,
             38,
-            41,
-            42,
+            39,
+            40,
             43,
+            44,
             45,
-            46,
-            47,
-            48,
-            49,
-            50,
-            51,
-            53,
-            54,
-            55
+            46
           ],
           "texts": [
             1,
@@ -6427,101 +6405,20 @@
           ]
         }
       ],
-      "source_sha1": "419b501ca4092c494f07775d75bdf93acc761b67"
-    },
-    "u09_val3_idealni_sifon.svg": {
-      "rows": [
-        {
-          "file": "u09_val3_idealni_sifon--1.svg",
-          "width": 277.682,
-          "height": 268.843,
-          "panels": [
-            0
-          ],
-          "keep_with_next": true,
-          "sha256": "f3cace886bb41bf4b05402720001a7ae46030de4586cf8a24fb6c241074c327e"
-        }
-      ],
-      "kind": "standard",
-      "triptych_conflicts": null,
-      "source_text_count": 16,
-      "source_geometry_count": 33,
-      "removed_decorations": [],
-      "panels": [
-        {
-          "width": 277.68188000000004,
-          "height": 268.84258386117136,
-          "kind": "standard",
-          "conflicts": 0,
-          "geometry": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            10,
-            12,
-            14,
-            15,
-            16,
-            18,
-            19,
-            20,
-            21,
-            22,
-            23,
-            29,
-            31,
-            32,
-            33,
-            34,
-            37,
-            38,
-            39,
-            40,
-            41,
-            44,
-            45,
-            46,
-            47
-          ],
-          "texts": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16
-          ]
-        }
-      ],
-      "source_sha1": "54d7bfd11b14c713693fac9d1c3314ffad42819f"
+      "source_sha1": "497cff4503f07cb9ba7f242515516ec1c4d17954"
     },
     "u09_vjezbe_skice.svg": {
       "rows": [
         {
           "file": "u09_vjezbe_skice--1.svg",
           "width": 447.874,
-          "height": 143.658,
+          "height": 143.132,
           "panels": [
             0,
             1
           ],
           "keep_with_next": false,
-          "sha256": "efaf127359eec3d5cbbebe1dd9be81ef445c255144950098808c9e59c09e3a41"
+          "sha256": "f473a2e79439b5480bcd06bc4e9152fa930ee4efb8e671956497c5381bbfb227"
         },
         {
           "file": "u09_vjezbe_skice--2.svg",
@@ -6532,7 +6429,7 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "67f5bc37cc0df092f3cf3ba4156a26cef31601e0cf4091661381c9b97a23062e"
+          "sha256": "de15b2d7002ee06fb22d14fb274f7e287fe0fbc411012f02338143f174232614"
         },
         {
           "file": "u09_vjezbe_skice--3.svg",
@@ -6543,7 +6440,7 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "b6b7bc2242dd6bfa6be647a2b969fedf66f6bfc6e5efa55ac0413af1d1f06851"
+          "sha256": "3807be3aa2f9b1d63f7519ea8e48d0066fed6cb40aea2f4f50886b53c26e901a"
         }
       ],
       "kind": "composite",
@@ -6592,7 +6489,7 @@
         },
         {
           "width": 216.937,
-          "height": 143.65825319693096,
+          "height": 143.1316304347826,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -6668,7 +6565,7 @@
         },
         {
           "width": 216.937,
-          "height": 120.6200356275304,
+          "height": 120.60911621564031,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -6792,33 +6689,34 @@
           ]
         }
       ],
-      "source_sha1": "1d21d75869d4b43036c2aa05db28ab458f47054c"
+      "source_sha1": "bdf1c96aec57746660841d53043cafdb476a4475"
     },
     "u10_fig_hidroenergetsko_koljeno.svg": {
       "rows": [
         {
           "file": "u10_fig_hidroenergetsko_koljeno--1.svg",
           "width": 277.682,
-          "height": 242.918,
+          "height": 227.558,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "f6303dfdd21532905a0b2a2ed063b7c36f65edc48a34e68e8798462ecc5690f8"
+          "sha256": "2261e13ac1b90da33116828053e72f8663552df36acdc2445e8b33bcf28ee06d"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 16,
+      "source_text_count": 15,
       "source_geometry_count": 25,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 242.91786409017718,
+          "height": 227.558104338511,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -6826,24 +6724,23 @@
             5,
             6,
             7,
-            8,
-            10,
-            12,
-            14,
+            9,
+            11,
+            13,
+            15,
             16,
-            17,
+            19,
             20,
             21,
-            22,
+            23,
             24,
             25,
-            26,
-            28,
-            30,
+            27,
+            29,
+            31,
             32,
             33,
-            34,
-            40
+            39
           ],
           "texts": [
             1,
@@ -6860,25 +6757,24 @@
             12,
             13,
             14,
-            15,
-            16
+            15
           ]
         }
       ],
-      "source_sha1": "25507e58fde5ffa1a5a016bb12a4d48bfec17125"
+      "source_sha1": "7456268ea5f49b434e7220788ffdd038c2278c1f"
     },
     "u10_fig_uvod_pregled.svg": {
       "rows": [
         {
           "file": "u10_fig_uvod_pregled--1.svg",
           "width": 447.874,
-          "height": 319.093,
+          "height": 318.093,
           "panels": [
             0,
             1
           ],
           "keep_with_next": true,
-          "sha256": "8e8ad3a37fecaa0b87d63278b31b50c99add927169b7f915f4707d6824b02ca1"
+          "sha256": "d669ac57b6bdcca53189736d5851f005adab51b7797ba439094f8a52b46408c5"
         }
       ],
       "kind": "composite",
@@ -6934,7 +6830,7 @@
         },
         {
           "width": 216.937,
-          "height": 319.0934901396631,
+          "height": 318.0934901396631,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -6976,7 +6872,7 @@
           ]
         }
       ],
-      "source_sha1": "3a196e5d708a5a4c7c3ecc2472bcbdcaf352d82d"
+      "source_sha1": "2ed8fa516465649bfa060543094039ae8a189a2e"
     },
     "u11_ch1_t_racva_konzola.svg": {
       "rows": [
@@ -6988,7 +6884,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "85b4f91f6410ebf99855c35f9fd549ce2ca8d22f077513e2a99c1597ac06e29e"
+          "sha256": "a888f3e653c856c5e9c820f17b3142c56f717e3ee9a7f757277acd777923c3e0"
         }
       ],
       "kind": "standard",
@@ -7061,19 +6957,19 @@
           ]
         }
       ],
-      "source_sha1": "772b57bab529018e14b7335c4d2fa59bfd9d7dfa"
+      "source_sha1": "f2a09a25a1566b8681fb216040b7a3f0a402abfb"
     },
     "u11_ch2_y_racva_reakcija.svg": {
       "rows": [
         {
           "file": "u11_ch2_y_racva_reakcija--1.svg",
           "width": 277.682,
-          "height": 250.644,
+          "height": 249.644,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "229712127fba4de2b64fa0215cb98282c779a59c11f56b8cefc7f12d505d7e14"
+          "sha256": "91278d62d246320b3029ae83a8c9bd7a8bdc5b10a578abe30e94490bc509deed"
         }
       ],
       "kind": "standard",
@@ -7084,7 +6980,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 250.64396854442347,
+          "height": 249.64396854442347,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -7146,33 +7042,34 @@
           ]
         }
       ],
-      "source_sha1": "7a29f48bbd80058fa5d2dd30d812cab271ccf8d1"
+      "source_sha1": "fcb79496344354f1c5d866cce50ead3a29c5427e"
     },
     "u11_fig_uvod_pregled.svg": {
       "rows": [
         {
           "file": "u11_fig_uvod_pregled--1.svg",
           "width": 277.682,
-          "height": 240.605,
+          "height": 233.707,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "93cfe0addbc01577e4b9b4c7550d076df18cf5283e059755059c7b59d99ecbad"
+          "sha256": "6825eea4ccb9e329b59a1a6e9714c8132c84e273a4f1058d0974717febc5208c"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 13,
+      "source_text_count": 12,
       "source_geometry_count": 23,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 240.60512029582458,
+          "height": 233.70692859813087,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -7182,20 +7079,19 @@
             7,
             8,
             9,
-            10,
-            12,
-            14,
-            16,
-            18,
-            20,
+            11,
+            13,
+            15,
+            17,
+            19,
+            21,
             22,
-            23,
-            25,
+            24,
+            26,
             27,
-            28,
-            30,
-            32,
-            34
+            29,
+            31,
+            33
           ],
           "texts": [
             1,
@@ -7209,38 +7105,38 @@
             9,
             10,
             11,
-            12,
-            13
+            12
           ]
         }
       ],
-      "source_sha1": "74c6f379026296cbdc4abe3edb01ff41bb82a84d"
+      "source_sha1": "7fab17dd95e37d5eacc4c64717af42a409e71016"
     },
     "u11_val1_mlaz_na_plocu.svg": {
       "rows": [
         {
           "file": "u11_val1_mlaz_na_plocu--1.svg",
           "width": 277.682,
-          "height": 210.118,
+          "height": 194.748,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "b184670ffafbe9b2bb1f277684c7459ed19deebfcb9025a764cb29ada72ec88f"
+          "sha256": "ff26d71167f8061e634130abc0584ee2ea58b1b1b2c15ba68998a51cf12ed2a3"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 11,
+      "source_text_count": 10,
       "source_geometry_count": 20,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 210.11822710850618,
+          "height": 194.7481347044029,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -7250,17 +7146,16 @@
             7,
             8,
             9,
-            10,
+            11,
             12,
-            13,
-            17,
-            19,
+            16,
+            18,
+            20,
             21,
             22,
-            23,
-            26,
-            28,
-            30
+            25,
+            27,
+            29
           ],
           "texts": [
             1,
@@ -7272,38 +7167,38 @@
             7,
             8,
             9,
-            10,
-            11
+            10
           ]
         }
       ],
-      "source_sha1": "18a116c8be9be2fa56218dd4eed5a0669ad598b6"
+      "source_sha1": "9745b9313e315264883db1b80ca40abd85a63286"
     },
     "u11_val2_mlaznica_prirubnica.svg": {
       "rows": [
         {
           "file": "u11_val2_mlaznica_prirubnica--1.svg",
           "width": 277.682,
-          "height": 201.392,
+          "height": 186.392,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "b745f0cc51e9bd551e2adb805d09f8caf0038495879bca99f07d283bb2b5db9f"
+          "sha256": "e0aa4b96f9bb92dfce44a83ac2ccd701404409f20e84876b4f5eadc67c2d4162"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 15,
+      "source_text_count": 14,
       "source_geometry_count": 30,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 201.39194209059238,
+          "height": 186.39194209059238,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -7316,24 +7211,23 @@
             10,
             11,
             12,
-            13,
+            15,
             16,
-            17,
-            19,
-            21,
+            18,
+            20,
+            22,
             23,
             24,
             25,
             26,
-            27,
+            28,
             29,
             30,
-            31,
-            35,
-            37,
-            40,
-            42,
-            44
+            34,
+            36,
+            39,
+            41,
+            43
           ],
           "texts": [
             1,
@@ -7349,24 +7243,23 @@
             11,
             12,
             13,
-            14,
-            15
+            14
           ]
         }
       ],
-      "source_sha1": "4aa58342029ce21147202ab9541d96e3d8e7af46"
+      "source_sha1": "3fd0afe7231f0b72724be731cc39ce42512a62c7"
     },
     "u11_val3_koljeno_reakcija.svg": {
       "rows": [
         {
           "file": "u11_val3_koljeno_reakcija--1.svg",
           "width": 277.682,
-          "height": 252.602,
+          "height": 252.135,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "8cfba3dc4789808cda476e7e9cd27c345628469ca49d3c71447d390922c2e718"
+          "sha256": "bf0fb7f4acafaf54b198af67c6863ab3a2694d8cbcd4941b6748fb09f2f4a043"
         }
       ],
       "kind": "standard",
@@ -7377,7 +7270,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 252.60237762237765,
+          "height": 252.13516908212566,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -7429,20 +7322,20 @@
           ]
         }
       ],
-      "source_sha1": "4d6b398725059ae5f47932988f1eb619840dd5c7"
+      "source_sha1": "49392c2e47512a80ca0055d622564f1f9ba71ea1"
     },
     "u11_vjezbe_skice.svg": {
       "rows": [
         {
           "file": "u11_vjezbe_skice--1.svg",
           "width": 447.874,
-          "height": 174.958,
+          "height": 173.958,
           "panels": [
             0,
             1
           ],
           "keep_with_next": false,
-          "sha256": "4015613e45309c505d8b32739567fe8ba119c7aa934f501314845dd98c44fa41"
+          "sha256": "98504dba37448865a6383635a6caf3955a6003a255deb3e976003dad80404842"
         },
         {
           "file": "u11_vjezbe_skice--2.svg",
@@ -7453,18 +7346,18 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "1fda46536b4d26232051ba521783bd320724b72a1de37b5ed628e89e24c83379"
+          "sha256": "38a508440376c97628dec25e2ea9c175b54611eed9854265d5a4fe64f6b82905"
         },
         {
           "file": "u11_vjezbe_skice--3.svg",
           "width": 447.874,
-          "height": 167.712,
+          "height": 167.345,
           "panels": [
             4,
             5
           ],
           "keep_with_next": true,
-          "sha256": "41f54a211448f4e648ef69fe574e0cc52da885dadc602e1d6fc603648866996d"
+          "sha256": "97cb928e68a9d2f9bd25064629a187d233d706d743e2743871592b24524e809c"
         }
       ],
       "kind": "composite",
@@ -7475,7 +7368,7 @@
       "panels": [
         {
           "width": 216.937,
-          "height": 174.95806527196652,
+          "height": 173.95806527196652,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -7519,7 +7412,7 @@
         },
         {
           "width": 216.937,
-          "height": 144.45251403618215,
+          "height": 142.97354438237122,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -7553,7 +7446,7 @@
         },
         {
           "width": 216.937,
-          "height": 154.8002351404311,
+          "height": 154.55841042345276,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -7644,7 +7537,7 @@
         },
         {
           "width": 216.937,
-          "height": 167.71164509673116,
+          "height": 167.34514703925487,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -7678,7 +7571,7 @@
         },
         {
           "width": 216.937,
-          "height": 153.96834928229663,
+          "height": 153.46729425837322,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -7736,7 +7629,7 @@
           ]
         }
       ],
-      "source_sha1": "50b0b277e467ed98ba3bd41e1025551b40d28d97"
+      "source_sha1": "bd527f515db78780642292a0b3d84939b5fc6a1f"
     },
     "u12_ch1_pokretna_zakrivljena_lopatica.svg": {
       "rows": [
@@ -7749,7 +7642,7 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "16be9d271afb3fd0afe726999261244ba804f3c4f466ba6877642231aa29e5d5"
+          "sha256": "a6892196675a7b32ef57739b5d946c97ba61f529863f77106201b37ae962c1ac"
         }
       ],
       "kind": "composite",
@@ -7760,7 +7653,7 @@
       "panels": [
         {
           "width": 216.937,
-          "height": 213.27803876034093,
+          "height": 212.27803876034093,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -7831,7 +7724,7 @@
           ]
         }
       ],
-      "source_sha1": "ad03704e98c348ba6e8e472f5326a4fad30498dd"
+      "source_sha1": "df3c9e05e7fe7f9c2c63490f0c06824dcdbf00b1"
     },
     "u12_ch2_pelton_rotor_moment.svg": {
       "rows": [
@@ -7843,7 +7736,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "4ab7bc74b15fb94e66463327320480d7100f5588d031dcae8dd45079e9fb5350"
+          "sha256": "8cd18010860044981d0fccde3541d3a01b555943de71f57cdfdb3ba2ae3bcba6"
         }
       ],
       "kind": "standard",
@@ -7925,45 +7818,45 @@
           ]
         }
       ],
-      "source_sha1": "22301dbe589286633af90f6b6df52f06d80e5cfa"
+      "source_sha1": "6b3dffb0a39d68b6d9964c0bf2eb7120f3c023dc"
     },
     "u12_fig_relativni_dotok.svg": {
       "rows": [
         {
           "file": "u12_fig_relativni_dotok--1.svg",
           "width": 277.682,
-          "height": 264.777,
+          "height": 233.777,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "2f4da2be472af026c4040b8b59b79c9398ef2f0c8f86be5d08aaa12b62d60c12"
+          "sha256": "10285903286943116e2479e494380b0ee6c406b9690e87e27ceeff64a3666c33"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 13,
+      "source_text_count": 11,
       "source_geometry_count": 12,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 264.777316,
+          "height": 233.77731599999998,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
-            4,
-            6,
-            8,
-            10,
-            12,
+            5,
+            7,
+            9,
+            11,
+            14,
             15,
             16,
-            17,
-            22
+            21
           ],
           "texts": [
             1,
@@ -7976,13 +7869,11 @@
             8,
             9,
             10,
-            11,
-            12,
-            13
+            11
           ]
         }
       ],
-      "source_sha1": "f8cafec9b74443b17c8837cbaec1b7e7e712e3a3"
+      "source_sha1": "552447adb9a1beab571cf0c24ef2094d83425a86"
     },
     "u12_fig_uvod_pregled.svg": {
       "rows": [
@@ -7995,7 +7886,7 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "dd44ba8987a67d4491fb9f6d8d9d3c94a2e6b94a237212aec0869ae8b5866b2d"
+          "sha256": "d53d60517ea1440a59411d9fbd6d58d72ead55d29a987429ad769ecfc0c841ea"
         }
       ],
       "kind": "composite",
@@ -8049,7 +7940,7 @@
         },
         {
           "width": 216.937,
-          "height": 245.09731779661018,
+          "height": 244.09731779661018,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -8079,7 +7970,7 @@
           ]
         }
       ],
-      "source_sha1": "2a7d8a69c744f410041cceb2fca71253a6759a00"
+      "source_sha1": "2091b3748e4990d750e3ad4515f38b223bbc18a8"
     },
     "u12_fig_uvod_realni_tok.svg": {
       "rows": [
@@ -8093,7 +7984,7 @@
             2
           ],
           "keep_with_next": true,
-          "sha256": "2ccf0033628ec02de26457059583f0c52cb442441fb340a4a10d5e42dc467d69"
+          "sha256": "95d0530416b2977b14b48c7703040a538953cf22f2eac1b1b1c480e7661a7a75"
         }
       ],
       "kind": "composite",
@@ -8108,7 +7999,7 @@
       "panels": [
         {
           "width": 139.958,
-          "height": 132.6103661720406,
+          "height": 132.35561000555865,
           "kind": "mini",
           "conflicts": 0,
           "geometry": [
@@ -8197,7 +8088,7 @@
           ]
         }
       ],
-      "source_sha1": "2ec54725d2c8d6c3ecba32e07f916a509c450665"
+      "source_sha1": "c2e477f2b1b800c9f37b64ed5d81cddd81ad39b4"
     },
     "u12_realni_tok_vjezbe_skice.svg": {
       "rows": [
@@ -8210,7 +8101,7 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "e256aff66e49996f7bee26fd62cf5836f835d79b1ff8fac4a8fc17e97c54fb7a"
+          "sha256": "8ac2f8058a4d9123055d9c4f551ec5f2c45ff6b47647f4754ad07a7494624dcc"
         },
         {
           "file": "u12_realni_tok_vjezbe_skice--2.svg",
@@ -8221,18 +8112,18 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "7cbcb9783b8bdb1ef3ee1982fae7ca48decdb3c459cc166e632a91a2a5e62d71"
+          "sha256": "0135439b1822352741c3967605668ae54c010b60038d6e956b314292f8a15e9b"
         },
         {
           "file": "u12_realni_tok_vjezbe_skice--3.svg",
           "width": 447.874,
-          "height": 164.768,
+          "height": 163.768,
           "panels": [
             4,
             5
           ],
           "keep_with_next": true,
-          "sha256": "390d6721144bdae61843bf3af82668d603091bead6a626911a63c0a8bd54ed59"
+          "sha256": "4ce128929318785efd8c22a5718b65104e108b937b9c24ba8bc8facad41740f8"
         }
       ],
       "kind": "composite",
@@ -8345,7 +8236,7 @@
         },
         {
           "width": 216.937,
-          "height": 134.46820165922148,
+          "height": 134.24549458943346,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -8378,7 +8269,7 @@
         },
         {
           "width": 216.937,
-          "height": 164.7680317919075,
+          "height": 163.7680317919075,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -8404,7 +8295,7 @@
         },
         {
           "width": 216.937,
-          "height": 96.028171875,
+          "height": 95.83691927083333,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -8472,19 +8363,19 @@
           ]
         }
       ],
-      "source_sha1": "2c43219ee8bc2bb7c0b4e15e6df92db3727d22a9"
+      "source_sha1": "b20b38a2dee2d77334091961830d75427ecee11f"
     },
     "u12_val1_vodilica_mlaza.svg": {
       "rows": [
         {
           "file": "u12_val1_vodilica_mlaza--1.svg",
           "width": 277.682,
-          "height": 266.216,
+          "height": 265.216,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "f086b7898ebfffdc856f34d45ede71702d936bcdc18bf8fda5cc60a9923ca87a"
+          "sha256": "d3a3ca3e10a4becbdeac5e85b1072f42b6aed0de9390862db264b27044f69f3d"
         }
       ],
       "kind": "standard",
@@ -8495,7 +8386,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 266.21649112221974,
+          "height": 265.21649112221974,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -8544,33 +8435,34 @@
           ]
         }
       ],
-      "source_sha1": "e7d190db7a85b44c4a20f6ceb280ea6d946be14d"
+      "source_sha1": "10677a42761ae95a87bc229933773a443da11770"
     },
     "u12_val3_pokretna_lopatica.svg": {
       "rows": [
         {
           "file": "u12_val3_pokretna_lopatica--1.svg",
           "width": 277.682,
-          "height": 278.938,
+          "height": 260.938,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "46862250a9c02c43ddda4af1d672d6e7d3ee6cb89fd0265278a212fb81e357ef"
+          "sha256": "f132f730f5769b472595a2ae415a7b7ae8b9b73fb4c5fac79cfd5458ccb71bed"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 17,
+      "source_text_count": 16,
       "source_geometry_count": 19,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 278.9384733395244,
+          "height": 260.9384733395244,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -8580,16 +8472,15 @@
             7,
             8,
             9,
-            10,
-            13,
-            15,
+            12,
+            14,
+            18,
             19,
             20,
-            21,
+            25,
             26,
             27,
-            28,
-            34
+            33
           ],
           "texts": [
             1,
@@ -8607,12 +8498,11 @@
             13,
             14,
             15,
-            16,
-            17
+            16
           ]
         }
       ],
-      "source_sha1": "b691e5b6fc23ee579d2ccbff1e173b82626118d9"
+      "source_sha1": "c7851155da1a126887b02141c574dcca9dfb892e"
     },
     "u12_vjezbe_skice.svg": {
       "rows": [
@@ -8625,18 +8515,18 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "5610cb743dfd5fdd54248cfa278d1c9dc5d6fceb1a667e19e1ada237d1280ab6"
+          "sha256": "be64f65094b9e0622e267ec7658abce87b9e0758060d55a7ae2f3dace7dcef67"
         },
         {
           "file": "u12_vjezbe_skice--2.svg",
           "width": 447.874,
-          "height": 188.428,
+          "height": 187.512,
           "panels": [
             2,
             3
           ],
           "keep_with_next": false,
-          "sha256": "b4d307844824f14b9ec4c064707b5f32f96c03cae5627c3e388d0ee64f3e2077"
+          "sha256": "e9120082bd5938308eb1a945754117a43711dfd3b59dce68844c6649c3554fc8"
         },
         {
           "file": "u12_vjezbe_skice--3.svg",
@@ -8647,12 +8537,12 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "baa80f7f7085d93e78904e71ab2c7355037fbc0eb4236f279275340f529d4782"
+          "sha256": "9ff83971c9dc7baaa739ecb06f7a692526f7bfdd2ecb0e9fe3b392d500a724de"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
-      "source_text_count": 61,
+      "source_text_count": 60,
       "source_geometry_count": 122,
       "removed_decorations": [],
       "panels": [
@@ -8687,7 +8577,7 @@
         },
         {
           "width": 216.937,
-          "height": 158.38812829954443,
+          "height": 158.0553090018498,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -8732,7 +8622,7 @@
         },
         {
           "width": 216.937,
-          "height": 188.42814824670063,
+          "height": 187.5124691750803,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -8802,7 +8692,7 @@
         },
         {
           "width": 216.937,
-          "height": 150.0829252077562,
+          "height": 149.0829252077562,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -8885,7 +8775,7 @@
             176,
             178,
             179,
-            182
+            181
           ],
           "texts": [
             53,
@@ -8895,38 +8785,38 @@
             57,
             58,
             59,
-            60,
-            61
+            60
           ]
         }
       ],
-      "source_sha1": "f527c8eab14bab62836dca988858c568c51613de"
+      "source_sha1": "285a50e6a8a436b71e6b22ae2f60f81b6f02d4eb"
     },
     "u13_fig_uvod_pregled.svg": {
       "rows": [
         {
           "file": "u13_fig_uvod_pregled--1.svg",
           "width": 277.682,
-          "height": 184.865,
+          "height": 169.865,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "4472da25a6b00869af19b67b31358f31d45c5dbf4e8f1193524b8324282f0f52"
+          "sha256": "5772c7e5d27dc5fd20ba64cdbd16f130c4d4675a861afed2d8776e2125ca0932"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 15,
+      "source_text_count": 14,
       "source_geometry_count": 48,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 184.86521526125426,
+          "height": 169.86521526125426,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -8938,7 +8828,7 @@
             9,
             10,
             11,
-            12,
+            13,
             14,
             15,
             16,
@@ -8947,34 +8837,33 @@
             19,
             20,
             21,
-            22,
-            24,
-            26,
-            28,
-            30,
-            32,
-            34,
+            23,
+            25,
+            27,
+            29,
+            31,
+            33,
+            35,
             36,
             37,
-            38,
+            39,
             40,
             41,
-            42,
+            43,
             44,
             45,
-            46,
+            47,
             48,
             49,
             50,
-            51,
+            52,
             53,
             54,
             55,
-            56,
+            57,
             58,
             59,
-            60,
-            61
+            60
           ],
           "texts": [
             1,
@@ -8990,25 +8879,24 @@
             11,
             12,
             13,
-            14,
-            15
+            14
           ]
         }
       ],
-      "source_sha1": "5e6d76273b79e7bd873dda236db29e1bacd222fc"
+      "source_sha1": "54bfe7148fe290fede8a55d3071687549cbe88a2"
     },
     "u13_mreze_vjezbe_skice.svg": {
       "rows": [
         {
           "file": "u13_mreze_vjezbe_skice--1.svg",
           "width": 447.874,
-          "height": 144.006,
+          "height": 143.79,
           "panels": [
             0,
             1
           ],
           "keep_with_next": false,
-          "sha256": "56ea1bb8e082c0f9f277e929b20dd30026f865468d67eb8b7b6eae47882983a1"
+          "sha256": "133c04f508f640ab3ff7f2857942841c2672e71f8aad9a0aa600834bb4c71920"
         },
         {
           "file": "u13_mreze_vjezbe_skice--2.svg",
@@ -9019,7 +8907,7 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "6d29c5f9b2c97848f11e3292661d29bd9e42c8196d97af6930c661ad07a7e291"
+          "sha256": "a4b786ba7fb14e13f6b1f83584ed9cdd51abc984e9b241d25da65a585cc67691"
         },
         {
           "file": "u13_mreze_vjezbe_skice--3.svg",
@@ -9029,7 +8917,7 @@
             4
           ],
           "keep_with_next": false,
-          "sha256": "9bd507dbf55fa3ca941d679e9e13e2cb010a54745bc6e8d72639fac9210381d0"
+          "sha256": "9a98cb7a5ba3dfcd623cbf598ce51a32f7a5a4a7566bc8b5bc2621fad157acce"
         },
         {
           "file": "u13_mreze_vjezbe_skice--4.svg",
@@ -9039,7 +8927,7 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "4dfaecb55e3748fda7cef93b208fb0375d867be6c4ac2a51538af369e9aa9855"
+          "sha256": "88e80f9fd6e8006688bd5e05e57676961d18e277ee63b7381fc5c3bceeb3842c"
         }
       ],
       "kind": "composite",
@@ -9050,7 +8938,7 @@
       "panels": [
         {
           "width": 216.937,
-          "height": 144.00559793814435,
+          "height": 143.78964524421593,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -9092,7 +8980,7 @@
         },
         {
           "width": 216.937,
-          "height": 138.49514025974025,
+          "height": 138.3306450777202,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -9129,7 +9017,7 @@
         },
         {
           "width": 216.937,
-          "height": 132.7796253164557,
+          "height": 131.7796253164557,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -9276,20 +9164,20 @@
           ]
         }
       ],
-      "source_sha1": "bd753ad75d77fd24f7c1b27fabed531c56729900"
+      "source_sha1": "b510b77e6c5475e307dd27f11e8ff2024b70f616"
     },
     "u14_ch1_kugla_struja.svg": {
       "rows": [
         {
           "file": "u14_ch1_kugla_struja--1.svg",
           "width": 447.874,
-          "height": 189.624,
+          "height": 187.624,
           "panels": [
             0,
             1
           ],
           "keep_with_next": true,
-          "sha256": "c7c8ffd7307bad27bf8881f08d78b3d7d01287d7330f41753ebcf4ca16fe8ece"
+          "sha256": "b2c6f07ae7b0915f663ef4cb62474fbdf4cb56727c718eec194cf9f2d0965897"
         }
       ],
       "kind": "composite",
@@ -9326,7 +9214,7 @@
         },
         {
           "width": 216.937,
-          "height": 189.6238793344793,
+          "height": 187.6238793344793,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -9356,34 +9244,100 @@
           ]
         }
       ],
-      "source_sha1": "6d142824c50c719ef92b1ca725177835f949195e"
+      "source_sha1": "8f7ed0780a7d9ffa1251ddbde5f5b4b64e6e5ea3"
     },
-    "u14_fig_odluka.svg": {
+    "u14_fig_uvod_pregled.svg": {
       "rows": [
         {
-          "file": "u14_fig_odluka--1.svg",
-          "width": 277.682,
-          "height": 197.165,
+          "file": "u14_fig_uvod_pregled--1.svg",
+          "width": 152.277,
+          "height": 93.902,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "13822ea2debafa89cc41619bd64b3910655ef3548ef03a38255f49b0e0195c83"
+          "sha256": "6d3e703d4dac969fee17c49e56b8d68839d21c07d9ad13b6da36563512b3fa6c"
         }
       ],
-      "kind": "standard",
+      "kind": "mini",
       "triptych_conflicts": null,
-      "source_text_count": 12,
-      "source_geometry_count": 11,
+      "source_text_count": 1,
+      "source_geometry_count": 8,
       "removed_decorations": [],
       "panels": [
         {
-          "width": 277.68188000000004,
-          "height": 197.1653911630245,
-          "kind": "standard",
+          "width": 152.27716,
+          "height": 93.901571875,
+          "kind": "mini",
           "conflicts": 0,
           "geometry": [
             0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "texts": [
+            1
+          ]
+        }
+      ],
+      "source_sha1": "b4a790dee24675f3befd741117355e9a33e59741"
+    },
+    "u14_val1_reynolds_kanal.svg": {
+      "rows": [
+        {
+          "file": "u14_val1_reynolds_kanal--1.svg",
+          "width": 447.874,
+          "height": 181.453,
+          "panels": [
+            0
+          ],
+          "keep_with_next": true,
+          "sha256": "782a0035e38bca66ad221cdb0936eabf95365bc777976f5ed443fba9dc8b6f4e"
+        }
+      ],
+      "kind": "wide",
+      "triptych_conflicts": null,
+      "source_text_count": 10,
+      "source_geometry_count": 24,
+      "removed_decorations": [],
+      "panels": [
+        {
+          "width": 447.874,
+          "height": 181.4531468248566,
+          "kind": "wide",
+          "conflicts": 0,
+          "geometry": [
+            0,
+            1,
+            2,
+            6,
+            7,
+            8,
+            10,
+            11,
+            13,
+            14,
+            15,
+            16,
+            20,
+            21,
+            22,
+            24,
+            25,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "texts": [
             1,
             2,
             3,
@@ -9394,221 +9348,10 @@
             8,
             9,
             10
-          ],
-          "texts": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
           ]
         }
       ],
-      "source_sha1": "b7fa717881cfed5ab5300f6cc221701f18f6f151"
-    },
-    "u14_fig_pi_buckingham.svg": {
-      "rows": [
-        {
-          "file": "u14_fig_pi_buckingham--1.svg",
-          "width": 447.874,
-          "height": 120.231,
-          "panels": [
-            0
-          ],
-          "keep_with_next": true,
-          "sha256": "6ee7b4f9e8f232ee5b5000e252f563821f0a2ae958ea04217bf8d0ed64841c36"
-        }
-      ],
-      "kind": "wide",
-      "triptych_conflicts": null,
-      "source_text_count": 25,
-      "source_geometry_count": 9,
-      "removed_decorations": [
-        1
-      ],
-      "panels": [
-        {
-          "width": 447.874,
-          "height": 120.2305641025641,
-          "kind": "wide",
-          "conflicts": 0,
-          "geometry": [
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ],
-          "texts": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18,
-            19,
-            20,
-            21,
-            22,
-            23,
-            24,
-            25
-          ]
-        }
-      ],
-      "source_sha1": "f6f3482d32a3d181c09a01a81ab58610ff7f2b27"
-    },
-    "u14_fig_uvod_pregled.svg": {
-      "rows": [
-        {
-          "file": "u14_fig_uvod_pregled--1.svg",
-          "width": 447.874,
-          "height": 211.521,
-          "panels": [
-            0,
-            1
-          ],
-          "keep_with_next": true,
-          "sha256": "c37cb679936f3c8c196de7621c5a8c41681edb69052304313479ed66a11645f9"
-        }
-      ],
-      "kind": "composite",
-      "triptych_conflicts": null,
-      "source_text_count": 6,
-      "source_geometry_count": 14,
-      "removed_decorations": [],
-      "panels": [
-        {
-          "width": 216.937,
-          "height": 211.5212180451128,
-          "kind": "subfigure",
-          "conflicts": 0,
-          "geometry": [
-            2,
-            3,
-            5,
-            6,
-            8,
-            9
-          ],
-          "texts": [
-            1,
-            2,
-            3,
-            4
-          ]
-        },
-        {
-          "width": 216.937,
-          "height": 144.262421875,
-          "kind": "subfigure",
-          "conflicts": 0,
-          "geometry": [
-            11,
-            12,
-            13,
-            14,
-            15,
-            17,
-            18,
-            19
-          ],
-          "texts": [
-            5,
-            6
-          ]
-        }
-      ],
-      "source_sha1": "4b728efcb8e21249d15e1e9b880298b516264432"
-    },
-    "u14_val1_reynolds_kanal.svg": {
-      "rows": [
-        {
-          "file": "u14_val1_reynolds_kanal--1.svg",
-          "width": 447.874,
-          "height": 197.004,
-          "panels": [
-            0
-          ],
-          "keep_with_next": true,
-          "sha256": "de0160b4374fb129eea96c23d15c474ab7c7c23532e2fac175f4f9f50d7f69e3"
-        }
-      ],
-      "kind": "wide",
-      "triptych_conflicts": null,
-      "source_text_count": 11,
-      "source_geometry_count": 24,
-      "removed_decorations": [],
-      "panels": [
-        {
-          "width": 447.874,
-          "height": 197.0035322005383,
-          "kind": "wide",
-          "conflicts": 0,
-          "geometry": [
-            1,
-            2,
-            3,
-            7,
-            8,
-            9,
-            11,
-            12,
-            14,
-            15,
-            16,
-            17,
-            21,
-            22,
-            23,
-            25,
-            26,
-            28,
-            29,
-            30,
-            31,
-            32,
-            33,
-            34
-          ],
-          "texts": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
-          ]
-        }
-      ],
-      "source_sha1": "aa9c3d64cca32f8cd80d1a12bac73b5099cc7448"
+      "source_sha1": "45d0065a2a571dd13c68755749e77873db591d07"
     },
     "u14_val2_brod_bazen.svg": {
       "rows": [
@@ -9621,7 +9364,7 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "695f59fd78e647478a7c36be70f1363579022f94ceeed4182892ee56ecc45565"
+          "sha256": "1a3118acff66aa6b7b616659d409b48a5f9428a2d0c3ac7404e074bd75d893b1"
         }
       ],
       "kind": "composite",
@@ -9632,7 +9375,7 @@
       "panels": [
         {
           "width": 216.937,
-          "height": 144.42032368421053,
+          "height": 143.42032368421053,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -9680,19 +9423,19 @@
           ]
         }
       ],
-      "source_sha1": "e0e330871693427e9c0438b50ae08b3308ebb64b"
+      "source_sha1": "7ac87d39d2fe150859aa1592c2836892056b3d31"
     },
     "u14_val3_venturi_kavitacija.svg": {
       "rows": [
         {
           "file": "u14_val3_venturi_kavitacija--1.svg",
           "width": 277.682,
-          "height": 189.706,
+          "height": 169.624,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "9232110fb15d07134eb62a09eb24ce1e2f5e0f077def38d7843120c1e81fb34a"
+          "sha256": "c0eab0c2f740b0db0a4b57753c844efc9e192c5778c8cbf8b5e0b62b422deac7"
         }
       ],
       "kind": "standard",
@@ -9703,7 +9446,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 189.70560231488562,
+          "height": 169.62383274480976,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -9749,44 +9492,44 @@
           ]
         }
       ],
-      "source_sha1": "fd99d260ecf9328d466e33bd573dc3a31d56c433"
+      "source_sha1": "cc430f3b89c85954a3b2055b773f6f4321dde7d3"
     },
     "u14_val4_kap_raspad.svg": {
       "rows": [
         {
           "file": "u14_val4_kap_raspad--1.svg",
           "width": 152.277,
-          "height": 164.1,
+          "height": 149.098,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "53d2e31ac38ada6f8e38d6381742b38b51c0397370ad63f6abc7acb6dfccf538"
+          "sha256": "ad6c9fd7f3d9c966b90f98a9378c183df61c2c3bfa9a1058a94257d642d46424"
         }
       ],
       "kind": "mini",
       "triptych_conflicts": null,
-      "source_text_count": 9,
+      "source_text_count": 8,
       "source_geometry_count": 11,
       "removed_decorations": [],
       "panels": [
         {
           "width": 152.27716,
-          "height": 164.0996158325745,
+          "height": 149.09828490019035,
           "kind": "mini",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
-            4,
+            6,
             7,
             8,
             9,
             10,
-            11,
-            13,
-            16
+            12,
+            15
           ],
           "texts": [
             1,
@@ -9796,12 +9539,11 @@
             5,
             6,
             7,
-            8,
-            9
+            8
           ]
         }
       ],
-      "source_sha1": "bd08a6e681516197d6dd2af06054e89d61b9d5e3"
+      "source_sha1": "69c58229428fec69b84cfee4b3827d49c624ffcf"
     },
     "u14_val5_mach_strouhal.svg": {
       "rows": [
@@ -9814,7 +9556,7 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "efcc43fb48e4c6402f85f305a1db979dd893bafcef1052517268fb14a2192c38"
+          "sha256": "655a50c1734dcbe7b2e5e2b9070d9c5df08ccf7cdd88b32e322f382dd97c85c9"
         }
       ],
       "kind": "composite",
@@ -9862,7 +9604,7 @@
         },
         {
           "width": 216.937,
-          "height": 101.01667774398373,
+          "height": 99.11288901683628,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -9888,7 +9630,7 @@
           ]
         }
       ],
-      "source_sha1": "33760ea58754ad171d933b9efd00d29d9d40f1a8"
+      "source_sha1": "19f9c78822cebbf0acd86fd08fcc8fae9f9446d3"
     },
     "u14_vjezbe_skice.svg": {
       "rows": [
@@ -9901,18 +9643,18 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "5910ca1e7236d23debe5d11496aafe16d308c13276aabfecf013998cc6d40ac5"
+          "sha256": "fa077b34ad023321934fd286103ada1230f5d68924e2bea729e85eb0d068c359"
         },
         {
           "file": "u14_vjezbe_skice--2.svg",
           "width": 447.874,
-          "height": 227.78,
+          "height": 224.31,
           "panels": [
             2,
             3
           ],
           "keep_with_next": false,
-          "sha256": "1f3179b19d6bda438e61e2c539c78b07e015fe572b3013d33cb28c4266cde3dc"
+          "sha256": "87b4e78a3b197f42957ad8b6a08002ee9ae464f19f5783372131ab950016c9bd"
         },
         {
           "file": "u14_vjezbe_skice--3.svg",
@@ -9923,7 +9665,7 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "074369c9c78035e0757f1387b886fa8daef6e27cc53556c8887b2929c99d3f17"
+          "sha256": "49b30b6ea0aa23daa3019022ce0c7f580b5785a2c354d9eae3e5e7e1e7cf3f0a"
         }
       ],
       "kind": "composite",
@@ -10016,7 +9758,7 @@
         },
         {
           "width": 216.937,
-          "height": 227.779652892562,
+          "height": 224.30985892116183,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -10053,7 +9795,7 @@
         },
         {
           "width": 216.937,
-          "height": 132.24986090953928,
+          "height": 132.4717595952352,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -10129,19 +9871,19 @@
           ]
         }
       ],
-      "source_sha1": "6059f22d759a09c82b7e2fb25b7b5f4960972793"
+      "source_sha1": "e2c38e89662246bc770993e8194dae3908731c76"
     },
     "u15_fig_uvod_otvoreni_tok.svg": {
       "rows": [
         {
           "file": "u15_fig_uvod_otvoreni_tok--1.svg",
           "width": 277.682,
-          "height": 93.023,
+          "height": 92.144,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "0a7de432d4aebdd77e2e5a45f61e6e9ca4cf796d0b78dc51454ff2d804297a17"
+          "sha256": "f43ca386e1d7f7e878b790da7bf128db50731084aacfc46e1621152affd66e53"
         }
       ],
       "kind": "standard",
@@ -10152,7 +9894,7 @@
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 93.02348282608696,
+          "height": 92.14408539130436,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
@@ -10193,7 +9935,7 @@
           ]
         }
       ],
-      "source_sha1": "d050caf8d2d174c5f7c308110390165eeea5932c"
+      "source_sha1": "9a366e812d68fdb7bea5882a08972b4802e357be"
     },
     "u15_vjezbe_skice.svg": {
       "rows": [
@@ -10206,34 +9948,34 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "a4581a9d89476131f09d532a900443e37c2389b98d2be5541aa1436db4732bab"
+          "sha256": "9f864a7747fc24f56806f1ef886b34a3df24a71becfb8803289fd3343729f9d0"
         },
         {
           "file": "u15_vjezbe_skice--2.svg",
           "width": 447.874,
-          "height": 173.542,
+          "height": 172.542,
           "panels": [
             2,
             3
           ],
           "keep_with_next": false,
-          "sha256": "35fdc26f58b35732830067f14a3e7d608be0978260d25657ad50d89db08e1f60"
+          "sha256": "a43cd59f680283fa38baa26455951b27e14d7bbb3d122cbbef17c7ca33a9ebc7"
         },
         {
           "file": "u15_vjezbe_skice--3.svg",
           "width": 447.874,
-          "height": 174.485,
+          "height": 177.485,
           "panels": [
             4,
             5
           ],
           "keep_with_next": true,
-          "sha256": "a7eaef2add5206257396dd5fdd122781067fd5861e36851cdb37168e5fafaabc"
+          "sha256": "b5bdef3745135f49451211a2cd412945b7e59dcc0733763f68fe1be2ce625aa8"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
-      "source_text_count": 58,
+      "source_text_count": 59,
       "source_geometry_count": 99,
       "removed_decorations": [],
       "panels": [
@@ -10295,7 +10037,7 @@
         },
         {
           "width": 216.937,
-          "height": 173.54241160220994,
+          "height": 172.54241160220994,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -10370,7 +10112,7 @@
         },
         {
           "width": 216.937,
-          "height": 127.81788280169968,
+          "height": 127.7650553457803,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -10405,7 +10147,7 @@
         },
         {
           "width": 216.937,
-          "height": 174.48511974623318,
+          "height": 177.48511974623318,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -10436,7 +10178,7 @@
             149,
             150,
             152,
-            156
+            157
           ],
           "texts": [
             46,
@@ -10451,37 +10193,39 @@
             55,
             56,
             57,
-            58
+            58,
+            59
           ]
         }
       ],
-      "source_sha1": "3aff0d7fbacdb734db09c617ae2b1112ed78a67e"
+      "source_sha1": "e98eb8068963756075fff0c5efb66a018aea002a"
     },
     "u13_ch1_serijsko_paralelna_mreza.svg": {
       "rows": [
         {
           "file": "u13_ch1_serijsko_paralelna_mreza--1.svg",
           "width": 277.682,
-          "height": 236.237,
+          "height": 194.226,
           "panels": [
             0
           ],
           "keep_with_next": true,
-          "sha256": "9d34a33f8df66c72941f9c51fdc09ed3964b1617a656c40a98679c730ed86310"
+          "sha256": "fe740132b7f52a71f69554ad7b960043223acf5613f36b5d417158bce900a698"
         }
       ],
       "kind": "standard",
       "triptych_conflicts": null,
-      "source_text_count": 17,
+      "source_text_count": 16,
       "source_geometry_count": 21,
       "removed_decorations": [],
       "panels": [
         {
           "width": 277.68188000000004,
-          "height": 236.2368014726681,
+          "height": 194.2257844648135,
           "kind": "standard",
           "conflicts": 0,
           "geometry": [
+            0,
             1,
             2,
             3,
@@ -10497,11 +10241,82 @@
             13,
             14,
             15,
-            16,
+            20,
+            22,
+            24,
+            26,
+            34
+          ],
+          "texts": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        }
+      ],
+      "source_sha1": "e4cfbf7b3ade21d7c9c2337a97d93398f0f4b128"
+    },
+    "u11_val_rotirajuca_mlaznica.svg": {
+      "rows": [
+        {
+          "file": "u11_val_rotirajuca_mlaznica--1.svg",
+          "width": 277.682,
+          "height": 206.156,
+          "panels": [
+            0
+          ],
+          "keep_with_next": true,
+          "sha256": "e0dc721de078cbd260614c71cd645c7e5c8c90a5a0e1d9bcfe39a9d04e910759"
+        }
+      ],
+      "kind": "standard",
+      "triptych_conflicts": null,
+      "source_text_count": 12,
+      "source_geometry_count": 24,
+      "removed_decorations": [],
+      "panels": [
+        {
+          "width": 277.68188000000004,
+          "height": 206.15638904852872,
+          "kind": "standard",
+          "conflicts": 0,
+          "geometry": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            13,
+            15,
+            17,
+            19,
             21,
-            23,
+            24,
             25,
-            27,
+            26,
+            28,
+            31,
+            33,
             35
           ],
           "texts": [
@@ -10516,86 +10331,11 @@
             9,
             10,
             11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17
+            12
           ]
         }
       ],
-      "source_sha1": "8736bca6be2ebf9544e89a6fbac45794cc3e8b01"
-    },
-    "u11_val_rotirajuca_mlaznica.svg": {
-      "rows": [
-        {
-          "file": "u11_val_rotirajuca_mlaznica--1.svg",
-          "width": 277.682,
-          "height": 235.684,
-          "panels": [
-            0
-          ],
-          "keep_with_next": true,
-          "sha256": "7aacf58c5c139e2ab38bc5615e4b7b8287c543fcbb2c8be0c42041911346ed42"
-        }
-      ],
-      "kind": "standard",
-      "triptych_conflicts": null,
-      "source_text_count": 14,
-      "source_geometry_count": 24,
-      "removed_decorations": [],
-      "panels": [
-        {
-          "width": 277.68188000000004,
-          "height": 235.68422357436188,
-          "kind": "standard",
-          "conflicts": 0,
-          "geometry": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            14,
-            16,
-            18,
-            20,
-            22,
-            25,
-            26,
-            27,
-            29,
-            33,
-            35,
-            37
-          ],
-          "texts": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14
-          ]
-        }
-      ],
-      "source_sha1": "3288a4059582999675774966172b23308f84a492"
+      "source_sha1": "40e66d7ad681f396ce3d769988892833dafbdc71"
     }
   }
 }

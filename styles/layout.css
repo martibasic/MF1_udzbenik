@@ -7,7 +7,16 @@
   margin-bottom: 2rem;
 }
 .quarto-title-banner .title { color: var(--mf1-ink); }
-#title-block-header .quarto-title-meta { display: none; }
+/* Chapter pages: the author is already in the sidebar and footer. Quarto's
+   own rule has the same selector weight, so this later one must match it.
+   The home page (no chapter number) keeps its author/date block. */
+#title-block-header.quarto-title-block.default:has(.chapter-title) .quarto-title-meta { display: none; }
+/* The book title in the sidebar header already links to the home page. */
+/* Quarto's script rewrites the home href to the site root and keeps the
+   original in data-original-href, so both forms are matched. */
+#quarto-sidebar .sidebar-menu-container > ul > li.sidebar-item:first-child:has(> .sidebar-item-container > a.sidebar-link:is([href$="index.html"], [data-original-href$="index.html"])) {
+  display: none;
+}
 #title-block-header { margin-bottom: 1.3rem; }
 .quarto-page-breadcrumbs {
   font-family: var(--mf1-sans);

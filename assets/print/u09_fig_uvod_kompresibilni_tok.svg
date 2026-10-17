@@ -22,15 +22,15 @@
   <g id="u09fukt_title-scene-1" transform="translate(-21.0000 5.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u09fukt_acoustic" transform="translate(35 35)">
-        <text x="120" y="0" font-size="18" fill="#263746" text-anchor="middle" font-weight="700">Tlačni poremećaj</text>
-        <text x="120" y="42" font-size="13" fill="#263746" text-anchor="middle">mirujući plin; v = 0</text>
+        <text x="120" y="0" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Tlačni poremećaj</text>
+        <text x="120" y="42" font-size="13" fill="#263746" text-anchor="middle">mirujući plin; <tspan font-style="italic">v</tspan> = 0</text>
         <line x1="10" y1="105" x2="230" y2="105" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
         <circle cx="120" cy="105" r="6" fill="#356b83" />
         <text x="120" y="132" font-size="12" fill="#263746" text-anchor="middle">O</text>
         <path id="u09fukt_leftwave" d="M98 105 L42 105" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09fukt_vopen)" data-mf1-vector="velocity" />
-        <text x="88" y="94" font-size="12" fill="#263746" text-anchor="middle">−a</text>
+        <text x="88" y="94" font-size="12" fill="#263746" text-anchor="middle">−<tspan font-style="italic">a</tspan></text>
         <path id="u09fukt_rightwave" d="M142 105 L198 105" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09fukt_vopen)" data-mf1-vector="velocity" />
-        <text x="152" y="94" font-size="12" fill="#263746" text-anchor="middle">+a</text>
+        <text x="152" y="94" font-size="12" fill="#263746" text-anchor="middle">+<tspan font-style="italic">a</tspan></text>
         <path d="M76 61 Q52 105 76 149 M164 61 Q188 105 164 149" fill="none" stroke="#356b83" stroke-width="2" />
       </g>
     </g>
@@ -38,27 +38,27 @@
   <g id="u09fukt_title-scene-2" transform="translate(-48.0000 5.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u09fukt_nozzle" transform="translate(335 35)">
-        <text x="145" y="0" font-size="18" fill="#263746" text-anchor="middle" font-weight="700">Izentropska sapnica</text>
+        <text x="145" y="0" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Izentropska sapnica</text>
         <path id="u09fukt_nozzlegas" d="M5 55 C85 55 115 83 145 83 C175 83 205 74.5 285 74.5 L285 155.5 C205 155.5 175 147 145 147 C115 147 85 175 5 175 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
         <path id="u09fukt_nozzletop" d="M5 55 C85 55 115 83 145 83 C175 83 205 74.5 285 74.5 L285 67.5 C205 67.5 175 76 145 76 C115 76 85 48 5 48 Z" fill="url(#u09fukt_hatch)" stroke="#3a4a56" stroke-width="1.8" />
         <path id="u09fukt_nozzlebottom" d="M5 175 C85 175 115 147 145 147 C175 147 205 155.5 285 155.5 L285 162.5 C205 162.5 175 154 145 154 C115 154 85 182 5 182 Z" fill="url(#u09fukt_hatch)" stroke="#3a4a56" stroke-width="1.8" />
         <path id="u09fukt_subsonic" d="M28 115 L78 115" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09fukt_vopen)" data-mf1-vector="velocity" />
-        <text x="53.0" y="106" font-size="12" fill="#263746" text-anchor="middle">Ma &lt; 1</text>
+        <text x="53.0" y="106" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">Ma</tspan> &lt; 1</text>
         <path id="u09fukt_supersonic" d="M173 115 L267 115" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09fukt_vopen)" data-mf1-vector="velocity" />
-        <text x="220.0" y="106" font-size="12" fill="#263746" text-anchor="middle">Ma &gt; 1</text>
+        <text x="220.0" y="106" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">Ma</tspan> &gt; 1</text>
         <line id="u09fukt_throat" x1="145" y1="76" x2="145" y2="154" stroke="#356b83" stroke-width="1.2" stroke-dasharray="3 3" />
-        <text x="145" y="176" font-size="12" fill="#263746" text-anchor="middle">A<tspan baseline-shift="super" font-size="0.75em">*</tspan>, Ma = 1</text>
+        <text x="145" y="182" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="super" font-size="0.75em">*</tspan>, <tspan font-style="italic">Ma</tspan> = 1</text>
         <line id="u09fukt_exit" x1="285" y1="74.5" x2="285" y2="155.5" stroke="#356b83" stroke-width="1.2" stroke-dasharray="3 3" />
-        <text x="22" y="36" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">0</tspan>, T<tspan baseline-shift="sub" font-size="0.75em">0</tspan></text>
-        <text x="285" y="179" font-size="12" fill="#263746" text-anchor="middle">A<tspan baseline-shift="sub" font-size="0.75em">e</tspan></text>
-        <text x="285" y="57" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">b</tspan></text>
+        <text x="16" y="32" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">0</tspan>, <tspan font-style="italic">T</tspan><tspan baseline-shift="sub" font-size="0.75em">0</tspan></text>
+        <text x="285" y="179" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">A<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">e</tspan></text>
+        <text x="285" y="57" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">p<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">b</tspan></text>
       </g>
     </g>
   </g>
   <g id="u09fukt_title-scene-3" transform="translate(-65.0000 5.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u09fukt_shock" transform="translate(680 35)">
-        <text x="120" y="0" font-size="18" fill="#263746" text-anchor="middle" font-weight="700">Normalni udarni val</text>
+        <text x="120" y="0" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Normalni udarni val</text>
         <rect id="u09fukt_shockductgas" x="5" y="60" width="230" height="115" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <rect id="u09fukt_shockducttop" x="5" y="53" width="230" height="7" rx="0" fill="url(#u09fukt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u09fukt_shockductbottom" x="5" y="175" width="230" height="7" rx="0" fill="url(#u09fukt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -66,8 +66,8 @@
         <text x="125" y="43" font-size="12" fill="#263746" text-anchor="middle">val</text>
         <path id="u09fukt_before" d="M20 117 L104 117" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09fukt_vopen)" data-mf1-vector="velocity" />
         <path id="u09fukt_after" d="M158 117 L198 117" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09fukt_vopen)" data-mf1-vector="velocity" />
-        <text x="62" y="205" font-size="14" fill="#263746" text-anchor="middle">Ma<tspan baseline-shift="sub" font-size="0.75em">1</tspan> &gt; 1</text>
-        <text x="181" y="205" font-size="14" fill="#263746" text-anchor="middle">Ma<tspan baseline-shift="sub" font-size="0.75em">2</tspan> &lt; 1</text>
+        <text x="62" y="205" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">Ma</tspan><tspan baseline-shift="sub" font-size="0.75em">1</tspan> &gt; 1</text>
+        <text x="181" y="205" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">Ma</tspan><tspan baseline-shift="sub" font-size="0.75em">2</tspan> &lt; 1</text>
       </g>
     </g>
   </g>

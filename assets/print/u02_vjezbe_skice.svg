@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 929 686" role="img" aria-labelledby="u02vs_title u02vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:929px;height:auto;">
   <title id="u02vs_title">Šest vježbi smicanja i kapilarnosti</title>
-  <desc id="u02vs_desc">Vučena ploča, jedna i dvije međupovršine, dva zasebna uljna procjepa u omjeru 1:2 s nepoznatim otporima F₁ i F₂, procjep između dvaju limova s usponom na čistom čeliku i neprikazanom razinom (?) u procjepu s hidrofobnim premazom, mjerenje vučne sile te potpuno ispunjena igla i izlazna kapljica. Sile su na naznačenoj ploči; fluid ne prolazi kroz stijenke.</desc>
+  <desc id="u02vs_desc">Vučena ploča, jedna i dvije međupovršine, dva zasebna uljna procjepa u omjeru 1:2 s nepoznatim otporima F_1 i F_2, procjep između dvaju limova s usponom na čistom čeliku i neprikazanom razinom (?) u procjepu s hidrofobnim premazom, mjerenje vučne sile te potpuno ispunjena igla i izlazna kapljica. Sile su na naznačenoj ploči; fluid ne prolazi kroz stijenke.</desc>
   <defs>
     <pattern id="u02vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -39,7 +39,7 @@
   <g id="u02vs_title-scene-1" transform="translate(-19.0000 -11.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u02vs_z1" transform="translate(22 28)">
-        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z1  Ploča: brzina i sile</text>
+        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z1 Ploča: brzina i sile</text>
         <rect id="u02vs_z1fluid" x="55" y="130" width="202" height="99" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
         <rect id="u02vs_z1moving" x="55" y="114" width="202" height="16" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u02vs_z1fixed" x="55" y="229" width="202" height="14" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -50,53 +50,53 @@
         <path id="u02vs_z1velocity3" d="M79.24 169.6 L148.32399999999998 169.6" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
         <path id="u02vs_z1velocity4" d="M79.24 149.8 L171.35199999999998 149.8" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
         <path id="u02vs_z1speed" d="M79.24 87 L194.38 87" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
-        <text x="136.81" y="76.0" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">u</text>
+        <text x="136.81" y="76.0" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">u</tspan></text>
         <path id="u02vs_z1drag" d="M117.62 130 L63.08 130" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u02vs_vF)" data-mf1-vector="force" />
-        <text x="64.09" y="153" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
+        <text x="64.09" y="153" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
         <path id="u02vs_z1pull" d="M212.56 122 L267.1 122" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u02vs_vF)" data-mf1-vector="force" />
-        <text x="252.96" y="110" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F</text>
-        <text x="200.44" y="186.43" font-size="11" fill="#263746" text-anchor="start" font-weight="700">v(y)</text>
+        <text x="252.96" y="110" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan></text>
+        <text x="200.44" y="186.43" font-size="11" fill="#263746" text-anchor="start" font-weight="700"><tspan font-style="italic">v</tspan>(<tspan font-style="italic">y</tspan>)</text>
         <line x1="32" y1="130" x2="42" y2="130" stroke="#657781" stroke-width="1.2" />
         <line x1="32" y1="229" x2="42" y2="229" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z1gap" d="M37 130 L37 229" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
-        <text x="21" y="183.5" font-size="11" fill="#263746" text-anchor="start">δ</text>
-        <text x="146" y="271" font-size="11" fill="#263746" text-anchor="middle">u = 0,65 m/s; δ = 2,4 mm</text>
-        <text x="146" y="289" font-size="11" fill="#263746" text-anchor="middle">A = 0,22 m²; glicerin: μ = 0,84 Pa s</text>
+        <text x="21" y="183.5" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">δ</tspan></text>
+        <text x="146" y="271" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">u</tspan> = 0,65 m/s; <tspan font-style="italic">δ</tspan> = 2,4 mm</text>
+        <text x="146" y="289" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan> = 0,22 m²; glicerin: <tspan font-style="italic">μ</tspan> = 0,84 Pa s</text>
       </g>
     </g>
   </g>
   <g id="u02vs_title-scene-2" transform="translate(-45.0000 -11.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u02vs_z2" transform="translate(334 28)">
-        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z2  Kapljica i sapunasti mjehur</text>
+        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z2 Kapljica i sapunasti mjehur</text>
         <circle id="u02vs_z2outer0" cx="74" cy="159" r="44" fill="#dcebf1" stroke="#356b83" stroke-width="1.8" />
         <text x="74" y="82" font-size="12" fill="#263746" text-anchor="middle">kapljica</text>
         <text x="74" y="103" font-size="11" fill="#263746" text-anchor="middle">1 međupovršina</text>
         <text x="74" y="156" font-size="11" fill="#263746" text-anchor="middle">tekućina</text>
-        <text x="74" y="177" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">u</tspan></text>
+        <text x="74" y="177" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">u</tspan></text>
         <line x1="30" y1="222" x2="30" y2="232" stroke="#657781" stroke-width="1.2" />
         <line x1="118" y1="222" x2="118" y2="232" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z2diameter0" d="M30 227 L118 227" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
-        <text x="74.0" y="244" font-size="11" fill="#263746" text-anchor="middle">d</text>
+        <text x="74.0" y="244" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan></text>
         <circle id="u02vs_z2outer1" cx="218" cy="159" r="44" fill="#dcebf1" stroke="#356b83" stroke-width="1.8" />
         <circle id="u02vs_z2inner" cx="218" cy="159" r="38" fill="#ffffff" stroke="#356b83" stroke-width="1.6" />
         <text x="218" y="82" font-size="12" fill="#263746" text-anchor="middle">sapunasti mjehur</text>
         <text x="218" y="103" font-size="11" fill="#263746" text-anchor="middle">2 međupovršine</text>
         <text x="218" y="156" font-size="11" fill="#263746" text-anchor="middle">zrak</text>
-        <text x="218" y="177" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">u</tspan></text>
+        <text x="218" y="177" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">u</tspan></text>
         <line x1="174" y1="222" x2="174" y2="232" stroke="#657781" stroke-width="1.2" />
         <line x1="262" y1="222" x2="262" y2="232" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z2diameter1" d="M174 227 L262 227" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
-        <text x="218.0" y="244" font-size="11" fill="#263746" text-anchor="middle">d</text>
-        <text x="146" y="264" font-size="11" fill="#263746" text-anchor="middle">d = 1,20 mm; σ = 0,030 N/m</text>
-        <text x="146" y="163" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">atm</tspan></text>
+        <text x="218.0" y="244" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan></text>
+        <text x="146" y="264" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan> = 1,20 mm; <tspan font-style="italic">σ</tspan> = 0,030 N/m</text>
+        <text x="146" y="163" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">atm</tspan></text>
       </g>
     </g>
   </g>
   <g id="u02vs_title-scene-3" transform="translate(-52.0000 -11.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u02vs_z3" transform="translate(646 28)">
-        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z3  Dva procjepa, dva otpora</text>
+        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z3 Dva procjepa, dva otpora</text>
         <rect id="u02vs_z3topWall" x="43" y="74" width="219" height="12" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u02vs_z3bottomWall" x="43" y="244" width="219" height="12" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u02vs_z3upperFluid" x="43" y="86" width="219" height="48" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
@@ -112,28 +112,28 @@
         <path id="u02vs_z3velocity1_2" d="M94 205.6 L130.0 205.6" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
         <path id="u02vs_z3velocity1_3" d="M94 186.4 L148.0 186.4" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
         <path id="u02vs_z3velocity1_4" d="M94 167.2 L166.0 167.2" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
-        <text id="u02vs_z3label1" x="66" y="124" font-size="13" fill="#263746" text-anchor="middle"><tspan font-weight="700">F₁</tspan> = ?</text>
-        <text id="u02vs_z3label2" x="66" y="170" font-size="13" fill="#263746" text-anchor="middle"><tspan font-weight="700">F₂</tspan> = ?</text>
+        <text id="u02vs_z3label1" x="66" y="124" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">1</tspan> = ?</text>
+        <text id="u02vs_z3label2" x="66" y="170" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">2</tspan> = ?</text>
         <path id="u02vs_z3pull" d="M183 141 L279 141" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u02vs_vF)" data-mf1-vector="force" />
-        <text x="269" y="127" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F</text>
+        <text x="269" y="127" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan></text>
         <path id="u02vs_z3speed" d="M143 51 L233 51" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
-        <text x="247" y="55" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">u</text>
+        <text x="247" y="55" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">u</tspan></text>
         <line x1="21" y1="86" x2="31" y2="86" stroke="#657781" stroke-width="1.2" />
         <line x1="21" y1="134" x2="31" y2="134" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z3gap1" d="M26 86 L26 134" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
-        <text x="8" y="114.0" font-size="11" fill="#263746" text-anchor="start">δ₁</text>
+        <text x="8" y="114.0" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">δ</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
         <line x1="273" y1="148" x2="283" y2="148" stroke="#657781" stroke-width="1.2" />
         <line x1="273" y1="244" x2="283" y2="244" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z3gap2" d="M278 148 L278 244" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
-        <text x="259" y="200.0" font-size="11" fill="#263746" text-anchor="start">δ₂</text>
-        <text x="146" y="278" font-size="10" fill="#263746" text-anchor="middle">δ₁ = 1 mm; δ₂ = 2 mm; u = 0,30 m/s</text>
+        <text x="259" y="200.0" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">δ</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+        <text x="146" y="278" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">δ</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1 mm; <tspan font-style="italic">δ</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 2 mm; <tspan font-style="italic">u</tspan> = 0,30 m/s</text>
       </g>
     </g>
   </g>
   <g id="u02vs_title-scene-4" transform="translate(-11.0000 -19.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u02vs_z4" transform="translate(22 372)">
-        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z4  Procjep između dvaju limova</text>
+        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z4 Procjep između dvaju limova</text>
         <path id="u02vs_z4fluid" d="M20 215 L65 215 L65 268 L70 268 L70.00000000 143.95854812 L70.11666667 144.15420085 L70.23333333 144.33813181 L70.35000000 144.51174892 L70.46666667 144.67618111 L70.58333333 144.83235027 L70.70000000 144.98102093 L70.81666667 145.12283559 L70.93333333 145.25834036 L71.05000000 145.38800414 L71.16666667 145.51223301 L71.28333333 145.63138145 L71.40000000 145.74576103 L71.51666667 145.85564731 L71.63333333 145.96128536 L71.75000000 146.06289425 L71.86666667 146.16067071 L71.98333333 146.25479210 L72.10000000 146.34541898 L72.21666667 146.43269717 L72.33333333 146.51675952 L72.45000000 146.59772744 L72.56666667 146.67571213 L72.68333333 146.75081573 L72.80000000 146.82313224 L72.91666667 146.89274833 L73.03333333 146.95974409 L73.15000000 147.02419362 L73.26666667 147.08616560 L73.38333333 147.14572373 L73.50000000 147.20292723 L73.61666667 147.25783113 L73.73333333 147.31048667 L73.85000000 147.36094156 L73.96666667 147.40924027 L74.08333333 147.45542422 L74.20000000 147.49953208 L74.31666667 147.54159986 L74.43333333 147.58166116 L74.55000000 147.61974729 L74.66666667 147.65588741 L74.78333333 147.69010866 L74.90000000 147.72243628 L75.01666667 147.75289372 L75.13333333 147.78150269 L75.25000000 147.80828330 L75.36666667 147.83325411 L75.48333333 147.85643220 L75.60000000 147.87783322 L75.71666667 147.89747147 L75.83333333 147.91535993 L75.95000000 147.93151033 L76.06666667 147.94593315 L76.18333333 147.95863768 L76.30000000 147.96963206 L76.41666667 147.97892329 L76.53333333 147.98651725 L76.65000000 147.99241872 L76.76666667 147.99663142 L76.88333333 147.99915799 L77.00000000 148.00000000 L77.11666667 147.99915799 L77.23333333 147.99663142 L77.35000000 147.99241872 L77.46666667 147.98651725 L77.58333333 147.97892329 L77.70000000 147.96963206 L77.81666667 147.95863768 L77.93333333 147.94593315 L78.05000000 147.93151033 L78.16666667 147.91535993 L78.28333333 147.89747147 L78.40000000 147.87783322 L78.51666667 147.85643220 L78.63333333 147.83325411 L78.75000000 147.80828330 L78.86666667 147.78150269 L78.98333333 147.75289372 L79.10000000 147.72243628 L79.21666667 147.69010866 L79.33333333 147.65588741 L79.45000000 147.61974729 L79.56666667 147.58166116 L79.68333333 147.54159986 L79.80000000 147.49953208 L79.91666667 147.45542422 L80.03333333 147.40924027 L80.15000000 147.36094156 L80.26666667 147.31048667 L80.38333333 147.25783113 L80.50000000 147.20292723 L80.61666667 147.14572373 L80.73333333 147.08616560 L80.85000000 147.02419362 L80.96666667 146.95974409 L81.08333333 146.89274833 L81.20000000 146.82313224 L81.31666667 146.75081573 L81.43333333 146.67571213 L81.55000000 146.59772744 L81.66666667 146.51675952 L81.78333333 146.43269717 L81.90000000 146.34541898 L82.01666667 146.25479210 L82.13333333 146.16067071 L82.25000000 146.06289425 L82.36666667 145.96128536 L82.48333333 145.85564731 L82.60000000 145.74576103 L82.71666667 145.63138145 L82.83333333 145.51223301 L82.95000000 145.38800414 L83.06666667 145.25834036 L83.18333333 145.12283559 L83.30000000 144.98102093 L83.41666667 144.83235027 L83.53333333 144.67618111 L83.65000000 144.51174892 L83.76666667 144.33813181 L83.88333333 144.15420085 L84.00000000 143.95854812 L84 268 L89 268 L89 215 L197 215 L197 268 L202 268 L202 215 L216 215 L216 268 L221 268 L221 215 L269 215 L269 284 L20 284 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
         <rect id="u02vs_z4tankleftbase" x="13" y="195" width="7" height="96" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
         <rect id="u02vs_z4tankleft" x="13" y="195" width="7" height="96" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -155,32 +155,32 @@
         <line x1="70" y1="56" x2="70" y2="66" stroke="#657781" stroke-width="1.2" />
         <line x1="84" y1="56" x2="84" y2="66" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z4gap0" d="M70 61 L84 61" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dimSmall)" marker-end="url(#u02vs_dimSmall)" data-mf1-role="dimension" />
-        <text x="77.0" y="52" font-size="11" fill="#263746" text-anchor="middle">b</text>
+        <text x="77.0" y="52" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan></text>
         <line x1="120" y1="148.0" x2="130" y2="148.0" stroke="#657781" stroke-width="1.2" />
         <line x1="120" y1="215" x2="130" y2="215" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z4height0" d="M125 148.0 L125 215" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
-        <text x="134" y="185" font-size="11" fill="#263746" text-anchor="start">h₁</text>
+        <text x="134" y="185" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
         <line x1="84" y1="148.0" x2="130" y2="148.0" stroke="#657781" stroke-width="1" />
-        <text x="94" y="100" font-size="10" fill="#263746" text-anchor="start">čisti čelik</text>
-        <text x="94" y="114" font-size="10" fill="#263746" text-anchor="start">θ₁ = 30°</text>
+        <text x="94" y="100" font-size="11" fill="#263746" text-anchor="start">čisti čelik</text>
+        <text x="94" y="114" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">θ</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 30°</text>
         <line x1="202" y1="56" x2="202" y2="66" stroke="#657781" stroke-width="1.2" />
         <line x1="216" y1="56" x2="216" y2="66" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z4gap1" d="M202 61 L216 61" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dimSmall)" marker-end="url(#u02vs_dimSmall)" data-mf1-role="dimension" />
-        <text x="209.0" y="52" font-size="11" fill="#263746" text-anchor="middle">b</text>
+        <text x="209.0" y="52" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan></text>
         <rect id="u02vs_z4hidden" x="193" y="196" width="32" height="38" rx="3" fill="#ffffff" stroke="#657781" stroke-width="1" />
-        <text x="209" y="220" font-size="15" fill="#263746" text-anchor="middle">?</text>
-        <text x="229" y="207" font-size="11" fill="#263746" text-anchor="start">h₂ = ?</text>
-        <text x="226" y="100" font-size="10" fill="#263746" text-anchor="start">premaz</text>
-        <text x="226" y="114" font-size="10" fill="#263746" text-anchor="start">θ₂ = 105°</text>
-        <text x="146" y="279" font-size="10" fill="#263746" text-anchor="middle">morska voda; isti fluid ispod ulaza</text>
-        <text x="146" y="307" font-size="10" fill="#263746" text-anchor="middle">b = 0,20 mm; ρ = 1025 kg/m³; σ = 0,073 N/m</text>
+        <text x="209" y="220" font-size="12" fill="#263746" text-anchor="middle">?</text>
+        <text x="229" y="207" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = ?</text>
+        <text x="226" y="100" font-size="11" fill="#263746" text-anchor="start">premaz</text>
+        <text x="226" y="114" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">θ</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 105°</text>
+        <text x="146" y="279" font-size="11" fill="#263746" text-anchor="middle">morska voda; isti fluid ispod ulaza</text>
+        <text x="146" y="307" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 0,20 mm; <tspan font-style="italic">ρ</tspan> = 1025 kg/m³; <tspan font-style="italic">σ</tspan> = 0,073 N/m</text>
       </g>
     </g>
   </g>
   <g id="u02vs_title-scene-5" transform="translate(-13.0000 -19.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u02vs_z5" transform="translate(334 372)">
-        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z5  Mjerenje vučne sile</text>
+        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z5 Mjerenje vučne sile</text>
         <rect id="u02vs_z5fluid" x="48" y="145" width="170" height="87" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
         <rect id="u02vs_z5moving" x="48" y="129" width="170" height="16" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u02vs_z5fixedbase" x="48" y="232" width="170" height="14" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
@@ -192,28 +192,28 @@
         <path id="u02vs_z5velocity3" d="M68.4 179.8 L126.54 179.8" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
         <path id="u02vs_z5velocity4" d="M68.4 162.4 L145.92000000000002 162.4" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
         <path id="u02vs_z5speed" d="M68.4 102 L165.3 102" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02vs_vopen)" data-mf1-vector="velocity" />
-        <text x="116.85" y="91.0" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">u</text>
-        <text x="170.39999999999998" y="194.59" font-size="11" fill="#263746" text-anchor="start" font-weight="700">v(y)</text>
-        <text x="133.0" y="265" font-size="10" fill="#263746" text-anchor="middle">nepomična stijenka: v = 0</text>
+        <text x="116.85" y="91.0" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">u</tspan></text>
+        <text x="170.39999999999998" y="194.59" font-size="11" fill="#263746" text-anchor="start" font-weight="700"><tspan font-style="italic">v</tspan>(<tspan font-style="italic">y</tspan>)</text>
+        <text x="133.0" y="265" font-size="11" fill="#263746" text-anchor="middle">nepomična stijenka: <tspan font-style="italic">v</tspan> = 0</text>
         <line x1="25" y1="145" x2="35" y2="145" stroke="#657781" stroke-width="1.2" />
         <line x1="25" y1="232" x2="35" y2="232" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z5gap" d="M30 145 L30 232" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
-        <text x="14" y="192.5" font-size="11" fill="#263746" text-anchor="start">δ</text>
+        <text x="14" y="192.5" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">δ</tspan></text>
         <path id="u02vs_z5drag" d="M94 145 L56 145" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u02vs_vF)" data-mf1-vector="force" />
-        <text x="72" y="120" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
+        <text x="72" y="120" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
         <line x1="218" y1="137" x2="235" y2="137" stroke="#3a4a56" stroke-width="1.5" />
         <circle id="u02vs_z5sensor" cx="247" cy="137" r="12" fill="#ffffff" stroke="#3a4a56" stroke-width="1.4" />
         <line x1="243" y1="142" x2="252" y2="131" stroke="#3a4a56" stroke-width="1.2" />
         <path id="u02vs_z5pull" d="M259 137 L297 137" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u02vs_vF)" data-mf1-vector="force" />
-        <text x="278" y="123" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F</text>
-        <text x="146" y="281" font-size="10" fill="#263746" text-anchor="middle">A = 0,010 m²; δ = 1 mm; uzorci A i B</text>
+        <text x="278" y="123" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan></text>
+        <text x="146" y="281" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan> = 0,010 m²; <tspan font-style="italic">δ</tspan> = 1 mm; uzorci <tspan font-style="italic">A</tspan> i <tspan font-style="italic">B</tspan></text>
       </g>
     </g>
   </g>
   <g id="u02vs_title-scene-6" transform="translate(-15.0000 -19.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u02vs_z6" transform="translate(646 372)">
-        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z6  Puna igla i izlazna kapljica</text>
+        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z6 Puna igla i izlazna kapljica</text>
         <path id="u02vs_z6fluid" d="M31.00000000 239.00000000 L171.00000000 239.00000000 L171.00000000 268.00000000 L176.00000000 268.00000000 L176.00000000 93.00000000 L175.42505647 92.82630020 L174.85441586 92.63894766 L174.28840231 92.43804883 L173.72733734 92.22371781 L173.17153967 91.99607636 L172.62132501 91.75525378 L172.07700592 91.50138688 L171.53889158 91.23461987 L171.00728767 90.95510427 L170.48249617 90.66299887 L169.96481519 90.35846959 L169.45453878 90.04168943 L168.95195682 89.71283832 L168.45735478 89.37210308 L167.97101363 89.01967725 L167.49320963 88.65576102 L167.02421419 88.28056113 L166.56429373 87.89429069 L166.11370950 87.49716913 L165.67271745 87.08942203 L165.24156809 86.67128102 L164.82050633 86.24298360 L164.40977135 85.80477309 L164.00959646 85.35689839 L163.62020900 84.89961392 L163.24183013 84.43317945 L162.87467481 83.95785992 L162.51895159 83.47392535 L162.17486254 82.98165062 L161.84260312 82.48131537 L161.52236207 81.97320382 L161.21432129 81.45760459 L160.91865577 80.93481058 L160.63553347 80.40511874 L160.36511520 79.86882998 L160.10755457 79.32624892 L159.86299790 78.77768377 L159.63158411 78.22344615 L159.41344463 77.66385090 L159.20870340 77.09921587 L159.01747671 76.52986182 L158.83987318 75.95611217 L158.67599371 75.37829282 L158.52593139 74.79673200 L158.38977145 74.21176008 L158.26759124 73.62370933 L158.15946017 73.03291381 L158.06543966 72.43970910 L157.98558312 71.84443218 L157.91993591 71.24742118 L157.86853531 70.64901525 L157.83141054 70.04955430 L157.80858267 69.44937885 L157.80006467 68.84882983 L157.80586139 68.24824838 L157.82596953 67.64797565 L157.86037767 67.04835263 L157.90906625 66.44971994 L157.97200763 65.85241762 L158.04916606 65.25678496 L158.14049769 64.66316032 L158.24595066 64.07188090 L158.36546505 63.48328257 L158.49897299 62.89769969 L158.64639862 62.31546489 L158.80765821 61.73690890 L158.98266015 61.16236038 L159.17130504 60.59214570 L159.37348572 60.02658875 L159.58908733 59.46601081 L159.81798741 58.91073031 L160.06005593 58.36106267 L160.31515538 57.81732013 L160.58314086 57.27981156 L160.86386013 56.74884229 L161.15715375 56.22471393 L161.46285510 55.70772421 L161.78079052 55.19816681 L162.11077943 54.69633117 L162.45263437 54.20250237 L162.80616114 53.71696092 L163.17115894 53.23998263 L163.54742043 52.77183845 L163.93473186 52.31279430 L164.33287324 51.86311094 L164.74161840 51.42304381 L165.16073515 50.99284289 L165.58998542 50.57275255 L166.02912537 50.16301143 L166.47790555 49.76385228 L166.93607104 49.37550183 L167.40336156 48.99818069 L167.87951169 48.63210319 L168.36425095 48.27747728 L168.85730398 47.93450441 L169.35839071 47.60337939 L169.86722649 47.28429033 L170.38352229 46.97741848 L170.90698482 46.68293816 L171.43731673 46.40101665 L171.97421678 46.13181408 L172.51737997 45.87548338 L173.06649778 45.63217017 L173.62125826 45.40201264 L174.18134630 45.18514154 L174.74644373 44.98168006 L175.31622956 44.79174378 L175.89038012 44.61544060 L176.46856927 44.45287065 L177.05046857 44.30412629 L177.63574748 44.16929201 L178.22407353 44.04844440 L178.81511252 43.94165210 L179.40852871 43.84897579 L180.00398503 43.77046811 L180.60114322 43.70617365 L181.19966407 43.65612893 L181.79920759 43.62036238 L182.39943322 43.59889432 L183.00000000 43.59173695 L183.60056678 43.59889432 L184.20079241 43.62036238 L184.80033593 43.65612893 L185.39885678 43.70617365 L185.99601497 43.77046811 L186.59147129 43.84897579 L187.18488748 43.94165210 L187.77592647 44.04844440 L188.36425252 44.16929201 L188.94953143 44.30412629 L189.53143073 44.45287065 L190.10961988 44.61544060 L190.68377044 44.79174378 L191.25355627 44.98168006 L191.81865370 45.18514154 L192.37874174 45.40201264 L192.93350222 45.63217017 L193.48262003 45.87548338 L194.02578322 46.13181408 L194.56268327 46.40101665 L195.09301518 46.68293816 L195.61647771 46.97741848 L196.13277351 47.28429033 L196.64160929 47.60337939 L197.14269602 47.93450441 L197.63574905 48.27747728 L198.12048831 48.63210319 L198.59663844 48.99818069 L199.06392896 49.37550183 L199.52209445 49.76385228 L199.97087463 50.16301143 L200.41001458 50.57275255 L200.83926485 50.99284289 L201.25838160 51.42304381 L201.66712676 51.86311094 L202.06526814 52.31279430 L202.45257957 52.77183845 L202.82884106 53.23998263 L203.19383886 53.71696092 L203.54736563 54.20250237 L203.88922057 54.69633117 L204.21920948 55.19816681 L204.53714490 55.70772421 L204.84284625 56.22471393 L205.13613987 56.74884229 L205.41685914 57.27981156 L205.68484462 57.81732013 L205.93994407 58.36106267 L206.18201259 58.91073031 L206.41091267 59.46601081 L206.62651428 60.02658875 L206.82869496 60.59214570 L207.01733985 61.16236038 L207.19234179 61.73690890 L207.35360138 62.31546489 L207.50102701 62.89769969 L207.63453495 63.48328257 L207.75404934 64.07188090 L207.85950231 64.66316032 L207.95083394 65.25678496 L208.02799237 65.85241762 L208.09093375 66.44971994 L208.13962233 67.04835263 L208.17403047 67.64797565 L208.19413861 68.24824838 L208.19993533 68.84882983 L208.19141733 69.44937885 L208.16858946 70.04955430 L208.13146469 70.64901525 L208.08006409 71.24742118 L208.01441688 71.84443218 L207.93456034 72.43970910 L207.84053983 73.03291381 L207.73240876 73.62370933 L207.61022855 74.21176008 L207.47406861 74.79673200 L207.32400629 75.37829282 L207.16012682 75.95611217 L206.98252329 76.52986182 L206.79129660 77.09921587 L206.58655537 77.66385090 L206.36841589 78.22344615 L206.13700210 78.77768377 L205.89244543 79.32624892 L205.63488480 79.86882998 L205.36446653 80.40511874 L205.08134423 80.93481058 L204.78567871 81.45760459 L204.47763793 81.97320382 L204.15739688 82.48131537 L203.82513746 82.98165062 L203.48104841 83.47392535 L203.12532519 83.95785992 L202.75816987 84.43317945 L202.37979100 84.89961392 L201.99040354 85.35689839 L201.59022865 85.80477309 L201.17949367 86.24298360 L200.75843191 86.67128102 L200.32728255 87.08942203 L199.88629050 87.49716913 L199.43570627 87.89429069 L198.97578581 88.28056113 L198.50679037 88.65576102 L198.02898637 89.01967725 L197.54264522 89.37210308 L197.04804318 89.71283832 L196.54546122 90.04168943 L196.03518481 90.35846959 L195.51750383 90.66299887 L194.99271233 90.95510427 L194.46110842 91.23461987 L193.92299408 91.50138688 L193.37867499 91.75525378 L192.82846033 91.99607636 L192.27266266 92.22371781 L191.71159769 92.43804883 L191.14558414 92.63894766 L190.57494353 92.82630020 L190.00000000 93.00000000 L190.00000000 268.00000000 L195.00000000 268.00000000 L195.00000000 239.00000000 L249.00000000 239.00000000 L249.00000000 284.00000000 L31.00000000 284.00000000 L31.00000000 239.00000000 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
         <rect id="u02vs_z6tankleftbase" x="24" y="219" width="7" height="72" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
         <rect id="u02vs_z6tankleft" x="24" y="219" width="7" height="72" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -222,9 +222,9 @@
         <rect id="u02vs_z6tankbottom" x="24" y="284" width="232" height="7" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <line id="u02vs_z6surface0" x1="31" y1="239" x2="171.0" y2="239" stroke="#356b83" stroke-width="1.8" />
         <rect id="u02vs_z6tube0leftbase" x="171.0" y="93" width="5" height="175" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
-        <rect id="u02vs_z6tube0left" x="171.0" y="93" width="5" height="175" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect id="u02vs_z6tube0left" x="171.0" y="93" width="5" height="175" rx="0" fill="#3a4a56" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u02vs_z6tube0rightbase" x="190.0" y="93" width="5" height="175" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
-        <rect id="u02vs_z6tube0right" x="190.0" y="93" width="5" height="175" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect id="u02vs_z6tube0right" x="190.0" y="93" width="5" height="175" rx="0" fill="#3a4a56" stroke="#3a4a56" stroke-width="1.2" />
         <path id="u02vs_z6interface0" d="M176.0 93.0 A25.2 25.2 0 1 1 190.0 93.0" fill="none" stroke="#356b83" stroke-width="1.8" />
         <rect id="u02vs_z6roof0base" x="24" y="193" width="147.0" height="7" rx="0" fill="#ffffff" stroke="none" stroke-width="1.2" />
         <rect id="u02vs_z6roof0" x="24" y="193" width="147.0" height="7" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -240,22 +240,21 @@
         <path id="u02vs_z6dropDiameter" d="M157.8 39 L208.2 39" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
         <line x1="157.8" y1="68.79173694789318" x2="157.8" y2="34" stroke="#657781" stroke-width="1" />
         <line x1="208.2" y1="68.79173694789318" x2="208.2" y2="34" stroke="#657781" stroke-width="1" />
-        <text x="136" y="48" font-size="12" fill="#263746" text-anchor="start">D</text>
+        <text x="136" y="48" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan></text>
         <line x1="264" y1="93" x2="274" y2="93" stroke="#657781" stroke-width="1.2" />
         <line x1="264" y1="239" x2="274" y2="239" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z6height" d="M269 93 L269 239" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
         <line x1="190" y1="93" x2="274" y2="93" stroke="#657781" stroke-width="1" />
         <line x1="249" y1="239" x2="274" y2="239" stroke="#657781" stroke-width="1" />
-        <text x="260" y="160" font-size="12" fill="#263746" text-anchor="end">H = 42 mm</text>
+        <text x="260" y="160" font-size="12" fill="#263746" text-anchor="end"><tspan font-style="italic">H</tspan> = 42 mm</text>
         <line x1="176" y1="140" x2="176" y2="150" stroke="#657781" stroke-width="1.2" />
         <line x1="190" y1="140" x2="190" y2="150" stroke="#657781" stroke-width="1.2" />
         <path id="u02vs_z6needleDiameter" d="M176 145 L190 145" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dimSmall)" marker-end="url(#u02vs_dimSmall)" data-mf1-role="dimension" />
         <line x1="176" y1="145" x2="120" y2="128" stroke="#657781" stroke-width="1" />
-        <text x="45" y="122" font-size="11" fill="#263746" text-anchor="start">d = 0,50 mm</text>
+        <text x="45" y="122" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">d</tspan> = 0,50 mm</text>
         <text x="45" y="158" font-size="11" fill="#263746" text-anchor="start">puna igla</text>
         <text x="45" y="176" font-size="11" fill="#263746" text-anchor="start">bez meniskusa</text>
-        <text x="95" y="219" font-size="11" fill="#263746" text-anchor="middle">zrak: p<tspan baseline-shift="sub" font-size="0.75em">atm</tspan> + p<tspan baseline-shift="sub" font-size="0.75em">M</tspan>
-        </text>
+        <text x="95" y="219" font-size="11" fill="#263746" text-anchor="middle">zrak: <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">atm</tspan> + <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">M</tspan></text>
         <text x="98" y="266" font-size="11" fill="#263746" text-anchor="middle">voda</text>
       </g>
     </g>

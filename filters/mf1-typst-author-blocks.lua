@@ -85,7 +85,14 @@ local function extract_label(content, fallback)
     return label
   end
 
+  if fallback == nil then return nil end
   return pandoc.Plain({ pandoc.Str(fallback) })
+end
+
+local function is_level_footer(block)
+  return block.t == "Para" and #block.content == 1
+    and block.content[1].t == "Span"
+    and block.content[1].classes:includes("mf1-task-level")
 end
 
 local function render_author_block(div)
@@ -101,7 +108,18 @@ local function render_author_block(div)
     local links = pandoc.List()
     local images = pandoc.List()
     parsed:walk({ Link = function(link)
-      links:insert(pandoc.Para({link}))
+      if #links == 0 and link.target:match("^https?://") then
+        -- Print readers scan the QR or type the address; the browser button
+        -- label alone would be a dead link on paper.
+        local shown = link.target:gsub("^https?://", "")
+        links:insert(pandoc.Para({pandoc.Str("Skeniraj"), pandoc.Space(), pandoc.Str("QR"),
+          pandoc.Space(), pandoc.Str("kod"), pandoc.Space(), pandoc.Str("ili"), pandoc.Space(),
+          pandoc.Str("otvori:")}))
+        links:insert(pandoc.Para({pandoc.RawInline("typst", "#mf1-url["),
+          pandoc.Link({pandoc.Str(shown)}, link.target), pandoc.RawInline("typst", "]")}))
+      else
+        links:insert(pandoc.Para({link}))
+      end
     end, Image = function(img)
       img.src = img.src:gsub("^%.%./assets/", "assets/")
       img.attributes.width = "28mm"
@@ -129,14 +147,29 @@ local function render_author_block(div)
     return result
   end
 
+  if div.classes:includes("mf1-problem") then
+    -- Z1-Z6 show their level beside the title, exactly like P1-P6. The
+    -- trailing "Razina: Tn" paragraph is the source of that chip.
+    local header_index, footer_index
+    for i, block in ipairs(div.content) do
+      if block.t == "Header" and header_index == nil then header_index = i end
+      if is_level_footer(block) then footer_index = i end
+    end
+    if header_index and footer_index then
+      local level = pandoc.utils.stringify(div.content[footer_index]):gsub("^%s*Razina:%s*", "")
+      div.content:remove(footer_index)
+      local header = div.content[header_index]
+      header.content:extend({pandoc.RawInline("typst", "~#h(0.45em)#mf1-level(["),
+        pandoc.Str(level), pandoc.RawInline("typst", "])")})
+    end
+  end
+
   if div.classes:includes("mf1-vjezbe-list") or div.classes:includes("mf1-problem") then
     -- Keep the small level label with the task's last visible paragraph.
     -- HTML-only hints/results may occur between that paragraph and the label.
     local content = pandoc.List()
     for _, block in ipairs(div.content) do
-      local footer = block.t == "Para" and #block.content == 1
-        and block.content[1].t == "Span"
-        and block.content[1].classes:includes("mf1-task-level")
+      local footer = is_level_footer(block)
       local previous = #content
       if footer then
         while previous > 0 and content[previous].t ~= "Para"
@@ -198,10 +231,11 @@ local function render_author_block(div)
   end
 
   local content = pandoc.List(div.content)
-  local label = extract_label(content, style.label)
-  if div.classes:includes("mf1-zavrsni-okvir") then
-    label = pandoc.Plain({ pandoc.Str("Sažetak") })
-  end
+  -- The chapter summary is introduced by its own "## Sažetak" section, so
+  -- its closing panel gets a title only when the source supplies one.
+  local fallback = style.label
+  if div.classes:includes("mf1-zavrsni-okvir") then fallback = nil end
+  local label = extract_label(content, fallback)
   local result = pandoc.List()
 
   local keep_together = div.classes:includes("mf1-interaktivno")
@@ -216,13 +250,15 @@ local function render_author_block(div)
     result:insert(pandoc.RawBlock("typst", "#block(breakable: false)["))
   end
 
-  result:insert(pandoc.RawBlock(
-    "typst",
-    '#mf1-author-block(accent: rgb("' .. style.accent .. '"), mode: "' .. style.mode .. '", title: ['
-  ))
-  result:insert(label)
-  -- Typst's trailing content argument must touch the closing parenthesis.
-  result:insert(pandoc.RawBlock("typst", "])["))
+  local opening = '#mf1-author-block(accent: rgb("' .. style.accent .. '"), mode: "' .. style.mode .. '"'
+  if label then
+    result:insert(pandoc.RawBlock("typst", opening .. ', title: ['))
+    result:insert(label)
+    -- Typst's trailing content argument must touch the closing parenthesis.
+    result:insert(pandoc.RawBlock("typst", "])["))
+  else
+    result:insert(pandoc.RawBlock("typst", opening .. ', title: none)['))
+  end
 
   for _, block in ipairs(content) do
     result:insert(block)
@@ -275,6 +311,13 @@ end
 local function render_minor_heading(para)
   if #para.content == 1 and para.content[1].t == "Link"
     and pandoc.utils.stringify(para.content[1]) == "Vrati se na zadatak" then
+    -- Printed copies cannot follow the link: add the task's page number as a
+    -- separate muted run (the link text itself stays unchanged).
+    local target = para.content[1].target:match("#(.+)$") or para.content[1].target
+    if target ~= "" then
+      para.content:insert(pandoc.RawInline("typst",
+        '#mf1-page-ref(' .. pandoc.json.encode(target) .. ')'))
+    end
     return {pandoc.RawBlock("typst", "#block(sticky: true)["), para,
       pandoc.RawBlock("typst", "]")}
   end
@@ -331,7 +374,10 @@ local function render_step_heading(header)
   }
 end
 
+local extract_imprint -- defined below, next to the other text adapters
+
 local function configure_document(doc)
+  local imprint = extract_imprint(doc.blocks)
   -- Keep short equation introductions with their display (also inside examples).
   -- Long explanatory paragraphs retain ordinary pagination.
   doc = doc:walk({ Blocks = function(blocks)
@@ -366,6 +412,9 @@ local function configure_document(doc)
   it
 }]]
   ))
+  if imprint then
+    for i = #imprint, 1, -1 do doc.blocks:insert(2, imprint[i]) end
+  end
   return doc
 end
 
@@ -390,6 +439,95 @@ local function render_math(expression)
   return expression
 end
 
+-- Typst keeps the spaces Pandoc writes between math atoms, and a comma is a
+-- punctuation atom with space after it.  Three systematic artefacts follow:
+-- the Croatian decimal comma {,} prints as "9, 81", units print as "m³/ s",
+-- and a closing full stop after a text unit prints as "kPa .".  Fix them in
+-- the written Typst; plain commas (lists such as (26, 0)) keep their space.
+local DECIMAL_MARK = "MFDECIMALMARK"
+local function typst_math(expression)
+  local tex = expression.text
+  local marked
+  repeat
+    marked = tex
+    tex = tex:gsub("(%d)%s*{,}%s*(%d)", "%1\\text{" .. DECIMAL_MARK .. "}%2")
+  until tex == marked
+  local probe = pandoc.Math(expression.mathtype, tex)
+  local out = pandoc.write(pandoc.Pandoc({pandoc.Plain({probe})}), "typst")
+  out = out:gsub("%s*$", "")
+  out = out:gsub('%s*upright%("' .. DECIMAL_MARK .. '"%)%s*', '#math.class("normal", ",")')
+  out = out:gsub('%s*"' .. DECIMAL_MARK .. '"%s*', '#math.class("normal", ",")')
+  out = out:gsub("%s*\\/%s*", "\\/")
+  out = out:gsub('([%)"]) ([%.,])', "%1%2")
+  out = out:gsub('([%)"]) (\\,)', "%1%2")
+  if expression.mathtype == "DisplayMath" then
+    out = out:gsub(" ([%.,]) %$$", "%1 $")
+  else
+    out = out:gsub(" ([%.,])%$$", "%1$")
+  end
+  return pandoc.RawInline("typst", out)
+end
+
+-- Keep "pog. 7" (and "dodatak C") on one line; in chapter references also
+-- tie the number to the first word of the title.
+local NBSP = "\u{00A0}"
+local function tie_text(text)
+  text = text:gsub("([Pp]og%.) (%d)", "%1" .. NBSP .. "%2")
+  text = text:gsub("([Pp]og%." .. NBSP .. "%d+) ", "%1" .. NBSP)
+  return text
+end
+local function tie_references(inlines)
+  for i = #inlines, 1, -1 do
+    local item = inlines[i]
+    if item.t == "Str" then item.text = tie_text(item.text) end
+  end
+  for i = #inlines - 2, 1, -1 do
+    local a, space, b = inlines[i], inlines[i + 1], inlines[i + 2]
+    if a.t == "Str" and space.t == "Space" and b.t == "Str" then
+      local chapter = a.text:match("[Pp]og%.$") and b.text:match("^%d")
+      local appendix = a.text:match("^[Dd]odat%a*$") and b.text:match("^[A-F]%f[^%w]")
+      if chapter or appendix then
+        inlines[i] = pandoc.Str(a.text .. NBSP .. b.text)
+        inlines:remove(i + 2)
+        inlines:remove(i + 1)
+      end
+    end
+  end
+  return inlines
+end
+
+-- The imprint belongs on the verso of the title page, before the contents.
+-- Its canonical text stays in source/index.md; the PDF moves the section into
+-- a Typst state that mf1-book reads on page 2.
+extract_imprint = function(blocks)
+  for i, block in ipairs(blocks) do
+    if block.t == "Header" and block.level <= 2
+      and pandoc.utils.stringify(block.content) == "Impresum" then
+      local body = pandoc.Blocks({})
+      while blocks[i + 1] and not (blocks[i + 1].t == "Header" and blocks[i + 1].level <= block.level) do
+        body:insert(blocks:remove(i + 1))
+      end
+      blocks:remove(i)
+      -- Printed readers cannot click: show the address of each external link.
+      body = body:walk({ Link = function(link)
+        if link.target:match("^https?://") then
+          local shown = link.target:gsub("^https?://", ""):gsub("/$", "")
+          local text = pandoc.utils.stringify(link.content)
+          if text ~= shown then
+            return {link, pandoc.Space(), pandoc.RawInline("typst", "#mf1-url["),
+              pandoc.Str("(" .. shown .. ")"), pandoc.RawInline("typst", "]")}
+          end
+        end
+      end })
+      local result = pandoc.List({pandoc.RawBlock("typst", "#mf1-imprint.update[")})
+      result:extend(body)
+      result:insert(pandoc.RawBlock("typst", "]"))
+      return result
+    end
+  end
+  return nil
+end
+
 local print_layout_file = assert(io.open("assets/pdf-figures/manifest.json", "r"))
 local print_layouts = pandoc.json.decode(print_layout_file:read("*a")).figures
 print_layout_file:close()
@@ -408,7 +546,12 @@ local function render_print_image(img)
     table.insert(rows, "(" .. pandoc.json.encode("/assets/pdf-figures/" .. row.file)
       .. ", " .. tostring(row.width) .. ", " .. tostring(row.keep_with_next) .. ")")
   end
-  return pandoc.RawInline("typst", '#mf1-print-rows((' .. table.concat(rows, ", ") .. ',))')
+  -- Tagged PDF readers need the same description the web image carries.
+  local alt = img.attributes["fig-alt"] or img.attributes["alt"] or ""
+  if alt == "" then alt = pandoc.utils.stringify(img.caption) end
+  if alt == "" then alt = img.title or "" end
+  return pandoc.RawInline("typst", '#mf1-print-rows((' .. table.concat(rows, ", ") .. ',), alt: '
+    .. pandoc.json.encode(alt) .. ')')
 end
 
 return {
@@ -420,4 +563,7 @@ return {
   { Div = render_author_block },
   { Table = keep_short_table },
   { Pandoc = configure_document },
+  { Inlines = tie_references },
+  -- Last: earlier passes still inspect native Math (e.g. display detection).
+  { Math = typst_math },
 }

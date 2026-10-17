@@ -3,6 +3,10 @@
   <desc id="u13ex_desc">Z1 i Z2: vodoravne cijevi s otvorenim krajevima, L mjeri razmak između referentnih presjeka, a D je unutarnji promjer; u Z1 je zadan dopušteni pad tlaka, u Z2 istim vodom prolaze dva fluida. Z3: dva ogranka između istih čvorova A i B, treba odabrati mjesto pasivnog prigušenja za jednake protoke; strelice prikazuju cilj, dvije strelice ogranaka zajedno odgovaraju jednoj strelici Q. Z4: kvantitativna zadana krivulja crpke i statička visina 8 metara, osi H u metrima i Q u litrama u sekundi; krivulja sustava i radna točka traženi su rezultat pa nisu nacrtane. Z5: tri alternativna kružna presjeka u omjeru unutarnjih promjera 80 prema 100 prema 125, faktor trenja treba izračunati za svaki, uz dopušteni gubitak 15 metara. Z6: balastna crpka broda s napunjenim usisom; usisni koš je otvor u oplati ispod vodne linije, a kota mjeri dubinu 1,8 metara referentnog usisnog presjeka ispod vodne linije, pa je z_s jednako minus 1,8 metara. Promjeri vodova u uzdužnim prikazima uvećani su prema duljinama. Crpka i ventil prikazani su simbolima.</desc>
   <defs>
     <marker id="u13ex_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <pattern id="u13ex_wallhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#657781" stroke-width="1.1" />
+    </pattern>
     <pattern id="u13ex_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
     </pattern>
@@ -49,20 +53,20 @@
         <line x1="80" y1="210" x2="80" y2="220" stroke="#657781" stroke-width="1.2" />
         <line x1="350" y1="210" x2="350" y2="220" stroke="#657781" stroke-width="1.2" />
         <path id="u13ex_z1L" d="M80 215 L350 215" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" data-mf1-role="dimension" />
-        <text x="215.0" y="232" font-size="11" fill="#263746" text-anchor="middle">L = 50 m</text>
+        <text x="215.0" y="232" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan> = 50 m</text>
         <line x1="405" y1="127" x2="415" y2="127" stroke="#657781" stroke-width="1.2" />
         <line x1="405" y1="175" x2="415" y2="175" stroke="#657781" stroke-width="1.2" />
         <path id="u13ex_z1D" d="M410 127 L410 175" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" data-mf1-role="dimension" />
-        <text x="423" y="155.0" font-size="11" fill="#263746" text-anchor="start">D</text>
+        <text x="423" y="155.0" font-size="11" fill="#263746" text-anchor="start" font-style="italic">D</text>
         <path id="u13ex_z1velocity" d="M177 151 L264 151" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13ex_vopen)" data-mf1-vector="velocity" />
-        <text x="220.5" y="142" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.75em">max</tspan> = ?</text>
+        <text x="220.5" y="142" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.75em">max</tspan> = ?</text>
         <path id="u13ex_z1valve" d="M203 82 L229 98 V82 L203 98 Z" fill="#ffffff" stroke="#3a4a56" stroke-width="1.3" />
         <line x1="216" y1="82" x2="216" y2="70" stroke="#3a4a56" stroke-width="1.3" />
         <line x1="208" y1="70" x2="224" y2="70" stroke="#3a4a56" stroke-width="1.3" />
         <line x1="216" y1="98" x2="216" y2="121" stroke="#3a4a56" stroke-width="1" />
-        <text x="44" y="75" font-size="12" fill="#263746" text-anchor="start">λ = 0,025</text>
-        <text x="278" y="75" font-size="12" fill="#263746" text-anchor="start">Σξ = 4,0</text>
-        <text x="31" y="284" font-size="11" fill="#263746" text-anchor="start">D = 0,10 m; p<tspan baseline-shift="sub" font-size="0.75em">1</tspan> − p<tspan baseline-shift="sub" font-size="0.75em">2</tspan> ≤ Δp<tspan baseline-shift="sub" font-size="0.75em">dop</tspan> = 25,0 kPa</text>
+        <text x="44" y="75" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">λ</tspan> = 0,025</text>
+        <text x="278" y="75" font-size="12" fill="#263746" text-anchor="start">Σ<tspan font-style="italic">ξ</tspan> = 4,0</text>
+        <text x="31" y="284" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan> = 0,10 m; <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">1</tspan> − <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">2</tspan> ≤ Δ<tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">dop</tspan> = 25,0 kPa</text>
       </g>
     </g>
   </g>
@@ -87,15 +91,15 @@
         <line x1="80" y1="210" x2="80" y2="220" stroke="#657781" stroke-width="1.2" />
         <line x1="350" y1="210" x2="350" y2="220" stroke="#657781" stroke-width="1.2" />
         <path id="u13ex_z2L" d="M80 215 L350 215" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" data-mf1-role="dimension" />
-        <text x="215.0" y="232" font-size="11" fill="#263746" text-anchor="middle">L = 4,0 m</text>
+        <text x="215.0" y="232" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan> = 4,0 m</text>
         <line x1="405" y1="127" x2="415" y2="127" stroke="#657781" stroke-width="1.2" />
         <line x1="405" y1="175" x2="415" y2="175" stroke="#657781" stroke-width="1.2" />
         <path id="u13ex_z2D" d="M410 127 L410 175" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" data-mf1-role="dimension" />
-        <text x="423" y="155.0" font-size="11" fill="#263746" text-anchor="start">D</text>
+        <text x="423" y="155.0" font-size="11" fill="#263746" text-anchor="start" font-style="italic">D</text>
         <path id="u13ex_z2velocity" d="M177 151 L264 151" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13ex_vopen)" data-mf1-vector="velocity" />
-        <text x="220.5" y="142" font-size="12" fill="#263746" text-anchor="middle">Q = 3,0 · 10⁻⁵ m³/s</text>
-        <text x="31" y="76" font-size="12" fill="#263746" text-anchor="start">A: ν = 6,0 · 10⁻⁶ m²/s, ρ = 1080 kg/m³; B: voda</text>
-        <text x="31" y="284" font-size="11" fill="#263746" text-anchor="start">D = 8,0 mm; glatka cijev, isti Q za A i B</text>
+        <text x="220.5" y="142" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan> = 3,0 · 10⁻⁵ m³/s</text>
+        <text x="31" y="76" font-size="12" fill="#263746" text-anchor="start">A: <tspan font-style="italic">ν</tspan> = 6,0 · 10⁻⁶ m²/s, <tspan font-style="italic">ρ</tspan> = 1080 kg/m³; B: voda</text>
+        <text x="31" y="284" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan> = 8,0 mm; glatka cijev, isti <tspan font-style="italic">Q</tspan> za A i B</text>
       </g>
     </g>
   </g>
@@ -112,16 +116,16 @@
         <circle id="u13ex_z3B" cx="340" cy="149" r="3" fill="#356b83" />
         <text x="364" y="126" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">B</text>
         <path id="u13ex_z3inlet" d="M32 149 L92 149" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13ex_vopen)" data-mf1-vector="velocity" />
-        <text x="62" y="124" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+        <text x="62" y="124" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Q</text>
         <path id="u13ex_z3outlet" d="M352 149 L412 149" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13ex_vopen)" data-mf1-vector="velocity" />
-        <text x="398" y="124" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+        <text x="398" y="124" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Q</text>
         <path id="u13ex_z3upperVelocity" d="M208 101 L238 101" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13ex_vopen)" data-mf1-vector="velocity" />
         <path id="u13ex_z3lowerVelocity" d="M208 197 L238 197" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13ex_vopen)" data-mf1-vector="velocity" />
-        <text x="223" y="133" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
-        <text x="223" y="175" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
-        <text x="222" y="70" font-size="12" fill="#263746" text-anchor="middle">R<tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 12 000 s²/m⁵</text>
-        <text x="222" y="229" font-size="12" fill="#263746" text-anchor="middle">R<tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 48 000 s²/m⁵</text>
-        <text x="27" y="262" font-size="12" fill="#263746" text-anchor="start">Cilj: Q<tspan baseline-shift="sub" font-size="0.75em">1</tspan> = Q<tspan baseline-shift="sub" font-size="0.75em">2</tspan>; ukupno Q = 0,020 m³/s.</text>
+        <text x="223" y="133" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Q<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">1</tspan></text>
+        <text x="223" y="175" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Q<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">2</tspan></text>
+        <text x="222" y="70" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 12 000 s²/m⁵</text>
+        <text x="222" y="229" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">R</tspan><tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 48 000 s²/m⁵</text>
+        <text x="27" y="262" font-size="12" fill="#263746" text-anchor="start">Cilj: <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.75em">1</tspan> = <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.75em">2</tspan>; ukupno <tspan font-style="italic">Q</tspan> = 0,020 m³/s.</text>
       </g>
     </g>
   </g>
@@ -131,9 +135,9 @@
         <text x="30.5" y="30" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z4</text>
         <text x="58" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Radna točka uz promjenjivo trenje</text>
         <path d="M61 239 L398 239" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u13ex_axisMarker)" data-mf1-role="axis" />
-        <text x="421" y="260" font-size="13" fill="#263746" text-anchor="middle">Q (L/s)</text>
+        <text x="421" y="260" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan> (L/s)</text>
         <path d="M61 239 L61 65" fill="none" stroke="#3a4a56" stroke-width="2.3" marker-end="url(#u13ex_axisMarker)" data-mf1-role="axis" />
-        <text x="53" y="55" font-size="13" fill="#263746" text-anchor="middle">H (m)</text>
+        <text x="53" y="55" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">H</tspan> (m)</text>
         <line x1="61" y1="236.0" x2="61" y2="242.0" stroke="#3a4a56" stroke-width="1" />
         <text x="61" y="256.0" font-size="11" fill="#263746" text-anchor="middle">0</text>
         <line x1="161" y1="236.0" x2="161" y2="242.0" stroke="#3a4a56" stroke-width="1" />
@@ -153,11 +157,11 @@
         <line x1="58" y1="75.0" x2="64" y2="75.0" stroke="#3a4a56" stroke-width="1" />
         <text x="52" y="79.0" font-size="11" fill="#263746" text-anchor="end">40</text>
         <path id="u13ex_z4pump" d="M111.000000 119.075000 L113.000000 119.325920 L115.000000 119.586680 L117.000000 119.857280 L119.000000 120.137720 L121.000000 120.428000 L123.000000 120.728120 L125.000000 121.038080 L127.000000 121.357880 L129.000000 121.687520 L131.000000 122.027000 L133.000000 122.376320 L135.000000 122.735480 L137.000000 123.104480 L139.000000 123.483320 L141.000000 123.872000 L143.000000 124.270520 L145.000000 124.678880 L147.000000 125.097080 L149.000000 125.525120 L151.000000 125.963000 L153.000000 126.410720 L155.000000 126.868280 L157.000000 127.335680 L159.000000 127.812920 L161.000000 128.300000 L163.000000 128.796920 L165.000000 129.303680 L167.000000 129.820280 L169.000000 130.346720 L171.000000 130.883000 L173.000000 131.429120 L175.000000 131.985080 L177.000000 132.550880 L179.000000 133.126520 L181.000000 133.712000 L183.000000 134.307320 L185.000000 134.912480 L187.000000 135.527480 L189.000000 136.152320 L191.000000 136.787000 L193.000000 137.431520 L195.000000 138.085880 L197.000000 138.750080 L199.000000 139.424120 L201.000000 140.108000 L203.000000 140.801720 L205.000000 141.505280 L207.000000 142.218680 L209.000000 142.941920 L211.000000 143.675000 L213.000000 144.417920 L215.000000 145.170680 L217.000000 145.933280 L219.000000 146.705720 L221.000000 147.488000 L223.000000 148.280120 L225.000000 149.082080 L227.000000 149.893880 L229.000000 150.715520 L231.000000 151.547000 L233.000000 152.388320 L235.000000 153.239480 L237.000000 154.100480 L239.000000 154.971320 L241.000000 155.852000 L243.000000 156.742520 L245.000000 157.642880 L247.000000 158.553080 L249.000000 159.473120 L251.000000 160.403000 L253.000000 161.342720 L255.000000 162.292280 L257.000000 163.251680 L259.000000 164.220920 L261.000000 165.200000 L263.000000 166.188920 L265.000000 167.187680 L267.000000 168.196280 L269.000000 169.214720 L271.000000 170.243000 L273.000000 171.281120 L275.000000 172.329080 L277.000000 173.386880 L279.000000 174.454520 L281.000000 175.532000 L283.000000 176.619320 L285.000000 177.716480 L287.000000 178.823480 L289.000000 179.940320 L291.000000 181.067000 L293.000000 182.203520 L295.000000 183.349880 L297.000000 184.506080 L299.000000 185.672120 L301.000000 186.848000 L303.000000 188.033720 L305.000000 189.229280 L307.000000 190.434680 L309.000000 191.649920 L311.000000 192.875000 L313.000000 194.109920 L315.000000 195.354680 L317.000000 196.609280 L319.000000 197.873720 L321.000000 199.148000 L323.000000 200.432120 L325.000000 201.726080 L327.000000 203.029880 L329.000000 204.343520 L331.000000 205.667000 L333.000000 207.000320 L335.000000 208.343480 L337.000000 209.696480 L339.000000 211.059320 L341.000000 212.432000 L343.000000 213.814520 L345.000000 215.206880 L347.000000 216.609080 L349.000000 218.021120 L351.000000 219.443000 L353.000000 220.874720 L355.000000 222.316280 L357.000000 223.767680 L359.000000 225.228920 L361.000000 226.700000" fill="none" stroke="#356b83" stroke-width="2" />
-        <text x="143" y="107" font-size="13" fill="#263746" text-anchor="start">H<tspan baseline-shift="sub" font-size="0.75em">p</tspan></text>
-        <text id="u13ex_z4unknown" x="72" y="172" font-size="11" fill="#263746" text-anchor="start">H<tspan baseline-shift="sub" font-size="0.75em">s</tspan>(Q) i radna točka = ?</text>
+        <text x="143" y="107" font-size="13" fill="#263746" text-anchor="start" font-style="italic">H<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">p</tspan></text>
+        <text id="u13ex_z4unknown" x="72" y="172" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.75em">s</tspan>(<tspan font-style="italic">Q</tspan>) i radna točka = ?</text>
         <line id="u13ex_z4staticHead" x1="62" y1="206.2" x2="386" y2="206.2" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
-        <text x="352" y="196.2" font-size="11" fill="#263746" text-anchor="middle">Δz = 8 m</text>
-        <text x="26" y="287" font-size="11" fill="#263746" text-anchor="start">D = 0,100 m; L = 150 m; k<tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 0,100 mm; Σξ = 6,0.</text>
+        <text x="352" y="196.2" font-size="11" fill="#263746" text-anchor="middle">Δ<tspan font-style="italic">z</tspan> = 8 m</text>
+        <text x="26" y="287" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan> = 0,100 m; <tspan font-style="italic">L</tspan> = 150 m; <tspan font-style="italic">k</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 0,100 mm; Σ<tspan font-style="italic">ξ</tspan> = 6,0.</text>
       </g>
     </g>
   </g>
@@ -191,8 +195,8 @@
         <path id="u13ex_z5D2" d="M325.75 196 L398.25 196" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" data-mf1-role="dimension" />
         <text x="362.0" y="213" font-size="11" fill="#263746" text-anchor="middle">125 mm</text>
         <text x="223" y="69" font-size="12" fill="#263746" text-anchor="middle">Tri alternativna unutarnja presjeka</text>
-        <text x="30" y="243" font-size="12" fill="#263746" text-anchor="start">Q = 0,018 m³/s; L = 150 m; Σξ = 6,0; h<tspan baseline-shift="sub" font-size="0.75em">g</tspan> ≤ 15 m.</text>
-        <text x="30" y="264" font-size="12" fill="#263746" text-anchor="start">k<tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 0,15 mm (nova), 0,50 mm (stara); λ(Re, k<tspan baseline-shift="sub" font-size="0.7em">s</tspan>/D) računaj.</text>
+        <text x="30" y="243" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">Q</tspan> = 0,018 m³/s; <tspan font-style="italic">L</tspan> = 150 m; Σ<tspan font-style="italic">ξ</tspan> = 6,0; <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.75em">g</tspan> ≤ 15 m.</text>
+        <text x="30" y="264" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">k</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan> = 0,15 mm (nova), 0,50 mm (stara); <tspan font-style="italic">λ</tspan>(<tspan font-style="italic">Re</tspan>, <tspan font-style="italic">k</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan>/<tspan font-style="italic">D</tspan>) računaj.</text>
       </g>
     </g>
   </g>
@@ -203,7 +207,7 @@
         <text x="58" y="30" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Balastna crpka: napunjen usis</text>
         <rect id="u13ex_z6seaFluid" x="30" y="110" width="118" height="129" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <path id="u13ex_z6hullOuter" d="M148 62 V168.4 M148 188.4 V239 H412" fill="none" stroke="#3a4a56" stroke-width="8" stroke-linecap="butt" />
-        <path d="M148 62 V168.4 M148 188.4 V239 H412" fill="none" stroke="url(#u13ex_hatch)" stroke-width="6" stroke-linecap="butt" />
+        <path d="M148 62 V168.4 M148 188.4 V239 H412" fill="none" stroke="url(#u13ex_wallhatch)" stroke-width="6.6" stroke-linecap="butt" />
         <path id="u13ex_z6hullWall0" d="M148 62 V168.4" fill="none" stroke="#3a4a56" stroke-width="1.3" />
         <path id="u13ex_z6hullWall1" d="M148 188.4 V239 H412" fill="none" stroke="#3a4a56" stroke-width="1.3" />
         <path id="u13ex_z6pipeouter" d="M148 178.4 H405" fill="none" stroke="#3a4a56" stroke-width="25" stroke-linecap="butt" stroke-linejoin="round" />
@@ -212,22 +216,22 @@
         <line id="u13ex_z6waterline" x1="30" y1="110" x2="148" y2="110" stroke="#356b83" stroke-width="1.5" />
         <path id="u13ex_z6inletVelocity" d="M100 178.4 L140 178.4" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13ex_vopen)" data-mf1-vector="velocity" />
         <path id="u13ex_z6velocity" d="M203 178.4 L264 178.4" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13ex_vopen)" data-mf1-vector="velocity" />
-        <text x="233" y="160" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+        <text x="233" y="160" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Q</text>
         <circle id="u13ex_z6pumpSymbol" cx="350" cy="178.4" r="21" fill="none" stroke="#356b83" stroke-width="2" />
-        <text x="350" y="146" font-size="11" fill="#263746" text-anchor="middle">crpka (simbol)</text>
+        <text x="350" y="146" font-size="11" fill="#263746" text-anchor="middle">crpka</text>
         <circle id="u13ex_z6S" cx="303" cy="178.4" r="3" fill="#356b83" />
         <text x="303" y="212" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">S</text>
         <line x1="148" y1="110" x2="200" y2="110" stroke="#657781" stroke-width="1" stroke-dasharray="4 3" />
         <line x1="179" y1="110" x2="189" y2="110" stroke="#657781" stroke-width="1.2" />
         <path id="u13ex_z6zs" d="M184 178.4 L184 110" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13ex_dim)" marker-end="url(#u13ex_dim)" data-mf1-role="dimension" />
-        <text x="193" y="140" font-size="12" fill="#263746" text-anchor="start">z<tspan baseline-shift="sub" font-size="0.75em">s</tspan> = −1,8 m</text>
+        <text x="193" y="140" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.75em">s</tspan> = −1,8 m</text>
         <text x="34" y="100" font-size="11" fill="#263746" text-anchor="start">vodna linija</text>
-        <text x="36" y="226" font-size="11" fill="#263746" text-anchor="start">more, ρ = 1025 kg/m³</text>
+        <text x="36" y="226" font-size="11" fill="#263746" text-anchor="start">more, <tspan font-style="italic">ρ</tspan> = 1025 kg/m³</text>
         <text x="140" y="162" font-size="11" fill="#263746" text-anchor="end">usisni koš</text>
         <text x="156" y="74" font-size="11" fill="#263746" text-anchor="start">oplata broda</text>
-        <text x="236" y="58" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.75em">atm</tspan> = 101,3 kPa; p<tspan baseline-shift="sub" font-size="0.75em">v</tspan> = 4,2 kPa</text>
-        <text x="236" y="74" font-size="11" fill="#263746" text-anchor="start">(30 °C); h<tspan baseline-shift="sub" font-size="0.75em">g,s</tspan> = 1,4 m;</text>
-        <text x="236" y="90" font-size="11" fill="#263746" text-anchor="start">NPSH<tspan baseline-shift="sub" font-size="0.75em">r</tspan> pri nazivnoj brzini</text>
+        <text x="236" y="58" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">atm</tspan> = 101,3 kPa; <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">v</tspan> = 4,2 kPa</text>
+        <text x="236" y="74" font-size="11" fill="#263746" text-anchor="start">(30 °C); <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.75em">g,s</tspan> = 1,4 m;</text>
+        <text x="236" y="90" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">NPSH</tspan><tspan baseline-shift="sub" font-size="0.75em">r</tspan> pri nazivnoj brzini</text>
       </g>
     </g>
   </g>

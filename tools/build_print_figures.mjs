@@ -49,7 +49,7 @@ try {
             .map(([x,y])=>new DOMPoint(x,y).matrixTransform(m));
           const p=new DOMPoint(parseFloat(e.getAttribute('x')||0),parseFloat(e.getAttribute('y')||0)).matrixTransform(m);
           return {e, index:i, textIndex:e.tagName==='text'?++textIndex:null, tag:e.tagName,
-            text:e.textContent.replace(/\s+/g,' ').trim(), font:parseFloat(c.fontSize), weight:c.fontWeight,
+            text:e.textContent.replace(/[ \t\r\n]+/g,' ').trim(), font:parseFloat(c.fontSize), weight:c.fontWeight,
             fill:c.fill, stroke:c.stroke, strokeWidth:parseFloat(c.strokeWidth), anchor:c.textAnchor,
             rx:Number(e.getAttribute('rx')||0), matrix:[m.a,m.b,m.c,m.d,m.e,m.f], origin:[p.x,p.y],
             box:[Math.min(...points.map(p=>p.x)),Math.min(...points.map(p=>p.y)),Math.max(...points.map(p=>p.x)),Math.max(...points.map(p=>p.y))]};
@@ -97,17 +97,26 @@ try {
         }
       }
       const notes=new Set([...(layout.before||[]),...(layout.after||[])]);
-      const defs=[...sourceSvg.querySelectorAll('defs')].map(e=>e.innerHTML).join('\n');
+      let defs=[...sourceSvg.querySelectorAll('defs')].map(e=>e.innerHTML).join('\n');
+      for(const[key,paper]of Object.entries(tokens['print-palette']||{}))
+        defs=defs.replaceAll(`"${tokens.palette[key]}"`,`"${paper}"`);
       const W=tokens['text-width-pt'], gap=tokens['figure-gap'], pad=tokens['figure-padding'];
       const font=tokens['figure-label-size'], small=tokens['figure-small-label-size'], lh=tokens['figure-line-height'];
       const canvas=document.createElementNS('http://www.w3.org/1999/xhtml','canvas'),ctx=canvas.getContext('2d');
       function measure(s, size, bold=false){ctx.font=`${bold?'600':'400'} ${size}px Arial`; return ctx.measureText(s).width;}
+      // Only ordinary spaces break a label; a no-break space keeps a number
+      // with its unit (e.g. "0,18 m²" written with U+00A0).
       function wrap(s,max,size,bold=false){
-        const words=s.split(/\s+/), lines=[];let line='';
+        const words=s.split(/[ \t\r\n]+/), lines=[];let line='';
         for(const word of words){if(line && measure(line+' '+word,size,bold)>max){lines.push(line);line=word;}else line+=(line?' ':'')+word;}
         if(line)lines.push(line);return lines;
       }
       const rgbWhite = c => /^(white|#fff(?:fff)?|rgb\(255, 255, 255\))$/.test(c);
+      // Print-only material tones for black-and-white copies. The canonical
+      // SVG keeps the screen palette; e.g. a second fluid is darker than water.
+      const hexRgb=h=>`rgb(${parseInt(h.slice(1,3),16)}, ${parseInt(h.slice(3,5),16)}, ${parseInt(h.slice(5,7),16)})`;
+      const printTones=Object.entries(tokens['print-palette']||{}).map(([key,hex])=>[tokens.palette[key],hex]);
+      const printTone=v=>{for(const[screen,paper]of printTones){if(v===screen||v===hexRgb(screen))return paper;}return v;};
       const probe=document.createElementNS(ns,'g');probe.setAttribute('font-family',tokens['figure-font-family']);sourceSvg.append(probe);
       const labelCache=new Map();
       function label(e,x,y,width,align='middle', size=font){
@@ -118,20 +127,24 @@ try {
           // Carry each mathematical run through line wrapping. In particular,
           // p_A, g_eff, powers and vector weight/italic must not become plain text.
           const chars=[];
-          const walk=(node,attrs='')=>{
+          // Subscripts and superscripts use the index size (about 70 % of the
+          // label), so that F_L reads as F with index L, not as "FL". Other
+          // runs (italic symbols, bold vectors) keep the size of their label.
+          const walk=(node,attrs='',script=null)=>{
             if(node.nodeType===3){
-              for(const ch of node.textContent){const c=/\s/.test(ch)?' ':ch;if(c===' '&&(!chars.length||chars.at(-1).c===' '))continue;chars.push({c,attrs});}
+              for(const ch of node.textContent){const c=/[ \t\r\n]/.test(ch)?' ':ch;if(c===' '&&(!chars.length||chars.at(-1).c===' '))continue;chars.push({c,attrs});}
             }else{
-              let next=attrs;
+              let next=attrs,inner=script;
               if(node.tagName==='tspan'){
                 const c=getComputedStyle(node),shift=node.getAttribute('baseline-shift');
-                next=` font-size="${small}" font-weight="${c.fontWeight}" font-style="${c.fontStyle}" fill="${esc(rgbWhite(c.fill)?'#3a4a56':c.fill)}"`;
-                if(shift==='sub'||shift==='super')next+=` baseline-shift="${shift==='sub'?-2:2}"`;
+                if(shift==='sub'||shift==='super')inner=shift;
+                next=` font-size="${inner?tokens['figure-index-size']:size}" font-weight="${c.fontWeight}" font-style="${c.fontStyle}" fill="${esc(rgbWhite(c.fill)?'#3a4a56':c.fill)}"`;
+                if(inner)next+=` baseline-shift="${inner==='sub'?-2:2}"`;
               }
-              for(const child of node.childNodes)walk(child,next);
+              for(const child of node.childNodes)walk(child,next,inner);
             }
           };
-          walk(e.e);if(chars.at(-1)?.c===' ')chars.pop();
+          walk(e.e);while(chars[0]?.c===' ')chars.shift();if(chars.at(-1)?.c===' ')chars.pop();
           let offset=0;
           let base=lines.map((line,i)=>{
             const range=chars.slice(offset,offset+line.length);offset+=line.length+1;
@@ -227,6 +240,7 @@ try {
             const clone=g.e.cloneNode(true);clone.removeAttribute('transform');clone.removeAttribute('id');
             for(const prop of ['fill','stroke','stroke-width','stroke-linecap','stroke-linejoin','stroke-dasharray','fill-opacity','stroke-opacity','opacity','marker-start','marker-mid','marker-end']){
               let value=getComputedStyle(g.e).getPropertyValue(prop).replace(/url\(["']?[^)#]*#([^)'" ]+)["']?\)/g,'url(#$1)');
+              if(prop==='fill'||prop==='stroke')value=printTone(value);
               if(value)clone.setAttribute(prop,value);
             }
             // Thin ink gets a physical print weight; structural wide strokes
@@ -268,7 +282,7 @@ try {
             if(l.box[2]>width-pad)x-=l.box[2]-(width-pad);
             l=label(t,x,yy,available,anchor,size);
             const overlaps=(a,b)=>a[0]<b[2]+1&&b[0]<a[2]+1&&a[1]<b[3]+1&&b[1]<a[3]+1;
-            const good=l=>l.box[0]>=0&&l.box[2]<=width&&!placed.some(p=>overlaps(l.box,p.box));
+            const good=l=>l.box[0]>=0&&l.box[2]<=width&&l.box[1]>=0&&!placed.some(p=>overlaps(l.box,p.box));
             if(!good(l)&&!tableInk.has(t.index)){
               const candidates=[];
               for(const dy of [0,-3,3,-6,6,-9,9,-12,12])for(const dx of [0,-3,3,-6,6,-9,9,-12,12])

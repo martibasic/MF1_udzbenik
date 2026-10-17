@@ -215,7 +215,7 @@ def run():
         near(length(p1,'u09egl_'+id)/5,(.68/1.2/area)**2/(2*9.81),"P1: skala "+id)
 
     intro=svg('u09_fig_uvod_pregled.svg','u09intro_')
-    for x in ('145','362'):
+    for x in ('145','290'):
         stack=[e for e in intro.findall('.//s:rect',NS) if e.get('x')==x]
         near(sum(float(e.get('height')) for e in stack),8*36,"Uvod: jednaka ukupna energija stupca "+x)
     print(f'U08 SVG geometry PASS: {len(CHECKS)} provjera; potreban i vizualni pregled.')

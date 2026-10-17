@@ -37,7 +37,8 @@ class BookModelTests(unittest.TestCase):
             self.assertIn('#link(<'+anchor+'>)['+doc['id']+']',rendered['typst'])
             self.assertIn(Path(doc['path']).name,rendered['html5'])
         self.assertIn('#link(<sec-cfd-vv-paketi>)[section]',rendered['typst'])
-        self.assertIn('#link(<hidrostatička-raspodjela-tlaka>)[pog. 3',rendered['typst'])
+        u03_anchor=index['documents']['u03']['sections'][0]['id']
+        self.assertIn('#link(<'+u03_anchor+'>)[pog.~3 ',rendered['typst'])
         self.assertIn('#link("https://example.org/external.qmd")[external]',rendered['typst'])
         self.assertEqual(rendered['typst'].count('.qmd'),1)
 
@@ -97,7 +98,9 @@ Hint B.
         self.assertNotIn('Traži se:',typst)
         self.assertIn('First request.',typst)
         self.assertIn('Final request.',typst)
-        self.assertIn('#mf1-task-level',typst)
+        # PDF shows the Z level beside the title, like P1-P6 (review U5).
+        self.assertRegex(typst,r'#heading\([^)]*\)\[Z1\.\s*Task~#h\(0\.45em\)#mf1-level\(\[T2\]\)\]')
+        self.assertNotIn('Razina:',typst)
         self.assertIn('#mf1-exercise-body[',typst)
         self.assertEqual(typst.count('#set enum('),1)
         self.assertRegex(typst,r'start:\s*7')

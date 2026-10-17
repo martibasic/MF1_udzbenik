@@ -35,7 +35,8 @@ local function extract_legacy_title(div)
       and content[3].t == "RawBlock" and content[3].text:match("</p%s*>") then
     local label = content[2]
     content:remove(3);content:remove(2);content:remove(1)
-    if div.classes:includes("mf1-zavrsni-okvir") then label=pandoc.Para({pandoc.Str("Sažetak")}) end
+    -- The chapter summary takes its heading from the "## Sažetak" section;
+    -- a box without its own label is shown without a title.
     content:insert(1,pandoc.Div({label},pandoc.Attr("",{"mf1-component-title","mf1-box-label"})))
   elseif div.attributes.title then
     local title=pandoc.Inlines({pandoc.Str(div.attributes.title)})
@@ -116,6 +117,12 @@ local function adapt_div(div)
           current.attributes["data-level"]=object.level or ""
           current.attributes["data-number"]=object.number
           numbered_title(block.content,object.label)
+          if is_html and object.level then
+            -- Same level chip beside the title as in solved examples; the
+            -- separate "Razina" line remains the PDF presentation (registry).
+            block.content:insert(pandoc.Space())
+            block.content:insert(pandoc.Span({pandoc.Str(object.level)},pandoc.Attr("",{"mf1-level"})))
+          end
         end
         result:insert(current)
       end
@@ -143,7 +150,54 @@ local function reference(target, content)
   return pandoc.Link(content,href,"",pandoc.Attr("",{"mf1-reference"}))
 end
 
+-- "pog. 5" never breaks between the abbreviation and its number.
+local function chapter_link(doc)
+  return pandoc.Link({pandoc.Str("pog.\u{00A0}"..doc.number.." "..doc.title)},"/"..doc.path,"",pandoc.Attr("",{"mf1-ch-ref"}))
+end
+
+-- Inline and raw-HTML components follow the same registry visibility policy
+-- as block components; no adapter keeps its own list of hidden classes.
+local function governed(name)
+  return name and registry[name] and registry[name].visibility ~= nil
+end
+local function raw_component(raw)
+  if tostring(raw.format)~="html" then return nil end
+  local tag,attrs=raw.text:match("^%s*<(%w+)([^>]*)>")
+  local class=attrs and (attrs:match('class%s*=%s*"([^"]*)"') or attrs:match("class%s*=%s*'([^']*)'"))
+  if not class then return nil end
+  local classes=pandoc.List()
+  for item in class:gmatch("%S+") do classes:insert(item) end
+  local name=kind({attributes={},classes=classes})
+  if governed(name) then return name,tag end
+end
+local function mark_raw_html(raw,name)
+  local extra=pandoc.List()
+  components.html_classes(name,extra)
+  if #extra==0 then return raw end
+  raw.text=raw.text:gsub("(class%s*=%s*[\"'])","%1"..table.concat(extra," ").." ",1)
+  return raw
+end
+local function adapt_raw_inline(raw)
+  local name=raw_component(raw)
+  if not name then return nil end
+  if is_html then return mark_raw_html(raw,name) end
+  if not components.visible(name,'pdf') then return {} end
+end
+local function inline_visibility(span)
+  local name=kind(span)
+  if not governed(name) then return nil end
+  if is_html then
+    components.html_classes(name,span.classes)
+    if not components.visible(name,'web') and not components.visible(name,'print') then span.attributes.hidden="" end
+    return span
+  end
+  if not components.visible(name,'pdf') then return {} end
+  return span
+end
+
 local function adapt_span(span)
+  local governed_span=inline_visibility(span)
+  if governed_span then return governed_span end
   if span.classes:includes("mf1-book-meta") then
     local key=span.attributes.key
     local value=key=='full-title' and (model.book.title..' — '..model.book.subtitle) or model.book[key]
@@ -153,7 +207,7 @@ local function adapt_span(span)
   if span.classes:includes("mf1-chapter-ref") then
     local doc=documents[span.attributes.target]
     assert(doc,"Unknown chapter reference: "..(span.attributes.target or ""))
-    return pandoc.Link({pandoc.Str("pog. "..doc.number.." "..doc.title)},"/"..doc.path,"",pandoc.Attr("",{"mf1-ch-ref"}))
+    return chapter_link(doc)
   end
   if span.classes:includes("mf1-ch-ref") then
     local title
@@ -161,7 +215,7 @@ local function adapt_span(span)
       if item.t=="Span" and item.classes:includes("mf1-ch-title") then title=text(item) end
     end
     local doc=titles[title]
-    if doc then return pandoc.Link({pandoc.Str("pog. "..doc.number.." "..doc.title)},"/"..doc.path,"",pandoc.Attr("",{"mf1-ch-ref"})) end
+    if doc then return chapter_link(doc) end
   end
   if span.classes:includes("mf1-reference") then return reference(span.attributes.target or "",span.content) end
   if span.classes:includes("mf1-term") then
@@ -206,9 +260,37 @@ local function pdf_document_link(link)
   end
 end
 
+local function blank_inlines(inlines)
+  for _,item in ipairs(inlines) do
+    if item.t~="Space" and item.t~="SoftBreak" and item.t~="LineBreak" then return false end
+  end
+  return true
+end
+
 local function adapt_blocks(blocks)
   local result=pandoc.List()
+  local skip_tag=nil
   for i,block in ipairs(blocks) do
+    -- A raw HTML element hidden in this output (e.g. <p class="...">)
+    -- is removed together with the Markdown blocks between its tags.
+    if skip_tag then
+      if block.t=="RawBlock" and block.text:match("^%s*</"..skip_tag.."%s*>") then skip_tag=nil end
+      goto continue
+    end
+    if block.t=="RawBlock" then
+      local name,tag=raw_component(block)
+      if name and is_html then
+        block=mark_raw_html(block,name)
+      elseif name and not components.visible(name,'pdf') then
+        if not block.text:match("</"..tag.."%s*>") then skip_tag=tag end
+        goto continue
+      end
+    end
+    -- A paragraph that only held hidden inline components disappears.
+    if not is_html and (block.t=="Para" or block.t=="Plain") and #block.content>0 and blank_inlines(block.content) then
+      goto continue
+    end
+    do
     local following=blocks[i+1]
     local next_kind=following and following.t=="Div" and kind(following)
     local hidden=next_kind and (is_html
@@ -222,6 +304,8 @@ local function adapt_blocks(blocks)
       if is_html and block.t=='Header' and next_kind then components.html_classes(next_kind,block.classes) end
       result:insert(block)
     end
+    end
+    ::continue::
   end
   return result
 end
@@ -312,7 +396,7 @@ end
 return {
   {Meta=function(meta) collection=meta['mf1-print-collection'] and text(meta['mf1-print-collection'])=='true' or false end},
   {Div=adapt_div},
-  {Blocks=adapt_blocks,Span=adapt_span,Cite=adapt_cite,Table=adapt_table,Figure=adapt_figure,FloatRefTarget=adapt_float,Callout=adapt_callout},
+  {Blocks=adapt_blocks,Span=adapt_span,RawInline=adapt_raw_inline,Cite=adapt_cite,Table=adapt_table,Figure=adapt_figure,FloatRefTarget=adapt_float,Callout=adapt_callout},
   {Link=pdf_document_link},
   {Pandoc=collection_headers},
 }

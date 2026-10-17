@@ -1,6 +1,11 @@
 /* Slike */
 figure { margin: 1.6rem 0; }
 figure img { border-radius: var(--mf1-radius); max-width: 100%; height: auto; }
+/* A portrait sketch must not fill the whole screen; the image keeps its
+   aspect ratio inside the clamped box. Print uses intrinsic point sizes. */
+@media screen {
+  figure img { max-height: 70vh; object-fit: contain; }
+}
 figcaption {
   font-family: var(--mf1-sans);
   font-size: 0.85rem;
@@ -24,6 +29,22 @@ figcaption {
   padding: 0.2rem 0;
   -webkit-overflow-scrolling: touch;
 }
+/* Scroll cue without JavaScript: the edge shadows are fixed to the region,
+   the white covers scroll with the formula, so a shadow appears only on a
+   side where more of the formula is hidden. */
+.math.display,
+.math.inline.mf1-wide-math {
+  background:
+    linear-gradient(to right, var(--mf1-bg) 40%, transparent) left center / 1.5rem 100% no-repeat local,
+    linear-gradient(to left, var(--mf1-bg) 40%, transparent) right center / 1.5rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, color-mix(in srgb, var(--mf1-ink) 24%, transparent), transparent) left center / 0.6rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, color-mix(in srgb, var(--mf1-ink) 24%, transparent), transparent) right center / 0.6rem 100% no-repeat scroll;
+}
+/* Narrow screens: web/math.js moves the number of an overflowing tagged
+   equation below it, right-aligned, so the number stays visible. */
+.mf1-math-compact mjx-mtable { display: block; }
+.mf1-math-compact mjx-labels { position: static; display: block; text-align: right; }
+.mf1-math-compact mjx-labels > mjx-itable { position: static; }
 .math.inline {
   display: inline;
   overflow: visible;
@@ -393,6 +414,16 @@ h3.mf1-step {
   background: color-mix(in srgb, var(--mf1-c-we) 8%, transparent);
   color: color-mix(in srgb, var(--mf1-c-we) 75%, black);
 }
+/* The first link is the recommended route; any further one (Colab) is a
+   quieter fallback text link with the same wording in every chapter. */
+.mf1-interaktivno-veza ~ .mf1-interaktivno-veza {
+  padding: 0.1rem 0;
+  border: 0;
+  border-bottom: var(--mf1-rule-width) solid color-mix(in srgb, var(--mf1-c-we) 35%, transparent);
+  font-weight: 400;
+  font-size: 0.82rem;
+}
+.mf1-interaktivno-veza ~ .mf1-interaktivno-veza:hover { background: transparent; border-bottom-color: currentColor; }
 .mf1-interaktivno-qr {
   width: 76px;
   height: 76px;
@@ -450,14 +481,6 @@ h1.mf1-home-title {
   color: var(--mf1-ink);
   margin: 1.2rem 0 0.8rem;
 }
-.mf1-eyebrow {
-  font-family: var(--mf1-sans);
-  color: var(--mf1-muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.025em;
-  margin: 0.4rem 0 1.1rem;
-}
-
 .mf1-section-title {
   font-family: var(--mf1-sans);
   font-size: 0.78rem;
@@ -541,12 +564,11 @@ a.mf1-card .mf1-card-hint,
    7. Pomoćni elementi
    ================================================================= */
 
+/* A chapter reference is ordinary inline text: it may wrap between words and
+   following punctuation stays attached ("pog. 5" itself has a no-break space). */
 .mf1-ch-ref {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.3rem;
-  padding: 0 0.3rem;
+  display: inline;
+  padding: 0;
   background: transparent;
   border: 0;
   border-bottom: 1px dotted var(--mf1-line);
@@ -672,7 +694,16 @@ a.mf1-card .mf1-card-hint,
 .mf1-chapter-tools { margin: 0 0 1.7rem; padding: 0 0 1rem; border-bottom: 1px solid var(--mf1-line); }
 .mf1-quick-links a, .mf1-chapter-tools a { padding: 0.15rem 0; }
 .mf1-figure-link { display: block; border: 0; cursor: zoom-in; }
-.mf1-figure-expand { display: inline-block; font-size: 0.74rem; margin-left: 0.75rem; white-space: nowrap; }
+.mf1-figure-expand { display: inline-block; font-family: var(--mf1-sans); font-size: 0.74rem; margin: 0.3rem 0 0; white-space: nowrap; }
+/* Answer key: the return link is a small arrow beside the task title. */
+.mf1-back-link {
+  margin-left: 0.4rem;
+  font-size: 0.85em;
+  font-weight: 400;
+  border-bottom: 0;
+  text-decoration: none;
+}
+main a.mf1-back-link { border-bottom: 0; }
 
 /* Semantic field and object boundaries are independent of heading numbering. */
 .mf1-component-title > p { margin: 0; }

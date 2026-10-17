@@ -117,6 +117,9 @@ def typography_issues(document: pymupdf.Document) -> list[str]:
     return issues
 
 
+INLINE_REF_RE = re.compile(r"(?:jednadžb\w*|izraz\w*|\bi|\bte|\bili)[\s\u00a0~]*$")
+
+
 def equation_issues(document: pymupdf.Document) -> list[str]:
     issues = []
     for page_number, page in enumerate(document, 1):
@@ -127,6 +130,10 @@ def equation_issues(document: pymupdf.Document) -> list[str]:
         right_chars = [(i, c, pymupdf.Rect(c["bbox"])) for i, c in enumerate(chars)
                        if c["bbox"][2] > 466 and c["c"].strip()]
         for match in re.finditer(r"\((?:\d+|[A-F])\.\d+\)", string):
+            # An inline reference such as „jednadžbe (14.2)“ may end a justified
+            # line; only a display equation number stands without such a word.
+            if INLINE_REF_RE.search(string[max(0, match.start() - 40):match.start()]):
+                continue
             selected = chars[match.start():match.end()]
             rect = pymupdf.Rect(selected[0]["bbox"])
             for char in selected[1:]:
@@ -269,11 +276,57 @@ def orphan_and_overflow_issues(document: pymupdf.Document) -> list[str]:
     return issues
 
 
+LABEL_MIN = FIGURE_TOKENS["figure-small-label-size"] - .03
+INDEX_MIN = FIGURE_TOKENS["figure-index-min-size"] - .03
+
+
+def _index_spans(block: dict) -> set[int]:
+    """Ids of spans that are sub/superscripts of an adjacent figure label.
+
+    Indices are set at about 70 % of the label size (figure-index-size), so
+    their own minimum applies only to a short run without spaces that
+    directly follows or precedes a full-size label span of the same block.
+    A small isolated word is still a label below the minimum.
+    """
+    spans = [span for line in block.get("lines", []) for span in line["spans"]]
+    found = set()
+
+    def adjacent(span, base):
+        x0, y0, x1, y1 = span["bbox"]
+        bx0, by0, bx1, by1 = base["bbox"]
+        touching = -1.5 <= x0 - bx1 <= 2.5 or -1.5 <= bx0 - x1 <= 2.5
+        # Labels rotated by 90° (dimensions along vertical walls) carry
+        # their index above or below the base letter instead.
+        stacked = -1.5 <= y0 - by1 <= 2.5 or -1.5 <= by0 - y1 <= 2.5
+        return (touching and y0 < by1 and by0 < y1) or (stacked and x0 < bx1 and bx0 < x1)
+
+    candidates = [span for span in spans
+                  if INDEX_MIN <= span["size"] < LABEL_MIN and span["text"].strip()
+                  and len(span["text"].strip()) <= 12 and " " not in span["text"].strip()]
+    # A subscript and a superscript on the same symbol (p_{M,dno}^A) form a
+    # chain: the second index touches the first one, not the base letter.
+    changed = True
+    while changed:
+        changed = False
+        for span in candidates:
+            if id(span) in found:
+                continue
+            for base in spans:
+                if base is span or not base["text"].strip():
+                    continue
+                if (base["size"] >= LABEL_MIN or id(base) in found) and adjacent(span, base):
+                    found.add(id(span))
+                    changed = True
+                    break
+    return found
+
+
 def figure_font_issues(document: pymupdf.Document) -> list[str]:
     """SVG labels remain PDF text: check their actual physical size after layout."""
     issues = []
     for number, page in enumerate(document, 1):
         for block in page.get_text("dict")["blocks"]:
+            indices = _index_spans(block)
             for line in block.get("lines", []):
                 for span in line["spans"]:
                     # Body/math/monospace fonts are independent of diagram labels.
@@ -281,8 +334,10 @@ def figure_font_issues(document: pymupdf.Document) -> list[str]:
                         continue
                     if not span["text"].strip():
                         continue
-                    if span["size"] < FIGURE_TOKENS["figure-small-label-size"] - .03:
+                    if span["size"] < LABEL_MIN and id(span) not in indices:
                         issues.append(f"str. {number}: oznaka skice {span['size']:.2f} pt: {span['text']}")
+                    elif span["size"] < INDEX_MIN:
+                        issues.append(f"str. {number}: indeks oznake skice {span['size']:.2f} pt: {span['text']}")
     return issues
 
 
@@ -324,10 +379,11 @@ def figure_label_issues(
     issues = []
     seen = set()
     fragments = []
-    minimum = FIGURE_TOKENS["figure-small-label-size"] - .03
+    minimum = LABEL_MIN
     maximum = FIGURE_TOKENS["figure-label-size"] + .03
     for number, page in enumerate(document, 1):
         for block in page.get_text("dict")["blocks"]:
+            indices = _index_spans(block)
             for line in block.get("lines", []):
                 for span in line["spans"]:
                     caption = re.match(r"Slika\s+(\d+\.\d+):", span["text"])
@@ -351,7 +407,7 @@ def figure_label_issues(
                         if missing:
                             issues.append(f"str. {number}, slika {figure_number}: "
                                           f"nedostaju oznake skice {missing}")
-                    elif (minimum <= span["size"] <= maximum
+                    elif ((minimum <= span["size"] <= maximum or id(span) in indices)
                           and 55 < span["bbox"][1] and span["bbox"][3] < 790
                           and span["color"] != 0x536577):
                         # Multi-line native captions use this colour; their
@@ -388,7 +444,8 @@ def main() -> int:
         return 1
     print(f"PDF layout PASS: {checked} raster-checked QR codes with links, equation clearance, "
           "23 bibliography entries in E.7, captions and QR descriptions kept with content; "
-          "all print-SVG labels present per figure and >= 9 pt; "
+          f"all print-SVG labels present per figure, labels >= {FIGURE_TOKENS['figure-small-label-size']} pt "
+          f"and indices >= {FIGURE_TOKENS['figure-index-min-size']} pt; "
           "heading baselines, column bounds, equation numbers and P/Z labels match.")
     return 0
 

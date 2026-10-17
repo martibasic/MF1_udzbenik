@@ -23,12 +23,13 @@ za formule te postojeći fontovi skica. A4 i margine od 26 mm vodoravno i
 | Osnovni tekst i formule | 11 pt |
 | Sadržaj: poglavlje / podpoglavlje | 11,5 / 10,5 pt |
 | Opis slike / folio | 9,5 pt |
-| Zaglavlje / oznaka razine zadatka | 9 pt |
+| Zaglavlje / oznaka razine zadatka (uz naslov) | 9 pt |
 | Najmanja oznaka skice | 9 pt |
 
 Obični retci imaju izmjeren razmak osnovica približno 15,5 pt, nasuprot
 13,4 pt u polaznom PDF-u. Typst `leading` iznosi 0,75 em, a razmak odlomaka
-0,6 em. Razmaci prije/poslije podnaslova iznose 19/8, 14/6 i 11/5 pt prema
+1,15 em i stavki popisa 0,9 em (od 16. listopada 2026.; razmak manji od proreda
+stapao je odlomke u jedan blok). Razmaci prije/poslije podnaslova iznose 19/8, 14/6 i 11/5 pt prema
 razini; nakon naslova poglavlja 18 pt. Formule imaju prostor od 10 pt, a
 slika i njezin opis razmak od 7 pt. Sve vrijednosti dolaze iz
 `design-system/tokens.json`; `mf1-tokens.typ` generira `build_book.py`.

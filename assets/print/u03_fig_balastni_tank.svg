@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 644 529" role="img" aria-labelledby="u03fbt_title u03fbt_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:644px;height:auto;">
   <title id="u03fbt_title">Bočni balastni tank u trupu broda - vanjska morska voda i unutarnji balast</title>
-  <desc id="u03fbt_desc">Bočni balastni tank dijeli lijevu oplatu boka i dno s vanjskim trupom: more izravno kvasi vanjsku stranu ploče P i dna, a balast morske vode unutarnju. Tlačne strelice prikazuju stanje A (pun tank) u zajedničkom mjerilu od 0,7 jedinica po kPa: izvana prema oplati (na dno prema gore, na ploču P prema unutra), iznutra prema oplati (na dno prema dolje, na ploču P prema van). Desno od unutarnjih stijenki je unutrašnjost broda, ne more. Odzračnik i sondna cijev otvoreni su iznad palube; sondna cijev završava iznad dna tanka. Vertikalno mjerilo je 36 jedinica po metru; more y80, voda u punom tanku y206, ploča P y314, dno y386.</desc>
+  <desc id="u03fbt_desc">Bočni balastni tank dijeli lijevu oplatu boka i dno s vanjskim trupom: more izravno kvasi vanjsku stranu ploče P i dna, a balast morske vode unutarnju. Tlačne strelice prikazuju stanje A (pun tank) u zajedničkom mjerilu od 0,7 jedinica po kPa: izvana prema oplati (na dno prema gore, na ploču P prema unutra), iznutra prema oplati (na dno prema dolje, na ploču P prema van). Desno od unutarnjih stijenki je unutrašnjost broda, ne more. Odzračnik i sondna cijev otvoreni su iznad palube; sondna cijev završava iznad dna tanka. Okomito mjerilo je 36 jedinica po metru; more y80, voda u punom tanku y206, ploča P y314, dno y386.</desc>
   <defs>
     <pattern id="u03fbt_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
@@ -47,67 +47,57 @@
       <rect x="210" y="198" width="102" height="8" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect x="338" y="198" width="54" height="8" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect x="406" y="198" width="34" height="8" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="312" y="23" width="6" height="183" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="332" y="23" width="6" height="183" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="312" y="23" width="6" height="183" fill="#3a4a56" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="332" y="23" width="6" height="183" fill="#3a4a56" stroke="#3a4a56" stroke-width="1.2" />
       <rect x="318" y="23" width="14" height="183" fill="#ffffff" stroke="none" stroke-width="1.2" />
       <line x1="318" y1="206" x2="332" y2="206" stroke="#356b83" stroke-width="2" />
-      <rect id="u03fbt_sonda-w1" x="392" y="26" width="3" height="350" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="0.9" />
-      <rect id="u03fbt_sonda-w2" x="403" y="26" width="3" height="350" fill="url(#u03fbt_hatch)" stroke="#3a4a56" stroke-width="0.9" />
+      <rect id="u03fbt_sonda-w1" x="392" y="26" width="3" height="350" fill="#3a4a56" stroke="#3a4a56" stroke-width="0.9" />
+      <rect id="u03fbt_sonda-w2" x="403" y="26" width="3" height="350" fill="#3a4a56" stroke="#3a4a56" stroke-width="0.9" />
       <rect id="u03fbt_sonda-air" x="395" y="26" width="8" height="180" fill="#ffffff" stroke="none" />
       <line x1="395" y1="206" x2="403" y2="206" stroke="#356b83" stroke-width="2" />
       <rect id="u03fbt_plate-p" x="200" y="304" width="10" height="20" fill="#dcebf1" stroke="#356b83" stroke-width="1.4" />
       <text x="465" y="34" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">paluba broda</text>
       <text x="134" y="67" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">razina mora</text>
-      <text x="325" y="16" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
-      </text>
-      <text x="399" y="16" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
-      </text>
+      <text x="325" y="16" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
+      <text x="399" y="16" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
       <text x="302" y="108" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end">otvoren odzračnik</text>
       <line x1="304" y1="105" x2="312" y2="105" stroke="#3a4a56" stroke-width="0.8" />
       <text x="413" y="140" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">sondna cijev</text>
       <line x1="411" y1="137" x2="406" y2="137" stroke="#3a4a56" stroke-width="0.8" />
       <text x="330" y="252" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle">balastna voda</text>
-      <text x="330" y="270" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">b</tspan> = 1025 kg/m³</text>
+      <text x="330" y="270" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1025 kg/m³</text>
       <text x="137" y="223" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">morska voda</text>
-      <text x="137" y="239" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1025 kg/m³</text>
+      <text x="137" y="239" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1025 kg/m³</text>
       <line x1="151" y1="314" x2="197" y2="314" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fbt_aB)" data-mf1-vector="pressure" />
       <line x1="234" y1="314" x2="213" y2="314" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fbt_aBL)" data-mf1-vector="pressure" />
-      <text x="124" y="282" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,ext,P</tspan>
-      </text>
-      <text x="303" y="302" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,int,P</tspan><tspan baseline-shift="super" font-size="0.7em">A</tspan>
-      </text>
-      <text x="219" y="293" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">ploča P</text>
+      <text x="124" y="282" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,van,P</tspan></text>
+      <text x="303" y="302" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,unu,P</tspan><tspan baseline-shift="super" font-size="0.7em">A</tspan></text>
+      <text x="219" y="293" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">ploča <tspan font-style="italic">P</tspan></text>
       <line x1="280" y1="459" x2="280" y2="399" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fbt_aB)" data-mf1-vector="pressure" />
       <line x1="320" y1="348" x2="320" y2="383" stroke="#356b83" stroke-width="1.6" marker-end="url(#u03fbt_aBL)" data-mf1-vector="pressure" />
-      <text x="314" y="368" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end">p<tspan baseline-shift="sub" font-size="0.7em">M,int,dno</tspan><tspan baseline-shift="super" font-size="0.7em">A</tspan>
-      </text>
-      <text x="279" y="475" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,ext,dno</tspan>
-      </text>
-      <text x="433" y="433" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">neto na dno: prema gore</text>
+      <text x="314" y="368" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,unu,dno</tspan><tspan baseline-shift="super" font-size="0.7em">A</tspan></text>
+      <text x="279" y="475" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,van,dno</tspan></text>
       <line x1="42" y1="80" x2="80" y2="80" stroke="#657781" stroke-width="0.8" stroke-dasharray="4,3" />
       <line x1="42" y1="386" x2="200" y2="386" stroke="#657781" stroke-width="0.8" stroke-dasharray="4,3" />
       <line x1="35" y1="80" x2="45" y2="80" stroke="#657781" stroke-width="0.8" />
       <line x1="35" y1="386" x2="45" y2="386" stroke="#657781" stroke-width="0.8" />
       <line id="u03fbt_dim-tg" x1="40" y1="80" x2="40" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" data-mf1-role="dimension" />
-      <text x="13" y="211" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">T<tspan baseline-shift="sub" font-size="0.7em">g</tspan>
-      </text>
-      <text x="34" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="end">8,5 m</text>
+      <text x="13" y="211" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">T</tspan></text>
+      <text x="34" y="228" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end">8,5 m</text>
       <line x1="450" y1="206" x2="480" y2="206" stroke="#657781" stroke-width="0.8" />
       <line x1="450" y1="386" x2="480" y2="386" stroke="#657781" stroke-width="0.8" />
       <line x1="465" y1="206" x2="475" y2="206" stroke="#657781" stroke-width="0.8" />
       <line x1="465" y1="386" x2="475" y2="386" stroke="#657781" stroke-width="0.8" />
       <line id="u03fbt_dim-ht" x1="470" y1="206" x2="470" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" data-mf1-role="dimension" />
-      <text x="476" y="284" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">H<tspan baseline-shift="sub" font-size="0.7em">t</tspan>
-      </text>
-      <text x="476" y="301" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">5,0 m</text>
+      <text x="476" y="284" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">tk</tspan></text>
+      <text x="476" y="301" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">5,0 m</text>
       <line x1="520" y1="314" x2="571" y2="314" stroke="#657781" stroke-width="0.8" />
       <line x1="520" y1="386" x2="571" y2="386" stroke="#657781" stroke-width="0.8" />
       <line x1="560" y1="314" x2="570" y2="314" stroke="#657781" stroke-width="0.8" />
       <line x1="560" y1="386" x2="570" y2="386" stroke="#657781" stroke-width="0.8" />
       <line id="u03fbt_dim-hp" x1="565" y1="314" x2="565" y2="386" stroke="#657781" stroke-width="1.2" marker-start="url(#u03bal_dimL)" marker-end="url(#u03bal_dim)" data-mf1-role="dimension" />
-      <text x="577" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">z<tspan baseline-shift="sub" font-size="0.7em">P</tspan>
-      </text>
-      <text x="579" y="360" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746" text-anchor="start">2,0 m</text>
+      <text x="577" y="344" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.7em">P</tspan></text>
+      <text x="579" y="360" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">2,0 m</text>
     </g>
   </g>
 </svg>

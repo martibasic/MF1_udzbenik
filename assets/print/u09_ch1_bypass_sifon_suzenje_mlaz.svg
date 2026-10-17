@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 809 594" role="img" aria-labelledby="u09ch1_title u09ch1_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:809px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 44 699 558" role="img" aria-labelledby="u09ch1_title u09ch1_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:699px;height:auto;">
   <title id="u09ch1_title">Usisni vod rashladne crpke morske vode</title>
-  <desc id="u09ch1_desc">Presjek boka broda. Lijevo je more s mirnom vodnom linijom A; usisna košara otvorena je prema moru kroz oplatu boka 3,0 m ispod vodne linije, a usisni vod se uspinje do crpke P 2,0 m iznad vodne linije. Isprekidana crta označuje vodnu liniju broda u balastu, 1,5 m niže. Kote visina imaju zajedničko mjerilo; promjer voda je uvećan. Rešetka košare prikazana je shematski i ne zatvara otvor. Oplata boka i dna omeđuje unutrašnjost broda; more je s vanjske strane boka i ispod dna.</desc>
+  <desc id="u09ch1_desc">Presjek boka broda. Lijevo je more s mirnom vodnom linijom A; usisni koš otvoren je prema moru kroz oplatu boka 3,0 m ispod vodne linije, a usisni vod se uspinje do crpke P 2,0 m iznad vodne linije. Isprekidana crta označuje vodnu liniju broda u balastu, 1,5 m niže. Kote visina imaju zajedničko mjerilo; promjer voda je uvećan. Rešetka koša prikazana je shematski i ne zatvara otvor. Oplata boka i dna omeđuje unutrašnjost broda; more je s vanjske strane boka i ispod dna.</desc>
   <defs>
     <marker id="u09ch1_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <pattern id="u09ch1_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -19,7 +19,6 @@
   </defs>
   <g id="u09ch1_title-scene-1" transform="translate(0.0000 0.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
-      <text x="35" y="38" font-size="16" fill="#263746" text-anchor="start" font-weight="700">Usisni vod rashladne crpke: košara ispod vodne linije, crpka iznad nje</text>
       <rect id="u09ch1_sea" x="40" y="250" width="260" height="330" rx="0" fill="#dcebf1" stroke="none" />
       <rect id="u09ch1_opening" x="300" y="440" width="10" height="40" rx="0" fill="#dcebf1" stroke="none" />
       <rect id="u09ch1_chamber" x="310" y="432" width="60" height="56" rx="0" fill="#dcebf1" stroke="none" />
@@ -41,38 +40,38 @@
       <circle id="u09ch1_pump" cx="446" cy="110" r="24" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.6" />
       <text x="446" y="114" font-size="11" fill="#263746" text-anchor="middle">crpka</text>
       <path d="M472 110 L512 110" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09ch1_vopen)" data-mf1-vector="velocity" />
-      <text x="572" y="106" font-size="11" fill="#263746" text-anchor="start">Q = 180 m³/h</text>
+      <text x="572" y="106" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">Q</tspan> = 180 m³/h</text>
       <text x="572" y="122" font-size="11" fill="#263746" text-anchor="start">u rashladni sustav</text>
       <text x="405" y="162" font-size="11" fill="#263746" text-anchor="start">platforma strojarnice</text>
       <path d="M340 416 L340 372" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09ch1_vopen)" data-mf1-vector="velocity" />
-      <text x="359" y="398" font-size="11" fill="#263746" text-anchor="start"><tspan font-weight="700">v</tspan></text>
+      <text x="359" y="398" font-size="11" fill="#263746" text-anchor="start" font-style="italic"><tspan font-weight="700">v</tspan></text>
       <path d="M262 460 L296 460" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09ch1_vopen)" data-mf1-vector="velocity" />
       <circle id="u09ch1_A" cx="120" cy="250" r="3" fill="#356b83" />
       <text x="120" y="236" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">A</text>
-      <text x="50" y="275" font-size="11" fill="#263746" text-anchor="start">mirna površina: p<tspan baseline-shift="sub" font-size="0.7em">A</tspan> = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>, v<tspan baseline-shift="sub" font-size="0.7em">A</tspan> ≈ 0, z = 0</text>
-      <text x="50" y="348" font-size="11" fill="#263746" text-anchor="start">vodna linija u balastu, 1,5 m niže</text>
-      <text x="50" y="540" font-size="11" fill="#263746" text-anchor="start">more, ρ = 1025 kg/m³</text>
+      <text x="50" y="275" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan>, <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">A</tspan> ≈ 0</text>
+      <text x="50" y="348" font-size="11" fill="#263746" text-anchor="start">vodna linija u balastu</text>
+      <text x="50" y="540" font-size="11" fill="#263746" text-anchor="start">more, <tspan font-style="italic">ρ</tspan> = 1025 kg/m³</text>
       <circle id="u09ch1_P" cx="420" cy="110" r="3" fill="#356b83" />
       <text x="420" y="92" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">P</text>
-      <text x="372" y="76" font-size="11" fill="#263746" text-anchor="start">ulaz u crpku: p<tspan baseline-shift="sub" font-size="0.7em">aps,P</tspan> = ?</text>
+      <text x="410" y="76" font-size="11" fill="#263746" text-anchor="end"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">aps,P</tspan> = ?</text>
       <circle id="u09ch1_U" cx="305" cy="460" r="3" fill="#356b83" />
-      <text x="318" y="520" font-size="11" fill="#263746" text-anchor="start">usisna košara (sea chest)</text>
-      <text x="318" y="536" font-size="11" fill="#263746" text-anchor="start">s rešetkom, otvorena prema moru</text>
+      <text x="318" y="520" font-size="11" fill="#263746" text-anchor="start">usisni koš (engl. <tspan font-style="italic">sea chest</tspan>)</text>
+      <text x="318" y="536" font-size="11" fill="#263746" text-anchor="start">s rešetkom, otvoren prema moru</text>
       <text x="200" y="196" font-size="11" fill="#263746" text-anchor="start">oplata boka</text>
       <line x1="262" y1="200" x2="298" y2="214" stroke="#657781" stroke-width="1" />
       <line x1="300" y1="250" x2="310" y2="250" stroke="#657781" stroke-width="1" stroke-dasharray="3 3" />
       <line x1="310" y1="250" x2="580" y2="250" stroke="#657781" stroke-width="1" stroke-dasharray="5 5" />
-      <text x="366" y="244" font-size="11" fill="#263746" text-anchor="start">referenca z = 0 (vodna linija)</text>
+      <text x="366" y="244" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">z</tspan> = 0 (vodna linija)</text>
       <line x1="195" y1="250" x2="205" y2="250" stroke="#657781" stroke-width="1.2" />
       <line x1="195" y1="460" x2="205" y2="460" stroke="#657781" stroke-width="1.2" />
       <path id="u09ch1_heightU" d="M200 250 L200 460" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)" data-mf1-role="dimension" />
       <line x1="205" y1="460" x2="300" y2="460" stroke="#657781" stroke-width="1" stroke-dasharray="3 3" />
-      <text x="208" y="400" font-size="11" fill="#263746" text-anchor="start">z<tspan baseline-shift="sub" font-size="0.7em">u</tspan> = 3,0 m</text>
+      <text x="208" y="400" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.7em">u</tspan> = 3,0 m</text>
       <line x1="555" y1="110" x2="565" y2="110" stroke="#657781" stroke-width="1.2" />
       <line x1="555" y1="250" x2="565" y2="250" stroke="#657781" stroke-width="1.2" />
       <path id="u09ch1_heightP" d="M560 110 L560 250" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)" data-mf1-role="dimension" />
       <line x1="518" y1="110" x2="555" y2="110" stroke="#657781" stroke-width="1" stroke-dasharray="3 3" />
-      <text x="568" y="184" font-size="11" fill="#263746" text-anchor="start">z<tspan baseline-shift="sub" font-size="0.7em">P</tspan> = 2,0 m</text>
+      <text x="568" y="184" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">z</tspan><tspan baseline-shift="sub" font-size="0.7em">P</tspan> = 2,0 m</text>
       <line x1="615" y1="250" x2="625" y2="250" stroke="#657781" stroke-width="1.2" />
       <line x1="615" y1="355" x2="625" y2="355" stroke="#657781" stroke-width="1.2" />
       <path id="u09ch1_ballast" d="M620 250 L620 355" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dim)" marker-end="url(#u09ch1_dim)" data-mf1-role="dimension" />
@@ -82,9 +81,8 @@
       <line x1="349" y1="300" x2="349" y2="310" stroke="#657781" stroke-width="1.2" />
       <path id="u09ch1_D" d="M331 305 L349 305" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09ch1_dimSmall)" marker-end="url(#u09ch1_dimSmall)" data-mf1-role="dimension" />
       <line x1="352" y1="305" x2="392" y2="290" stroke="#657781" stroke-width="1" />
-      <text x="396" y="288" font-size="11" fill="#263746" text-anchor="start">D = 150 mm (uvećano)</text>
-      <text x="396" y="400" font-size="11" fill="#263746" text-anchor="start">gubitak voda h<tspan baseline-shift="sub" font-size="0.7em">g</tspan> = 1,2 m</text>
-      <text x="396" y="416" font-size="11" fill="#263746" text-anchor="start">(rešetka, ventil, filtar, koljena)</text>
+      <text x="396" y="288" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan> = 150 mm (uvećano)</text>
+      <text x="396" y="400" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">g</tspan> = 1,2 m (gubitak voda)</text>
       <rect id="u09ch1_bottom" x="300" y="560" width="260" height="8" rx="0" fill="url(#u09ch1_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <text x="400" y="553" font-size="11" fill="#263746" text-anchor="start">dno trupa</text>
     </g>

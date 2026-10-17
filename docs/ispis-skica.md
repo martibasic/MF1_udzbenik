@@ -26,12 +26,35 @@ ostaje ista i kad se geometrija povećava ili smanjuje.
 | Token | Vrijednost |
 |---|---:|
 | `figure-label-size` | 9,5 pt |
-| `figure-small-label-size` | 9 pt, uključujući jedinice i indekse u skicama |
+| `figure-small-label-size` | 9 pt, najmanja veličina oznake i jedinice |
+| `figure-index-size` | 6,65 pt, indeksi i eksponenti (oko 70 % oznake od 9,5 pt) |
+| `figure-index-min-size` | 6,5 pt, najmanja veličina indeksa |
 | `figure-caption-size` | 9,5 pt |
 | `figure-stroke` | osnovna crta 0,7 pt; hijerarhija prema izvornom značenju |
 | `figure-arrow-size` | najveća dimenzija vrha 4 pt |
 | `figure-gap` | 14 pt između podslika |
 | `figure-padding` | 4 pt oko sadržaja |
+
+**Indeksi (odluka završne recenzije, T8).** Do listopada 2026. vrijedilo je
+pravilo „najmanje 9 pt i za indekse”. Uz osnovno slovo od 9,5 pt indeks od 9 pt
+gotovo je iste veličine, pa se $F_L$, $A_L$ ili $d_p$ čitaju kao dvoslovne oznake
+„FL”, „AL”, „dp”. Zato se od toga pravila svjesno odstupa: indeksi i eksponenti
+(`tspan` s `baseline-shift="sub"` ili `"super"`) slažu se na `figure-index-size`,
+oko 70 % osnovnog slova, kao u matematičkom slogu. Najmanja veličina indeksa je
+`figure-index-min-size` (6,5 pt). Minimum od 9 pt za oznake, jedinice i
+napomene ostaje nepromijenjen. Indeks u izvornom SVG-u piše se samo kao
+`tspan`, ne Unicode znakovima ₀–₉, jer generator inače ne prepoznaje indeks.
+Simboli veličina i ostali dijelovi oznake zadržavaju veličinu svoje oznake.
+
+**Drugi fluid u tisku (U9).** Na fotokopiji voda (`fluid`, siva ≈ 231) i ulje
+(`second-fluid`, ≈ 224) imaju gotovo istu svjetlinu. Tiskovne izvedenice zato
+drugi fluid boje tonom iz `print-palette` (`#d6c597`, ≈ 197), koji se od vode
+razlikuje za najmanje 25 razina sive. Zamjena se primjenjuje samo u generatoru
+(ispune, potezi i uzorci u `defs`); kanonske i mrežne skice zadržavaju zaslonsku
+paletu. Tekstna oznaka drugog fluida ostaje obvezna.
+
+Broj i jedinica u oznaci povezani su nelomljivim razmakom (U+00A0). Generator
+prelama oznake samo na običnom razmaku, pa se „0,18 m²” ne može rastaviti.
 
 Tanke crte imaju najmanje 0,5 pt. Debeli potezi koji grade cijev, masku ili
 stijenku zadržavaju svoje geometrijske omjere. Jednolične ispune fluida, šrafure,
@@ -107,8 +130,10 @@ prema objavnom workflowu. Potreban je instaliran Chrome/Chromium/Edge i
 Izmjena izvora, tokena, recepta ili generatora poništava hash u manifestu.
 Audit odbija zastarjele izvedenice. Provjerava sve neprazne oznake i njihove
 indekse, nepromijenjene koordinate zadržane geometrije, granice platna,
-preklapanja teksta i fizički minimum 9 pt. PDF audit dodatno mjeri stvarni
-font u konačnom PDF-u, uz QR kodove, opise, jednadžbe i bibliografiju. HTML
+preklapanja teksta, fizički minimum 9 pt za oznake i 6,5 pt za indekse te
+razliku sive drugog fluida od vode. PDF audit dodatno mjeri stvarni font u
+konačnom PDF-u, uz QR kodove, opise, jednadžbe i bibliografiju; manji minimum
+priznaje samo kratkom indeksu neposredno uz oznaku pune veličine. HTML
 audit provjerava odvajanje zaslona i ispisa te stvarnu, neskaliranu veličinu
 svakoga učitanog tiskovnog retka.
 

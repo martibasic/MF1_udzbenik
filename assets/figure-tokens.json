@@ -5,6 +5,8 @@
   "figure-wide-width": 1.0,
   "figure-label-size": 9.5,
   "figure-small-label-size": 9.0,
+  "figure-index-size": 6.65,
+  "figure-index-min-size": 6.5,
   "figure-caption-size": 9.5,
   "figure-stroke": 0.7,
   "figure-arrow-size": 4.0,
@@ -27,5 +29,8 @@
     "reference-light": "#c5cdd3",
     "reference-dark": "#a8b8c2",
     "paper": "#ffffff"
+  },
+  "print-palette": {
+    "second-fluid": "#d6c597"
   }
 }

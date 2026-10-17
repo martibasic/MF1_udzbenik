@@ -1,5 +1,3 @@
-## Tipične pogreške i preventivni filtar prije računa
-
 Ovaj pregled služi za provjeru odabira modela, referentnog tlaka, kontrolnog volumena i predznaka. Vrati se odgovarajućem odjeljku prije računa, kad dobiješ neočekivan rezultat i prije predaje zadatka. Natuknice opisuju opće pogreške, a oznaka u zagradi (npr. Z6) upućuje na zadatak pripadnog poglavlja u kojem se pogreška najčešće pojavljuje.
 
 ## Globalna provjera prije računa
@@ -15,13 +13,9 @@ Ovaj pregled služi za provjeru odabira modela, referentnog tlaka, kontrolnog vo
 - Kad su zadani intervali ili nesigurnosti, razlikuj zajamčene granice (provjeravaju se sve rubne kombinacije) od standardnih nesigurnosti (korijen zbroja kvadrata, RSS); preklapanje intervala nije dokaz male pogreške.
 :::
 
-<p class="mf1-signal-note">Vizualne oznake za brzo snalaženje u dodatku: <span class="mf1-signal-chip">ρ / γ / p</span> osnovne veličine, <span class="mf1-signal-chip">μ / ν / σ</span> svojstva fluida, <span class="mf1-signal-chip">F / M</span> sile i momenti, <span class="mf1-signal-chip">Q / ṁ / h<sub>g</sub></span> protoci i gubitci.</p>
-
 ## Pregled po poglavljima {#tablica-tipičnih-pogrešaka-po-poglavljima}
 
 ### 1 · Osnove fluida i Pascalov zakon {#pogreske-tlak .unnumbered .unlisted}
-
-<span class="mf1-signal-chip">ρ / γ / p</span> <span class="mf1-signal-chip">F / A</span>
 
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
@@ -37,9 +31,7 @@ Oduzmi taru, provjeri površine, volumen i rad: $F_1s_1=F_2s_2$. Za pogrešku po
 :::
 ::::
 
-### 2 · Reologija, viskoznost i međupovršinske pojave {#pogreske-viskoznost .unnumbered .unlisted}
-
-<span class="mf1-signal-chip">μ / ν / σ</span> <span class="mf1-signal-chip">$\cos\theta$</span>
+### 2 · Viskoznost, površinska napetost i kapilarnost {#pogreske-viskoznost .unnumbered .unlisted}
 
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
@@ -57,8 +49,6 @@ Utvrdi koja od veličina $\mu$, $\nu$ i $\sigma$ odgovara pojavi. Prebroji među
 
 ### 3 · Hidrostatička raspodjela tlaka i manometrija {#pogreske-hidrostatika .unnumbered .unlisted}
 
-<span class="mf1-signal-chip">$p_{aps}$</span> <span class="mf1-signal-chip">$p_M$</span> <span class="mf1-signal-chip">$p_v$</span>
-
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
 **Česta pogreška**
@@ -75,8 +65,6 @@ Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u
 
 ### 4 · Relativno mirovanje fluida {#pogreske-relativno-mirovanje .unnumbered .unlisted}
 
-<span class="mf1-signal-chip">a / g</span> <span class="mf1-signal-chip">$\vec g_{eff}$</span>
-
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
 **Česta pogreška**
@@ -91,9 +79,7 @@ Najprije odredi $\vec g_{eff}$ i provjeri očuvanje volumena. Pri vrtnji uspored
 :::
 ::::
 
-### 5 · Hidrostatičke sile na plohe {#pogreske-sile-na-plohe .unnumbered .unlisted}
-
-<span class="mf1-signal-chip">$F / h_{CP}$</span> <span class="mf1-signal-chip">$F_H / F_V$</span>
+### 5 · Hidrostatičke sile na ravne i zakrivljene plohe {#pogreske-sile-na-plohe .unnumbered .unlisted}
 
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
@@ -111,8 +97,6 @@ Utvrdi orijentaciju plohe i referentni tlak, zasebno zatvori bilancu sila i bila
 
 ### 6 · Uzgon, plivanje i početni stabilitet {#pogreske-uzgon .unnumbered .unlisted}
 
-<span class="mf1-signal-chip">$F_U$</span> <span class="mf1-signal-chip">$V_{ist}$</span> <span class="mf1-signal-chip">GM / GZ</span>
-
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
 **Česta pogreška**
@@ -128,8 +112,6 @@ Računaj stvarnu istisninu i odvoji bilancu sila od bilance momenata. Pri pokusu
 ::::
 
 ### 7 · Kinematika, kontrolni volumen i kontinuitet {#pogreske-kontinuitet .unnumbered .unlisted}
-
-<span class="mf1-signal-chip">$\vec v\!\cdot\!\vec n$</span> <span class="mf1-signal-chip">$\vec v-\vec v_{KP}$</span>
 
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
@@ -147,13 +129,11 @@ Označi vanjsku normalu, ulaze, izlaze i akumulaciju. Za kosu plohu koristi norm
 
 ### 8 · Energijska jednadžba i Bernoulli {#pogreske-energija .unnumbered .unlisted}
 
-<span class="mf1-signal-chip">$p/(\rho g)$</span> <span class="mf1-signal-chip">$\alpha v^2/(2g)$</span> <span class="mf1-signal-chip">z</span>
-
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Pisanje Bernoullijeve jednadžbe bez odabira presjeka i strujnice; poistovjećivanje brzine mirne površine s brzinom izlaznog mlaza; uporaba $\alpha=1$ bez provjere profila (za laminarni tok $\alpha=2$); miješanje tlačne visine $p/(\rho g)$ s piezometarskom visinom $z+p/(\rho g)$ (Z3); zanemarivanje hidrostatičke korekcije senzora smještenog na drugoj visini (Z4); provjera samo jednog od dvaju pogonskih zahtjeva pri izboru elementa (Z5); primjena idealnog modela bez gubitaka na sifon, bez provjere najnižega apsolutnog tlaka u tjemenu (Z6).
+Pisanje Bernoullijeve jednadžbe bez odabira presjeka i strujnice; poistovjećivanje brzine mirne površine s brzinom izlaznog mlaza; uporaba $\alpha=1$ bez provjere profila (za razvijeni laminarni tok u kružnoj cijevi $\alpha=2$); miješanje tlačne visine $p/(\rho g)$ s piezometarskom visinom $z+p/(\rho g)$ (Z3); zanemarivanje hidrostatičke korekcije senzora smještenog na drugoj visini (Z4); provjera samo jednog od dvaju pogonskih zahtjeva pri izboru elementa (Z5); primjena idealnog modela bez gubitaka na sifon, bez provjere najnižega apsolutnog tlaka u tjemenu (Z6).
 :::
 
 ::: {.mf1-error-column}
@@ -164,8 +144,6 @@ Odvoji brzinu na površini od izlazne brzine; piezometarsku crtu računaj kao $z
 ::::
 
 ### 9 · Kompresibilni idealni tok {#pogreske-kompresibilni-tok .unnumbered .unlisted}
-
-<span class="mf1-signal-chip">$a / (v\pm a)$</span> <span class="mf1-signal-chip">$Ma / p_0$</span>
 
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
@@ -183,8 +161,6 @@ Razlikuj $a$ i $v\pm a$, koristi apsolutne tlakove i apsolutnu temperaturu te re
 
 ### 10 · Količina i moment količine gibanja {#pogreske-kolicina-gibanja .unnumbered .unlisted}
 
-<span class="mf1-signal-chip">$F / R / M$</span> <span class="mf1-signal-chip">$\beta$</span>
-
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
 **Česta pogreška**
@@ -200,8 +176,6 @@ Nacrtaj tlocrt, označi osi i tlačne sile usmjeri prema KV-u. Razlikuj $\vec F$
 ::::
 
 ### 11 · Dimenzijska analiza i sličnost {#pogreske-slicnost .unnumbered .unlisted}
-
-<span class="mf1-signal-chip">Re / Fr / Ma</span> <span class="mf1-signal-chip">Π</span>
 
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
@@ -219,8 +193,6 @@ Provjeri apsolutni referentni tlak, rang dimenzijske matrice i mjerodavne grupe.
 
 ### 12 · Diferencijalni opis realnog toka {#pogreske-realni-tok .unnumbered .unlisted}
 
-<span class="mf1-signal-chip">$D\vec v/Dt$</span> <span class="mf1-signal-chip">NS</span> <span class="mf1-signal-chip">V&amp;V</span>
-
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
 **Česta pogreška**
@@ -236,8 +208,6 @@ Zadrži lokalno i konvektivno ubrzanje dok ih pretpostavke izričito ne uklone t
 ::::
 
 ### 13 · Gubitci, cjevovodi, crpke i mreže {#pogreske-cjevovodi .unnumbered .unlisted}
-
-<span class="mf1-signal-chip">Re / λ / ξ</span> <span class="mf1-signal-chip">$H_p(Q)$</span> <span class="mf1-signal-chip">NPSH</span>
 
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
@@ -255,8 +225,6 @@ Najprije odredi $Re$ i režim, zatim $\lambda$; zatvori bilancu kontinuiteta i g
 
 ### 14 · Turbostrojevi i propulzija {#pogreske-turbostrojevi .unnumbered .unlisted}
 
-<span class="mf1-signal-chip">c / w / u</span> <span class="mf1-signal-chip">$M / P / F_T$</span>
-
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
 **Česta pogreška**
@@ -273,8 +241,6 @@ Odaberi kontrolni volumen i tijelo na koje sila djeluje. Provjeri $\vec c=\vec u
 
 ### 15 · Otvoreni tokovi {#pogreske-otvoreni-tokovi .unnumbered .unlisted}
 
-<span class="mf1-signal-chip">$Fr / y_h$</span> <span class="mf1-signal-chip">E / I</span> <span class="mf1-signal-chip">n</span>
-
 :::: {.mf1-error-pair}
 ::: {.mf1-error-column}
 **Česta pogreška**
@@ -288,16 +254,6 @@ Zamjena hidrauličke dubine $y_h=A/T$ hidrauličkim radijusom $R_h=A/P$ ili hidr
 Razdvoji $A$, širinu slobodne površine $T$ i omočeni opseg $P$. Na pragu provjeri raspoloživu energiju, kritičnu granicu i nastavak uzvodne grane. Skok opiši bilancom količine gibanja (impulsnom funkcijom) uz hidrostatičke sile; nesigurnost propagiraj iz zajedničkog $q=Q/b$. Provjeri nadvišenje, ulazno stanje bazena, nizvodni vodostaj i kalibraciju hrapavosti.
 :::
 ::::
-
-## Kako koristiti pregled {#namjena-tablice}
-
-Pregled koristi u tri faze rješavanja:
-
-1. prije postavljanja početne jednadžbe, radi odabira odgovarajućeg modela;
-2. tijekom računa, kad broj odstupa od očekivanoga reda veličine ili predznak nije očekivan;
-3. pri tumačenju rezultata, kao provjeru fizikalnog smisla i granica modela.
-
-Ako rezultat nije u skladu s tim kriterijima, prije nastavka algebarskog postupka ponovno razmotri skicu, geometriju, referentne veličine i pretpostavke.
 
 ## Kriteriji provjere rješenja
 
@@ -331,18 +287,6 @@ Provjeri predznake, projekcije, vektorske komponente, istisnuti volumen i polož
 
 <p class="mf1-box-label">Fizikalni smisao rezultata</p>
 
-Ako broj nema fizikalni smisao, uredna algebra ne spašava pogrešan model.
+Ako broj nema fizikalni smisao, uredna algebra ne spašava pogrešan model: vrati se skici, geometriji, referentnim veličinama i pretpostavkama.
 :::
-:::
-
-::: {.mf1-warning}
-<p class="mf1-box-label">Najčešća pogreška</p>
-
-Najčešća završna pogreška jest prihvaćanje računa samo zato što je algebra uredna. Broj bez fizikalnog smisla obično pokazuje da su model, geometrija ili referentni tlak pogrešno postavljeni još prije završnog retka.
-:::
-
-::: {.mf1-mini-summary}
-<p class="mf1-box-label">Operativna namjena dodatka</p>
-
-<span class="mf1-ch-ref"><span class="mf1-ch-code">dod. C</span><span class="mf1-ch-title">Tipične pogreške po poglavljima</span></span> služi završnoj provjeri rezultata: pomaže ti da brzo prepoznaš tipične pogreške modela, predznaka, geometrije i jedinica prije nego što pogreška postane „uredno” rješenje.
 :::

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 427" role="img" aria-labelledby="u07v1pk_title u07v1pk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:488px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 395" role="img" aria-labelledby="u07v1pk_title u07v1pk_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:488px;height:auto;">
   <title id="u07v1pk_title">Platforma s kompresorom: uron i ravnoteža</title>
-  <desc id="u07v1pk_desc">Zatvorena kruta platforma širine b = 1,00 m nagnuta je ulijevo (tan phi = 0,12); voda gustoće 998 kg/m3 ima vodoravnu površinu i nalazi se izvan tijela. Kompresor je lijevo od osi simetrije, na udaljenosti e mjerenoj usporedno s palubom. Centar uzgona B unutar istisnine; ukupna težina (m-p + m-k)g i jednako velik uzgon F-U djeluju na cijeli sklop na istom vertikalnom pravcu. Kotirani su rubni gazovi T-L i T-D.</desc>
+  <desc id="u07v1pk_desc">Zatvorena kruta platforma širine b = 1,00 m nagnuta je ulijevo (tan phi = 0,12); voda gustoće 998 kg/m3 ima vodoravnu površinu i nalazi se izvan tijela. Kompresor je lijevo od osi simetrije, na udaljenosti e mjerenoj usporedno s palubom. Centar uzgona B unutar istisnine; ukupna težina (m-p + m-k)g i jednako velik uzgon F-U djeluju na cijeli sklop na istom okomitom pravcu. Kotirani su rubni gazovi T-L i T-D.</desc>
   <defs>
     <pattern id="u07v1pk_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
@@ -53,42 +53,39 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
   </defs>
-  <g id="u07v1pk_title-scene-1" transform="translate(-24.0000 -10.2000)">
+  <g id="u07v1pk_title-scene-1" transform="translate(-24.0000 -42.2000)">
     <g id="u07v1pk_fix_scene">
       <rect x="48" y="210" width="440" height="192" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <line x1="48" y1="210" x2="488" y2="210" stroke="#356b83" stroke-width="2" id="u07v1pk_fix_free-surface" />
       <polygon points="118.586282,313.569646 421.413718,277.230354 408.694966,171.240751 105.867530,207.580044" fill="#dcebf1" stroke="#3a4a56" stroke-width="2" id="u07v1pk_fix_hull" />
       <polygon points="122.583604,308.482145 416.326217,273.233032 404.697643,176.328252 110.955031,211.577366" fill="#ffffff" stroke="#3a4a56" stroke-width="0.8" />
       <circle cx="254.06045808922931" cy="253.34429360072104" r="3.7" fill="#356b83" id="u07v1pk_fix_buoyancy-center" />
-      <text x="264.0604580892293" y="257.344293600721" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">B</text>
+      <text x="264.0604580892293" y="257.344293600721" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">B</tspan></text>
       <polygon points="197.018588,196.641917 236.386155,191.917809 234.205797,173.748163 194.838230,178.472271" fill="#eadfc5" stroke="#356b83" stroke-width="1.5" />
       <text x="150" y="146" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">kompresor</text>
-      <text x="150" y="163" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">m<tspan baseline-shift="sub" font-size="0.7em">k</tspan> = 190 kg</text>
+      <text x="150" y="163" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">k</tspan> = 190 kg</text>
       <line x1="254.06045808922931" y1="253.34429360072104" x2="254.06045808922931" y2="211.34429360072104" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07v1pk_fix_green)" data-mf1-vector="force" />
-      <text x="267.0604580892293" y="227.34429360072104" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">U</tspan></text>
+      <text x="267.0604580892293" y="227.34429360072104" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">U</tspan></text>
       <line x1="254.06045808922931" y1="68" x2="254.06045808922931" y2="110" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07v1pk_fix_force)" data-mf1-vector="force" />
-      <text x="266.0604580892293" y="87" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">(<tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> + <tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">k</tspan>)<tspan font-style="italic" font-weight="700">g</tspan></text>
+      <text x="266.0604580892293" y="87" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">(<tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> + <tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">k</tspan>)<tspan font-weight="700" font-style="italic">g</tspan></text>
       <line x1="87.5862821307444" y1="210" x2="97.5862821307444" y2="210" stroke="#657781" stroke-width="0.8" />
       <line x1="87.5862821307444" y1="313.5696461443107" x2="97.5862821307444" y2="313.5696461443107" stroke="#657781" stroke-width="0.8" />
       <line x1="92.5862821307444" y1="210" x2="92.5862821307444" y2="313.5696461443107" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v1pk_fix_dimL)" marker-end="url(#u07v1pk_fix_dim)" data-mf1-role="dimension" />
-      <text x="73.5862821307444" y="265.78482307215535" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">T<tspan baseline-shift="sub" font-size="0.7em">L</tspan>
-      </text>
+      <text x="73.5862821307444" y="265.78482307215535" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">T</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
       <line x1="442.4137178692556" y1="210" x2="452.4137178692556" y2="210" stroke="#657781" stroke-width="0.8" />
       <line x1="442.4137178692556" y1="277.2303538556893" x2="452.4137178692556" y2="277.2303538556893" stroke="#657781" stroke-width="0.8" />
       <line x1="447.4137178692556" y1="210" x2="447.4137178692556" y2="277.2303538556893" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v1pk_fix_dimL)" marker-end="url(#u07v1pk_fix_dim)" data-mf1-role="dimension" />
-      <text x="455.4137178692556" y="247.61517692784466" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">T<tspan baseline-shift="sub" font-size="0.7em">D</tspan>
-      </text>
+      <text x="455.4137178692556" y="247.61517692784466" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">T</tspan><tspan baseline-shift="sub" font-size="0.7em">D</tspan></text>
       <line x1="211.25147746672883" y1="148.85574729741964" x2="251.83035385568934" y2="143.98628213074437" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v1pk_fix_dimL)" marker-end="url(#u07v1pk_fix_dim)" data-mf1-role="dimension" />
       <line x1="214.52" y1="176.11" x2="210.90" y2="146.0" stroke="#657781" stroke-width="0.6" />
       <line x1="257.28" y1="189.41" x2="251.50" y2="141.2" stroke="#657781" stroke-width="0.7" stroke-dasharray="3,3" />
       <line x1="118.586282" y1="313.569646" x2="130.2148556631032" y2="410.47442558063426" stroke="#657781" stroke-width="0.6" />
       <line x1="421.413718" y1="277.230354" x2="433.0422914016144" y2="374.13513329201294" stroke="#657781" stroke-width="0.6" />
-      <text x="330" y="340" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">voda, ρ = 998 kg/m³</text>
-      <text x="330" y="356" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan> = 3,10 m (okomito na presjek)</text>
-      <text x="231.54091566120908" y="138.85574729741964" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">e</text>
+      <text x="330" y="340" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">voda, <tspan font-style="italic">ρ</tspan> = 998 kg/m³</text>
+      <text x="330" y="356" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan> = 3,10 m (okomito na presjek)</text>
+      <text x="231.54091566120908" y="138.85574729741964" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">e</tspan></text>
       <line x1="130.2148556631032" y1="410.47442558063426" x2="433.0422914016144" y2="374.13513329201294" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v1pk_fix_dimL)" marker-end="url(#u07v1pk_fix_dim)" data-mf1-role="dimension" />
-      <text x="281.6285735323588" y="410.3047794363236" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 1,00 m</text>
-      <text x="265" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Platforma s pomaknutim teretom</text>
+      <text x="281.6285735323588" y="410.3047794363236" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 1,00 m</text>
     </g>
   </g>
 </svg>

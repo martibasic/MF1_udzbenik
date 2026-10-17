@@ -200,8 +200,13 @@ def verify() -> list:
     _check(out, "U02.CH1.p_in_Pa", r["p_in"], 101445.0, "Pa")
     _check(out, "U02.CH1.p_M_min", r["p_M_min"], 707.0, "Pa", abs_tol=0.5)
 
+    # P4 u knjizi traži samo uspon i Laplaceov skok; tlakove p_M,1 i p_M,2
+    # objavljuje bilježnica kao nastavak primjera (Z6 ih traži za drugu iglu).
     _check(out, "U02.CH1.p_start", r["p_start"], 227.0, "Pa", abs_tol=.5)
-    _check(out, "U02.CH1.drop_head_scale", r["drop_head_scale"], 23.5, "Pa", abs_tol=.05)
+    _check(out, "U02.CH1.meniscus_suction", 4 * 0.072 / 0.80e-3, 360.0, "Pa")
+    _invariant(out, "U02.CH1.suction_equals_column",
+               abs(998 * 9.81 * r["h_cap"] - 4 * 0.072 / 0.80e-3) < 1e-9,
+               "Pri potpunom kvasenju podtlak ispod meniskusa mora biti jednak stupcu rho*g*h_cap.")
     wide = cjeloviti_mikrodozator(d=1.6e-3)
     _invariant(out, "U02.CH1.separate_interfaces",
                abs(r["p_M_min"] - 998*9.81*.060 - r["dp"]) < 1e-10

@@ -449,8 +449,9 @@ crta. Granice valjanosti modela moraju ostati jasno označene.
 Koristiti `font-family="Arial, Liberation Sans, sans-serif"`. Tehničke oznake
 ostaju neutralne i čitljive uz serifni tekst knjige. Indekse i eksponente
 pisati SVG `tspan` elementima, decimalne vrijednosti hrvatskim zarezom.
-U tiskovnoj izvedenici oznake su 9,5 pt, a najmanji tekst, uključujući indekse,
-9 pt. Generator odvojeno skalira geometriju i tekst prema
+U tiskovnoj izvedenici oznake su 9,5 pt, a najmanji tekst 9 pt; indeksi i
+eksponenti slažu se na oko 70 % oznake (najmanje 6,5 pt) da se $F_L$ ne čita
+kao „FL”. Generator odvojeno skalira geometriju i tekst prema
 [pravilima ispisnih figura](docs/ispis-skica.md).
 
 Tekst ne prelazi preko linija. Povezati oznaku s njezinim presjekom ili tijelom

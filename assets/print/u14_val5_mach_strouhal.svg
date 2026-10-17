@@ -36,12 +36,12 @@
       <rect id="u14ma_ductbottom" x="70" y="187" width="380" height="9" rx="0" fill="url(#u14ma_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect id="u14ma_ductfluid" x="70" y="119" width="380" height="68" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <path id="u14ma_velocity" data-mf1-vector="velocity" d="M153 153 L300 153" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ma_vopen)" />
-      <text x="226.5" y="144" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 0,40; Q<tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 0,80 m³/s</text>
+      <text x="226.5" y="144" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.75em">1</tspan> = 0,40; <tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.75em">2</tspan> = 0,80 m³/s</text>
       <line x1="49" y1="119" x2="59" y2="119" stroke="#657781" stroke-width="1.2" />
       <line x1="49" y1="187" x2="59" y2="187" stroke="#657781" stroke-width="1.2" />
       <path id="u14ma_diameter" data-mf1-role="dimension" d="M54 119 L54 187" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ma_dim)" marker-end="url(#u14ma_dim)" />
-      <text x="78" y="180" font-size="12" fill="#263746" text-anchor="start">D = 80 mm</text>
-      <text x="260" y="216" font-size="13" fill="#263746" text-anchor="middle">zrak: a = 340 m/s</text>
+      <text x="78" y="180" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan> = 80 mm</text>
+      <text x="260" y="216" font-size="13" fill="#263746" text-anchor="middle">zrak: <tspan font-style="italic">a</tspan> = 340 m/s</text>
       <rect x="70" y="275" width="114" height="18" rx="0" fill="#cedee0" stroke="none" stroke-width="1.2" />
       <rect x="184" y="275" width="266" height="18" rx="0" fill="#c5cdd3" stroke="none" stroke-width="1.2" />
       <line x1="70" y1="284" x2="450" y2="284" stroke="#3a4a56" stroke-width="1.5" />
@@ -53,11 +53,11 @@
       <text x="450" y="319" font-size="11" fill="#263746" text-anchor="middle">1</text>
       <line x1="158.92000000000002" y1="249" x2="158.92000000000002" y2="282" stroke="#356b83" stroke-width="1.2" />
       <circle cx="158.92000000000002" cy="284" r="3" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
-      <text x="158.92000000000002" y="245" font-size="12" fill="#263746" text-anchor="middle">Ma<tspan baseline-shift="sub" font-size="0.75em">1</tspan></text>
+      <text x="158.92000000000002" y="245" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Ma<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">1</tspan></text>
       <line x1="247.84" y1="267" x2="247.84" y2="282" stroke="#356b83" stroke-width="1.2" />
       <circle cx="247.84" cy="284" r="3" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
-      <text x="247.84" y="263" font-size="12" fill="#263746" text-anchor="middle">Ma<tspan baseline-shift="sub" font-size="0.75em">2</tspan></text>
-      <text x="262" y="345" font-size="13" fill="#263746" text-anchor="middle">Ma</text>
+      <text x="247.84" y="263" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Ma<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">2</tspan></text>
+      <text x="262" y="345" font-size="13" fill="#263746" text-anchor="middle" font-style="italic">Ma</text>
     </g>
   </g>
   <g id="u14ma_title-scene-2" transform="translate(-50.0000 -12.0000)">
@@ -65,12 +65,12 @@
       <text x="728.0" y="49" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Dimnjak: tlocrt</text>
       <circle id="u14ma_cylinder" cx="617" cy="201" r="28" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.5" />
       <path id="u14ma_wind" data-mf1-vector="velocity" d="M527 201 L577 201" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ma_vopen)" />
-      <text x="552" y="189" font-size="13" fill="#263746" text-anchor="middle"><tspan font-weight="700">v</tspan> = 12 m/s</text>
-      <text x="840" y="128" font-size="13" fill="#263746" text-anchor="middle">St ≈ 0,2; f<tspan baseline-shift="sub" font-size="0.75em">n</tspan> = 0,6 Hz</text>
+      <text x="552" y="189" font-size="13" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">v</tspan> = 12 m/s</text>
+      <text x="840" y="128" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">St</tspan> ≈ 0,2; <tspan font-style="italic">f</tspan><tspan baseline-shift="sub" font-size="0.75em">n</tspan> = 0,6 Hz</text>
       <line x1="655" y1="173" x2="665" y2="173" stroke="#657781" stroke-width="1.2" />
       <line x1="655" y1="229" x2="665" y2="229" stroke="#657781" stroke-width="1.2" />
       <path id="u14ma_chimneyd" data-mf1-role="dimension" d="M660 173 L660 229" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ma_dim)" marker-end="url(#u14ma_dim)" />
-      <text x="700" y="151" font-size="13" fill="#263746" text-anchor="middle">D<tspan baseline-shift="sub" font-size="0.75em">d</tspan> = 2,0 m</text>
+      <text x="700" y="151" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.75em">d</tspan> = 2,0 m</text>
       <line x1="617" y1="173" x2="665" y2="173" stroke="#657781" stroke-width="1" />
       <line x1="617" y1="229" x2="665" y2="229" stroke="#657781" stroke-width="1" />
       <line x1="646" y1="201" x2="927" y2="201" stroke="#657781" stroke-width="1" stroke-dasharray="3 3" />

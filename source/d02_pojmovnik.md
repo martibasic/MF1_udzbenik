@@ -1,23 +1,24 @@
-## Pojmovnik
-
 Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke, izvode i granice modela potraži preko poveznica u posljednjem stupcu: broj vodi u poglavlje, a slovo u dodatak. Oznake slijede standard iz dodatka A.
+
+## Pojmovi od A do Ž {#sec-pojmovi-a-z}
 
 ::: {.mf1-glossary}
 
 | Pojam | Kratka radna definicija | Odredište |
 |---|---|---|
+| Afinitetni zakoni | Približne veze $Q\propto n$, $H\propto n^2$, $P\propto n^3$ za istu crpku pri promjeni brzine vrtnje; $NPSH_r$ se njima ne prenosi nekritički. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Aktuatorski disk | Idealizirana ploha koja struji predaje energiju i količinu gibanja; model propelera i rotora s $F_T=\dot m(v_j-v_A)$ i $\eta_i=2/(1+\sqrt{1+C_{Th}})$. | [14](u14_turbostrojevi_i_propulzija.qmd) |
 | Akumulacija | Vremenska promjena ekstenzivne veličine u kontrolnom volumenu; ne nestaje samo zato što su trenutačni ulaz i izlaz jednaki. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd) |
 | Apsolutni tlak | Tlak $p_{aps}$ mjeren od idealnog vakuuma; obvezan je u jednadžbi stanja, pri provjeri kavitacije, u $NPSH_a$ i u kompresibilnom toku. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd), [8](u08_energijska_jednadzba_i_bernoulli.qmd), [9](u09_kompresibilni_idealni_tok.qmd) |
+| Bernoullijeva jednadžba | $p/(\rho g)+v^2/(2g)+z=\text{konst.}$ duž strujnice stacionarnog nestlačivog toka bez trenja i strojeva; poseban je slučaj energijske jednadžbe. | [8](u08_energijska_jednadzba_i_bernoulli.qmd) |
 | Bezdimenzijski broj | Bezdimenzijska kombinacija veličina koja sažima utjecaj članova modela; može biti omjer sila, brzina ili vremena. | [11](u11_dimenzijska_analiza_i_slicnost.qmd) |
 | Bondov broj | $Bo=\Delta\rho gL^2/\sigma$; mjeri relativnu važnost gravitacije i površinske napetosti. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd), [11](u11_dimenzijska_analiza_i_slicnost.qmd) |
-| Boussinesqov koeficijent | Korekcijski faktor količine gibanja $\beta=\int_A v^2\,dA/(v^2A)$; za jednolik profil $\beta=1$, laminarni parabolični $\beta=4/3$. | [10](u10_kolicina_i_moment_kolicine_gibanja.qmd), [15](u15_otvoreni_tokovi.qmd) |
 | Brzina zvuka | Brzina širenja malog izentropskog tlačnog poremećaja, $a^2=(\partial p/\partial\rho)_s$; za kalorički savršen plin $a=\sqrt{\kappa RT}$. | [9](u09_kompresibilni_idealni_tok.qmd) |
 | Buckinghamov $\Pi$-teorem | Problem s $n$ veličina i rangom dimenzijske matrice $k$ opisuje se s $n-k$ bezdimenzijskih grupa; oblik veze teorem ne daje. | [11](u11_dimenzijska_analiza_i_slicnost.qmd) |
-| Centar tlaka | Hvatište rezultante tlaka na ravnu plohu, $h_{CP}=h_C+I_G/(h_CA)$ za vertikalnu plohu; nalazi se ispod težišta kad tlak raste s dubinom. | [5](u05_hidrostatske_sile_na_plohe.qmd) |
+| Centar tlaka | Hvatište rezultante tlaka na ravnu plohu, $h_{CP}=h_C+I_G/(h_CA)$ za okomitu plohu; nalazi se ispod težišta kad tlak raste s dubinom. | [5](u05_hidrostatske_sile_na_plohe.qmd) |
 | Centar uzgona | Težište istisnutog volumena: točka $B$ kroz koju prolazi pravac uzgona. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | CFD | Računalna dinamika fluida: numeričko rješavanje modela strujanja uz rubne uvjete, mrežu i procjenu pogreške. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
-| Coriolisov koeficijent (korekcijski faktor kinetičke energije) | $\alpha=\int_A v^3\,dA/(v^3A)$ uz $v^2/(2g)$ u energijskoj jednadžbi; za jednolik profil $\alpha=1$, laminarni parabolični $\alpha=2$. | [8](u08_energijska_jednadzba_i_bernoulli.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd), [15](u15_otvoreni_tokovi.qmd) |
+| Darcy–Weisbachova jednadžba | $h_l=\lambda(L/D)v^2/(2g)$ daje linijski gubitak visine u cijevi; Darcyjev koeficijent trenja $\lambda$ ovisi o $Re$ i $k_s/D$. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Dinamička sličnost | Jednakost mjerodavnih bezdimenzijskih parametara modela i prototipa; često nije moguća za sve parametre istodobno. | [11](u11_dimenzijska_analiza_i_slicnost.qmd) |
 | Dinamička viskoznost | Koeficijent $\mu$ u Newtonovu zakonu viskoznosti; za jednostavno smicanje newtonskog fluida vrijedi $\tau=\mu\,dv/dy$. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Diskretizacija | Zamjena kontinuiranog opisa konačnim skupom algebarskih jednadžbi; prostorna i vremenska podjela uvode zasebne pogreške. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
@@ -54,8 +55,10 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Kontinuumski model | Pridruživanje glatkih makroskopskih svojstava svakoj točki; valjanost ovisi o mjerilu problema. | [1](u01_osnove_fluida_i_pascalov_zakon.qmd) |
 | Kontrolna građevina | Ustava, preljev ili prag koji nameće vezu protoka i razine u otvorenom toku. | [15](u15_otvoreni_tokovi.qmd) |
 | Kontrolni volumen | Odabrani dio prostora (KV) preko čije se granice (KP) prate tokovi mase, energije i količine gibanja. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd) |
+| Korekcijski faktor kinetičke energije | $\alpha=\int_A v^3\,dA/(v^3A)$ uz $v^2/(2g)$ u energijskoj jednadžbi (Coriolisov koeficijent); za jednolik profil $\alpha=1$, za razvijeni laminarni profil u kružnoj cijevi $\alpha=2$. | [8](u08_energijska_jednadzba_i_bernoulli.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd), [15](u15_otvoreni_tokovi.qmd) |
+| Korekcijski faktor količine gibanja | $\beta=\int_A v^2\,dA/(v^2A)$ uz $\dot mv$ u bilanci količine gibanja (Boussinesqov koeficijent); za jednolik profil $\beta=1$, za razvijeni laminarni profil u kružnoj cijevi $\beta=4/3$. | [10](u10_kolicina_i_moment_kolicine_gibanja.qmd), [14](u14_turbostrojevi_i_propulzija.qmd) |
 | Korelacijska linija ITTC 1957 | Dogovorna krivulja $C_F=0{,}075/(\log_{10}Re-2)^2$ za otpor trenja. | [11](u11_dimenzijska_analiza_i_slicnost.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
-| Kormilarski stroj | Hidraulički pogon kormila; u Rapsonovu rasporedu s četiri cilindra dijagonalni par pod tlakom daje $M=2Fr$ i dobavu $V=2As$, a povratni par vraća ulje. | [1](u01_osnove_fluida_i_pascalov_zakon.qmd) |
+| Kormilarski stroj | Hidraulički pogon kormila; u Rapsonovu rasporedu četiri cilindra pod tlakom ulja zakreću rudo kormila. | [1](u01_osnove_fluida_i_pascalov_zakon.qmd) |
 | Kritična dubina | Dubina $y_c$ minimalne specifične energije pri zadanom protoku; $Fr=1$, općenito $Q^2T/(gA^3)=1$. | [15](u15_otvoreni_tokovi.qmd) |
 | Kritično stanje | Stanje pri $Ma=1$, oznake sa zvjezdicom ($p^*$, $T^*$, $A^*$); za zrak $p^*/p_0=0{,}528$. | [9](u09_kompresibilni_idealni_tok.qmd) |
 | Kut nestajanja stabiliteta | Nagib $\varphi_v$ pri kojem $GZ$ ponovno postaje nula. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
@@ -68,24 +71,26 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Manometarski tlak | $p_M=p_{aps}-p_{atm}$; može biti negativan bez vakuuma ili kavitacije. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd), [8](u08_energijska_jednadzba_i_bernoulli.qmd) |
 | Maseni protok | $\dot m=\int_A\rho\vec v\!\cdot\!\vec n\,dA$; predznak određuje vanjska normala. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd) |
 | Materijalna derivacija | Promjena veličine pri praćenju čestice, $D()/Dt=\partial()/\partial t+\vec v\!\cdot\!\nabla()$. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
+| Meniskus | Zakrivljena slobodna površina kapljevine uz stijenku ili u kapilari; oblik mu određuju površinska napetost i kontaktni kut. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd) |
 | Metacentar | Točka $M$ u kojoj pravac uzgona pri malom poprečnom nagibu siječe ravninu simetrije; $BM=I_T/V_{ist}$. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | Metacentarska visina | $GM=KB+BM-KG$; njezin predznak određuje početni stabilitet, ali ne i stabilitet pri velikim kutovima ili nakon oštećenja. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | Metoda dodane težine | Oštećeni stabilitet: voda u izoliranom naplavljenom prostoru računa se kao ukrcana masa. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | Metoda konačnih elemenata (FEM) | Diskretizacija jednadžbi u slaboj formulaciji pomoću funkcija oblika na elementima; alternativa metodi konačnih volumena. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
 | Moodyjev dijagram | Prikaz $\lambda(Re,k_s/D)$: laminarni pravac $64/Re$ i turbulentne krivulje prema Colebrooku. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Mrežna konvergencija | Provjera ustaljuje li se tražena veličina pri sustavnom profinjenju mreže; traži barem tri mreže. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
-| MRF i klizajuća mreža | CFD prikaz rotora: MRF bez pomicanja mreže za srednji rad, klizajuća mreža za pulsacije lopatica. | [14](u14_turbostrojevi_i_propulzija.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
+| MRF i klizna mreža | CFD prikaz rotora: MRF bez pomicanja mreže za srednji rad, klizna mreža (engl. *sliding mesh*) za pulsacije lopatica. | [14](u14_turbostrojevi_i_propulzija.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
 | Nadvođe | Visina $f=H-T$ od vodne linije do ruba palube. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | Navier–Stokesove jednadžbe | Bilance količine gibanja newtonskog fluida; uz kontinuitet i rubne uvjete određuju polje strujanja. | [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Nestacionarni tok | Tok u kojem neka Eulerova veličina u fiksnoj točki ovisi o vremenu. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Newtonski fluid | Fluid s linearnom vezom naprezanja i brzine deformacije i viskoznošću neovisnom o smicanju. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Normalna dubina | Dubina $y_n$ uniformnog toka pri kojoj je $S_f=S_0$; određuje se iz Manningove jednadžbe. | [15](u15_otvoreni_tokovi.qmd) |
 | Normalni udarni val | Tanka zona okomita na nadzvučni tok kroz koju rastu $p$, $\rho$, $T$ i entropija, pada $p_0$, a tok postaje podzvučan. | [9](u09_kompresibilni_idealni_tok.qmd) |
-| No-slip uvjet (uvjet prianjanja) | Tangencijalna brzina viskoznog fluida jednaka je brzini nepropusne stijenke. | [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Očuvanje | Promjena ekstenzivne veličine zatvorenog sustava jednaka je vanjskim prijenosima i izvorima; KV dodaje tok kroz granicu. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [8](u08_energijska_jednadzba_i_bernoulli.qmd), [9](u09_kompresibilni_idealni_tok.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Odbitak potiska | Smanjenje korisnog potiska zbog povećanja otpora trupa ispred propelera; određuje se pokusom. | [14](u14_turbostrojevi_i_propulzija.qmd) |
 | Odvajanje graničnog sloja | Odmak struje od stijenke pod nepovoljnim gradijentom tlaka; položaj ovisi o $Re$, geometriji i stanju sloja. | [12](u12_diferencijalni_opis_realnog_toka.qmd) |
+| Okomita komponenta sile na zakrivljenu plohu | Iznos jednak težini zamišljenog fluida iznad plohe; smjer iz normale i strane stvarnog fluida. | [5](u05_hidrostatske_sile_na_plohe.qmd) |
 | Pascalov zakon | U mirnom zatvorenom fluidu nametnuta promjena tlaka prenosi se bez umanjenja; u stvarnosti se poremećaj širi konačnom brzinom. | [1](u01_osnove_fluida_i_pascalov_zakon.qmd) |
+| Peltonovo kolo | Akcijska turbina na kojoj mlaz iz sapnice skreće na nizu lopatica; bez trenja na lopatici najveću snagu daje pri obodnoj brzini $u=c_1/2$. | [10](u10_kolicina_i_moment_kolicine_gibanja.qmd), [14](u14_turbostrojevi_i_propulzija.qmd) |
 | Petlja mreže | Zatvoreni put kroz mrežu cjevovoda na kojem zbroj predznačenih gubitaka iščezava. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Piezometarska visina i piezometarska crta (HGL) | $z+p/(\rho g)$, razina u piezometru; crta se od energijske razlikuje za brzinsku visinu. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd), [8](u08_energijska_jednadzba_i_bernoulli.qmd), [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Pitotova cijev | Sonda koja mjeri zaustavni tlak $p_0$; uz statički tlak daje $v=\sqrt{2(p_0-p)/\rho}$ u nestlačivom toku. | [8](u08_energijska_jednadzba_i_bernoulli.qmd), [9](u09_kompresibilni_idealni_tok.qmd) |
@@ -94,17 +99,18 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Potisak | Sila $F_T$ propulzora na plovilo, jednaka promjeni toka količine gibanja kroz uređaj. | [10](u10_kolicina_i_moment_kolicine_gibanja.qmd), [14](u14_turbostrojevi_i_propulzija.qmd) |
 | Površinska napetost | Slobodna energija po jedinici površine, odnosno sila po jedinici duljine sučelja, $\sigma$. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd) |
 | Prandtlova relacija | $v_1v_2=a^{*2}$ za normalni udarni val; nadzvučni ulaz daje podzvučni izlaz. | [9](u09_kompresibilni_idealni_tok.qmd) |
-| Preekspandirani i podekspandirani mlaz | Izlazni tlak nadzvučne sapnice niži je ili viši od protutlaka; tlak se prilagođava izvan sapnice. | [9](u09_kompresibilni_idealni_tok.qmd) |
+| Preekspandirani mlaz | Izlazni tlak nadzvučne sapnice niži je od protutlaka $p_b$; mlaz se protutlaku prilagođava kosim valovima izvan sapnice. | [9](u09_kompresibilni_idealni_tok.qmd) |
 | Pridružena masa | Dodatna tromost fluida ubrzanog s tijelom pri nestacionarnom gibanju; mijenja period njihanja, ali ne i statičku ravnotežu. | [6](u06_uzgon_plivanje_i_stabilnost.qmd), [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd) |
 | Radna točka | Presjecište karakteristika stroja i sustava; treba je provjeriti s obzirom na učinkovitost, područje rada i kavitacijsku rezervu. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd), [14](u14_turbostrojevi_i_propulzija.qmd) |
 | RANS i modeli zatvaranja ($k$–$\varepsilon$, $k$–$\omega$ SST) | Osrednjene jednadžbe s Reynoldsovim naprezanjima $-\rho\overline{v_i'v_j'}$ koja zatvaraju modeli $k$–$\varepsilon$ ili $k$–$\omega$ SST. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
 | Relativna brzina | Brzina fluida prema gibajućoj granici ili lopatici; u turbostrojevima $\vec w=\vec c-\vec u$. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd), [14](u14_turbostrojevi_i_propulzija.qmd) |
-| Rezidual | Neravnoteža diskretne jednadžbe tijekom iteracija; mali rezidual nije dokaz točnosti. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
 | Reynoldsov broj | $Re=vL/\nu$, omjer inercijskog i viskoznog učinka; sam ne određuje režim za sve geometrije. | [11](u11_dimenzijska_analiza_i_slicnost.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd), [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Reynoldsov transportni teorem | Povezuje promjenu veličine materijalnog sustava s akumulacijom u KV i tokom kroz KP, određenim relativnom brzinom $\vec v-\vec v_{KP}$. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd), [14](u14_turbostrojevi_i_propulzija.qmd) |
+| Rezidual | Neravnoteža diskretne jednadžbe tijekom iteracija; mali rezidual nije dokaz točnosti. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
 | Rubni uvjet | Podatak na granici domene, kompatibilan s jednadžbama; pogrešan uvjet ne može popraviti ni finija mreža. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
+| Sifon | Cijev koja tekućinu prevodi preko točke više od slobodne površine u spremniku; tok održava razlika razina, a apsolutni tlak u tjemenu mora ostati iznad $p_v$. | [8](u08_energijska_jednadzba_i_bernoulli.qmd) |
 | SIMPLE i PISO | Algoritmi sprezanja tlaka i brzine koji korekcijom tlaka vraćaju $\nabla\cdot\vec v=0$. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
-| Sondiranje i sondna cijev | Mjerenje dubine tekućine ili vodenog taloga kroz vertikalnu sondnu cijev; otkriva sloj vode koji se iz tlaka ne može razlučiti. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd), [4](u04_relativno_mirovanje_fluida.qmd) |
+| Sondiranje i sondna cijev | Mjerenje dubine tekućine ili vodenog taloga kroz okomitu sondnu cijev; otkriva sloj vode koji se iz tlaka ne može razlučiti. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd), [4](u04_relativno_mirovanje_fluida.qmd) |
 | Specifična energija otvorenog toka | $E=y+\alpha v^2/(2g)$, energijska visina mjerena od dna kanala. | [15](u15_otvoreni_tokovi.qmd) |
 | Spregnute dubine | Dubine $y_1$ i $y_2$ hidrauličkog skoka s jednakom impulsnom funkcijom; pravokutno: $y_2/y_1=\tfrac12[\sqrt{1+8Fr_1^2}-1]$. | [15](u15_otvoreni_tokovi.qmd) |
 | Stacionarni tok | Tok u kojem Eulerove veličine u fiksnoj točki ne ovise o vremenu; čestice ipak mogu konvektivno ubrzavati. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
@@ -119,18 +125,18 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Trajektorija čestice | Put jedne čestice u vremenu; u stacionarnom toku podudara se sa strujnicom. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd) |
 | Turbulencija | Trodimenzijsko nestacionarno gibanje širokog raspona skala koje pojačava miješanje; turbulencijski model samo ga približno opisuje. | [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Učinak slobodne površine | Smanjenje efektivnog $GM$ zbog djelomično punog tanka, $\delta GM=-\rho_ti_t/(\rho V_{ist})$. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
-| Ullage | Udaljenost $U$ od referentne točke ullage otvora do površine tereta u tanku. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd) |
+| Ulaž (engl. *ullage*) | Udaljenost $U$ od referentne točke ulažnog otvora do površine tereta u tanku. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd) |
+| Usisni koš (engl. *sea chest*) | Udubljenje u oplati ispod vodne linije, zaštićeno rešetkom, iz kojeg crpke usisavaju morsku vodu; otvor u oplati naziva se zahvatni usis. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [8](u08_energijska_jednadzba_i_bernoulli.qmd), [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
+| Uvjet prianjanja (no-slip) | Tangencijalna brzina viskoznog fluida jednaka je brzini nepropusne stijenke. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Uzgon | Rezultanta hidrostatičkog tlaka jednaka težini istisnutog fluida i usmjerena suprotno gravitaciji. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
-| Validacija | Procjena opisuje li model stvarni sustav dovoljno dobro za zadanu namjenu; provodi se usporedbom s mjerenjem uz iskazanu nesigurnost. Postupak: dodatak D, @sec-cfd-venturi. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
+| Validacija | Procjena opisuje li model stvarni sustav dovoljno dobro za zadanu namjenu, provedena usporedbom s mjerenjem uz iskazanu nesigurnost. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd#sec-cfd-venturi) |
 | Venturijeva cijev | Suženje s difuzorom za mjerenje protoka iz razlike tlakova između ulaza i grla; u grlu je moguća kavitacija. | [8](u08_energijska_jednadzba_i_bernoulli.qmd), [11](u11_dimenzijska_analiza_i_slicnost.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
-| Verifikacija | Provjera rješava li numerički postupak zadane jednadžbe ispravno, uz procjenu numeričke pogreške. Postupak: dodatak D, @sec-cfd-venturi. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
-| Vertikalna komponenta sile na zakrivljenu plohu | Iznos jednak težini zamišljenog fluida iznad plohe; smjer iz normale i strane stvarnog fluida. | [5](u05_hidrostatske_sile_na_plohe.qmd) |
+| Verifikacija | Provjera rješava li numerički postupak zadane jednadžbe ispravno, uz procjenu numeričke pogreške. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd#sec-cfd-venturi) |
 | Volumenski protok | $Q=\int_A\vec v\!\cdot\!\vec n\,dA$; u stlačivom toku općenito nije očuvan. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd) |
 | Volumni modul elastičnosti | $K=-V\,dp/dV$ uz zadane toplinske uvjete; za mali porast tlaka $\Delta V_c\approx V_0\Delta p/K$. | [1](u01_osnove_fluida_i_pascalov_zakon.qmd) |
 | Weberov broj | $We=\rho v^2L/\sigma$; uspoređuje inercijski i kapilarni učinak. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd), [11](u11_dimenzijska_analiza_i_slicnost.qmd) |
 | Young–Laplaceova relacija | Skok tlaka preko zakrivljenog sučelja razmjeran je $\sigma$ i zbroju glavnih zakrivljenosti. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd) |
 | Zagušenje sapnice (choking) | Dosezanje najvećeg masenog protoka kad u najužem presjeku nastupi $Ma=1$; nije prigušenje ventilom (throttling). | [9](u09_kompresibilni_idealni_tok.qmd), [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
-| Zahvatni usis (sea chest) | Udubljenje u oplati ispod vodne linije, zaštićeno rešetkom, iz kojeg crpke usisavaju morsku vodu. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [8](u08_energijska_jednadzba_i_bernoulli.qmd) |
 | Zaustavna (stagnacijska) veličina | Vrijednost $p_0$, $T_0$, $\rho_0$ pri zamišljenom usporavanju do mirovanja; u kompresibilnom toku usporavanje je izentropsko. | [8](u08_energijska_jednadzba_i_bernoulli.qmd), [9](u09_kompresibilni_idealni_tok.qmd) |
 
 : {.mf1-reference-table tbl-colwidths="[24,60,16]"}

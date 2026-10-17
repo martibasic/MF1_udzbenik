@@ -41,8 +41,27 @@
   pagebreak(weak: true)
 }
 
-#let mf1-book(title: [], subtitle: [], author: "", outline-depth: 2, body) = {
-  set document(title: title, author: author)
+// One restrained cover motif taken from an existing book sketch (streamline
+// with velocity vectors, Slika "Strujnica i trajektorija"), recoloured to a
+// single ink at build time. Labels and title text of the sketch are removed;
+// the canonical SVG stays untouched.
+#let mf1-cover-motif(colour: mf1-accent, width: 100mm) = {
+  let svg = read("/assets/print/u08_fig_kinematika.svg")
+  svg = svg.replace(regex("(?s)<text\b.*?</text>"), "")
+  svg = svg.replace(regex("(?s)<title\b.*?</title>"), "")
+  svg = svg.replace(regex("(?s)<desc\b.*?</desc>"), "")
+  svg = svg.replace(regex("fill=\"(#fff|#ffffff|#FFFFFF|white)\""), "fill=\"none\"")
+  svg = svg.replace(regex("#[0-9a-fA-F]{6}\b"), colour.to-hex())
+  // Left panel only: the streamline and its tangent velocity vectors.
+  svg = svg.replace(regex("viewBox=\"[^\"]*\""), "viewBox=\"20 128 345 128\"", count: 1)
+  image(bytes(svg), format: "svg", width: width,
+    alt: "Ukrasni motiv: strujnice s vektorima brzine.")
+}
+
+#let mf1-book(title: [], subtitle: [], author: "", description: none,
+  keywords: (), institution: (), place-year: none, outline-depth: 2, body) = {
+  set document(title: title, author: author, description: description,
+    keywords: keywords)
   set text(font: mf1-font-family, size: mf1-font-size-pt * 1pt,
     lang: "hr", fill: mf1-ink)
   set par(justify: false, first-line-indent: 0pt)
@@ -61,7 +80,10 @@
           set par(justify: false, leading: 0.25em)
           block(width: 100%, inset: (bottom: 5pt),
             stroke: (bottom: 0.4pt + mf1-rule-print), {
-              if chapter.numbering != none {
+              let appendix = state("appendix-state", none).at(chapter.location()) != none
+              if appendix and chapter.numbering != none {
+                [Dodatak #numbering("A", counter(heading).at(chapter.location()).first()) — ]
+              } else if chapter.numbering != none {
                 numbering(chapter.numbering, ..counter(heading).at(chapter.location()))
                 h(0.4em)
               }
@@ -79,16 +101,47 @@
   show figure.where(caption: none): set figure(outlined: false)
   show link: set text(fill: mf1-accent-d)
 
+  // Title page (recto): series label, title, subtitle, author, one motif,
+  // institution and year.
   page(header: none, footer: none, {
-    v(16mm)
-    text(size: 10pt, fill: mf1-muted, "PRIRUČNIK")
-    v(45mm)
-    block(below: 14pt, {
-      set text(size: mf1-title-pt * 1pt, weight: "bold")
+    set par(justify: false)
+    v(12mm)
+    text(size: 10pt, fill: mf1-muted, tracking: 0.12em, upper[Sveučilišni priručnik])
+    v(36mm)
+    block(below: 22pt, {
+      set par(leading: 0.4em)
+      set text(size: mf1-title-pt * 1pt, weight: "bold", hyphenate: false)
       title
     })
-    block(below: 24pt, text(size: 14pt, fill: mf1-muted, subtitle))
+    block(below: 30pt, {
+      set par(leading: 0.55em)
+      text(size: 14pt, fill: mf1-muted, hyphenate: false, subtitle)
+    })
     text(size: 16pt, author)
+    v(1fr)
+    align(center, mf1-cover-motif())
+    v(1fr)
+    {
+      set text(size: 11pt, fill: mf1-ink)
+      set par(leading: 0.5em)
+      for line in institution { line; linebreak() }
+      if place-year != none { v(4pt); text(fill: mf1-muted, place-year) }
+    }
+  })
+
+  // Title verso: imprint from the canonical "Impresum" section.
+  page(header: none, footer: none, {
+    set par(justify: false, spacing: 0.9em, leading: 0.55em)
+    set text(size: 9.5pt, fill: mf1-soft-ink)
+    set list(spacing: 0.7em)
+    v(1fr)
+    context {
+      let imprint = mf1-imprint.final()
+      if imprint != none {
+        block(below: 10pt, text(size: 10.5pt, weight: "bold", fill: mf1-ink)[Impresum])
+        imprint
+      }
+    }
   })
 
   {

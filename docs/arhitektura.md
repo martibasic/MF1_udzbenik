@@ -219,7 +219,8 @@ lokalni naslov zadržava P2. Pojmovnik dobiva stabilne sidrene oznake iz pojma.
 `text-width-pt` je izvedena širina A4 lista umanjena za PDF margine.
 Build je obnavlja i regenerira figure kada se promijene ulazi. Oznake zadržavaju
 zasebnu veličinu u točkama. Promjena fonta izvan već učitanih obitelji zahtijeva
-i dostupnost fonta / odgovarajući `web_font_import`.
+i dostupnost fonta: fontovi weba poslužuju se lokalno iz `assets/fonts/web/`
+prema ključu `web_fonts` u `design-system/tokens.json` (bez vanjskih zahtjeva).
 
 CSS se učitava redom tokens → base → typography → layout → components →
 utilities → print → responsive. Bootstrapove zadane vrijednosti generiraju
@@ -252,8 +253,9 @@ Urednički obrazac primjera i zadataka definiran je u autorskom ugovoru.
 `audit_publication.py` provjerava redoslijed obveznih polja u kanonskim
 izvorima; zajednički adapter istim komponentama označuje polja primjera
 i samostalnih zadataka. PDF adapter uklanja samo prezentacijske omotače
-polja, prepoznaje i naslijeđenu interpunkciju oznaka te veže završnu razinu
-uz posljednju stavku bez blokiranja prijeloma ostalih zahtjeva.
+polja i prepoznaje naslijeđenu interpunkciju oznaka. Razina zadatka
+(`[Razina: T1]{.mf1-task-level}` u izvoru) prikazuje se u webu i PDF-u kao
+oznaka uz naslov zadatka, jednako kao kod riješenih primjera.
 Razmaci `exercise_paragraph_spacing_em` i `exercise_list_spacing_em`
 u globalnim tokenima primjenjuju se na oba tipa zadataka.
 

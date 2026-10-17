@@ -72,39 +72,37 @@
       <circle cx="201" cy="122" r="10" fill="#3a4a56" />
       <circle cx="410" cy="122" r="10" fill="#3a4a56" />
       <path id="u01ch1_load" d="M305 10 L305 72" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01ch1_vF)" data-mf1-vector="force" />
-      <text x="325" y="46" font-size="14" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">G</tspan></text>
+      <text x="325" y="46" font-size="14" fill="#263746" font-weight="700" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan></text>
       <path id="u01ch1_liftForce0" d="M120 391 L120 360" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01ch1_vF)" data-mf1-vector="force" />
-      <text x="128" y="384" font-size="13" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">L</tspan>
-      </text>
+      <text x="128" y="384" font-size="13" fill="#263746" font-weight="700" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
       <path id="u01ch1_liftForce1" d="M490 391 L490 360" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01ch1_vF)" data-mf1-vector="force" />
-      <text x="498" y="384" font-size="13" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">L</tspan>
-      </text>
-      <text x="305" y="305" font-size="12" fill="#263746" text-anchor="middle">A<tspan baseline-shift="-2.64" font-size="9.0">L</tspan> = 150 cm² svaki</text>
+      <text x="498" y="384" font-size="13" fill="#263746" font-weight="700" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
+      <text x="305" y="305" font-size="12.5" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 150 cm² svaki</text>
       <line x1="236" y1="307" x2="171" y2="345" stroke="#657781" stroke-width="1" />
       <line x1="375" y1="307" x2="434" y2="345" stroke="#657781" stroke-width="1" />
       <rect id="u01ch1_guide" x="17" y="128" width="7" height="365" rx="0" fill="url(#u01ch1_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect id="u01ch1_slider" x="14" y="138" width="16" height="16" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
-      <text x="310" y="179" font-size="11" fill="#263746" text-anchor="middle">zajednički pomak</text>
+      <text x="310" y="179" font-size="12.5" fill="#263746" text-anchor="middle">zajednički pomak</text>
       <path id="u01ch1_pumpForce" d="M719 156 L719 178" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01ch1_vF)" data-mf1-vector="force" />
-      <text x="650" y="162" font-size="14" fill="#263746" text-anchor="middle"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></tspan> = 460 N</text>
-      <text x="650" y="408" font-size="12" fill="#263746" text-anchor="middle">A<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 5 cm²</text>
+      <text x="650" y="162" font-size="14" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">p</tspan> = 460 N</text>
+      <text x="650" y="408" font-size="12.5" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 5 cm²</text>
       <line x1="684" y1="409" x2="708" y2="350" stroke="#657781" stroke-width="1" />
       <line id="u01ch1_liftInitial" x1="420.0" y1="371.888889" x2="560.0" y2="371.888889" stroke="#3a4a56" stroke-width="1.2" stroke-dasharray="4 3" />
       <line x1="606" y1="358" x2="616" y2="358" stroke="#657781" stroke-width="1.2" />
       <line x1="606" y1="371.888889" x2="616" y2="371.888889" stroke="#657781" stroke-width="1.2" />
       <path id="u01ch1_liftStroke" d="M611 358 L611 371.888889" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01ch1_dimSmall)" marker-end="url(#u01ch1_dimSmall)" data-mf1-role="dimension" />
-      <text x="578" y="337" font-size="12" fill="#263746" text-anchor="start">s<tspan baseline-shift="-2.64" font-size="9.0">L</tspan> = 25 mm</text>
+      <text x="578" y="337" font-size="12.5" fill="#263746" text-anchor="start"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 25 mm</text>
       <line x1="564.0" y1="358" x2="616" y2="358" stroke="#657781" stroke-width="1" />
       <line x1="564.0" y1="371.888889" x2="616" y2="371.888889" stroke="#657781" stroke-width="1" />
       <line id="u01ch1_pumpInitial" x1="706.2198069915461" y1="258" x2="731.7801930084539" y2="258" stroke="#3a4a56" stroke-width="1.2" stroke-dasharray="4 3" />
       <line x1="772" y1="258" x2="782" y2="258" stroke="#657781" stroke-width="1.2" />
       <line x1="772" y1="358" x2="782" y2="358" stroke="#657781" stroke-width="1.2" />
       <path id="u01ch1_pumpStroke" d="M777 258 L777 358" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01ch1_dim)" marker-end="url(#u01ch1_dim)" data-mf1-role="dimension" />
-      <text x="807" y="382" font-size="11" fill="#263746" text-anchor="end">s<tspan baseline-shift="sub" font-size="0.7em">h</tspan> = 180 mm</text>
+      <text x="807" y="382" font-size="12.5" fill="#263746" text-anchor="end"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">h</tspan> = 180 mm</text>
       <line x1="735.7801930084539" y1="258" x2="782" y2="258" stroke="#657781" stroke-width="1" />
       <line x1="735.7801930084539" y1="358" x2="782" y2="358" stroke="#657781" stroke-width="1" />
-      <text x="120" y="462" font-size="13" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>
-      <text x="490" y="462" font-size="13" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>
+      <text x="120" y="462" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>
+      <text x="490" y="462" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M</tspan></text>
     </g>
   </g>
 </svg>

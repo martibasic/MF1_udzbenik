@@ -38,7 +38,6 @@
   </defs>
   <g id="u02v2vk_title-scene-1" transform="translate(-16.0000 -26.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
-      <text x="255.5" y="62" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Smicanje ulja između ploča</text>
       <rect id="u02v2vk_shearfluid" x="74" y="151" width="350" height="137" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
       <rect id="u02v2vk_shearmoving" x="74" y="135" width="350" height="16" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
       <rect id="u02v2vk_shearfixed" x="74" y="288" width="350" height="14" rx="0" fill="url(#u02v2vk_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -49,19 +48,19 @@
       <path id="u02v2vk_shearvelocity3" d="M116.0 205.8 L235.7 205.8" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02v2vk_vopen)" data-mf1-vector="velocity" />
       <path id="u02v2vk_shearvelocity4" d="M116.0 178.4 L275.59999999999997 178.4" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02v2vk_vopen)" data-mf1-vector="velocity" />
       <path id="u02v2vk_shearspeed" d="M116.0 108 L315.5 108" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02v2vk_vopen)" data-mf1-vector="velocity" />
-      <text x="215.75" y="97.0" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">u</text>
+      <text x="215.75" y="97.0" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">u</tspan></text>
       <path id="u02v2vk_sheardrag" d="M182.5 151 L88.0 151" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u02v2vk_vF)" data-mf1-vector="force" />
-      <text x="89.75" y="174" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
+      <text x="89.75" y="174" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan></text>
       <path id="u02v2vk_shearpull" d="M347.0 143 L441.5 143" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u02v2vk_vF)" data-mf1-vector="force" />
-      <text x="417.0" y="131" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">F</text>
-      <text x="326.0" y="229.08999999999997" font-size="11" fill="#263746" text-anchor="start" font-weight="700">v(y)</text>
-      <text x="249.0" y="321" font-size="10" fill="#263746" text-anchor="middle">nepomična stijenka: v = 0</text>
+      <text x="417.0" y="131" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan></text>
+      <text x="326.0" y="229.08999999999997" font-size="11" fill="#263746" text-anchor="start" font-weight="700"><tspan font-style="italic">v</tspan>(<tspan font-style="italic">y</tspan>)</text>
+      <text x="249.0" y="321" font-size="11" fill="#263746" text-anchor="middle">nepomična stijenka: <tspan font-style="italic">v</tspan> = 0</text>
       <line x1="51" y1="151" x2="61" y2="151" stroke="#657781" stroke-width="1.2" />
       <line x1="51" y1="288" x2="61" y2="288" stroke="#657781" stroke-width="1.2" />
       <path id="u02v2vk_sheargap" d="M56 151 L56 288" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02v2vk_dim)" marker-end="url(#u02v2vk_dim)" data-mf1-role="dimension" />
-      <text x="40" y="223.5" font-size="11" fill="#263746" text-anchor="start">δ</text>
-      <text x="249" y="83" font-size="12" fill="#263746" text-anchor="middle">u = 0,90 m/s; δ = 3 mm; A = 0,18 m²</text>
-      <text x="254" y="346" font-size="12" fill="#263746" text-anchor="middle">μ = 0,42 Pa s; ρ = 870 kg/m³</text>
+      <text x="40" y="223.5" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">δ</tspan></text>
+      <text x="249" y="64" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">u</tspan> = 0,90 m/s; <tspan font-style="italic">δ</tspan> = 3 mm; <tspan font-style="italic">A</tspan> = 0,18 m²</text>
+      <text x="254" y="346" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">μ</tspan> = 0,42 Pa s; <tspan font-style="italic">ρ</tspan> = 870 kg/m³</text>
     </g>
   </g>
 </svg>

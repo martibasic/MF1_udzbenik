@@ -16,6 +16,11 @@ from sketch_style import check_uniform_fluid
 ROOT = Path(__file__).resolve().parents[1] / 'assets' / 'print'
 
 
+def subscripts(e):
+    """Index runs written as SVG subscripts (Unicode subscript digits are not used)."""
+    return [''.join(t.itertext()) for t in e.iter() if t.get('baseline-shift') == 'sub']
+
+
 def interface(root, id, convex=False):
     """Read a circular SVG arc; equal-height lips and the stated sweep matter."""
     e=node(root,id)
@@ -160,7 +165,8 @@ def main():
     check(not any((i or '').startswith('u02vs_z3drag') for i in ids),'Z3: resistance arrows would reveal the asked directions')
     for k,(lo,hi) in ((1,(up[1],up[1]+up[3])),(2,(down[1],down[1]+down[3]))):
         lab=node(z,f'u02vs_z3label{k}')
-        check(''.join(lab.itertext()).replace(' ','')==('F₁=?' if k==1 else 'F₂=?'),'Z3: unknown resistance labelled with ?')
+        check(''.join(lab.itertext()).replace(' ','')==f'F{k}=?','Z3: unknown resistance labelled with ?')
+        check(subscripts(lab)==[str(k)],'Z3: resistance index is a true subscript')
         check(lo<float(lab.get('y'))<hi,'Z3: each unknown sits in its own gap')
     check(delta(node(z,'u02vs_z3pull'))[0]>0,'Z3: pull acts in the direction of motion')
     p0=line(node(z,'u02vs_z3profile0'));close(delta(node(z,'u02vs_z3speed'))[0],p0[1][0]-p0[0][0],'Z3: plate speed arrow equals u',tol=1e-6)
@@ -189,7 +195,7 @@ def main():
     check(hy<surface-15 and hy+hh>surface+15,'Z4: window hides any level near the free surface')
     texts=[(''.join(e.itertext()).strip(),e) for e in z.iter() if e.tag.endswith('text')]
     check(any(s=='?' and hx<float(e.get('x'))<hx+hw and hy<float(e.get('y'))<hy+hh for s,e in texts),'Z4: unknown level marked with ?')
-    check(any(s.replace(' ','')=='h₂=?' for s,e in texts),'Z4: h2 named as unknown')
+    check(any(s.replace(' ','')=='h2=?' and subscripts(e)==['2'] for s,e in texts),'Z4: h2 named as unknown')
     fluid=path(node(z,'u02vs_z4fluid'));cx=wl1[0]+wl1[2]+gap0/2
     for p in sample_segment((cx,275),(cx,hy+hh+2),101):
         check(inside(p,fluid) and distance_to_path(p,fluid)>1,'Z4: liquid continuous from tank into the coated gap')

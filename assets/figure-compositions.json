@@ -8,15 +8,6 @@
     ],
     "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
-  "u14_fig_pi_buckingham.svg": {
-    "rows": [
-      [
-        "wide"
-      ]
-    ],
-    "preserve_table": true,
-    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
-  },
   "u07_vjezbe_skice.svg": {
     "text_offsets_pt": {},
     "caption_anchor_panel": 5,
@@ -30,23 +21,6 @@
     "text_tables": [],
     "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
     "caption_anchor_panel": 0
-  },
-  "u14_fig_odluka.svg": {
-    "spatial_text": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12
-    ],
-    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
   "u12_vjezbe_skice.svg": {
     "header_text": [
@@ -89,6 +63,10 @@
       }
     },
     "text_offsets_pt": {
+      "14": [
+        -72,
+        0
+      ],
       "15": [
         -72,
         0
@@ -101,15 +79,11 @@
         -72,
         0
       ],
-      "18": [
-        -72,
-        0
-      ],
       "4": [
         0,
         -2
       ],
-      "19": [
+      "18": [
         0,
         -5
       ]
@@ -155,37 +129,34 @@
   },
   "u03_val1_diferencijalni_manometar.svg": {
     "text_offsets_pt": {
-      "2": [
+      "1": [
         0,
         -8
       ],
-      "3": [
+      "2": [
         4,
         12
       ],
-      "8": [
+      "7": [
         -5,
         0
       ],
-      "9": [
+      "8": [
         0,
         4
       ],
-      "10": [
+      "9": [
         -8,
         0
       ],
-      "12": [
+      "11": [
         8,
         0
       ]
     },
     "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
-    "header_text": [
-      1
-    ],
     "footer_text": [
-      7
+      6
     ],
     "canvas_insets_pt": {
       "0": {
@@ -196,9 +167,6 @@
     "caption_anchor_panel": 0
   },
   "u04_ch1_rotirajuci_spremnik_paraboloid.svg": {
-    "header_text": [
-      15
-    ],
     "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka.",
     "caption_anchor_panel": 0
   },

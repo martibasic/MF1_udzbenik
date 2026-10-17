@@ -6,21 +6,15 @@ Relacija $dA/A=(Ma^2-1)\,dv/v$ pokazuje da podzvučni tok ubrzava u suženju, a 
 
 Takav je račun potreban za odziv pneumatskih vodova, kapacitet sigurnosnih otvora, usis turbopuhala i sustav stlačenog zraka za upućivanje brodskog dizelskog motora. Poglavlje redom obrađuje brzinu zvuka, Machov broj, zaustavne veličine, sapnicu i zagušenje te normalni udarni val, a završava postupkom analize. Model pretpostavlja kalorički savršen plin sa stalnim $\kappa$, jednolike veličine po presjeku te zanemarivo trenje i izmjenu topline. Sile koje tok i mlaz prenose na konstrukciju računaju se integralnom bilancom količine gibanja u []{.mf1-chapter-ref target="u10"}.
 
-Slika ispod prikazuje tri temeljne pojave. Lijevo je tlačni poremećaj iz izvora O u mirujućem plinu ($v=0$), s frontama koje se šire brzinama $-a$ i $+a$. U sredini je izentropska sapnica napajana iz komore stanja $p_0$, $T_0$: u konvergentnom dijelu je $Ma<1$, u grlu $A^*$ vrijedi $Ma=1$, a u divergentnom dijelu $Ma>1$ sve do izlaznog presjeka $A_e$, iza kojeg djeluje protutlak $p_b$. Sapnica je nacrtana kao osnosimetrična, s omjerom površina izlaza i grla $A_e/A^*=1{,}6$ iz primjera [-@ex-kd-sapnica-rezim]; omjer nacrtanih promjera zato je $\sqrt{1{,}6}\approx1{,}26$. Desno je normalni udarni val kroz koji tok s $Ma_1>1$ prelazi u tok s $Ma_2<1$.
+Slika [-@fig-kompresibilni-pregled] prikazuje tri temeljne pojave. Lijevo je tlačni poremećaj iz izvora O u mirujućem plinu ($v=0$), s frontama koje se šire brzinama $-a$ i $+a$. U sredini je izentropska sapnica napajana iz komore stanja $p_0$, $T_0$: u konvergentnom dijelu je $Ma<1$, u grlu $A^*$ vrijedi $Ma=1$, a u divergentnom dijelu $Ma>1$ sve do izlaznog presjeka $A_e$, iza kojeg djeluje protutlak $p_b$. Sapnica je nacrtana kao osnosimetrična, s omjerom površina izlaza i grla $A_e/A^*=1{,}6$ iz primjera [-@ex-kd-sapnica-rezim]; omjer nacrtanih promjera zato je $\sqrt{1{,}6}\approx1{,}26$. Desno je normalni udarni val kroz koji tok s $Ma_1>1$ prelazi u tok s $Ma_2<1$.
 
-![Kompresibilni tok povezuje širenje tlačnog vala, zagušenje u sapnici i skok veličina kroz udarni val.](../assets/print/u09_fig_uvod_kompresibilni_tok.svg){#fig-kompresibilni-pregled fig-align="center" fig-alt="Kompresibilni tok povezuje širenje tlačnog vala, zagušenje u sapnici i skok veličina kroz udarni val."}
+![Kompresibilni tok povezuje širenje tlačnog vala, zagušenje u sapnici i skok veličina kroz udarni val.](../assets/print/u09_fig_uvod_kompresibilni_tok.svg){#fig-kompresibilni-pregled fig-align="center" fig-alt="Tri panela: fronte tlačnog poremećaja iz izvora O u mirujućem plinu, osnosimetrična konvergentno-divergentna sapnica s grlom A* i izlazom Ae te normalni udarni val u ravnom kanalu."}
+
+**Procijenjeno vrijeme rada uz priručnik:** 9 sati.
 
 ## Kompresibilnost fluida {#sec-kompresibilni-motivacija}
 
 U sporom toku kapljevine promjena tlaka gotovo ne mijenja gustoću, pa je model konstantne gustoće izvrstan. Kod plina pri velikoj brzini ili velikoj promjeni tlaka takvo pojednostavljenje više nije dopušteno: dio energije toka pohranjuje se u stlačivanje i zagrijavanje plina. Tada uz masu, količinu gibanja i energiju treba pratiti i vezu između tlaka, gustoće i temperature [@anderson2021].
-
-::: {.mf1-application}
-<p class="mf1-box-label">Inženjerski kontekst</p>
-
-Kompresibilnost je važna za odziv pneumatskog aktuatora, protok kroz sigurnosni ventil, upućivanje brodskog dizelskog motora stlačenim zrakom i širenje tlačnog vala kroz plinovod. U ovom poglavlju naučit ćeš prepoznati granicu nestlačivog modela i postaviti temeljni jednodimenzijski račun kompresibilnog toka.
-:::
-
-**Procijenjeno vrijeme rada uz priručnik:** 9 sati.
 
 ## Brzina zvuka {#sec-brzina-zvuka}
 
@@ -58,7 +52,7 @@ Uvrštavanjem jednadžbe [-@eq-izvod-zvuk-kontinuitet] slijedi $\mathrm{d}p=a^2\
 **Provjera.** Za nestlačiv model $\mathrm{d}\rho\to0$ pri konačnom $\mathrm{d}p$, pa $a\to\infty$: to je upravo idealizacija trenutačnog prijenosa tlaka iz hidrostatike.
 :::
 
-Za kalorički savršen plin vrijedi $p=\rho RT$ i $p/\rho^\kappa=\text{konst.}$ duž izentrope. Ovdje je $R$ specifična plinska konstanta, a $\kappa=c_p/c_v$ izentropski eksponent, bezdimenzijski omjer specifičnih toplinskih kapaciteta koji se uzima konstantnim. Oznaka $\gamma$ u ovoj knjizi ostaje rezervirana za specifičnu težinu $\rho g$. Diferenciranjem slijedi
+Za kalorički savršen plin vrijedi $p=\rho RT$ i $p/\rho^\kappa=\text{konst.}$ duž izentrope. Ovdje je $R$ specifična plinska konstanta, a $\kappa=c_p/c_v$ izentropski eksponent, bezdimenzijski omjer specifičnih toplinskih kapaciteta koji se uzima konstantnim. Oznaka $\gamma$ u ovom priručniku ostaje rezervirana za specifičnu težinu $\rho g$. Diferenciranjem slijedi
 
 $$
 \frac{dp}{d\rho}=\kappa\frac{p}{\rho}=\kappa RT,
@@ -135,7 +129,7 @@ Model konstantne gustoće može biti početna procjena ako su zagrijavanje i pad
 
 **Provjera i tumačenje**
 
-Pri $Ma=0{,}3$ izentropska promjena gustoće iznosi oko 5 %; u ventilacijskim vodovima ($10$–$20\ \text{m/s}$) pitanje se ne postavlja. Odluku treba donijeti prema lokalnom maksimumu brzine, a ne prema srednjoj brzini u najvećem presjeku.
+Vod je ovdje namjerno uzak radi ilustracije granice, pa je brzina veća nego u uobičajeno dimenzioniranom usisnom vodu. Pri $Ma=0{,}3$ izentropska promjena gustoće iznosi oko 5 %; u ventilacijskim vodovima ($10$–$20\ \text{m/s}$) pitanje se ne postavlja. Odluku treba donijeti prema lokalnom maksimumu brzine, a ne prema srednjoj brzini u najvećem presjeku.
 :::
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
@@ -147,13 +141,13 @@ Zadamo stanje dovodnoga spremnika, geometriju sapnice i uvjete okoline. Pratimo 
 
 ## Zaustavne veličine u izentropskom toku {#sec-stagnacijske-velicine}
 
-Za stacionarni, adijabatski tok idealnog plina bez rada vratila i uz zanemarivu promjenu potencijalne energije energijska jednadžba po jedinici mase glasi
+Za stacionarni, adijabatski tok kalorički savršenog plina bez rada vratila i uz zanemarivu promjenu potencijalne energije energijska jednadžba po jedinici mase glasi
 
 $$
 h+\frac{v^2}{2}=h_0=\text{konst.}
 $$ {#eq-kompresibilni-tok-stagnacijske-velicine-u-izentropskom-toku-sec-st-01}
 
-Za kalorički savršen plin $h=c_pT$, pa slijedi
+Uz $h=c_pT$ slijedi
 
 $$
 T_0=T+\frac{v^2}{2c_p}.
@@ -301,7 +295,7 @@ $$ {#eq-kompresibilni-tok-rijeseni-primjer-gornja-granica-protoka-sigurnos-02}
 
 **Provjera i tumačenje**
 
-Odluka o režimu traži apsolutne tlakove: s manometarskim tlakom $p_0=499\ \text{kPa}$ (uz $p_{atm}=101\ \text{kPa}$) granica bi pogrešno ispala $263\ \text{kPa}$. Za stvarni ventil potrebni su koeficijent istjecanja i normirani proračun kapaciteta; izračunana vrijednost ne zamjenjuje sigurnosnu certifikaciju.
+Odluka o režimu traži apsolutne tlakove: s manometarskim tlakom $p_{0,M}=499\ \text{kPa}$ (uz $p_{atm}=101\ \text{kPa}$) granica bi pogrešno ispala $263\ \text{kPa}$. Za stvarni ventil potrebni su koeficijent istjecanja i normirani proračun kapaciteta; izračunana vrijednost ne zamjenjuje sigurnosnu certifikaciju.
 :::
 
 ::: {#cfd-sapnica-prigusenje .mf1-cfd title="Računalna dinamika fluida"}
@@ -474,34 +468,42 @@ Sve relacije ovog poglavlja pretpostavljaju kalorički savršen plin sa stalnim 
 4. Napiši jednadžbu kontinuiteta, energijsku jednadžbu i jednadžbu stanja; jednadžbu količine gibanja dodaj kad postoji sila ili udarni val.
 5. Provjeri zagušenje, smjer porasta entropije i granični slučaj $Ma\to0$.
 
-::: {.mf1-samoprovjera}
+:::: {.mf1-samoprovjera}
 <p class="mf1-box-label">Provjeri sebe</p>
 
 1. Zašto Pascalov zakon ne znači trenutačan prijenos poremećaja?
+
+::: {.callout-note collapse="true"}
+### Odgovor
+Pascalov zakon opisuje novu statičku ravnotežu nestlačivog modela, a stvarni poremećaj putuje konačnom brzinom zvuka.
+:::
+
 2. Može li tok s $Ma=0{,}1$ ipak imati važnu promjenu gustoće? Navedi mehanizam.
+
+::: {.callout-note collapse="true"}
+### Odgovor
+Da; snažno grijanje ili velika promjena osnovnog tlaka može promijeniti gustoću i pri maloj brzini.
+:::
+
 3. Zašto se nadzvučni tok ubrzava u divergentnom dijelu sapnice?
+
+::: {.callout-note collapse="true"}
+### Odgovor
+Za $Ma>1$ relacija površina–brzina daje $dA>0$ kada je $dv>0$.
+:::
+
 4. Zašto se maseni protok zagušene sapnice ne može povećati daljnjim snižavanjem protutlaka, a može povišenjem zaustavnog tlaka?
 
 ::: {.callout-note collapse="true"}
-### Odgovori
-1. Poremećaj putuje konačnom brzinom zvuka.
-
-2. Da; snažno grijanje ili velika promjena osnovnog tlaka može promijeniti gustoću i pri maloj brzini.
-
-3. Za $Ma>1$ relacija površina–brzina daje $dA>0$ kada je $dv>0$.
-
-4. Kroz zvučno grlo informacija o nizvodnom tlaku ne može putovati uzvodno, pa protok ovisi samo o $p_0$, $T_0$ i $A^*$; prema jednadžbi [-@eq-priguseni-protok] on raste razmjerno s $p_0$.
+### Odgovor
+Kroz zvučno grlo informacija o nizvodnom tlaku ne može putovati uzvodno, pa protok ovisi samo o $p_0$, $T_0$ i $A^*$; prema jednadžbi [-@eq-priguseni-protok] on raste razmjerno s $p_0$.
 :::
-:::
+::::
 
 
-## Zadaci za vježbu {#sec-kompresibilni-zadaci}
+## Zadatci za vježbu {#sec-kompresibilni-zadaci}
 
-![Skice uz Z1–Z6: zvuk, zrak za upućivanje, sapnice i mjerenje preko udarnog vala.](../assets/print/u09_kompresibilni_vjezbe_skice.svg){#fig-vjezbe-kompresibilni-tok fig-align="center" fig-alt="Šest skica s otvorenim prolazima. Z2 prikazuje bocu stlačenog zraka, ventil s kritičnim presjekom i vod prema motoru. Z3 razlikuje prijenos zvuka uzvodno i nizvodno. Z4 označuje izlaz sapnice i zaseban protutlak. Z6 prikazuje normalni val u otvorenom kanalu, statičke priključke i podzvučnu Pitotovu sondu."}
-
-**Napomene uz skice.** U Z1 skica prikazuje samo točku poremećaja O i os $x$; smjerove širenja ucrtaj sam. U Z2 je ventil idealiziran kao kritični presjek $A^*$ između boce i voda prema motoru; stanje boce uzima se kao zaustavno. U Z4 izlaz konvergentne sapnice njezin je najmanji presjek; vanjski tok nije prikazan. U Z5 $A_g$ označuje izmjereni slobodni otvor, različit od nazivne površine $A_n$. U Z6 su svi označeni tlakovi apsolutni.
-
-U zadatcima plin promatraj kao kalorički savršen. Brzina zvuka odnosi se na plin, a brzine i vremena prijelaza između nepomičnih točaka na laboratorij. Duljina strelice ne zadaje iznos, a oznaka „?” označuje traženu veličinu; isprekidana crta označuje presjek ili val, ne stijenku.
+U zadatcima plin promatraj kao kalorički savršen. Brzina zvuka odnosi se na plin, a brzine i vremena prijelaza između nepomičnih točaka na laboratorij.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -616,7 +618,7 @@ Omjere računaj s apsolutnim tlakovima. Najmanji presjek konvergentne sapnice je
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$p_0=8{,}00\ \text{bar(abs)}$, $p^*\approx4{,}226\ \text{bar(abs)}$. I: $p_b=p_e=5{,}00\ \text{bar(abs)}$, $Ma_e\approx0{,}848$, nezagušen tok. II: $p_b=4{,}00\ \text{bar(abs)}$, $p_e=p^*$, $Ma_e=1$, zagušen tok. Dodatno snižavanje $p_b$ u II ne povećava protok pri istim $p_0,T_0$ i geometriji.
+$p_0=8{,}00\ \text{bar(abs)}$, $p^*\approx4{,}226\ \text{bar(abs)}$. I: $p_b=p_e=5{,}00\ \text{bar(abs)}$, $Ma_e\approx0{,}848$, nezagušen tok. II: $p_b=4{,}00\ \text{bar(abs)}$, $p_e=p^*$, $Ma_e=1$, zagušen tok. Dodatno snižavanje $p_b$ u II ne povećava protok pri istim $p_0$, $T_0$ i geometriji.
 :::
 ::::
 
@@ -686,9 +688,12 @@ $Ma_1=2{,}000\pm0{,}007$; $\Lambda=0{,}7209\pm0{,}0032$; $\Lambda_{mj}=0{,}7204\
 
 :::::
 
+![Skice uz Z1–Z6: zvuk, zrak za upućivanje, sapnice i mjerenje preko udarnog vala.](../assets/print/u09_kompresibilni_vjezbe_skice.svg){#fig-vjezbe-kompresibilni-tok fig-align="center" fig-alt="Šest panela: točka poremećaja O u mirujućem heliju, boca zraka s ventilom i vodom prema motoru, akustičke mjerne točke A i B u vodu, dvije konvergentne sapnice s protutlakom odnosno s nazivnim i izmjerenim otvorom te normalni val u kanalu sa statičkim priključcima i Pitotovom sondom."}
 
-::: {.mf1-numerika}
-<p class="mf1-box-label">Numerički pokus — od nestlačivog do zagušenog toka</p>
+**Napomene uz skice.** Duljina strelice ne zadaje iznos, a isprekidana crta označuje presjek ili val, ne stijenku. U Z1 su nacrtani samo točka O i os $x$; smjerove širenja ucrtaj sam. U Z4 je izlaz konvergentne sapnice njezin najmanji presjek, a vanjski tok nije prikazan. U Z5 $A_g$ označuje izmjereni slobodni otvor, različit od nazivne površine $A_n$.
+
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">Numerički pokus — Od nestlačivog do zagušenog toka</p>
 
 **Predvidi.** Skiciraj maseni protok pri snižavanju protutlaka. Gdje očekuješ plato?
 
@@ -701,13 +706,22 @@ $Ma_1=2{,}000\pm0{,}007$; $\Lambda=0{,}7209\pm0{,}0032$; $\Lambda_{mj}=0{,}7204\
 </div>
 :::
 
-::: {.mf1-zavrsni-okvir}
-<p class="mf1-box-label">Za ponijeti iz poglavlja</p>
+## Sažetak
 
+::: {.mf1-zavrsni-okvir}
 - Brzina zvuka mjeri termodinamičku krutost fluida i određuje konačnu brzinu prijenosa informacije.
 - Machov broj služi početnom odabiru modela, ali ne zamjenjuje provjeru grijanja i ukupne promjene tlaka.
 - Izentropske zaustavne relacije vrijede samo bez ireverzibilnih gubitaka.
 - Omjer površina $A/A^*$ ima podzvučno i nadzvučno rješenje; koje vrijedi, odlučuje protutlak.
 - Zagušenje ograničuje maseni protok: kada nastupi, daljnje snižavanje nizvodnog tlaka više ga ne povećava.
 - Udarni val čuva masu, količinu gibanja i zaustavnu entalpiju, ali povećava entropiju i smanjuje zaustavni tlak.
+
+**Najčešća pogreška.** Kriterij zagušenja $p_b/p_0<0{,}528$ i ostali omjeri tlakova računaju se s manometarskim umjesto s apsolutnim tlakovima.
+
+**Nakon ovoga poglavlja mora biti moguće**
+
+1. izračunati brzinu zvuka i Machov broj te procijeniti je li model konstantne gustoće još prihvatljiv;
+2. povezati statičko i zaustavno stanje izentropskim relacijama i razlikovati brzinu zvuka $a$ od brzine signala $v\pm a$ u laboratoriju;
+3. provjeriti zagušenje sapnice, izračunati najveći maseni protok i iz protutlaka odrediti režim konvergentno-divergentne sapnice;
+4. odrediti skok stanja kroz normalni udarni val i objasniti zašto zaustavni tlak pada.
 :::

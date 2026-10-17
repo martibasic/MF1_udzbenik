@@ -38,6 +38,8 @@ import {enhanceMath} from './math.js';
 
   const enhanceReading = async () => {
     document.querySelectorAll("[data-mf1-print-button]").forEach(button => button.addEventListener("click", () => window.print()));
+    // Quarto's sidebar landmark has no name; it is the book's contents.
+    document.querySelector("nav#quarto-sidebar")?.setAttribute("aria-label", "Navigacija kroz poglavlja");
     const main = document.querySelector("main");
     if (!main) return;
     enhanceMath(main);
@@ -55,10 +57,12 @@ import {enhanceMath} from './math.js';
       link.append(img);
       const caption = figure.querySelector("figcaption");
       if (caption) {
+        // Outside the caption, so a screen reader does not read the action
+        // as part of the figure description; the label names the target.
         const action = link.cloneNode(false);
         action.className = "mf1-figure-expand";
-        action.textContent = "Povećaj skicu ↗";
-        caption.append(action);
+        action.innerHTML = 'Povećaj skicu <span aria-hidden="true">↗</span>';
+        caption.after(action);
       }
     });
 
@@ -80,26 +84,36 @@ import {enhanceMath} from './math.js';
         hint.hidden = !wide;
         if (wide) region.tabIndex = 0;
         else region.removeAttribute("tabindex");
+        // Fading edges mark the side on which more columns are hidden.
+        region.classList.toggle("mf1-more-left", wide && region.scrollLeft > 1);
+        region.classList.toggle("mf1-more-right", wide &&
+          region.scrollLeft + region.clientWidth < region.scrollWidth - 1);
       };
       new ResizeObserver(update).observe(region);
+      region.addEventListener("scroll", update, {passive: true});
       update();
     });
 
     // Separate print canvases retain their physical point sizes. The screen
     // illustration and its enlargement link remain the canonical original.
+    // On a narrow screen a composite plate is replaced by the same rows
+    // stacked (CSS); the group then carries the figure's accessible name.
     main.querySelectorAll('img[data-mf1-print-layout]').forEach((img) => {
       const original = img.closest('.mf1-figure-link') || img;
       const rows = JSON.parse(img.dataset.mf1PrintLayout);
+      const widest = Math.max(...rows.map(row => row.width));
       const group = document.createElement('span');
       group.className = 'mf1-print-figure';
       group.dataset.figureKind = img.dataset.mf1FigureKind;
-      group.setAttribute('aria-hidden', 'true');
+      group.setAttribute('role', 'img');
+      group.setAttribute('aria-label', img.alt);
       for (const row of rows) {
         const art = document.createElement('img');
         art.src = new URL('../pdf-figures/' + row.file, img.src).href;
         art.alt = '';
-        art.style.width = row.width + 'pt';
-        art.style.height = row.height + 'pt';
+        art.style.setProperty('--mf1-row-width', row.width + 'pt');
+        art.style.setProperty('--mf1-row-height', row.height + 'pt');
+        art.style.setProperty('--mf1-row-share', String(row.width / widest));
         art.loading = 'eager';
         if (row.keep_with_next) art.classList.add('mf1-keep-with-next');
         group.append(art);

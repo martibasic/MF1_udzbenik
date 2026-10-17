@@ -28,7 +28,8 @@
   figure:has(.mf1-print-figure) { break-inside: auto; }
   .mf1-print-figure { display: block; }
   .mf1-print-figure > img {
-    display: block; margin: 4pt auto; max-width: none;
+    display: block; margin: 4pt auto; max-width: none; max-height: none;
+    width: var(--mf1-row-width); height: var(--mf1-row-height);
     border: 0; border-radius: 0; padding: 0; box-shadow: none; break-inside: avoid;
   }
   .mf1-print-figure > img.mf1-keep-with-next { break-after: avoid; }

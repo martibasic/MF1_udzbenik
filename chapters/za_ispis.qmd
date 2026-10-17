@@ -39,7 +39,7 @@ Za pripremljen prijelom stranica, sadržaj i bibliografiju preuzmi [PDF priručn
 
 {{< include ../source/u04_relativno_mirovanje_fluida.md >}}
 
-# Hidrostatske sile na ravne i zakrivljene plohe {#print-u05 .mf1-collection-chapter .unnumbered data-document="u05"}
+# Hidrostatičke sile na ravne i zakrivljene plohe {#print-u05 .mf1-collection-chapter .unnumbered data-document="u05"}
 
 {{< include ../source/u05_hidrostatske_sile_na_plohe.md >}}
 

@@ -1,5 +1,7 @@
 /* Generated Bootstrap defaults, before component styles. */
 /*-- scss:defaults --*/
+// Fonts are self-hosted (styles/tokens.css); no Bootswatch Google Fonts import.
+$web-font-path: false;
 $primary: #8e4519;
 $link-color: #8e4519;
 $body-color: #11202e;

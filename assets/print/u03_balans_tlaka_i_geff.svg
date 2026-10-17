@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 788 407" role="img" aria-labelledby="u03btig_u03btg_title u03btig_u03btg_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:788px;height:auto;">
-  <title id="u03btig_u03btg_title">Balans tlaka u spojenim posudama i efektivno polje sila</title>
+  <title id="u03btig_u03btg_title">Ravnoteža tlaka u spojenim posudama i efektivno polje sila</title>
   <desc id="u03btig_u03btg_desc">Lijevo: statika spojenih U-posuda s istim fluidom, jednaka razina slobodne površine implicira jednake tlakove na istoj dubini (p u točki A jednak p u točki B). Desno: prijelaz prema poglavlju 4 - ubrzani zatvoreni spremnik s nagnutom slobodnom površinom okomitom na efektivno polje sila g_eff, koje je vektorski zbroj g i minus a; kut nagiba površine i kut između g i g_eff jednaki su theta, tan theta = a/g. Vektori a, -a, g i g_eff su ubrzanja (crtkane strelice s punim vrhom) crtana u istom mjerilu.</desc>
   <defs>
     <pattern id="u03btig_u03btg_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -48,14 +48,14 @@
     <line x1="44" y1="320" x2="56" y2="320" stroke="#657781" stroke-width="1.2" />
     <line x1="50" y1="243" x2="50" y2="317" stroke="#657781" stroke-width="1.3" marker-start="url(#u03btig_u03btg_dimL)" marker-end="url(#u03btig_u03btg_dim)" data-mf1-role="dimension" />
     <line x1="82" y1="320" x2="394" y2="320" stroke="#657781" stroke-width="0.9" stroke-dasharray="4,4" />
-    <text x="40" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Spojene posude – statika</text>
-    <text x="134" y="272" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746">voda</text>
-    <text x="347" y="272" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" text-anchor="middle" fill="#263746">voda</text>
-    <text x="134" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">p<tspan baseline-shift="sub" font-size="0.7em">pov</tspan></text>
-    <text x="347" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">p<tspan baseline-shift="sub" font-size="0.7em">pov</tspan></text>
-    <text x="134" y="342" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">A</text>
-    <text x="347" y="342" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746">B</text>
-    <text x="36" y="284" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746">h</text>
+    <text x="40" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">Spojene posude – statika</text>
+    <text x="134" y="272" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">voda</text>
+    <text x="347" y="272" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="middle" fill="#263746">voda</text>
+    <text x="134" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">pov</tspan></text>
+    <text x="347" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">pov</tspan></text>
+    <text x="134" y="342" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746"><tspan font-style="italic">A</tspan></text>
+    <text x="347" y="342" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746"><tspan font-style="italic">B</tspan></text>
+    <text x="36" y="284" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746"><tspan font-style="italic">h</tspan></text>
   </g>
   <g id="u03btig_u03btg_title-scene-2" transform="translate(-32.0000 -19.4545)">
     <rect x="500" y="120" width="290" height="10" fill="url(#u03btig_u03btg_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -80,13 +80,13 @@
     <line x1="610" y1="265" x2="610" y2="346" stroke="#356b83" stroke-width="0.8" stroke-dasharray="3,3" />
     <line x1="640" y1="346" x2="610" y2="346" stroke="#356b83" stroke-width="0.8" stroke-dasharray="3,3" />
     <path d="M640 310 A45 45 0 0 1 624.373 307.193" fill="none" stroke="#356b83" stroke-width="1.2" />
-    <text x="492" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-weight="700" fill="#263746">Efektivno polje sila</text>
-    <text x="680" y="170" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">p<tspan baseline-shift="sub" font-size="0.7em">pov</tspan></text>
-    <text x="672" y="98" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" font-weight="700" text-anchor="middle" fill="#263746">a</text>
-    <text x="562" y="200" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-style="italic" fill="#263746">θ</text>
-    <text x="650" y="320" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" font-weight="700" fill="#263746">g</text>
-    <text x="624" y="255" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="#263746"><tspan font-weight="700">−a</tspan></text>
-    <text x="603" y="347" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" text-anchor="end" fill="#263746"><tspan font-weight="700">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
-    <text x="632" y="321" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">θ</text>
+    <text x="492" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">Efektivno polje sila</text>
+    <text x="680" y="170" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">pov</tspan></text>
+    <text x="672" y="98" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#263746"><tspan font-style="italic">a</tspan></text>
+    <text x="562" y="200" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746"><tspan font-style="italic">θ</tspan></text>
+    <text x="650" y="320" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746"><tspan font-style="italic">g</tspan></text>
+    <text x="624" y="255" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746"><tspan font-weight="700">−</tspan><tspan font-weight="700" font-style="italic">a</tspan></text>
+    <text x="603" y="347" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="end" fill="#263746"><tspan font-weight="700" font-style="italic">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
+    <text x="632" y="321" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746"><tspan font-style="italic">θ</tspan></text>
   </g>
 </svg>

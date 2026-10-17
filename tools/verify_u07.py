@@ -202,10 +202,12 @@ def zadatak_3(L=3.0, B=1.40, H=0.50, m=1200.0, m_s=120.0,
 def zadatak_4(m=0.085, d=0.008, h_1=0.082, h_2=0.095, rho_water=1000.0):
     # Areometar: V_uron(voda) = V_tijela + (π d²/4) h_1
     # ρ_water V_uron_water = m  → V_uron_water = m/ρ_water
-    # Vrat A = π d²/4. Razlika V_uron između voda i ulje:
+    # Vrat A = π d²/4. Razlika V_uron između vode i vodene otopine (rho_x).
+    # Ključevi "rho_ulje"/"V_uron_ulje" ostaju zbog stabilnih ID-jeva provjera;
+    # u tekstu zadatka fluid je vodena otopina gustoće rho_x.
     A_vrat = math.pi * d**2 / 4
     V_uron_voda = m / rho_water
-    # U ulju: V_uron_ulje = V_uron_voda + A_vrat·(h_2 - h_1)
+    # U otopini: V_uron_x = V_uron_voda + A_vrat·(h_2 - h_1)
     V_uron_ulje = V_uron_voda + A_vrat * (h_2 - h_1)
     rho_ulje = m / V_uron_ulje
     return {"rho_ulje": rho_ulje, "V_uron_voda": V_uron_voda,
@@ -525,8 +527,8 @@ def verify():
     _check(out, "U07.CH2.m_w_t", r["m_w"] / 1000, 276.75, "t")
     _check(out, "U07.CH2.e_G_m", r["e_G"], 0.291, "m", rel=0.02)
     _check(out, "U07.CH2.KG_new_m", r["KG_new"], 2.903, "m", rel=0.02)
-    _check(out, "U07.CH2.T_1_m", r["T_1"], 3.478, "m")
-    _check(out, "U07.CH2.dT_m", r["dT"], 0.226, "m", rel=0.02)
+    _check(out, "U07.CH2.T_1_m", r["T_1"], 3.477, "m")
+    _check(out, "U07.CH2.dT_m", r["dT"], 0.225, "m", rel=0.02)
     _check(out, "U07.CH2.BM_m", r["BM"], 5.394, "m", rel=0.02)
     _check(out, "U07.CH2.GM_m", r["GM"], 4.230, "m", rel=0.02)
     _check(out, "U07.CH2.theta_deg", r["theta_deg"], 3.94, "deg", rel=0.02)

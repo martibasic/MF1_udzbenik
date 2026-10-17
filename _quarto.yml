@@ -42,7 +42,10 @@ book:
   title: 'Mehanika fluida: modeli, problemi i rješenja'
   subtitle: Priručnik za samostalan rad s numeričkim pokusima i primjenama u brodogradnji i strojarstvu
   author: Martina Bašić
+  description: Sveučilišni priručnik iz mehanike fluida s riješenim primjerima, zadatcima za vježbu i numeričkim
+    pokusima u pregledniku, uz primjene u brodogradnji i strojarstvu.
   output-file: mehanika-fluida-1
+  open-graph: true
   site-url: https://martibasic.github.io/MF1_udzbenik/
   repo-url: https://github.com/martibasic/MF1_udzbenik
   date: last-modified
@@ -132,4 +135,6 @@ format:
       - filters/mf1-html-print-figures.lua
       - at: post-quarto
         path: filters/mf1-html-components.lua
+      - at: post-render
+        path: filters/mf1-html-callouts.lua
 editor: visual

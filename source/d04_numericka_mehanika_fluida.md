@@ -1,5 +1,3 @@
-## Mehanika fluida i numerika — pregled
-
 Ovaj dodatak povezuje ćelijsku bilancu iz []{.mf1-chapter-ref target="u07"}, analitičke reference iz []{.mf1-chapter-ref target="u08"} i lokalne jednadžbe iz []{.mf1-chapter-ref target="u12"}. CFD približno rješava odabrani model strujanja kada geometrija, rubni uvjeti ili promjene u vremenu otežavaju analitički račun.
 
 **Povezani primjeri kroz knjigu.** Odlomci *Računalna dinamika fluida* prate kako se model mijenja kada se promijeni pitanje. Za usporedno čitanje služe sljedeći nizovi:
@@ -18,23 +16,19 @@ Pri svakom prijelazu provjeri što ostaje pretpostavka, koji podatak treba dodat
 ::: {.callout-tip icon="false"}
 ## Opseg dodatka {#što-se-ovdje-neće-dogoditi}
 
-**MF1** daje fizikalne zakone, pretpostavke i bilance. **Odlomci Računalna dinamika fluida** povezuju ih s konkretnim primjenama i postupnim proširenjem modela. **Dublje** ovdje znači dodatno čitanje, izvan obveznog gradiva MF1; izvođenje numeričkih shema i samostalno postavljanje rješavača pripadaju nastavku studija.
+**Glavni tekst priručnika** daje fizikalne zakone, pretpostavke i bilance. **Odlomci Računalna dinamika fluida** povezuju ih s konkretnim primjenama i postupnim proširenjem modela. **Dublje** ovdje znači dodatno čitanje, izvan obveznog gradiva kolegija Mehanika fluida 1; izvođenje numeričkih shema i samostalno postavljanje rješavača pripadaju nastavku studija.
 
 Preporučeni redoslijed čitanja: @sec-cfd-mapa → @sec-cfd-polja-izlazi → @sec-cfd-venturi → @sec-cfd-vv-paketi. Prije vlastitog računa vrati se na @sec-cfd-kada-ne-treba.
 :::
 
-## Pojmovnik numeričkih metoda
+## Dodatne kratice numeričkih metoda
 
-Ovdje su okupljene kratice potrebne za dublje čitanje. Opće definicije CFD-a, reziduala i konvergencije nalaze se u [pojmovniku](d02_pojmovnik.qmd). Imaj na umu da se metoda ne bira samo prema nazivu.
+CFD, FEM, RANS s modelima $k$–$\varepsilon$ i $k$–$\omega$ SST, SIMPLE i PISO, MRF i klizna mreža, rezidual i mrežna konvergencija definirani su u [pojmovniku](d02_pojmovnik.qmd). Ovdje su samo kratice kojih ondje nema. Imaj na umu da se metoda ne bira samo prema nazivu.
 
 | Naziv | Značenje i uloga | Poveznica |
 |---|---|---|
 | FVM — *Finite Volume Method* | metoda konačnih volumena; povezane bilance ćelija | @eq-celijska-bilanca-mase |
-| FEM — *Finite Element Method* | metoda konačnih elemenata; drugi način diskretizacije istih modelskih jednadžbi | @sec-realni-tok-cfd |
-| RANS / LES / DNS | osrednjavanje / razrješavanje velikih / svih relevantnih turbulentnih skala | @sec-turbulencija |
-| $k$–$\varepsilon$, $k$–$\omega$ SST | primjeri modela zatvaranja turbulentnih korelacija | @sec-turbulencija |
-| SIMPLE / PISO / PIMPLE | primjeri algoritama sprezanja tlaka i brzine (usklađivanja tlaka, brzine i tokova kroz plohe); izbor ovisi o formulaciji i vremenskom opisu | @sec-realni-tok-cfd |
-| MRF / klizna mreža | stacionarna aproksimacija referentnih okvira / praćenje relativnog gibanja dijelova mreže | []{.mf1-chapter-ref target="u14"} |
+| LES / DNS | razrješavanje velikih / svih relevantnih turbulentnih skala, za razliku od osrednjavanja u RANS-u | @sec-turbulencija |
 | VOF — *Volume of Fluid* | opis međupovršine volumenskim udjelom faze; prikaz izoplohe udjela $0{,}5$ samo je način vizualizacije granice | []{.mf1-chapter-ref target="u15"} |
 | Zidne funkcije / $y^+$ | model područja uz stijenku / bezdimenzijska udaljenost; zahtjevi ovise o odabranoj obradi stijenke | @sec-turbulencija |
 | GCI — *Grid Convergence Index* | procjena diskretizacijske nesigurnosti odabrane veličine iz sustavnog profinjenja | @sec-cfd-vv-paketi |
@@ -45,11 +39,11 @@ Ovdje su okupljene kratice potrebne za dublje čitanje. Opće definicije CFD-a, 
 
 Slika polja pomaže pronaći područje niskog tlaka ili odvajanja, ali se odluka temelji na izračunanoj veličini s procjenom nesigurnosti. Postavke alata proizlaze iz odabranog modela i cilja računa.
 
-## Rječnik MF1 → CFD: prijevod pojmova {#sec-cfd-mapa}
+## Rječnik priručnik → CFD: prijevod pojmova {#sec-cfd-mapa}
 
 Tablica služi kao središnja mapa: ista jednadžba dobiva prostorni numerički zapis, a polje se zatim svodi na traženi izlaz. Brzina fluida u knjizi označena je s $v$ (vektor $\vec v$, komponente $v_i$); $u$ označuje brzinu krute granice (lopatica, klip), a u turbostrojevima razlikujemo apsolutnu $\vec c$, relativnu $\vec w$ i obodnu $\vec u$. Vanjska brzina graničnog sloja $U_e$ i brzina trenja $u_\tau=\sqrt{\tau_{st}/\rho}$ uvode se uz definiciju.[]{#rječnik-mf1-cfd-prijevod-pojmova}
 
-| MF1 koncept | Jednadžba ili veza | Fizikalno značenje | CFD uloga | Tipičan izlaz |
+| Pojam iz priručnika | Jednadžba ili veza | Fizikalno značenje | CFD uloga | Tipičan izlaz |
 |---|---|---|---|---|
 | Tlak | $p=F_n/A$ za jednolik tlak | normalno opterećenje | skalarno polje $p$ | tlak, $\Delta p$ |
 | Brzina i gustoća | $\vec v(\vec x,t)$, $\rho=dm/dV$ | gibanje i masa po jedinici volumena | vektorsko polje brzine; gustoća zadana ili promjenjiva | profil, maseni protok |
@@ -59,7 +53,7 @@ Tablica služi kao središnja mapa: ista jednadžba dobiva prostorni numerički 
 | Kontrolni volumen i kontinuitet | @eq-lokalna-kontinuitet | očuvanje mase | bilanca po ćelijama i plohama | $Q$, akumulacija |
 | Količina gibanja | @eq-navier-stokes-nestlacivi | ubrzanje određuju sile | lokalna bilanca uz pretpostavke modela | tlak, brzina, sila |
 | Energija | akumulacija = neto prijenos + izvori | prijenos i pretvorba energije | energijska jednadžba kad je potrebna | temperatura, entalpija |
-| Bernoulli | $p/\rho+v^2/2+gz=\mathrm{konst.}$ | idealna mehanička energija | referenca pod istim pretpostavkama | odnos tlaka i brzine |
+| Bernoullijeva jednadžba | $p/(\rho g)+v^2/(2g)+z=\text{konst.}$ | idealna mehanička energija | referenca pod istim pretpostavkama | odnos tlaka i brzine |
 | Hidrostatička sila i uzgon | $\vec F_p=-\int_Ap\,\vec n_b\,dA$ | rezultanta tlaka | integracija po površini tijela | sila, moment, gaz |
 | Sličnost | $Re,Fr,Ma,We$ | omjeri mjerodavnih učinaka | izbor fizike i skaliranje | $C_D$, $C_p$, $\lambda$ |
 | Turbulencija | $-\rho\overline{v_i'v_j'}$ u RANS-u | prijenos srednje količine gibanja fluktuacijama | dodatne korelacije treba zatvoriti | srednji profil, otpor |
@@ -68,7 +62,7 @@ Tablica služi kao središnja mapa: ista jednadžba dobiva prostorni numerički 
 
 Normala $\vec n_b$ usmjerena je iz tijela u fluid; $\vec F_p$ djeluje na tijelo. Za uzgon se integrira hidrostatički tlak, a za ukupnu silu u viskoznom toku dodaje se viskozna trakcija. Polumjeri u Young–Laplaceovoj relaciji imaju predznak određen odabranom normalom. Detaljan izbor fizike prema $Re$, $Fr$, $Ma$ i $We$ razrađen je u []{.mf1-chapter-ref target="u11"}.
 
-## Kako se MF1 jednadžbe slažu u CFD slici {#sec-cfd-polja-izlazi}
+## Kako se jednadžbe priručnika slažu u CFD slici {#sec-cfd-polja-izlazi}
 
 Ćelijska bilanca (jednadžba [-@eq-celijska-bilanca-mase]) pokazuje prijelaz **jednadžba → algebarski sustav**. Nakon povezivanja s količinom gibanja i potrebnim dodatnim modelima dobivamo vrijednosti $p_i$, $\vec v_i$ i, prema slučaju, $\rho_i$ ili $T_i$. Vrijednost u ćeliji lokalna je aproksimacija polja, a vrijednosti na plohama računaju se u skladu s odabranom shemom.[]{#kako-se-mf1-jednadžbe-slažu-u-cfd-slici}
 
@@ -105,7 +99,7 @@ Trošak ovisi o broju ćelija, jednadžbi, vremenskih koraka, iteracija, radnih 
 
 Najprije kratkim probnim računom procijeni trošak, a zatim u plan uključi proračune za prostorno i vremensko profinjenje te za ispitivanje osjetljivosti na ulaze i model. Gruba mreža može služiti planiranju, ali prihvatljivu mrežu određuje konvergencija traženog izlaza. Laminarni slučaj s poznatim rješenjem dobar je prvi pokus prije složene simulacije.
 
-## Tipičan CFD tijek na primjeru iz MF1: Venturijeva cijev {#sec-cfd-venturi}
+## Tipičan CFD tijek na primjeru iz priručnika: Venturijeva cijev {#sec-cfd-venturi}
 
 Polazište je @ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2: $D_1=60\ \mathrm{mm}$, $D_2=30\ \mathrm{mm}$, $\rho=870\ \mathrm{kg/m^3}$ i idealna procjena $Q\approx5{,}248\ \mathrm{L/s}$. Sada pitamo koliki su tlak u grlu i trajni gubitak u uređaju. Za viskozni model treba dodatno pribaviti viskoznost pri radnoj temperaturi, hrapavost, ulazni profil i cijelu geometriju; sama dva promjera ne određuju oblik difuzora.[]{#tipičan-cfd-tijek-na-primjeru-iz-mf1-venturijeva-cijev}
 
@@ -141,7 +135,7 @@ Diskretne jednadžbe iz odjeljka [-@sec-realni-tok-cfd] povezuju tlakove i brzin
 | Vremenska konvergencija | promjena nestacionarnog odziva pri smanjivanju vremenskog koraka |
 | Analitička referenca | Bernoullijeva jednadžba uz iste pretpostavke i isto mjesto usporedbe |
 
-Za horizontalni idealni slučaj vrijedi
+Za vodoravni idealni slučaj vrijedi
 
 $$
 \Delta p_{12,B}=\frac{\rho}{2}\left(v_2^2-v_1^2\right).
@@ -159,20 +153,20 @@ Osjetljivost na hrapavost, ulazni profil ili model turbulencije ispituje se zase
 
 ## Pripremljeni V&V paketi {#sec-cfd-vv-paketi}
 
-Paketi u `data/cfd/` omogućuju obradu rezultata bez instaliranja rješavača. Provjere se nadovezuju na poznato: analitičko rješenje daje referencu, kontinuitet bilancu, profinjenje numeričku procjenu, a eksperiment podatke za validaciju.[]{#tri-pripremljena-vv-paketa}
+Paketi u mapi `data/cfd/` [repozitorija priručnika](https://github.com/martibasic/MF1_udzbenik/tree/main/data/cfd) omogućuju obradu rezultata bez instaliranja rješavača; svaki paket ima vlastiti opis podataka i podrijetla. Provjere se nadovezuju na poznato: analitičko rješenje daje referencu, kontinuitet bilancu, profinjenje numeričku procjenu, a eksperiment podatke za validaciju.[]{#tri-pripremljena-vv-paketa}
 
 | Paket | Dostupni podatci | Dopušten zaključak |
 |---|---|---|
-| [`poiseuille_laminar`](../data/cfd/poiseuille_laminar/README.md) | analitičko rješenje, tri sintetičke mreže, reziduali, protok, bilanca i GCI | vježba postupka; nije test određenog rješavača |
-| [`venturi_diffuser`](../data/cfd/venturi_diffuser/README.md) | sintetički 1D model s propisanim gubitkom, tri mreže i računski trag | obrada gubitka i konvergencije; nije stvarni CFD ni mjerenje |
-| [`backstep_experiment`](../data/cfd/backstep_experiment/README.md) | izmjerena smična naprezanja i objavljeni CFL3D/SSTm rezultat | stvarna usporedba ponovnog priljubljivanja u primjeru [-@ex-stepenica-mjerenje-cfd] |
-| [`hydrofoil_experiment`](../data/cfd/hydrofoil_experiment/README.md) | Ladsonova mjerenja [@ladson1988], FUN3D rezultati NASA TMR-a [@nasa-tmr-naca0012], nastavna dopuna nesigurnosti | mrežni trend i uvjetna usporedba otpora; nepotpuni dokazi za izvornu validaciju |
+| paket `poiseuille_laminar` | analitičko rješenje, tri sintetičke mreže, reziduali, protok, bilanca i GCI | vježba postupka; nije test određenog rješavača |
+| paket `venturi_diffuser` | sintetički 1D model s propisanim gubitkom, tri mreže i računski trag | obrada gubitka i konvergencije; nije stvarni CFD ni mjerenje |
+| paket `backstep_experiment` | izmjerena smična naprezanja i objavljeni CFL3D/SSTm rezultat | stvarna usporedba ponovnog priljubljivanja u primjeru [-@ex-stepenica-mjerenje-cfd] |
+| paket `hydrofoil_experiment` | Ladsonova mjerenja [@ladson1988], FUN3D rezultati NASA TMR-a [@nasa-tmr-naca0012], nastavna dopuna nesigurnosti | mrežni trend i uvjetna usporedba otpora; nepotpuni dokazi za izvornu validaciju |
 
 Venturijev paket odnosi se na vodu, promjere 100/50 mm i protok 10 L/s. To je zaseban nastavni skup iste vrste problema, a ne simulacija uljne Venturijeve cijevi iz odjeljka [-@sec-cfd-venturi]. Propisani koeficijent gubitka $\xi=0{,}2$ (u datotekama paketa označen `K`) ne prenosi se na taj primjer.
 
 Validator `python tools/validate_cfd_vv.py` provjerava reference, bilance, podrijetlo, opaženi red i GCI. **GCI nije automatski standardna nesigurnost**, a tri monotone vrijednosti same po sebi nisu dokaz asimptotskog područja. Aeroprofil ostaje primjer usporedbe s nepotpunim arhivom: izvorni reziduali, zapisi sila kroz iteracije i masena bilanca nisu dostupni u pregledanim izvorima. Zaseban pokus sa strujanjem iza stepenice daje stvarna mjerenja za izravan račun odstupanja, ali ni ondje usporedba jednog izlaza ne zamjenjuje cjelovitu validaciju.
 
-**Veza sa Z6 u 12. poglavlju.** Rezultat FUN3D na najfinijoj mreži, $C_D=0{,}01222408822$, zaokružen je na $0{,}01222$. Ladsonove točke (napadni kut; $C_D$) $=(8{,}08^\circ;0{,}00995)$ i $(10{,}10^\circ;0{,}01175)$ pri $Re_l=6\cdot10^6$, $Ma=0{,}15$ i prisilnom prijelazu (120 grit) linearnom interpolacijom na $10{,}00^\circ$ daju vrijednost $0{,}01166089$, odnosno zaokruženo $0{,}01166$.
+**Veza sa Z6 u []{.mf1-chapter-ref target="u12"}.** Rezultat FUN3D na najfinijoj mreži iznosi $C_D\approx0{,}01222$. Ladsonove točke (napadni kut; $C_D$) $=(8{,}08^\circ;\,0{,}00995)$ i $(10{,}10^\circ;\,0{,}01175)$ pri $Re_l=6\cdot10^6$, $Ma=0{,}15$ i prisilnom prijelazu (120 grit) linearnom interpolacijom na $10{,}00^\circ$ daju $C_D\approx0{,}01166$.
 
 Zadani $s_{mj}=0{,}00020$, $s_{num}=0{,}00010$ i $s_{uv}=0{,}00010$ **nastavne su pretpostavke**, a ne objavljene nesigurnosti pokusa ili rješavača. Red veličine $s_{uv}$ obrazlaže se lokalnim nagibom od približno $0{,}000891$ po stupnju: nesigurnost kuta reda $0{,}1^\circ$ dala bi doprinos od oko $0{,}00009$. Doprinos $s_{num}$ obuhvaća ukupnu numeričku nesigurnost scenarija; GCI mu se ne dodaje ponovno, a osobito ne GCI iz drugog slučaja.
 
@@ -186,10 +180,10 @@ Pokus s profilom NACA 0012 u zraku ne validira kavitaciju, slobodnu površinu ni
 
 ## Što čitati dalje
 
-Za nastavak odaberi pripremljeni laminarni paket, objasni njegovu bilancu i pogrešku, pa pročitaj [NASA-in vodič za V&V](https://www.grc.nasa.gov/www/wind/valid/tutorial/tutorial.html). Za dublje upoznavanje s diskretizacijom poslužit će Versteeg i Malalasekera, *An Introduction to Computational Fluid Dynamics: The Finite Volume Method*, ili Ferziger, Perić i Street, *Computational Methods for Fluid Dynamics*. Programske postavke, koje nisu preduvjet za MF1, provjeri u [službenom vodiču OpenFOAM-a](https://doc.cfd.direct/openfoam/user-guide).
+Za nastavak odaberi pripremljeni laminarni paket, objasni njegovu bilancu i pogrešku, pa pročitaj [NASA-in vodič za V&V](https://www.grc.nasa.gov/www/wind/valid/tutorial/tutorial.html). Za dublje upoznavanje s diskretizacijom poslužit će Versteeg i Malalasekera, *An Introduction to Computational Fluid Dynamics: The Finite Volume Method*, ili Ferziger, Perić i Street, *Computational Methods for Fluid Dynamics*. Programske postavke, koje nisu preduvjet za ovaj priručnik, provjeri u [službenom vodiču OpenFOAM-a](https://doc.cfd.direct/openfoam/user-guide).
 
 ::: {.callout-note icon="false"}
-## Sažetak
+## Završna poruka dodatka
 
-MF1 uči kako prepoznati fiziku, veličine, pretpostavke, bilance i granice modela te kako provjeriti rezultat. CFD proširuje istu logiku na složeniji prostor i vrijeme. Završni rezultat nije slika polja, nego obrazložena inženjerska odluka potkrijepljena provjerom i podatcima za namjeravanu uporabu.
+Priručnik uči kako prepoznati fiziku, veličine, pretpostavke, bilance i granice modela te kako provjeriti rezultat. CFD proširuje istu logiku na složeniji prostor i vrijeme. Završni rezultat nije slika polja, nego obrazložena inženjerska odluka potkrijepljena provjerom i podatcima za namjeravanu uporabu.
 :::

@@ -29,16 +29,48 @@
       }
       counter(math.equation).update(0)
       part-change.update(false)
+      let appendix = state("appendix-state", none).get() != none
+      if appendix and it.numbering == none and it.body == [Dodaci] {
+        // Appendix divider: title plus local contents, like the part pages.
+        block(above: 24pt, below: 24pt, {
+          set par(justify: false)
+          text(size: mf1-part-pt * 1pt, weight: "bold", it.body)
+        })
+        {
+          show outline.entry: entry => {
+            // Headings imply bold; the local contents are a list, not titles.
+            set text(size: mf1-toc-chapter-pt * 1pt, weight: "regular", fill: mf1-ink)
+            set par(justify: false, leading: 0.35em)
+            show link: set text(fill: mf1-ink)
+            block(above: 9pt, below: 2pt, breakable: false,
+              link(entry.element.location(),
+                entry.indented(entry.prefix(), entry.inner(), gap: 0.6em)))
+          }
+          outline(title: none, depth: 1, indent: auto,
+            target: heading.where(level: 1).after(here(), inclusive: false))
+        }
+        pagebreak(weak: true)
+      } else {
       block(width: 100%, above: 0pt, below: mf1-chapter-after-pt * 1pt,
         breakable: false, sticky: true, {
           set text(size: mf1-h1-pt * 1pt)
-          mf1-heading-line(it)
+          if appendix and it.numbering != none {
+            // "Dodatak A — Naslov" in the PDF, as in the web edition.
+            set par(justify: false, leading: mf1-heading-leading-em * 1em)
+            set text(weight: "bold", hyphenate: false)
+            [Dodatak #counter(heading).display("A") — #it.body]
+          } else {
+            mf1-heading-line(it)
+          }
         })
+      }
     } else {
       let sizes = (mf1-h2-pt, mf1-h3-pt, mf1-h4-pt)
       let before = (mf1-h2-before-pt, mf1-h3-before-pt, mf1-h4-before-pt)
       let after = (mf1-h2-after-pt, mf1-h3-after-pt, mf1-h4-after-pt)
       let index = calc.min(it.level - 2, 2)
+      // Keep every section title with at least two following lines.
+      mf1-needspace((mf1-keep-with-next-em + 1) * 1em)
       block(width: 100%, above: before.at(index) * 1pt,
         below: after.at(index) * 1pt, breakable: false, sticky: true, {
           set text(size: sizes.at(index) * 1pt)
@@ -58,7 +90,13 @@
   show table.cell: set par(justify: false, leading: 0.5em)
   set table.cell(breakable: false)
   show table.cell.where(y: 0): set text(weight: "semibold")
-  set list(spacing: 0.35em)
-  set enum(spacing: 0.35em)
+  // Items must not sit closer than ordinary lines (vectors/indices touched).
+  set list(spacing: mf1-list-spacing-em * 1em)
+  set enum(spacing: mf1-list-spacing-em * 1em)
+  // Croatian quotation marks „…” also in CSL-generated bibliography entries.
+  show bibliography: it => {
+    show "“": "”"
+    it
+  }
   body
 }

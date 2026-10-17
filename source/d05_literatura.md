@@ -1,5 +1,3 @@
-## Literatura i izvori
-
 Citat uz tvrdnju upućuje na izvor modela, podatka ili područja valjanosti. Za daljnje učenje izvori su ovdje razvrstani po temama.
 
 ## Temelji i integralne bilance

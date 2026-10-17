@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 938 529" role="img" aria-labelledby="u08vs_title u08vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:938px;height:auto;">
-  <title id="u08vs_title">Zadaci Z1–Z6: kinematika i kontinuitet</title>
-  <desc id="u08vs_desc">Izvorni raspored šest panela. Z1 je grijač ventilacijskog kanala s otvorenim krajevima i blagim suženjem; gustoća zraka na izlazu je manja. Z2 prikazuje zamišljenu kosu plohu i normalu pod 60 stupnjeva prema brzini; ploha nije stijenka. Z3 dva ulaza i jedan izlaz otvorene komore; Z4 dvije otvorene grane sa zadanim omjerom brzina. Z5 klip se giba udesno, a voda prolazi kroz stvaran središnji otvor, uz relativnu izlaznu brzinu w. Z6 balastni tank dvodna: morska i slatka voda ulaze, homogena mješavina odlazi prebačajnom crpkom, a odzračna cijev na tanktopu određuje najvišu dopuštenu razinu. Strelice nisu sile; duljine strelica brzine ili protoka unutar panela prikazuju samo zadane podatke: tražene veličine nisu u mjerilu (Z1 v₂ = ?, Z3 Q₃ = ?, u Z4 nacrtan je samo zadani omjer v₂ = 2v₃, a odnos prema dovodu je shematski; u Z5 i Z6 samo poredak). Geometrija je shematska; brojčane oznake određuju zadatak.</desc>
+  <title id="u08vs_title">Zadatci Z1–Z6: kinematika i kontinuitet</title>
+  <desc id="u08vs_desc">Izvorni raspored šest panela. Z1 je grijač ventilacijskog kanala s otvorenim krajevima i blagim suženjem; gustoća zraka na izlazu je manja. Z2 prikazuje zamišljenu kosu plohu i normalu pod 60 stupnjeva prema brzini; ploha nije stijenka. Z3 dva ulaza i jedan izlaz otvorene komore; Z4 dvije otvorene grane sa zadanim omjerom brzina. Z5 klip se giba udesno, a voda prolazi kroz stvaran središnji otvor, uz relativnu izlaznu brzinu w. Z6 balastni tank dvodna: morska i slatka voda ulaze, homogena mješavina odlazi crpkom za pretakanje, a odzračna cijev na tanktopu određuje najvišu dopuštenu razinu. Strelice nisu sile; duljine strelica brzine ili protoka unutar panela prikazuju samo zadane podatke: tražene veličine nisu u mjerilu (Z1 v₂ = ?, Z3 Q₃ = ?, u Z4 nacrtan je samo zadani omjer v₂ = 2v₃, a odnos prema dovodu je shematski; u Z5 i Z6 samo poredak). Geometrija je shematska; brojčane oznake određuju zadatak.</desc>
   <defs>
     <marker id="u08vs_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <marker id="u08vs_vsmall" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 Z" fill="#356b83" stroke="none"/></marker>
@@ -221,8 +221,8 @@
       <line id="u08vs_fix_z3_q1" x1="29" y1="87" x2="65" y2="87" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <line id="u08vs_fix_z3_q2" x1="29" y1="139" x2="53" y2="139" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <line id="u08vs_fix_z3_q3" x1="214" y1="122" x2="258" y2="122" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
-      <text x="53" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-      <text x="51" y="165" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+      <text x="53" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" font-style="italic"><tspan>Q</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="normal">1</tspan></text>
+      <text x="51" y="165" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" font-style="italic"><tspan>Q</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="normal">2</tspan></text>
       <text id="u08vs_fix_z3_q3label" x="240" y="107" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan> = ?</text>
       <rect x="97" y="57" width="121" height="122" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08vs_fix_z3_cv" data-mf1-role="control-volume" />
       <text x="157.5" y="48" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">nepomični KV</text>
@@ -240,7 +240,7 @@
       <line id="u08vs_fix_z4_v1" x1="40" y1="123" x2="70" y2="123" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <line id="u08vs_fix_z4_v2" x1="232" y1="74.2" x2="276" y2="74.2" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <line id="u08vs_fix_z4_v3" x1="245" y1="166.5" x2="267" y2="166.5" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
-      <text x="66" y="97" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan></text>
+      <text x="66" y="97" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" font-style="italic"><tspan>Q</tspan></text>
       <text x="256" y="54" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>, <tspan font-style="italic" font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
       <text x="256" y="196" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan>, <tspan font-style="italic" font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em">3</tspan></text>
       <rect x="124" y="54" width="105" height="130" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08vs_fix_z4_cv" data-mf1-role="control-volume" />
@@ -266,7 +266,7 @@
       <line x1="16" y1="116" x2="69" y2="116" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <line x1="203" y1="116" x2="262" y2="116" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <line x1="181" y1="59" x2="201" y2="59" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
-      <text x="208" y="62" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start"><tspan font-style="italic" font-weight="700">u</tspan></text>
+      <text x="208" y="62" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start" font-style="italic"><tspan font-weight="700">u</tspan></text>
       <text x="78" y="58" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">ul</tspan> = 1,00 L/s</text>
       <text x="228" y="102" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic" font-weight="700">w</tspan> = 1,50 m/s</text>
       <rect x="36" y="72" width="149" height="89" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" id="u08vs_fix_z5_cv" data-mf1-role="control-volume" />
@@ -305,15 +305,15 @@
       <line x1="247" y1="175" x2="273" y2="175" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <text x="38" y="109" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">mv</tspan> more</text>
       <text x="4" y="170" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan> slatka</text>
-      <text x="266" y="197" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start"><tspan font-style="italic">Q</tspan><tspan baseline-shift="sub" font-size="0.7em">iz</tspan></text>
+      <text x="266" y="197" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start" font-style="italic"><tspan>Q</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="normal">iz</tspan></text>
       <line x1="53" y1="163" x2="63" y2="163" stroke="#657781" stroke-width="0.8" />
       <line x1="53" y1="184" x2="63" y2="184" stroke="#657781" stroke-width="0.8" />
       <line x1="58" y1="163" x2="58" y2="184" stroke="#657781" stroke-width="1.2" marker-start="url(#u08vs_fix_z6_dimL)" marker-end="url(#u08vs_fix_z6_dim)" id="u08vs_fix_z6_h0" data-mf1-role="dimension" />
-      <text x="42" y="196" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+      <text x="42" y="196" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start" font-style="italic"><tspan>h</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="normal">0</tspan></text>
       <line x1="253" y1="72" x2="263" y2="72" stroke="#657781" stroke-width="0.8" />
       <line x1="253" y1="184" x2="263" y2="184" stroke="#657781" stroke-width="0.8" />
       <line x1="258" y1="72" x2="258" y2="184" stroke="#657781" stroke-width="1.2" marker-start="url(#u08vs_fix_z6_dimL)" marker-end="url(#u08vs_fix_z6_dim)" id="u08vs_fix_z6_hmax" data-mf1-role="dimension" />
-      <text x="262" y="130" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan></text>
+      <text x="262" y="130" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start" font-style="italic"><tspan>h</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="normal">max</tspan></text>
       <line x1="160" y1="158" x2="160" y2="132" stroke="#356b83" stroke-width="1.6" marker-end="url(#u08vs_vopen)" data-mf1-vector="velocity" />
       <text x="167" y="150" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start">d<tspan font-style="italic">h</tspan>/d<tspan font-style="italic">t</tspan></text>
       <text x="108" y="30" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">odzračna cijev</text>

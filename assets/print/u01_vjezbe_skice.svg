@@ -39,7 +39,7 @@
   <g id="u01vs_title-scene-1" transform="translate(-19.0000 -9.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01vs_z1" transform="translate(25 25)">
-        <text x="150.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z1 — Gustoća iz vaganja</text>
+        <text x="150.0" y="21" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z1 — Gustoća iz vaganja</text>
         <text x="54" y="64" font-size="12" fill="#263746" text-anchor="middle">prazna</text>
         <path id="u01vs_z1wall0" d="M30 78 V169 H78 V78" fill="none" stroke="#3a4a56" stroke-width="1.3" />
         <rect x="26" y="78" width="4" height="96" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -48,9 +48,9 @@
         <rect x="22" y="174" width="64" height="8" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="18" y="182" width="72" height="40" rx="4" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="27" y="191" width="54" height="22" rx="3" fill="#ffffff" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="54" y="207" font-size="12" fill="#263746" text-anchor="middle">42,6 g</text>
-        <text x="54" y="246" font-size="14" fill="#263746" text-anchor="middle">m₀</text>
-        <text x="150" y="64" font-size="12" fill="#263746" text-anchor="middle">50,0 cm³</text>
+        <text x="54" y="207" font-size="12" fill="#263746" text-anchor="middle">42,6 g</text>
+        <text x="54" y="246" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan></text>
+        <text x="150" y="64" font-size="12" fill="#263746" text-anchor="middle">50,0 cm³</text>
         <rect id="u01vs_z1fluid1" x="126" y="137" width="48" height="32" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <line x1="126" y1="137" x2="174" y2="137" stroke="#356b83" stroke-width="1.8" />
         <path id="u01vs_z1wall1" d="M126 78 V169 H174 V78" fill="none" stroke="#3a4a56" stroke-width="1.3" />
@@ -60,9 +60,9 @@
         <rect x="118" y="174" width="64" height="8" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="114" y="182" width="72" height="40" rx="4" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="123" y="191" width="54" height="22" rx="3" fill="#ffffff" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="150" y="207" font-size="12" fill="#263746" text-anchor="middle">85,5 g</text>
-        <text x="150" y="246" font-size="14" fill="#263746" text-anchor="middle">m₁</text>
-        <text x="246" y="64" font-size="12" fill="#263746" text-anchor="middle">100,0 cm³</text>
+        <text x="150" y="207" font-size="12" fill="#263746" text-anchor="middle">85,5 g</text>
+        <text x="150" y="246" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+        <text x="246" y="64" font-size="12" fill="#263746" text-anchor="middle">100,0 cm³</text>
         <rect id="u01vs_z1fluid2" x="222" y="105" width="48" height="64" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <line x1="222" y1="105" x2="270" y2="105" stroke="#356b83" stroke-width="1.8" />
         <path id="u01vs_z1wall2" d="M222 78 V169 H270 V78" fill="none" stroke="#3a4a56" stroke-width="1.3" />
@@ -72,15 +72,15 @@
         <rect x="214" y="174" width="64" height="8" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="210" y="182" width="72" height="40" rx="4" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="219" y="191" width="54" height="22" rx="3" fill="#ffffff" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="246" y="207" font-size="12" fill="#263746" text-anchor="middle">128,7 g</text>
-        <text x="246" y="246" font-size="14" fill="#263746" text-anchor="middle">m₂</text>
+        <text x="246" y="207" font-size="12" fill="#263746" text-anchor="middle">128,7 g</text>
+        <text x="246" y="246" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
       </g>
     </g>
   </g>
   <g id="u01vs_title-scene-2" transform="translate(-21.5938 -9.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01vs_z2" transform="translate(340 25)">
-        <text x="150.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z2 — Kormilarski stroj (tlocrt)</text>
+        <text x="150.0" y="21" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z2 — Kormilarski stroj (tlocrt)</text>
         <path id="u01vs_z2systemouter0" d="M48 183 V276 H278 V58 H228 V147" fill="none" stroke="#3a4a56" stroke-width="9" stroke-linecap="butt" stroke-linejoin="round" />
         <path d="M48 183 V276 H278 V58 H228 V147" fill="none" stroke="#c5cdd3" stroke-width="7" />
         <path d="M48 183 V276 H278 V58 H228 V147" fill="none" stroke="url(#u01vs_hatch)" stroke-width="7" />
@@ -121,34 +121,33 @@
         <path id="u01vs_z2force0" d="M60 252 L60 216" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01vs_vF)" data-mf1-vector="force" />
         <path id="u01vs_z2force1" d="M240 84 L240 120" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01vs_vF)" data-mf1-vector="force" />
         <path id="u01vs_z2moment" d="M127.44738 159.79152 A24 24 0 0 1 172.55262 159.79152" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01vs_vF)" data-mf1-vector="moment" />
-        <text x="150" y="138" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">M</text>
-        <text x="34" y="238" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">F</text>
-        <text x="218" y="106" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">F</text>
-        <text x="93" y="157" font-size="10" fill="#263746" text-anchor="middle">rudo kormila</text>
-        <text x="60" y="57" font-size="10" fill="#263746" text-anchor="middle">povrat</text>
-        <text x="208" y="235" font-size="10" fill="#263746" text-anchor="end">povrat</text>
+        <text x="150" y="138" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">M</tspan></text>
+        <text x="34" y="238" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan></text>
+        <text x="218" y="106" font-size="12" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan></text>
+        <text x="93" y="157" font-size="11" fill="#263746" text-anchor="middle">rudo kormila</text>
+        <text x="60" y="57" font-size="11" fill="#263746" text-anchor="middle">povrat</text>
+        <text x="208" y="235" font-size="11" fill="#263746" text-anchor="end">povrat</text>
         <line x1="150" y1="191" x2="150" y2="212" stroke="#657781" stroke-width="0.8" />
-        <text x="150" y="222" font-size="10" fill="#263746" text-anchor="middle">struk kormila</text>
+        <text x="150" y="222" font-size="11" fill="#263746" text-anchor="middle">struk kormila</text>
         <line x1="60" y1="181" x2="60" y2="191" stroke="#657781" stroke-width="1.2" />
         <line x1="150" y1="181" x2="150" y2="191" stroke="#657781" stroke-width="1.2" />
         <line x1="240" y1="181" x2="240" y2="191" stroke="#657781" stroke-width="1.2" />
         <path id="u01vs_z2arm0" d="M60 186 L150 186" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)" data-mf1-role="dimension" />
         <path id="u01vs_z2arm1" d="M150 186 L240 186" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)" data-mf1-role="dimension" />
-        <text x="105" y="200" font-size="11" fill="#263746" text-anchor="middle">r = 0,60 m</text>
-        <text x="195" y="200" font-size="11" fill="#263746" text-anchor="middle">r</text>
+        <text x="105" y="200" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">r</tspan> = 0,60 m</text>
+        <text x="195" y="200" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">r</tspan></text>
         <line x1="228" y1="139" x2="228" y2="143" stroke="#657781" stroke-width="1.2" />
         <line x1="252" y1="139" x2="252" y2="143" stroke="#657781" stroke-width="1.2" />
         <path id="u01vs_z2d" d="M228 141 L252 141" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01vs_dimSmall)" marker-end="url(#u01vs_dimSmall)" data-mf1-role="dimension" />
-        <text x="221" y="140" font-size="11" fill="#263746" text-anchor="end">d = 125 mm</text>
-        <text x="165" y="256" font-size="11" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.75em">M</tspan> = 6,0 MPa</text>
-        <text x="150" y="292" font-size="10" fill="#263746" text-anchor="middle">dijagonalni par pod tlakom; druga dva vraćaju ulje</text>
+        <text x="221" y="140" font-size="11" fill="#263746" text-anchor="end"><tspan font-style="italic">d</tspan> = 125 mm</text>
+        <text x="165" y="256" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.75em">M</tspan> = 6,0 MPa</text>
       </g>
     </g>
   </g>
   <g id="u01vs_title-scene-3" transform="translate(-15.5938 -9.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01vs_z3" transform="translate(655 25)">
-        <text x="150.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z3 — Provjera proračuna</text>
+        <text x="150.0" y="21" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z3 — Provjera proračuna</text>
         <path id="u01vs_z3systemouter0" d="M43.0 105 V240 H273.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
         <path d="M43.0 105 V240 H273.0 V105" fill="none" stroke="#c5cdd3" stroke-width="9" />
         <path d="M43.0 105 V240 H273.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
@@ -168,30 +167,30 @@
         <rect x="270.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
         <path id="u01vs_z3input" d="M58 44 L58 72" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01vs_vF)" data-mf1-vector="force" />
         <path id="u01vs_z3output" d="M228 198 L228 154" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01vs_vF)" data-mf1-vector="force" />
-        <text x="228" y="217" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700">F₂</tspan> = ?</text>
-        <text x="137" y="161" font-size="10" fill="#263746" text-anchor="middle"><tspan font-weight="700">F₂</tspan>: ulje</text>
-        <text x="137" y="177" font-size="10" fill="#263746" text-anchor="middle">na veliki klip</text>
-        <text x="79" y="57" font-size="12" fill="#263746" text-anchor="start"><tspan font-weight="700">F₁</tspan> = 100 N</text>
+        <text x="228" y="217" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">2</tspan> = ?</text>
+        <text x="137" y="161" font-size="11" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">2</tspan>: ulje</text>
+        <text x="137" y="177" font-size="11" fill="#263746" text-anchor="middle">na veliki klip</text>
+        <text x="79" y="57" font-size="12" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">1</tspan> = 100 N</text>
         <line x1="43.0" y1="254" x2="43.0" y2="264" stroke="#657781" stroke-width="1.2" />
         <line x1="73.0" y1="254" x2="73.0" y2="264" stroke="#657781" stroke-width="1.2" />
         <path id="u01vs_z3d1" d="M43.0 259 L73.0 259" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)" data-mf1-role="dimension" />
         <line x1="183.0" y1="254" x2="183.0" y2="264" stroke="#657781" stroke-width="1.2" />
         <line x1="273.0" y1="254" x2="273.0" y2="264" stroke="#657781" stroke-width="1.2" />
         <path id="u01vs_z3d2" d="M183.0 259 L273.0 259" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)" data-mf1-role="dimension" />
-        <text x="58" y="281" font-size="11" fill="#263746" text-anchor="middle">d₁ = 20 mm</text>
-        <text x="228" y="281" font-size="11" fill="#263746" text-anchor="middle">d₂ = 60 mm</text>
-        <text x="137" y="215" font-size="11" fill="#263746" text-anchor="middle">s₁ = 90 mm</text>
+        <text x="58" y="281" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 20 mm</text>
+        <text x="228" y="281" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 60 mm</text>
+        <text x="137" y="215" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 90 mm</text>
         <path id="u01vs_z3motion0" d="M22 162 L22 192" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u01vs_vopen)" data-mf1-vector="velocity" />
-        <text x="22" y="150" font-size="11" fill="#263746" font-weight="700" text-anchor="middle">s₁</text>
+        <text x="22" y="150" font-size="11" fill="#263746" font-weight="700" text-anchor="middle"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
         <path id="u01vs_z3motion1" d="M285 192 L285 162" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u01vs_vopen)" data-mf1-vector="velocity" />
-        <text x="285" y="150" font-size="11" fill="#263746" font-weight="700" text-anchor="middle">s₂</text>
+        <text x="285" y="150" font-size="11" fill="#263746" font-weight="700" text-anchor="middle"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
       </g>
     </g>
   </g>
   <g id="u01vs_title-scene-4" transform="translate(-15.0000 3.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01vs_z4" transform="translate(25 340)">
-        <text x="150.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z4 — Mjerni cilindar</text>
+        <text x="150.0" y="21" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z4 — Mjerni cilindar</text>
         <path id="u01vs_z4systemouter0" d="M14 154 H60 V130 H264" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
         <path d="M14 154 H60 V130 H264" fill="none" stroke="#c5cdd3" stroke-width="9" />
         <path d="M14 154 H60 V130 H264" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
@@ -206,25 +205,25 @@
         <rect x="207" y="131" width="6" height="3" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
         <rect x="207" y="196" width="6" height="3" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
         <path id="u01vs_z4inflow" d="M18 165 L84 165" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u01vs_vopen)" data-mf1-vector="velocity" />
-        <text x="30" y="139" font-size="13" fill="#263746" text-anchor="middle">ΔV</text>
+        <text x="30" y="139" font-size="12" fill="#263746" text-anchor="middle">Δ<tspan font-style="italic">V</tspan></text>
         <line id="u01vs_z4initial" x1="138" y1="130" x2="138" y2="200" stroke="#3a4a56" stroke-width="1.3" stroke-dasharray="4 3" />
         <line x1="138" y1="90" x2="138" y2="120" stroke="#657781" stroke-width="1" />
         <line x1="204" y1="90" x2="204" y2="120" stroke="#657781" stroke-width="1" />
         <line x1="138" y1="96" x2="138" y2="106" stroke="#657781" stroke-width="1.2" />
         <line x1="204" y1="96" x2="204" y2="106" stroke="#657781" stroke-width="1.2" />
         <path id="u01vs_z4stroke" d="M138 101 L204 101" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u01vs_dim)" marker-end="url(#u01vs_dim)" data-mf1-role="dimension" />
-        <text x="171" y="85" font-size="14" fill="#263746" text-anchor="middle">s</text>
+        <text x="171" y="85" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">s</tspan></text>
         <path id="u01vs_z4motion" d="M225 106 L263 106" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u01vs_vopen)" data-mf1-vector="velocity" />
-        <text x="243" y="92" font-size="10" fill="#263746" text-anchor="middle">pomak</text>
+        <text x="243" y="92" font-size="11" fill="#263746" text-anchor="middle">pomak</text>
         <text x="242" y="148" font-size="11" fill="#263746" text-anchor="middle">zrak</text>
-        <text x="175" y="181" font-size="13" fill="#263746" text-anchor="middle">A = ?</text>
+        <text x="175" y="181" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan> = ?</text>
       </g>
     </g>
   </g>
   <g id="u01vs_title-scene-5" transform="translate(-19.5938 3.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01vs_z5" transform="translate(340 340)">
-        <text x="150.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z5 — Izbor crpke</text>
+        <text x="150.0" y="21" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z5 — Izbor crpke</text>
         <path id="u01vs_z5systemouter0" d="M48 105 V240 H273.0 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
         <path d="M48 105 V240 H273.0 V105" fill="none" stroke="#c5cdd3" stroke-width="9" />
         <path d="M48 105 V240 H273.0 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
@@ -244,24 +243,23 @@
         <rect x="270.0" y="141" width="3" height="8" rx="0" fill="#3a4a56" stroke="none" stroke-width="1.2" />
         <path id="u01vs_z5input" d="M58 52 L58 72" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01vs_vF)" data-mf1-vector="force" />
         <path id="u01vs_z5load" d="M228 36 L228 72" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01vs_vF)" data-mf1-vector="force" />
-        <text x="198" y="57" font-size="11" fill="#263746" text-anchor="end"><tspan font-weight="700">F<tspan baseline-shift="-2.42" font-size="9">L</tspan></tspan> = 6 kN</text>
-        <text x="84" y="58" font-size="12" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
-        <text x="146" y="92" font-size="11" fill="#263746" text-anchor="middle">d<tspan baseline-shift="sub" font-size="0.7em">p</tspan>: 8 / 9 / 10 mm</text>
-        <text x="131" y="177" font-size="11" fill="#263746" text-anchor="middle">A<tspan baseline-shift="-2.42" font-size="9">L</tspan> = 30 cm²</text>
+        <text x="198" y="57" font-size="11" fill="#263746" text-anchor="end"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">L</tspan> = 6 kN</text>
+        <text x="84" y="58" font-size="12" fill="#263746" font-weight="700" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
+        <text x="146" y="92" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan>: 8 / 9 / 10 mm</text>
+        <text x="131" y="177" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 30 cm²</text>
         <line x1="167" y1="179" x2="190" y2="147" stroke="#657781" stroke-width="1" />
-        <text x="131" y="196" font-size="11" fill="#263746" text-anchor="middle">s<tspan baseline-shift="-2.42" font-size="9">L</tspan> = 10 mm</text>
+        <text x="131" y="196" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 10 mm</text>
         <path id="u01vs_z5motion0" d="M22 162 L22 192" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u01vs_vopen)" data-mf1-vector="velocity" />
-        <text x="22" y="150" font-size="11" fill="#263746" font-weight="700" text-anchor="middle">s<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
+        <text x="22" y="150" font-size="11" fill="#263746" font-weight="700" text-anchor="middle"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
         <path id="u01vs_z5motion1" d="M285 192 L285 162" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u01vs_vopen)" data-mf1-vector="velocity" />
-        <text x="285" y="150" font-size="11" fill="#263746" font-weight="700" text-anchor="middle">s<tspan baseline-shift="-2.42" font-size="9">L</tspan>
-        </text>
+        <text x="285" y="150" font-size="11" fill="#263746" font-weight="700" text-anchor="middle"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
       </g>
     </g>
   </g>
   <g id="u01vs_title-scene-6" transform="translate(0.0000 3.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01vs_z6" transform="translate(655 340)">
-        <text x="150.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Z6 — Stol s tri cilindra</text>
+        <text x="150.0" y="21" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z6 — Stol s tri cilindra</text>
         <path id="u01vs_z6systemouter0" d="M22.0 105 V240 H267.00069841841787 V105" fill="none" stroke="#3a4a56" stroke-width="11" stroke-linecap="butt" stroke-linejoin="round" />
         <path d="M22.0 105 V240 H267.00069841841787 V105" fill="none" stroke="#c5cdd3" stroke-width="9" />
         <path d="M22.0 105 V240 H267.00069841841787 V105" fill="none" stroke="url(#u01vs_hatch)" stroke-width="9" />
@@ -298,24 +296,21 @@
         <rect id="u01vs_z6platform" x="20" y="85" width="194" height="12" rx="0" fill="#dcebf1" stroke="#356b83" stroke-width="1.2" />
         <rect id="u01vs_z6guide" x="7" y="67" width="6" height="150" rx="0" fill="url(#u01vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="4" y="84" width="16" height="15" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="59" y="63" font-size="10" fill="#263746" text-anchor="start">vodilica</text>
+        <text x="59" y="63" font-size="11" fill="#263746" text-anchor="start">vodilica</text>
         <line x1="43" y1="66" x2="13" y2="83" stroke="#657781" stroke-width="1" />
         <path id="u01vs_z6load" d="M117 49 L117 83" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01vs_vF)" data-mf1-vector="force" />
-        <text x="140" y="69" font-size="12" fill="#263746" text-anchor="start"><tspan font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">G</tspan></tspan> = ?</text>
+        <text x="140" y="69" font-size="12" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">G</tspan> = ?</text>
         <path id="u01vs_z6pumpForce" d="M263 74 L263 102" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01vs_vF)" data-mf1-vector="force" />
-        <text x="262" y="61" font-size="12" fill="#263746" font-weight="700" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
+        <text x="262" y="61" font-size="12" fill="#263746" font-weight="700" text-anchor="middle"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
         <path id="u01vs_z6lift" d="M230 87 L230 52" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u01vs_vopen)" data-mf1-vector="velocity" />
-        <text x="230" y="45" font-size="11" fill="#263746" font-weight="700" text-anchor="middle">Δz</text>
+        <text x="230" y="45" font-size="11" fill="#263746" font-weight="700" text-anchor="middle">Δ<tspan font-style="italic">z</tspan></text>
         <path id="u01vs_z6pumpMotion" d="M287 170 L287 197" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u01vs_vopen)" data-mf1-vector="velocity" />
-        <text x="286" y="156" font-size="11" fill="#263746" font-weight="700" text-anchor="middle">s<tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
-        <text x="292" y="130" font-size="12" fill="#263746" text-anchor="middle">d</text>
+        <text x="286" y="156" font-size="11" fill="#263746" font-weight="700" text-anchor="middle"><tspan font-style="italic">s</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan></text>
+        <text x="292" y="130" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan></text>
         <line x1="287" y1="129" x2="266" y2="143" stroke="#657781" stroke-width="1" />
-        <text x="42" y="192" font-size="12" fill="#263746" text-anchor="middle">A<tspan baseline-shift="-2.64" font-size="9.0">L</tspan>
-        </text>
-        <text x="116" y="192" font-size="12" fill="#263746" text-anchor="middle">A<tspan baseline-shift="-2.64" font-size="9.0">L</tspan>
-        </text>
-        <text x="190" y="192" font-size="12" fill="#263746" text-anchor="middle">A<tspan baseline-shift="-2.64" font-size="9.0">L</tspan>
-        </text>
+        <text x="42" y="192" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
+        <text x="116" y="192" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
+        <text x="190" y="192" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
       </g>
     </g>
   </g>

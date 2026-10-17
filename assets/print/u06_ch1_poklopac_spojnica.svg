@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486 370" role="img" aria-labelledby="u06c1ps_title u06c1ps_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:486px;height:auto;">
   <title id="u06c1ps_title">Četvrtcilindrični poklopac s vodoravnom spojnicom</title>
-  <desc id="u06c1ps_desc">Četvrtkružni poklopac polumjera R = 1,10 m sa središtem kružnice O, zglobom A gore lijevo na slobodnoj površini i vodoravnom spojnicom na donjem rubu dolje desno. Voda je na konveksnoj lijevoj i donjoj strani; sile vode na poklopac su desno (FH, iz vode do plohe, na dubini hH = 2R/3) i gore (FV, na kraku xV od A). Vstar je četvrtcilindrični pomoćni volumen na suhoj strani. Zglob je vezan uz gornju stijenku. Sila spojnice T djeluje ulijevo na donjem rubu, izvan širine presjeka; po iznosu je jednaka FV. Krak FV mjeri se od A, a ne od O.</desc>
+  <desc id="u06c1ps_desc">Četvrtkružni poklopac polumjera R = 1,10 m sa središtem kružnice O, zglobom A gore lijevo na slobodnoj površini i vodoravnom spojnicom na donjem rubu dolje desno. Voda je na konveksnoj lijevoj i donjoj strani; sile vode na poklopac su desno (FH, iz vode do plohe, na dubini hH = 2R/3) i gore (FV, na kraku xV od A). Vstar je četvrtcilindrični pomoćni volumen na suhoj strani. Zglob je vezan uz gornju stijenku. Sila spojnice F_s djeluje ulijevo na donjem rubu, izvan širine presjeka; po iznosu je jednaka FV. Krak FV mjeri se od A, a ne od O.</desc>
   <defs>
     <pattern id="u06c1ps_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
@@ -53,44 +53,40 @@
       <path d="M210 150 A145 145 0 0 0 355 295 V150 H210 Z" fill="none" stroke="#356b83" stroke-width="1" stroke-dasharray="5,4" id="u05p6_aux-volume" />
       <line x1="210" y1="150" x2="355" y2="150" stroke="#657781" stroke-width="1" stroke-dasharray="4,4" />
       <circle cx="355" cy="150" r="3.5" fill="#356b83" />
-      <text x="365" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700">O</text>
+      <text x="365" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">O</tspan></text>
       <circle cx="210" cy="150" r="5" fill="#ffffff" stroke="#3a4a56" stroke-width="2" />
-      <text x="198" y="141" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="end" font-weight="700">A</text>
+      <text x="198" y="141" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="end"><tspan font-style="italic">A</tspan></text>
       <circle cx="355" cy="295" r="3.5" fill="#356b83" />
             <text x="85" y="179" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">voda</text>
-      <text x="85" y="143" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="start">slobodna površina</text>
-      <text x="423" y="134" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">zrak, p = p<tspan baseline-shift="sub" font-size="0.7em">atm</tspan>
-      </text>
+      <text x="85" y="143" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">slobodna površina</text>
+      <text x="423" y="134" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">zrak, <tspan font-style="italic">p</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
       <line x1="196" y1="246.66666666666669" x2="245" y2="246.66666666666669" stroke="#356b83" stroke-width="2.8" marker-end="url(#u05p6_force)" id="u05p6_FH" data-mf1-vector="force" />
-      <text x="222" y="237" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#263746" text-anchor="middle">F<tspan baseline-shift="sub" font-size="0.7em">H</tspan>
-      </text>
+      <text x="222" y="237" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746" text-anchor="middle"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan></text>
       <line x1="293.4600886711338" y1="280" x2="293.4600886711338" y2="203" stroke="#356b83" stroke-width="2.8" marker-end="url(#u05p6_force)" id="u05p6_FV" data-mf1-vector="force" />
-      <text x="303.4600886711338" y="233" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-style="italic" font-weight="700">F<tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
+      <text x="303.4600886711338" y="233" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start" font-weight="700"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
       <line x1="355" y1="295" x2="278" y2="295" stroke="#356b83" stroke-width="2.8" marker-end="url(#u05p6_green)" data-mf1-vector="force" />
-      <text x="316" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#263746" text-anchor="middle">T</text>
-      <text x="321" y="179" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" fill="#263746" text-anchor="middle">V*</text>
+      <text x="316" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746" text-anchor="middle"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan></text>
+      <text x="321" y="179" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">V</tspan>*</text>
       <line x1="409" y1="150" x2="419" y2="150" stroke="#657781" stroke-width="0.8" />
       <line x1="409" y1="295" x2="419" y2="295" stroke="#657781" stroke-width="0.8" />
       <line x1="414" y1="150" x2="414" y2="295" stroke="#657781" stroke-width="1.2" marker-start="url(#u05p6_dimL)" marker-end="url(#u05p6_dim)" data-mf1-role="dimension" />
-      <text x="426" y="226.5" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">R</text>
+      <text x="426" y="226.5" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">R</tspan></text>
       <line x1="30" y1="150" x2="40" y2="150" stroke="#657781" stroke-width="0.8" />
       <line x1="30" y1="246.66666666666669" x2="40" y2="246.66666666666669" stroke="#657781" stroke-width="0.8" />
       <line x1="35" y1="150" x2="35" y2="246.66666666666669" stroke="#657781" stroke-width="1.2" marker-start="url(#u05p6_dimL)" marker-end="url(#u05p6_dim)" data-mf1-role="dimension" />
-      <text x="42" y="203" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">H</tspan>
-      </text>
+      <text x="42" y="203" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">H</tspan></text>
       <line x1="210" y1="375" x2="210" y2="385" stroke="#657781" stroke-width="0.8" />
       <line x1="293.4600886711338" y1="375" x2="293.4600886711338" y2="385" stroke="#657781" stroke-width="0.8" />
       <line x1="210" y1="380" x2="293.4600886711338" y2="380" stroke="#657781" stroke-width="1.2" marker-start="url(#u05p6_dimL)" marker-end="url(#u05p6_dim)" data-mf1-role="dimension" />
-      <text x="251.7300443355669" y="398" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">x<tspan baseline-shift="sub" font-size="0.7em">V</tspan>
-      </text>
+      <text x="251.7300443355669" y="398" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="0.7em">V</tspan></text>
       <line x1="210" y1="150" x2="210" y2="385" stroke="#657781" stroke-width="0.6" stroke-dasharray="3,4" />
       <line x1="293.4600886711338" y1="280" x2="293.4600886711338" y2="385" stroke="#657781" stroke-width="0.6" stroke-dasharray="3,4" />
       <line x1="210" y1="83" x2="210" y2="93" stroke="#657781" stroke-width="0.8" />
       <line x1="355" y1="83" x2="355" y2="93" stroke="#657781" stroke-width="0.8" />
       <line x1="210" y1="88" x2="355" y2="88" stroke="#657781" stroke-width="1.2" marker-start="url(#u05p6_dimL)" marker-end="url(#u05p6_dim)" data-mf1-role="dimension" />
-      <text x="282.5" y="106" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">R = 1,10 m</text>
+      <text x="282.5" y="106" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">R</tspan> = 1,10 m</text>
       <line x1="257.4920058203222" y1="289.25584752912863" x2="271.83141672909835" y2="268.77704642190383" stroke="#356b83" stroke-width="1.5" marker-end="url(#u05p6_normal)" id="u05p6_normal-vector" data-mf1-vector="pressure" />
-      <text x="222" y="282" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">d<tspan font-style="italic" font-weight="700">F</tspan></text>
+      <text x="222" y="282" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan><tspan font-weight="700" font-style="italic">F</tspan></text>
     </g>
   </g>
 </svg>

@@ -3,6 +3,19 @@
 Ovaj dokument prati sadržajne i tehničke promjene javnih izdanja. Potvrđene
 pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
+## Provedba završne recenzije — 17. listopada 2026.
+
+Ispravci prema `RECENZIJA_ZAVRSNA.md`; izvještaji po područjima u `docs/radno/provedba-recenzije-2026-10/`.
+
+- **Sadržaj**: netočna rečenica u pog. 5 (Z2), $(1{,}08\cdot10^7)^{1/5}=25{,}5$ i $\delta\approx0{,}087$ m u pog. 12, visina gondole spar-turbine (pog. 6), upućivanje na nepostojeći mjerač u pog. 3 (pog. 8), $y_0$/$y_1$ i $C_c$ kod ustave (pog. 15), $\dot m$ prema $\dot m_{rel}$ i „nekonvergirano rješenje” (pog. 14), naputak Z2 s gustoćom (pog. 13), faktor sile i snage (pog. 11), dosljedno zaokruživanje (pog. 6 P5, pog. 10 P5 i P7, pog. 14), jedinice u dodatku A, rezervni tekst u ključu F. Verifikatori su usklađeni, nijedna tolerancija nije oslabljena.
+- **Jedan oblik sažetka** u svih 15 poglavlja (`## Sažetak` s natuknicama, najčešćom pogreškom i ishodima); uklonjeni okviri „Inženjerski kontekst” koji su ponavljali uvod i prvi odjeljci s istim naslovom kao poglavlje; uklonjena ponavljanja izvoda (Bernoullijeva jednadžba u pog. 8, radni zapis u pog. 10, hidrostatika u pog. 3, kontinuitet u pog. 7) i slike bez informacije (pog. 7 i 11; dimenzijska matrica sada je tablica).
+- **Ujednačeno**: „Zadatci za vježbu”, „Provjeri sebe” s odgovorom po pitanju, nazivi blokova uz bilježnice i tipke, razina zadatka uz naslov u webu i PDF-u, boje naputka i rezultata u pog. 13, nazivlje (potkritični/natkritični, hidrostatički i naslov pog. 5, usisni koš, kućište crpke, radno kolo, propeler, umirni bazen, min⁻¹, ulaž, vodoravno/okomito), notacija prema standardu, točke bez kodnog fonta, opisi slika i alt-tekstovi, kraće „Napomene uz skice”, zaglavlja bilježnica.
+- **Uvod i dodatci**: jedno „O priručniku”, impresum s ustanovom i verzijom „1.0 (rukopis za recenziju), listopad 2026.”; dodatak A bez zadatkovnih redaka i s nedostajućim općim relacijama; pojmovnik u abecednom redu s natuknicama za središnje pojmove; dodatci C i D bez ponavljanja.
+- **PDF**: decimalni zarez u formulama bez razmaka (≈3000 mjesta), bez razmaka ispred točke i oko kose crte u jedinicama, „pog. N” se ne lomi, bez siročadi naslova, razmak odlomaka, naslovnica s ustanovom i godinom, impresum na poleđini, „Vrati se na zadatak (str. N)”, hrvatski navodnici u literaturi, metapodatci i alt-tekst svih slika.
+- **Web**: široke jednadžbe na mobitelu s vidljivim brojem i znakom pomicanja, kompozitne skice na mobitelu kao naslagani tiskovni retci, upućivanja na poglavlja bez lošeg prijeloma, lokalno posluženi fontovi, hrvatske poruke pretrage, naslovi primjera kao `h3`, sklopivi blokovi pristupačni i bez JavaScripta, opis i Open Graph.
+- **Skice**: jedno tipografsko pravilo za seriju (simboli kurzivom, riječi uspravno, indeksi kao `tspan`), bez naslova u jednoprizornim skicama i proze u skicama, oznake usklađene s tekstom, ispravljene kolizije; u tisku indeksi ≈ 6,65 pt (najmanje 6,5 pt) i drugi fluid razlučiv u sivoj skali.
+- **Provjere**: audit sažetka traži odjeljak sa završnim okvirom; tiskovni audit poštuje obrezani `viewBox`; PDF audit prepoznaje indekse okrenutih i ulančanih oznaka te upućivanja na jednadžbe na kraju retka. Ostavljeno autorici: brisanje cijelih primjera, zamjena zadataka i redoslijeda Z1–Z6, numeracija jednadžbi, izdanja u literaturi.
+
 ## Lektura priručnika — 16. listopada 2026.
 
 - Jezična i stilska lektura svih poglavlja, uvoda, predgovora i dodataka A–E: padeži, sročnost, red riječi, zarezi, kalkovi, preduge rečenice i nazivlje. Formule, brojevi, oznake i struktura nisu mijenjani, što je provjereno usporedbom sa stanjem prije lekture.

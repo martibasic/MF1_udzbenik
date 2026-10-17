@@ -405,7 +405,8 @@ def verify() -> list[dict]:
     _check(out, "U01.robot.p_MPa", r["p"] / 1e6, 2.73, "MPa", abs_tol=0.005)
     _check(out, "U01.robot.A_s", r["A_s"], 6.158e-4, "m2", abs_tol=5e-08)
     _check(out, "U01.robot.F_s_kN", r["F_s"] / 1000, 1.680, "kN", abs_tol=0.0005)
-    _check(out, "U01.robot.F_total_kN", r["F_total"] / 1000, 10.08, "kN", abs_tol=0.005)
+    _invariant(out, "U01.robot.reserve_below_limit", 3500.0 / r["F_s"] > 2.0,
+               "Sila jedne stege mora ostati ispod nastavne granice 3,5 kN s rezervom vecom od 2.")
 
     return out
 

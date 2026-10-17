@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 442 461" role="img" aria-labelledby="u07v2pg_title u07v2pg_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:442px;height:auto;">
-  <title id="u07v2pg_title">Ponton s opremom: gaz i vertikalna ravnoteža</title>
-  <desc id="u07v2pg_desc">Zatvoren ponton pluta u jednom kontinuiranom području vode. Voda je samo izvan nepropusne ovojnice. Uzgon F-U djeluje kroz centroid istisnutog volumena B unutar trupa, ukupna težina mg (m = m-p + m-o) na istom vertikalnom pravcu i jednakog iznosa. Gaz T je traženi, visina boka H = 0,32 m, širina b = 1,20 m, a duljina L = 2,40 m okomita je na presjek; voda rho = 998 kg/m3.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 442 378" role="img" aria-labelledby="u07v2pg_title u07v2pg_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:442px;height:auto;">
+  <title id="u07v2pg_title">Ponton s opremom: gaz i ravnoteža u okomitom smjeru</title>
+  <desc id="u07v2pg_desc">Zatvoren ponton pluta u jednom kontinuiranom području vode. Voda je samo izvan nepropusne ovojnice. Uzgon F-U djeluje kroz težište istisnutog volumena B unutar trupa, ukupna težina mg (m = m-p + m-o) na istom okomitom pravcu i jednakog iznosa. Gaz T je traženi, visina boka H = 0,32 m, širina b = 1,20 m, a duljina L = 2,40 m okomita je na presjek; voda rho = 998 kg/m3.</desc>
   <defs>
     <pattern id="u07v2pg_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
@@ -41,36 +41,35 @@
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
     </pattern>
   </defs>
-  <g id="u07v2pg_title-scene-1" transform="translate(-21.0000 -13.7270)">
+  <g id="u07v2pg_title-scene-1" transform="translate(-21.0000 -96.7270)">
     <g id="u07v2pg_fix_scene">
       <rect x="45" y="265" width="375" height="145" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <line x1="45" y1="265" x2="420" y2="265" stroke="#356b83" stroke-width="2" id="u07v2pg_fix_free-surface" />
       <polygon points="102.000000,313.012692 378.000000,313.012692 378.000000,239.412692 102.000000,239.412692" fill="#dcebf1" stroke="#3a4a56" stroke-width="2" id="u07v2pg_fix_hull" />
       <polygon points="105.450000,309.562692 374.550000,309.562692 374.550000,242.862692 105.450000,242.862692" fill="#ffffff" stroke="#3a4a56" stroke-width="0.8" />
       <circle cx="240.0" cy="289.00634602538406" r="3.7" fill="#356b83" id="u07v2pg_fix_buoyancy-center" />
-      <text x="250.0" y="293.00634602538406" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">B</text>
+      <text x="250.0" y="293.00634602538406" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">B</tspan></text>
       <polygon points="198.600000,239.412692 281.400000,239.412692 281.400000,209.512692 198.600000,209.512692" fill="#eadfc5" stroke="#356b83" stroke-width="1.4" />
-      <text x="240" y="227.91269205076821" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">m<tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 180 kg</text>
-      <text x="167" y="291" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">m<tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 420 kg</text>
+      <text x="240" y="227.91269205076821" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">o</tspan> = 180 kg</text>
+      <text x="167" y="291" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 420 kg</text>
       <line x1="240.0" y1="289.00634602538406" x2="240.0" y2="247.00634602538406" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07v2pg_fix_green)" data-mf1-vector="force" />
-      <text x="253.0" y="263.00634602538406" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic" font-weight="700">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">U</tspan></text>
+      <text x="253.0" y="263.00634602538406" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">U</tspan></text>
       <line x1="240.0" y1="123" x2="240.0" y2="165" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07v2pg_fix_force)" data-mf1-vector="force" />
-      <text x="252.0" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" font-weight="700" fill="#263746" text-anchor="start"><tspan font-weight="400">m</tspan>g</text>
+      <text x="252.0" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-weight="700" fill="#263746" text-anchor="start"><tspan font-weight="400" font-style="italic">m</tspan><tspan font-style="italic">g</tspan></text>
       <line x1="60" y1="239.41269205076821" x2="70" y2="239.41269205076821" stroke="#657781" stroke-width="0.8" />
       <line x1="60" y1="313.0126920507682" x2="70" y2="313.0126920507682" stroke="#657781" stroke-width="0.8" />
       <line x1="65" y1="239.41269205076821" x2="65" y2="313.0126920507682" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v2pg_fix_dimL)" marker-end="url(#u07v2pg_fix_dim)" data-mf1-role="dimension" />
-      <text x="43" y="276" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 43 276)"><tspan font-style="italic">H</tspan> = 0,32 m</text>
-      <text x="240" y="372" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">voda, ρ = 998 kg/m³</text>
-      <text x="240" y="390" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan> = 2,40 m (okomito na presjek)</text>
+      <text x="43" y="276" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 43 276)"><tspan font-style="italic">H</tspan> = 0,32 m</text>
+      <text x="240" y="372" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">voda, <tspan font-style="italic">ρ</tspan> = 998 kg/m³</text>
+      <text x="240" y="390" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan> = 2,40 m (okomito na presjek)</text>
       <line x1="420" y1="265" x2="430" y2="265" stroke="#657781" stroke-width="0.8" />
       <line x1="420" y1="313.0126920507682" x2="430" y2="313.0126920507682" stroke="#657781" stroke-width="0.8" />
       <line x1="425" y1="265" x2="425" y2="313.0126920507682" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v2pg_fix_dimL)" marker-end="url(#u07v2pg_fix_dim)" data-mf1-role="dimension" />
-      <text x="432" y="293.0063460253841" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">T</text>
+      <text x="432" y="293.0063460253841" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">T</tspan></text>
       <line x1="102.0" y1="425" x2="102.0" y2="435" stroke="#657781" stroke-width="0.8" />
       <line x1="378.0" y1="425" x2="378.0" y2="435" stroke="#657781" stroke-width="0.8" />
       <line x1="102.0" y1="430" x2="378.0" y2="430" stroke="#657781" stroke-width="1.2" marker-start="url(#u07v2pg_fix_dimL)" marker-end="url(#u07v2pg_fix_dim)" data-mf1-role="dimension" />
-      <text x="240.0" y="448" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 1,20 m</text>
-      <text x="240" y="50" font-family="Arial, Liberation Sans, sans-serif" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">Ponton: poprečni presjek</text>
+      <text x="240.0" y="448" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 1,20 m</text>
     </g>
   </g>
 </svg>

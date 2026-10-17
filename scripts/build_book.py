@@ -40,8 +40,11 @@ def generated_files(root=ROOT):
     html['css'] = [f'styles/{name}.css' for name in ('tokens','base','typography','layout','components','utilities','print','responsive')]
     html['css'].append('assets/pdf-figures/tokens.css')
     html['grid']['body-width'] = web_tokens['mf1-content-width']
-    html['filters'] = ['filters/mf1-html-print-figures.lua', {'at':'post-quarto','path':'filters/mf1-html-components.lua'}]
+    html['filters'] = ['filters/mf1-html-print-figures.lua', {'at':'post-quarto','path':'filters/mf1-html-components.lua'},
+        {'at':'post-render','path':'filters/mf1-html-callouts.lua'}]
     book = dict(model['book'])
+    # Link previews and search results use one sentence describing the book.
+    book['open-graph'] = True
     book.update({'site-url':model['site_url'],'repo-url':model['repo_url'],'date':'last-modified',
         'chapters':['index.qmd'] + [model['documents'][key]['path'] for key in model['frontmatter']] +
             [{'part':part['title'],'chapters':[model['documents'][key]['path'] for key in part['chapters']]} for part in model['parts']],
@@ -80,10 +83,11 @@ def generated_files(root=ROOT):
     from generate_exercise_key import build as exercise_key
     answer=next(doc for doc in docs if doc.get('role')=='answers')
     result[answer['source']]=exercise_key(root)
-    font_import=f"@import url('{tokens['web_font_import']}');\n" if tokens.get('web_font_import') else ''
-    result['styles/tokens.css']='/* Generated from design-system/tokens.json. */\n'+font_import+':root {\n'+''.join(f'  --{k}: {v};\n' for k,v in web_tokens.items())+'}\n'
+    result['styles/tokens.css']='/* Generated from design-system/tokens.json. */\n'+web_font_faces(root,tokens.get('web_fonts'))+':root {\n'+''.join(f'  --{k}: {v};\n' for k,v in web_tokens.items())+'}\n'
     result['design-system/quarto-theme.scss']=f'''/* Generated Bootstrap defaults, before component styles. */
 /*-- scss:defaults --*/
+// Fonts are self-hosted (styles/tokens.css); no Bootswatch Google Fonts import.
+$web-font-path: false;
 $primary: {web_tokens['mf1-accent-d']};
 $link-color: {web_tokens['mf1-accent-d']};
 $body-color: {web_tokens['mf1-ink']};
@@ -102,6 +106,19 @@ $headings-font-family: $font-family-sans-serif;
         f'#let mf1-{key.replace("_","-")} = {json.dumps(value,ensure_ascii=False)}' for key,value in pdf_tokens.items())+'\n'+''.join(
         f'#let {key} = rgb("{value}")\n' for key,value in web_tokens.items() if value.startswith('#'))
     return result
+
+
+def web_font_faces(root, fonts):
+    """Self-hosted @font-face rules; the site makes no third-party font request."""
+    if not fonts:return ''
+    css=''
+    for face in fonts['faces']:
+        for subset,unicode_range in fonts['subsets'].items():
+            name=face['file'].format(subset=subset)
+            if not (root/fonts['directory']/name).is_file():raise ValueError('Missing web font: '+fonts['directory']+'/'+name)
+            css+=(f"@font-face {{ font-family: '{face['family']}'; font-style: {face['style']}; font-weight: {face['weight']}; "
+                  f"font-display: swap; src: url('../{fonts['directory']}/{name}') format('woff2'); unicode-range: {unicode_range}; }}\n")
+    return css
 
 
 def canonical_map(docs):

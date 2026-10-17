@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 493 387" role="img" aria-labelledby="u14drop_title u14drop_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:493px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 62 388 323" role="img" aria-labelledby="u14drop_title u14drop_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:388px;height:auto;">
   <title id="u14drop_title">Početna kap u relativnoj struji zraka</title>
-  <desc id="u14drop_desc">Početna kuglasta vodena kap promjera tri milimetra (rho_v = 1000 kg/m3) u struji zraka (rho_zr = 1,2 kg/m3) relativne brzine v = 25 m/s; g je vertikalno prema dolje. Oznaka površinske napetosti upućuje na sučelje i nije radijalni vektor sile. Kriterij raspada ne određuje veličine ili broj nastalih kapljica.</desc>
+  <desc id="u14drop_desc">Početna kuglasta vodena kap promjera tri milimetra (rho_v = 1000 kg/m3) u struji zraka (rho_zr = 1,2 kg/m3) relativne brzine v = 25 m/s; g je usmjeren okomito prema dolje. Oznaka površinske napetosti upućuje na sučelje i nije radijalni vektor sile. Kriterij raspada ne određuje veličine ili broj nastalih kapljica.</desc>
   <defs>
     <pattern id="u14drop_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -33,26 +33,25 @@
   </defs>
   <g id="u14drop_title-scene-1" transform="translate(-20.0000 9.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
-      <text x="410" y="32" font-size="19" fill="#263746" text-anchor="middle" font-weight="700">Kap vode u zraku</text>
       <circle id="u14drop_drop" cx="245" cy="193" r="50" fill="#dcebf1" stroke="#356b83" stroke-width="1.5" />
       <path id="u14drop_air0" data-mf1-vector="velocity" d="M44 161 L163 161" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14drop_vopen)" />
       <path id="u14drop_air1" data-mf1-vector="velocity" d="M44 193 L163 193" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14drop_vopen)" />
       <path id="u14drop_air2" data-mf1-vector="velocity" d="M44 225 L163 225" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14drop_vopen)" />
-      <text x="45" y="118" font-size="13" fill="#263746" text-anchor="start"><tspan font-weight="700">v</tspan> = 25 m/s</text>
-      <text x="45" y="140" font-size="13" fill="#263746" text-anchor="start">ρ<tspan baseline-shift="sub" font-size="0.75em">zr</tspan> = 1,2 kg/m³</text>
+      <text x="45" y="118" font-size="13" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">v</tspan> = 25 m/s</text>
+      <text x="45" y="140" font-size="13" fill="#263746" text-anchor="start"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.75em">zr</tspan> = 1,2 kg/m³</text>
       <line x1="309" y1="143" x2="319" y2="143" stroke="#657781" stroke-width="1.2" />
       <line x1="309" y1="243" x2="319" y2="243" stroke="#657781" stroke-width="1.2" />
       <path id="u14drop_diameter" data-mf1-role="dimension" d="M314 143 L314 243" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14drop_dim)" marker-end="url(#u14drop_dim)" />
       <line x1="249" y1="143" x2="320" y2="143" stroke="#657781" stroke-width="1" />
       <line x1="249" y1="243" x2="320" y2="243" stroke="#657781" stroke-width="1" />
-      <text x="333" y="198" font-size="13" fill="#263746" text-anchor="start">d = 3 mm</text>
+      <text x="333" y="198" font-size="13" fill="#263746" text-anchor="start"><tspan font-style="italic">d</tspan> = 3 mm</text>
       <line x1="232" y1="145" x2="207" y2="109" stroke="#657781" stroke-width="1" />
-      <text x="197" y="87" font-size="13" fill="#263746" text-anchor="middle">σ = 0,072 N/m</text>
+      <text x="197" y="87" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">σ</tspan> = 0,072 N/m</text>
       <text x="197" y="105" font-size="11" fill="#263746" text-anchor="middle">sučelje voda–zrak</text>
       <path id="u14drop_g" stroke-dasharray="6 3" data-mf1-vector="acceleration" d="M93 296 L93 354" fill="none" stroke="#356b83" stroke-width="2.0" marker-end="url(#u14drop_accMarker)" />
-      <text x="113" y="331" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">g</text>
-      <text x="245" y="272" font-size="13" fill="#263746" text-anchor="middle">Početna kuglasta kap</text>
-      <text x="245" y="292" font-size="13" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.75em">v</tspan> = 1000 kg/m³</text>
+      <text x="113" y="331" font-size="13" fill="#263746" text-anchor="middle" font-weight="700" font-style="italic">g</text>
+      <text x="245" y="272" font-size="13" fill="#263746" text-anchor="middle">početna kuglasta kap</text>
+      <text x="245" y="292" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.75em">v</tspan> = 1000 kg/m³</text>
     </g>
   </g>
 </svg>

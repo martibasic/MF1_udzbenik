@@ -39,12 +39,21 @@ em { font-style: italic; }
 a {
   color: var(--mf1-accent-d);
   text-decoration: none;
-  border-bottom: var(--mf1-rule-width) solid color-mix(in srgb, var(--mf1-accent-d) 25%, transparent);
   transition: border-color 0.15s, color 0.15s;
 }
-a:hover {
+/* The underline belongs to links in the reading text, not to Quarto's
+   navigation, sidebar, breadcrumbs, heading anchors or icon buttons. */
+main a {
+  border-bottom: var(--mf1-rule-width) solid color-mix(in srgb, var(--mf1-accent-d) 25%, transparent);
+}
+main a:hover {
   border-bottom-color: var(--mf1-accent-d);
   color: var(--mf1-accent-d);
+}
+main .quarto-page-breadcrumbs a,
+main a.anchorjs-link,
+main .mf1-figure-link {
+  border-bottom: 0;
 }
 
 a:focus-visible,
@@ -78,7 +87,14 @@ p, li, td, th, figcaption, .mf1-ch-title,
   -webkit-overflow-scrolling: touch;
 }
 .mf1-table-scroll table { margin: 0; display: table; }
-.mf1-table-scroll .mf1-reference-table { min-width: 32rem; }
-/* Četiri tekstualna stupca CFD pojmovnika trebaju čitljivu širinu riječi. */
+/* Two- and three-column tables wrap their text instead of scrolling; only
+   tables with four or more columns keep a minimum width (responsive.css). */
+/* A fading edge shows that a scrolled region continues in that direction. */
+.mf1-table-scroll.mf1-more-right { mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent); }
+.mf1-table-scroll.mf1-more-left { mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent); }
+.mf1-table-scroll.mf1-more-left.mf1-more-right {
+  mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+}
+.mf1-table-scroll:focus-visible { outline-offset: -3px; }
 .mf1-table-hint { font-family: var(--mf1-sans); font-size: 0.74rem; color: var(--mf1-muted); margin: -0.8rem 0 1.5rem; }
 main table { display: block; max-width: 100%; overflow-x: auto; }

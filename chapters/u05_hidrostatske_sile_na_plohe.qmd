@@ -1,5 +1,5 @@
 ---
-title: "Hidrostatske sile na ravne i zakrivljene plohe"
+title: "Hidrostatičke sile na ravne i zakrivljene plohe"
 page-layout: article
 mf1-document-id: u05
 mf1-document-kind: chapter

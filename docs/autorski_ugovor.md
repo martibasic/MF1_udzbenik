@@ -16,8 +16,10 @@ Odgovarajuće CSS klase su `.mf1-temelj`, `.mf1-izvod`, `.mf1-fizikalno-znacenje
 Naslov takvog bloka malo je veći od teksta bloka, u webu i u PDF-u.
 
 Poglavlje ima jedan sažetak, na kraju, iza zadataka za vježbu: odjeljak
-**Sažetak** ili završni okvir. Između riješenih primjera i zadataka ne stoji
-drugi sažetak (odluka autorice od 16. listopada 2026.).
+**Sažetak** sa završnim okvirom bez vlastite labele (natuknice, **Najčešća
+pogreška**, **Nakon ovoga poglavlja mora biti moguće**), isti oblik u svim
+poglavljima. Između riješenih primjera i zadataka ne stoji drugi sažetak
+(odluke autorice od 16. listopada 2026.).
 
 Odlomci `Računalna dinamika fluida` umeću se uz pripadnu fiziku kroz sva glavna
 poglavlja. Imaju zajednički naslov i konkretan tematski uvod, obično jedan
@@ -116,8 +118,9 @@ poglavlja ni trenutačni položaj sadržaja.
 ## Ugovor zadatka i verifikatora
 
 Samostalni zadatci nose oznake Z1–Z6 unutar poglavlja i kratak naslov problema.
-Razina T1–T4 navodi se na kraju zadatka, sitno i desno poravnata, odvojeno
-od lijeve numeracije. Naslov se zapisuje kao
+Razina T1–T4 zapisuje se u izvoru na kraju zadatka, a web i PDF je
+prikazuju kao malu oznaku uz naslov zadatka, jednako kao kod riješenih
+primjera (odluka od 16. listopada 2026.). Naslov se zapisuje kao
 `### Naslov problema {#task-stabilni-id .unnumbered .unlisted}`,
 a oznaka razine kao `[Razina: T1]{.mf1-task-level}`. Time zadatak ne dobiva
 dodatni broj odjeljka niti ulazi u sadržaj knjige. Iste oznake i naslovi

@@ -13,9 +13,41 @@ export async function enhanceMath(main) {
     }
     return {element, block};
   });
+  // A numbered display formula reserves room for its number on both sides.
+  // When it does not fit, the number moves below the formula (right-aligned)
+  // instead of disappearing behind the scroll edge; MathML is unchanged.
+  const tagged = [...main.querySelectorAll('.math.display')].map(element => {
+    const parts = {
+      container: element.querySelector('mjx-container'),
+      mtable: element.querySelector('mjx-mtable'),
+      table: element.querySelector('mjx-mtable > mjx-table'),
+      labels: element.querySelector('mjx-mtable > mjx-labels'),
+    };
+    if (!parts.container || !parts.mtable || !parts.table || !parts.labels) return null;
+    const original = {
+      container: parts.container.style.minWidth,
+      mtable: parts.mtable.style.minWidth,
+      table: parts.table.style.margin,
+      labels: parts.labels.style.width,
+    };
+    return {element, parts, original};
+  }).filter(Boolean);
+  const setCompact = ({element, parts, original}, compact) => {
+    element.classList.toggle('mf1-math-compact', compact);
+    parts.container.style.minWidth = compact ? '' : original.container;
+    parts.mtable.style.minWidth = compact ? '' : original.mtable;
+    parts.table.style.margin = compact ? '0' : original.table;
+    parts.labels.style.width = compact ? '' : original.labels;
+  };
+  const updateTagged = () => {
+    for (const item of tagged) setCompact(item, false);
+    const overflowing = tagged.map(({element}) => element.scrollWidth > element.clientWidth + 1);
+    tagged.forEach((item, index) => { if (overflowing[index]) setCompact(item, true); });
+  };
   let pending = false;
   const update = () => {
     pending = false;
+    updateTagged();
     // Read geometry first, then change classes to avoid repeated layout passes.
     const measured = formulas.map(({element, block}) => {
       const math = element.querySelector('mjx-container');

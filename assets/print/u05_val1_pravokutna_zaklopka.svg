@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 491" role="img" aria-labelledby="u05v1pz_title u05v1pz_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:460px;height:auto;">
-  <title id="u05v1pz_title">Vertikalna pravokutna zaklopka ispod slobodne površine</title>
-  <desc id="u05v1pz_desc">Bočni presjek vertikalne pravokutne zaklopke pod vodom, gornji rub na dubini h-1 = 2,0 m, visina H = 3,0 m, u mjerilu. Trapezni dijagram tlaka od rho g h-1 do rho g (h-1 + H) okomit je na zaklopku; rezultanta F djeluje u centru tlaka CP ispod težišta C, kota h-CP - h-1 od gornjeg ruba. Ispod je pogled na zaklopku širine b = 2,0 m.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 461" role="img" aria-labelledby="u05v1pz_title u05v1pz_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:460px;height:auto;">
+  <title id="u05v1pz_title">Okomita pravokutna zaklopka ispod slobodne površine</title>
+  <desc id="u05v1pz_desc">Bočni presjek okomite pravokutne zaklopke pod vodom, gornji rub na dubini h-1 = 2,0 m, visina H = 3,0 m, u mjerilu. Trapezni dijagram tlaka od rho g h-1 do rho g (h-1 + H) okomit je na zaklopku; rezultanta F djeluje u centru tlaka CP ispod težišta C, kota h-CP - h-1 od gornjeg ruba. Ispod je pogled na zaklopku širine b = 2,0 m.</desc>
   <defs>
     <pattern id="u05v1pz_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
@@ -19,7 +19,7 @@
       <path d="M0,0 L0,6 L7,3 z" fill="#657781" />
     </marker>
   </defs>
-  <g id="u05v1pz_title-scene-1" transform="translate(0.0000 -4.7498)">
+  <g id="u05v1pz_title-scene-1" transform="translate(0.0000 -34.7498)">
     <rect x="60" y="110" width="280" height="260" fill="#dcebf1" />
     <rect x="340" y="60" width="14" height="130" fill="url(#u05v1pz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
     <rect x="340" y="310" width="14" height="70" fill="url(#u05v1pz_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -47,14 +47,11 @@
       <line x1="106.0" y1="394" x2="118.0" y2="394" stroke="#657781" stroke-width="0.6" />
       <line x1="106.0" y1="436" x2="118.0" y2="436" stroke="#657781" stroke-width="0.6" />
       <line x1="114.0" y1="397" x2="114.0" y2="433" stroke="#657781" stroke-width="1.2" marker-start="url(#u05v1pz_dimL)" marker-end="url(#u05v1pz_dim)" data-mf1-role="dimension" />
-      <text x="178" y="402" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">pravokutna zaklopka</text>
-      <text x="178" y="416" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">(pogled prema</text>
-      <text x="178" y="429" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">stijenki)</text>
-      <text x="92" y="382" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">
-        <tspan font-style="italic">b</tspan> = 2,0 m</text>
-      <text x="120" y="419" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">
-        <tspan font-style="italic">H</tspan>
-      </text>
+      <text x="178" y="402" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">pravokutna zaklopka</text>
+      <text x="178" y="416" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">(pogled prema</text>
+      <text x="178" y="429" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">stijenki)</text>
+      <text x="92" y="382" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 2,0 m</text>
+      <text x="120" y="419" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746"><tspan font-style="italic">H</tspan></text>
     </g>
     <line x1="62" y1="110" x2="24" y2="110" stroke="#657781" stroke-width="0.6" />
     <line x1="340" y1="190" x2="24" y2="190" stroke="#657781" stroke-width="0.6" stroke-dasharray="3,3" />
@@ -64,24 +61,18 @@
     <line x1="354" y1="190" x2="368" y2="190" stroke="#657781" stroke-width="0.6" />
     <line x1="354" y1="259" x2="368" y2="259" stroke="#657781" stroke-width="0.6" />
     <line x1="365" y1="193" x2="365" y2="256" stroke="#657781" stroke-width="1.3" marker-start="url(#u05v1pz_dimL)" marker-end="url(#u05v1pz_dim)" data-mf1-role="dimension" />
-    <text x="76" y="40" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" fill="#263746">Bočni presjek spremnika sa zaklopkom</text>
-    <text x="74" y="103" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">slobodna površina (<tspan font-style="italic">p</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan>)</text>
-    <text x="140" y="245" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-style="italic" fill="#263746">voda</text>
-    <text x="140" y="262" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">ρ = 998 kg/m³</text>
-    <text x="286" y="186" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end" font-style="italic">ρgh<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-    <text x="212" y="324" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end" font-style="italic">ρg(h<tspan baseline-shift="sub" font-size="0.7em">1</tspan><tspan baseline-shift="baseline"> + H)</tspan></text>
-    <text x="415" y="251" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746" font-style="italic" font-weight="700">F</text>
-    <text x="382" y="230" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">
-      <tspan font-style="italic">C</tspan>
-    </text>
-    <text x="382" y="291" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">
-      <tspan font-style="italic">CP</tspan>
-    </text>
-    <text x="80" y="153" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" fill="#263746">h<tspan baseline-shift="sub" font-size="0.7em">1</tspan>
-    </text>
-    <text x="80" y="169.0" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">= 2,0 m</text>
-    <text x="80" y="246" font-family="Arial, Liberation Sans, sans-serif" font-size="12" font-style="italic" fill="#263746">H</text>
-    <text x="80" y="262.0" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746">= 3,0 m</text>
-    <text x="371" y="206" font-family="Arial, Liberation Sans, sans-serif" font-size="11" font-style="italic" fill="#263746">h<tspan baseline-shift="sub" font-size="0.7em">CP</tspan><tspan baseline-shift="baseline"> − h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+    <text x="74" y="103" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">slobodna površina (<tspan font-style="italic">p</tspan> = <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan>)</text>
+    <text x="140" y="245" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746">voda</text>
+    <text x="140" y="262" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746"><tspan font-style="italic">ρ</tspan> = 998 kg/m³</text>
+    <text x="286" y="186" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end"><tspan font-style="italic">ρgh</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+    <text x="212" y="324" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end"><tspan font-style="italic">ρg</tspan>(<tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> + <tspan font-style="italic">H</tspan>)</text>
+    <text x="415" y="251" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" font-weight="700"><tspan font-style="italic">F</tspan></text>
+    <text x="382" y="230" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746"><tspan font-style="italic">C</tspan></text>
+    <text x="382" y="291" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746"><tspan font-style="italic">CP</tspan></text>
+    <text x="80" y="153" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+    <text x="80" y="169.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">= 2,0 m</text>
+    <text x="80" y="246" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746"><tspan font-style="italic">H</tspan></text>
+    <text x="80" y="262.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">= 3,0 m</text>
+    <text x="371" y="206" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">CP</tspan> − <tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
   </g>
 </svg>

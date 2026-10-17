@@ -218,7 +218,14 @@ def exercise_critical_depth(
     unit_discharge: float = 3.0, gravity: float = G
 ) -> dict[str, float]:
     critical_depth = (unit_discharge**2 / gravity) ** (1.0 / 3.0)
-    return {"critical_depth": critical_depth, "minimum_energy": 1.5 * critical_depth}
+    double_depth = 2.0 * critical_depth
+    return {
+        "critical_depth": critical_depth,
+        "minimum_energy": 1.5 * critical_depth,
+        "double_depth": double_depth,
+        "double_depth_energy": specific_energy(double_depth, unit_discharge, gravity),
+        "double_depth_froude": froude_rectangular(double_depth, unit_discharge, gravity),
+    }
 
 
 def exercise_raised_bed(
@@ -230,7 +237,7 @@ def exercise_raised_bed(
         raise ValueError("Potreban je pozitivan protok/dubina i nenegativan prag.")
     yc = (unit_discharge**2/gravity)**(1/3)
     if upstream_depth <= yc:
-        raise ValueError("Ulaz mora biti podkritičan.")
+        raise ValueError("Ulaz mora biti potkritičan.")
     upstream_energy = specific_energy(upstream_depth, unit_discharge, gravity)
     crest_energy = upstream_energy-bed_rise
     minimum_energy = 1.5*yc
@@ -481,11 +488,19 @@ def verify() -> list[dict[str, str]]:
     fast = exercise_froude(discharge=3.6)
     _invariant(out, "U15.Z1.information_direction", r['upstream_wave']<0<r['downstream_wave']
                and fast['froude']>1 and fast['upstream_wave']>0,
-               "Podkritični tok propušta informaciju uzvodno; nadkritični odnosi oba vala nizvodno.")
+               "Potkritični tok propušta informaciju uzvodno; natkritični odnosi oba vala nizvodno.")
 
     r = exercise_critical_depth()
     _check(out, "U15.Z2.yc", r["critical_depth"], 0.972, "m", abs_tol=0.0005)
     _check(out, "U15.Z2.Emin", r["minimum_energy"], 1.46, "m", abs_tol=0.005)
+    _check(out, "U15.Z2.y_2yc", r["double_depth"], 1.943, "m", abs_tol=0.0005)
+    _check(out, "U15.Z2.E_2yc", r["double_depth_energy"], 2.06, "m", abs_tol=0.005)
+    _check(out, "U15.Z2.Fr_2yc", r["double_depth_froude"], 0.354, "", abs_tol=0.0005)
+    _invariant(out, "U15.Z2.double_depth_branch",
+               abs(r["double_depth_energy"] / r["critical_depth"] - 17.0 / 8.0) < 1e-12
+               and abs(r["double_depth_froude"] - 2.0 ** -1.5) < 1e-12
+               and r["double_depth_froude"] < 1,
+               "Pri y=2yc mora vrijediti E=17yc/8 i Fr=2^(-3/2)<1 (mirna grana).")
     yc = r['critical_depth']
     _invariant(out, "U15.Z2.energy_minimum", abs(froude_rectangular(yc,3)-1)<1e-12
                and specific_energy(yc*.9,3)>r['minimum_energy']

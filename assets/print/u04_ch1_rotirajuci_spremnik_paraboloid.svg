@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 447 485" role="img" aria-labelledby="u04c1rsp_title u04c1rsp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:447px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 447 351" role="img" aria-labelledby="u04c1rsp_title u04c1rsp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:447px;height:auto;">
   <title id="u04c1rsp_title">Rotirajući cilindrični spremnik s paraboloidnom slobodnom površinom</title>
   <desc id="u04c1rsp_desc">Rotirajući otvoreni cilindrični spremnik s paraboloidnom slobodnom površinom. Puna crta je radni režim, isprekidana granica prelijevanja; isprekidana vodoravna crta je mirna razina h_0. Označene su dubine uz os i stijenku te točke C i D na dnu. Visine i polumjer crtani su u istom mjerilu (200 jedinica po metru).</desc>
   <defs>
@@ -23,7 +23,7 @@
     </marker>
     <marker id="u04c1rsp_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
   </defs>
-  <g id="u04c1rsp_title-scene-1" transform="translate(-16.0000 -14.5108)">
+  <g id="u04c1rsp_title-scene-1" transform="translate(-16.0000 -148.5108)">
     <rect x="166" y="224" width="14" height="156" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
     <rect x="340" y="224" width="14" height="156" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
     <rect x="166" y="380" width="188" height="14" fill="url(#u04c1rsp_hatch)" stroke="#3a4a56" stroke-width="1.3" />
@@ -64,24 +64,21 @@
     <line x1="260" y1="431" x2="340" y2="431" stroke="#657781" stroke-width="1.3" marker-start="url(#u04c1rsp_dimL)" marker-end="url(#u04c1rsp_dim)" data-mf1-role="dimension" />
     <line x1="260" y1="426" x2="260" y2="436" stroke="#657781" stroke-width="1.2" />
     <line x1="340" y1="426" x2="340" y2="436" stroke="#657781" stroke-width="1.2" />
-    <text x="260" y="50" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">Aksijalni presjek (paraboloid revolucije)</text>
-    <text x="270" y="214" font-family="Arial, Liberation Sans, sans-serif" font-size="9.5" font-style="italic" fill="#263746">os vrtnje</text>
-    <text x="260" y="184" font-family="Arial, Liberation Sans, sans-serif" font-size="14" font-style="italic" text-anchor="middle" fill="#263746"><tspan font-weight="700">ω</tspan> = 5,20 rad/s</text>
-    <text x="251" y="410" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">C</text>
-    <text x="349" y="410" font-family="Arial, Liberation Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#263746">D</text>
-    <text x="226" y="358" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,C</tspan>
-    </text>
-    <text x="319" y="358" font-family="Arial, Liberation Sans, sans-serif" font-size="10" font-style="italic" fill="#263746" text-anchor="middle">p<tspan baseline-shift="sub" font-size="0.7em">M,D</tspan>
-    </text>
-    <text x="373" y="264" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">Δh</text>
-    <text x="84" y="470" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">radni režim (ω = 5,20 rad/s)</text>
-    <text x="314" y="470" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" fill="#263746">granica prelijevanja (ω<tspan baseline-shift="sub" font-size="0.7em">max</tspan>)</text>
-    <text x="99" y="298" font-family="Arial, Liberation Sans, sans-serif" font-size="13" text-anchor="end" fill="#263746"><tspan font-style="italic">H</tspan></text>
-    <text x="99" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="10.5" text-anchor="end" fill="#263746">= 0,78 m</text>
+    <text x="270" y="214" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">os vrtnje</text>
+    <text x="260" y="184" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746"><tspan font-weight="700" font-style="italic">ω</tspan> = 5,20 rad/s</text>
+    <text x="251" y="410" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746"><tspan font-style="italic">C</tspan></text>
+    <text x="349" y="410" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="middle" fill="#263746"><tspan font-style="italic">D</tspan></text>
+    <text x="226" y="358" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,C</tspan></text>
+    <text x="319" y="358" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,D</tspan></text>
+    <text x="373" y="264" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">Δ<tspan font-style="italic">h</tspan></text>
+    <text x="84" y="470" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">radni režim (<tspan font-style="italic">ω</tspan> = 5,20 rad/s)</text>
+    <text x="314" y="470" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746">granica prelijevanja (<tspan font-style="italic">ω</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan>)</text>
+    <text x="99" y="298" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="end" fill="#263746"><tspan font-style="italic">H</tspan></text>
+    <text x="99" y="314" font-family="Arial, Liberation Sans, sans-serif" font-size="11" text-anchor="end" fill="#263746">= 0,78 m</text>
     <text x="405" y="306" font-family="Arial, Liberation Sans, sans-serif" font-size="12" text-anchor="start" fill="#263746"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">R</tspan></text>
-    <text x="300" y="450" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" text-anchor="middle" fill="#263746"><tspan font-style="italic">R</tspan> = 0,40 m</text>
-    <text x="264" y="256" font-family="Arial, Liberation Sans, sans-serif" font-size="9.5" font-style="italic" fill="#263746"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 0,60 m</text>
-    <text x="129" y="331" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle" transform="rotate(-90 129 331)">h<tspan baseline-shift="sub" font-size="0.7em">C</tspan>
-    </text>
+    <text x="300" y="450" font-family="Arial, Liberation Sans, sans-serif" font-size="11.5" text-anchor="middle" fill="#263746"><tspan font-style="italic">R</tspan> = 0,40 m</text>
+    <text x="163" y="257" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> =</text>
+    <text x="163" y="270" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end">0,60 m</text>
+    <text x="129" y="331" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 129 331)"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">C</tspan></text>
   </g>
 </svg>

@@ -12,6 +12,11 @@ local function replacement_title(title)
     return { pandoc.Str("Smjernica") }
   end
   -- Identifikator zaglavlja ostaje isti radi postojećih poveznica.
+  -- Izvori prelaze na „Zadatci”; stari oblik „Zadaci” i dalje se ispravlja,
+  -- a novi prolazi nepromijenjen.
+  if text:match("Zadatci za vježbu$") or text:match("Zadatci za samostalan rad$") then
+    return nil
+  end
   if text:match("Zadaci za vježbu$") or text:match("Zadaci za samostalan rad$") then
     -- Post-quarto zaglavlje može već sadržavati broj odjeljka u Spanu.
     for _, inline in ipairs(title) do

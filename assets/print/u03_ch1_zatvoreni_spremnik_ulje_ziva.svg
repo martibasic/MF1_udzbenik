@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 489" role="img" aria-labelledby="u03c1zsuz_title u03c1zsuz_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:736px;height:auto;">
-  <title id="u03c1zsuz_title">Teretni tank s inertnim plinom, uljem i vodenim talogom: ullage otvor, sondiranje i tlačni mjerač na dnu</title>
-  <desc id="u03c1zsuz_desc">Presjek teretnog tanka tankera. Iznad ulja je inertni plin pod pretlakom, na dnu tanak sloj morske vode. Ullage otvor na palubi ima referentnu točku 18,60 m iznad dna; ullage vrpca očitava U_m = 2,31 m do površine ulja, a ullage U iz tlaka na dnu je traženi rezultat, a sonda s pastom debljinu vode 0,35 m. Tlačni mjerač razine na dnu pokazuje p_M,dno = 141,0 kPa. Vertikalno mjerilo je 20 jedinica po metru: referentna točka y58, površina ulja y104,2, granica ulja i vode y423, dno y430. Širina tanka je shematska.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 736 473" role="img" aria-labelledby="u03c1zsuz_title u03c1zsuz_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:736px;height:auto;">
+  <title id="u03c1zsuz_title">Teretni tank s inertnim plinom, uljem i vodenim talogom: ulažni otvor, sondiranje i tlačni mjerač na dnu</title>
+  <desc id="u03c1zsuz_desc">Presjek teretnog tanka tankera. Iznad ulja je inertni plin pod pretlakom, na dnu tanak sloj morske vode. Ulažni otvor na palubi ima referentnu točku 18,60 m iznad dna; ulažna vrpca očitava U_m = 2,31 m do površine ulja, a ulaž U iz tlaka na dnu je traženi rezultat, a sonda s pastom debljinu vode 0,35 m. Tlačni mjerač razine na dnu pokazuje p_M,dno = 141,0 kPa. Okomito mjerilo je 20 jedinica po metru: referentna točka y58, površina ulja y104,2, granica ulja i vode y423, dno y430. Širina tanka je shematska.</desc>
   <defs>
     <pattern id="u03c1zsuz_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <rect width="7" height="7" fill="#d7dee3" />
@@ -13,7 +13,7 @@
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none" stroke-width="1.2" />
     </marker>
   </defs>
-  <g id="u03c1zsuz_title-scene-1" transform="translate(0 0)">
+  <g id="u03c1zsuz_title-scene-1" transform="translate(0.0000 -16.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif">
       <rect id="u03c1zsuz_gas" x="164" y="84" width="396" height="20.2" fill="#f3f6f7" stroke="none" />
       <rect id="u03c1zsuz_oil" x="164" y="104.2" width="396" height="318.8" fill="#eadfc5" stroke="none" />
@@ -37,19 +37,18 @@
       <line x1="200" y1="432" x2="200" y2="460" stroke="#3a4a56" stroke-width="0.8" />
       <circle id="u03c1zsuz_gas-gauge" cx="480" cy="60" r="5" fill="#ffffff" stroke="#3a4a56" stroke-width="1.4" />
       <line x1="480" y1="65" x2="480" y2="84" stroke="#3a4a56" stroke-width="0.8" />
-      <text x="30" y="40" font-size="13" fill="#263746" font-weight="700">Teretni tank (presjek)</text>
-      <text x="30" y="57" font-size="11" fill="#263746">A<tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 600 m²</text>
+      <text x="30" y="57" font-size="11" fill="#263746"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 600 m²</text>
       <text x="225" y="66" font-size="11" fill="#263746" text-anchor="middle">paluba</text>
-      <text x="356" y="54" font-size="11" fill="#263746" text-anchor="start">referentna točka ullagea</text>
+      <text x="356" y="54" font-size="11" fill="#263746" text-anchor="start">referentna točka ulaža</text>
       <text x="364" y="98" font-size="11" fill="#263746" text-anchor="middle">inertni plin</text>
-      <text x="492" y="50" font-size="11" fill="#263746" text-anchor="start">p<tspan baseline-shift="sub" font-size="0.7em">M,pl</tspan> = 3,0 kPa</text>
-      <text x="364" y="250" font-size="13" fill="#263746" text-anchor="middle">plinsko ulje</text>
-      <text x="364" y="268" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">u</tspan> = 860 kg/m³</text>
-      <text x="440" y="408" font-size="11" fill="#263746" text-anchor="middle">morska voda (talog), ρ<tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1025 kg/m³</text>
+      <text x="492" y="50" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,pl</tspan> = 3,0 kPa</text>
+      <text x="364" y="250" font-size="12" fill="#263746" text-anchor="middle">plinsko ulje</text>
+      <text x="364" y="268" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">u</tspan> = 860 kg/m³</text>
+      <text x="440" y="408" font-size="11" fill="#263746" text-anchor="middle">morska voda (talog), <tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1025 kg/m³</text>
       <line x1="440" y1="411" x2="440" y2="425" stroke="#657781" stroke-width="0.7" />
-      <text x="310" y="124" font-size="10" fill="#263746" text-anchor="end">ullage vrpca: U<tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 2,31 m</text>
-      <text x="312" y="414" font-size="10" fill="#263746" text-anchor="end">sonda s pastom</text>
-      <text x="200" y="474" font-size="11" fill="#263746" text-anchor="middle">tlačni mjerač razine, p<tspan baseline-shift="sub" font-size="0.7em">M,dno</tspan> = 141,0 kPa</text>
+      <text x="310" y="124" font-size="11" fill="#263746" text-anchor="end">ulažna vrpca: <tspan font-style="italic">U</tspan><tspan baseline-shift="sub" font-size="0.7em">m</tspan> = 2,31 m</text>
+      <text x="312" y="414" font-size="11" fill="#263746" text-anchor="end">sonda s pastom</text>
+      <text x="200" y="474" font-size="11" fill="#263746" text-anchor="middle">tlačni mjerač razine, <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M,dno</tspan> = 141,0 kPa</text>
       <line x1="574" y1="58" x2="704" y2="58" stroke="#657781" stroke-width="0.7" />
       <line x1="560" y1="104.2" x2="646" y2="104.2" stroke="#657781" stroke-width="0.7" />
       <line x1="560" y1="423" x2="646" y2="423" stroke="#657781" stroke-width="0.7" />
@@ -57,17 +56,17 @@
       <line x1="605" y1="58" x2="615" y2="58" stroke="#657781" stroke-width="0.8" />
       <line x1="605" y1="104.2" x2="615" y2="104.2" stroke="#657781" stroke-width="0.8" />
       <line id="u03c1zsuz_dim-u" x1="610" y1="58" x2="610" y2="104.2" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" data-mf1-role="dimension" />
-      <text x="616" y="85" font-size="11" fill="#263746" text-anchor="start">U = ?</text>
+      <text x="616" y="85" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">U</tspan> = ?</text>
       <line x1="635" y1="104.2" x2="645" y2="104.2" stroke="#657781" stroke-width="0.8" />
       <line x1="635" y1="423" x2="645" y2="423" stroke="#657781" stroke-width="0.8" />
       <line id="u03c1zsuz_dim-ho" x1="640" y1="104.2" x2="640" y2="423" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" data-mf1-role="dimension" />
-      <text x="646" y="262" font-size="11" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">u</tspan></text>
-      <text x="646" y="278" font-size="10" fill="#263746" text-anchor="start">= ?</text>
-      <text x="580" y="446" font-size="10" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 0,35 m</text>
+      <text x="646" y="262" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">u</tspan></text>
+      <text x="646" y="278" font-size="11" fill="#263746" text-anchor="start">= ?</text>
+      <text x="580" y="446" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 0,35 m</text>
       <line x1="695" y1="58" x2="705" y2="58" stroke="#657781" stroke-width="0.8" />
       <line x1="695" y1="430" x2="705" y2="430" stroke="#657781" stroke-width="0.8" />
       <line id="u03c1zsuz_dim-href" x1="700" y1="58" x2="700" y2="430" stroke="#657781" stroke-width="1.2" marker-start="url(#u03p3_dimL)" marker-end="url(#u03p3_dim)" data-mf1-role="dimension" />
-      <text x="716" y="236" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 716 236)">H<tspan baseline-shift="sub" font-size="0.7em">ref</tspan> = 18,60 m</text>
+      <text x="716" y="236" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 716 236)"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">ref</tspan> = 18,60 m</text>
     </g>
   </g>
 </svg>

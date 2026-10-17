@@ -1,10 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 586 419" role="img" aria-labelledby="u13net_title u13net_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:586px;height:auto;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 62 586 355" role="img" aria-labelledby="u13net_title u13net_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:586px;height:auto;">
   <title id="u13net_title">Cjevovodna mreža: protoci i gubitci</title>
   <desc id="u13net_desc">Spremnik A spojen je otvorenim dnom s dovodom do čvora C, gdje se voda dijeli u dvije paralelne grane i ponovno spaja u D. Odvod završava uronjenim otvorom u spremniku B. U svim dijelovima je isti povezani fluid bez zatvorenih pregrada. Kota H spaja dvije slobodne površine. Puna energijska crta (EGL) shematski povezuje slobodne površine A i B i pada u smjeru toka; pad između C i D jednak je po oba puta. Kote h_AC, h_CD i h_DB mjere pad EGL od slobodne površine A do čvora C, od C do D i od D do slobodne površine B; zajedno daju H. Strelice protoka u dovodu i odvodu jednake su duljine (isti Q), a dvije strelice ogranaka zajedno odgovaraju jednoj strelici Q. Promjeri su shematski, bez brojčanog mjerila.</desc>
   <defs>
     <marker id="u13net_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <pattern id="u13net_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
+    </pattern>
+    <pattern id="u13net_wallhatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="#d7dee3" />
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#657781" stroke-width="1.1" />
     </pattern>
     <marker id="u13net_v" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
       <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
@@ -30,15 +34,14 @@
   </defs>
   <g id="u13net_title-scene-1" transform="translate(4.0000 -12.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
-      <text x="45" y="49" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Serijsko-paralelna mreža</text>
       <path id="u13net_networkouter" d="M88 195 V273 H200 Q315 207 430 273 H515 V387 M200 273 Q315 365 430 273" fill="none" stroke="#3a4a56" stroke-width="29" stroke-linecap="butt" stroke-linejoin="round" />
       <path d="M88 195 V273 H200 Q315 207 430 273 H515 V387 M200 273 Q315 365 430 273" fill="none" stroke="url(#u13net_hatch)" stroke-width="27" stroke-linecap="butt" stroke-linejoin="round" />
       <path id="u13net_networkfluid" d="M88 195 V273 H200 Q315 207 430 273 H515 V387 M200 273 Q315 365 430 273" fill="none" stroke="#dcebf1" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round" />
       <path id="u13net_tankAfluid" d="M50 121 H126 V210 H50 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
       <path id="u13net_tankAouter0" d="M50 96 V210 H78" fill="none" stroke="#3a4a56" stroke-width="8" />
-      <path d="M50 96 V210 H78" fill="none" stroke="url(#u13net_hatch)" stroke-width="6" />
+      <path d="M50 96 V210 H78" fill="none" stroke="url(#u13net_wallhatch)" stroke-width="6.6" />
       <path id="u13net_tankAouter1" d="M98 210 H126 V96" fill="none" stroke="#3a4a56" stroke-width="8" />
-      <path d="M98 210 H126 V96" fill="none" stroke="url(#u13net_hatch)" stroke-width="6" />
+      <path d="M98 210 H126 V96" fill="none" stroke="url(#u13net_wallhatch)" stroke-width="6.6" />
       <path d="M50 121 H126 V210 H50 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
       <path id="u13net_tankAwall0" d="M50 96 V210 H78" fill="none" stroke="#3a4a56" stroke-width="1.3" />
       <path id="u13net_tankAwall1" d="M98 210 H126 V96" fill="none" stroke="#3a4a56" stroke-width="1.3" />
@@ -46,7 +49,7 @@
       <text x="90" y="110" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">A</text>
       <rect id="u13net_tankBfluid" x="472" y="340" width="86" height="67" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
       <path id="u13net_tankBouter" d="M472 319 V407 H558 V319" fill="none" stroke="#3a4a56" stroke-width="8" />
-      <path d="M472 319 V407 H558 V319" fill="none" stroke="url(#u13net_hatch)" stroke-width="6" />
+      <path d="M472 319 V407 H558 V319" fill="none" stroke="url(#u13net_wallhatch)" stroke-width="6.6" />
       <path id="u13net_tankBwall" d="M472 319 V407 H558 V319" fill="none" stroke="#3a4a56" stroke-width="1.3" />
       <line id="u13net_surfaceBleft" x1="472" y1="340" x2="505" y2="340" stroke="#356b83" stroke-width="1.5" />
       <line id="u13net_surfaceBright" x1="525" y1="340" x2="558" y2="340" stroke="#356b83" stroke-width="1.5" />
@@ -59,13 +62,13 @@
       <circle id="u13net_nodeD" cx="430" cy="273" r="3" fill="#356b83" />
       <text x="440" y="306" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">D</text>
       <path id="u13net_feedVelocity" d="M114 273 L174 273" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13net_vopen)" data-mf1-vector="velocity" />
-      <text x="143" y="249" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+      <text x="143" y="249" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Q</text>
       <path id="u13net_drainVelocity" d="M443 273 L503 273" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13net_vopen)" data-mf1-vector="velocity" />
-      <text x="473" y="249" font-size="12" fill="#263746" text-anchor="middle">Q</text>
+      <text x="473" y="249" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Q</text>
       <path id="u13net_branchVelocity1" d="M300 240 L330 240" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13net_vopen)" data-mf1-vector="velocity" />
-      <text x="315" y="214" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+      <text x="315" y="214" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Q<tspan baseline-shift="sub" font-size="0.7em" font-style="normal">1</tspan></text>
       <path id="u13net_branchVelocity2" d="M300 319 L330 319" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u13net_vopen)" data-mf1-vector="velocity" />
-      <text x="315" y="353" font-size="12" fill="#263746" text-anchor="middle">Q<tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+      <text x="315" y="353" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">Q<tspan baseline-shift="sub" font-size="0.7em" font-style="normal">2</tspan></text>
       <line x1="88" y1="358" x2="88" y2="368" stroke="#657781" stroke-width="1.2" />
       <line x1="200" y1="358" x2="200" y2="368" stroke="#657781" stroke-width="1.2" />
       <path id="u13net_feedLength" d="M88 363 L200 363" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13net_dim)" marker-end="url(#u13net_dim)" data-mf1-role="dimension" />
@@ -73,7 +76,7 @@
       <line x1="20" y1="121" x2="30" y2="121" stroke="#657781" stroke-width="1.2" />
       <line x1="20" y1="340" x2="30" y2="340" stroke="#657781" stroke-width="1.2" />
       <path id="u13net_H" d="M25 121 L25 340" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13net_dim)" marker-end="url(#u13net_dim)" data-mf1-role="dimension" />
-      <text x="35" y="234" font-size="13" fill="#263746" text-anchor="start">H</text>
+      <text x="35" y="234" font-size="13" fill="#263746" text-anchor="start" font-style="italic">H</text>
       <line x1="25" y1="121" x2="44" y2="121" stroke="#657781" stroke-width="1" />
       <line x1="25" y1="340" x2="461" y2="340" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
       <path id="u13net_egl" d="M90.000000 121.000000 L200.000000 170.000000 L430.000000 240.000000 L546.000000 340.000000" fill="none" stroke="#356b83" stroke-width="1.8" />
@@ -82,17 +85,17 @@
       <line x1="195" y1="121" x2="205" y2="121" stroke="#657781" stroke-width="1.2" />
       <line x1="195" y1="170" x2="205" y2="170" stroke="#657781" stroke-width="1.2" />
       <path id="u13net_hAC" d="M200 121 L200 170" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13net_dim)" marker-end="url(#u13net_dim)" data-mf1-role="dimension" />
-      <text x="207" y="150" font-size="12" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">AC</tspan></text>
+      <text x="207" y="150" font-size="12" fill="#263746" text-anchor="start" font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em" font-style="normal">AC</tspan></text>
       <line x1="200" y1="170" x2="435" y2="170" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
       <line x1="425" y1="170" x2="435" y2="170" stroke="#657781" stroke-width="1.2" />
       <line x1="425" y1="240" x2="435" y2="240" stroke="#657781" stroke-width="1.2" />
       <path id="u13net_hCD" d="M430 170 L430 240" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13net_dim)" marker-end="url(#u13net_dim)" data-mf1-role="dimension" />
-      <text x="437" y="210" font-size="12" fill="#263746" text-anchor="start">h<tspan baseline-shift="sub" font-size="0.7em">CD</tspan></text>
+      <text x="437" y="210" font-size="12" fill="#263746" text-anchor="start" font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em" font-style="normal">CD</tspan></text>
       <line x1="430" y1="240" x2="557" y2="240" stroke="#657781" stroke-width="1" stroke-dasharray="4 4" />
       <line x1="547" y1="240" x2="557" y2="240" stroke="#657781" stroke-width="1.2" />
       <line x1="547" y1="340" x2="557" y2="340" stroke="#657781" stroke-width="1.2" />
       <path id="u13net_hDB" d="M552 240 L552 340" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u13net_dim)" marker-end="url(#u13net_dim)" data-mf1-role="dimension" />
-      <text x="552" y="232" font-size="12" fill="#263746" text-anchor="middle">h<tspan baseline-shift="sub" font-size="0.7em">DB</tspan></text>
+      <text x="552" y="232" font-size="12" fill="#263746" text-anchor="middle" font-style="italic">h<tspan baseline-shift="sub" font-size="0.7em" font-style="normal">DB</tspan></text>
     </g>
   </g>
 </svg>

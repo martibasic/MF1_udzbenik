@@ -247,7 +247,7 @@ def verify():
     _check(out, "U04.CH1.p_M_C", r["p_M_C"], 4804.0, "Pa")
     _check(out, "U04.CH1.p_M_D", r["p_M_D"], 6968.0, "Pa")
     _check(out, "U04.CH1.omega_max", r["omega_max"], 6.64, "rad/s")
-    _check(out, "U04.CH1.n_max", r["n_max"], 63.4, "okr/min")
+    _check(out, "U04.CH1.n_max", r["n_max"], 63.4, "min^-1")
 
     r = primjer_5_autocisterna()
     _check(out, "U04.P5.dh", r["dh"], 0.465, "m")
@@ -305,7 +305,7 @@ def verify():
     z4 = zadatak_4()
     _check(out, "U04.Z4.dp_kPa", z4["dp"] / 1000, 1.60, "kPa", rel=1e-9)
     _check(out, "U04.Z4.omega", z4["omega"], 7.91, "rad/s", rel=.001)
-    _check(out, "U04.Z4.rpm", z4["rpm"], 75.5, "okr/min", rel=.001)
+    _check(out, "U04.Z4.rpm", z4["rpm"], 75.5, "min^-1", rel=.001)
     # The linear radial gradient integrates exactly by the trapezoid rule.
     reconstructed = 1000*z4["omega"]**2 * (.080+.240)/2 * (.240-.080)
     _invariant(out, "U04.Z4.radial_integral", abs(reconstructed-1600) < 1e-8,

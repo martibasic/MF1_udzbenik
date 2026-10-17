@@ -41,12 +41,13 @@ try {
       issues.push(`${name}: source changed; review viewports and note indices`);
     await page.goto(pathToFileURL(path).href);
     await page.evaluate(() => document.fonts.ready);
-    const {width, height, ink} = await page.evaluate(() => {
+    const {left, top, width, height, ink} = await page.evaluate(() => {
       const svg = document.querySelector("svg"), v = svg.viewBox.baseVal;
       const inverse = svg.getScreenCTM().inverse();
       const elements = [...svg.querySelectorAll("text,path,rect,line,polyline,polygon,circle,ellipse")]
         .filter(e => !e.closest("defs"));
-      return {width: v.width, height: v.height, ink: elements.map(e => {
+      // A cropped viewBox may start away from the origin; panels use its coordinates.
+      return {left: v.x, top: v.y, width: v.width, height: v.height, ink: elements.map(e => {
         const b = e.getBBox(), m = inverse.multiply(e.getScreenCTM());
         // Windows resolves Segoe UI; Linux uses the declared Arial/sans-serif
         // fallback. Require room for both, even on a Windows developer machine.
@@ -77,8 +78,8 @@ try {
       issues.push(`${name}: invalid or duplicate note index`);
     for (const p of layout.panels) {
       if (p.length < 4 || p.length > 7 || !p.every(Number.isFinite)
-          || p[0] < 0 || p[1] < 0 || p[2] <= 0 || p[3] <= 0
-          || p[0] + p[2] > width + 0.2 || p[1] + p[3] > height + 0.2
+          || p[0] < left - 0.2 || p[1] < top - 0.2 || p[2] <= 0 || p[3] <= 0
+          || p[0] + p[2] > left + width + 0.2 || p[1] + p[3] > top + height + 0.2
           || (p[4] !== undefined && ![0,90].includes(p[4]))
           || (p[6] !== undefined && (p[6] <= 0 || p[6] > (p[4] ? 640 : 510))))
         issues.push(`${name}: invalid viewport ${JSON.stringify(p)}`);
@@ -97,8 +98,8 @@ try {
           .filter(({t}) => contains([b[0],b[1],b[2]-b[0],b[3]-b[1]],t.box));
         const noteCard = e.rx > 0 && textInside.length > 0
           && textInside.every(({index}) => notes.has(index));
-        const canvasFrame = b[0] <= 20 && b[1] <= 20
-          && b[2] >= width-20 && b[3] >= height-20;
+        const canvasFrame = b[0] <= left+20 && b[1] <= top+20
+          && b[2] >= left+width-20 && b[3] >= top+height-20;
         const background = e.tag === "rect" && ["white", "#ffffff", "#fff"].includes(e.fill)
           && (cardStrokes.has(e.stroke) || canvasFrame || noteCard);
         const divider = e.tag === "line" && cardStrokes.has(e.stroke);

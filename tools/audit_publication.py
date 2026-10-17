@@ -160,9 +160,10 @@ SUMMARY_BOX_RE = re.compile(r"\{\.mf1-zavrsni-okvir\b")
 def summary_issues(text: str) -> list[str]:
     """Poglavlje ima jedan sažetak, na kraju, iza zadataka za vježbu.
 
-    Sažetak je odjeljak ``## Sažetak`` ili završni okvir; okvir smije stajati
-    unutar tog odjeljka. Drugi sažetak između riješenih primjera i zadataka
-    ponavlja završni (odluka autorice od 16. listopada 2026.).
+    Sažetak je odjeljak ``## Sažetak`` koji sadrži završni okvir. Drugi
+    sažetak između riješenih primjera i zadataka ponavlja završni (odluke
+    autorice od 16. listopada 2026.: jedan sažetak, isti oblik u svim
+    poglavljima).
     """
     tasks = TASKS_HEADING_RE.search(text)
     headings = [m.start() for m in SUMMARY_HEADING_RE.finditer(text)]
@@ -170,6 +171,10 @@ def summary_issues(text: str) -> list[str]:
     if not headings and not boxes:
         return ["nedostaje završni sažetak poglavlja"]
     issues = []
+    if not headings:
+        issues.append("sažetak mora biti odjeljak ## Sažetak")
+    if not boxes:
+        issues.append("odjeljak Sažetak mora sadržavati završni okvir")
     if len(headings) > 1 or len(boxes) > 1:
         issues.append("poglavlje smije imati samo jedan sažetak")
     if tasks and any(pos < tasks.start() for pos in headings + boxes):

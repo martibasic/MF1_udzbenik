@@ -39,17 +39,17 @@
   <g id="u01fgs_title-scene-1" transform="translate(-90.1016 -14.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u01fgs_oilPanel" transform="translate(30 30)">
-        <text x="215.0" y="21" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">1. Ulje u posudi</text>
+        <text x="215.0" y="21" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">1. Ulje u posudi</text>
         <rect id="u01fgs_oil" x="144" y="110" width="146" height="180" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
         <line x1="144" y1="110" x2="290" y2="110" stroke="#356b83" stroke-width="2" />
         <rect x="136" y="70" width="8" height="228" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="290" y="70" width="8" height="228" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="136" y="290" width="162" height="8" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="217" y="151" font-size="16" fill="#263746" text-anchor="middle">V</text>
-        <text x="217" y="176" font-size="14" fill="#263746" text-anchor="middle">m, ρ</text>
+        <text x="217" y="151" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">V</tspan></text>
+        <text x="217" y="176" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">m</tspan>, <tspan font-style="italic">ρ</tspan></text>
         <circle id="u01fgs_centerOfMass" cx="217" cy="200" r="3" fill="#356b83" />
         <path id="u01fgs_weight" d="M217 200 L217 264" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01fgs_vF)" data-mf1-vector="force" />
-        <text x="233" y="240" font-size="13" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">G</tspan></text>
+        <text x="233" y="240" font-size="12" fill="#263746" font-weight="700" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan></text>
       </g>
     </g>
   </g>
@@ -61,24 +61,24 @@
         <rect x="54" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="150" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="54" y="290" width="104" height="8" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="106" y="174" font-size="14" fill="#263746" text-anchor="middle">ulje</text>
-        <text x="106" y="318" font-size="11" fill="#263746" text-anchor="middle">ρ = 860 kg/m³</text>
+        <text x="106" y="174" font-size="12" fill="#263746" text-anchor="middle">ulje</text>
+        <text x="106" y="318" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">ρ</tspan> = 860 kg/m³</text>
         <rect x="302" y="110" width="88" height="180" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
         <line x1="302" y1="110" x2="390" y2="110" stroke="#356b83" stroke-width="2" />
         <rect x="294" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="390" y="90" width="8" height="208" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
         <rect x="294" y="290" width="104" height="8" rx="0" fill="url(#u01fgs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="346" y="174" font-size="14" fill="#263746" text-anchor="middle">voda</text>
-        <text x="226" y="58" font-size="14" fill="#263746" text-anchor="middle" font-weight="700">2. Jednak volumen ulja i vode</text>
+        <text x="346" y="174" font-size="12" fill="#263746" text-anchor="middle">voda</text>
+        <text x="226" y="58" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">2. Jednak volumen ulja i vode</text>
         <line id="u01fgs_equalLevel" x1="162" y1="110" x2="290" y2="110" stroke="#657781" stroke-width="1" stroke-dasharray="5 4" />
-        <text x="226" y="102" font-size="12" fill="#263746" text-anchor="middle">jednak V</text>
+        <text x="226" y="102" font-size="12" fill="#263746" text-anchor="middle">jednak <tspan font-style="italic">V</tspan></text>
         <circle cx="106" cy="200" r="3" fill="#356b83" />
         <path id="u01fgs_weightOil" d="M106 200 L106 260.2" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01fgs_vF)" data-mf1-vector="force" />
-        <text x="116" y="248" font-size="13" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">G</tspan></text>
+        <text x="116" y="248" font-size="12" fill="#263746" font-weight="700" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">G</tspan></text>
         <circle cx="346" cy="200" r="3" fill="#356b83" />
         <path id="u01fgs_weightWater" d="M346 200 L346 270" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u01fgs_vF)" data-mf1-vector="force" />
-        <text x="356" y="254" font-size="13" fill="#263746" font-weight="700" text-anchor="start">F<tspan baseline-shift="sub" font-size="0.7em">G,v</tspan></text>
-        <text x="346" y="318" font-size="11" fill="#263746" text-anchor="middle">ρ<tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 1000 kg/m³</text>
+        <text x="356" y="254" font-size="12" fill="#263746" font-weight="700" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">G,v</tspan></text>
+        <text x="346" y="318" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">v</tspan> = 1000 kg/m³</text>
       </g>
     </g>
   </g>

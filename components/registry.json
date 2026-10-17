@@ -274,6 +274,35 @@
       "html": "div",
       "numbering": "local"
     },
+    "NotebookQR": {
+      "classes": [
+        "mf1-interaktivno-qr"
+      ],
+      "html": "img",
+      "visibility": ["pdf", "print"]
+    },
+    "SignalChip": {
+      "classes": [
+        "mf1-signal-chip",
+        "mf1-signal-note"
+      ],
+      "html": "span",
+      "visibility": ["web"]
+    },
+    "TaskLevel": {
+      "classes": [
+        "mf1-task-level"
+      ],
+      "html": "span",
+      "visibility": ["pdf"]
+    },
+    "HomeEyebrow": {
+      "classes": [
+        "mf1-eyebrow"
+      ],
+      "html": "span",
+      "visibility": ["pdf"]
+    },
     "ModelLimit": {
       "classes": [
         "mf1-granica-modela"

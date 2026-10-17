@@ -58,6 +58,23 @@
       "assets/typst/typst-show.typ",
       "assets/typst/biblio.typ"
     ],
-    "keep-typ": false
+    "keep-typ": false,
+    "description": "Sveučilišni priručnik iz mehanike fluida za studente strojarstva i brodogradnje: fizikalni modeli, riješeni primjeri, zadatci za vježbu i numerički pokusi.",
+    "keywords": [
+      "mehanika fluida",
+      "hidrostatika",
+      "Bernoullijeva jednadžba",
+      "cjevovodi",
+      "turbostrojevi",
+      "otvoreni tokovi",
+      "brodogradnja",
+      "strojarstvo",
+      "sveučilišni priručnik"
+    ],
+    "mf1-institution": [
+      "Sveučilište u Splitu",
+      "Fakultet elektrotehnike, strojarstva i brodogradnje (FESB)"
+    ],
+    "mf1-place-year": "Split, 2026."
   }
 }

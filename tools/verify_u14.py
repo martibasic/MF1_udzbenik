@@ -303,7 +303,7 @@ def verify():
     _invariant(out,"U14.Z3.criterion",r['sigma1']>3>r['sigma2'],"Dva režima moraju biti s različitih strana zadanog kriterija.")
     _invariant(out,"U14.Z3.threshold",abs(zadatak_3(p_M=r['p_M_min'])['sigma2']-3)<1e-12
                and zadatak_3(p_M=r['p_M_min']-1)['sigma2']<3,
-               "Granični pretlak i neposredno niži tlak moraju dati granicu i kršenje kriterija.")
+               "Granični manometarski tlak i neposredno niži tlak moraju dati granicu i kršenje kriterija.")
 
     r = zadatak_4()
     _check(out, "U14.Z4.Re",r['Re'],300000.0,"",abs_tol=1e-7)

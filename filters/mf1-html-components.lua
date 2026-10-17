@@ -26,7 +26,7 @@ local function catalog()
     table.insert(result,'<section><h2 class="mf1-section-title unnumbered">'..escape(title)..'</h2><div class="mf1-grid">')
     for _,id in ipairs(ids) do
       local doc=docs[id]
-      table.insert(result,'<a class="mf1-card" href="'..escape(doc.path:gsub('%.qmd$','.html'))..'"><span class="mf1-card-code">'..doc.number..'</span><span class="mf1-card-title">'..escape(doc.catalog_title or doc.title)..'</span><span class="mf1-card-hint">'..(doc.description or '')..'</span></a>')
+      table.insert(result,'<a class="mf1-card" href="'..escape(doc.path:gsub('%.qmd$','.html'))..'"><span class="mf1-card-code">'..doc.number..'</span><span class="mf1-card-title">'..escape(doc.catalog_title or doc.title)..'</span><span class="mf1-card-hint">'..escape(doc.description or '')..'</span></a>')
     end
     table.insert(result,'</div></section>')
   end
@@ -44,8 +44,14 @@ end
 local function render_div(div)
   if div.classes:includes('mf1-book-catalog') then return catalog() end
   if div.classes:includes('mf1-component-title') then
-    local output=pandoc.List({pandoc.RawBlock('html','<header class="mf1-component-title mf1-box-label">')})
-    output:extend(div.content);output:insert(pandoc.RawBlock('html','</header>'))
+    -- A numbered solved example is a heading like the Z1–Z6 task titles, so
+    -- heading navigation reaches it; other block labels stay plain headers.
+    local example=pandoc.utils.stringify(div.content):match('^P%d+%.')
+    local tag=example and 'h3' or 'header'
+    local content=div.content
+    if example and #content==1 and content[1].t=='Para' then content={pandoc.Plain(content[1].content)} end
+    local output=pandoc.List({pandoc.RawBlock('html','<'..tag..' class="mf1-component-title mf1-box-label">')})
+    output:extend(content);output:insert(pandoc.RawBlock('html','</'..tag..'>'))
     return output
   end
   local name=div.attributes['data-component'];local component=name and registry[name]
@@ -63,7 +69,11 @@ local function render_div(div)
   local attrs=' class="'..escape(table.concat(div.classes,' '))..'"'
   if component.role then attrs=attrs..' role="'..escape(component.role)..'"' end
   if div.identifier~='' then attrs=attrs..' id="'..escape(div.identifier)..'"' end
-  for key,value in pairs(div.attributes) do attrs=attrs..' '..key..'="'..escape(value)..'"' end
+  -- A source title="…" is already the visible block label; repeating it as
+  -- a tooltip gave several notes the same accessible name.
+  for key,value in pairs(div.attributes) do
+    if key~='title' then attrs=attrs..' '..key..'="'..escape(value)..'"' end
+  end
   if not components.visible(name,'web') and not components.visible(name,'print') then attrs=attrs..' hidden' end
   local output=pandoc.List({pandoc.RawBlock('html','<'..tag..attrs..'>')})
   output:extend(div.content);output:insert(pandoc.RawBlock('html','</'..tag..'>'))
@@ -87,6 +97,38 @@ local function equation(span)
     return span
   end
 end
+local function inline_span(span)
+  if span.classes:includes('mf1-level') and not span.classes:includes('mf1-level-named') then
+    -- The visible chip shows only "T2"; a screen reader hears "razina T2".
+    span.classes:insert('mf1-level-named')
+    span.content:insert(1,pandoc.Span({pandoc.Str('razina'),pandoc.Space()},pandoc.Attr('',{'visually-hidden'})))
+    return span
+  end
+  return equation(span)
+end
+
+-- Answer key: "Vrati se na zadatak" below every task title becomes a small
+-- return arrow in the title; its accessible name keeps the full wording.
+local function back_links(blocks)
+  local result=pandoc.List();local skip=false
+  for i,block in ipairs(blocks) do
+    if skip then skip=false
+    else
+      local following=blocks[i+1]
+      local link=following and following.t=='Para' and #following.content==1 and following.content[1]
+      if block.t=='Header' and block.identifier:match('^key%-task%-') and link and link.t=='Link'
+          and pandoc.utils.stringify(link.content)=='Vrati se na zadatak' then
+        block.content:insert(pandoc.Space())
+        block.content:insert(pandoc.Link({pandoc.Str('↩')},link.target,'Vrati se na zadatak',
+          pandoc.Attr('',{'mf1-back-link'},{{'aria-label','Vrati se na zadatak'}})))
+        skip=true
+      end
+      result:insert(block)
+    end
+  end
+  return result
+end
+
 local function float_number(float)
   local object=index.objects[float.identifier]
   if collection and object then
@@ -98,7 +140,7 @@ local function float_number(float)
   end
 end
 return {{Meta=function(meta) collection=meta['mf1-print-collection'] and pandoc.utils.stringify(meta['mf1-print-collection'])=='true' or false end},
-        {Div=render_div,Span=equation,FloatRefTarget=float_number,Header=function(header)
+        {Div=render_div,Span=inline_span,Blocks=back_links,FloatRefTarget=float_number,Header=function(header)
           -- The book's native title block already supplies the home H1. Keep
           -- the source H1 for PDF and Quarto's pre-render chapter discovery.
           if header.classes:includes('mf1-home-title') then return {} end

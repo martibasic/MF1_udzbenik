@@ -1,10 +1,10 @@
 ## O priručniku {#o-udžbeniku}
 
-Sveučilišni priručnik povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka. U petnaest poglavlja upoznat ćeš svojstva fluida, hidrostatiku te strujanje u cijevima, turbostrojevima i otvorenim kanalima.
+Sveučilišni priručnik namijenjen je studentima druge godine strojarstva i brodogradnje. Povezuje fizikalno objašnjenje, matematički izvod i rješavanje zadataka: u petnaest poglavlja upoznat ćeš svojstva fluida, hidrostatiku te strujanje u cijevima, turbostrojevima i otvorenim kanalima.
 
-Pri prvom čitanju drži se glavnog teksta, riješenih primjera i zadataka. Blokovi *Dublje* i odlomci *Računalna dinamika fluida* dodatno su štivo: osnovno gradivo MF1 možeš pratiti i bez učenja CFD postupaka.
+Primjene u brodogradnji obuhvaćaju hidrostatička opterećenja, uzgon i početni stabilitet, sličnost pri modelskim ispitivanjima te propulziju. Primjeri iz građevinarstva, energetike, zaštite okoliša, biomedicine i procesne tehnike uključeni su kad prenose isti model i pomažu prepoznati njegovu opću strukturu.
 
-**CFD put:** fizikalni zakoni → modeli, pretpostavke i bilance → analitička rješenja → povezani primjeri u odlomcima *Računalna dinamika fluida* → lokalne jednadžbe u []{.mf1-chapter-ref target="u12"} → model, provjera i odluka u [Venturijevu primjeru](#sec-cfd-venturi). CFD istu fiziku primjenjuje na prostorno i vremenski složenije probleme.
+Rješavanje tehničkog zadatka počinje skicom sustava i popisom pretpostavki; zatim slijede odgovarajuća bilanca, proračun i provjera rezultata. Pri prvom čitanju drži se glavnog teksta, riješenih primjera i zadataka. Blokovi *Dublje* i odlomci *Računalna dinamika fluida* dodatno su štivo: osnovno gradivo priručnika možeš pratiti i bez učenja CFD postupaka.
 
 ## Predznanje
 
@@ -16,13 +16,13 @@ Procijenjeno vrijeme navedeno uz poglavlja pomaže ti planirati samostalan rad. 
 
 1. Uvod određuje fizikalno pitanje i opseg modela poglavlja.
 2. Izvodi povezuju skicu, pretpostavke i značenje pojedinih članova jednadžbe.
-3. Riješeni primjeri pokazuju kako se postavlja početna jednadžba i kojim slijedom teče proračun.
-4. Zadatci za vježbu razvrstani su po razini samostalnog izbora modela; mrežno izdanje uz njih nudi sklopive smjernice i kontrolne rezultate, a u izdanju u PDF-u oni se nalaze u dodatku F.
-5. Sažetak poglavlja okuplja osnovne modele, granice njihove primjene i inženjersko značenje rezultata.
+3. Riješeni primjeri, smješteni uz teoriju ili u zasebnom odjeljku, pokazuju kako se postavlja početna jednadžba i kojim slijedom teče proračun.
+4. Zadatci za vježbu razvrstani su po razini samostalnog izbora modela. Smjernice i kontrolni rezultati nalaze se u dodatku F; mrežno izdanje ih prikazuje i uz sam zadatak.
+5. Sažetak na kraju poglavlja, iza zadataka, okuplja osnovne modele i granice njihove primjene, najčešću pogrešku i ono što nakon poglavlja mora biti moguće.
 
 Uz pitanje **Zastani i promisli** najprije oblikuj vlastiti odgovor, a zatim ga usporedi s objašnjenjem koje slijedi. Takvo pitanje provjerava razumiješ li izbor modela i značenje rezultata prije nego što kreneš u novi račun.
 
-Kratki primjeri uvode pojedinu relaciju, a cjeloviti zadatci povezuju više koraka. Okviri *Fizikalno značenje* tumače rezultat, dok okvir *Granica modela* objašnjava kada odabrane pretpostavke prestaju vrijediti.
+Okviri *Fizikalno značenje* tumače rezultat, dok okvir *Granica modela* objašnjava kada odabrane pretpostavke prestaju vrijediti.
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
@@ -64,7 +64,7 @@ Oznake vektora uz strelice pisane su podebljano, a oznake skalara (kote, tlakovi
 
 ## Numerički pokusi i izdanja
 
-Numerički pokusi istražuju osjetljivost, bilance i pogrešku jednostavnih modela i nisu same po sebi CFD simulacije. Bilježnice (*Jupyter notebooks*) otvaraju se preko poveznica ili QR kodova u JupyterLiteu, bez prijave; pričuvna je mogućnost Google Colab.
+Numerički pokusi istražuju osjetljivost, bilance i pogrešku jednostavnih modela i nisu same po sebi CFD simulacije. Bilježnice (*Jupyter notebooks*) otvaraju se preko poveznica ili QR kodova u JupyterLiteu, bez prijave; pričuvna je mogućnost Google Colab. Prvo pokretanje traži mrežnu vezu i može potrajati minutu ili dvije. Blok *Interaktivni prikaz* otvara laboratorij s klizačima, a blok *Numerički pokus* bilježnicu u kojoj se model provjerava računom.
 
 **Za čitanje i rješavanje zadataka dovoljan je tekst priručnika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. Izdanje u PDF-u namijenjeno je ispisu i radu bez mrežne veze.
 
@@ -72,7 +72,7 @@ Numerički pokusi istražuju osjetljivost, bilance i pogrešku jednostavnih mode
 
 - **A — Sažetak formula i oznaka:** podsjetnik na relacije, jedinice i uvjete primjene.
 - **B — Pojmovnik:** kratke definicije i upućivanja na pripadno poglavlje.
-- **C — Tipične pogreške:** pomoć pri traženju pogreške u vlastitom postupku.
+- **C — Tipične pogreške po poglavljima:** pomoć pri traženju pogreške u vlastitom postupku.
 - **D — Numerička mehanika fluida:** dodatno čitanje o numeričkim metodama i provjeri simulacija.
-- **E — Literatura i izvori:** popis izvora i preporuke za daljnje čitanje.
+- **E — Literatura:** popis izvora i preporuke za daljnje čitanje.
 - **F — Ključ kontrolnih rezultata:** smjernice, rezultati i kriteriji za otvorene zadatke.

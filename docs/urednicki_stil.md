@@ -86,7 +86,7 @@ spomenu s izričitom napomenom.
 | brzina zvuka; brzina površinskog vala | $a$; $c$ (samo pog. 15) | |
 | volumen; istisnina; masa istisnine; gaz; nadvođe | $V$; $V_{ist}$; $\Delta$; $T$; $f$ | |
 | tlak atmosferski, manometarski, apsolutni, pare, zaustavni | $p_{atm}$, $p_M$, $p_{aps}$, $p_v$, $p_0$ | $p_0$ samo zaustavni; Bernoulli s $p/(\rho g)$ |
-| gubitci; koeficijenti | $h_g$, $h_l$, $h_{loc}$; $\xi$, $\zeta=\lambda L/D+\sum\xi$, $\lambda$ | $K$ samo volumni modul; $\lambda_L$ mjerilo duljina |
+| gubitci; koeficijenti | $h_g$, $h_l$, $h_{loc}$; $\xi$, $\zeta=\lambda L/D+\sum\xi$, $\lambda$ | $K$ volumni modul (iznimka: kobilica u pog. 6); $\lambda_L$ mjerilo duljina |
 | izentropski eksponent; specifična težina | $\kappa$; $\gamma$ | |
 | bezdimenzijski brojevi | $Ma$, $Re$, $Fr$, $We$, $St$, $Bo$, $Eu=\Delta p/(\rho v^2)$ | |
 | korekcijski faktori; kutovi | $\alpha$, $\beta$; $\theta$, $\varphi$ | kutovi lopatica $\beta_1$, $\beta_2$ samo u pog. 14 |
@@ -103,7 +103,7 @@ spomenu s izričitom napomenom.
 | gustoće vode, morske vode, ulja, žive, zraka | $\rho_v$, $\rho_{mv}$, $\rho_u$, $\rho_{Hg}$, $\rho_{zr}$ | hrvatski indeksi: $v$ voda, $u$ ulje (i $\nu_v$, $\nu_u$, $h_v$, $h_u$ za slojeve); $p_v$ ostaje tlak pare; indeks $m$ samo model (pog. 11, 14) |
 | relativna gustoća | $s_r=\rho/\rho_v$ | |
 | kut poprečnog nagiba; ostali kutovi | $\varphi$; $\theta$ | |
-| širina broda ili pontona | $b$ | $B$ samo središte istisnine |
+| širina broda ili pontona | $b$ | $B$ samo centar uzgona |
 | polumjer zavoja | $R_z$ | $R$ polumjer spremnika ili luka |
 | tlak na slobodnoj površini; tlak plina | $p_{pov}$; $p_{pl}$ | |
 | udio otvorene površine rešetke | $\psi$ | |
@@ -133,3 +133,48 @@ Darcyjev koeficijent trenja; volumenski protok; metacentarska visina;
 stabilitet, nadvođe, poluga stabiliteta $GZ$, poprečni nagib, kut nestajanja
 stabiliteta, metoda dodane težine; zapljuskivanje; prividna sila; impulsna
 funkcija. Poglavlje ne upućuje samo na sebe brojem; piše „u ovom poglavlju”.
+
+## Odluke završne recenzije (16. listopada 2026.)
+
+Odluke vrijede za cijelu knjigu; autorica ih može naknadno promijeniti.
+
+- **Sažetak poglavlja** ima jedan oblik u svih 15 poglavlja: na kraju, iza
+  zadataka, odjeljak `## Sažetak` (postojeći ID se zadržava) s okvirom
+  `.mf1-zavrsni-okvir` bez vlastite labele. Okvir sadrži 5–7 natuknica,
+  jednu rečenicu **Najčešća pogreška** i numerirani popis **Nakon ovoga
+  poglavlja mora biti moguće**. Sadržaj se uzima iz teksta poglavlja,
+  dodatka C i kurikularne matrice.
+- **Početak poglavlja** nema okvir „Inženjerski kontekst”; redak
+  „Procijenjeno vrijeme rada” stoji ispred prvog `##` odjeljka.
+- **Odjeljak zadataka** u izvoru je `## Zadatci za vježbu` s ID-jem
+  jedinstvenim u knjizi (`{#sec-uNN-zadatci}` ili postojeći `sec-…`). Samoprovjera se zove „Provjeri sebe”, s
+  odgovorom ispod svakog pitanja.
+- **Blok uz bilježnicu**: laboratorij s widgetima je „Interaktivni prikaz —
+  …”, ostalo „Numerički pokus — …”; tipke „Pokreni u pregledniku” i
+  „Pričuvno: otvori u Colabu”. Nazivi blokova slijede obrazac „Vrsta —
+  Podnaslov”.
+- **Pravopis i nazivlje**: potkritični / natkritični (ne pod-, nad-);
+  vodoravno / okomito (prema smislu uspravno), ne horizontalno / vertikalno;
+  brzina vrtnje u $\mathrm{min^{-1}}$, ne okr/min; ulaž (engl. *ullage*)
+  pri prvom spomenu, dalje ulaž, ulažni otvor; usisni koš (engl. *sea
+  chest*); kućište crpke, crpna stanica, radno kolo, propeler, umirni bazen;
+  klizna mreža (engl. *sliding mesh*); u tekstu „Bernoullijeva jednadžba”
+  (naslov pog. 8 ostaje); „konst.” u matematici uvijek `\text{konst.}`;
+  kratica „MF1” ne stoji u tekućem tekstu (piše se „u ovom priručniku” ili
+  „Mehanika fluida 1”).
+- **Notacija**: oznake točaka i presjeka pišu se kao matematičke oznake
+  ($A$, $B$), kratice HGL i EGL kao običan tekst, ne kodnim fontom. Popisi
+  brojeva u matematici odvajaju se točkom-zarezom, npr. $(26;\,0)$. Masa
+  pomaknutog utega u pokusu nagibanja je $m_k$; uzvodna dubina ispred ustave
+  $y_0$; manometarski zaustavni tlak $p_{0,M}$.
+- **Poznate iznimke oznaka** (navedene i u dodatku A): $K$ je volumni modul,
+  a u pog. 6 točka kobilice; $M$ je moment, a u pog. 6 metacentar; $k$ je
+  turbulentna kinetička energija (pog. 12), rang dimenzijske matrice i faktor
+  oblika $(1+k)$ (pog. 11) te koeficijent gubitka relativne brzine (pog. 14);
+  $R$ je polumjer, plinska konstanta (pog. 9) i hidraulički otpor dionice
+  (pog. 13); $v_s$ je brzina broda, a u pog. 13 brzina u usisnom presjeku
+  crpke. Svaka se iznimka uvodi uz definiciju pri prvom spomenu.
+- **Dodatci** počinju uvodnim odlomkom izravno ispod naslova iz
+  `content/book.json`, bez prvog `##` koji ponavlja naslov. Dodatak A sadrži
+  samo opće relacije; postupci pojedinih zadataka ostaju u poglavljima i
+  smjernicama dodatka F.
