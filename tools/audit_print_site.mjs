@@ -23,6 +23,12 @@ try{
  for(const file of readdirSync(join(site,'chapters')).filter(n=>n.endsWith('.html'))){
   await page.emulateMedia({media:'screen'});
   await page.goto(`http://127.0.0.1:${server.address().port}/chapters/${file}`,{waitUntil:'networkidle'});
+  // The long print-collection page may finish its reading script after
+  // network idle; wait for the print groups instead of racing the script.
+  // A page whose script never builds them still fails the checks below.
+  await page.waitForFunction(()=>[...document.querySelectorAll('img[data-mf1-print-layout]')]
+   .every(i=>(i.closest('.mf1-figure-link')||i).nextElementSibling?.classList.contains('mf1-print-figure')),
+   null,{timeout:30000}).catch(()=>{});
   const screen=await page.evaluate(()=>{
    const images=[...document.querySelectorAll('img[data-mf1-print-layout]')];
    const missing=[...document.querySelectorAll('main figure img[src*="/print/"]')].some(i=>!i.dataset.mf1PrintLayout);
