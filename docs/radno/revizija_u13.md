@@ -142,3 +142,9 @@ usklađene) izvršena u čistom kernelu: PASS. Manifest, D06 i izvedenice tiska
 nisu generirani (koordinator). Oznaka `task-robustan-izbor-promjera` zadržana
 iako zadatak više nije „robustan” u smislu intervala; preimenovanje bi tražilo
 novi alias bez sadržajne koristi.
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Bez strukturnih izmjena: Z1 (inverzni dopušteni pad tlaka), Z2 (dva fluida, dva režima), Z3 (paralelne grane s ventilom), Z4 (radna točka s Colebrookom), Z5 (izbor promjera i starenje), Z6 (regulacija balastne crpke i NPSH) ne ponavljaju primjere i pokrivaju cjelinu poglavlja.
+
+Provjere ponovno prošle u sklopu cjelokupnog ciklusa (verify_all, audit_publication, qa_audit, audit_sketch_design).

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 929 686" role="img" aria-labelledby="u02vs_title u02vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:929px;height:auto;">
   <title id="u02vs_title">Šest vježbi smicanja i kapilarnosti</title>
-  <desc id="u02vs_desc">Vučena ploča, jedna i dvije međupovršine, dva zasebna uljna procjepa u omjeru 1:2 s nepoznatim otporima F_1 i F_2, procjep između dvaju limova s usponom na čistom čeliku i neprikazanom razinom (?) u procjepu s hidrofobnim premazom, mjerenje vučne sile te potpuno ispunjena igla i izlazna kapljica. Sile su na naznačenoj ploči; fluid ne prolazi kroz stijenke.</desc>
+  <desc id="u02vs_desc">Vučena ploča s izmjerenom silom i nepoznatom viskoznošću, jedna i dvije međupovršine, dva zasebna uljna procjepa u omjeru 1:2 s nepoznatim otporima F_1 i F_2, procjep između dvaju limova s usponom na čistom čeliku i neprikazanom razinom (?) u procjepu s hidrofobnim premazom, mjerenje vučne sile te potpuno ispunjena igla i izlazna kapljica. Sile su na naznačenoj ploči; fluid ne prolazi kroz stijenke.</desc>
   <defs>
     <pattern id="u02vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -39,7 +39,7 @@
   <g id="u02vs_title-scene-1" transform="translate(-19.0000 -11.0000)">
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u02vs_z1" transform="translate(22 28)">
-        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z1 Ploča: brzina i sile</text>
+        <text x="146.0" y="19" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z1 Pločasti viskozimetar</text>
         <rect id="u02vs_z1fluid" x="55" y="130" width="202" height="99" rx="0" fill="#eadfc5" stroke="none" stroke-width="1.2" />
         <rect id="u02vs_z1moving" x="55" y="114" width="202" height="16" rx="0" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
         <rect id="u02vs_z1fixed" x="55" y="229" width="202" height="14" rx="0" fill="url(#u02vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
@@ -61,7 +61,7 @@
         <path id="u02vs_z1gap" d="M37 130 L37 229" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u02vs_dim)" marker-end="url(#u02vs_dim)" data-mf1-role="dimension" />
         <text x="21" y="183.5" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">δ</tspan></text>
         <text x="146" y="271" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">u</tspan> = 0,65 m/s; <tspan font-style="italic">δ</tspan> = 2,4 mm</text>
-        <text x="146" y="289" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan> = 0,22 m²; glicerin: <tspan font-style="italic">μ</tspan> = 0,84 Pa s</text>
+        <text x="146" y="289" font-size="11" fill="#263746" text-anchor="middle" id="u02vs_z1_unknown"><tspan font-style="italic">A</tspan> = 0,22 m²; <tspan font-style="italic">F</tspan> = 50,0 N; <tspan font-style="italic">μ</tspan> = ?</text>
       </g>
     </g>
   </g>

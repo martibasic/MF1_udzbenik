@@ -751,7 +751,7 @@ Najprije se popišu svi mehanizmi i bezdimenzijski rubni uvjeti koji mogu utjeca
 
 ## Zadatci za vježbu {#sec-u11-zadatci}
 
-Šest zadataka povezuje osnovne bezdimenzijske brojeve, izbor karakteristične duljine i referentnih veličina, prijenos između različitih fluida, puni Buckinghamov postupak i procjenu modelskih podataka. Oznake i referentni presjeci prikazani su na slici [-@fig-u14-vjezbe].
+Šest zadataka povezuje osnovne bezdimenzijske brojeve, izbor karakteristične duljine i referentnih veličina, dimenzijsku homogenost empirijske jednadžbe s dimenzijskim koeficijentom, prijenos između različitih fluida, puni Buckinghamov postupak i procjenu modelskih podataka. Oznake i referentni presjeci prikazani su na slici [-@fig-u14-vjezbe].
 
 ::::: {.mf1-vjezbe-list}
 
@@ -787,22 +787,25 @@ $v=8{,}00\ \text{m/s}$, $D_h=0{,}2667\ \text{m}$, $Re=1{,}42\cdot10^5$: turbulen
 
 [Razina: T1]{.mf1-task-level}
 
-### Machov broj i izbor modela {#task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom .unnumbered .unlisted}
+<span id="task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom"></span>
+
+### Dimenzijska homogenost Manningove jednadžbe {#task-dimenzije-manningove-jednadzbe .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Zrak struji vodom unutarnjeg promjera $D=100\ \text{mm}$ lokalnim volumenskim protokom $Q=0{,}5\ \text{m}^3/\text{s}$; brzina zvuka je $a=340\ \text{m/s}$. Zadani protok vrijedi na promatranom presjeku i nije sveden na standardno stanje.
+Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target="u15"} rabi se empirijska Manningova jednadžba $v=\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (površina presjeka toka kroz oplakani opseg), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\ \text{m}$, dubinu vode $y=0{,}80\ \text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$.
 
 **Traži se**
 
-1. Odredi srednju brzinu i Machov broj.
-2. Prosudi je li aproksimacija konstantne gustoće razumna ako nema velikih promjena temperature ni tlaka.
+1. Provjeri dimenzijsku homogenost jednadžbe i odredi dimenziju te SI jedinicu koeficijenta $n$.
+2. Odredi hidraulički radijus, srednju brzinu i protok.
+3. Projektant zadrži istu brojčanu vrijednost $n$, ali $R_h$ uvrsti u stopama ($1\ \text{m}=3{,}2808\ \text{ft}$) očekujući $v$ u ft/s. Odredi faktor kojim treba pomnožiti desnu stranu da jednadžba ostane valjana i koliku bi brzinu dobio bez njega.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Iz unutarnjeg promjera odredi $A=\pi D^2/4$, zatim $v=Q/A$ i $Ma=v/a$. Vrijednost $Ma=0{,}3$ služi kao orijentacijski prag uz navedene pretpostavke.
+Napiši dimenzije obiju strana: $\mathsf{L}\,\mathsf{T}^{-1}=[n]^{-1}\,\mathsf{L}^{2/3}$, pa $[n]$ slijedi iz uvjeta da se dimenzije podudaraju. Pri prijelazu na stope mijenja se brojčana vrijednost svake veličine s dimenzijom duljine, dok $n$ ostaje ista brojka; faktor je zato potencija omjera $3{,}2808$ s istim eksponentom kao $[n]$.
 :::
 ::::
 
@@ -810,7 +813,7 @@ Iz unutarnjeg promjera odredi $A=\pi D^2/4$, zatim $v=Q/A$ i $Ma=v/a$. Vrijednos
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$v\approx63{,}66\ \text{m/s}$, $Ma\approx0{,}187$. Prema zadanom kriteriju aproksimacija konstantne gustoće razumna je uz navedene dodatne pretpostavke.
+$[n]=\mathsf{T}\,\mathsf{L}^{-1/3}$, jedinica $\text{s}/\text{m}^{1/3}$; jednadžba nije homogena bez te jedinice. $A=1{,}60\ \text{m}^2$, $P=3{,}60\ \text{m}$, $R_h=0{,}444\ \text{m}$, $v=1{,}00\ \text{m/s}$, $Q=1{,}60\ \text{m}^3/\text{s}$. Faktor je $3{,}2808^{1/3}=1{,}486$, poznat iz anglosaksonskog zapisa $v=\dfrac{1{,}486}{n}R_h^{2/3}S^{1/2}$; bez njega ispada $2{,}21\ \text{ft/s}$ umjesto točnih $3{,}29\ \text{ft/s}$ ($=1{,}00\ \text{m/s}$).
 :::
 ::::
 
@@ -955,9 +958,9 @@ Redom za $\lambda_L=20;\ 30$: $v_m\approx(1{,}342;1{,}095)\ \text{m/s}$, $Q_m\ap
 
 :::::
 
-![Skice uz Z1–Z6: bezdimenzijski brojevi i modelska sličnost.](../assets/print/u14_vjezbe_skice.svg){#fig-u14-vjezbe fig-align="center" fig-alt="Šest malih skica: pravokutni presjek kanala, otvoreni zračni vod, usis crpke s tlačnim priključkom, dva slična profila, kružni cilindar s vrtlozima i presjeci dvaju modela preljeva."}
+![Skice uz Z1–Z6: bezdimenzijski brojevi i modelska sličnost.](../assets/print/u14_vjezbe_skice.svg){#fig-u14-vjezbe fig-align="center" fig-alt="Šest malih skica: pravokutni presjek ventilacijskog kanala, presjek pravokutnog otvorenog kanala s vodom, usis crpke s tlačnim priključkom, dva slična profila, kružni cilindar s vrtlozima i presjeci dvaju modela preljeva."}
 
-**Napomene uz skice.** U Z1 i Z6 simbol $\odot$ označuje tok prema promatraču. U Z4 raspon $b$ okomit je na crtež. U Z5 razmak vrtloga shematski je i ne prikazuje traženu frekvenciju. U Z6 su $h_m$ i $L_{pr,m}$ dubina i širina referentnog presjeka modela; širina slijedi iz $Q=vhL_{pr}$, a oba su presjeka u istom mjerilu.
+**Napomene uz skice.** U Z1, Z2 i Z6 simbol $\odot$ označuje tok prema promatraču; u Z2 nagib dna $S$ nije vidljiv u poprečnom presjeku. U Z4 raspon $b$ okomit je na crtež. U Z5 razmak vrtloga shematski je i ne prikazuje traženu frekvenciju. U Z6 su $h_m$ i $L_{pr,m}$ dubina i širina referentnog presjeka modela; širina slijedi iz $Q=vhL_{pr}$, a oba su presjeka u istom mjerilu.
 
 ## Sažetak
 

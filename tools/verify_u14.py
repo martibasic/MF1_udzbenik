@@ -155,6 +155,20 @@ def zadatak_4(cp=.300,bp=.600,cm=.100,bm=.200,vp=1.0,
     return {"Re":Re,"vm":vm,"Ma":vm/a_m,"Am":Am,"Ap":Ap,"Cd":Cd,"Fp":Fp}
 
 
+def zadatak_2_manning(b=2.00, y=0.80, S=0.0005, n=0.013, ft_per_m=3.2808):
+    """Z2: dimenzijska homogenost Manningove jednadzbe; n ima jedinicu s/m^(1/3)."""
+    A = b * y
+    P = b + 2 * y
+    R_h = A / P
+    v = R_h ** (2 / 3) * S ** 0.5 / n
+    Q = A * v
+    factor_ft = ft_per_m ** (1 / 3)
+    v_ft_correct = v * ft_per_m
+    v_ft_naive = (R_h * ft_per_m) ** (2 / 3) * S ** 0.5 / n
+    return {"A": A, "P": P, "R_h": R_h, "v": v, "Q": Q, "n_exponent_L": -1 / 3,
+            "factor_ft": factor_ft, "v_ft_correct": v_ft_correct, "v_ft_naive": v_ft_naive}
+
+
 def zadatak_5(D=0.100, Q=0.5, a=A_SOUND):
     A = math.pi * D**2 / 4
     v = Q / A
@@ -290,9 +304,20 @@ def verify():
     _invariant(out, "U14.Z1.turbulent_regime", r["Re"] > 4000,
                "Zadani kanal mora biti iznad orijentacijskog prijelaznog podrucja.")
 
-    r = zadatak_5()
-    _check(out, "U14.Z2.v", r["v"], 63.66, "m/s", abs_tol=.005)
-    _check(out, "U14.Z2.Ma", r["Ma"], 0.187, "", abs_tol=.0005)
+    r = zadatak_2_manning()
+    _check(out, "U14.Z2.A", r["A"], 1.60, "m^2", abs_tol=1e-12)
+    _check(out, "U14.Z2.P", r["P"], 3.60, "m", abs_tol=1e-12)
+    _check(out, "U14.Z2.R_h", r["R_h"], 0.444, "m", abs_tol=.0005)
+    _check(out, "U14.Z2.v", r["v"], 1.00, "m/s", abs_tol=.005)
+    _check(out, "U14.Z2.Q", r["Q"], 1.60, "m^3/s", abs_tol=.005)
+    _check(out, "U14.Z2.factor_ft", r["factor_ft"], 1.486, "", abs_tol=.0005)
+    _check(out, "U14.Z2.v_ft_correct", r["v_ft_correct"], 3.29, "ft/s", abs_tol=.005)
+    _check(out, "U14.Z2.v_ft_naive", r["v_ft_naive"], 2.21, "ft/s", abs_tol=.005)
+    _invariant(out, "U14.Z2.dimensional_factor",
+               abs(r["v_ft_naive"] * r["factor_ft"] - r["v_ft_correct"]) < 1e-9
+               and abs(r["factor_ft"] - 3.2808 ** (-r["n_exponent_L"])) < 1e-12,
+               "Faktor 3,2808^(1/3) mora pretvoriti naivnu vrijednost u tocnu brzinu u ft/s "
+               "i odgovarati eksponentu duljine u dimenziji n.")
 
     r = zadatak_3()
     _check(out, "U14.Z3.p_abs_kPa", r["p_aps"]/1000, 80.0, "kPa", abs_tol=1e-10)

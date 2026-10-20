@@ -132,17 +132,26 @@ def main():
     dx,dy=delta(node(ex,p+'z1velocity'))
     check(dx>0,'Z1: tok nizvodno (+x)');close(dy,0,'Z1: uzdužni tok')
     check('v − c = ?' in texts(z1) and 'v + c = ?' in texts(z1),'Z1: nepoznanice v − c = ? i v + c = ?')
-    for x,y in path(node(ex,p+'z2energyCurve')):
-        depth=(x-46)/166;E=(254-y)/57
-        close(E,energy(depth,3),'Z2: stvarna energijska krivulja',tol=1e-7)
-    # Z2 traži y_c i E_min: minimum nije označen, a osi nemaju podjela (kvalitativni prikaz).
-    for id in ('z2minimum','z2criticalProjection'):
-        absent(ex,p+id,'Z2: skica ne smije označiti traženi minimum')
+    # Z2: ustava s otvorenim prolazom ispod ruba; voda povezana od uzvodnog presjeka do mlaza; y1 shematski (< a, ne Cc a).
+    wall_and_openings(ex,p+'z2',[(46,180),(378,231)])
+    poly=path(node(ex,p+'z2fluid'))
+    def inside(pt):
+        x,y=pt;hit=False
+        for (x1,y1),(x2,y2) in zip(poly,poly[1:]+poly[:1]):
+            if (y1>y)!=(y2>y) and x<x1+(y-y1)*(x2-x1)/(y2-y1):hit=not hit
+        return hit
+    gx,gy,gw,gh=(float(node(ex,p+'z2gate').get(k)) for k in ('x','y','width','height'))
+    close(gy+gh,240-.4*60,'Z2: donji rub ustave na visini otvora a = 0,400 m (mjerilo 60 px/m)')
+    check(inside((gx+gw/2,(gy+gh+240)/2)),'Z2: fluid prolazi ispod ustave')
+    check(not inside((gx+gw/2,gy+gh/2)),'Z2: fluid ne prolazi kroz ploču ustave')
+    close(delta(node(ex,p+'z2y0'))[1],2.0*60,'Z2: uzvodna dubina y0 u mjerilu')
+    close(delta(node(ex,p+'z2a'))[1],.4*60,'Z2: otvor a u mjerilu')
+    y1px=delta(node(ex,p+'z2y1'))[1]
+    check(0<y1px<.4*60 and abs(y1px-.61*.4*60)>1.5,'Z2: dubina mlaza manja od otvora, ali shematska (ne otkriva Cc a)')
+    dx,dy=delta(node(ex,p+'z2inflow'));check(dx>0,'Z2: dotok nizvodno');close(dy,0,'Z2: vodoravan dotok')
     z2=node(ex,p+'z2')
-    check(not any(re.fullmatch(r'[\d,]+',t.strip()) for t in texts(z2)),'Z2: bez brojčanih podjela osi')
-    check(not any(e.tag.endswith('circle') for e in z2.iter()),'Z2: bez točke na krivulji')
-    for x,y in path(node(ex,p+'z2depthAsymptote')):
-        close((254-y)/57,(x-46)/166,'Z2: pomoćni pravac E=y')
+    check(any(t.endswith('= ?') and t.startswith('y1') for t in texts(z2)),'Z2: nepoznanica y1 = ?')
+    check(any(t.startswith('q = ?') for t in texts(z2)),'Z2: nepoznanica q = ?')
     trapezoid(ex,p+'z3section',2.4,1.5,1.3,.9,50)
     close(delta(node(ex,p+'z3T'))[0],5.1*50,'Z3: T završava na stvarnim rubovima vode')
     close(delta(node(ex,p+'z3b'))[0],2.4*50,'Z3: b je unutarnja širina dna')

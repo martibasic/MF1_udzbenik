@@ -186,14 +186,22 @@ def zadatak_2(D=4.00, v_A=6.00, v_j=8.00, rho=1025.0):
             "eta_i": v_A / v_d}
 
 
-def zadatak_3(D=0.100, Q=0.026, p_1=180e3, p_2=175e3, rho=998.0):
+def zadatak_3(D=0.200, Q=0.090, p_1=150e3, dz=0.40, V=0.030, xi=0.30, rho=998.0, g=9.81):
+    """Z3: koljeno 90 stupnjeva u okomitoj ravnini; ulaz +x, izlaz +z, s tezinom vode i gubitkom."""
     A = math.pi * D**2 / 4
     v = Q / A
     m_dot = rho * Q
+    h_g = xi * v**2 / (2 * g)
+    p_2 = p_1 - rho * g * dz - rho * g * h_g
+    W = rho * g * V
     F_x = p_1 * A + m_dot * v
-    F_y = -(p_2 * A + m_dot * v)
-    F_R = math.hypot(F_x, F_y)
-    return {"v": v, "F_x": F_x, "F_y": F_y, "F_R": F_R}
+    R_z = m_dot * v + p_2 * A + W          # stijenka na fluid, prema gore
+    F_z = -R_z
+    F_R = math.hypot(F_x, F_z)
+    F_z_horizontal_model = -(m_dot * v + p_1 * A)
+    return {"v": v, "m_dot": m_dot, "p_2": p_2, "W": W, "F_x": F_x, "F_z": F_z, "F_R": F_R,
+            "weight_share": W / R_z, "F_z_horizontal_model": F_z_horizontal_model,
+            "F_y": F_z, "h_g": h_g}
 
 
 def zadatak_4(Q=0.016, v=18.0, b=0.20, e=0.35, rho=998.0):
@@ -343,10 +351,14 @@ def verify():
     _check(out, "U11.Z2.eta_i", r["eta_i"], 0.857, "", abs_tol=0.0005)
 
     r = zadatak_3()
-    _check(out, "U11.Z3.v", r["v"], 3.310, "m/s", abs_tol=0.0005)
-    _check(out, "U11.Z3.F_x_kN", r["F_x"] / 1000, 1.500, "kN", abs_tol=0.0005)
-    _check(out, "U11.Z3.F_y_kN", r["F_y"] / 1000, -1.460, "kN", abs_tol=0.0005)
-    _check(out, "U11.Z3.F_R_kN", r["F_R"] / 1000, 2.093, "kN", abs_tol=0.0005)
+    _check(out, "U11.Z3.v", r["v"], 2.865, "m/s", abs_tol=0.0005)
+    _check(out, "U11.Z3.p_2_kPa", r["p_2"] / 1000, 144.9, "kPa", abs_tol=0.05)
+    _check(out, "U11.Z3.W_N", r["W"], 294.0, "N", abs_tol=0.5)
+    _check(out, "U11.Z3.F_x_kN", r["F_x"] / 1000, 4.97, "kN", abs_tol=0.005)
+    _check(out, "U11.Z3.F_z_kN", r["F_z"] / 1000, -5.10, "kN", abs_tol=0.005)
+    _check(out, "U11.Z3.F_R_kN", r["F_R"] / 1000, 7.12, "kN", abs_tol=0.005)
+    _check(out, "U11.Z3.weight_share_percent", r["weight_share"] * 100, 5.8, "%", abs_tol=0.05)
+    _check(out, "U11.Z3.F_z_horizontal_kN", r["F_z_horizontal_model"] / 1000, -4.97, "kN", abs_tol=0.005)
 
     r = zadatak_4()
     _check(out, "U11.Z4.F_x", r["F_x"], 287.4, "N", abs_tol=0.05)
@@ -483,9 +495,12 @@ def verify():
     _check(out,"U11.P3.xi",xi,0.34,"",abs_tol=0.005)
     _invariant(out,"U11.P3.positive_loss",h_loss>0,"Zadani tlakovi P3 zahtijevaju pozitivan energijski gubitak.")
     z3=zadatak_3()
-    xi_z3=(180e3-175e3)/(998*z3["v"]**2/2)
-    _invariant(out,"U11.Z3.realistic_loss",0.2<=xi_z3<=1.0,
-               "Zadani pad tlaka Z3 mora odgovarati realnom koeficijentu lokalnog gubitka koljena.")
+    no_weight=zadatak_3(V=0.0); flat=zadatak_3(dz=0.0, xi=0.0, V=0.0)
+    _invariant(out,"U11.Z3.weight_and_elevation_terms",
+               abs(z3["F_z"]-no_weight["F_z"]+z3["W"])<1e-9
+               and abs(flat["F_z"]-z3["F_z_horizontal_model"])<1e-9
+               and z3["p_2"]<150e3 and abs((150e3-z3["p_2"])-998*9.81*(0.40+z3["h_g"]))<1e-9,
+               "Tezina vode mora uci u F_z, a vodoravni model mora odgovarati dz = 0, xi = 0, V = 0.")
 
     return out
 

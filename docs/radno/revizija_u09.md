@@ -176,3 +176,9 @@ Stari anchor Z2 ostaje kao `<span id="task-mach-ventilacija">`.
 - `check_u09_sketch_geometry.py`: dodane su provjere ventila Z2, izlaza u uvodnoj skici i oznake Ma. Rezultat: PASS, 1246 provjera.
 - `verify_u09_compressible.py`: 100/100. Uklonjeni su stari ID-jevi U09.COMP.Z2.Ma i Z2.v.
 - Nije pokrenuto: generatori s `--write` i render. To radi koordinator.
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Bez strukturnih izmjena: Z1–Z6 pokrivaju različite odluke (izentropski odnosi, Mach iz mjerenja, kritični protok, normalni udar, ventil, provjera modela). Poglavlje pregledano; nije pronađen klon primjera.
+
+Provjere ponovno prošle u sklopu cjelokupnog ciklusa (verify_all, audit_publication, qa_audit, audit_sketch_design).

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 897 774" role="img" aria-labelledby="u09vs_title u09vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:897px;height:auto;">
   <title id="u09vs_title">Skice šest vježbi energijske bilance</title>
-  <desc id="u09vs_desc">Otvorena sapnica, Venturijeva cijev s dvama tlačnim priključcima i pretvaračem, silazno suženje, Pitotov brzinomjer ispod dna trupa sa senzorom iznad otvora, pramac lijevo, izbor grla (grlo je presjek 2, promjer shematski) te napunjen sifon s izlaznim mlazom. Kote visina odnose se na osi i površine; promjeri su poprečne mjere. Debljine cijevi sifona i sapnice uvećane su za čitljivost. Duljine strelica brzine slijede kontinuitet (Z2: 1 : 4, Z3: 1 : 2,9, Z5: 1 : 3,3 prema nacrtanom shematskom grlu d/D₁ = 0,55, koje nije nijedan od ponuđenih uložaka), a u sifonu stalnog promjera jednake su. Mlaz u Z1 je parabola u mjerilu visine H; mlaz i domet x u Z6 shematski su (traženi domet nije u mjerilu), a kote visina u Z6 imaju zajedničko mjerilo.</desc>
+  <desc id="u09vs_desc">Otvorena sapnica, Venturijeva cijev s dvama tlačnim priključcima i pretvaračem, silazno suženje, Pitotov brzinomjer ispod dna trupa sa senzorom iznad otvora, pramac lijevo, izbor grla (grlo je presjek 2, promjer shematski) te napunjen sifon s izlaznim mlazom. Kote visina odnose se na osi i površine; promjeri su poprečne mjere. Debljine cijevi sifona i sapnice uvećane su za čitljivost. Duljine strelica brzine slijede kontinuitet (Z2: otvoreni cilindrični spremnik s vodom do razine H1, isprekidanom nižom razinom H2 i malim otvorom u dnu kroz koji istječe mlaz; traženo vrijeme pražnjenja označeno upitnikom. Mlaz u Z1 je parabola u mjerilu visine H; mlaz i domet x u Z6 shematski su (traženi domet nije u mjerilu), a kote visina u Z6 imaju zajedničko mjerilo.</desc>
   <defs>
     <marker id="u09vs_vopens" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <marker id="u09vs_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
@@ -53,34 +53,34 @@
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u09vs_z2" transform="translate(486 32)">
         <text x="31" y="30" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z2</text>
-        <text x="58" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Venturijeva cijev s pretvaračem</text>
-        <path id="u09vs_z2fluid" d="M34 123 H120 L170 138 H230 L320 123 H408 V183 H320 L230 168 H170 L120 183 H34 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
-        <rect id="u09vs_z2tap1" x="85" y="92" width="10" height="31" fill="#dcebf1" stroke="none" />
-        <rect id="u09vs_z2tap2" x="195" y="104" width="10" height="34" fill="#dcebf1" stroke="none" />
-        <path id="u09vs_z2top" d="M34 123 H85 M95 123 H120 L170 138 H195 M205 138 H230 L320 123 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
-        <path id="u09vs_z2bottom" d="M34 183 H120 L170 168 H230 L320 183 H408" fill="none" stroke="#3a4a56" stroke-width="1.8" />
-        <path d="M85 123 V92 M95 123 V92" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-        <path d="M195 138 V104 M205 138 V104" fill="none" stroke="#3a4a56" stroke-width="1.4" />
-        <rect id="u09vs_z2transducer" x="102" y="52" width="86" height="26" rx="3" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.2" />
-        <text x="145" y="69" font-size="11" fill="#263746" text-anchor="middle">Δ<tspan font-style="italic">p</tspan> = 12,2 kPa</text>
-        <path d="M90 92 V84 H102" fill="none" stroke="#3a4a56" stroke-width="1.2" />
-        <path d="M200 104 V84 H188" fill="none" stroke="#3a4a56" stroke-width="1.2" />
-        <path d="M50 153 L68 153" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09vs_vopen)" data-mf1-vector="velocity" />
-        <text x="59" y="141" font-size="12" fill="#263746" text-anchor="middle" font-style="italic"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="normal">1</tspan></text>
-        <path d="M162 153 L234 153" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09vs_vopen)" data-mf1-vector="velocity" />
-        <text x="201" y="184" font-size="12" fill="#263746" text-anchor="middle" font-style="italic"><tspan font-weight="700">v</tspan><tspan baseline-shift="sub" font-size="0.7em" font-style="normal">2</tspan></text>
-        <text x="81" y="113" font-size="12" fill="#263746" text-anchor="end" font-weight="700">1</text>
-        <text x="191" y="128" font-size="12" fill="#263746" text-anchor="end" font-weight="700">2</text>
-        <line x1="17" y1="123" x2="27" y2="123" stroke="#657781" stroke-width="1.2" />
-        <line x1="17" y1="183" x2="27" y2="183" stroke="#657781" stroke-width="1.2" />
-        <path id="u09vs_z2D1" d="M22 123 L22 183" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" data-mf1-role="dimension" />
-        <line x1="230" y1="138" x2="248" y2="138" stroke="#657781" stroke-width="1.2" />
-        <line x1="230" y1="168" x2="248" y2="168" stroke="#657781" stroke-width="1.2" />
-        <path id="u09vs_z2d" d="M243 138 L243 168" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" data-mf1-role="dimension" />
-        <text x="30" y="205" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 100 mm</text>
-        <text x="230" y="205" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">d</tspan> = 50 mm</text>
-        <text x="240" y="57" font-size="11" fill="#263746" text-anchor="start">voda, <tspan font-style="italic">ρ</tspan> = 998 kg/m³</text>
-        <text x="240" y="74" font-size="11" fill="#263746" text-anchor="start">vodoravno; <tspan font-style="italic">Q</tspan> = ?</text>
+        <text x="58" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Pražnjenje spremnika kroz otvor u dnu</text>
+        <rect id="u09vs_z2water" x="60.0" y="56.0" width="160.0" height="144.0" fill="#dcebf1" stroke="none" />
+        <path id="u09vs_z2jet" d="M134 208 H146 L144 228 H136 Z" fill="#dcebf1" stroke="none" />
+        <rect x="52" y="43" width="8" height="165" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect x="220" y="43" width="8" height="165" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect id="u09vs_z2bottomL" x="52" y="200" width="82" height="8" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect id="u09vs_z2bottomR" x="146" y="200" width="82" height="8" fill="url(#u09vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <line id="u09vs_z2surface" x1="60.0" y1="56.0" x2="220.0" y2="56.0" stroke="#356b83" stroke-width="2" />
+        <line id="u09vs_z2h2" x1="60.0" y1="164.0" x2="220.0" y2="164.0" stroke="#356b83" stroke-width="1.2" stroke-dasharray="6 4" />
+        <path d="M140 211 L140 225" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u09vs_vopen)" data-mf1-vector="velocity" />
+        <line x1="36" y1="56.0" x2="46" y2="56.0" stroke="#657781" stroke-width="1.2" />
+        <line x1="36" y1="200.0" x2="46" y2="200.0" stroke="#657781" stroke-width="1.2" />
+        <path id="u09vs_z2H1" d="M41 56.0 L41 200.0" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" data-mf1-role="dimension" />
+        <text x="33" y="132.0" font-size="11" fill="#263746" text-anchor="end"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
+        <line x1="228.0" y1="164.0" x2="242.0" y2="164.0" stroke="#657781" stroke-width="1.2" />
+        <line x1="228.0" y1="200.0" x2="242.0" y2="200.0" stroke="#657781" stroke-width="1.2" />
+        <path id="u09vs_z2H2" d="M237.0 164.0 L237.0 200.0" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u09vs_dim)" marker-end="url(#u09vs_dim)" data-mf1-role="dimension" />
+        <text x="244.0" y="186.0" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan></text>
+        <text x="140" y="50" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">atm</tspan></text>
+        <text x="140" y="130" font-size="11" fill="#263746" text-anchor="middle">voda</text>
+        <text x="156" y="222" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">d</tspan></text>
+        <text x="272" y="70" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan><tspan baseline-shift="sub" font-size="0.7em">T</tspan> = 1,60 m</text>
+        <text x="272" y="88" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">d</tspan> = 30 mm (dno)</text>
+        <text x="272" y="106" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="0.7em">d</tspan> = 0,62</text>
+        <text x="272" y="124" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 3,20 m</text>
+        <text x="272" y="142" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 0,80 m (– –)</text>
+        <text x="272" y="160" font-size="11" fill="#263746" text-anchor="start" id="u09vs_z2tlabel"><tspan font-style="italic">t</tspan>(<tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan>→<tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan>) = ?</text>
+        <text x="272" y="178" font-size="11" fill="#263746" text-anchor="start">otvoren spremnik</text>
       </g>
     </g>
   </g>

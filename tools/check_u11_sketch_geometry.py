@@ -163,7 +163,20 @@ def main():
     close(a[1],fluid[1],'Z1: kota b počinje na unutarnjoj stijenci');close(b[1],fluid[1]+fluid[3],'Z1: kota b završava na unutarnjoj stijenci')
     flow=node(r,'u14vs_z1flow');cx,cy=float(flow.get('cx')),float(flow.get('cy'))
     check(fluid[0]<cx<fluid[0]+fluid[2] and fluid[1]<cy<fluid[1]+fluid[3],'Z1: simbol toka mora ležati unutar fluida')
-    pipe_rect(r,'u14vs_z2pipe','u14vs_z2D')
+    # Z2: otvoreni pravokutni kanal; dno i bočne stijenke zatvaraju fluid, slobodna površina ostaje otvorena.
+    fluid=rect(node(r,'u14vs_z2fluid'))
+    wl,wr,wb=rect(node(r,'u14vs_z2wallleft')),rect(node(r,'u14vs_z2wallright')),rect(node(r,'u14vs_z2wallbottom'))
+    close(wl[0]+wl[2],fluid[0],'Z2: lijeva stijenka na rubu fluida');close(wr[0],fluid[0]+fluid[2],'Z2: desna stijenka na rubu fluida')
+    close(wb[1],fluid[1]+fluid[3],'Z2: dno na rubu fluida');close(wl[1]+wl[3],wb[1],'Z2: bočne stijenke sežu do dna')
+    check(wl[1]<fluid[1] and wr[1]<fluid[1],'Z2: stijenke moraju biti više od slobodne površine (nadvišenje)')
+    close(fluid[2]/fluid[3],2.00/0.80,'Z2: omjer b:y = 2,5')
+    sa,sb=line(node(r,'u14vs_z2surface'));close(sa[1],fluid[1],'Z2: slobodna površina na vrhu fluida');close(sb[1],fluid[1],'Z2: slobodna površina vodoravna')
+    a,b=line(node(r,'u14vs_z2b'));close(a[1],b[1],'Z2: kota b je vodoravna')
+    close(a[0],fluid[0],'Z2: kota b počinje na unutarnjoj stijenci');close(b[0],fluid[0]+fluid[2],'Z2: kota b završava na unutarnjoj stijenci')
+    a,b=line(node(r,'u14vs_z2y'));close(a[0],b[0],'Z2: kota y je okomita')
+    close(a[1],fluid[1],'Z2: kota y počinje na slobodnoj površini');close(b[1],fluid[1]+fluid[3],'Z2: kota y završava na dnu')
+    flow=node(r,'u14vs_z2flow');cx,cy=float(flow.get('cx')),float(flow.get('cy'))
+    check(fluid[0]<cx<fluid[0]+fluid[2] and fluid[1]<cy<fluid[1]+fluid[3],'Z2: simbol toka mora ležati unutar fluida')
     wall_and_openings(r,'u14vs_z3pipe',[(28,172),(264,172)])
     # The pressure port is intentionally narrower than a main-flow opening.
     # Its actual clear width must exceed both wall half-strokes.

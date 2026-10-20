@@ -183,3 +183,15 @@ Završni viewport/WCAG audit prolazi za svih 72 prikaza na 320/768/1440 px
 i A4 ispis. JupyterLite u stvarnom pregledniku pokreće Python (Pyodide)
 i doseže stanje Idle. Time je dopunjena objavna provjera koja nije bila
 izvršena u prethodnom koraku lokalne revizije.
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| Z2 | Machov broj iz protoka (prvi dio P6) | Dimenzijska homogenost Manningove jednadžbe (`task-dimenzije-manningove-jednadzbe`): $[n]=\mathsf{T}\,\mathsf{L}^{-1/3}$, $R_h=0{,}444$ m, $v=1{,}00$ m/s, $Q=1{,}60$ m³/s; faktor $3{,}2808^{1/3}=1{,}486$ pri prijelazu na stope, naivno 2,21 umjesto 3,29 ft/s | T1 | Jedini zadatak koji provjerava načelo dimenzijske homogenosti iz uvodnog odjeljka i dimenzijske koeficijente empirijskih formula (najava [u15]). |
+
+Skica Z2 (`u14_vjezbe_skice.svg`): presjek pravokutnog kanala u mjerilu 2,5:1 (`u14vs_z2wall*`, `fluid`, `surface`, `flow`, `b`, `y`); `check_u11_sketch_geometry.py` Z2. `verify_u14.py`: `zadatak_2_manning`, `U14.Z2.dimensional_factor`. D03 §11 dopunjen.
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.

@@ -267,13 +267,21 @@ def main():
         node(ex, 'u14ex_z'+str(n))
     plate(ex, 'u14ex_z1')
     close(delta(node(ex, 'u14ex_z1d'))[1], 26, 'Z1: poprečna kota mlaza')
-    guide(ex, 'u14ex_z2', 110, 1)
-    angle(ex, 'u14ex_z2angle', 110)
-    # Z2 traži predznačene komponente i reakciju: smjer R se ne crta, samo "R = ?".
-    absent(ex, 'u14ex_z2reaction', 'Z2: skica ne smije crtati traženi smjer reakcije')
+    # Z2: pokretna ploča; mlaz i ploča gibaju se u +x, u < v po duljini strelica; kolo naznačeno crtkanim pločama.
+    plate(ex, 'u14ex_z2')
+    close(delta(node(ex, 'u14ex_z2d'))[1], 26, 'Z2: poprečna kota mlaza')
+    direction(ex, 'u14ex_z2inflow', 0)
+    direction(ex, 'u14ex_z2motion', 0)
+    check(delta(node(ex, 'u14ex_z2motion'))[0] < delta(node(ex, 'u14ex_z2inflow'))[0], 'Z2: ploča sporija od mlaza (u < v)')
+    plate_x = float(node(ex, 'u14ex_z2plate').get('x'))
+    check(line(node(ex, 'u14ex_z2motion'))[0][0] > plate_x, 'Z2: strelica u pripada ploči, ne fluidu')
+    for i in (1, 2):
+        nxt = node(ex, f'u14ex_z2plateNext{i}')
+        check(nxt.get('stroke-dasharray') and nxt.get('fill') == 'none' and float(nxt.get('x')) > plate_x,
+              'Z2: ploče kola koje slijede crtkane su i nizvodno od aktivne ploče')
     check(not any(e.get('data-mf1-vector') == 'force' for e in node(ex, 'u14ex_z2').iter()),
           'Z2: nijedna sila nije nacrtana')
-    check(any(text_of(e) == 'R = ?' for e in node(ex, 'u14ex_z2').iter()), 'Z2: nepoznanica R = ?')
+    check(any(text_of(e) == 'F, P = ?' for e in node(ex, 'u14ex_z2').iter()), 'Z2: nepoznanice F, P = ?')
     direction(p1, 'u14p1_reaction', math.degrees(math.atan2(198.635, -404.406)))
     # Z3 traži beta2 i k: izlaz je nacrtan shematski, ne pod traženim kutom i bez širine iz k.
     result_exit = math.degrees(math.atan2(8.5, 32-625/18-12))   # 150 deg od +x (beta2 = 30 deg od -u)
@@ -310,7 +318,7 @@ def main():
         check(not any('β =' in text_of(e) for e in r.iter() if e.tag.endswith('text')),
               'Kut lopatice nosi indeks (β1, β2); kut skretanja je θ')
     check(any(text_of(e) == 'θ = 120°' for e in p1.iter()), 'P1: kut skretanja θ')
-    check(any(text_of(e) == 'θ = 110°' for e in ex.iter()), 'Z2: kut skretanja θ')
+    check(any(text_of(e) == 'u = 10 m/s' for e in node(ex, 'u14ex_z2').iter()), 'Z2: zadana brzina ploče u')
     # Z5 traži Q i d: zadane brzine su u zajedničkoj skali, a presjeci shematski
     # (jednaki ulazi, izlaz iz kontinuiteta brzina), pa omjeri ne daju ni Q_A/Q_B ni d_A/d_B.
     inlets, outlets = [], []

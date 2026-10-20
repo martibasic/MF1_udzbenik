@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" role="img" aria-labelledby="u02rd_title u02rd_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:560px;height:auto;">
+  <title id="u02rd_title">Rotirajući disk na uljnom filmu aksijalnog ležaja</title>
+  <desc id="u02rd_desc">Lijevo bočni presjek: nepomična ploča, tanki uljni film debljine δ i disk polumjera R na vratilu koje se vrti kutnom brzinom ω; kotirani su R i δ. Desno tlocrt diska: tanki prsten polumjera r i širine dr, obodna brzina u = ωr tangencijalno na prsten i smjer vrtnje ω. Brzina fluida uz disk raste linearno s polumjerom, pa smično naprezanje nije jednoliko po plohi.</desc>
+  <defs>
+    <pattern id="u02rd_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
+    </pattern>
+    <marker id="u02rd_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </marker>
+    <marker id="u02rd_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" />
+    </marker>
+    <marker id="u02rd_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" />
+    </marker>
+  </defs>
+  <g id="u02rd_title-scene-1" transform="translate(0 0)">
+    <g font-family="Arial, Liberation Sans, sans-serif">
+      <!-- bočni presjek -->
+      <rect id="u02rd_plate" x="40" y="200" width="220" height="14" fill="url(#u02rd_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect id="u02rd_film" x="40" y="186" width="220" height="14" fill="#eadfc5" stroke="none" />
+      <rect id="u02rd_disc" x="60" y="166" width="180" height="20" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.4" />
+      <rect id="u02rd_shaft" x="142" y="92" width="16" height="74" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.4" />
+      <line x1="150" y1="78" x2="150" y2="224" stroke="#657781" stroke-width="0.8" stroke-dasharray="8 3 2 3" />
+      <path id="u02rd_omega_side" d="M126 112 A 24 9 0 0 1 174 112" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02rd_vopen)" data-mf1-vector="angular-velocity" />
+      <text x="181" y="112" font-size="12" fill="#263746" text-anchor="start" font-weight="700"><tspan font-style="italic">ω</tspan></text>
+      <line x1="150" y1="150" x2="240" y2="150" stroke="#657781" stroke-width="1.2" marker-start="url(#u02rd_dimL)" marker-end="url(#u02rd_dim)" data-mf1-role="dimension" />
+      <line x1="240" y1="146" x2="240" y2="164" stroke="#657781" stroke-width="0.8" />
+      <text x="195" y="144" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">R</tspan></text>
+      <line x1="262" y1="186" x2="284" y2="186" stroke="#657781" stroke-width="0.8" />
+      <line x1="262" y1="200" x2="284" y2="200" stroke="#657781" stroke-width="0.8" />
+      <line x1="279" y1="174" x2="279" y2="186" stroke="#657781" stroke-width="1.2" marker-end="url(#u02rd_dim)" data-mf1-role="dimension" />
+      <line x1="279" y1="212" x2="279" y2="200" stroke="#657781" stroke-width="1.2" marker-end="url(#u02rd_dim)" data-mf1-role="dimension" />
+      <text x="286" y="197" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">δ</tspan>: uljni film</text>
+      <text x="246" y="181" font-size="11" fill="#263746" text-anchor="start">disk</text>
+      <text x="150" y="232" font-size="11" fill="#263746" text-anchor="middle">nepomična ploča: <tspan font-style="italic">v</tspan> = 0</text>
+      <text x="150" y="256" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">R</tspan> = 60 mm; <tspan font-style="italic">δ</tspan> = 0,20 mm</text>
+      <text x="150" y="274" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">μ</tspan> = 0,12 Pa s; <tspan font-style="italic">n</tspan> = 600 min⁻¹</text>
+      <!-- tlocrt -->
+      <circle id="u02rd_plan_disc" cx="430" cy="150" r="80" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.4" />
+      <circle id="u02rd_ring_outer" cx="430" cy="150" r="54" fill="none" stroke="#657781" stroke-width="0.9" />
+      <circle id="u02rd_ring_inner" cx="430" cy="150" r="46" fill="none" stroke="#657781" stroke-width="0.9" />
+      <circle cx="430" cy="150" r="2.5" fill="#3a4a56" />
+      <path id="u02rd_omega_plan" d="M412 158 A 20 20 0 1 1 448 158" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02rd_vopen)" data-mf1-vector="angular-velocity" />
+      <text x="454" y="162" font-size="12" fill="#263746" text-anchor="start" font-weight="700"><tspan font-style="italic">ω</tspan></text>
+      <line x1="430" y1="150" x2="383" y2="167.1" stroke="#657781" stroke-width="1.2" marker-end="url(#u02rd_dim)" data-mf1-role="dimension" />
+      <text x="399" y="152" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">r</tspan></text>
+      <line x1="430" y1="150" x2="470" y2="219.3" stroke="#657781" stroke-width="1.2" marker-end="url(#u02rd_dim)" data-mf1-role="dimension" />
+      <text x="459" y="196" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">R</tspan></text>
+      <path id="u02rd_u_plan" d="M416 100 L448 100" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u02rd_vopen)" data-mf1-vector="velocity" />
+      <text x="452" y="94" font-size="11" fill="#263746" text-anchor="start" font-weight="700"><tspan font-style="italic">u</tspan> = <tspan font-style="italic">ωr</tspan></text>
+      <line x1="376" y1="150" x2="384" y2="150" stroke="#657781" stroke-width="0.8" />
+      <text x="372" y="137" font-size="11" fill="#263746" text-anchor="end">d<tspan font-style="italic">r</tspan></text>
+      <line x1="373" y1="140" x2="379" y2="149" stroke="#657781" stroke-width="0.7" />
+      <text x="430" y="252" font-size="11" fill="#263746" text-anchor="middle">tlocrt diska: prsten polumjera <tspan font-style="italic">r</tspan>, širine d<tspan font-style="italic">r</tspan></text>
+    </g>
+  </g>
+</svg>

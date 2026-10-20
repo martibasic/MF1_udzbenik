@@ -173,3 +173,16 @@ viewBox), `u09_vjezbe_skice.svg` (paneli Z2 i Z4 unutar postojećih okvira).
 Checker provjerava kote 3,0/2,0/1,5 m u istom mjerilu, otvor košare kroz
 oplatu, početak voda u fluidu košare, otvorene priključke Venturija i omjer
 100:50. Nije rađeno: commit, generatori s `--write`, D01–D06 (koordinator).
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| Z2 | Venturijeva cijev s pretvaračem (≈ P5) | Vrijeme pražnjenja spremnika (`task-vrijeme-praznjenja-spremnika`): $D_T=1{,}60$ m, $d=30$ mm, $C_d=0{,}62$, 3,20 → 0,80 m: $Q_1=3{,}47$ L/s, $t=1853$ s = 30,9 min; naivna procjena stalnim početnim protokom −25 %; potpuno pražnjenje 3706 s | T2 | Kvazistacionarna primjena Bernoullija s integracijom po vremenu; student mora prepoznati zašto linearna procjena griješi. Preambula: napomena o kvazistacionarnosti. |
+| Z3 | Nepromijenjen | Razina T1 | T1 | Raspodjela. |
+
+Skica Z2 (`u09_vjezbe_skice.svg`): spremnik s otvorom u dnu, dvije razine; `check_u08_sketch_geometry.py` Z2. `verify_u09.py`: `zadatak_2` s RK4 kontrolom, `U09.INV.z2_torricelli_rate`. D03 §8 dopunjen.
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.

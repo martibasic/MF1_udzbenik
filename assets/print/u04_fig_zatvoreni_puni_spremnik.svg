@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-labelledby="u04zp_title u04zp_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:520px;height:auto;">
+  <title id="u04zp_title">Zatvoreni potpuno puni spremnik s odzračnikom pri vodoravnom ubrzanju</title>
+  <desc id="u04zp_desc">Pravokutni zatvoreni spremnik duljine L i visine H potpuno ispunjen vodom ubrzava udesno. U gornjem stražnjem (lijevom) kutu A otvoren je odzračnik prema atmosferi. Kutovi su označeni A (gore straga), B (gore sprijeda), C (dolje straga) i D (dolje sprijeda). Isprekidana crta kroz A koja pada prema prednjoj stijenci jest zamišljena slobodna površina; iznad nje je manometarski tlak negativan. Kotirani su L i H, a ubrzanje a prikazano je isprekidanom strelicom.</desc>
+  <defs>
+    <pattern id="u04zp_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="7" height="7" fill="#d7dee3" stroke="none" />
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.1" />
+    </pattern>
+    <marker id="u04zp_acc" markerWidth="7" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 Z" fill="#356b83" />
+    </marker>
+    <marker id="u04zp_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" />
+    </marker>
+    <marker id="u04zp_dimL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" />
+    </marker>
+  </defs>
+  <g id="u04zp_title-scene-1" transform="translate(0 0)">
+    <g font-family="Arial, Liberation Sans, sans-serif">
+      <rect id="u04zp_water" x="60" y="120" width="300" height="120" fill="#dcebf1" stroke="none" />
+      <path id="u04zp_walls" d="M52 112 H368 V248 H52 Z M60 120 V240 H360 V120 Z" fill-rule="evenodd" fill="url(#u04zp_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+      <rect x="64" y="90" width="8" height="30" fill="#ffffff" stroke="none" id="u04zp_vent_bore" />
+      <line x1="64" y1="90" x2="64" y2="120" stroke="#3a4a56" stroke-width="1.2" />
+      <line x1="72" y1="90" x2="72" y2="120" stroke="#3a4a56" stroke-width="1.2" />
+      <text x="80" y="98" font-size="11" fill="#263746" text-anchor="start">odzračnik: <tspan font-style="italic">p</tspan><tspan baseline-shift="sub" font-size="0.7em">M</tspan> = 0</text>
+      <line id="u04zp_imaginary_surface" x1="60" y1="120" x2="360" y2="211.74" stroke="#356b83" stroke-width="1.4" stroke-dasharray="7 4" />
+      <text x="300" y="156" font-size="11" fill="#263746" text-anchor="middle">zamišljena</text>
+      <text x="300" y="170" font-size="11" fill="#263746" text-anchor="middle">slobodna površina</text>
+      <circle cx="64" cy="124" r="3.5" fill="#356b83" />
+      <circle cx="356" cy="124" r="3.5" fill="#356b83" />
+      <circle cx="64" cy="236" r="3.5" fill="#356b83" />
+      <circle cx="356" cy="236" r="3.5" fill="#356b83" />
+      <text x="44" y="128" font-size="12" fill="#263746" text-anchor="end"><tspan font-style="italic">A</tspan></text>
+      <text x="376" y="128" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">B</tspan></text>
+      <text x="44" y="240" font-size="12" fill="#263746" text-anchor="end"><tspan font-style="italic">C</tspan></text>
+      <text x="376" y="240" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">D</tspan></text>
+      <text x="150" y="228" font-size="11" fill="#263746" text-anchor="middle">voda, potpuno pun spremnik</text>
+      <line x1="368" y1="120" x2="398" y2="120" stroke="#657781" stroke-width="0.8" />
+      <line x1="368" y1="240" x2="398" y2="240" stroke="#657781" stroke-width="0.8" />
+      <line x1="393" y1="120" x2="393" y2="240" stroke="#657781" stroke-width="1.2" marker-start="url(#u04zp_dimL)" marker-end="url(#u04zp_dim)" data-mf1-role="dimension" />
+      <text x="400" y="184" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan> = 0,60 m</text>
+      <line x1="60" y1="248" x2="60" y2="266" stroke="#657781" stroke-width="0.8" />
+      <line x1="360" y1="248" x2="360" y2="266" stroke="#657781" stroke-width="0.8" />
+      <line x1="60" y1="261" x2="360" y2="261" stroke="#657781" stroke-width="1.2" marker-start="url(#u04zp_dimL)" marker-end="url(#u04zp_dim)" data-mf1-role="dimension" />
+      <text x="210" y="276" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan> = 1,50 m</text>
+      <path id="u04zp_acc_arrow" d="M400 276 L460 276" fill="none" stroke="#356b83" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#u04zp_acc)" data-mf1-vector="acceleration" />
+      <text x="430" y="292" font-size="11" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">a</tspan> = 3,0 m/s²</text>
+    </g>
+  </g>
+</svg>

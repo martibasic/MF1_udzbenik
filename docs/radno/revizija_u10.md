@@ -178,3 +178,15 @@ Stari ID-jevi Z1 i Z2 ostaju kao `<span id>`.
   - oznaka kuta je θ;
   - izlazi ćelija su ispražnjeni (izvršava koordinator).
 - Nova SVG datoteka nema unos u `assets/print-layouts.json` (dodaje koordinator).
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| Z3 | Koljeno 90° u tlocrtu (ponavljanje P3) | Koljeno u okomitoj ravnini s težinom (`task-koljeno-u-okomitoj-ravnini-tezina`): $D=200$ mm, $Q=0{,}090$ m³/s, $p_{M1}=150$ kPa, $\Delta z=0{,}40$ m, $V=0{,}030$ m³, $\xi=0{,}30$: $p_{M2}=144{,}9$ kPa, $F_x=+4{,}97$, $F_z=-5{,}10$, $|F|=7{,}12$ kN; težina 5,8 %; vodoravni model $F_z=-4{,}97$ kN | T2 | Volumne sile i pad tlaka s visinom ulaze u bilancu količine gibanja; student uspoređuje s vodoravnim modelom i odlučuje kada je težina zanemariva. |
+
+Skica Z3: geometrija zadržana, kota $\Delta z$, strelica $g$, os $z$, $p_{M2}=?$. `verify_u11.py`: `zadatak_3`, `U11.Z3.weight_and_elevation_terms`. D03 §10 dopunjen.
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.

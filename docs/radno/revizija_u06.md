@@ -150,3 +150,17 @@ geometrijskih izmjena; promijenjene su samo tekstne oznake gaza u
 izrađen jer traži novu bilježnicu i CI. `audit_publication` javlja da redoslijed
 primjera P1–P6 treba obnoviti generatorom indeksa (koordinator). Didaktička
 procjena ostaje autorska.
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| Z1 | Klon P1 | Promjena gaza broda između mora i rijeke (`task-promjena-gaza-broda-more-rijeka`): $V=11\,707$ / $12\,024$ m³, $\Delta T=0{,}132$ m, iskrcaj 316 t, 24,6 / 24,0 t/cm | T1 | Brodograđevna primjena istisnine; jedinice t/cm i prijelaz slatka–slana voda. |
+| Z2 | Klon P2 | Plutanje homogenog drvenog bloka (`task-plutanje-homogenog-bloka-stabilitet`): $T=0{,}326$ m, $GM=+0{,}038$ m, uvjet $b/h\ge\sqrt{6s(1-s)}$, $b_{min}=0{,}584$ m; gušći blok stabilniji | T2 | Izvod uvjeta stabilnosti po omjeru stranica i protuintuitivan zaključak o gustoći. Puni ključ u D06. |
+| Z4 | Areometar | Nepromijenjen, razina T1 | T1 | Raspodjela. |
+
+Skica: Z1 presjek broda s dvije vodne linije, Z2 blok s G (B nije nacrtan); `check_u06_sketch_geometry.py` usklađen; invarijante `U07.INV.*` preimenovane. D03 §6 dopunjen.
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.

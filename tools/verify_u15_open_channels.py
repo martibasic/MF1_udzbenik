@@ -214,17 +214,27 @@ def exercise_froude(
             "downstream_wave": velocity+wave_speed}
 
 
-def exercise_critical_depth(
-    unit_discharge: float = 3.0, gravity: float = G
+def exercise_sluice_gate(
+    upstream_depth: float = 2.00,
+    opening: float = 0.400,
+    contraction: float = 0.61,
+    width: float = 2.00,
+    gravity: float = G,
 ) -> dict[str, float]:
-    critical_depth = (unit_discharge**2 / gravity) ** (1.0 / 3.0)
-    double_depth = 2.0 * critical_depth
+    """Z2: nepotopljeno istjecanje ispod ustave; energija bez gubitaka od y0 do suzenog mlaza y1 = Cc a."""
+    y1 = contraction * opening
+    q = y1 * math.sqrt(2 * gravity * (upstream_depth - y1) / (1 - (y1 / upstream_depth) ** 2))
+    cd = q / (opening * math.sqrt(2 * gravity * upstream_depth))
     return {
-        "critical_depth": critical_depth,
-        "minimum_energy": 1.5 * critical_depth,
-        "double_depth": double_depth,
-        "double_depth_energy": specific_energy(double_depth, unit_discharge, gravity),
-        "double_depth_froude": froude_rectangular(double_depth, unit_discharge, gravity),
+        "jet_depth": y1,
+        "unit_discharge": q,
+        "discharge": q * width,
+        "discharge_coefficient": cd,
+        "discharge_coefficient_formula": contraction / math.sqrt(1 + contraction * opening / upstream_depth),
+        "froude_upstream": froude_rectangular(upstream_depth, q, gravity),
+        "froude_jet": froude_rectangular(y1, q, gravity),
+        "energy_upstream": specific_energy(upstream_depth, q, gravity),
+        "energy_jet": specific_energy(y1, q, gravity),
     }
 
 
@@ -490,22 +500,25 @@ def verify() -> list[dict[str, str]]:
                and fast['froude']>1 and fast['upstream_wave']>0,
                "Potkritični tok propušta informaciju uzvodno; natkritični odnosi oba vala nizvodno.")
 
-    r = exercise_critical_depth()
-    _check(out, "U15.Z2.yc", r["critical_depth"], 0.972, "m", abs_tol=0.0005)
-    _check(out, "U15.Z2.Emin", r["minimum_energy"], 1.46, "m", abs_tol=0.005)
-    _check(out, "U15.Z2.y_2yc", r["double_depth"], 1.943, "m", abs_tol=0.0005)
-    _check(out, "U15.Z2.E_2yc", r["double_depth_energy"], 2.06, "m", abs_tol=0.005)
-    _check(out, "U15.Z2.Fr_2yc", r["double_depth_froude"], 0.354, "", abs_tol=0.0005)
-    _invariant(out, "U15.Z2.double_depth_branch",
-               abs(r["double_depth_energy"] / r["critical_depth"] - 17.0 / 8.0) < 1e-12
-               and abs(r["double_depth_froude"] - 2.0 ** -1.5) < 1e-12
-               and r["double_depth_froude"] < 1,
-               "Pri y=2yc mora vrijediti E=17yc/8 i Fr=2^(-3/2)<1 (mirna grana).")
-    yc = r['critical_depth']
-    _invariant(out, "U15.Z2.energy_minimum", abs(froude_rectangular(yc,3)-1)<1e-12
-               and specific_energy(yc*.9,3)>r['minimum_energy']
-               and specific_energy(yc*1.1,3)>r['minimum_energy'],
-               "Kritična dubina daje Fr=1 i minimum na objema stranama.")
+    r = exercise_sluice_gate()
+    _check(out, "U15.Z2.y1", r["jet_depth"], 0.244, "m", abs_tol=0.0005)
+    _check(out, "U15.Z2.q", r["unit_discharge"], 1.443, "m^2/s", abs_tol=0.0005)
+    _check(out, "U15.Z2.Q", r["discharge"], 2.886, "m^3/s", abs_tol=0.0005)
+    _check(out, "U15.Z2.Cd", r["discharge_coefficient"], 0.576, "", abs_tol=0.0005)
+    _check(out, "U15.Z2.Fr0", r["froude_upstream"], 0.163, "", abs_tol=0.0005)
+    _check(out, "U15.Z2.Fr1", r["froude_jet"], 3.82, "", abs_tol=0.005)
+    wide = exercise_sluice_gate(opening=0.800)
+    _check(out, "U15.Z2.q_double_opening", wide["unit_discharge"], 2.741, "m^2/s", abs_tol=0.0005)
+    _check(out, "U15.Z2.q_ratio", wide["unit_discharge"] / r["unit_discharge"], 1.90, "", abs_tol=0.005)
+    _check(out, "U15.Z2.Cd_double_opening", wide["discharge_coefficient"], 0.547, "", abs_tol=0.0005)
+    _invariant(out, "U15.Z2.energy_and_control",
+               abs(r["energy_upstream"] - r["energy_jet"]) < 1e-9
+               and abs(r["discharge_coefficient"] - r["discharge_coefficient_formula"]) < 1e-12
+               and 0.55 <= r["discharge_coefficient"] <= 0.60
+               and r["froude_upstream"] < 1 < r["froude_jet"]
+               and wide["unit_discharge"] / r["unit_discharge"] < 2,
+               "Specificna energija ista u oba presjeka, Cd iz zatvorene formule u rasponu 0,55-0,60, "
+               "prijelaz mirni -> siloviti, a dvostruki otvor daje manje od dvostrukog protoka.")
 
     r = exercise_trapezoidal_section()
     _check(out, "U15.Z3.A", r["area"], 3.375, "m^2", abs_tol=0.0005)

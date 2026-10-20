@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 893 595" role="img" aria-labelledby="u14vs_title u14vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:893px;height:auto;">
   <title id="u14vs_title">Skice šest vježbi dimenzijske analize i sličnosti</title>
-  <desc id="u14vs_desc">Z1 prikazuje pravokutni presjek ventilacijskog kanala s kotama unutarnjih stranica a i b. Z2 ima otvoreni vod; Z3 otvoreni tlačni priključak. Z4 prikazuje slične profile u zajedničkom mjerilu s rasponom okomitim na crtež. Z5 je kružni cilindar s naizmjeničnim vrtlozima. Z6 su pravokutni referentni presjeci dvaju modela preljeva u istom grafičkom mjerilu, s kotama dubine h_m i širine L_pr,m. Simbol točke u krugu označava tok prema promatraču.</desc>
+  <desc id="u14vs_desc">Z1 prikazuje pravokutni presjek ventilacijskog kanala s kotama unutarnjih stranica a i b. Z2 prikazuje poprečni presjek pravokutnog otvorenog kanala s vodom, slobodnom površinom i kotama širine b i dubine y; nagib dna nije vidljiv u presjeku; Z3 otvoreni tlačni priključak. Z4 prikazuje slične profile u zajedničkom mjerilu s rasponom okomitim na crtež. Z5 je kružni cilindar s naizmjeničnim vrtlozima. Z6 su pravokutni referentni presjeci dvaju modela preljeva u istom grafičkom mjerilu, s kotama dubine h_m i širine L_pr,m. Simbol točke u krugu označava tok prema promatraču.</desc>
   <defs>
     <pattern id="u14vs_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
       <line x1="0" y1="0" x2="0" y2="7" stroke="#657781" stroke-width="1.8" />
@@ -57,18 +57,26 @@
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u14vs_z2" transform="translate(344 28)">
         <text x="29" y="29" font-size="13" fill="#263746" text-anchor="middle" font-weight="700">Z2</text>
-        <text x="57" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Machov broj iz protoka</text>
-        <rect id="u14vs_z2pipetop" x="28" y="121" width="236" height="9" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <rect id="u14vs_z2pipebottom" x="28" y="184" width="236" height="9" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <rect id="u14vs_z2pipefluid" x="28" y="130" width="236" height="54" rx="0" fill="#dcebf1" stroke="none" stroke-width="1.2" />
-        <path id="u14vs_z2velocity" data-mf1-vector="velocity" d="M72 157 L214 157" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14vs_vopen)" />
-        <text x="143.0" y="148" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">v</tspan> = ?</text>
-        <text x="146" y="76" font-size="13" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan> = 0,5 m³/s (lokalni)</text>
-        <text x="146" y="100" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">a</tspan> = 340 m/s</text>
-        <line x1="270" y1="130" x2="280" y2="130" stroke="#657781" stroke-width="1.2" />
-        <line x1="270" y1="184" x2="280" y2="184" stroke="#657781" stroke-width="1.2" />
-        <path id="u14vs_z2D" data-mf1-role="dimension" d="M275 130 L275 184" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text x="146" y="222" font-size="12" fill="#263746" text-anchor="middle">Unutarnji <tspan font-style="italic">D</tspan> = 100 mm</text>
+        <text x="57" y="29" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Dimenzije Manningove jednadžbe</text>
+        <text x="146" y="56" font-size="12" fill="#263746" text-anchor="middle">pravokutni betonski kanal, presjek</text>
+        <text x="146" y="74" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">n</tspan> = 0,013 (SI), <tspan font-style="italic">S</tspan> = 0,0005; [<tspan font-style="italic">n</tspan>] = ?</text>
+        <rect id="u14vs_z2wallleft" x="28" y="80" width="9" height="106" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect id="u14vs_z2wallright" x="255" y="80" width="9" height="106" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect id="u14vs_z2wallbottom" x="28" y="186" width="236" height="9" rx="0" fill="url(#u14vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
+        <rect id="u14vs_z2fluid" x="37" y="98.8" width="218" height="87.2" rx="0" fill="#dcebf1" stroke="none" />
+        <line id="u14vs_z2surface" x1="37" y1="98.8" x2="255" y2="98.8" stroke="#356b83" stroke-width="1.2" stroke-dasharray="5 3" />
+        <circle id="u14vs_z2flow" cx="160" cy="148" r="5" fill="none" stroke="#356b83" stroke-width="1.5" />
+        <circle cx="160" cy="148" r="1.5" fill="#356b83" stroke="#356b83" stroke-width="1.5" />
+        <text x="160" y="134" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">v</tspan> = ?</text>
+        <text x="160" y="174" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">Q</tspan> = ?</text>
+        <line x1="44" y1="98.8" x2="60" y2="98.8" stroke="#657781" stroke-width="1" />
+        <line x1="44" y1="186" x2="60" y2="186" stroke="#657781" stroke-width="1" />
+        <path id="u14vs_z2y" data-mf1-role="dimension" d="M52 98.8 L52 186" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
+        <text x="58" y="146" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">y</tspan> = 0,80 m</text>
+        <line x1="37" y1="198" x2="37" y2="214" stroke="#657781" stroke-width="1" />
+        <line x1="255" y1="198" x2="255" y2="214" stroke="#657781" stroke-width="1" />
+        <path id="u14vs_z2b" data-mf1-role="dimension" d="M37 209 L255 209" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
+        <text x="146" y="226" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 2,00 m</text>
       </g>
     </g>
   </g>

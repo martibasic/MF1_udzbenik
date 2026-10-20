@@ -24,8 +24,19 @@ def _invariant(out: list, rid: str, condition: bool, details: str):
     })
 
 
-def kratki(mu=0.18, rho=900.0):
-    return {"nu": mu / rho}
+def primjer_disk(R=0.060, delta=0.20e-3, mu=0.12, n=600.0):
+    """P1: moment trenja diska na uljnom filmu; tau raste linearno s polumjerom."""
+    omega = 2 * math.pi * n / 60
+    tau_rim = mu * omega * R / delta
+    M = math.pi * mu * omega * R**4 / (2 * delta)
+    P = M * omega
+    M_naive = mu * omega * (R / 2) / delta * math.pi * R**2 * (R / 2)
+    # neovisna numericka integracija po prstenima (pravilo sredine)
+    N = 4000
+    M_num = sum(mu * omega * ((i + 0.5) * R / N) / delta * ((i + 0.5) * R / N) * 2 * math.pi * ((i + 0.5) * R / N) * (R / N) for i in range(N))
+    outer_half = 1 - (0.5) ** 4
+    return {"omega": omega, "tau_rim": tau_rim, "M": M, "P": P, "M_naive": M_naive,
+            "M_num": M_num, "outer_half_share": outer_half}
 
 
 def primjer_smicanje(delta=0.003, v=0.90, A=0.18, mu=0.42, rho=870.0):
@@ -90,11 +101,17 @@ def primjer_lab_on_chip(d=60e-6, sigma=0.055, theta_deg=25.0,
     return {"h": h, "dp": dp, "h_hydrophobic": h_hydrophobic}
 
 
-def zadatak_1(delta=2.4e-3, A=0.22, v=0.65, mu=0.84):
+def zadatak_1(delta=2.4e-3, A=0.22, v=0.65, F=50.0,
+              table=((20.0, 1.41), (25.0, 0.93), (30.0, 0.61))):
+    """Z1: obrnuti racun viskozimetra: iz izmjerene sile slijedi mu, zatim temperatura."""
     dvdy = v / delta
-    tau = mu * dvdy
-    F = tau * A
-    return {"dvdy": dvdy, "tau": tau, "F": F}
+    tau = F / A
+    mu = tau / dvdy
+    T = None
+    for (T1, mu1), (T2, mu2) in zip(table, table[1:]):
+        if mu2 <= mu <= mu1:
+            T = T1 + (mu1 - mu) / (mu1 - mu2) * (T2 - T1)
+    return {"dvdy": dvdy, "tau": tau, "mu": mu, "T": T}
 
 
 def zadatak_2(d=1.20e-3, sigma=0.030):
@@ -182,8 +199,16 @@ def primjer_lezaj_temp(D=0.050, L=0.070, delta=0.30e-3, n=2400.0,
 def verify() -> list:
     out: list = []
 
-    r = kratki()
-    _check(out, "U02.kratki.nu", r["nu"], 2.0e-4, "m^2/s")
+    r = primjer_disk()
+    _check(out, "U02.disk.omega", r["omega"], 62.83, "rad/s", abs_tol=0.005)
+    _check(out, "U02.disk.tau_rim_kPa", r["tau_rim"] / 1000, 2.26, "kPa", abs_tol=0.005)
+    _check(out, "U02.disk.M_Nm", r["M"], 0.767, "N m", abs_tol=0.0005)
+    _check(out, "U02.disk.P_W", r["P"], 48.2, "W", abs_tol=0.05)
+    _check(out, "U02.disk.M_naive_Nm", r["M_naive"], 0.384, "N m", abs_tol=0.0005)
+    _invariant(out, "U02.disk.ring_integration",
+               abs(r["M_num"] - r["M"]) / r["M"] < 1e-6 and abs(r["M_naive"] / r["M"] - 0.5) < 1e-12
+               and abs(r["outer_half_share"] - 15 / 16) < 1e-12,
+               "Integral po prstenima ne vraca pi mu omega R^4/(2 delta), omjer 1/2 ili udio 15/16.")
 
     r = primjer_smicanje()
     _check(out, "U02.P1.dvdy", r["dvdy"], 300.0, "1/s")
@@ -220,10 +245,13 @@ def verify() -> list:
 
     z1 = zadatak_1()
     _check(out, "U02.Z1.dvdy", z1["dvdy"], 271.0, "1/s", abs_tol=0.5)
-    _check(out, "U02.Z1.tau", z1["tau"], 228.0, "Pa", abs_tol=0.5)
-    _check(out, "U02.Z1.F", z1["F"], 50.0, "N", abs_tol=0.5)
-    _invariant(out, "U02.Z1.force_balance", abs(z1["F"] * 0.0024 - 0.84 * 0.65 * 0.22) < 1e-12,
-               "Newtonova bilanca sile nije zadovoljena.")
+    _check(out, "U02.Z1.tau", z1["tau"], 227.0, "Pa", abs_tol=0.5)
+    _check(out, "U02.Z1.mu", z1["mu"], 0.84, "Pa s", abs_tol=0.005)
+    _check(out, "U02.Z1.T_C", z1["T"], 26.0, "C", abs_tol=0.5)
+    _invariant(out, "U02.Z1.force_balance", abs(z1["mu"] * 0.65 / 0.0024 * 0.22 - 50.0) < 1e-9,
+               "Izracunani mu ne vraca izmjerenu silu.")
+    _invariant(out, "U02.Z1.temperature_band", 25.0 < z1["T"] < 30.0 and 0.61 < z1["mu"] < 0.93,
+               "Viskoznost mora lezati izmedu tablicnih vrijednosti za 25 i 30 C.")
 
     z2 = zadatak_2()
     _check(out, "U02.Z2.dp_drop", z2["dp_drop"], 100.0, "Pa")

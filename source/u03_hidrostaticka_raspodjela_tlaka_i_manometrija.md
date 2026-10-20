@@ -620,29 +620,33 @@ Strujanje uvodi doprinose brzine, gubitaka i, eventualno, nestacionarnosti, koji
 
 ::::: {.mf1-vjezbe-list}
 
-U svim zadatcima uzmi $g = 9{,}81\ \text{m/s}^2$. Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se. Granice tekućih slojeva u spremnicima su ravne. Podatci i mjerna ograničenja nastavne su pretpostavke; očitanja u Z2, Z4 i Z6 sintetička su, a ne zapisi stvarnog pokusa.
+U svim zadatcima uzmi $g = 9{,}81\ \text{m/s}^2$. Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se; iznimka je Z1, u kojem je promjenjiva gustoća zraka sam predmet računa. Granice tekućih slojeva u spremnicima su ravne. Podatci i mjerna ograničenja nastavne su pretpostavke; očitanja u Z1, Z2, Z3, Z4 i Z6 sintetička su, a ne zapisi stvarnog pokusa.
 
-### Tlak u otvorenom spremniku {#task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu .unnumbered .unlisted}
+<span id="task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu"></span>
+
+### Visina leta iz barometarskog očitanja {#task-visina-iz-barometarskog-ocitanja .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Otvoreni spremnik s vodom ima slobodnu površinu na atmosferskom tlaku. Promatrana točka nalazi se na dubini $h = 2{,}40\ \text{m}$. Zadano je $p_{atm} = 100{,}8\ \text{kPa}$ i $\rho_v = 998\ \text{kg/m}^3$.
+Dron s barometarskim senzorom polijeće s baze na kojoj je tlak $p_0 = 101{,}3\ \text{kPa}$; na najvišoj točki leta senzor pokazuje $p = 84{,}5\ \text{kPa}$. Zrak smatraj izotermalnim idealnim plinom s $T_0 = 288\ \text{K}$ i $R = 287\ \text{J/(kg K)}$. Razlučivost senzora iznosi $10\ \text{Pa}$.
 
 **Traži se**
 
-Odredi apsolutni i manometarski tlak u promatranoj točki.
+1. Odredi karakterističnu visinu atmosfere i visinu leta iznad baze prema izotermalnom modelu.
+2. Odredi visinu koju bi dao model stalne gustoće zraka $\rho_0=p_0/(RT_0)$ i relativno odstupanje od izotermalnog rezultata; obrazloži predznak odstupanja.
+3. Kolikoj promjeni visine na vrhu leta odgovara razlučivost senzora?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Manometarski tlak je $p_M = \rho_v gh$, a apsolutni $p_{aps} = p_{atm} + p_M$.
+Iz izvoda izotermalne atmosfere slijedi $z=H\ln(p_0/p)$ s $H=RT_0/g$. Model stalne gustoće daje $z=(p_0-p)/(\rho_0g)$, kao za tekućinu. Za razlučivost upotrijebi lokalnu gustoću $\rho=p/(RT_0)$ na vrhu.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$p_M \approx 23{,}5\ \text{kPa}$; $p_{aps} \approx 124{,}3\ \text{kPa}$.
+$H\approx8426\ \text{m}$; $z\approx1528\ \text{m}$. Stalna gustoća $\rho_0=1{,}226\ \text{kg/m}^3$ daje $z\approx1397\ \text{m}$, oko $8{,}5\,\%$ manje: gustoća s visinom pada, pa svaki paskal razlike u visini vrijedi više metara nego pri tlu. Razlučivost od $10\ \text{Pa}$ odgovara oko $1{,}0\ \text{m}$ na vrhu ($0{,}83\ \text{m}$ na bazi).
 :::
 ::::
 
@@ -679,27 +683,31 @@ $h \approx 1{,}80\ \text{m}$. Pri zadanoj promjeni tlaka plina oba tlaka porastu
 
 [Razina: T1]{.mf1-task-level}
 
-### U-manometar s uljem i živom {#task-u03-cjevovod-s-uljem-gustoce-spojen-je-na .unnumbered .unlisted}
+<span id="task-u03-cjevovod-s-uljem-gustoce-spojen-je-na"></span>
+
+### Nagnuti manometar na ventilacijskom kanalu {#task-nagnuti-manometar-ventilacijski-kanal .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Cjevovod s uljem gustoće $\rho_u = 860\ \text{kg/m}^3$ spojen je na otvoreni U-manometar sa živom gustoće $\rho_{Hg} = 13600\ \text{kg/m}^3$. Razlika razina žive iznosi $\Delta h = 0{,}185\ \text{m}$; razina u otvorenom kraku viša je od granice ulja i žive. Priključna točka u kraku s uljem nalazi se $0{,}12\ \text{m}$ iznad granice ulja i žive.
+Pretlak zraka u ventilacijskom kanalu mjeri se nagnutim manometrom. Posuda unutarnjeg promjera $D = 40\ \text{mm}$ spojena je na kanal, a iz njezina dna izlazi cjevčica unutarnjeg promjera $d = 5{,}0\ \text{mm}$, nagnuta za $\alpha = 15^\circ$ prema vodoravnici i otvorena prema atmosferi. Manometarska tekućina je ulje gustoće $\rho_u = 820\ \text{kg/m}^3$. Pri jednakim tlakovima meniskus u cjevčici stoji na nultoj oznaci; pri mjerenju se pomakne za $L = 185\ \text{mm}$ uzduž cjevčice. Gustoću zraka zanemari.
 
 **Traži se**
 
-Odredi manometarski tlak u cjevovodu.
+1. Odredi pretlak u kanalu uz pretpostavku da se razina ulja u posudi ne mijenja.
+2. Uključi spuštanje razine u posudi, odredi točan pretlak i relativnu pogrešku pojednostavljenja.
+3. Odredi osjetljivost instrumenta, pomak očitanja po paskalu, i usporedi je s okomitim U-manometrom s istim uljem. Obrazloži zašto se kut ne smanjuje proizvoljno.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Kreni od slobodne površine otvorenog kraka; kroz stupce zapisuj promjene tlaka kao $\rho g\Delta h$ s ispravnim predznakom.
+Pretlak nosi okomita razlika razina ulja: $L\sin\alpha$ u cjevčici i spuštanje razine u posudi, koje slijedi iz jednakosti istisnutih volumena $aL=A\,\delta$ s $a/A=(d/D)^2$. Osjetljivost je $dL/dp_M$; u U-manometru očitanje je razlika razina dvaju krakova.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$p_M \approx 23{,}7\ \text{kPa}$.
+Bez spuštanja razine: $h=L\sin\alpha=47{,}9\ \text{mm}$, $p_M\approx385\ \text{Pa}$. S posudom: $\delta=L(d/D)^2=2{,}9\ \text{mm}$, $h=50{,}8\ \text{mm}$, $p_M\approx408\ \text{Pa}$; pojednostavljenje podcjenjuje tlak za $5{,}7\,\%$. Osjetljivost $1/[\rho_ug(\sin\alpha+a/A)]\approx0{,}45\ \text{mm/Pa}$, $3{,}6$ puta više od U-manometra ($0{,}124\ \text{mm/Pa}$). Pri vrlo malom kutu meniskus se razvlači i zaustavlja uz stijenku, a nagib postaje osjetljiv na horizontiranje, pa se u praksi ne ide ispod $5$–$10^\circ$.
 :::
 ::::
 
@@ -800,9 +808,9 @@ $p_{pl} \approx 122{,}6\ \text{kPa}$ (aps.); na dubini $1{,}30\ \text{m}$: $p \a
 
 :::::
 
-![Skice uz Z1–Z6: spremnici, slojevi fluida i manometri.](../assets/print/u03_vjezbe_skice.svg){#fig-u03-vjezbe fig-align="center" fig-alt="Skice uz Z1–Z6: otvoreni spremnik, određivanje razine iz razlike tlakova, uljni U-manometar, slojevi ulja i vode, mjerenje podtlaka i izbor apsolutnog senzora."}
+![Skice uz Z1–Z6: barometarska visina, spremnici, slojevi fluida i manometri.](../assets/print/u03_vjezbe_skice.svg){#fig-u03-vjezbe fig-align="center" fig-alt="Skice uz Z1–Z6: dron s barometarskim senzorom iznad baze, određivanje razine iz razlike tlakova, nagnuti manometar s posudom, slojevi ulja i vode, mjerenje podtlaka i izbor apsolutnog senzora."}
 
-**Napomene uz skice.** U Z4 granica slojeva ulja i vode nacrtana je shematski i bez krute pregrade, Z5 prikazuje jednu od triju odvojenih izvedbi, a u Z6 točka $A$ i granica vode i žive leže na istoj visini.
+**Napomene uz skice.** U Z1 visina leta nije u mjerilu. U Z3 nagib cjevčice i spuštanje razine u posudi nisu u mjerilu; nulta oznaka vrijedi za jednake tlakove. U Z4 granica slojeva ulja i vode nacrtana je shematski i bez krute pregrade, Z5 prikazuje jednu od triju odvojenih izvedbi, a u Z6 točka $A$ i granica vode i žive leže na istoj visini.
 
 Kao most prema []{.mf1-chapter-ref target="u04"} usporedimo ravnotežu tlaka u spojenim posudama s efektivnim poljem sila.
 

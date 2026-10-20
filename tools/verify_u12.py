@@ -213,14 +213,24 @@ def zadatak_1(d=0.022, v=24.0, rho=998.0):
     return {"m_dot": m_dot, "F": m_dot*v, "P": 0.0}
 
 
-def zadatak_2(v=26.0, b=0.030, h=0.016, theta_deg=110.0, rho=998.0):
-    """Nepomična vodilica; theta je kut skretanja od +x prema +y."""
-    m_dot = rho*b*h*v
-    theta = math.radians(theta_deg)
-    c2x,c2y = v*math.cos(theta),v*math.sin(theta)
-    Fx,Fy = m_dot*(v-c2x),-m_dot*c2y
-    return {"m_dot":m_dot,"F_x":Fx,"F_y":Fy,"R_x":-Fx,"R_y":-Fy,
-            "R":math.hypot(Fx,Fy),"c2x":c2x,"c2y":c2y}
+def zadatak_2(d=0.025, v=30.0, u=10.0, rho=998.0):
+    """Z2: mlaz na jednu pokretnu plocu (relativni dotok) i na kolo s nizom ploca (puni protok)."""
+    A = math.pi*d**2/4
+    m_jet = rho*A*v
+    P_jet = 0.5*m_jet*v**2
+    m_rel = rho*A*(v-u)
+    F_single = rho*A*(v-u)**2
+    P_single = F_single*u
+    F_wheel = rho*A*v*(v-u)
+    P_wheel = F_wheel*u
+    u_opt_single, u_opt_wheel = v/3, v/2
+    F_wheel_opt = rho*A*v*(v-u_opt_wheel)
+    return {"A": A, "m_jet": m_jet, "P_jet": P_jet, "m_rel": m_rel,
+            "F_single": F_single, "P_single": P_single, "eta_single": P_single/P_jet,
+            "F_wheel": F_wheel, "P_wheel": P_wheel, "eta_wheel": P_wheel/P_jet,
+            "u_opt_single": u_opt_single, "eta_max_single": 8/27,
+            "u_opt_wheel": u_opt_wheel, "F_wheel_opt": F_wheel_opt,
+            "P_wheel_opt": F_wheel_opt*u_opt_wheel, "eta_max_wheel": 0.5}
 
 
 def zadatak_3(c1=32.0, u=12.0, m_rel=18.0, Fx=625.0, Fy=-153.0):
@@ -412,16 +422,28 @@ def verify():
                "Sila na nepomicnu plocu raste kvadratom brzine pri istom presjeku.")
 
     r = zadatak_2()
-    _check(out, "U12.Z2.m_dot", r["m_dot"], 12.46, "kg/s", abs_tol=.005)
-    _check(out, "U12.Z2.F_x", r["F_x"], 435.0, "N", abs_tol=.5)
-    _check(out, "U12.Z2.F_y", r["F_y"], -304.0, "N", abs_tol=.5)
-    _check(out, "U12.Z2.R_x", r["R_x"], -435.0, "N", abs_tol=.5)
-    _check(out, "U12.Z2.R_y", r["R_y"], 304.0, "N", abs_tol=.5)
-    _check(out, "U12.Z2.R", r["R"], 531.0, "N", abs_tol=.5)
-    _invariant(out, "U12.Z2.energy_and_direction",
-               abs(r["c2x"]**2+r["c2y"]**2-26**2)<1e-10
-               and r["F_x"]>0>r["F_y"] and r["R_x"]<0<r["R_y"],
-               "Mirna idealna vodilica ne mijenja kineticku energiju, ali mijenja impuls.")
+    _check(out, "U12.Z2.m_jet", r["m_jet"], 14.70, "kg/s", abs_tol=.005)
+    _check(out, "U12.Z2.P_jet_kW", r["P_jet"]/1000, 6.61, "kW", abs_tol=.005)
+    _check(out, "U12.Z2.m_rel", r["m_rel"], 9.80, "kg/s", abs_tol=.005)
+    _check(out, "U12.Z2.F_single", r["F_single"], 196.0, "N", abs_tol=.5)
+    _check(out, "U12.Z2.P_single_kW", r["P_single"]/1000, 1.96, "kW", abs_tol=.005)
+    _check(out, "U12.Z2.eta_single_percent", r["eta_single"]*100, 29.6, "%", abs_tol=.05)
+    _check(out, "U12.Z2.F_wheel", r["F_wheel"], 294.0, "N", abs_tol=.5)
+    _check(out, "U12.Z2.P_wheel_kW", r["P_wheel"]/1000, 2.94, "kW", abs_tol=.005)
+    _check(out, "U12.Z2.eta_wheel_percent", r["eta_wheel"]*100, 44.4, "%", abs_tol=.05)
+    _check(out, "U12.Z2.u_opt_single", r["u_opt_single"], 10.0, "m/s", abs_tol=1e-9)
+    _check(out, "U12.Z2.u_opt_wheel", r["u_opt_wheel"], 15.0, "m/s", abs_tol=1e-9)
+    _check(out, "U12.Z2.F_wheel_opt", r["F_wheel_opt"], 220.0, "N", abs_tol=.5)
+    _check(out, "U12.Z2.P_wheel_opt_kW", r["P_wheel_opt"]/1000, 3.31, "kW", abs_tol=.005)
+    du = 1e-4
+    single_is_max = zadatak_2(u=10.0+du)["P_single"] < r["P_single"] > zadatak_2(u=10.0-du)["P_single"]
+    wheel_is_max = zadatak_2(u=15.0+du)["P_wheel"] < r["P_wheel_opt"] > zadatak_2(u=15.0-du)["P_wheel"]
+    _invariant(out, "U12.Z2.optimum_and_full_flow",
+               single_is_max and wheel_is_max
+               and abs(r["eta_single"]-8/27) < 1e-12 and abs(r["P_wheel_opt"]/r["P_jet"]-0.5) < 1e-12
+               and r["F_wheel"] > r["F_single"] and abs(r["F_wheel"]/r["F_single"]-30/20) < 1e-12,
+               "Zadani u = v/3 mora biti maksimum snage jedne ploce (8/27), kolo ima maksimum 1/2 pri u = v/2, "
+               "a omjer sila kola i ploce jednak je v/(v-u).")
 
     r = zadatak_3()
     _check(out, "U12.Z3.c2x", r["c2x"], -2.722, "m/s", abs_tol=.0005)

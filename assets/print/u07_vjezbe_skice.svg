@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 523" role="img" aria-labelledby="u07vs_title u07vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:980px;height:auto;">
   <title id="u07vs_title">Zadatci Z1–Z6: uzgon i početni stabilitet</title>
-  <desc id="u07vs_desc">Šest panela u izvornom rasporedu tri stupca i dva reda. Z1 zatvoreni uronjeni blok: uzgon F-U gore kroz B i težina F-G dolje nacrtani su jednakim shematskim duljinama; tražena dodatna sila F-d nije nacrtana (F-d = ?). Z2 uspravan opterećeni ponton; vodna linija je shematska, gaz T se traži (T = ?). Z3 uteg pomaknut desno, nagib 3 stupnja udesno; vodna linija je shematska, gazovi T-L i T-D se traže. Z4 identični areometri s kotama uronjenog dijela vrata od spoja s tijelom. Z5 usporedba presjeka A (simetrično spuštena oprema) i presjeka B (dodani čvrsti balast, oprema ostaje visoko); oba su nacrtana na istom shematskom gazu jer se gazovi traže. Z6 nagnuta nepropusna platforma presijeca dva vodoravna fluida; akumulator mase m-k lijevo je od osi na shematskom položaju (udaljenost e se traži); centar uzgona nije nacrtan jer se traži; kote T-L, T-D i delta. Fluidi ne prodiru u zatvorena tijela. Sile su pune deblje strelice, kote sive dvostrane strelice.</desc>
+  <desc id="u07vs_desc">Šest panela u izvornom rasporedu tri stupca i dva reda. Z1: poprečni presjek broda s vodnom linijom u moru (puna) i višom vodnom linijom u rijeci (isprekidana); tražena promjena gaza označena upitnikom.  Z3 uteg pomaknut desno, nagib 3 stupnja udesno; vodna linija je shematska, gazovi T-L i T-D se traže. Z4 identični areometri s kotama uronjenog dijela vrata od spoja s tijelom. Z5 usporedba presjeka A (simetrično spuštena oprema) i presjeka B (dodani čvrsti balast, oprema ostaje visoko); oba su nacrtana na istom shematskom gazu jer se gazovi traže. Z6 nagnuta nepropusna platforma presijeca dva vodoravna fluida; akumulator mase m-k lijevo je od osi na shematskom položaju (udaljenost e se traži); centar uzgona nije nacrtan jer se traži; kote T-L, T-D i delta. Fluidi ne prodiru u zatvorena tijela. Sile su pune deblje strelice, kote sive dvostrane strelice.</desc>
   <defs>
     <marker id="u07vs_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
@@ -199,47 +199,45 @@
   </defs>
   <g id="u07vs_title-scene-1" transform="translate(-15.0000 -19.7658)">
     <g id="u07vs_fix_z1" transform="translate(30 36)">
-      <text x="150.0" y="19" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">Z1 — Potpuno uronjeno tijelo</text>
-      <rect x="9" y="55" width="282" height="161" fill="#dcebf1" stroke="none" stroke-width="1.2" />
-      <line x1="9" y1="55" x2="291" y2="55" stroke="#356b83" stroke-width="2" />
-      <rect x="100" y="100" width="100" height="96" fill="#d7dee3" stroke="#3a4a56" stroke-width="1.5" />
-      <circle cx="150" cy="148" r="3.2" fill="#356b83" />
-      <line x1="150" y1="148" x2="150" y2="104" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07vs_fix_z1_green)" data-mf1-vector="force" id="u07vs_fix_z1_FU" />
-      <line x1="150" y1="148" x2="150" y2="192" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07vs_fix_z1_force)" data-mf1-vector="force" id="u07vs_fix_z1_FG" />
-      <text x="206" y="212" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start" id="u07vs_fix_z1_unknown"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">d</tspan> = ?</text>
-      <text x="160" y="112" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">U</tspan></text>
-      <text x="160" y="180" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">G</tspan></text>
-      <text x="141" y="152" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end"><tspan font-style="italic">B</tspan></text>
-      <text x="150" y="229" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">V</tspan> = 0,085 m³; <tspan font-style="italic">m</tspan> = 62 kg; <tspan font-style="italic">ρ</tspan> = 998 kg/m³</text>
+      <text x="150.0" y="19" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">Z1 — Gaz u moru i rijeci</text>
+      <rect x="9" y="112" width="282" height="100" fill="#dcebf1" stroke="none" id="u07vs_fix_z1_water" />
+      <path d="M70 58 V140 Q70 188 118 188 H182 Q230 188 230 140 V58" fill="#d7dee3" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z1_hull" />
+      <line x1="9" y1="112" x2="291" y2="112" stroke="#356b83" stroke-width="2" id="u07vs_fix_z1_wl_sea" />
+      <line x1="60" y1="98" x2="240" y2="98" stroke="#356b83" stroke-width="1.6" stroke-dasharray="6 4" id="u07vs_fix_z1_wl_river" />
+      <text x="150" y="90" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">rijeka (– –)</text>
+      <text x="40" y="128" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">more</text>
+      <line x1="236" y1="98" x2="262" y2="98" stroke="#657781" stroke-width="0.8" />
+      <line x1="236" y1="112" x2="262" y2="112" stroke="#657781" stroke-width="0.8" />
+      <line x1="257" y1="84" x2="257" y2="98" stroke="#657781" stroke-width="1.2" marker-end="url(#u07vs_fix_z2_dim)" data-mf1-role="dimension" />
+      <line x1="257" y1="126" x2="257" y2="112" stroke="#657781" stroke-width="1.2" marker-end="url(#u07vs_fix_z2_dim)" data-mf1-role="dimension" />
+      <text x="264" y="109" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start" id="u07vs_fix_z1_unknown">Δ<tspan font-style="italic">T</tspan> = ?</text>
+      <text x="150" y="150" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">brod</text>
+      <text x="150" y="44" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">vl</tspan> = 2400 m² (stalna)</text>
+      <text x="150" y="212" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Δ = 12 000 t; <tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">mv</tspan> = 1025, <tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">rij</tspan> = 998 kg/m³</text>
     </g>
   </g>
   <g id="u07vs_title-scene-2" transform="translate(-1.0000 -19.7658)">
     <g id="u07vs_fix_z2" transform="translate(346 36)">
-      <text x="150.0" y="19" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">Z2 — Gaz opterećenog pontona</text>
-      <rect x="9" y="85.9879" width="282" height="109.0121" fill="#dcebf1" stroke="none" stroke-width="1.2" />
-      <line x1="9" y1="85.9879" x2="291" y2="85.9879" stroke="#356b83" stroke-width="2" id="u07vs_fix_z2_free-surface" />
-      <polygon points="48.500000,125.137946 251.500000,125.137946 251.500000,70.037946 48.500000,70.037946" fill="#dcebf1" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z2_hull" />
-      <polygon points="50.675000,122.962946 249.325000,122.962946 249.325000,72.212946 50.675000,72.212946" fill="#ffffff" stroke="#3a4a56" stroke-width="0.8" />
-      <circle cx="150.0" cy="105.562923" r="3.7" fill="#356b83" id="u07vs_fix_z2_buoyancy-center" />
-      <text x="160.0000" y="109.5629" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">B</tspan></text>
-      <polygon points="123.900000,70.037946 176.100000,70.037946 176.100000,54.087946 123.900000,54.087946" fill="#eadfc5" stroke="#356b83" stroke-width="1.5" />
-      <line x1="150.0" y1="105.56294611105727" x2="150.0" y2="83.5629" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07vs_fix_z2_green)" data-mf1-vector="force" />
-      <line x1="150.00000000000003" y1="32" x2="150.00000000000003" y2="54" stroke="#356b83" stroke-width="2.8" marker-end="url(#u07vs_fix_z2_force)" data-mf1-vector="force" />
-      <line x1="22" y1="85.9879" x2="32" y2="85.9879" stroke="#657781" stroke-width="0.8" />
-      <line x1="22" y1="125.13794622211455" x2="32" y2="125.13794622211455" stroke="#657781" stroke-width="0.8" />
-      <line x1="27" y1="85.9879" x2="27" y2="125.13794622211455" stroke="#657781" stroke-width="1.2" marker-start="url(#u07vs_fix_z2_dimL)" marker-end="url(#u07vs_fix_z2_dim)" data-mf1-role="dimension" />
-      <text x="21" y="105.5629" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 21 105.5629)" id="u07vs_fix_z2_unknown"><tspan font-style="italic">T</tspan> = ?</text>
-      <line x1="265" y1="70.03794622211456" x2="275" y2="70.03794622211456" stroke="#657781" stroke-width="0.8" />
-      <line x1="265" y1="125.13794622211455" x2="275" y2="125.13794622211455" stroke="#657781" stroke-width="0.8" />
-      <line x1="270" y1="70.03794622211456" x2="270" y2="125.13794622211455" stroke="#657781" stroke-width="1.2" marker-start="url(#u07vs_fix_z2_dimL)" marker-end="url(#u07vs_fix_z2_dim)" data-mf1-role="dimension" />
-      <text x="278" y="101.58794622211455" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan></text>
-      <line x1="48.5" y1="168" x2="48.5" y2="178" stroke="#657781" stroke-width="0.8" />
-      <line x1="251.5" y1="168" x2="251.5" y2="178" stroke="#657781" stroke-width="0.8" />
-      <line x1="48.5" y1="173" x2="251.5" y2="173" stroke="#657781" stroke-width="1.2" marker-start="url(#u07vs_fix_z2_dimL)" marker-end="url(#u07vs_fix_z2_dim)" data-mf1-role="dimension" />
-      <text x="150.0" y="191" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 1,40 m</text>
-      <text x="158" y="46" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">G</tspan></text>
-      <text x="158" y="92.0000" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">U</tspan></text>
-      <text x="150" y="215" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan> = 2,60 m; <tspan font-style="italic">H</tspan> = 0,38 m; <tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">p</tspan> = 510 kg; <tspan font-style="italic">m</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan> = 220 kg</text>
+      <text x="150.0" y="19" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="middle" font-weight="700">Z2 — Plutanje homogenog bloka</text>
+      <rect x="9" y="106.4000" width="282" height="109.6000" fill="#dcebf1" stroke="none" />
+      <line x1="9" y1="106.4000" x2="291" y2="106.4000" stroke="#356b83" stroke-width="2" id="u07vs_fix_z2_free-surface" />
+      <polygon points="59.000000,200.000000 241.000000,200.000000 241.000000,70.000000 59.000000,70.000000" fill="#eadfc5" stroke="#3a4a56" stroke-width="2" id="u07vs_fix_z2_hull" />
+      <circle cx="150" cy="135.0000" r="3.7" fill="#356b83" id="u07vs_fix_z2_G" />
+      <text x="160" y="139.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">G</tspan></text>
+      <text x="150" y="95" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">drvo</text>
+      <line x1="22" y1="106.4000" x2="32" y2="106.4000" stroke="#657781" stroke-width="0.8" />
+      <line x1="22" y1="200.0" x2="32" y2="200.0" stroke="#657781" stroke-width="0.8" />
+      <line x1="27" y1="106.4000" x2="27" y2="200.0" stroke="#657781" stroke-width="1.2" marker-start="url(#u07vs_fix_z2_dimL)" marker-end="url(#u07vs_fix_z2_dim)" data-mf1-role="dimension" />
+      <text x="21" y="153.2000" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" transform="rotate(-90 21 153.2000)" id="u07vs_fix_z2_unknown"><tspan font-style="italic">T</tspan> = ?</text>
+      <line x1="255.0" y1="70.0" x2="265.0" y2="70.0" stroke="#657781" stroke-width="0.8" />
+      <line x1="255.0" y1="200.0" x2="265.0" y2="200.0" stroke="#657781" stroke-width="0.8" />
+      <line x1="260.0" y1="70.0" x2="260.0" y2="200.0" stroke="#657781" stroke-width="1.2" marker-start="url(#u07vs_fix_z2_dimL)" marker-end="url(#u07vs_fix_z2_dim)" data-mf1-role="dimension" />
+      <text x="268.0" y="139.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan></text>
+      <line x1="59.0" y1="206.0" x2="59.0" y2="216.0" stroke="#657781" stroke-width="0.8" />
+      <line x1="241.0" y1="206.0" x2="241.0" y2="216.0" stroke="#657781" stroke-width="0.8" />
+      <line x1="59.0" y1="211.0" x2="241.0" y2="211.0" stroke="#657781" stroke-width="1.2" marker-start="url(#u07vs_fix_z2_dimL)" marker-end="url(#u07vs_fix_z2_dim)" data-mf1-role="dimension" />
+      <text x="150" y="227.0" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan> = 0,70 m; <tspan font-style="italic">h</tspan> = 0,50 m; <tspan font-style="italic">L</tspan> = 2,00 m</text>
+      <text x="150" y="46" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">d</tspan> = 650 kg/m³; <tspan font-style="italic">ρ</tspan> = 998 kg/m³</text>
     </g>
   </g>
   <g id="u07vs_title-scene-3" transform="translate(19.0000 -19.7658)">

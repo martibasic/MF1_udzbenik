@@ -29,6 +29,12 @@
     <marker xmlns="http://www.w3.org/2000/svg" id="u08vs_fix_axis" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#3a4a56" stroke="none" stroke-width="1.2"/>
     </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u08vs_fix_dimgrey" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none"/>
+    </marker>
+    <marker xmlns="http://www.w3.org/2000/svg" id="u08vs_fix_dimgreyL" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+      <path d="M0 0 L0 5 L6 2.5 Z" fill="#657781" stroke="none"/>
+    </marker>
     <marker xmlns="http://www.w3.org/2000/svg" id="u08vs_fix_dim" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2"/>
     </marker>

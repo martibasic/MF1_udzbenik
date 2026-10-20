@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 
 from verify_u05_integrated import (quarter_cylinder, task_watertight_door,
                                    task_parabolic_cover, task_triangle,
-                                   task_radial_gate)
+                                   task_radial_gate, task_flap_gate)
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -61,16 +61,23 @@ def unknown_not_drawn(nodes, panel, label_id, allowed_vectors=()):
 
 def main():
     cases = [
-        ("u06_val1_cetvrtina_kruga.svg", "u05p4_", 370, 245, 100, 45, 1.22, 1.83, 2.44, 1),
-        ("u06_val3_cetvrtcilindricni_poklopac.svg", "u05p5_", 135, 105, 175, 105, .90, 1.20, 0, -1),
-        ("u06_ch1_poklopac_spojnica.svg", "u05p6_", 355, 150, 145, 150, 1.10, 1.40, 0, 1),
+        ("u06_val1_cetvrtina_kruga.svg", "u05p4_", 370, 245, 100, 45, 1.22, 1.83, 2.44, 1, 0.0),
+        # P5: zatvoreni spremnik s nadtlakom plina 20 kPa; hvatišta pomaknuta prema težištima.
+        ("u06_val3_cetvrtcilindricni_poklopac.svg", "u05p5_", 135, 105, 175, 105, .90, 1.20, 0, -1, 20e3),
+        ("u06_ch1_poklopac_spojnica.svg", "u05p6_", 355, 150, 145, 150, 1.10, 1.40, 0, 1, 0.0),
     ]
-    for name, prefix, cx, cy, radius, surface, R, b, h1, sign in cases:
+    for name, prefix, cx, cy, radius, surface, R, b, h1, sign, p_gas in cases:
         _, nodes = read(name)
         check_arc(nodes[prefix+"arc"], cx, cy, radius, right=sign < 0)
         check_normal(nodes[prefix+"normal-vector"], cx, cy, radius, outward=sign < 0)
         close((cy-surface)/radius, h1/R)
-        force = quarter_cylinder(R, b, h1, sign)
+        force = quarter_cylinder(R, b, h1, sign, p_gas=p_gas)
+        if p_gas:
+            # Zatvoreni spremnik: poklopac iznad plina i stijenka do poklopca.
+            lid = nodes[prefix+"lid"]
+            assert float(lid.get("y")) + float(lid.get("height")) < surface
+            assert float(lid.get("x")) <= cx and float(lid.get("x")) + float(lid.get("width")) >= cx + radius
+            assert any("nadtlak" in "".join(n.itertext()) for n in nodes[prefix+"geometry"].iter() if n.tag.endswith("text"))
         fh, fv = nodes[prefix+"FH"], nodes[prefix+"FV"]
         yh = float(fh.get("y1")); xv = float(fv.get("x1"))
         close(float(fh.get("y2")), yh)
@@ -137,6 +144,31 @@ def main():
     assert nx2 < nx1 and ny2 > ny1                                      # iz vode u pokrov
     water = nodes["u05vs_z2_water-domain"].get("d")
     assert water.startswith("M48 50") and " Z" in water and f"Q{cx_:g} {cy_:g} {ax:g} {ay:g}" in water
+    # Z3: kosa zaklopka pod 60°, os na a/L = 0,40 duljine ploče od donjeg ruba na pragu,
+    # voda samo uzvodno; tražena dubina otvaranja nije nacrtana u mjerilu.
+    gate = nodes["u05vs_z3_gate"]
+    gx1, gy1, gx2, gy2 = [float(gate.get(k)) for k in ("x1", "y1", "x2", "y2")]
+    close(math.degrees(math.atan2(gy1 - gy2, gx2 - gx1)), 60.0, 1e-6)
+    close(gy1, 190.0)                                   # donji rub na dnu kanala
+    scale = math.hypot(gx2 - gx1, gy2 - gy1) / 2.00      # px po metru uzduž ploče
+    axis = nodes["u05vs_z3_axis"]
+    ax_, ay_ = float(axis.get("cx")), float(axis.get("cy"))
+    close(math.hypot(ax_ - gx1, ay_ - gy1) / scale, 0.80, 1e-6)
+    close((ax_ - gx1) * (gy2 - gy1) - (ay_ - gy1) * (gx2 - gx1), 0, 0.05)   # os na ploči
+    sill = nodes["u05vs_z3_sill"]
+    assert float(sill.get("x")) > gx1 and float(sill.get("y")) + float(sill.get("height")) == 190.0
+    z3 = task_flap_gate()
+    y_drawn = (gy1 - float(nodes["u05vs_z3_surface"].get("y1"))) / scale
+    assert abs(y_drawn - z3["y_open"]) > 0.3 and abs(y_drawn - 1.80) > 0.1, y_drawn
+    unknown_not_drawn(nodes, "u05vs_z3", "u05vs_z3_unknown")
+    vectors = [n for n in nodes["u05vs_z3"].iter() if n.get("data-mf1-vector")]
+    assert vectors and all(n.get("data-mf1-vector") == "pressure" for n in vectors)
+    for n in vectors:   # tlačne strelice iz vode (lijevo-gore) na ploču, okomito na nju
+        x1, y1, x2, y2 = [float(n.get(k)) for k in ("x1", "y1", "x2", "y2")]
+        close((x2 - x1) * (gx2 - gx1) + (y2 - y1) * (gy2 - gy1), 0, 0.05)
+        assert x2 > x1 and y2 > y1
+    water = nodes["u05vs_z3_water-domain"].get("d")
+    assert water.startswith("M48 ") and " Z" in water and f"L{gx1:g} {gy1:g}" in water
     check_arc(nodes["u05vs_z5_arc"], 207, 103, 70)
     check_normal(nodes["u05vs_z5_normal"], 207, 103, 70)
     assert nodes["u05vs_z4_triangle"].get("d") == "M144.0 78 L218 190 H70 Z"
@@ -156,7 +188,7 @@ def main():
                    if n.get("data-mf1-role") != "dimension")
     for n in range(1, 7):
         assert f"u05vs_z{n}" in nodes
-    print("PASS practice panels: Z1 door view, Z2 parabola and local normal, Z1/Z2/Z6 unknown forces not drawn, Z5 arc and normal, triangular orientation, six panels")
+    print("PASS practice panels: Z1 door view, Z2 parabola and local normal, Z3 flap gate angle/axis/sill, Z1/Z2/Z3/Z6 unknown forces not drawn, Z5 arc and normal, triangular orientation, six panels")
 
 
 if __name__ == "__main__":

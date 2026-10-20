@@ -134,3 +134,15 @@ tekst zadatka izričito kaže). Skica `u15_vjezbe_skice.svg`: samo natpis Z3
 Provjere: `verify_u15_open_channels.py` 73 rezultata, 0 FAIL;
 `check_u15_sketch_geometry.py` PASS. Broj riječi 3354 → 4192 (izvodi,
 granica, kontrolne građevine, Froude broda).
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| Z2 | Kritična dubina i $E_{min}$ (ponavljala P2) | Istjecanje ispod ustave i kontrakcija mlaza (`task-istjecanje-ispod-ustave`): $y_1=C_ca=0{,}244$ m, $q=1{,}443$ m²/s, $Q=2{,}886$ m³/s, $C_d=0{,}576$; $Fr_0=0{,}163$, $Fr_1=3{,}82$; dvostruki otvor daje 1,90× protoka, $C_d=0{,}547$ | T1 | Kontrolna građevina iz teorije (jednadžba istjecanja ispod ustave) dobiva zadatak; razlika $C_c$ i $C_d$, brzina dolaska, nelinearnost protoka s otvorom. |
+
+Skica Z2 (`u15_vjezbe_skice.svg`): bočni presjek s ustavom, otvorom u mjerilu i shematskom dubinom mlaza; `check_u15_sketch_geometry.py` Z2 (prolaz ispod ustave, $y_1<a$ shematski). `verify_u15_open_channels.py`: `exercise_sluice_gate`, `U15.Z2.energy_and_control`. D03 §15 dopunjen. Redoslijed razina Z5 (T4) prije Z6 (T2) namjerno nije mijenjan: zamjena bi mijenjala ID-jeve, ključ i panele skice bez didaktičke koristi.
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.

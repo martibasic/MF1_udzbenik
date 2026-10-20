@@ -148,3 +148,31 @@ normala. Skica `u05_vjezbe_skice.svg`: paneli Z1 i Z2 nacrtani unutar postojeći
 okvira; `<desc>` ažuriran. Notebookovi nisu mijenjani (ne opisuju Z1/Z2).
 D06 i manifest obnavlja koordinator generatorima; `print-layouts.json` (sha skice)
 također. Didaktička procjena ostaje autorska, ne dokaz CI-ja.
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani, a u poglavlju nema samostalnog zadatka s
+nagnutom plohom iako studenti miješaju težište plohe i centar tlaka. Zahvat
+unutar šest mjesta i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje 6.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| Z3 | Pregrada između dviju razina vode (`task-pregrada-izmedu-dviju-razina-vode`, ostaje kao alias `<span>`) | Samootvarajuća kosa zaklopka kanala (`task-samootvarajuca-kosa-zaklopka`) | T2 | Uvjet otvaranja je položaj centra tlaka u osi, ne težišta; student mora odlučiti je li ploča pri otvaranju djelomično ili potpuno uronjena (pravilo trećine daje 3a > L), riješiti uvjet po h_C i zatim postaviti moment oko osi s krakom uzduž ploče. Treći zahtjev izričito traži obrazloženje zašto težište daje pogrešan zaključak. |
+| P5 | Četvrtcilindrični poklopac uz slobodnu površinu (ponavljao geometriju P6) | Isti poklopac u zatvorenom spremniku s nadtlakom plina 20 kPa | T3 | Jedini primjer u knjizi koji provodi upozorenje iz odjeljka o referentnom tlaku: jednoliki član mijenja silu i pomiče hvatišta prema težištima projekcija; rezultanta i dalje prolazi kroz O. |
+
+Kontrolni rezultati Z3: $y_{otv}=2{,}309$ m ($h_C=1{,}443$ m, gornji rub 0,577 m
+ispod površine); pri 1,80 m $F=27{,}43$ kN, hvatište 0,691 m od donjeg ruba,
+$M=2{,}99$ kN m, sila praga 3,74 kN. P5: $F_H=26{,}36$ kN na 0,477 m,
+$F_V=-29{,}07$ kN na 0,432 m, $F_R=39{,}24$ kN, $-47{,}8^\circ$.
+
+Povezane izmjene: CFD okvir ustave sada upućuje na nagnutu ustavu i moment oko
+osi (Z3); D03 (pogreške Z3 i nadtlak); skica Z3 u `u05_vjezbe_skice.svg`
+(nacrtano unutar postojećeg okvira, panel proširen na 390 px) i skica P5
+(poklopac spremnika, plin, pomaknuta hvatišta); `print-layouts.json` hash;
+`verify_u05_integrated.py` (Z3: integracija tlaka, promjena predznaka momenta
+upravo pri $y_{otv}$, bilanca praga, granični slučaj niže osi; P5: izravna
+integracija $p\,\vec n\,dA$ s nadtlakom, prolaz kroz O, pomak hvatišta);
+`check_u05_sketch_geometry.py` (kut 60°, os na 0,40 L, prag, nenacrtana
+nepoznanica; P5 poklopac i oznaka nadtlaka). Prošlo: verify_all, audit_publication,
+qa_audit, audit_sketch_design, audit_print_layouts; D06 i manifest regenerirani.
+Didaktička procjena je autorska; studentski pilot nije proveden.

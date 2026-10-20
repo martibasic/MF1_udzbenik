@@ -175,3 +175,15 @@ PASS (7 slika). Reference `#cfd-rotor-karakteristika`,
 `#task-izlaz-lopatice-iz-izmjerene-sile` i svi `#sec-/#eq-/#fig-` ID-jevi koji
 nisu zamijenjeni ostali su; CFD okvir „Propeler iza trupa” preusmjeren na
 `@ex-propeler-u-napredovanju`.
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| Z2 | Nepomična vodilica 110° (ista vrsta kao P1 i Z1, sadržaj [u10]) | Pokretna ploča i kolo s nizom ploča (`task-pokretna-ploca-i-kolo-s-plocama`): $d=25$ mm, $v=30$ m/s, $u=10$ m/s; jedna ploča $\dot m_{rel}=9{,}80$ kg/s, $F=196$ N, $P=1{,}96$ kW, $\eta=29{,}6$ %; kolo $F=294$ N, $P=2{,}94$ kW, $\eta=44{,}4$ %; optimumi $u=v/3$ (8/27) i $u=v/2$ (1/2) | T1 | Prvi zadatak s pokretnom plohom: relativni dotok naspram punog protoka (pogreška iz D03), snaga i optimum, uvod u Peltonovo kolo. |
+
+Skica Z2 (`u12_vjezbe_skice.svg`): geometrija kao Z1 plus strelica $u$ i dvije crtkane ploče kola; sila i snaga nisu nacrtane. `check_u14_sketch_geometry.py`: Z2 (pokretna ploča, $u<v$, crtkane ploče, bez sile). `verify_u12.py`: `zadatak_2`, `U12.Z2.optimum_and_full_flow`. D03 §14 dopunjen.
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.

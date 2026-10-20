@@ -234,50 +234,57 @@ Prvi val viši od ravnotežne razine sam po sebi ne znači da je CFD račun pogr
 
 ## Riješeni primjeri
 
-::: {#ex-u04-otvoreni-spremnik-na-laboratorijskim-kolicima-t2 .mf1-we}
-<p class="mf1-box-label">Otvoreni spremnik na laboratorijskim kolicima&nbsp;<span class="mf1-level">T2</span></p>
+<span id="ex-u04-otvoreni-spremnik-na-laboratorijskim-kolicima-t2"></span>
+
+::: {#ex-zatvoreni-puni-spremnik-odzracnik-ubrzanje .mf1-we}
+<p class="mf1-box-label">Zatvoreni puni spremnik s odzračnikom pri ubrzanju&nbsp;<span class="mf1-level">T2</span></p>
 
 **Tekst zadatka**
 
-Otvoreni pravokutni spremnik duljine $L = 1{,}60\ \text{m}$ i širine $b = 0{,}80\ \text{m}$ sadrži vodu početne visine $h_0 = 0{,}42\ \text{m}$. Spremnik se ubrzava udesno stalnim ubrzanjem $a = 1{,}35\ \text{m/s}^2$. Promatraj relativno mirovanje nakon smirivanja valova, bez prelijevanja i ogoljavanja dna.
+Zatvoreni pravokutni spremnik duljine $L = 1{,}50\ \text{m}$ i visine $H = 0{,}60\ \text{m}$ potpuno je ispunjen vodom gustoće $\rho = 1000\ \text{kg/m}^3$; u gornjem stražnjem kutu $A$ ima odzračnik otvoren prema atmosferi. Spremnik se na vozilu ubrzava prema naprijed stalnim ubrzanjem $a = 3{,}0\ \text{m/s}^2$, a voda u odnosu na njega miruje. Kutove označi s $A$ (gore straga), $B$ (gore sprijeda), $C$ (dolje straga) i $D$ (dolje sprijeda). Zanemari volumen odzračnika i stlačivost vode.
 
 **Traži se**
 
-1. Odredi razliku razina slobodne površine između stražnje i prednje stijenke.
-2. Odredi visinu vode uz stražnju i prednju stijenku.
-3. Odredi kut nagiba slobodne površine prema vodoravnici.
+1. Odredi manometarske tlakove u kutovima $B$, $C$ i $D$.
+2. Odredi položaj zamišljene slobodne površine i objasni gdje je tlak negativan.
+3. Odredi ubrzanje pri kojem manometarski tlak u $D$ pada na nulu te tlakove u kutovima kad bi se odzračnik nalazio u kutu $B$.
 
-![Otvoreni spremnik na laboratorijskim kolicima pri vodoravnom ubrzanju.](../assets/print/u04_val2_laboratorijska_kolica.svg){#fig-u04-otvoreni-spremnik-na-laboratorijskim-kolicima fig-alt="Pravokutni spremnik na kolicima koja ubrzavaju udesno, s vodom višom uz stražnju stijenku, kotama dubina i Δh te umetkom vektora g, −a i g_eff."}
+![Zatvoreni puni spremnik s odzračnikom u kutu A pri ubrzanju prema naprijed; isprekidana je zamišljena slobodna površina.](../assets/print/u04_fig_zatvoreni_puni_spremnik.svg){#fig-u04-zatvoreni-puni-spremnik fig-align="center" fig-alt="Zatvoreni pravokutni spremnik pun vode s odzračnikom u gornjem stražnjem kutu A, kutovima B, C i D, isprekidanom zamišljenom slobodnom površinom koja kroz A pada prema prednjoj stijenci te strelicom ubrzanja udesno."}
 
-**Veza s proračunom.** Ubrzanje je udesno, pa je površina viša uz stražnju (lijevu) stijenku; prolazno zapljuskivanje nije prikazano.
+**Veza s proračunom.** Nema stvarne slobodne površine: referencu tlaka daje odzračnik, a zamišljena slobodna površina je ploha $p_M=0$ kroz $A$, okomita na $\vec g_{eff}$. Ubrzanje je prema naprijed, u smjeru od $A$ prema $B$.
 
 **Rješenje**
 
-Za vodoravno ubrzani spremnik vrijedi osnovna relacija
+Gradijent tlaka u relativnom mirovanju ima dvije komponente, $\partial p/\partial x=-\rho a$ u smjeru ubrzanja i $\partial p/\partial z=-\rho g$. Polazeći od odzračnika, gdje je $p_{M,A}=0$, tlak prema naprijed pada, a prema dolje raste:
 
 $$
-\Delta h = \frac{aL}{g} = \frac{1{,}35 \cdot 1{,}60}{9{,}81} = 0{,}220\ \text{m} \approx 22{,}0\ \text{cm}.
+\begin{aligned}
+p_{M,B}&=-\rho aL=-1000\cdot3{,}0\cdot1{,}50=-4{,}50\ \text{kPa},\\
+p_{M,C}&=\rho gH=1000\cdot9{,}81\cdot0{,}60=5{,}89\ \text{kPa},
+\end{aligned}
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-01}
 
-Budući da se volumen ne mijenja, srednja visina ostaje $(h_{str} + h_{pred})/2 = h_0 = 0{,}42\ \text{m}$, a razlika visina iznosi $h_{str} - h_{pred} = \Delta h = 0{,}220\ \text{m}$. Rješavanjem tog sustava slijedi
-
 $$
-h_{str} = h_0 + \frac{\Delta h}{2} = 0{,}42 + 0{,}110 = 0{,}530\ \text{m},
+p_{M,D}=\rho gH-\rho aL=5{,}89-4{,}50=1{,}39\ \text{kPa}.
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-02}
 
+Zamišljena slobodna površina prolazi kroz $A$ i nagnuta je za $\tan\theta=a/g=0{,}306$, odnosno $\theta\approx17{,}0^\circ$; na prednjoj stijenci leži
+
 $$
-h_{pred} = h_0 - \frac{\Delta h}{2} = 0{,}42 - 0{,}110 = 0{,}310\ \text{m}.
+\frac{aL}{g}=\frac{3{,}0\cdot1{,}50}{9{,}81}=0{,}459\ \text{m}
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-03}
 
-Kut nagiba slobodne površine dobiva se iz efektivnog polja sila:
+ispod gornjeg ruba, dakle unutar spremnika. Iznad te plohe, u prednjem gornjem dijelu, voda je pod podtlakom: najniži je u $B$, gdje apsolutni tlak iznosi oko $96{,}8\ \text{kPa}$. Tlak u $D$ pada na nulu kad zamišljena površina dosegne dno uz prednju stijenku, $aL=gH$, odnosno pri
 
 $$
-\tan\theta = \frac{a}{g} = \frac{1{,}35}{9{,}81} = 0{,}1376 \quad \Longrightarrow \quad \theta = \arctan(0{,}1376) \approx 7{,}8^\circ.
+a_D=\frac{gH}{L}=\frac{9{,}81\cdot0{,}60}{1{,}50}=3{,}92\ \text{m/s}^2.
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-04}
+
+Kad bi odzračnik bio u $B$, referenca $p_M=0$ bila bi u prednjem gornjem kutu, pa bi tlakovi iznosili $p_{M,A}=+4{,}50$, $p_{M,C}=10{,}39$ i $p_{M,D}=5{,}89\ \text{kPa}$: sve su razlike iste, a razina tlaka pomaknuta je za $\rho aL$.
 
 **Provjera i tumačenje**
 
-Razina je viša na stražnjoj strani jer nagib ovisi o smjeru ubrzanja, a ne o smjeru brzine. Srednja visina $(0{,}530+0{,}310)/2 = 0{,}42\ \text{m}$ potvrđuje očuvanje volumena, a obje dubine ostaju pozitivne.
+Razlike tlakova ovise samo o polju $\vec g_{eff}$ i udaljenostima: $p_C-p_A=p_D-p_B=\rho gH$ i $p_A-p_B=p_C-p_D=\rho aL$. Položaj odzračnika određuje samo zajedničku razinu, pa odzračnik na prednjoj strani uklanja podtlak. Pri usporavanju se predznak člana $\rho aL$ obrće. Model vrijedi dok voda potpuno ispunjava spremnik; da se odzračnik našao ispod zamišljene površine, kroz njega bi ušao zrak i nastala bi stvarna slobodna površina.
 :::
 
 ::: {#ex-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom .mf1-we}
@@ -667,31 +674,35 @@ $\Delta h \approx 0{,}22\ \text{m}$; $h_{str} \approx 0{,}45\ \text{m}$, $h_{pre
 
 [Razina: T1]{.mf1-task-level}
 
-### Ubrzanje na granici prelijevanja {#task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine .unnumbered .unlisted}
+<span id="task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine"></span>
+
+### Spremnik na dizalici s vodoravnim i okomitim ubrzanjem {#task-spremnik-na-dizalici-dva-ubrzanja .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Otvoreni pravokutni spremnik duljine $L = 1{,}40\ \text{m}$ napunjen je do visine $h_0 = 0{,}30\ \text{m}$, a visina boka je $H = 0{,}42\ \text{m}$.
+Otvoreni pravokutni spremnik duljine $L = 2{,}00\ \text{m}$ i visine $H = 1{,}20\ \text{m}$ s vodom gustoće $\rho_v=1000\ \text{kg/m}^3$ do mirne razine $h_0 = 0{,}80\ \text{m}$ visi na lučkoj dizalici. Kolica dizalice ubrzavaju vodoravno ubrzanjem $a_x = 1{,}5\ \text{m/s}^2$ u smjeru duljine spremnika, a vitlo istodobno ubrzava teret prema gore ubrzanjem $a_z = 1{,}2\ \text{m/s}^2$. Spremnik ne njiše, a voda u odnosu na njega miruje.
 
 **Traži se**
 
-Odredi najveće vodoravno ubrzanje prije početka prelijevanja.
+1. Odredi nagib slobodne površine, razliku razina na krajevima spremnika i dubine uz stražnju i prednju stijenku.
+2. Odredi manometarski tlak na dnu uz stražnju stijenku te usporedi rezultate s računom koji okomito ubrzanje zanemaruje.
+3. Ponovi račun nagiba, dubina i tlaka za trenutak kad vitlo, još dižući teret, usporava istim iznosom ubrzanja; provjeri prelijevanje u oba stanja.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-U graničnom stanju vrijedi $h_{str} = H$ i $\Delta h = 2(H-h_0)$; nakon toga $a = g\Delta h/L$.
+Iz $\nabla p=\rho\vec g_{eff}$ slijedi $\tan\theta=a_x/(g+a_z)$ i $\partial p/\partial z=-\rho(g+a_z)$; očuvanje volumena daje $h_{str}=h_0+\Delta h/2$. Pri usporavanju dizanja $a_z$ je negativan iako je brzina prema gore.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$a_{max} \approx 1{,}68\ \text{m/s}^2$.
+Dizanje ubrzano: $\tan\theta=0{,}136$, $\theta\approx7{,}8^\circ$, $\Delta h\approx0{,}272\ \text{m}$, $h_{str}\approx0{,}936\ \text{m}$, $h_{pred}\approx0{,}664\ \text{m}$; $p_{M}=\rho_v(g+a_z)h_{str}\approx10{,}3\ \text{kPa}$. Bez $a_z$: $\Delta h\approx0{,}306\ \text{m}$, $p_M\approx9{,}35\ \text{kPa}$, dakle nagib precijenjen, a tlak podcijenjen za oko $9\,\%$. Usporavanje dizanja ($a_z=-1{,}2\ \text{m/s}^2$): $\tan\theta=0{,}174$, $\Delta h\approx0{,}348\ \text{m}$, $h_{str}\approx0{,}974\ \text{m}$, $p_M\approx8{,}39\ \text{kPa}$. U oba stanja $h_{str}<H$, nema prelijevanja.
 :::
 ::::
 
-[Razina: T1]{.mf1-task-level}
+[Razina: T2]{.mf1-task-level}
 
 ### Tlak pri okomitom ubrzanju {#task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce .unnumbered .unlisted}
 
@@ -718,7 +729,7 @@ $\Delta p \approx 7{,}90\ \text{kPa}$; u mirovanju $\Delta p_0 \approx 6{,}40\ \
 :::
 ::::
 
-[Razina: T2]{.mf1-task-level}
+[Razina: T1]{.mf1-task-level}
 
 <span id="task-u04-ubrzani-otvoreni-spremnik-sirine-stijenke-i-duljine"></span>
 
@@ -837,9 +848,9 @@ $\omega_{max}\approx7{,}83$ rad/s. Za $k=0{,}80$: dubine (os, rub) ≈ (0,3576; 
 
 :::::
 
-![Skice uz Z1–Z6: translacija, rotacija i granice relativnog mirovanja.](../assets/print/u04_vjezbe_skice.svg){#fig-u04-vjezbe fig-align="center" fig-alt="Šest panela: spremnik s nagnutom površinom, spremnik pri prvom dodiru ruba, zatvoreni cilindar s brzinom i ubrzanjima, zatvorena posuda s dvama senzorima, spremnik s grafom očitanja i rotirajući spremnik sa zatvorenim usisom u osi."}
+![Skice uz Z1–Z6: translacija, rotacija i granice relativnog mirovanja.](../assets/print/u04_vjezbe_skice.svg){#fig-u04-vjezbe fig-align="center" fig-alt="Šest panela: spremnik s nagnutom površinom, spremnik obješen o kolica dizalice s vodoravnim i okomitim ubrzanjem, zatvoreni cilindar s brzinom i ubrzanjima, zatvorena posuda s dvama senzorima, spremnik s grafom očitanja i rotirajući spremnik sa zatvorenim usisom u osi."}
 
-**Napomene uz skice.** Nagnute površine u Z1 i Z5 i radni paraboloid u Z6 shematski su i ne prikazuju traženi rezultat. Z2 prikazuje prvi dodir ruba dok je dno još pokriveno. U Z4 smjer vrtnje nije zadan. U Z5 točke su očitanja, a referentni model nije ucrtan. Z6 prikazuje zatvoren usis bez protoka.
+**Napomene uz skice.** Nagnute površine u Z1, Z2 i Z5 i radni paraboloid u Z6 shematski su i ne prikazuju traženi rezultat. U Z2 oba ubrzanja odnose se na spremnik koji visi bez njihanja. U Z4 smjer vrtnje nije zadan. U Z5 točke su očitanja, a referentni model nije ucrtan. Z6 prikazuje zatvoren usis bez protoka.
 
 ## Sažetak
 

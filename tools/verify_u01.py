@@ -126,12 +126,19 @@ def primjer_most(G_total: float = 480000.0, n_pod: int = 4, d_pod: float = 0.110
 
 
 def primjer_robot_stega(d_p: float = 0.014, F_p: float = 420.0,
-                         d_s: float = 0.028, n: int = 6):
+                         d_s: float = 0.028, n: int = 6,
+                         dz: float = 2.5, rho: float = 860.0, g: float = 9.81):
+    """Stezna naprava: stege su dz iznad crpke, pa tlak na njima pada za rho g dz."""
     A_p = math.pi * d_p**2 / 4
     A_s = math.pi * d_s**2 / 4
     p = F_p / A_p
     F_s = p * A_s
-    return {"A_p": A_p, "p": p, "A_s": A_s, "F_s": F_s, "F_total": n * F_s}
+    dp_hydro = rho * g * dz
+    p_s = p - dp_hydro
+    F_s_real = p_s * A_s
+    return {"A_p": A_p, "p": p, "A_s": A_s, "F_s": F_s, "F_total": n * F_s,
+            "dp_hydro": dp_hydro, "p_s": p_s, "F_s_real": F_s_real,
+            "rel_drop": dp_hydro / p}
 
 
 # ------------ Zadaci za vjezbu ----------------
@@ -405,6 +412,14 @@ def verify() -> list[dict]:
     _check(out, "U01.robot.p_MPa", r["p"] / 1e6, 2.73, "MPa", abs_tol=0.005)
     _check(out, "U01.robot.A_s", r["A_s"], 6.158e-4, "m2", abs_tol=5e-08)
     _check(out, "U01.robot.F_s_kN", r["F_s"] / 1000, 1.680, "kN", abs_tol=0.0005)
+    _check(out, "U01.robot.dp_hydro_kPa", r["dp_hydro"] / 1000, 21.1, "kPa", abs_tol=0.05)
+    _check(out, "U01.robot.p_s_MPa", r["p_s"] / 1e6, 2.707, "MPa", abs_tol=0.0015)
+    _check(out, "U01.robot.F_s_real_kN", r["F_s_real"] / 1000, 1.667, "kN", abs_tol=0.0015)
+    _check(out, "U01.robot.rel_drop_percent", r["rel_drop"] * 100, 0.8, "%", abs_tol=0.05)
+    _invariant(out, "U01.robot.height_term_small_vs_working_pressure",
+               r["F_s_real"] < r["F_s"] and r["rel_drop"] < 0.01
+               and abs(primjer_robot_stega(dz=0.0)["F_s_real"] - r["F_s"]) < 1e-9,
+               "Hidrostaticki clan mora smanjiti silu za manje od 1 % i nestati pri dz = 0.")
     _invariant(out, "U01.robot.reserve_below_limit", 3500.0 / r["F_s"] > 2.0,
                "Sila jedne stege mora ostati ispod nastavne granice 3,5 kN s rezervom vecom od 2.")
 

@@ -318,3 +318,16 @@ $\rho g|h_2|=2\sigma|\cos\theta_2|/b=188{,}9$ Pa.
 - `python tools/verify_u02.py`: 83 rezultata, 0 FAIL.
 - `python tools/check_u02_sketch_geometry.py`: PASS (7 SVG-ova).
 - Notebook izvršen u čistom kernelu (vidi izvještaj provedbe).
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| P1 | $\nu=\mu/\rho$ (trivijalno) | Moment trenja rotirajućeg diska na uljnom filmu (`ex-moment-trenja-rotirajuceg-diska`): $\tau(r)=\mu\omega r/\delta$, $M=\pi\mu\omega R^4/(2\delta)=0{,}767$ N m, $P=48{,}2$ W; procjena sa srednjim polumjerom daje polovinu | T2 | Jedini primjer u knjizi koji integrira newtonsko naprezanje po plohi; nova skica `u02_fig_rotirajuci_disk.svg` (`fig-u02-rotirajuci-disk`), stara `u02_fig_kinematicka_viskoznost.svg` uklonjena. |
+| Z1 | Klon P2 (sila na kliznu ploču) | Mjerenje viskoznosti kliznom pločom (`task-mjerenje-viskoznosti-kliznom-plocom`): iz $F=50$ N obrnuto $\mu=0{,}84$ Pa s, temperatura glicerina iz nastavne tablice ≈ 26 °C | T1 | Obrnuti račun i očitanje iz tablice umjesto uvrštavanja. |
+
+`scripts/build_book.py`: provjera zastarjelosti tiskovnih figura više ne pada na uklonjenom izvoru (označi kao zastarjelo i obnovi).
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.

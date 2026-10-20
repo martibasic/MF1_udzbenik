@@ -704,7 +704,7 @@ Normalna komponenta brzine relativne prema plohi, $(\vec v-\vec v_{KP})\cdot\vec
 
 ## Zadatci za vježbu {#sec-u07-zadatci}
 
-U nepomičnim komorama Z3 i Z4 tok je stacionaran, voda nestlačiva i gustoće $\rho=998\ \text{kg/m}^3$, a brzine su srednje po presjeku. U Z1 se gustoća zraka mijenja, u Z5 se kontrolna ploha giba, a u Z6 je fluid mješavina.
+U nepomičnoj komori Z3 tok je stacionaran, voda nestlačiva i gustoće $\rho=998\ \text{kg/m}^3$, a brzine su srednje po presjeku. U Z1 se gustoća zraka mijenja, u Z4 se srednja brzina tek određuje iz izmjerenog profila, u Z5 se kontrolna ploha giba, a u Z6 je fluid mješavina.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -791,27 +791,36 @@ $Q_3 = 20\ \text{L/s}$; $v_3 \approx 1{,}77\ \text{m/s}$.
 
 [Razina: T1]{.mf1-task-level}
 
-### Raspodjela protoka u dvije grane {#task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz .unnumbered .unlisted}
+<span id="task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz"></span>
+
+### Protok iz izmjerenog profila brzine u kanalu {#task-protok-iz-izmjerenog-profila-brzine .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-U razdjelnu glavu ulazi voda protokom $Q = 0{,}030\ \text{m}^3/\text{s}$ kroz cijev promjera $D_1 = 140\ \text{mm}$. Voda izlazi kroz dvije grane promjera $D_2 = 90\ \text{mm}$ i $D_3 = 70\ \text{mm}$, pri čemu je zadano da je brzina u izlaznoj grani 2 dvostruko veća od brzine u izlaznoj grani 3. Taj omjer određuje radni režim, a ne slijedi samo iz promjera.
+U kružnom ventilacijskom kanalu promjera $D = 300\ \text{mm}$ Pitotovom je sondom izmjeren osnosimetrični profil brzine zraka gustoće $\rho = 1{,}20\ \text{kg/m}^3$. Očitanja na polumjerima od osi do stijenke prikazana su u tablici; na stijenci je brzina nula. Strujanje je stacionarno, a podatci su sintetički.
+
+| $r$ (mm) | 0 | 37,5 | 75,0 | 112,5 | 135,0 | 145,0 | 150,0 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| $v$ (m/s) | 10,0 | 9,6 | 9,1 | 8,2 | 7,2 | 6,2 | 0 |
 
 **Traži se**
 
-Odredi protoke u granama.
+1. Odredi volumenski protok numeričkom integracijom $Q=\int_A v\,dA$ po prstenima između mjernih polumjera te srednju brzinu u kanalu.
+2. Odredi omjer srednje i vršne brzine te maseni protok.
+3. Za koliko bi se postotaka protok precijenio kad bi se očitanje u osi uzelo kao srednja brzina?
+4. Objasni zašto najveću nesigurnost unosi prsten uz stijenku i usporedi dobiveni omjer s vrijednošću $0{,}817$ koju daje potencijski profil $v=v_{max}(1-r/R)^{1/7}$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Postavi $Q = Q_2 + Q_3$ i vezu brzina $v_2 = 2v_3$; preko $Q = Av$ riješi sustav za dvije nepoznanice.
+Element površine je prsten $dA=2\pi r\,dr$, pa integriraj funkciju $2\pi r\,v(r)$, primjerice trapeznim pravilom između susjednih mjernih točaka. Srednja brzina je $Q/A$, a maseni protok $\rho Q$. Uz stijenku brzina pada s $6{,}2\ \text{m/s}$ na nulu na samo $5\ \text{mm}$, a prsten ondje ima najveći opseg.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
-::: {.callout-tip collapse="true" data-answer-key="true"}
+::: {.callout-tip collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
 
-$v_3 \approx 1{,}81\ \text{m/s}$, $v_2 \approx 3{,}62\ \text{m/s}$; $Q_2 \approx 23{,}0\ \text{L/s}$, $Q_3 \approx 7{,}0\ \text{L/s}$.
+Trapezno pravilo daje $Q\approx0{,}561\ \text{m}^3/\text{s}$ i $v=Q/A\approx7{,}94\ \text{m/s}$; $v/v_{max}\approx0{,}79$, $\dot m\approx0{,}673\ \text{kg/s}$. S vršnom brzinom bilo bi $Q=0{,}707\ \text{m}^3/\text{s}$, oko $26\,\%$ previše. Vanjski prsten nosi najveći opseg, a profil u njemu nije linearan, pa trapez ondje podcjenjuje tok; potencijski profil daje $0{,}817$, oko $3\,\%$ više od izmjerene diskretizacije.
 :::
 ::::
 
@@ -883,9 +892,9 @@ $\rho_{mj} \approx 1021{,}6\ \text{kg/m}^3$; $dh/dt = 1{,}312\ \text{mm/s}$; nom
 
 :::::
 
-![Skice uz Z1–Z6: grijač zraka, kosa ploha, komora za miješanje, razdjelnik, klip i balastni tank.](../assets/print/u08_vjezbe_skice.svg){#fig-u08-vjezbe fig-align="center" fig-alt="Šest panela s isprekidanim kontrolnim granicama: kanal grijača, zamišljena kosa ploha s normalom, komora s dvama ulazima, razdjelna glava s dvjema granama, klip s otvorom u cilindru i dvodni tank s odzračnom cijevi."}
+![Skice uz Z1–Z6: grijač zraka, kosa ploha, komora za miješanje, izmjereni profil brzine, klip i balastni tank.](../assets/print/u08_vjezbe_skice.svg){#fig-u08-vjezbe fig-align="center" fig-alt="Šest panela: kanal grijača s kontrolnom granicom, zamišljena kosa ploha s normalom, komora s dvama ulazima, kružni kanal s izmjerenim profilom brzine po polumjeru, klip s otvorom u cilindru i dvodni tank s odzračnom cijevi."}
 
-**Napomene uz skice.** U Z1 izlazni zrak ima manju gustoću od ulaznoga. U Z2 kut je zadan prema normali zamišljene plohe. U Z4 nacrtan je samo zadani omjer $v_2=2v_3$, a u Z5 je $w$ izlazna brzina u odnosu na klip. U Z6 odzračna cijev određuje najvišu dopuštenu razinu, a strelice protoka prikazuju samo poredak $Q_{mv} > Q_{iz} > Q_v$.
+**Napomene uz skice.** U Z1 izlazni zrak ima manju gustoću od ulaznoga. U Z2 kut je zadan prema normali zamišljene plohe. U Z4 duljine strelica slijede izmjerene brzine, a traženi protok nije nacrtan; u Z5 je $w$ izlazna brzina u odnosu na klip. U Z6 odzračna cijev određuje najvišu dopuštenu razinu, a strelice protoka prikazuju samo poredak $Q_{mv} > Q_{iz} > Q_v$.
 
 ## Sažetak
 

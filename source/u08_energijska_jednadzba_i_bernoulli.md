@@ -651,7 +651,7 @@ Gornja granica. Stvarna je brzina manja jer u idealnom modelu nisu uračunati gu
 
 ## Zadatci za vježbu {#sec-u08-zadatci}
 
-Za sve vježbe uzmi $g=9{,}81\ \text{m/s}^2$.
+Za sve vježbe uzmi $g=9{,}81\ \text{m/s}^2$. U Z2 Bernoullijeva se jednadžba primjenjuje kvazistacionarno: u svakom trenutku vrijedi za trenutačnu razinu, a njezinu promjenu prati bilanca mase spremnika.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -683,31 +683,35 @@ $v \approx 7{,}92\ \text{m/s}$; $Q \approx 4{,}21\ \text{L/s}$; $\dot m \approx 
 
 <span id="task-u09-horizontalnim-ventilacijskim-kanalom-smanjuje-se-presjek-s"></span>
 
-### Venturijeva cijev u cjevovodu rashladne vode {#task-venturijeva-cijev-rashladne-vode .unnumbered .unlisted}
+<span id="task-venturijeva-cijev-rashladne-vode"></span>
+
+### Vrijeme pražnjenja spremnika kroz otvor na dnu {#task-vrijeme-praznjenja-spremnika .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Vodoravna Venturijeva cijev ulaznog promjera $D_1 = 100\ \text{mm}$ i promjera grla $d = 50\ \text{mm}$ ugrađena je u vod rashladne vode gustoće $\rho = 998\ \text{kg/m}^3$. Diferencijalni pretvarač između ulaza i grla očitava $\Delta p = p_1 - p_2 = 12{,}2\ \text{kPa}$. Pretpostavi stacionaran nestlačiv tok bez gubitaka i jednolike brzine u presjecima.
+Otvoreni cilindrični spremnik unutarnjeg promjera $D_T = 1{,}60\ \text{m}$ prazni se kroz kružni otvor promjera $d = 30\ \text{mm}$ u dnu. Zbog kontrakcije mlaza i gubitaka na otvoru stvarni je protok $Q=C_d A_o\sqrt{2gh}$ s koeficijentom istjecanja $C_d = 0{,}62$, gdje je $h$ trenutačna visina vode iznad otvora. Razina pada s $H_1 = 3{,}20\ \text{m}$ na $H_2 = 0{,}80\ \text{m}$. Voda je nestlačiva, a strujanje u svakom trenutku kvazistacionarno.
 
 **Traži se**
 
-Odredi volumenski protok, brzinu u grlu i za koliko piezometarska crta u grlu leži niže nego na ulazu.
+1. Odredi početni protok i brzinu spuštanja razine na početku pražnjenja.
+2. Iz bilance mase spremnika izvedi i izračunaj vrijeme spuštanja razine s $H_1$ na $H_2$.
+3. Usporedi to vrijeme s procjenom koja početni protok smatra stalnim te odredi vrijeme potpunog pražnjenja.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Postupak je isti kao u primjeru [-@ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2], samo razliku tlakova daje izravno pretvarač. Iz jednadžbe kontinuiteta slijedi $v_2 = (D_1/d)^2 v_1 = 4v_1$; za vodoravnu cijev bez gubitaka vrijedi $\Delta p = \rho(v_2^2 - v_1^2)/2$.
+Bilanca mase spremnika glasi $A_T\,dh/dt=-C_dA_o\sqrt{2gh}$. Razdvoji varijable i integriraj od $H_1$ do $H_2$; protok pada s $\sqrt h$, pa je pražnjenje sporije od procjene s početnim protokom.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$v_1 \approx 1{,}28\ \text{m/s}$, $v_2 \approx 5{,}11\ \text{m/s}$; $Q \approx 10{,}0\ \text{L/s}$; pad piezometarske crte $\Delta p/(\rho g) \approx 1{,}25\ \text{m}$.
+$Q_1\approx3{,}47\ \text{L/s}$, $dh/dt\approx-1{,}73\ \text{mm/s}$. Vrijeme $t=\dfrac{A_T}{C_dA_o}\sqrt{\dfrac{2}{g}}\left(\sqrt{H_1}-\sqrt{H_2}\right)\approx1853\ \text{s}\approx30{,}9\ \text{min}$. Procjena sa stalnim početnim protokom daje $1390\ \text{s}$, oko $25\,\%$ prekratko; potpuno pražnjenje traje $3706\ \text{s}\approx61{,}8\ \text{min}$, dvostruko dulje nego do $H_1/4$.
 :::
 ::::
 
-[Razina: T1]{.mf1-task-level}
+[Razina: T2]{.mf1-task-level}
 
 <span id="task-u09-idealna-venturijeva-cijev-za-vodu-ima-ulazni"></span>
 
@@ -736,7 +740,7 @@ $v_1\approx1{,}768\ \text{m/s}$; $v_2\approx5{,}197\ \text{m/s}$; $p_2-p_1\appro
 :::
 ::::
 
-[Razina: T2]{.mf1-task-level}
+[Razina: T1]{.mf1-task-level}
 
 <span id="task-u09-pitotova-cijev-uronjena-je-u-vodeni-tok"></span>
 
@@ -833,9 +837,9 @@ Idealno: $v\approx7{,}14$ m/s, $Q\approx27{,}5$ L/s, $p_{aps,C}\approx59{,}1$ kP
 
 :::::
 
-![Skice uz Z1–Z6: istjecanje, Venturijeva cijev, silazno suženje, brodski Pitotov brzinomjer, izbor grla i sifon s mlazom.](../assets/print/u09_vjezbe_skice.svg){#fig-u09-vjezbe fig-align="center" fig-alt="Šest panela: spremnik s bočnom sapnicom, Venturijeva cijev s pretvaračem, kosi silazni vod sa suženjem, Pitotova cijev ispod dna trupa sa senzorom, vod sa zamjenjivim grlom i sifon s mlazom do tla."}
+![Skice uz Z1–Z6: istjecanje, pražnjenje spremnika, silazno suženje, brodski Pitotov brzinomjer, izbor grla i sifon s mlazom.](../assets/print/u09_vjezbe_skice.svg){#fig-u09-vjezbe fig-align="center" fig-alt="Šest panela: spremnik s bočnom sapnicom, cilindrični spremnik s otvorom u dnu i dvjema razinama, kosi silazni vod sa suženjem, Pitotova cijev ispod dna trupa sa senzorom, vod sa zamjenjivim grlom i sifon s mlazom do tla."}
 
-**Napomene uz skice.** U Z1 promjer sapnice je uvećan. U Z5 promjer grla nacrtan je shematski i ne odgovara nijednom ponuđenom ulošku, pa i strelice brzine prate samo nacrtanu geometriju. U Z6 putanja mlaza i domet $x$ nisu u mjerilu, za razliku od kota visina.
+**Napomene uz skice.** U Z1 promjer sapnice je uvećan. U Z2 razine $H_1$ i $H_2$ imaju zajedničko mjerilo, a otvor u dnu je uvećan. U Z5 promjer grla nacrtan je shematski i ne odgovara nijednom ponuđenom ulošku, pa i strelice brzine prate samo nacrtanu geometriju. U Z6 putanja mlaza i domet $x$ nisu u mjerilu, za razliku od kota visina.
 
 ## Sažetak
 

@@ -216,3 +216,16 @@ stari `primjer_vodotoranj` i `cjeloviti_1`; dodani `cjeloviti_sondiranje`,
 novi `primjer_balastni`, `primjer_vodotoranj`. Novi `check_u03_sketch_geometry.py`
 provjerava slojeve, mjerilo 20 i 36 px/m, otvoren ullage otvor, sondu
 iznad dna i oznake. D06 i manifest obnavlja koordinator generatorima.
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| Z1 | $p=p_{atm}+\rho gh$ (klon P1) | Visina leta iz barometarskog očitanja (`task-visina-iz-barometarskog-ocitanja`): izotermna atmosfera $z=H\ln(p_0/p)=1528$ m naspram stalne gustoće 1397 m, razlučivost 10 Pa ≈ 1,0 m | T1 | Prvi susret s promjenjivom gustoćom u hidrostatici; student bira model i procjenjuje pogrešku pojednostavljenja. Preambula: iznimka od zanemarene težine plina. |
+| Z3 | U-manometar ulje/živa (treći lanac istog tipa) | Nagnuti manometar na ventilacijskom kanalu (`task-nagnuti-manometar-ventilacijski-kanal`): $L\sin\alpha$ plus spuštanje razine u posudi ($a/A=1/64$), 385 → 408 Pa (−5,7 %), osjetljivost 0,45 mm/Pa (3,6× U-cijev) | T2 | Novi instrument i pojam osjetljivosti; zaboravljeni pomak u posudi daje sustavnu pogrešku. |
+
+Invarijante `U03.INV.*` koje su koristile stare ključeve prebačene na P1. D03 §3 dopunjen.
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.

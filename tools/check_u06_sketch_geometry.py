@@ -7,12 +7,13 @@ generator crteža. Dopunjuje numerički verifier i vizualni pregled.
 
 from pathlib import Path
 import math
+import re
 import xml.etree.ElementTree as ET
 from sketch_style import check_scene_canvas
 
 ASSETS = Path(__file__).resolve().parent.parent / "assets/print"
 # Skice zadataka u kojima je položaj centra uzgona tražen (Z6: y_B, KB_eq).
-RESULT_CENTER_HIDDEN = {'u07vs_fix_z6_'}
+RESULT_CENTER_HIDDEN = {'u07vs_fix_z6_', 'u07vs_fix_z2_'}
 
 
 def read(name):
@@ -99,16 +100,24 @@ def check_results_not_drawn(nodes):
     def unknown(label_id):
         assert '?' in ''.join(nodes[label_id].itertext()), label_id
 
-    t2 = drawn_drafts(nodes, 'u07vs_fix_z2_', 1.40)
-    assert abs(t2[0]-t2[1]) < 1e-9 and abs(t2[0]-zadatak_2()['h']) > margin, t2
+    # Z2: homogeni blok 0,70 x 0,50 m; nacrtani gaz nije rezultat, G u sredini bloka, B nije nacrtan.
+    t2 = drawn_drafts(nodes, 'u07vs_fix_z2_', 0.70)
+    assert abs(t2[0]-t2[1]) < 1e-9 and abs(t2[0]-zadatak_2()['T']) > margin, t2
+    p2 = points(nodes['u07vs_fix_z2_hull'])
+    g = nodes['u07vs_fix_z2_G']
+    assert abs(float(g.get('cx'))-(p2[0][0]+p2[1][0])/2) < 1e-6 and abs(float(g.get('cy'))-(p2[0][1]+p2[2][1])/2) < 1e-6
     unknown('u07vs_fix_z2_unknown')
-    # Z1: traženi F_U i smjer/iznos F_d ne smiju se očitati iz duljina.
-    fu, fg = nodes['u07vs_fix_z1_FU'], nodes['u07vs_fix_z1_FG']
-    lu = abs(float(fu.get('y2'))-float(fu.get('y1'))); lg = abs(float(fg.get('y2'))-float(fg.get('y1')))
+    # Z1: dvije vodne linije; riječna je viša (manja y) od morske, a obje sijeku trup; ΔT se traži.
+    sea, river = nodes['u07vs_fix_z1_wl_sea'], nodes['u07vs_fix_z1_wl_river']
+    assert sea.get('y1') == sea.get('y2') and river.get('y1') == river.get('y2')
+    assert float(river.get('y1')) < float(sea.get('y1'))
+    assert river.get('stroke-dasharray'), 'riječna vodna linija isprekidana'
+    hull = nodes['u07vs_fix_z1_hull'].get('d')
+    ys = [float(v) for v in re.findall(r'V(\d+(?:\.\d+)?)', hull)]
+    assert min(ys) < float(river.get('y1')) and max(ys) > float(sea.get('y1'))
     z1 = __import__('verify_u07').zadatak_1()
-    assert abs(lu-lg) < 1e-9 and abs(lu/lg - z1['F_U']/z1['G']) > 0.1, (lu, lg)
-    forces = [n for n in nodes['u07vs_fix_z1'].iter() if n.get('data-mf1-vector') == 'force']
-    assert {n.get('id') for n in forces} == {'u07vs_fix_z1_FU', 'u07vs_fix_z1_FG'}, forces
+    scale = (float(nodes['u07vs_fix_z1_hull'].get('d').split('H')[1].split()[0]) - 118) / 1.0  # shematski; mjerilo nije zadano
+    assert not [n for n in nodes['u07vs_fix_z1'].iter() if n.get('data-mf1-vector')], 'Z1 bez vektora sila'
     unknown('u07vs_fix_z1_unknown')
     z3 = zadatak_3()
     t3 = drawn_drafts(nodes, 'u07vs_fix_z3_', 1.40)
@@ -145,7 +154,7 @@ def main():
         ('u07_ch1_platforma_ulje_voda_ormar.svg','u07c1puf_fix_',1.2,.34,math.degrees(math.atan(.1/1.2)),800,1000),
         ('u07_ch2_poplavljen_tank.svg','u07c2pt_fix_',15,8,3.94,1000,1000),
         ('u07_fig_uvod_pregled.svg','u07fup_stab_',.7,.18,-8,1000,1000),
-        ('u07_vjezbe_skice.svg','u07vs_fix_z2_',1.4,.38,0,1000,1000),
+        ('u07_vjezbe_skice.svg','u07vs_fix_z2_',.7,.5,0,1000,1000),
         ('u07_vjezbe_skice.svg','u07vs_fix_z3_',1.4,.5,-3,1000,1000),
         ('u07_vjezbe_skice.svg','u07vs_fix_z5_',1.5,.6,0,1000,1000),
         ('u07_vjezbe_skice.svg','u07vs_fix_z5_b_',1.5,.6,0,1000,1000),

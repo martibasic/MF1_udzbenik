@@ -208,10 +208,35 @@ def exercise_material_derivative(
     }
 
 
-def exercise_viscous_diffusion_time(
-    height: float = 10.0e-3, kinematic_viscosity: float = 1.0e-6
-) -> float:
-    return height**2 / kinematic_viscosity
+def exercise_wall_shear_first_cell(
+    diameter: float = 0.050,
+    length: float = 4.00,
+    pressure_drop: float = 3200.0,
+    mean_velocity: float = 2.00,
+    density: float = 998.0,
+    kinematic_viscosity: float = 1.0e-6,
+) -> dict:
+    """Z2: tau_st iz bilance sila na razvijenoj dionici, u_tau, y1 za y+ = 1 i 30, laminarna usporedba."""
+    mu = density * kinematic_viscosity
+    tau_w = pressure_drop * diameter / (4.0 * length)
+    u_tau = math.sqrt(tau_w / density)
+    y1_plus1 = 1.0 * kinematic_viscosity / u_tau
+    y1_plus30 = 30.0 * kinematic_viscosity / u_tau
+    dp_laminar = 32.0 * mu * length * mean_velocity / diameter**2
+    reynolds = mean_velocity * diameter / kinematic_viscosity
+    darcy = 8.0 * tau_w / (density * mean_velocity**2)
+    return {
+        "tau_w": tau_w,
+        "u_tau": u_tau,
+        "y1_plus1": y1_plus1,
+        "y1_plus30": y1_plus30,
+        "dp_laminar": dp_laminar,
+        "ratio": pressure_drop / dp_laminar,
+        "reynolds": reynolds,
+        "darcy": darcy,
+        "force_pressure": pressure_drop * math.pi * diameter**2 / 4.0,
+        "force_shear": tau_w * math.pi * diameter * length,
+    }
 
 
 def exercise_inverse_poiseuille(
@@ -432,13 +457,23 @@ def verify() -> list[dict[str, str]]:
     _check(out, "U12.REAL.Z1.a_local", r["local"], 2.0, "m/s^2", abs_tol=0.05)
     _check(out, "U12.REAL.Z1.a_conv", r["convective"], 10.0, "m/s^2", abs_tol=0.05)
     _check(out, "U12.REAL.Z1.a_total", r["total"], 12.0, "m/s^2", abs_tol=0.05)
-    _check(
+    z2 = exercise_wall_shear_first_cell()
+    _check(out, "U12.REAL.Z2.tau_w", z2["tau_w"], 10.0, "Pa", abs_tol=0.005)
+    _check(out, "U12.REAL.Z2.u_tau", z2["u_tau"], 0.100, "m/s", abs_tol=0.0005)
+    _check(out, "U12.REAL.Z2.y1_plus1_mm", z2["y1_plus1"] * 1e3, 0.0100, "mm", abs_tol=0.00005)
+    _check(out, "U12.REAL.Z2.y1_plus30_mm", z2["y1_plus30"] * 1e3, 0.300, "mm", abs_tol=0.0005)
+    _check(out, "U12.REAL.Z2.dp_laminar", z2["dp_laminar"], 102.0, "Pa", abs_tol=0.5)
+    _check(out, "U12.REAL.Z2.ratio", z2["ratio"], 31.0, "", abs_tol=0.5)
+    _check(out, "U12.REAL.Z2.Re", z2["reynolds"], 1.0e5, "", abs_tol=1.0)
+    _check(out, "U12.REAL.Z2.darcy", z2["darcy"], 0.0200, "", abs_tol=0.00005)
+    _invariant(
         out,
-        "U12.REAL.Z2.t_nu",
-        exercise_viscous_diffusion_time(),
-        100.0,
-        "s",
-        abs_tol=0.5,
+        "U12.REAL.INV.z2_force_balance",
+        abs(z2["force_pressure"] - z2["force_shear"]) < 1e-9
+        and abs(z2["y1_plus30"] - 30 * z2["y1_plus1"]) < 1e-12
+        and abs(z2["darcy"] - 3200.0 * 0.050 / (4.00 * 998.0 * 2.00**2 / 2)) < 1e-12
+        and z2["reynolds"] > 4000,
+        "tlacna sila i sila trenja na valjku moraju biti jednake, y+ linearno, lambda iz dp i iz tau_st isti, tok turbulentan",
     )
 
     z3 = exercise_inverse_poiseuille()

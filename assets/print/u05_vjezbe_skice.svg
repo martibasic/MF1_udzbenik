@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 833 780" role="img" aria-labelledby="u05vs_title u05vs_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:833px;height:auto;">
   <title id="u05vs_title">Skice zadataka Z1–Z6: hidrostatske sile na plohe</title>
-  <desc id="u05vs_desc">Z1: pogled okomito na vodonepropusna vrata s naplavljene strane; šarke na lijevom i dva zasuna na desnom rubu; tražena sila vode F-x nije nacrtana (oznaka F-x = ?). Z2: parabolični pokrov suhog kanala s tjemenom A na slobodnoj površini; voda iznad pokrova, samo jedna lokalna tlačna sila dF okomito na pokrov; tražene komponente F-x i F-z nisu nacrtane (oznake s upitnikom). Z3: dva odvojena spremnika s nepropusnom pregradom, različite razine (lijevo više), lokalne tlačne strelice s obje strane, zglob u dnu A i vodoravna spojnica od vrha B do lijeve stijenke; smjer njezine sile nije nacrtan jer se traži. Z4: pogled okomito na plohu, trokut s vrhom gore i osnovicom b dolje; sila je okomita na crtež. Z5: kružni luk oko O, kruti krakovi u suhom području, voda lijevo i dolje, os O na dubini h-1 ispod slobodne površine, težina F-G prema dolje na kraku x-G, sila spojnice F_s u B ulijevo (zadano: može samo vlačiti ulijevo); spojnica je izvan širine presjeka. Z6: pravokutni panel u vodonepropusnoj stijenci; voda lijevo, zrak desno; tražena sila F nije nacrtana (F = ?). Sile su pune deblje strelice, lokalne tlačne sile tanke strelice; kote su sive dvostrane strelice. Duljine vektora nisu u mjerilu.</desc>
+  <desc id="u05vs_desc">Z1: pogled okomito na vodonepropusna vrata s naplavljene strane; šarke na lijevom i dva zasuna na desnom rubu; tražena sila vode F-x nije nacrtana (oznaka F-x = ?). Z2: parabolični pokrov suhog kanala s tjemenom A na slobodnoj površini; voda iznad pokrova, samo jedna lokalna tlačna sila dF okomito na pokrov; tražene komponente F-x i F-z nisu nacrtane (oznake s upitnikom). Z3: kanal s vodom lijevo i zrakom desno; pravokutna zaklopka nagnuta 60° prema vodoravnici, donji rub na pragu na dnu, gornji rub nizvodno; os vrtnje označena kružićem na udaljenosti a od donjeg ruba uzduž ploče; dvije lokalne tlačne strelice iz vode na ploču; dubina vode y kotirana, tražena dubina otvaranja označena upitnikom. Z4: pogled okomito na plohu, trokut s vrhom gore i osnovicom b dolje; sila je okomita na crtež. Z5: kružni luk oko O, kruti krakovi u suhom području, voda lijevo i dolje, os O na dubini h-1 ispod slobodne površine, težina F-G prema dolje na kraku x-G, sila spojnice F_s u B ulijevo (zadano: može samo vlačiti ulijevo); spojnica je izvan širine presjeka. Z6: pravokutni panel u vodonepropusnoj stijenci; voda lijevo, zrak desno; tražena sila F nije nacrtana (F = ?). Sile su pune deblje strelice, lokalne tlačne sile tanke strelice; kote su sive dvostrane strelice. Duljine vektora nisu u mjerilu.</desc>
   <defs>
     <marker id="u05vs_force" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
       <path d="M0 0 L0 5 L6 2.5 Z" fill="#356b83" stroke="none" stroke-width="1.2" />
@@ -99,39 +99,39 @@
   <g id="u05vs_title-scene-3" transform="translate(-8.0000 -0.7445)">
     <g id="u05vs_z3" transform="translate(28 274)">
       <text x="14" y="20" font-family="Arial, Liberation Sans, sans-serif" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Z3</text>
-      <text x="40" y="20" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">Dvije razine vode</text>
-      <path d="M48 86.8 H139 V190 H48 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" />
-      <path d="M147 138.4 H234 V190 H147 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" />
+      <text x="40" y="20" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start">Samootvarajuća kosa zaklopka</text>
+      <path d="M48 99 H162.5389 L110 190 H48 Z" fill="#dcebf1" stroke="none" stroke-width="1.2" id="u05vs_z3_water-domain" />
       <rect x="40" y="48" width="8" height="150" fill="url(#u05vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="234" y="48" width="8" height="150" fill="url(#u05vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
       <rect x="40" y="190" width="202" height="8" fill="url(#u05vs_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-      <rect x="139" y="61" width="8" height="129" fill="#3a4a56" stroke="#3a4a56" stroke-width="1.5" />
-      <line x1="48" y1="86.8" x2="139" y2="86.8" stroke="#356b83" stroke-width="2" />
-      <line x1="147" y1="138.4" x2="234" y2="138.4" stroke="#356b83" stroke-width="2" />
-      <circle cx="143" cy="190" r="5" fill="#ffffff" stroke="#3a4a56" stroke-width="2" />
-      <text x="131" y="181" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="end"><tspan font-style="italic">A</tspan></text>
-      <circle cx="143" cy="61" r="3.5" fill="#356b83" />
-      <text x="157" y="56" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">B</tspan></text>
-      <line x1="48" y1="61" x2="140" y2="61" stroke="#3a4a56" stroke-width="2" id="u05vs_z3_spojnica" />
-      <text x="94" y="55" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">spojnica, sila <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan></text>
-      <line x1="133.0" y1="101.8" x2="139" y2="101.8" stroke="#356b83" stroke-width="1.4" marker-end="url(#u05vs_normal)" data-mf1-vector="pressure" />
-      <line x1="121.0" y1="131.8" x2="139" y2="131.8" stroke="#356b83" stroke-width="1.4" marker-end="url(#u05vs_normal)" data-mf1-vector="pressure" />
-      <line x1="109.0" y1="161.8" x2="139" y2="161.8" stroke="#356b83" stroke-width="1.4" marker-end="url(#u05vs_normal)" data-mf1-vector="pressure" />
-      <line x1="153.0" y1="153.4" x2="147" y2="153.4" stroke="#356b83" stroke-width="1.4" marker-end="url(#u05vs_normal)" data-mf1-vector="pressure" />
-      <line x1="161.0" y1="173.4" x2="147" y2="173.4" stroke="#356b83" stroke-width="1.4" marker-end="url(#u05vs_normal)" data-mf1-vector="pressure" />
-      <line x1="22" y1="86.8" x2="32" y2="86.8" stroke="#657781" stroke-width="0.8" />
+      <line x1="48" y1="99" x2="162.5389" y2="99" stroke="#356b83" stroke-width="2" id="u05vs_z3_surface" />
+      <rect x="116" y="182" width="10" height="8" fill="url(#u05vs_hatch)" stroke="#3a4a56" stroke-width="1.2" id="u05vs_z3_sill" />
+      <line x1="110" y1="190" x2="175" y2="77.4167" stroke="#3a4a56" stroke-width="5" id="u05vs_z3_gate" />
+      <circle cx="175" cy="77.4167" r="3.5" fill="#356b83" />
+      <circle cx="136" cy="144.9667" r="5" fill="#ffffff" stroke="#3a4a56" stroke-width="2" id="u05vs_z3_axis" />
+      <text x="150" y="139" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">os</text>
+      <line x1="146.3731" y1="107" x2="155.0333" y2="112" stroke="#356b83" stroke-width="1.4" marker-end="url(#u05vs_normal)" data-mf1-vector="pressure" />
+      <line x1="123.2791" y1="131" x2="138.8675" y2="140" stroke="#356b83" stroke-width="1.4" marker-end="url(#u05vs_normal)" data-mf1-vector="pressure" />
+      <line x1="110" y1="190" x2="87.4833" y2="177" stroke="#657781" stroke-width="0.8" />
+      <line x1="136" y1="144.9667" x2="113.4833" y2="131.9667" stroke="#657781" stroke-width="0.8" />
+      <line x1="87.4833" y1="177" x2="113.4833" y2="131.9667" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" id="u05vs_z3_dim_a" />
+      <text x="93" y="151" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end"><tspan font-style="italic">a</tspan></text>
+      <path d="M134 190 A24 24 0 0 0 122 169.2154" fill="none" stroke="#657781" stroke-width="1" id="u05vs_z3_theta" />
+      <text x="140" y="175" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">θ</tspan></text>
+      <line x1="22" y1="99" x2="32" y2="99" stroke="#657781" stroke-width="0.8" />
       <line x1="22" y1="190" x2="32" y2="190" stroke="#657781" stroke-width="0.8" />
-      <line x1="27" y1="86.8" x2="27" y2="190" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" />
-      <text x="4" y="142.4" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan></text>
-      <line x1="250" y1="138.4" x2="260" y2="138.4" stroke="#657781" stroke-width="0.8" />
-      <line x1="250" y1="190" x2="260" y2="190" stroke="#657781" stroke-width="0.8" />
-      <line x1="255" y1="138.4" x2="255" y2="190" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" />
-      <text x="259" y="168" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">D</tspan></text>
-      <text x="105" y="211" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">+<tspan font-style="italic">x</tspan> udesno, +<tspan font-style="italic">y</tspan> prema gore</text>
-      <text x="267" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">b</tspan> = 1,20 m</text>
-      <text x="267" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan> = 3,00 m (<tspan font-style="italic">A</tspan>–<tspan font-style="italic">B</tspan>)</text>
-      <text x="267" y="85" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">L</tspan> = 2,40 m</text>
-      <text x="267" y="104" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">D</tspan> = 1,20 m</text>
+      <line x1="27" y1="99" x2="27" y2="190" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" />
+      <text x="4" y="148" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">y</tspan></text>
+      <text x="66" y="124" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">voda</text>
+      <text x="207" y="150" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">zrak</text>
+      <text x="121" y="208" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">prag</text>
+      <text x="267" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">b</tspan> = 1,50 m</text>
+      <text x="267" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">L</tspan> = 2,00 m</text>
+      <text x="267" y="85" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">θ</tspan> = 60°</text>
+      <text x="267" y="104" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">a</tspan> = 0,80 m</text>
+      <text x="267" y="123" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">ρ</tspan> = 998 kg/m³</text>
+      <text x="267" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start" id="u05vs_z3_unknown"><tspan font-style="italic">y</tspan><tspan baseline-shift="sub" font-size="0.7em">otv</tspan> = ?</text>
+      <text x="267" y="161" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">y</tspan> = 1,80 m (2.)</text>
+      <text x="267" y="180" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">nizvodno: zrak</text>
     </g>
   </g>
   <g id="u05vs_title-scene-4" transform="translate(-67.0000 -0.7445)">

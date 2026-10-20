@@ -169,21 +169,29 @@ def free_surface_loss(L_t, B_t, V_displ, rho_t=1025.0, rho=1025.0):
     return {"i_t": i_t, "dGM": -rho_t * i_t / (rho * V_displ)}
 
 
-def zadatak_1(V=0.085, m=62.0, rho=998.0, g=9.81):
-    F_U = rho * g * V
-    G = m * g
-    # Buduci da je F_U>G, dodatna sila mora djelovati prema dolje.
-    F_hold_down = F_U - G
-    return {"F_U": F_U, "G": G, "F_hold_down": F_hold_down}
+def zadatak_1(displacement=12.0e6, A_wl=2400.0, rho_sea=1025.0, rho_river=998.0):
+    """Z1: promjena gaza broda izmedu mora i rijeke pri stalnoj vodnoj liniji."""
+    V_sea = displacement / rho_sea
+    V_river = displacement / rho_river
+    dT = (V_river - V_sea) / A_wl
+    unload = displacement * (1 - rho_river / rho_sea)
+    tpc_sea = rho_sea * A_wl * 0.01
+    tpc_river = rho_river * A_wl * 0.01
+    return {"V_sea": V_sea, "V_river": V_river, "dT": dT, "unload": unload,
+            "tpc_sea": tpc_sea, "tpc_river": tpc_river}
 
 
-def zadatak_2(L=2.60, B=1.40, H=0.38, m_p=510.0, m_t=220.0, rho=998.0):
-    m = m_p + m_t
-    V = m / rho
-    h = V / (L * B)
-    m_max = rho * L * B * H
-    dm = m_max - m
-    return {"V": V, "h": h, "dm": dm}
+def zadatak_2(L=2.00, B=0.70, H=0.50, rho_d=650.0, rho=998.0):
+    """Z2: homogeni pravokutni blok; gaz, KB, BM, KG, GM i uvjet b/h >= sqrt(6 s (1-s))."""
+    s_rel = rho_d / rho
+    T = s_rel * H
+    KB = T / 2
+    KG = H / 2
+    BM = B**2 / (12 * T)
+    GM = KB + BM - KG
+    b_min = H * math.sqrt(6 * s_rel * (1 - s_rel))
+    return {"s": s_rel, "T": T, "freeboard": H - T, "KB": KB, "KG": KG, "BM": BM,
+            "GM": GM, "b_min": b_min, "stable": GM > 0, "h": T}
 
 
 def zadatak_3(L=3.0, B=1.40, H=0.50, m=1200.0, m_s=120.0,
@@ -355,14 +363,35 @@ def verify():
     _check(out, "U07.P5.F_neto", r["F_neto"], 381.4, "N", rel=0.02)
 
     z1 = zadatak_1()
-    _check(out, "U07.Z1.F_U", z1["F_U"], 832.0, "N")
-    _check(out, "U07.Z1.G", z1["G"], 608.0, "N")
-    _check(out, "U07.Z1.F_hold_down", z1["F_hold_down"], 224.0, "N")
+    _check(out, "U07.Z1.V_sea", z1["V_sea"], 11707.0, "m^3")
+    _check(out, "U07.Z1.V_river", z1["V_river"], 12024.0, "m^3")
+    _check(out, "U07.Z1.dT", z1["dT"], 0.132, "m")
+    _check(out, "U07.Z1.unload_t", z1["unload"] / 1000, 316.0, "t")
+    _check(out, "U07.Z1.tpc_sea", z1["tpc_sea"] / 1000, 24.6, "t/cm")
+    _check(out, "U07.Z1.tpc_river", z1["tpc_river"] / 1000, 24.0, "t/cm")
+    _invariant(out, "U07.Z1.archimedes_consistency",
+               abs(1025.0 * z1["V_sea"] - 12.0e6) < 1e-6 and abs(998.0 * z1["V_river"] - 12.0e6) < 1e-6
+               and abs(998.0 * (z1["V_river"] - z1["V_sea"]) - z1["unload"]) < 1e-6
+               and z1["dT"] > 0 and abs(zadatak_1(rho_river=1025.0)["dT"]) < 1e-12,
+               "Istisnina mora biti ista u obje vode; iskrcana masa jednaka masi dodatnog volumena; bez razlike gustoca nema promjene gaza.")
 
     z2 = zadatak_2()
-    _check(out, "U07.Z2.V", z2["V"], 0.73, "m^3")
-    _check(out, "U07.Z2.h", z2["h"], 0.20, "m")
-    _check(out, "U07.Z2.dm", z2["dm"], 650.0, "kg")
+    _check(out, "U07.Z2.T", z2["T"], 0.326, "m")
+    _check(out, "U07.Z2.freeboard", z2["freeboard"], 0.174, "m")
+    _check(out, "U07.Z2.KB", z2["KB"], 0.163, "m")
+    _check(out, "U07.Z2.BM", z2["BM"], 0.125, "m")
+    _check(out, "U07.Z2.KG", z2["KG"], 0.250, "m")
+    _check(out, "U07.Z2.GM", z2["GM"], 0.038, "m", rel=0.02)
+    _check(out, "U07.Z2.b_min", z2["b_min"], 0.584, "m")
+    dense = zadatak_2(rho_d=900.0)
+    _check(out, "U07.Z2.dense_T", dense["T"], 0.451, "m")
+    _check(out, "U07.Z2.dense_GM", dense["GM"], 0.066, "m", rel=0.02)
+    _invariant(out, "U07.Z2.stability_criterion",
+               z2["stable"] and dense["stable"] and dense["GM"] > z2["GM"]
+               and abs(zadatak_2(B=z2["b_min"])["GM"]) < 1e-12
+               and not zadatak_2(B=0.50)["stable"]
+               and abs(z2["b_min"] - math.sqrt(12 * z2["T"] * (z2["KG"] - z2["KB"]))) < 1e-12,
+               "Uvjet b/h >= sqrt(6 s (1-s)) mora dati GM = 0 pri b_min, nestabilnost pri b = 0,50 m i veci GM gusceg bloka.")
 
     z3 = zadatak_3()
     _check(out, "U07.Z3.h_m", z3["h_m"], .2863, "m", rel=.001)
@@ -486,15 +515,15 @@ def verify():
 
     _invariant(
         out,
-        "U07.INV.submerged_force_balance",
-        abs(z1["F_U"] - z1["G"] - z1["F_hold_down"]) < 1e-12,
-        "Dodatna sila ne zatvara vertikalnu ravnotezu uronjenog tijela.",
+        "U07.INV.draft_change_from_volume",
+        abs(z1["V_river"] - z1["V_sea"] - z1["dT"] * 2400.0) < 1e-9,
+        "Promjena gaza mora slijediti iz razlike istisnutih volumena i vodne linije.",
     )
     _invariant(
         out,
-        "U07.INV.ponton_capacity_limit",
-        z2["dm"] > 0.0 and z2["h"] < 0.38,
-        "Ponton je dosegnuo rub prije deklarirane dodatne mase.",
+        "U07.INV.block_floats_with_freeboard",
+        z2["freeboard"] > 0.0 and z2["T"] < 0.50,
+        "Homogeni blok gustoce manje od vode mora plutati s pozitivnim nadvodjem.",
     )
     _invariant(
         out,

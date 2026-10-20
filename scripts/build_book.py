@@ -215,7 +215,10 @@ def sync_figure_tokens(root, write):
         actual=hashlib.sha256((root/name).read_text(encoding='utf8').encode()).hexdigest()
         stale=stale or actual!=digest
     for name,figure in manifest.get('figures',{}).items():
-        actual=hashlib.sha1((root/'assets/print'/name).read_text(encoding='utf8').encode()).hexdigest()
+        source=root/'assets/print'/name
+        if not source.exists():
+            stale=True;continue   # uklonjena skica: izvedenice treba obnoviti
+        actual=hashlib.sha1(source.read_text(encoding='utf8').encode()).hexdigest()
         stale=stale or actual!=figure['source_sha1']
     if stale:
         if not write:raise ValueError('Print figures are stale; run python scripts/build_book.py --write')

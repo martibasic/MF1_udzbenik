@@ -135,6 +135,17 @@
       ]
     ]
   },
+  "u02_fig_rotirajuci_disk.svg": {
+    "source_sha1": "2e2aa0b5c2aa66dd5a34c9ffc290b95cc309c93d",
+    "panels": [
+      [
+        12,
+        12,
+        536,
+        276
+      ]
+    ]
+  },
   "u02_fig_kapilarni_uspon_etanol.svg": {
     "source_sha1": "4cbcd698993a2b587edf75cef39e6df932efa47b",
     "panels": [
@@ -143,17 +154,6 @@
         12,
         354,
         362
-      ]
-    ]
-  },
-  "u02_fig_kinematicka_viskoznost.svg": {
-    "source_sha1": "5a354e94cc20264ddfb86214a6428a1f57987292",
-    "panels": [
-      [
-        12,
-        12,
-        384,
-        255
       ]
     ]
   },
@@ -197,7 +197,7 @@
     ]
   },
   "u02_vjezbe_skice.svg": {
-    "source_sha1": "bd89aad4a3c7d4f3d0da8d8d5828874681061c15",
+    "source_sha1": "48ccbf420ab3ca2b7b432bfc2b4e44127746b387",
     "panels": [
       [
         12,
@@ -327,13 +327,13 @@
     ]
   },
   "u03_vjezbe_skice.svg": {
-    "source_sha1": "e5077e89b0ea53397907beb520dd106ec4a269d5",
+    "source_sha1": "4ff9a4fe87bde19bfd8f937fa99453153c419efc",
     "panels": [
       [
         12,
         12,
         298,
-        317
+        320
       ],
       [
         334,
@@ -345,7 +345,7 @@
         628,
         12,
         265,
-        325
+        340
       ],
       [
         12,
@@ -417,14 +417,14 @@
       ]
     ]
   },
-  "u04_val2_laboratorijska_kolica.svg": {
-    "source_sha1": "f9e5f2e78b0ca5d38914554a6f2c83f3f8e8ecaa",
+  "u04_fig_zatvoreni_puni_spremnik.svg": {
+    "source_sha1": "19520823a88ef25cbf01120148ed09e0ecd15f50",
     "panels": [
       [
         12,
         12,
-        545,
-        428
+        496,
+        284
       ]
     ]
   },
@@ -440,7 +440,7 @@
     ]
   },
   "u04_vjezbe_skice.svg": {
-    "source_sha1": "cb4aa787a1e60c8a4f39cda0fe7e2971a589a16f",
+    "source_sha1": "762875a713b5df2f2039035b2b5989e5ae2bd81e",
     "panels": [
       [
         12,
@@ -531,7 +531,7 @@
     ]
   },
   "u05_vjezbe_skice.svg": {
-    "source_sha1": "97f58d72c737cfb44ff1a31b4b17e8ba97db0f53",
+    "source_sha1": "ca215f64a10850add57267c8c088a93204a3ba89",
     "panels": [
       [
         12,
@@ -548,7 +548,7 @@
       [
         12,
         269,
-        373,
+        390,
         230
       ],
       [
@@ -594,7 +594,7 @@
     ]
   },
   "u06_val3_cetvrtcilindricni_poklopac.svg": {
-    "source_sha1": "1cd58f3e4ae2806a043ae4fd4938f69981d2dd0e",
+    "source_sha1": "e83d0b30dd8a4f31ba8ddb39a7e2f94de874d1fc",
     "panels": [
       [
         12,
@@ -677,7 +677,7 @@
     ]
   },
   "u07_vjezbe_skice.svg": {
-    "source_sha1": "2eedfb98ee9601b6ae0f9ee48d5480bee62e91ff",
+    "source_sha1": "bf2297a87678aa023c06cfdee5b8085408027780",
     "panels": [
       [
         12,
@@ -802,7 +802,7 @@
     ]
   },
   "u08_vjezbe_skice.svg": {
-    "source_sha1": "ef9daec3516ae9ccaa902003189044cc3b196da1",
+    "source_sha1": "565f6dff63b1ece64ecf97e50a18d8d1ad04ff7c",
     "panels": [
       [
         12,
@@ -825,7 +825,7 @@
       [
         12,
         276,
-        289,
+        312,
         235
       ],
       [
@@ -979,7 +979,7 @@
     ]
   },
   "u09_vjezbe_skice.svg": {
-    "source_sha1": "bdf1c96aec57746660841d53043cafdb476a4475",
+    "source_sha1": "2452f3ca8239948c32b13ee3529acec9ac1bc3d4",
     "panels": [
       [
         12,
@@ -1114,7 +1114,7 @@
     ]
   },
   "u11_vjezbe_skice.svg": {
-    "source_sha1": "bd527f515db78780642292a0b3d84939b5fc6a1f",
+    "source_sha1": "6745a13b013cf7681facdbbcc0bb9b0731024269",
     "panels": [
       [
         12,
@@ -1234,7 +1234,7 @@
     ]
   },
   "u12_realni_tok_vjezbe_skice.svg": {
-    "source_sha1": "b20b38a2dee2d77334091961830d75427ecee11f",
+    "source_sha1": "c1098c1fbad427a486c48cc6e5c04c8a8e312e90",
     "panels": [
       [
         12,
@@ -1297,7 +1297,7 @@
     ]
   },
   "u12_vjezbe_skice.svg": {
-    "source_sha1": "285a50e6a8a436b71e6b22ae2f60f81b6f02d4eb",
+    "source_sha1": "4c3ddfd8eb6cc51fe74f468cc17c7e58c8204efb",
     "panels": [
       [
         12,
@@ -1485,7 +1485,7 @@
     ]
   },
   "u14_vjezbe_skice.svg": {
-    "source_sha1": "e2c38e89662246bc770993e8194dae3908731c76",
+    "source_sha1": "364433363bb473a9aec26a5fada5cf515e8d4427",
     "panels": [
       [
         12,
@@ -1537,7 +1537,7 @@
     ]
   },
   "u15_vjezbe_skice.svg": {
-    "source_sha1": "e98eb8068963756075fff0c5efb66a018aea002a",
+    "source_sha1": "d54ba915f83260535a3cdf1dc1a3c4250da9a68d",
     "panels": [
       [
         12,

@@ -416,9 +416,9 @@ Nije; $n$ empirijski opisuje cjelokupno stanje kanala i njegova vrijednost mora 
 
 ## Zadatci za vježbu {#sec-otvoreni-tok-zadaci}
 
-![Skice uz Z1–Z6: valovi, minimum energije, trapezni presjek, povišeno dno, kontrolni volumen skoka i provjera oborinskog kanala.](../assets/print/u15_vjezbe_skice.svg){#fig-otvoreni-tok-vjezbe fig-align="center" fig-alt="Šest panela s presjecima pravokutnog i trapeznog kanala, kvalitativnom krivuljom specifične energije, tokom preko praga, kontrolnim volumenom skoka s tlačnim silama i bazenom iza kanala."}
+![Skice uz Z1–Z6: valovi, istjecanje ispod ustave, trapezni presjek, povišeno dno, kontrolni volumen skoka i provjera oborinskog kanala.](../assets/print/u15_vjezbe_skice.svg){#fig-otvoreni-tok-vjezbe fig-align="center" fig-alt="Šest panela s presjecima pravokutnog i trapeznog kanala, bočnim presjekom ustave sa suženim mlazom, tokom preko praga, kontrolnim volumenom skoka s tlačnim silama i bazenom iza kanala."}
 
-**Napomene uz skice.** Točka u poprečnom presjeku Z1 označuje tok prema promatraču. U Z4 samo su $y_1$ i $\Delta z$ nacrtani u mjerilu. Sile u Z5 djeluju na fluid u kontrolnom volumenu, a valjak skoka je shematski. U Z6 dubina $y_2$ nacrtana je shematski, a $y_{2,dop}$ je samo podatak.
+**Napomene uz skice.** Točka u poprečnom presjeku Z1 označuje tok prema promatraču. U Z2 dubina suženog mlaza nacrtana je shematski. U Z4 samo su $y_1$ i $\Delta z$ nacrtani u mjerilu. Sile u Z5 djeluju na fluid u kontrolnom volumenu, a valjak skoka je shematski. U Z6 dubina $y_2$ nacrtana je shematski, a $y_{2,dop}$ je samo podatak.
 
 U svim vježbama koristi $g=9{,}81\ \mathrm{m/s^2}$.
 
@@ -452,22 +452,25 @@ $v\approx1{,}333\ \mathrm{m/s}$, $Fr\approx0{,}550$, $c\approx2{,}426\ \mathrm{m
 
 [Razina: T1]{.mf1-task-level}
 
-### Kritična dubina i minimalna energija {#task-kriticna-dubina .unnumbered .unlisted}
+<span id="task-kriticna-dubina"></span>
+
+### Istjecanje ispod ustave i kontrakcija mlaza {#task-istjecanje-ispod-ustave .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-U pravokutnom kanalu protok po jedinici širine iznosi $q=3{,}0\ \mathrm{m^2/s}$. Primijeni hidrostatički model uz korekcijski faktor kinetičke energije jednak jedinici.
+U pravokutnom kanalu širine $b=2{,}00\ \mathrm{m}$ oštrobridna ustava podignuta je za $a=0{,}400\ \mathrm{m}$ iznad vodoravnog dna. Uzvodna dubina iznosi $y_0=2{,}00\ \mathrm{m}$, a mlaz se iza ruba ustave suzi na dubinu $y_1=C_ca$ uz $C_c=0{,}61$. Između uzvodnog presjeka i suženog mlaza zanemari gubitke; tlak je u oba presjeka približno hidrostatički, a $\alpha=1$. Nizvodno se mlaz slobodno nastavlja (nepotopljeno istjecanje).
 
 **Traži se**
 
-1. Odredi kritičnu dubinu i minimalnu specifičnu energiju.
-2. Odredi specifičnu energiju i Froudeov broj pri dubini $y=2y_c$ te navedi kojoj grani krivulje $E(y)$ ta dubina pripada.
+1. Odredi dubinu suženog mlaza, jedinični protok $q$ i protok $Q$ iz energijske jednadžbe između uzvodnog presjeka i suženog mlaza. Izrazi rezultat kao koeficijent $C_d$ u jednadžbi [-@eq-istjecanje-ispod-ustave] i usporedi ga s navedenim rasponom.
+2. Odredi Froudeove brojeve uzvodno i u suženom mlazu te objasni zašto ustava djeluje kao kontrolni presjek.
+3. Ustava se podigne na $a=0{,}800\ \mathrm{m}$ pri istoj uzvodnoj dubini. Odredi novi $q$ i objasni zašto se protok nije udvostručio.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Potraži minimum funkcije $E(y)$ pri stalnom $q$. Kritično stanje provjeri i uvjetom $Fr=1$; specifična energija mjeri se od lokalnog dna. Pri $y=2y_c$ uvrsti $q^2=gy_c^3$: omjer $E/y_c$ i $Fr$ tada ne ovise o $q$.
+Napiši $y_0+q^2/(2gy_0^2)=y_1+q^2/(2gy_1^2)$ i riješi po $q$: $q=y_1\sqrt{2g(y_0-y_1)/[1-(y_1/y_0)^2]}$. Iz usporedbe s $q=C_da\sqrt{2gy_0}$ slijedi $C_d=C_c/\sqrt{1+C_ca/y_0}$, pa $C_d$ pada s porastom omjera $a/y_0$.
 :::
 ::::
 
@@ -475,7 +478,7 @@ Potraži minimum funkcije $E(y)$ pri stalnom $q$. Kritično stanje provjeri i uv
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$y_c\approx0{,}972\ \mathrm{m}$ i $E_{min}\approx1{,}46\ \mathrm{m}$; u kritičnom presjeku $Fr=1$. Pri $y=2y_c\approx1{,}943\ \mathrm{m}$ je $E=\tfrac{17}{8}y_c\approx2{,}06\ \mathrm{m}$ i $Fr=2^{-3/2}\approx0{,}354$: dubina pripada mirnoj (potkritičnoj) grani.
+$y_1=0{,}244\ \mathrm{m}$, $q\approx1{,}443\ \mathrm{m^2/s}$, $Q\approx2{,}886\ \mathrm{m^3/s}$ i $C_d\approx0{,}576$, unutar raspona 0,55–0,60. $Fr_0\approx0{,}163$ (mirni tok) i $Fr_1\approx3{,}82$ (siloviti tok): tok prolazi kroz kritično stanje ispod ustave, pa uzvodna razina ovisi samo o protoku i otvoru, a ne o nizvodnom stanju. Pri $a=0{,}800\ \mathrm{m}$ je $y_1=0{,}488\ \mathrm{m}$, $q\approx2{,}741\ \mathrm{m^2/s}$, dakle $1{,}90$ puta više: $C_d$ pada na $0{,}547$ jer brzina dolaska uzvodno raste, a raspoloživa razlika $y_0-y_1$ se smanjuje.
 :::
 ::::
 

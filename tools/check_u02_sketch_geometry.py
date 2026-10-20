@@ -116,7 +116,7 @@ def shear(root,prefix,forces=True):
 
 
 def main():
-    names=['u02_fig_uvod_pregled','u02_fig_kinematicka_viskoznost','u02_val2_viskoznost_kapilarnost',
+    names=['u02_fig_uvod_pregled','u02_fig_rotirajuci_disk','u02_val2_viskoznost_kapilarnost',
            'u02_fig_kapilarni_uspon_etanol','u02_ch1_kapilarni_mikrodozator_kapljica',
            'u02_fig_lezaj_temperatura','u02_vjezbe_skice']
     roots=[ET.parse(ROOT/(n+'.svg')).getroot() for n in names]
@@ -124,8 +124,25 @@ def main():
         ids=[e.get('id') for e in root.iter() if e.get('id')]
         check(len(ids)==len(set(ids)),name+': unique IDs')
         check(not any(e.tag.endswith('filter') for e in root.iter()),name+': no shadow filter')
-    intro,kin,combined,ethanol,micro,bearing,z=roots
-    for root,p in [(intro,'u02fup_'),(kin,'u02fkv_'),(combined,'u02v2vk_')]:shear(root,p+'shear')
+    intro,disk,combined,ethanol,micro,bearing,z=roots
+    for root,p in [(intro,'u02fup_'),(combined,'u02v2vk_')]:shear(root,p+'shear')
+    # P1: disk na uljnom filmu. Film lezi tocno izmedu diska i nepomicne ploce,
+    # prsten r < R u tlocrtu, obodna brzina tangencijalna na prsten, a kutna
+    # brzina ima otvoren vrh (standard vektora).
+    film=node(disk,'u02rd_film');plate=node(disk,'u02rd_plate');dsc=node(disk,'u02rd_disc')
+    fy,fh=float(film.get('y')),float(film.get('height'))
+    close(fy,float(dsc.get('y'))+float(dsc.get('height')),'disk: film starts at disc underside')
+    close(fy+fh,float(plate.get('y')),'disk: film ends at fixed plate')
+    check(float(dsc.get('x'))>=float(film.get('x')) and float(dsc.get('x'))+float(dsc.get('width'))<=float(film.get('x'))+float(film.get('width')),'disk: film covers whole disc')
+    cx,cy,Rp=[float(node(disk,'u02rd_plan_disc').get(k)) for k in ('cx','cy','r')]
+    ro,ri=float(node(disk,'u02rd_ring_outer').get('r')),float(node(disk,'u02rd_ring_inner').get('r'))
+    check(0<ri<ro<Rp,'disk: ring inside disc')
+    u=node(disk,'u02rd_u_plan');ux1,uy1,ux2,uy2=[float(v) for v in re.findall(r'-?\d+(?:\.\d+)?',u.get('d'))]
+    r_mid=(ri+ro)/2
+    close(uy1,cy-r_mid,'disk: velocity drawn on the ring');close(uy2,uy1,'disk: velocity tangential at top of ring')
+    check(ux2>ux1,'disk: velocity sense matches clockwise omega')
+    for vid in ('u02rd_omega_side','u02rd_omega_plan'):
+        check(node(disk,vid).get('data-mf1-vector')=='angular-velocity',vid+': angular velocity declared')
     # P2 now shows only its Couette problem. Capillarity has a dedicated P3
     # figure and remains independently checked there and in the overview.
     check(not any((e.get('id') or '').startswith('u02v2vk_cap') for e in combined.iter()),

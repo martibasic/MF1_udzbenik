@@ -92,38 +92,55 @@ Kinematička viskoznost $\nu$ povezuje viskozni prijenos količine gibanja ($\mu
 Veća viskoznost pri istom laminarnom protoku povećava potrebnu razliku tlakova. U stvarnom sustavu crpka ne mora održati taj protok: novi se protok određuje zajedno s karakteristikom crpke, kako je opisano u []{.mf1-chapter-ref target="u13"}. Ako se temperatura osjetno mijenja unutar uređaja, model se proširuje temperaturnim poljem i ovisnošću svojstava o temperaturi.
 :::
 
-::: {#ex-u02-pretvorba-dinamicke-u-kinematicku-viskoznost-t1 .mf1-we}
-<p class="mf1-box-label">Pretvorba dinamičke u kinematičku viskoznost&nbsp;<span class="mf1-level">T1</span></p>
+::: {#ex-moment-trenja-rotirajuceg-diska .mf1-we}
+<p class="mf1-box-label">Moment trenja rotirajućeg diska na uljnom filmu&nbsp;<span class="mf1-level">T2</span></p>
 
 **Tekst zadatka**
 
-Hidrauličko ulje ima dinamičku viskoznost $\mu = 0{,}18\ \text{Pa s}$ i gustoću $\rho = 900\ \text{kg/m}^3$.
+Disk polumjera $R = 60\ \text{mm}$ aksijalnog ležaja vrti se brzinom $n = 600\ \text{min}^{-1}$ iznad nepomične ploče. Između diska i ploče nalazi se uljni film stalne debljine $\delta = 0{,}20\ \text{mm}$, viskoznosti $\mu = 0{,}12\ \text{Pa s}$. Ulje prianja uz obje plohe, profil brzine po debljini filma je linearan, a rubni se učinci, zagrijavanje smicanjem i tlak u filmu zanemaruju.
 
 **Traži se**
 
-Odredi kinematičku viskoznost $\nu$.
+1. Odredi smično naprezanje na rubu diska.
+2. Integracijom po polumjeru odredi moment trenja $M$ na disku i snagu $P$ koju pogon troši na film.
+3. Usporedi $M$ s procjenom u kojoj se naprezanje sa srednjeg polumjera $R/2$ primijeni na cijelu plohu.
 
-![Veza dinamičke i kinematičke viskoznosti ulja.](../assets/print/u02_fig_kinematicka_viskoznost.svg){#fig-u02-kinematicka-viskoznost fig-align="center" fig-alt="Sloj ulja zadane dinamičke viskoznosti i gustoće između nepomične stijenke i pokretne ploče, bez zadanog gradijenta brzine."}
+![Rotirajući disk na uljnom filmu: bočni presjek i tlocrt s prstenom polumjera $r$.](../assets/print/u02_fig_rotirajuci_disk.svg){#fig-u02-rotirajuci-disk fig-align="center" fig-alt="Lijevo bočni presjek s nepomičnom pločom, tankim uljnim filmom debljine δ i diskom polumjera R na vratilu koje se vrti kutnom brzinom ω; desno tlocrt diska s tankim prstenom polumjera r i obodnom brzinom u = ωr."}
 
-**Veza s proračunom.** Skica podsjeća na smicanje: za izračun naprezanja trebao bi i gradijent brzine, koji ovdje nije zadan. Obje označene sile djeluju na pokretnu ploču; $1\,\mathrm{cSt}=10^{-6}\,\mathrm{m^2/s}$.
+**Veza s proračunom.** Obodna brzina diska raste s polumjerom, $u(r)=\omega r$, pa je Couetteov model valjan samo lokalno, za prsten polumjera $r$ i širine $dr$. Debljina filma na skici je uvećana.
 
 **Rješenje**
 
-Promatra se samo veza između dinamičke i kinematičke viskoznosti, pa vrijedi izravna relacija
+Kutna brzina diska iznosi $\omega=2\pi n/60=62{,}83\ \mathrm{rad/s}$. Na polumjeru $r$ ploča diska ima obodnu brzinu $u=\omega r$, pa je uz linearni profil po debljini filma lokalno smično naprezanje
 
 $$
-\nu = \frac{\mu}{\rho}.
+\tau(r)=\mu\frac{\omega r}{\delta},\qquad
+\tau(R)=0{,}12\cdot\frac{62{,}83\cdot0{,}060}{0{,}20\cdot10^{-3}}\approx2{,}26\ \text{kPa}.
 $$ {#eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-01}
 
-Uvrštavanjem zadanih podataka dobiva se
+Naprezanje raste linearno od nule u osi do $2{,}26\ \text{kPa}$ na rubu, pa se sila ne smije računati kao jedno naprezanje puta površina. Na prsten površine $dA=2\pi r\,dr$ djeluje sila $\tau\,dA$ s krakom $r$, pa je moment
 
 $$
-\nu = \frac{\mu}{\rho} = \frac{0{,}18}{900} = 2{,}00 \cdot 10^{-4}\ \text{m}^2/\text{s}.
+\begin{aligned}
+M&=\int_0^R \tau(r)\,r\,2\pi r\,dr
+=\frac{2\pi\mu\omega}{\delta}\int_0^R r^3\,dr
+=\frac{\pi\mu\omega R^4}{2\delta}\\
+&=\frac{\pi\cdot0{,}12\cdot62{,}83\cdot0{,}060^4}{2\cdot0{,}20\cdot10^{-3}}
+\approx0{,}767\ \text{N m}.
+\end{aligned}
 $$ {#eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-02}
+
+Snaga utrošena na smicanje filma iznosi
+
+$$
+P=M\omega=0{,}767\cdot62{,}83\approx48{,}2\ \text{W}.
+$$ {#eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-03}
+
+Procjena s naprezanjem sa srednjeg polumjera, $\tau(R/2)=1{,}13\ \text{kPa}$, na cijeloj plohi $\pi R^2$ i s krakom $R/2$ daje $M'=\tau(R/2)\,\pi R^2\,R/2=\pi\mu\omega R^4/(4\delta)\approx0{,}384\ \text{N m}$, točno polovinu stvarnog momenta.
 
 **Provjera i tumačenje**
 
-Jedinica: $\mathrm{Pa\,s/(kg/m^3)=m^2/s}$. Vrijednost $2{,}00\cdot10^{-4}\ \mathrm{m^2/s}=200\ \mathrm{cSt}$ oko 200 puta je veća od kinematičke viskoznosti vode pri sobnoj temperaturi ($\approx1\ \mathrm{cSt}$).
+Dimenzije: $[\mu\omega R^4/\delta]=\mathrm{Pa\,s\cdot s^{-1}\cdot m^4/m=N\,m}$. Moment raste s četvrtom potencijom polumjera jer s $r$ rastu i naprezanje, i površina prstena, i krak. Zato vanjska polovica polumjera ($r>R/2$) nosi $15/16$ momenta, a srednji polumjer podcjenjuje rezultat dvostruko. Isti integral po prstenima vrijedi za stožaste i pločaste viskozimetre; za ležaj s nosivim tlakom u filmu trebao bi još model podmazivanja, koji ovaj račun ne sadrži.
 :::
 
 ::: {.mf1-dublje}
@@ -651,27 +668,30 @@ U manjoj: prema Young–Laplaceovu zakonu tlačni skok $4\sigma/d$ raste sa sman
 
 U Z1 i Z3 pretpostavi stacionarno laminarno smicanje newtonskog fluida, prianjanje uz stijenke, zanemarive rubne učinke i gradijent tlaka u smjeru gibanja jednak nuli. U Z5 tek se ispituje je li fluid newtonski. U kapilarnim računima uzmi $g=9{,}81\ \text{m/s}^2$, a svojstva fluida i kontaktni kut smatraj stalnima u zadanim uvjetima.
 
-### Viskozna sila između ploča {#task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se .unnumbered .unlisted}
+<span id="task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se"></span>
+
+### Mjerenje viskoznosti kliznom pločom {#task-mjerenje-viskoznosti-kliznom-plocom .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Između dviju paralelnih ploča nalazi se sloj glicerina debljine $\delta = 2{,}4\ \text{mm}$. Gornja ploča površine $A = 0{,}22\ \text{m}^2$ giba se stalnom brzinom $u = 0{,}65\ \text{m/s}$, donja ploča miruje, a dinamička viskoznost glicerina iznosi $\mu = 0{,}84\ \text{Pa s}$.
+Viskoznost uzorka glicerina mjeri se pločastim viskozimetrom. Između dviju paralelnih ploča nalazi se sloj uzorka debljine $\delta = 2{,}4\ \text{mm}$. Gornja ploča površine $A = 0{,}22\ \text{m}^2$ vuče se stalnom brzinom $u = 0{,}65\ \text{m/s}$, donja miruje, a dinamometar pokazuje stalnu vučnu silu $F = 50{,}0\ \text{N}$. Za čisti glicerin nastavna tablica daje $\mu = 1{,}41\ \text{Pa s}$ pri $20\ ^\circ\text{C}$, $0{,}93\ \text{Pa s}$ pri $25\ ^\circ\text{C}$ i $0{,}61\ \text{Pa s}$ pri $30\ ^\circ\text{C}$.
 
 **Traži se**
 
-Odredi gradijent brzine, smično naprezanje i silu potrebnu za gibanje ploče.
+1. Odredi gradijent brzine, smično naprezanje i dinamičku viskoznost uzorka.
+2. Uz pretpostavku čistoga glicerina procijeni temperaturu uzorka i obrazloži zašto jedno mjerenje ne dokazuje da je uzorak newtonski.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-$dv/dy = u/\delta$, zatim $\tau = \mu\, dv/dy$ i na kraju $F = \tau A$.
+Iz $F$ i $A$ slijedi $\tau$, iz $u$ i $\delta$ gradijent brzine, a $\mu$ je njihov omjer. Temperaturu procijeni linearnom interpolacijom između dviju tabličnih vrijednosti koje omeđuju izmjereni $\mu$. Za newtonski model podsjeti se definicije i zadatka Z5.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$dv/dy \approx 271\ \text{s}^{-1}$; $\tau \approx 228\ \text{Pa}$; $F \approx 50\ \text{N}$.
+$dv/dy \approx 271\ \text{s}^{-1}$; $\tau \approx 227\ \text{Pa}$; $\mu \approx 0{,}84\ \text{Pa s}$. Vrijednost leži između tabličnih $0{,}93$ i $0{,}61\ \text{Pa s}$, pa je uzorak bio između $25$ i $30\ ^\circ\text{C}$, interpolacijom oko $26\ ^\circ\text{C}$. Jedno mjerenje daje samo jedan omjer $\tau/(dv/dy)$; newtonsko ponašanje zahtijeva isti omjer pri više brzina.
 :::
 ::::
 

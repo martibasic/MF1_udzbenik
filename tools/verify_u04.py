@@ -30,12 +30,18 @@ def _invariant(out, rid, condition, details):
     })
 
 
-def primjer_1_kolica(L=1.60, h_0=0.42, a=1.35, g=9.81):
-    dh = a * L / g
-    h_str = h_0 + dh / 2
-    h_pred = h_0 - dh / 2
-    theta_deg = math.degrees(math.atan(a / g))
-    return {"dh": dh, "h_str": h_str, "h_pred": h_pred, "theta_deg": theta_deg}
+def primjer_1_zatvoreni(L=1.50, H=0.60, a=3.0, rho=1000.0, g=9.81, p_atm=101.3e3):
+    """P1: zatvoreni potpuno puni spremnik s odzracnikom u gornjem straznjem kutu A."""
+    p_B = -rho * a * L
+    p_C = rho * g * H
+    p_D = rho * g * H - rho * a * L
+    tan_theta = a / g
+    surface_drop = a * L / g          # zamisljena povrsina ispod gornjeg ruba na prednjoj stijenci
+    a_D = g * H / L
+    return {"p_B": p_B, "p_C": p_C, "p_D": p_D, "tan_theta": tan_theta,
+            "theta_deg": math.degrees(math.atan(tan_theta)), "surface_drop": surface_drop,
+            "a_D": a_D, "p_B_abs": p_atm + p_B,
+            "vent_B": {"p_A": rho * a * L, "p_C": rho * g * H + rho * a * L, "p_D": rho * g * H}}
 
 
 def primjer_3_modul(a=3.4, g=9.81, H=0.55, p_M_pl=16e3, rho=960.0):
@@ -137,10 +143,20 @@ def zadatak_1(L=1.80, h_0=0.34, a=1.20, H=0.46, g=9.81):
             "overflow": h_str >= H}
 
 
-def zadatak_2(L=1.40, h_0=0.30, H=0.42, g=9.81):
-    dh_max = 2 * (H - h_0)
-    a_max = g * dh_max / L
-    return {"a_max": a_max}
+def zadatak_2(L=2.00, H=1.20, h_0=0.80, a_x=1.5, a_z=1.2, rho=1000.0, g=9.81):
+    """Z2: spremnik na dizalici; vodoravno i okomito ubrzanje istodobno."""
+    def state(az):
+        tan_theta = a_x / (g + az)
+        dh = L * tan_theta
+        h_str = h_0 + dh / 2
+        h_pred = h_0 - dh / 2
+        p_str = rho * (g + az) * h_str
+        return {"tan_theta": tan_theta, "theta_deg": math.degrees(math.atan(tan_theta)),
+                "dh": dh, "h_str": h_str, "h_pred": h_pred, "p_str": p_str,
+                "p_pred": rho * (g + az) * h_pred, "overflow": h_str > H}
+    up, no_z, down = state(a_z), state(0.0), state(-a_z)
+    return {"up": up, "no_z": no_z, "down": down,
+            "p_rel_err": (no_z["p_str"] - up["p_str"]) / up["p_str"]}
 
 
 def zadatak_3(rho=870.0, h=0.75, a_z=2.3, g=9.81):
@@ -202,11 +218,24 @@ def zadatak_6(R=0.32, H=0.62, h_0=0.46, rho=1000.0, g=9.81,
 def verify():
     out = []
 
-    r = primjer_1_kolica()
-    _check(out, "U04.P1.dh", r["dh"], 0.220, "m")
-    _check(out, "U04.P1.h_str", r["h_str"], 0.530, "m")
-    _check(out, "U04.P1.h_pred", r["h_pred"], 0.310, "m")
-    _check(out, "U04.P1.theta_deg", r["theta_deg"], 7.8, "deg", rel=0.005)
+    r = primjer_1_zatvoreni()
+    _check(out, "U04.P1.p_B_kPa", r["p_B"] / 1000, -4.50, "kPa")
+    _check(out, "U04.P1.p_C_kPa", r["p_C"] / 1000, 5.89, "kPa")
+    _check(out, "U04.P1.p_D_kPa", r["p_D"] / 1000, 1.39, "kPa")
+    _check(out, "U04.P1.tan_theta", r["tan_theta"], 0.306, "1")
+    _check(out, "U04.P1.theta_deg", r["theta_deg"], 17.0, "deg", rel=0.005)
+    _check(out, "U04.P1.surface_drop_m", r["surface_drop"], 0.459, "m")
+    _check(out, "U04.P1.a_D", r["a_D"], 3.92, "m/s^2")
+    _check(out, "U04.P1.p_B_abs_kPa", r["p_B_abs"] / 1000, 96.8, "kPa")
+    _check(out, "U04.P1.ventB_p_A_kPa", r["vent_B"]["p_A"] / 1000, 4.50, "kPa")
+    _check(out, "U04.P1.ventB_p_C_kPa", r["vent_B"]["p_C"] / 1000, 10.39, "kPa")
+    _check(out, "U04.P1.ventB_p_D_kPa", r["vent_B"]["p_D"] / 1000, 5.89, "kPa")
+    _invariant(out, "U04.P1.differences_independent_of_vent",
+               abs((r["p_C"] - r["p_B"]) - r["vent_B"]["p_C"]) < 1e-9
+               and abs((r["p_C"] - r["p_D"]) - 1000.0 * 3.0 * 1.5) < 1e-9
+               and r["surface_drop"] < 0.60 and r["p_B"] < 0 < r["p_D"]
+               and abs(primjer_1_zatvoreni(a=r["a_D"])["p_D"]) < 1e-9,
+               "Razlike tlakova ne smiju ovisiti o polozaju odzracnika; p_D iscezava pri a_D.")
 
     r = primjer_3_modul()
     _check(out, "U04.P3.theta_deg", r["theta_deg"], 19.1, "deg", rel=0.002)
@@ -282,12 +311,28 @@ def verify():
     _check(out, "U04.Z1.h_pred", z1["h_pred"], 0.23, "m")
 
     z2 = zadatak_2()
-    _check(out, "U04.Z2.a_max", z2["a_max"], 1.68, "m/s^2")
-    h_back_limit = .30 + z2["a_max"] * 1.40 / (2 * 9.81)
-    _invariant(out, "U04.Z2.spill_before_dry",
-               abs(h_back_limit-.42) < 1e-12 and 2*.30-h_back_limit > 0,
-               "Pri prvom dodiru ruba prednji dio dna mora ostati pokriven.")
-
+    _check(out, "U04.Z2.tan_theta", z2["up"]["tan_theta"], 0.136, "1", rel=0.005)
+    _check(out, "U04.Z2.theta_deg", z2["up"]["theta_deg"], 7.8, "deg", rel=0.01)
+    _check(out, "U04.Z2.dh", z2["up"]["dh"], 0.272, "m", rel=0.005)
+    _check(out, "U04.Z2.h_str", z2["up"]["h_str"], 0.936, "m", rel=0.002)
+    _check(out, "U04.Z2.h_pred", z2["up"]["h_pred"], 0.664, "m", rel=0.002)
+    _check(out, "U04.Z2.p_str_kPa", z2["up"]["p_str"] / 1000, 10.3, "kPa", rel=0.005)
+    _check(out, "U04.Z2.noz_dh", z2["no_z"]["dh"], 0.306, "m", rel=0.005)
+    _check(out, "U04.Z2.noz_p_str_kPa", z2["no_z"]["p_str"] / 1000, 9.35, "kPa", rel=0.005)
+    _check(out, "U04.Z2.p_rel_err_percent", z2["p_rel_err"] * 100, -9.3, "%", rel=0.02)
+    _check(out, "U04.Z2.down_tan_theta", z2["down"]["tan_theta"], 0.174, "1", rel=0.005)
+    _check(out, "U04.Z2.down_dh", z2["down"]["dh"], 0.348, "m", rel=0.005)
+    _check(out, "U04.Z2.down_h_str", z2["down"]["h_str"], 0.974, "m", rel=0.002)
+    _check(out, "U04.Z2.down_p_str_kPa", z2["down"]["p_str"] / 1000, 8.39, "kPa", rel=0.005)
+    _invariant(out, "U04.Z2.volume_and_overflow",
+               abs((z2["up"]["h_str"] + z2["up"]["h_pred"]) / 2 - 0.80) < 1e-12
+               and not z2["up"]["overflow"] and not z2["down"]["overflow"],
+               "Srednja dubina mora ostati h_0, a oba stanja bez prelijevanja.")
+    _invariant(out, "U04.Z2.vertical_acceleration_effect",
+               z2["no_z"]["dh"] > z2["up"]["dh"] and z2["no_z"]["p_str"] < z2["up"]["p_str"]
+               and z2["down"]["dh"] > z2["no_z"]["dh"] and z2["down"]["p_str"] < z2["no_z"]["p_str"]
+               and abs(zadatak_2(a_z=0.0)["up"]["dh"] - zadatak_1(L=2.0, h_0=0.8, a=1.5, H=1.2)["dh"]) < 1e-12,
+               "Okomito ubrzanje prema gore smanjuje nagib i povecava tlak; bez a_z vrijedi obrazac Z1.")
     z3 = zadatak_3()
     _check(out, "U04.Z3.dp_kPa", z3["dp"] / 1000, 7.90, "kPa")
     _check(out, "U04.Z3.dp_0_kPa", z3["dp_0"] / 1000, 6.40, "kPa")

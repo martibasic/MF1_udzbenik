@@ -106,10 +106,27 @@ def main():
     close(dim[0][0],arrows[0][0][0],'Z1: početak kote x=0')
     close(dim[1][0],float(A.get('cx')),'Z1: kraj kote je položaj A')
     close(dim[1][0]-dim[0][0],100,'Z1: zadani 1 metar')
-    for n in (2,4):
+    for n in (4,):
         plate_gap(tasks,p+f'z{n}',p+f'z{n}H')
         dx,dy=delta(node(tasks,p+f'z{n}plateVelocity'))
         check(dx>0 and dy==0,f'Z{n}: ploča klizi, ne prodire u fluid')
+    # Z2: razvijena cijev s dva otvorena priključka; tau_st na fluid suprotno toku; prva ćelija naliježe na stijenku.
+    wall_and_openings(tasks,p+'z2',[(40,141),(380,141)])
+    z2walls=[node(tasks,p+f'z2wall{i}') for i in range(4)]
+    z2sens=[]
+    for i in (1,2):
+        x,y,w,h=rect(node(tasks,p+f'z2sensor{i}'));cx=x+w/2;z2sens.append(cx)
+        close(y+h,72,'Z2: zatvoreni senzor naliježe na vrh ogranka')
+        for z in (80,96,104):
+            check(all(distance_to_path((cx,z),path(wall))>float(wall.get('stroke-width'))/2 for wall in z2walls),
+                  'Z2: tlačni priključak mora ostati stvarno otvoren')
+    a,b=line(node(tasks,p+'z2L'));close(a[0],z2sens[0],'Z2: kota L počinje u osi prvog priključka');close(b[0],z2sens[1],'Z2: kota L završava u osi drugog priključka')
+    a,b=line(node(tasks,p+'z2D'));close(a[1],106,'Z2: kota D počinje na gornjoj stijenci');close(b[1],176,'Z2: kota D završava na donjoj stijenci')
+    dx,dy=delta(node(tasks,p+'z2velocity'));check(dx>0 and dy==0,'Z2: srednja brzina duž osi cijevi')
+    sh=node(tasks,p+'z2shear');dx,dy=delta(sh);sy=path(sh)[0][1]
+    check(dx<0 and dy==0 and 166<sy<176,'Z2: naprezanje stijenke na fluid djeluje suprotno toku, uz stijenku, unutar fluida')
+    cx,cy,cw,ch=rect(node(tasks,p+'z2cell'))
+    close(cy+ch,176,'Z2: prva ćelija naliježe na donju stijenku');check(cx>40 and cx+cw<380 and cy>106,'Z2: prva ćelija unutar fluida')
     check(delta(node(tasks,p+'z4pressureDrive'))[0]<0,'Z4: nepovoljan tlak pokreće suprotno ploči')
     wall_and_openings(tasks,p+'z3',[(43,158),(392,158)])
     walls=[node(tasks,p+f'z3wall{i}') for i in range(4)]

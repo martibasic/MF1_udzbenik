@@ -891,7 +891,7 @@ Smije, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne zahtijeva
 
 ## Zadatci za vježbu {#sec-u10-zadatci}
 
-Za cijevne elemente i slobodne mlazove slatke vode uzmi $\rho=\rho_v=998\ \text{kg/m}^3$; za morsku vodu u Z1 i Z2 gustoća $\rho=\rho_{mv}$ zadana je u zadatku. Svugdje vrijede jednoliki profili brzine. Tlakovi označeni s $p_M$ manometarski su. Za cijevne elemente promatraju se samo komponente u vodoravnoj ravnini $xy$; težina i oslanjanje okomito na tu ravninu nisu dio traženog opterećenja. Osi i presjeci prikazani su na slici [-@fig-u11-vjezbe]. Sila fluida na element označena je s $\vec F$, potisak s $F_T$, a reakcija nosača na element s $\vec R$.
+Za cijevne elemente i slobodne mlazove slatke vode uzmi $\rho=\rho_v=998\ \text{kg/m}^3$; za morsku vodu u Z1 i Z2 gustoća $\rho=\rho_{mv}$ zadana je u zadatku. Svugdje vrijede jednoliki profili brzine. Tlakovi označeni s $p_M$ manometarski su. Za cijevne elemente promatraju se samo komponente u vodoravnoj ravnini $xy$, pa težina i oslanjanje okomito na tu ravninu nisu dio traženog opterećenja; iznimka je Z3, čije koljeno leži u okomitoj ravnini $xz$, pa težina vode ulazi u bilancu. Osi i presjeci prikazani su na slici [-@fig-u11-vjezbe]. Sila fluida na element označena je s $\vec F$, potisak s $F_T$, a reakcija nosača na element s $\vec R$.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -957,28 +957,32 @@ $v_d=7{,}00\ \text{m/s}$; $\dot m\approx9{,}02\cdot10^{4}\ \text{kg/s}$; $F_T\ap
 
 [Razina: T1]{.mf1-task-level}
 
-### Sile na cijevno koljeno {#task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez .unnumbered .unlisted}
+<span id="task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez"></span>
+
+### Koljeno u okomitoj ravnini s težinom vode {#task-koljeno-u-okomitoj-ravnini-tezina .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Vodoravno koljeno kratkog radijusa zakreće tok iz $+x$ u $+y$ za $90^\circ$, uz stalni promjer $D=100\ \text{mm}$. Protok iznosi $Q=0{,}026\ \text{m}^3/\text{s}$, a zadani su tlakovi $p_{M1}=180\ \text{kPa}$ i $p_{M2}=175\ \text{kPa}$. Ne pretpostavljaj tok bez gubitaka: tlakovi su neovisno zadani. Vanjski tlak jest atmosferski.
+Koljeno kratkog radijusa i stalnog promjera $D=200\ \text{mm}$ leži u okomitoj ravnini $xz$: voda ulazi vodoravno u smjeru $+x$, a izlazi okomito prema gore, u smjeru $+z$. Protok iznosi $Q=0{,}090\ \text{m}^3/\text{s}$, manometarski tlak na ulazu $p_{M1}=150\ \text{kPa}$, a izlazni presjek 2 nalazi se $\Delta z=0{,}40\ \text{m}$ iznad osi ulaznog presjeka 1. Koljeno sadrži $V=0{,}030\ \text{m}^3$ vode, a lokalni gubitak između presjeka iznosi $h_g=\xi v^2/(2g)$ uz $\xi=0{,}30$. Vanjski je tlak atmosferski, a težina samog koljena nije dio traženog opterećenja.
 
 **Traži se**
 
-Odredi brzinu, komponente i rezultantu sile fluida na koljeno te komponente reakcije nosača.
+1. Odredi brzinu i manometarski tlak $p_{M2}$ na izlazu energijskom jednadžbom s gubitkom.
+2. Odredi komponente $F_x$ i $F_z$ sile fluida na koljeno, uključujući težinu vode u koljenu, te rezultantu i reakciju nosača.
+3. Koliki je udio težine vode u okomitoj komponenti i koliko bi se $F_z$ promijenio kad bi se koljeno pogrešno računalo kao da leži u vodoravnoj ravnini ($p_{M2}=p_{M1}$, bez težine)?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Brzina izlaza nema komponentu $x$, a brzina ulaza nema komponentu $y$. Tlačne sile na fluid usmjerene su prema unutrašnjosti kontrolnog volumena: u $+x$ na ulazu i u $-y$ na izlazu. Reakcija nosača na koljeno suprotna je sili fluida na koljeno.
+Pri stalnom promjeru brzina se ne mijenja, pa $p_{M2}$ slijedi iz $p_{M1}/(\rho g)=p_{M2}/(\rho g)+\Delta z+h_g$. U bilanci za os $z$ uz tok količine gibanja i tlačnu silu na izlazu djeluje i težina vode $\rho gV$ prema dolje; sve tri stavke stijenka mora uravnotežiti.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$v\approx3{,}310\ \text{m/s}$; $(F_x;\,F_y)\approx(+1{,}500;\ -1{,}460)\ \text{kN}$, $|\vec F|\approx2{,}093\ \text{kN}$. Reakcija nosača iznosi $(R_x;\,R_y)\approx(-1{,}500;\ +1{,}460)\ \text{kN}$.
+$v\approx2{,}865\ \text{m/s}$; $p_{M2}\approx144{,}9\ \text{kPa}$. $F_x\approx+4{,}97\ \text{kN}$, $F_z\approx-5{,}10\ \text{kN}$, $|\vec F|\approx7{,}12\ \text{kN}$; nosač daje $\vec R=-\vec F$, dakle ulijevo i prema gore. Težina vode $294\ \text{N}$ čini oko $5{,}8\,\%$ okomite komponente. Račun u vodoravnoj ravnini dao bi $F_z\approx-4{,}97\ \text{kN}$: pad tlaka zbog visine i gubitka ($5{,}1\ \text{kPa}$) smanjuje tlačnu silu na izlazu za $162\ \text{N}$, a težina vode dodaje $294\ \text{N}$, pa je stvarna okomita komponenta oko $3\,\%$ veća.
 :::
 ::::
 
@@ -1086,9 +1090,9 @@ $(Q_2;\,Q_3)=(24;\,16)\ \text{L/s}$; $(F_x;\,F_y)\approx(2835{,}8;\ -44{,}0)\ \t
 
 :::::
 
-![Skice uz Z1–Z6: vodomlazni pogon, aktuatorski disk, koljeno, ekscentrični mlaz, ploča koja se udaljava i Y-račva.](../assets/print/u11_vjezbe_skice.svg){#fig-u11-vjezbe fig-align="center" fig-alt="Šest panela: bočni pogled na krmu brodice, strujna cijev kroz disk, tlocrt koljena od 90 stupnjeva s tlakovima na oba presjeka, nosač s ekscentričnim mlazom, pomična ploča i tlocrt račve."}
+![Skice uz Z1–Z6: vodomlazni pogon, aktuatorski disk, koljeno u okomitoj ravnini, ekscentrični mlaz, ploča koja se udaljava i Y-račva.](../assets/print/u11_vjezbe_skice.svg){#fig-u11-vjezbe fig-align="center" fig-alt="Šest panela: bočni pogled na krmu brodice, strujna cijev kroz disk, koljeno od 90 stupnjeva u okomitoj ravnini s ulaznim tlakom, kotom visinske razlike i smjerom gravitacije, nosač s ekscentričnim mlazom, pomična ploča i tlocrt račve."}
 
-**Napomene uz skice.** U Z1 brzine su u sustavu broda. U Z2 disk je presjek strujne cijevi, a ne stijenka; površine strujne cijevi daleko ispred i iza diska obrnuto su razmjerne brzinama, a promjer na disku nije u mjerilu. U Z5 izlazne strelice samo shematski označuju izlaz vode jer se $v_2$ traži, a u Z6 strelice brzina jednake su duljine jer se brzine u granama traže.
+**Napomene uz skice.** U Z1 brzine su u sustavu broda. U Z3 ravnina skice je okomita: os $z$ je prema gore, izlazni tlak nije nacrtan jer se traži, a volumen vode u koljenu nije u mjerilu. U Z2 disk je presjek strujne cijevi, a ne stijenka; površine strujne cijevi daleko ispred i iza diska obrnuto su razmjerne brzinama, a promjer na disku nije u mjerilu. U Z5 izlazne strelice samo shematski označuju izlaz vode jer se $v_2$ traži, a u Z6 strelice brzina jednake su duljine jer se brzine u granama traže.
 
 ## Sažetak
 

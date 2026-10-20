@@ -141,3 +141,15 @@ Izvršene provjere:
 Ovo je autorski i računalni pregled, ne tvrdnja o neovisnoj stručnoj
 recenziji. Zajednička završna objava, JupyterLite i puni viewport prolaz
 slijede nakon svih šest koraka šireg cilja; ova revizija nije novi push.
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| Z2 | Vrijeme viskozne difuzije (jednoredni odgovor) | Smično naprezanje iz pada tlaka i visina prve ćelije (`task-smicno-naprezanje-prva-celija`): $\tau_{st}=\Delta p\,D/(4L)=10{,}0$ Pa, $u_\tau=0{,}100$ m/s, $y_1=0{,}0100$ mm ($y^+=1$) i 0,300 mm ($y^+=30$); Hagen–Poiseuille bi dao 102 Pa (31× manje), $Re=10^5$, $\lambda=0{,}0200$ | T1 | Teorija uvodi $y^+$ i traži procjenu $u_\tau$ za mrežu uz stijenku, a nijedan zadatak to nije vježbao; bilanca sila na razvijenoj dionici vrijedi neovisno o režimu, laminarni izraz ne. |
+
+Skica Z2 (`u12_realni_tok_vjezbe_skice.svg`): cijev s dva otvorena priključka, $\tau_{st}$ na fluid suprotno toku, crtkana prva ćelija; `check_u12_sketch_geometry.py` Z2. `verify_u12_real_flow.py`: `exercise_wall_shear_first_cell`, `U12.REAL.INV.z2_force_balance`. D03 §12 dopunjen ($H^2/\nu$ ostaje kao opća pogreška bez oznake zadatka).
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.

@@ -108,9 +108,21 @@ def primjer_vodotoranj(p_A=520e3, dz=38.0, rho=998.0,
     }
 
 
-def zadatak_1(h=2.40, rho=998.0, p_atm=100.8e3, g=9.81):
-    p_m = rho * g * h
-    return {"p_m": p_m, "p_aps": p_atm + p_m}
+def zadatak_1(p0=101.3e3, p=84.5e3, T0=288.0, R=287.0, g=9.81, dp_sensor=10.0):
+    """Z1: visina leta iz barometarskog ocitanja; izotermalna atmosfera prema stalnoj gustoci."""
+    H = R * T0 / g
+    z_iso = H * math.log(p0 / p)
+    rho0 = p0 / (R * T0)
+    z_lin = (p0 - p) / (rho0 * g)
+    rho_top = p / (R * T0)
+    # neovisna integracija dp/dz = -rho g s rho = p/(R T0) (Eulerova metoda po tlaku)
+    n = 20000; pp = p0; z = 0.0; dp = (p0 - p) / n
+    for _ in range(n):
+        rho_mid = (pp - dp / 2) / (R * T0)
+        z += dp / (rho_mid * g); pp -= dp
+    return {"H": H, "z_iso": z_iso, "rho0": rho0, "z_lin": z_lin,
+            "rel": (z_lin - z_iso) / z_iso, "dz_top": dp_sensor / (rho_top * g),
+            "dz_base": dp_sensor / (rho0 * g), "z_num": z}
 
 
 def zadatak_2(dp=17.62e3, rho=998.0, gas_change=5e3, g=9.81):
@@ -118,10 +130,21 @@ def zadatak_2(dp=17.62e3, rho=998.0, gas_change=5e3, g=9.81):
     return {"h": h, "dp_after": (dp + gas_change) - gas_change}
 
 
-def zadatak_3(rho_u=860.0, rho_Hg=13600.0, dh=0.185, a=0.12, g=9.81):
-    # tlak u kraku s uljem
-    p_m = rho_Hg * g * dh - rho_u * g * a
-    return {"p_m": p_m}
+def zadatak_3(D=0.040, d=0.005, alpha_deg=15.0, rho=820.0, L=0.185, g=9.81):
+    """Z3: nagnuti manometar s posudom; spustanje razine u posudi iz jednakosti volumena."""
+    sin_a = math.sin(math.radians(alpha_deg))
+    area_ratio = (d / D) ** 2
+    well_drop = L * area_ratio
+    h_simple = L * sin_a
+    h_exact = h_simple + well_drop
+    p_simple = rho * g * h_simple
+    p_exact = rho * g * h_exact
+    sens = 1 / (rho * g * (sin_a + area_ratio))
+    sens_u = 1 / (rho * g)
+    return {"area_ratio": area_ratio, "well_drop": well_drop, "h_simple": h_simple,
+            "h_exact": h_exact, "p_simple": p_simple, "p_exact": p_exact,
+            "rel_err": (p_simple - p_exact) / p_exact, "sens": sens, "sens_u": sens_u,
+            "gain": sens / sens_u}
 
 
 def zadatak_4(rho_u=850.0, rho_w=1000.0, H=1.50, p_bottom=13.83e3, g=9.81):
@@ -205,8 +228,20 @@ def verify():
     _check(out, "U03.pumpa.H_max_m", r["H_max"], 11.8, "m")
 
     z1 = zadatak_1()
-    _check(out, "U03.Z1.p_m_kPa", z1["p_m"] / 1000, 23.5, "kPa")
-    _check(out, "U03.Z1.p_aps_kPa", z1["p_aps"] / 1000, 124.3, "kPa")
+    _check(out, "U03.Z1.H_m", z1["H"], 8426.0, "m")
+    _check(out, "U03.Z1.z_iso_m", z1["z_iso"], 1528.0, "m")
+    _check(out, "U03.Z1.rho0", z1["rho0"], 1.226, "kg/m^3")
+    _check(out, "U03.Z1.z_lin_m", z1["z_lin"], 1397.0, "m")
+    _check(out, "U03.Z1.rel_percent", z1["rel"] * 100, -8.5, "%", rel=0.02)
+    _check(out, "U03.Z1.dz_top_m", z1["dz_top"], 1.0, "m", rel=0.01)
+    _check(out, "U03.Z1.dz_base_m", z1["dz_base"], 0.83, "m", rel=0.01)
+    _invariant(out, "U03.Z1.numeric_integration",
+               abs(z1["z_num"] - z1["z_iso"]) / z1["z_iso"] < 1e-6,
+               "Integracija dp/dz = -rho g s rho = p/(R T) ne vraca izotermalnu visinu.")
+    small = zadatak_1(p=101.3e3 - 100.0)
+    _invariant(out, "U03.Z1.constant_density_limit",
+               z1["z_lin"] < z1["z_iso"] and abs(small["rel"]) < 1e-3,
+               "Stalna gustoca mora podcijeniti visinu, a za mali pad tlaka oba modela moraju se slagati.")
     z2 = zadatak_2()
     _check(out, "U03.Z2.h_m", z2["h"], 1.80, "m", rel=0.0005)
     _check(out, "U03.Z2.dp_after_kPa", z2["dp_after"] / 1000, 17.62, "kPa", rel=1e-9)
@@ -217,10 +252,27 @@ def verify():
                abs(zadatak_2(gas_change=-20e3)["dp_after"] - z2["dp_after"]) < 1e-8,
                "Zajednicka promjena tlaka ne smije promijeniti diferencijalno ocitanje.")
     z3 = zadatak_3()
-    _check(out, "U03.Z3.p_m_kPa", z3["p_m"] / 1000, 23.7, "kPa")
-    _invariant(out, "U03.Z3.manometer_walk",
-               abs(z3["p_m"] + 860 * 9.81 * .12 - 13600 * 9.81 * .185) < 1e-8,
-               "Hod od prikljucka niz ulje pa uz zivu mora zavrsiti na atmosferi.")
+    _check(out, "U03.Z3.area_ratio", z3["area_ratio"], 0.015625, "1")
+    _check(out, "U03.Z3.h_simple_mm", z3["h_simple"] * 1000, 47.9, "mm")
+    _check(out, "U03.Z3.p_simple_Pa", z3["p_simple"], 385.0, "Pa")
+    _check(out, "U03.Z3.well_drop_mm", z3["well_drop"] * 1000, 2.9, "mm", rel=0.01)
+    _check(out, "U03.Z3.h_exact_mm", z3["h_exact"] * 1000, 50.8, "mm")
+    _check(out, "U03.Z3.p_exact_Pa", z3["p_exact"], 408.0, "Pa")
+    _check(out, "U03.Z3.rel_err_percent", z3["rel_err"] * 100, -5.7, "%", rel=0.01)
+    _check(out, "U03.Z3.sens_mm_per_Pa", z3["sens"] * 1000, 0.45, "mm/Pa", rel=0.01)
+    _check(out, "U03.Z3.sens_u_mm_per_Pa", z3["sens_u"] * 1000, 0.124, "mm/Pa", rel=0.01)
+    _check(out, "U03.Z3.gain", z3["gain"], 3.6, "1", rel=0.02)
+    _invariant(out, "U03.Z3.volume_conservation",
+               abs(math.pi * 0.005**2 / 4 * 0.185 - math.pi * 0.040**2 / 4 * z3["well_drop"]) < 1e-15,
+               "Istisnuti volumen cjevcice mora biti jednak volumenu spustene razine u posudi.")
+    steeper = zadatak_3(alpha_deg=30.0); vertical = zadatak_3(alpha_deg=90.0)
+    _invariant(out, "U03.Z3.sensitivity_falls_with_angle",
+               z3["gain"] > steeper["gain"] > vertical["gain"] and abs(vertical["gain"] - 1 / (1 + z3["area_ratio"])) < 1e-12,
+               "Osjetljivost mora padati s kutom i pri 90 stupnjeva teziti jednoj nozi s korekcijom posude.")
+    wide_well = zadatak_3(D=0.400)
+    _invariant(out, "U03.Z3.wide_well_limit",
+               abs(wide_well["p_exact"] / wide_well["p_simple"] - 1) < 2e-3,
+               "Vrlo siroka posuda mora ukloniti razliku izmedu tocnog i pojednostavljenog tlaka.")
     z4 = zadatak_4()
     _check(out, "U03.Z4.h_oil_m", z4["h_u"], .601, "m", rel=.001)
     _check(out, "U03.Z4.h_water_m", z4["h_w"], .899, "m", rel=.001)
@@ -278,13 +330,13 @@ def verify():
     _invariant(
         out,
         "U03.INV.absolute_gauge_offset",
-        abs((z1["p_aps"] - z1["p_m"]) - 100.8e3) < 1e-9,
+        abs((primjer_1()["p_A"] - primjer_1()["p_A_m"]) - 100.8e3) < 1e-9,
         "Apsolutni i manometarski tlak ne razlikuju se za p_atm.",
     )
     _invariant(
         out,
         "U03.INV.pressure_increases_with_depth",
-        z1["p_aps"] > 100.8e3 and z6["p_tocka"] > z6["p_G"],
+        primjer_1()["p_A"] > primjer_1()["p_pl"] and z6["p_tocka"] > z6["p_G"],
         "Tlak u istom mirnom fluidu nije porastao s dubinom.",
     )
     _invariant(

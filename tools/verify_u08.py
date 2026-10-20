@@ -141,15 +141,21 @@ def zadatak_3(Q_1=0.012, Q_2=0.008, D_3=0.120):
     return {"Q_3": Q_3, "v_3": v_3}
 
 
-def zadatak_4(Q=0.030, D_2=0.090, D_3=0.070):
-    A_2 = math.pi * D_2**2 / 4
-    A_3 = math.pi * D_3**2 / 4
-    # v_2 = 2 v_3, Q = Q_2 + Q_3 = A_2 v_2 + A_3 v_3 = (2 A_2 + A_3) v_3
-    v_3 = Q / (2 * A_2 + A_3)
-    v_2 = 2 * v_3
-    Q_2 = A_2 * v_2
-    Q_3 = A_3 * v_3
-    return {"Q_2": Q_2, "Q_3": Q_3, "v_2": v_2, "v_3": v_3}
+def zadatak_4(R=0.150, rho=1.20,
+              r=(0.0, 0.0375, 0.075, 0.1125, 0.135, 0.145, 0.150),
+              v=(10.0, 9.6, 9.1, 8.2, 7.2, 6.2, 0.0)):
+    """Z4: protok iz izmjerenog osnosimetricnog profila trapeznim pravilom po prstenima."""
+    f = [vi * 2 * math.pi * ri for ri, vi in zip(r, v)]
+    strips = [(f[i] + f[i + 1]) / 2 * (r[i + 1] - r[i]) for i in range(len(r) - 1)]
+    Q = sum(strips)
+    A = math.pi * R**2
+    v_mean = Q / A
+    v_max = max(v)
+    Q_max = v_max * A
+    n = 7.0
+    return {"Q": Q, "A": A, "v_mean": v_mean, "ratio": v_mean / v_max, "Q_max": Q_max,
+            "overestimate": (Q_max - Q) / Q, "m_dot": rho * Q, "strips": strips,
+            "power_law_ratio": 2 * n * n / ((n + 1) * (2 * n + 1))}
 
 
 def zadatak_5(D=0.100, d=0.020, Q_in=0.001, w=1.50,
@@ -254,10 +260,23 @@ def verify():
     _check(out, "U08.Z3.v_3", r["v_3"], 1.768, "m/s", rel=0.02)
 
     r = zadatak_4()
-    _check(out, "U08.Z4.Q_2_Ls", r["Q_2"] * 1000, 23.0, "L/s", rel=0.02)
-    _check(out, "U08.Z4.Q_3_Ls", r["Q_3"] * 1000, 7.0, "L/s", rel=0.02)
-    _check(out, "U08.Z4.v_2", r["v_2"], 3.62, "m/s", rel=0.02)
-    _check(out, "U08.Z4.v_3", r["v_3"], 1.81, "m/s", rel=0.02)
+    _check(out, "U08.Z4.Q", r["Q"], 0.561, "m^3/s", rel=0.002)
+    _check(out, "U08.Z4.v_mean", r["v_mean"], 7.94, "m/s", rel=0.002)
+    _check(out, "U08.Z4.ratio", r["ratio"], 0.79, "1", rel=0.01)
+    _check(out, "U08.Z4.m_dot", r["m_dot"], 0.673, "kg/s", rel=0.002)
+    _check(out, "U08.Z4.Q_max", r["Q_max"], 0.707, "m^3/s", rel=0.002)
+    _check(out, "U08.Z4.overestimate_percent", r["overestimate"] * 100, 26.0, "%", rel=0.01)
+    _check(out, "U08.Z4.power_law_ratio", r["power_law_ratio"], 0.817, "1", rel=0.001)
+    # Neovisna provjera: isti postupak na tocnom potencijskom profilu i Simpsonova integracija.
+    R = 0.150
+    exact = lambda rr: 10.0 * (1 - rr / R) ** (1 / 7) if rr < R else 0.0
+    n_s = 20000
+    Q_exact = sum(exact((i + 0.5) * R / n_s) * 2 * math.pi * ((i + 0.5) * R / n_s) * (R / n_s) for i in range(n_s))
+    _invariant(out, "U08.Z4.profile_integration",
+               abs(Q_exact / (math.pi * R**2) / 10.0 - r["power_law_ratio"]) < 2e-3
+               and r["ratio"] < r["power_law_ratio"] and r["strips"][-1] / r["Q"] < 0.03
+               and abs(sum(r["strips"]) - r["Q"]) < 1e-12 and r["overestimate"] > 0,
+               "Trapez po mjernim tockama mora podcijeniti potencijski profil, a zadnji prsten nosi manje od 3 % protoka.")
 
     r = zadatak_5()
     _check(out, "U08.Z5.Q_out_rel_Ls", r["Q_out_rel"]*1000, 0.4712, "L/s", rel=0.001)
@@ -294,9 +313,9 @@ def verify():
                "Predznak ili normalna komponenta protoka nisu konzistentni.")
     _invariant(out, "U08.INV.z3_mass", abs(998*.020-998*math.pi*.12**2/4*z3["v_3"]) < 1e-12,
                "Mjesalica ne zatvara masenu bilancu.")
-    _invariant(out, "U08.INV.z4_partition", abs(z4["Q_2"]+z4["Q_3"]-.030) < 1e-14
-               and abs(z4["v_2"]-2*z4["v_3"]) < 1e-14,
-               "Razdjelnik ne zadovoljava i bilancu i zadani omjer.")
+    _invariant(out, "U08.INV.z4_profile_sum", abs(sum(z4["strips"])-z4["Q"]) < 1e-12
+               and z4["overestimate"] > 0 and z4["ratio"] < 1,
+               "Protok iz profila mora biti zbroj prstenova i manji od v_max A.")
     _invariant(out, "U08.INV.z5_moving_mass", abs(998*.001-998*z5["A_o"]*(z5["v_out"]-z5["u"])
                -z5["dm"]/z5["t"]) < 1e-12,
                "RTT na pomicanom izlazu ne zatvara akumulaciju.")

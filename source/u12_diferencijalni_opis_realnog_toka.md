@@ -522,9 +522,9 @@ Smično naprezanje $\tau_{st}=\mu\,dv/dr|_R$ ovisi o nagibu profila u prvoj ćel
 
 ## Zadatci za vježbu {#sec-realni-tok-zadaci}
 
-![Skice uz Z1–Z6: lokalni tok, viskozni pogoni i profinjenje mreže.](../assets/print/u12_realni_tok_vjezbe_skice.svg){#fig-realni-tok-vjezbe fig-align="center" fig-alt="Šest panela: polje brzine duž osi x, voda između dviju ploča, vodoravna kapilara s dvama tlačnim priključcima, uljni film između mirne i pomične ploče, ploha s vanjskim tokom i tri mreže iste domene."}
+![Skice uz Z1–Z6: lokalni tok, viskozni pogoni i profinjenje mreže.](../assets/print/u12_realni_tok_vjezbe_skice.svg){#fig-realni-tok-vjezbe fig-align="center" fig-alt="Šest panela: polje brzine duž osi x, vodoravna cijev s izmjerenim padom tlaka i prvom ćelijom uz stijenku, vodoravna kapilara s dvama tlačnim priključcima, uljni film između mirne i pomične ploče, ploha s vanjskim tokom i tri mreže iste domene."}
 
-**Napomene uz skice.** Z1 prikazuje kinematičko polje, a ne cijev; duljine strelica nisu u mjerilu traženih brzina. U Z3 promjer kapilare nacrtan je uvećano. U Z4 $dp/dx>0$ znači da tlak raste udesno, pa tlačni pogon djeluje suprotno gibanju gornje ploče. U Z6 mrežne crte nisu krute stijenke; profinjenje ne mijenja domenu.
+**Napomene uz skice.** Z1 prikazuje kinematičko polje, a ne cijev; duljine strelica nisu u mjerilu traženih brzina. U Z2 prva ćelija uz stijenku nije u mjerilu, a $\tau_{st}$ je naprezanje stijenke na fluid. U Z3 promjer kapilare nacrtan je uvećano. U Z4 $dp/dx>0$ znači da tlak raste udesno, pa tlačni pogon djeluje suprotno gibanju gornje ploče. U Z6 mrežne crte nisu krute stijenke; profinjenje ne mijenja domenu.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -555,29 +555,32 @@ $v=5\ \text{m/s}$; $a_{lok}=2\ \text{m/s}^2$, $a_{kon}=10\ \text{m/s}^2$ i $a=12
 
 [Razina: T1]{.mf1-task-level}
 
-### Vrijeme viskozne difuzije {#task-viskozna-difuzija .unnumbered .unlisted}
+<span id="task-viskozna-difuzija"></span>
+
+### Smično naprezanje iz pada tlaka i visina prve ćelije {#task-smicno-naprezanje-prva-celija .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Gornja ploča počinje kliziti iznad mirujućeg sloja vode, a donja ostaje nepomična. Razmak ploča iznosi $H=10\ \text{mm}$, a kinematička viskoznost vode $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$.
+U vodoravnoj cijevi unutarnjeg promjera $D=50{,}0\ \text{mm}$ voda gustoće $\rho=998\ \text{kg/m}^3$ i kinematičke viskoznosti $\nu=1{,}00\cdot10^{-6}\ \text{m}^2/\text{s}$ struji srednjom brzinom $v=2{,}00\ \text{m/s}$. Na potpuno razvijenoj dionici duljine $L=4{,}00\ \text{m}$ između dvaju tlačnih priključaka na istoj visini izmjeren je pad tlaka $\Delta p=p_1-p_2=3{,}20\ \text{kPa}$. Za CFD proračun iste dionice treba procijeniti visinu središta prve ćelije uz stijenku. Vezu smičnog naprezanja s koeficijentom trenja cjevovoda obrađuje []{.mf1-chapter-ref target="u13"}.
 
 **Traži se**
 
-1. Procijeni vremensko mjerilo prijenosa količine gibanja viskoznom difuzijom kroz cijeli razmak.
-2. Određuje li ono točan trenutak uspostave stacionarnog profila?
+1. Iz bilance sila na valjak fluida između priključaka odredi smično naprezanje na stijenci $\tau_{st}$ i brzinu trenja $u_\tau$.
+2. Odredi visinu središta prve ćelije $y_1$ za $y^+=1$ (razrješavanje viskoznog podsloja) i za $y^+=30$ (zidna funkcija).
+3. Koliki bi pad tlaka na istoj dionici predvidio Hagen–Poiseuilleov izraz za laminarni tok? Što iz usporedbe s mjerenjem zaključuješ o režimu i vrijedi li bilanca iz točke 1 neovisno o njemu?
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Usporedi redove veličine vremenskog i viskoznog člana za brzinu ploče $u$: $u/t_\nu\sim\nu u/H^2$. Prije računa pretvori milimetre u metre.
+Na razvijenoj dionici fluid se ne ubrzava, pa tlačna sila $\Delta p\,\pi D^2/4$ drži ravnotežu sa silom trenja $\tau_{st}\,\pi DL$ po plaštu. Iz definicije $y^+=u_\tau y/\nu$ slijedi $y_1=y^+\nu/u_\tau$. Bilanca sila ne pretpostavlja oblik profila; Hagen–Poiseuilleov izraz $\Delta p=32\mu Lv/D^2$ pretpostavlja laminarni parabolični profil.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$t_\nu\sim H^2/\nu=100\ \text{s}$. To je karakteristično vremensko mjerilo; vrijeme približavanja stacionarnom profilu ovisi o zadanoj toleranciji odstupanja.
+$\tau_{st}=\Delta p\,D/(4L)=10{,}0\ \text{Pa}$, $u_\tau=\sqrt{\tau_{st}/\rho}=0{,}100\ \text{m/s}$. $y_1\approx0{,}0100\ \text{mm}$ za $y^+=1$ i $y_1\approx0{,}300\ \text{mm}$ za $y^+=30$. Laminarni izraz daje $\Delta p\approx102\ \text{Pa}$, oko 31 puta manje od izmjerenoga: uz $Re=vD/\nu=1{,}00\cdot10^5$ tok je turbulentan i parabolični profil ne vrijedi, dok bilanca sila iz točke 1 vrijedi za svaki razvijeni tok. Pripadni koeficijent trenja iznosi $\lambda=8\tau_{st}/(\rho v^2)=0{,}0200$.
 :::
 ::::
 

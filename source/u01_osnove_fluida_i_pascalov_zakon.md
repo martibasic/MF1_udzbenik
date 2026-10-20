@@ -525,13 +525,13 @@ $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicna-kocnica-vozila-s-ra-09}
 
 **Tekst zadatka**
 
-Hidraulička stezna naprava ima crpni klip promjera $d_p = 14\ \text{mm}$ na koji djeluje sila $F_p = 420\ \text{N}$ te $n = 6$ paralelnih stega promjera $d_s = 28\ \text{mm}$. Svaka stega izravno opterećuje zasebnu baterijsku ćeliju; nastavna granica sile po ćeliji iznosi $F_{dop} = 3{,}5\ \text{kN}$ i nije specifikacija proizvođača. Sve su stege dosegle radni položaj. Zanemari stlačivost ulja, gubitke i razlike visina.
+Hidraulička stezna naprava ima crpni klip promjera $d_p = 14\ \text{mm}$ na koji djeluje sila $F_p = 420\ \text{N}$ te $n = 6$ paralelnih stega promjera $d_s = 28\ \text{mm}$. Crpka je u podnožju linije, a stezni su cilindri $\Delta z = 2{,}5\ \text{m}$ iznad crpnog klipa; ulje ima gustoću $\rho = 860\ \text{kg/m}^3$. Svaka stega izravno opterećuje zasebnu baterijsku ćeliju; nastavna granica sile po ćeliji iznosi $F_{dop} = 3{,}5\ \text{kN}$ i nije specifikacija proizvođača. Sve su stege dosegle radni položaj. Zanemari stlačivost ulja i gubitke.
 
 **Traži se**
 
-1. Odredi manometarski tlak $p_M$ u sustavu.
-2. Odredi silu stezanja jednog cilindra.
-3. Provjeri ostaje li sila po jednoj stezi unutar dopuštene vrijednosti $F_{dop}$.
+1. Odredi manometarski tlak $p_M$ neposredno ispod crpnog klipa.
+2. Odredi silu stezanja jednog cilindra najprije uz pretpostavku jednakih visina, a zatim s hidrostatičkom razlikom tlaka zbog $\Delta z$.
+3. Provjeri ostaje li sila po jednoj stezi unutar dopuštene vrijednosti $F_{dop}$ i procijeni je li pretpostavka jednakih visina ovdje opravdana.
 
 **Rješenje**
 
@@ -541,7 +541,7 @@ $$
 A_p = \frac{\pi d_p^2}{4} = \frac{\pi \cdot 0{,}014^2}{4} \approx 1{,}539 \cdot 10^{-4}\ \text{m}^2.
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-01}
 
-Manometarski tlak u sustavu zato je
+Manometarski tlak ispod crpnog klipa zato je
 
 $$
 p_M = \frac{F_p}{A_p} = \frac{420}{\pi\cdot0{,}014^2/4} \approx 2{,}728 \cdot 10^6\ \text{Pa} \approx 2{,}73\ \text{MPa}.
@@ -553,17 +553,32 @@ $$
 A_s = \frac{\pi d_s^2}{4} = \frac{\pi \cdot 0{,}028^2}{4} \approx 6{,}158 \cdot 10^{-4}\ \text{m}^2.
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-03}
 
-Sila stezanja jednog cilindra tada je
+Uz pretpostavku jednakih visina Pascalov zakon prenosi $p_M$ neumanjen, pa je sila stezanja jednog cilindra
 
 $$
 F_s = p_MA_s = F_p\left(\frac{d_s}{d_p}\right)^2 = 420\left(\frac{28}{14}\right)^2\ \text{N} = 1{,}680\ \text{kN}.
 $$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-04}
 
-Sila jedne stege $F_s \approx 1{,}68\ \text{kN}$ manja je od zadane granice $F_{dop} = 3{,}5\ \text{kN}$.
+Stezni su cilindri $\Delta z$ iznad crpke, pa je u mirujućem ulju tlak ondje manji za hidrostatički član iz []{.mf1-chapter-ref target="u03"}:
+
+$$
+\begin{aligned}
+\rho g\Delta z &= 860\cdot9{,}81\cdot2{,}5 \approx 2{,}11\cdot10^4\ \text{Pa} = 21{,}1\ \text{kPa},\\
+p_s &= p_M-\rho g\Delta z \approx 2{,}707\ \text{MPa},
+\end{aligned}
+$$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-05}
+
+pa je stvarna sila stezanja
+
+$$
+F_s' = p_sA_s \approx 2{,}707\cdot10^6\cdot6{,}158\cdot10^{-4}\ \text{N} \approx 1{,}667\ \text{kN}.
+$$ {#eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-06}
+
+Obje su vrijednosti manje od zadane granice $F_{dop} = 3{,}5\ \text{kN}$.
 
 **Provjera i tumačenje**
 
-Omjer $F_s/F_p = 1680/420 = 4$ odgovara omjeru površina $(d_s/d_p)^2 = (28/14)^2$; za zajednički hod šest stega crpka mora isporučiti zbroj svih istisnutih volumena. Rezerva $F_{dop}/F_s \approx 2{,}1$ vrijedi samo ako jedna stega opterećuje točno jednu ćeliju bez preraspodjele; tolerancije, vršne sile i otkazni slučajevi traže zasebnu analizu sigurnosti.
+Omjer $F_s/F_p = 1680/420 = 4$ odgovara omjeru površina $(d_s/d_p)^2 = (28/14)^2$; za zajednički hod šest stega crpka mora isporučiti zbroj svih istisnutih volumena. Visinska razlika smanjuje silu za $\rho g\Delta z/p_M\approx0{,}8\,\%$, što je ovdje zanemarivo prema rezervi $F_{dop}/F_s' \approx 2{,}1$: pretpostavka jednakih visina opravdana je zato što je radni tlak u megapaskalima, a hidrostatički član u desetcima kilopaskala. Ista bi razlika visina u sustavu s radnim tlakom od $100\ \text{kPa}$ promijenila silu za petinu. Rezerva vrijedi samo ako jedna stega opterećuje točno jednu ćeliju bez preraspodjele; tolerancije, vršne sile i otkazni slučajevi traže zasebnu analizu sigurnosti.
 :::
 
 

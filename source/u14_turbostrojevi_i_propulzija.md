@@ -693,9 +693,9 @@ Vrijedi za sve rotacijske lopatične strojeve u kojima fluid mijenja smjer ili i
 
 ## Zadatci za vježbu {#sec-u14-zadatci}
 
-![Skice uz Z1–Z6: sile na ploču i vodilicu, obrnuti račun izlaza lopatice, zadane apsolutne brzine rotora na dvama polumjerima, vodomlazni pogon i razdjelnik s četirima izlazima.](../assets/print/u12_vjezbe_skice.svg){#fig-u12-vjezbe fig-align="center" fig-alt="Šest skica: mlaz na ravnu ploču, mlaz u otvorenoj vodilici, pokretna lopatica, apsolutne brzine na dvama polumjerima rotora, vodomlazni pogon broda i mlazna platforma s razdjelnikom i četirima sapnicama."}
+![Skice uz Z1–Z6: sile na nepomičnu i pokretnu ploču, obrnuti račun izlaza lopatice, zadane apsolutne brzine rotora na dvama polumjerima, vodomlazni pogon i razdjelnik s četirima izlazima.](../assets/print/u12_vjezbe_skice.svg){#fig-u12-vjezbe fig-align="center" fig-alt="Šest skica: mlaz na nepomičnu ravnu ploču, mlaz na ploču koja se giba u smjeru mlaza uz naznačeno kolo s nizom ploča, pokretna lopatica, apsolutne brzine na dvama polumjerima rotora, vodomlazni pogon broda i mlazna platforma s razdjelnikom i četirima sapnicama."}
 
-**Napomene uz skice.** U Z3 smjer izlaza $\vec w_2$ nacrtan je shematski jer se kut i $k$ traže. U Z4 nacrtane su samo zadane apsolutne brzine; trokute $\vec c=\vec u+\vec w$ crta student. U Z5 brzine su u brodskom okviru, a krug označuje crpku. Z6 prikazuje trenutak mirovanja platforme; duljine strelica $F_T$ i $mg$ nisu u mjerilu.
+**Napomene uz skice.** U Z2 crtkane ploče naznačuju kolo s nizom ploča iz slučaja (b); sila i snaga nisu nacrtane. U Z3 smjer izlaza $\vec w_2$ nacrtan je shematski jer se kut i $k$ traže. U Z4 nacrtane su samo zadane apsolutne brzine; trokute $\vec c=\vec u+\vec w$ crta student. U Z5 brzine su u brodskom okviru, a krug označuje crpku. Z6 prikazuje trenutak mirovanja platforme; duljine strelica $F_T$ i $mg$ nisu u mjerilu.
 
 ::::: {.mf1-vjezbe-list}
 
@@ -724,28 +724,29 @@ $\dot m\approx9{,}10\ \mathrm{kg/s}$ i $F_x\approx219\ \mathrm{N}$ u smjeru ulaz
 
 [Razina: T1]{.mf1-task-level}
 
-### Zakretanje mlaza u vodilici {#task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice .unnumbered .unlisted}
+<span id="task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice"></span>
+
+### Pokretna ploča i kolo s nizom ploča {#task-pokretna-ploca-i-kolo-s-plocama .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Nepomična vodilica zakreće pravokutni mlaz u vodoravnoj ravnini. Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ ulazi brzinom $v=26\ \mathrm{m/s}$ kroz presjek širine $b=30\ \mathrm{mm}$ u tlocrtu i visine $h=16\ \mathrm{mm}$ okomito na njega. Ulaz je u smjeru $+x$, a kut skretanja $\theta=110^\circ$ mjeri se od $+x$ prema $+y$. Iznos brzine ostaje nepromijenjen.
-
-Tlak na granicama slobodnog mlaza je atmosferski, tok je stacionaran, a težina ne doprinosi vodoravnim komponentama.
+Vodeni mlaz gustoće $\rho=998\ \mathrm{kg/m^3}$, promjera $d=25\ \mathrm{mm}$ i brzine $v=30\ \mathrm{m/s}$ udara okomito na ravnu ploču koja se giba u smjeru mlaza stalnom brzinom $u=10\ \mathrm{m/s}$. Usporedi dva slučaja: **(a)** jedna ploča koja se udaljava od sapnice, pa je zahvaća samo dio mlaza; **(b)** kolo s nizom ploča na kojem uvijek jedna ploča presreće cijeli mlaz, a svaka se giba istom brzinom $u$. U oba slučaja fluid se uz ploču razlijeva okomito na smjer gibanja u sustavu ploče, tlak je svuda atmosferski, a trenje i težinu zanemari.
 
 **Traži se**
 
-Odredi predznačene komponente sile fluida na vodilicu te suprotnu reakciju nosača i njezin iznos.
+1. Za oba slučaja odredi maseni protok koji dolazi na ploču, silu mlaza na ploču u smjeru gibanja, predanu snagu i hidraulički stupanj djelovanja prema snazi mlaza $\tfrac12\dot m_{ml}v^2$, gdje je $\dot m_{ml}=\rho Av$.
+2. Odredi za svaki slučaj brzinu $u$ koja daje najveću snagu i pripadni najveći stupanj djelovanja. Objasni zašto je u slučaju (a) zadana brzina $u=10\ \mathrm{m/s}$ upravo optimalna.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Najprije izračunaj $\dot m=\rho bhv$. Rastavi izlaznu brzinu u istim osima kao ulaznu. Za ravnotežu vodilice vrijedi $\vec R=-\vec F_{f\to v}$; pozitivan prirast komponente brzine duž osi y znači negativan $F_y$.
+U sustavu ploče mlaz dolazi relativnom brzinom $v-u$. Jedna ploča prima $\dot m_{rel}=\rho A(v-u)$, pa je $F=\rho A(v-u)^2$; kolo prima cijeli protok $\rho Av$, pa je $F=\rho Av(v-u)$. Snaga je $P=Fu$; deriviraj $P(u)$ i izjednači s nulom.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$\dot m\approx12{,}46\ \mathrm{kg/s}$; sila fluida je $(F_x,F_y)\approx(435;-304)\ \mathrm{N}$. Reakcija nosača na vodilicu je $(R_x,R_y)\approx(-435;304)\ \mathrm{N}$, a njezin iznos $R\approx531\ \mathrm{N}$.
+$A=4{,}909\cdot10^{-4}\ \mathrm{m^2}$, $\dot m_{ml}=14{,}70\ \mathrm{kg/s}$, snaga mlaza $6{,}61\ \mathrm{kW}$. (a) $\dot m_{rel}=9{,}80\ \mathrm{kg/s}$, $F=196\ \mathrm{N}$, $P=1{,}96\ \mathrm{kW}$, $\eta=29{,}6\ \%$. (b) $\dot m=14{,}70\ \mathrm{kg/s}$, $F=294\ \mathrm{N}$, $P=2{,}94\ \mathrm{kW}$, $\eta=44{,}4\ \%$. Optimum: (a) $u=v/3=10\ \mathrm{m/s}$ s $\eta_{max}=8/27=29{,}6\ \%$, što je upravo zadani slučaj; (b) $u=v/2=15\ \mathrm{m/s}$ s $F=220\ \mathrm{N}$, $P=3{,}31\ \mathrm{kW}$ i $\eta_{max}=50\ \%$. Kolo iskorištava cijeli protok, pa je i pri istoj brzini $u$ bolje od jedne ploče.
 :::
 ::::
 

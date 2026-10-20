@@ -89,30 +89,40 @@ def layered_wall(b, rho_o, h_o, rho_w, h_w, g=G):
     }
 
 
-def quarter_cylinder(R, b, h1, vertical_sign, rho=RHO_WATER, g=G):
+def quarter_cylinder(R, b, h1, vertical_sign, rho=RHO_WATER, g=G, p_gas=0.0):
+    """Četvrtina valjka; ``p_gas`` je jednoliki manometarski nadtlak plina
+    iznad slobodne površine koji se ne poništava sa suhe strane (P5)."""
     A_x = R * b
     h_cx = h1 + R / 2
     I_g = b * R**3 / 12
-    F_H = rho * g * A_x * h_cx
-    h_H = h_cx + I_g / (A_x * h_cx)
+    F_H_h = rho * g * A_x * h_cx
+    h_H_h = h_cx + I_g / (A_x * h_cx)
+    F_H_p = p_gas * A_x
+    F_H = F_H_h + F_H_p
+    h_H = (F_H_h * h_H_h + F_H_p * h_cx) / F_H
     V_rect = h1 * R * b
     V_quarter = math.pi * R**2 * b / 4
     V = V_rect + V_quarter
-    F_V = vertical_sign * rho * g * V
-    x_from_wall = (
-        V_rect * (R / 2) + V_quarter * (4 * R / (3 * math.pi))
-    ) / V
+    F_V_h = rho * g * V
+    x_h = (V_rect * (R / 2) + V_quarter * (4 * R / (3 * math.pi))) / V
+    F_V_p = p_gas * R * b
+    F_V = vertical_sign * (F_V_h + F_V_p)
+    x_from_wall = (F_V_h * x_h + F_V_p * R / 2) / (F_V_h + F_V_p)
     F_R = math.hypot(F_H, F_V)
     angle = math.degrees(math.atan2(F_V, F_H))
     return {
         "A_x": A_x,
         "h_cx": h_cx,
         "I_g": I_g,
+        "F_H_h": F_H_h,
+        "F_H_p": F_H_p,
         "F_H": F_H,
         "h_H": h_H,
         "V_rect": V_rect,
         "V_quarter": V_quarter,
         "V": V,
+        "F_V_h": F_V_h,
+        "F_V_p": F_V_p,
         "F_V": F_V,
         "x_from_wall": x_from_wall,
         "F_R": F_R,
@@ -180,11 +190,45 @@ def parabola_normal_intersection(L, H, x1, x2):
     return px + t * dx1, pz + t * dz1
 
 
-def task_two_levels(b=1.20, H=3.0, h_left=2.40, h_right=1.20):
-    # Moment sile udesno na y>0 je negativan za pozitivnu rotaciju CCW.
-    F = RHO_WATER * G * b * (h_left**2 - h_right**2) / 2
-    M = -RHO_WATER * G * b * (h_left**3 - h_right**3) / 6
-    return {"F": F, "M": M, "y_R": -M / F if F else None, "T": -M / H}
+def task_flap_gate(b=1.50, L=2.00, theta_deg=60.0, a=0.80, y=1.80, rho=RHO_WATER, g=G):
+    """Z3: kosa zaklopka s osi na udaljenosti ``a`` uzduž ploče od donjeg ruba.
+
+    Otvara se kad centar tlaka dođe u os. Za djelomično uronjenu ploču hvatište je
+    na trećini omočene duljine, pa uvjet traži omočenu duljinu 3a; ako je 3a > L,
+    otvaranje nastupa tek pri potpunom uronjenju i rješava se po h_C.
+    Vraća i stanje pri zadanoj dubini ``y`` (sila, hvatište, moment, sila praga).
+    """
+    s = math.sin(math.radians(theta_deg))
+    wetted_open = 3 * a
+    if wetted_open <= L:
+        y_open = wetted_open * s
+        h_c_open = y_open / 2
+        fully_submerged = False
+    else:
+        h_c_open = L**2 * s / (12 * (L / 2 - a))
+        y_open = h_c_open + L * s / 2
+        fully_submerged = True
+    A = b * L
+    h_c = y - L * s / 2
+    F = rho * g * A * h_c
+    I_g = b * L**3 / 12
+    shift = I_g * s / (A * h_c)        # y_CP - y_C uzduž ploče
+    s_cp = L / 2 - shift               # hvatište od donjeg ruba
+    M_axis = F * (a - s_cp)            # pozitivno: donji rub pritisnut na prag
+    R_sill = M_axis / a
+    return {"y_open": y_open, "h_c_open": h_c_open, "top_depth_open": y_open - L * s,
+            "fully_submerged": fully_submerged, "wetted_open": wetted_open,
+            "A": A, "h_c": h_c, "F": F, "shift": shift, "s_cp": s_cp,
+            "M_axis": M_axis, "R_sill": R_sill, "s_centroid": L / 2}
+
+
+def flap_gate_numeric(y, b=1.50, L=2.00, theta_deg=60.0, a=0.80, rho=RHO_WATER, g=G, n=4000):
+    """Neovisna integracija tlaka po omočenom dijelu ploče: sila i moment oko osi."""
+    s = math.sin(math.radians(theta_deg))
+    wet = min(L, y / s)
+    F = integrate(lambda u: rho * g * (y - u * s) * b, 0, wet, n)
+    M = integrate(lambda u: rho * g * (y - u * s) * b * (a - u), 0, wet, n)
+    return F, M
 
 
 def task_triangle(H=1.50, h0=0.40, limit=12e3, offered=1.20):
@@ -274,15 +318,38 @@ def verify():
                abs(r["F_H"] * (r["h_H"] - 2.44) - r["F_V"] * r["x_from_wall"]) < 1e-6,
                "Rezultanta kružnog luka mora prolaziti kroz O.")
 
-    r = quarter_cylinder(0.90, 1.20, 0.0, vertical_sign=-1)
-    _check(out, "U05.CANON.P5.F_H_kN", r["F_H"] / 1000, 4.758, "kN", rel=0.02)
-    _check(out, "U05.CANON.P5.h_H", r["h_H"], 0.600, "m", rel=0.02)
+    r = quarter_cylinder(0.90, 1.20, 0.0, vertical_sign=-1, p_gas=20e3)
+    _check(out, "U05.CANON.P5.F_H_h_kN", r["F_H_h"] / 1000, 4.758, "kN", rel=0.02)
+    _check(out, "U05.CANON.P5.F_H_p_kN", r["F_H_p"] / 1000, 21.60, "kN", rel=0.02)
+    _check(out, "U05.CANON.P5.F_H_kN", r["F_H"] / 1000, 26.36, "kN", rel=0.02)
+    _check(out, "U05.CANON.P5.h_H", r["h_H"], 0.477, "m", rel=0.02)
     _check(out, "U05.CANON.P5.V", r["V"], 0.7634, "m3", rel=0.02)
-    _check(out, "U05.CANON.P5.F_V_kN", r["F_V"] / 1000, -7.474, "kN", rel=0.02)
-    _check(out, "U05.CANON.P5.x_V", r["x_from_wall"], 0.382, "m", rel=0.02)
-    _check(out, "U05.CANON.P5.F_R_kN", r["F_R"] / 1000, 8.860, "kN", rel=0.02)
-    _check(out, "U05.CANON.P5.angle", r["angle"], -57.52, "deg", rel=0.02)
-    _check(out, "U05.CANON.P5.ratio", abs(r["F_V"]) / r["F_H"], math.pi / 2, "", rel=0.01)
+    _check(out, "U05.CANON.P5.F_V_h_kN", r["F_V_h"] / 1000, 7.474, "kN", rel=0.02)
+    _check(out, "U05.CANON.P5.F_V_kN", r["F_V"] / 1000, -29.07, "kN", rel=0.02)
+    _check(out, "U05.CANON.P5.x_V", r["x_from_wall"], 0.432, "m", rel=0.02)
+    _check(out, "U05.CANON.P5.F_R_kN", r["F_R"] / 1000, 39.24, "kN", rel=0.02)
+    _check(out, "U05.CANON.P5.angle", r["angle"], -47.8, "deg", rel=0.02)
+    _check(out, "U05.CANON.P5.moment_about_O_kNm", r["F_H"] * r["h_H"] / 1000, 12.58, "kNm", rel=0.02)
+    _invariant(out, "U05.CANON.P5.resultant_through_O",
+               abs(r["F_H"] * r["h_H"] - abs(r["F_V"]) * r["x_from_wall"]) < 1e-6,
+               "Rezultanta kružnog luka mora prolaziti kroz O i uz nadtlak plina.")
+    open_tank = quarter_cylinder(0.90, 1.20, 0.0, vertical_sign=-1)
+    _check(out, "U05.CANON.P5.open_h_H", open_tank["h_H"], 0.600, "m", rel=0.02)
+    _check(out, "U05.CANON.P5.open_x_V", open_tank["x_from_wall"], 0.382, "m", rel=0.02)
+    _check(out, "U05.CANON.P5.open_ratio", abs(open_tank["F_V"]) / open_tank["F_H"], math.pi / 2, "", rel=0.01)
+    _invariant(out, "U05.CANON.P5.gas_moves_centres_towards_centroids",
+               open_tank["h_H"] > r["h_H"] > 0.45 and open_tank["x_from_wall"] < r["x_from_wall"] < 0.45,
+               "Jednoliki nadtlak mora pomaknuti hvatišta prema težištima projekcija.")
+
+    def arc_integrals(p_gas, R=0.90, b=1.20, n=4000):
+        # Neovisna integracija p n dA po luku s p = p_pl + rho g h.
+        fh = integrate(lambda ph: (p_gas + RHO_WATER * G * R * math.sin(ph)) * math.cos(ph) * b * R, 0, math.pi / 2, n)
+        fv = integrate(lambda ph: (p_gas + RHO_WATER * G * R * math.sin(ph)) * (-math.sin(ph)) * b * R, 0, math.pi / 2, n)
+        return fh, fv
+    fh, fv = arc_integrals(20e3)
+    _invariant(out, "U05.CANON.P5.direct_integration",
+               abs(fh - r["F_H"]) < 1e-3 and abs(fv - r["F_V"]) < 1e-3,
+               "Integral p n dA po luku ne vraća projekciju i pomoćni volumen s nadtlakom.")
 
     r = example_hinged_quarter()
     _check(out, "U05.CANON.P6.F_H_kN", r["F_H"] / 1000, 8.292, "kN", rel=0.02)
@@ -341,21 +408,39 @@ def verify():
                abs(limit["F_x"] / r["F_x"] - 0.01) < 1e-12 and abs(limit["F_z"] / r["F_z"] - 0.1) < 1e-12,
                "Vodoravna komponenta raste s H^2, vertikalna linearno s H.")
 
-    r = task_two_levels()
-    _check(out, "U05.CANON.Z3.F_kN", r["F"] / 1000, 25.377, "kN", rel=0.001)
-    _check(out, "U05.CANON.Z3.y_R", r["y_R"], 0.9333, "m", rel=0.001)
-    _check(out, "U05.CANON.Z3.M_kNm", r["M"] / 1000, -23.685, "kNm", rel=0.001)
-    _check(out, "U05.CANON.Z3.T_kN", r["T"] / 1000, 7.895, "kN", rel=0.001)
-    q = lambda y: RHO_WATER * G * 1.2 * (max(2.4-y, 0)-max(1.2-y, 0))
-    f_num = sum(integrate(q, lo, hi) for lo, hi in [(0,1.2),(1.2,2.4),(2.4,3)])
-    m_num = sum(integrate(lambda y: -y*q(y), lo, hi)
-                for lo, hi in [(0,1.2),(1.2,2.4),(2.4,3)])
-    _invariant(out, "U05.CANON.Z3.pressure_integration", abs(f_num-r["F"]) < 1e-6)
-    _invariant(out, "U05.CANON.Z3.moment_balance", abs(m_num+3*r["T"]) < 1e-6)
-    equal = task_two_levels(h_left=1.2, h_right=1.2)
-    reverse = task_two_levels(h_left=1.2, h_right=2.4)
-    _invariant(out, "U05.CANON.Z3.equal_levels", equal["F"] == equal["M"] == equal["T"] == 0)
-    _invariant(out, "U05.CANON.Z3.reversed_levels", reverse["F"] == -r["F"] and reverse["T"] == -r["T"])
+    r = task_flap_gate()
+    _check(out, "U05.CANON.Z3.wetted_open", r["wetted_open"], 2.40, "m", rel=0.001)
+    _check(out, "U05.CANON.Z3.h_c_open", r["h_c_open"], 1.443, "m", rel=0.001)
+    _check(out, "U05.CANON.Z3.y_open", r["y_open"], 2.309, "m", rel=0.001)
+    _check(out, "U05.CANON.Z3.top_depth_open", r["top_depth_open"], 0.577, "m", rel=0.002)
+    _check(out, "U05.CANON.Z3.F_kN", r["F"] / 1000, 27.43, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z3.s_cp", r["s_cp"], 0.691, "m", rel=0.001)
+    _check(out, "U05.CANON.Z3.M_axis_kNm", r["M_axis"] / 1000, 2.99, "kNm", rel=0.002)
+    _check(out, "U05.CANON.Z3.R_sill_kN", r["R_sill"] / 1000, 3.74, "kN", rel=0.001)
+    _check(out, "U05.CANON.Z3.s_centroid", r["s_centroid"], 1.00, "m", rel=0.001)
+    _invariant(out, "U05.CANON.Z3.fully_submerged_at_opening",
+               r["fully_submerged"] and r["wetted_open"] > 2.00 and r["top_depth_open"] > 0,
+               "Otvaranje mora nastupiti tek nakon potpunog uronjenja.")
+    f_num, m_num = flap_gate_numeric(1.80)
+    _invariant(out, "U05.CANON.Z3.pressure_integration",
+               abs(f_num - r["F"]) < 1e-3 and abs(m_num - r["M_axis"]) < 1e-3,
+               "Integral tlaka po kosoj ploči ne vraća silu i moment oko osi.")
+    _, m_open = flap_gate_numeric(r["y_open"])
+    _, m_below = flap_gate_numeric(r["y_open"] - 0.1)
+    _, m_above = flap_gate_numeric(r["y_open"] + 0.1)
+    _invariant(out, "U05.CANON.Z3.moment_changes_sign_at_opening",
+               abs(m_open) < 1e-3 and m_below > 0 > m_above,
+               "Moment oko osi mora mijenjati predznak upravo pri dubini otvaranja.")
+    _invariant(out, "U05.CANON.Z3.closed_at_1_80",
+               r["s_cp"] < 0.80 < r["s_centroid"] and r["M_axis"] > 0 and r["R_sill"] > 0,
+               "Pri 1,80 m hvatište je ispod osi, a težište iznad: samo težište bi otvorilo zaklopku.")
+    _invariant(out, "U05.CANON.Z3.sill_balance",
+               abs(r["R_sill"] * 0.80 - r["M_axis"]) < 1e-9,
+               "Sila praga mora uravnotežiti moment vode oko osi.")
+    low_axis = task_flap_gate(a=0.50)
+    _invariant(out, "U05.CANON.Z3.low_axis_opens_partially_submerged",
+               not low_axis["fully_submerged"] and abs(low_axis["y_open"] - 1.5 * math.sin(math.radians(60))) < 1e-12,
+               "Niža os otvara zaklopku dok je ploča još djelomično uronjena (pravilo trećine).")
 
     r = task_triangle()
     _check(out, "U05.CANON.Z4.b_max", r["b_max"], 1.1673, "m", rel=0.001)

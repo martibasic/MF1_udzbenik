@@ -91,11 +91,18 @@ def run():
     top=element(z,'u09vs_z3top').get('d')
     bottom=element(z,'u09vs_z3bottom').get('d')
     check(top.endswith('H365') and bottom.endswith('H365'),"Z3: vodoravni izlaz")
-    near(length(z,'u09vs_z2D1')/length(z,'u09vs_z2d'),100/50,"Z2: omjer promjera 100:50")
-    ztop=element(z,'u09vs_z2top').get('d')
-    check('H85 M95' in ztop and 'H195 M205' in ztop,"Z2: otvoreni tlačni priključci na ulazu i u grlu")
-    for tap,y in (('u09vs_z2tap1',123),('u09vs_z2tap2',138)):
-        t=element(z,tap);near(float(t.get('y'))+float(t.get('height')),y,tap+": priključak spojen na fluid")
+    # Z2: praznjenje spremnika; razine H1 i H2 u zajednickom mjerilu (3,20 : 0,80), otvor u dnu
+    # stvarno otvoren (dva odvojena dijela dna), mlaz izlazi kroz otvor, vrijeme je nepoznanica.
+    near(length(z,'u09vs_z2H1')/length(z,'u09vs_z2H2'),3.20/0.80,"Z2: omjer razina H1:H2")
+    w=element(z,'u09vs_z2water');h2=element(z,'u09vs_z2h2')
+    yb=float(w.get('y'))+float(w.get('height'))
+    near((yb-float(w.get('y')))/(yb-float(h2.get('y1'))),4.0,"Z2: nacrtana voda do H1, isprekidana H2")
+    bl=element(z,'u09vs_z2bottomL');br=element(z,'u09vs_z2bottomR')
+    gap=(float(bl.get('x'))+float(bl.get('width')),float(br.get('x')))
+    check(gap[1]>gap[0],"Z2: otvor u dnu je stvarno otvoren")
+    jet=numbers(element(z,'u09vs_z2jet'))
+    check(gap[0]<=jet[0] and jet[2]<=gap[1] and jet[1]>=yb,"Z2: mlaz izlazi kroz otvor ispod dna")
+    check('?' in ''.join(element(z,'u09vs_z2tlabel').itertext()),"Z2: vrijeme pražnjenja označeno kao nepoznanica")
     a=length(z,'u09vs_z6zc')/1.7
     near(length(z,'u09vs_z6dz')/2.6,a,"Z6: zajednička skala visinskih kota")
     near(length(z,'u09vs_z6height')/1.2,a,"Z6: visina izlaza prema tlu")

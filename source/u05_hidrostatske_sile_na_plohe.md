@@ -165,7 +165,7 @@ $$ {#eq-u05-centar-tlaka-nagnuta}
 
 ::: {#cfd-ustava-opterecenje .mf1-cfd title="Računalna dinamika fluida"}
 
-**Zatvorena ustava i njezin pogon.** Za ustavu gradskoga kanala želimo znati silu vode i moment koji mora uravnotežiti pogon. Fizikalni model je mirujući fluid s dvjema razinama, kao u zadatku Z3 ovoga poglavlja: ulazi su širina ustave, razine vode s obiju strana i položaj osi vrtnje; izlazi su vektor sile i moment oko te osi. Tlak izračunan CFD-om integriramo po cijeloj plohi, a svaki doprinos momentu množimo njegovim krakom prema osi ustave. Provjera: neto sila i visina njezina pravca iz Z3 (razlika dvaju trokutnih dijagrama) moraju se poklopiti s integriranim izlazima; za slojeviti fluid isti je postupak proveden u primjeru [-@ex-u05-pregrada-ulje-voda]. Odluka se odnosi na potreban moment pogona i raspodjelu reakcija na zglob i spojnicu. Zapis iste integracije u CFD-u, s normalom iz tijela u fluid i zato s negativnim predznakom, navodi tablica u odjeljku [-@sec-cfd-mapa].
+**Zatvorena ustava i njezin pogon.** Za nagnutu ustavu gradskoga kanala želimo znati silu vode i moment oko osi vrtnje koji mora uravnotežiti pogon ili prag. Fizikalni model je mirujući fluid, kao u zadatku Z3 ovoga poglavlja: ulazi su širina i nagib ustave, razina vode i položaj osi vrtnje; izlazi su vektor sile i moment oko te osi. Tlak izračunan CFD-om integriramo po cijeloj plohi, a svaki doprinos momentu množimo njegovim krakom prema osi ustave. Provjera: sila i krak njezina hvatišta prema osi iz Z3 moraju se poklopiti s integriranim izlazima, uključujući dubinu pri kojoj moment mijenja predznak; za slojeviti fluid isti je postupak proveden u primjeru [-@ex-u05-pregrada-ulje-voda]. Odluka se odnosi na potreban moment pogona i raspodjelu reakcija na zglob i prag. Zapis iste integracije u CFD-u, s normalom iz tijela u fluid i zato s negativnim predznakom, navodi tablica u odjeljku [-@sec-cfd-mapa].
 
 Zatim možemo istražiti djelomično otvaranje: pojavljuje se mlaz ispod ustave, pa hidrostatička raspodjela uz otvor više nije dovoljan opis. CFD tada povezuje položaj ustave, protok i opterećenje pogona. Točna ukupna sila ne jamči točan moment, a tlak u jednoj točki ne opisuje cijelu plohu. Isti se postupak primjenjuje na stijenku cisterne iz prethodnog poglavlja; nizvodni mlaz i skok pratimo u []{.mf1-chapter-ref target="u15"}.
 :::
@@ -514,63 +514,71 @@ Lokalna normala na donjoj strani koju voda kvasi ima pozitivnu okomitu komponent
 :::
 
 ::: {#ex-u05-cetvrtcilindar-prema-dolje .mf1-we}
-<p class="mf1-box-label">Četvrtcilindrični poklopac uz slobodnu površinu <span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Četvrtcilindrični poklopac u spremniku s nadtlakom plina <span class="mf1-level">T3</span></p>
 
 **Tekst zadatka**
 
-Četvrtcilindrični poklopac širine $b=1{,}20\ \mathrm{m}$ i polumjera $R=0{,}90\ \mathrm{m}$ počinje na slobodnoj površini vode. Voda kvasi stranu prikazanu na skici: normale od fluida prema stijenci imaju okomite komponente prema dolje. Računaj s neto manometarskim tlakom jednakim nuli na slobodnoj površini.
+Četvrtcilindrični poklopac širine $b=1{,}20\ \mathrm{m}$ i polumjera $R=0{,}90\ \mathrm{m}$ počinje na slobodnoj površini vode u zatvorenom spremniku. Iznad vode je plin s manometarskim tlakom $p_{pl}=20{,}0\ \mathrm{kPa}$, a s druge strane poklopca zrak na atmosferskom tlaku. Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ miruje i kvasi stranu prikazanu na skici: normale od fluida prema stijenci imaju okomite komponente prema dolje.
 
 **Traži se**
 
-Odredi komponente i rezultantu.
+Odredi komponente sile na poklopac i njihove pravce djelovanja te rezultantu. Usporedi hvatišta s otvorenim spremnikom ($p_{pl}=0$).
 
-![Četvrtcilindrični poklopac uz slobodnu površinu s okomitom komponentom sile prema dolje.](../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg){#fig-u05-cetvrtcilindricni-poklopac-slobodna-povrsina fig-align="center" fig-alt="Četvrtina kruga koja počinje na slobodnoj površini, voda iznad luka ispunjava pomoćni volumen V*, zrak ispod, a komponenta FV usmjerena je prema dolje."}
+![Četvrtcilindrični poklopac uz slobodnu površinu u zatvorenom spremniku s plinom iznad vode; okomita komponenta sile usmjerena je prema dolje.](../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg){#fig-u05-cetvrtcilindricni-poklopac-slobodna-povrsina fig-align="center" fig-alt="Četvrtina kruga koja počinje na slobodnoj površini zatvorenog spremnika, plin s nadtlakom iznad vode, voda iznad luka ispunjava pomoćni volumen V*, zrak ispod, a komponenta FV usmjerena je prema dolje."}
 
-**Veza s proračunom.** Pozitivna os $z$ usmjerena je prema gore. Ovdje pomoćni volumen $V^*$ ispunjava stvarna voda.
+**Veza s proračunom.** Pozitivna os $z$ usmjerena je prema gore. Pomoćni volumen $V^*$ ispunjava stvarna voda, a plinski nadtlak djeluje na cijelu plohu jednoliko.
 
 **Rješenje**
 
-Za okomitu projekciju vrijedi
+Neto tlak na poklopac je $p_{\mathrm{net}}=p_{pl}+\rho gh$, jer se nadtlak plina ne poništava s atmosferom na suhoj strani. Svaka se komponenta zato sastoji od jednolikoga plinskog i hidrostatičkog dijela. Za okomitu projekciju vrijedi
 
 $$
-A_x=Rb=1{,}08\ \mathrm{m^2},\qquad h_{Cx}=R/2=0{,}45\ \mathrm{m},
+\begin{aligned}
+A_x&=Rb=1{,}08\ \mathrm{m^2},\\
+F_{H,h}&=\rho gA_x\frac R2=4{,}758\ \mathrm{kN},\qquad
+F_{H,p}=p_{pl}A_x=21{,}60\ \mathrm{kN}.
+\end{aligned}
 $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-01}
 
-pa su
+Hidrostatički dio djeluje na dubini $2R/3=0{,}600\ \mathrm{m}$, a jednoliki plinski dio u težištu projekcije, na $R/2=0{,}450\ \mathrm{m}$. Iz jednakosti momenata oko slobodne površine slijedi
 
 $$
-F_H=\rho gA_xh_{Cx}=4{,}758\ \mathrm{kN},\qquad
-h_H=\frac{2R}{3}=0{,}600\ \mathrm{m}.
+F_H=26{,}36\ \mathrm{kN},\qquad
+h_H=\frac{21{,}60\cdot0{,}450+4{,}758\cdot0{,}600}{26{,}36}=0{,}477\ \mathrm{m}.
 $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-02}
 
-Pomoćni volumen je četvrtina valjka,
+Okomita komponenta ima hidrostatički dio jednak težini stvarne vode u četvrtini valjka i plinski dio jednak $p_{pl}$ na vodoravnoj projekciji $Rb$:
 
 $$
-V^*=\frac{\pi R^2}{4}b=0{,}7634\ \mathrm{m^3},
+\begin{aligned}
+V^*&=\frac{\pi R^2}{4}b=0{,}7634\ \mathrm{m^3},\\
+F_{V,h}&=\rho gV^*=7{,}474\ \mathrm{kN},\qquad
+F_{V,p}=p_{pl}Rb=21{,}60\ \mathrm{kN}.
+\end{aligned}
 $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-03}
 
-zbog čega je
+Obje djeluju prema dolje, pa je
 
 $$
-F_V=-\rho gV^*=-7{,}474\ \mathrm{kN}.
+F_V=-(7{,}474+21{,}60)=-29{,}07\ \mathrm{kN}.
 $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-04}
 
-Negativan predznak označuje smjer prema dolje. Pravac djelovanja udaljen je od okomite stijenke
+Hidrostatički dio prolazi težištem četvrtine kruga, $4R/(3\pi)=0{,}382\ \mathrm{m}$ od okomite stijenke, a plinski dio sredinom projekcije, $R/2=0{,}450\ \mathrm{m}$, pa je pravac djelovanja udaljen od stijenke
 
 $$
-x_V=\frac{4R}{3\pi}=0{,}382\ \mathrm{m}.
+x_V=\frac{21{,}60\cdot0{,}450+7{,}474\cdot0{,}382}{29{,}07}=0{,}432\ \mathrm{m}.
 $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-05}
 
-Stoga je
+Rezultanta je
 
 $$
-F_R=8{,}860\ \mathrm{kN},\qquad
-\theta_R=-57{,}52^\circ.
+F_R=\sqrt{26{,}36^2+29{,}07^2}=39{,}24\ \mathrm{kN},\qquad
+\theta_R=\operatorname{atan2}(-29{,}07,\,26{,}36)=-47{,}8^\circ.
 $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-06}
 
 **Provjera i tumačenje**
 
-Izravna integracija po kružnom luku koji počinje na slobodnoj površini daje $F_H=\rho gbR^2/2$ i $|F_V|=\rho gb\pi R^2/4$. Zato mora vrijediti $|F_V|/F_H=\pi/2=1{,}571$; numerički je $7{,}474/4{,}758=1{,}571$.
+Na kružnom luku sve tlačne normale prolaze kroz $O$ za bilo koju raspodjelu tlaka, pa moment komponenata oko $O$ mora iščeznuti: $F_Hh_H=26{,}36\cdot0{,}477=12{,}58\ \mathrm{kN\,m}$ i $|F_V|x_V=29{,}07\cdot0{,}432=12{,}58\ \mathrm{kN\,m}$. Uz $p_{pl}=0$ ostaju samo hidrostatički dijelovi, $F_H=4{,}758\ \mathrm{kN}$ na $0{,}600\ \mathrm{m}$ i $F_V=-7{,}474\ \mathrm{kN}$ na $0{,}382\ \mathrm{m}$, s omjerom $|F_V|/F_H=\pi/2$ koji daje izravna integracija po luku. Nadtlak od $20\ \mathrm{kPa}$, oko dva metra vodenog stupca, povećava silu četiri do pet puta i pomiče oba hvatišta prema težištima projekcija. Zato se formula $h_{CP}=h_C+I_G/(Ah_C)$, izvedena samo za $p=\rho gh$, u zatvorenom spremniku ne smije primijeniti; moment se računa iz cijele raspodjele, kako je najavljeno u odjeljku o referentnom tlaku.
 :::
 
 ::: {#ex-u05-zglobni-cetvrtcilindricni-poklopac .mf1-we}
@@ -744,33 +752,34 @@ $F_x=-5{,}948\ \mathrm{kN}$ (prema stijenci) na dubini $0{,}600\ \mathrm{m}$; $F
 [Razina: T2]{.mf1-task-level}
 
 <span id="task-u05-kosi-poklopac-sa-zglobom"></span>
+<span id="task-pregrada-izmedu-dviju-razina-vode"></span>
 
-### Pregrada između dviju razina vode {#task-pregrada-izmedu-dviju-razina-vode .unnumbered .unlisted}
+### Samootvarajuća kosa zaklopka kanala {#task-samootvarajuca-kosa-zaklopka .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Okomita nepropusna pregrada širine $b=1{,}20\ \mathrm{m}$ i visine $H=3{,}00\ \mathrm{m}$ dijeli dva otvorena spremnika. Dubina vode iznad zajedničkog dna lijevo je $h_L=2{,}40\ \mathrm{m}$, a desno $h_D=1{,}20\ \mathrm{m}$. Pregrada je zglobno oslonjena u dnu $A$; u gornjoj točki $B$ pridržava je vodoravna spojnica. Zanemari trenje i moment težine pregrade.
-
-Uzmi $+x$ udesno, $+y$ prema gore i pozitivan moment suprotno kazaljci na satu.
+Pravokutna zaklopka širine $b=1{,}50\ \mathrm{m}$ i duljine $L=2{,}00\ \mathrm{m}$, mjereno uzduž ploče, zatvara ispust kanala. Nagnuta je za $\theta=60^\circ$ prema vodoravnici tako da joj je gornji rub nizvodno, a donji rub naliježe na prag na dnu kanala. Zaklopka se okreće oko vodoravne osi koja je $a=0{,}80\ \mathrm{m}$ od donjeg ruba, mjereno uzduž ploče. Uzvodno je voda gustoće $\rho=998\ \mathrm{kg/m^3}$ dubine $y$ iznad dna, a nizvodno zrak na atmosferskom tlaku. Zanemari težinu zaklopke i trenje u osi. Dok hvatište sile vode leži ispod osi, voda pritišće donji rub na prag; kad se hvatište podigne iznad osi, zaklopka se zakrene i otvori ispust.
 
 **Traži se**
 
-Odredi neto silu vode i visinu njezina pravca djelovanja iznad dna, moment vode oko $A$ te iznos i smjer sile spojnice.
+1. Odredi dubinu vode $y_{otv}$ pri kojoj se zaklopka sama otvara i provjeri je li tada potpuno uronjena.
+2. Za dubinu $y=1{,}80\ \mathrm{m}$ odredi silu vode, položaj njezina hvatišta uzduž ploče od donjeg ruba i silu kojom prag pridržava donji rub.
+3. Obrazloži što bi dao proračun u kojem se sila vode smjesti u težište ploče.
 
 :::: {.content-visible when-format="html"}
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Odvojeno nacrtaj dva trokutasta dijagrama manometarskog tlaka. Svaki daje silu na visini $h/3$ iznad dna. Sile i njihove momente oduzmi uz odgovarajuće predznake; krak spojnice iznosi $H$.
+Za dubinu manju od $L\sin\theta$ omočen je samo dio ploče, a hvatište je na trećini omočene duljine od dna; provjeri je li uvjet „hvatište u osi” u tom području uopće ostvariv. Za potpuno uronjenu ploču koristi $y_{CP}-y_C=I_G\sin\theta/(Ah_C)$ s koordinatom uzduž ploče i $h_C=y-(L/2)\sin\theta$, pa uvjet $L/2-(y_{CP}-y_C)=a$ riješi po $h_C$. Moment oko osi računaj s krakom uzduž ploče.
 :::
 ::::
 ::::
 
 :::: {.content-visible .mf1-answer-online when-format="html"}
-::: {.callout-tip collapse="true" data-answer-key="true"}
+::: {.callout-tip collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
 
-$F_x=+25{,}377\ \mathrm{kN}$; $y_R=0{,}9333\ \mathrm{m}$ iznad dna; $M_A=-23{,}685\ \mathrm{kN\,m}$; $F_s=7{,}895\ \mathrm{kN}$ ulijevo u $B$. Provjera: pri jednakim razinama neto sila i moment jednaki su nuli; zamjena lijeve i desne razine obrće njihove predznake.
+Djelomično uronjena ploča otvorila bi se tek pri omočenoj duljini $3a=2{,}40\ \mathrm{m}>L$, pa je pri otvaranju potpuno uronjena: $h_C=L^2\sin\theta/[12(L/2-a)]=1{,}443\ \mathrm{m}$, $y_{otv}=2{,}309\ \mathrm{m}$, gornji rub $0{,}577\ \mathrm{m}$ ispod površine. Pri $y=1{,}80\ \mathrm{m}$: $F=27{,}43\ \mathrm{kN}$, hvatište $0{,}691\ \mathrm{m}$ od donjeg ruba, dakle ispod osi; moment oko osi $2{,}99\ \mathrm{kN\,m}$; sila praga $R=3{,}74\ \mathrm{kN}$ okomito na ploču. Sila u težištu, $1{,}00\ \mathrm{m}$ od donjeg ruba i iznad osi, dala bi otvaranje pri svakoj dubini; smjer momenta određuje hvatište u centru tlaka, ne težište.
 :::
 ::::
 
@@ -881,9 +890,9 @@ $F=12{,}218\ \mathrm{kN}$; $s(F)=0{,}192\ \mathrm{kN}$; kombinirana nesigurnost 
 
 :::::
 
-![Skice uz Z1–Z6: vodonepropusna vrata, parabolični pokrov, dvije razine vode, trokutasti poklopac, radijalni poklopac s osi u središtu kružnice i mjerni panel.](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe-skice fig-align="center" fig-alt="Šest panela s kotama i stvarnom vodom, u kojima su tražene sile vode označene upitnikom umjesto strelicom, a os radijalnog poklopca u Z5 leži u središtu kružnice O."}
+![Skice uz Z1–Z6: vodonepropusna vrata, parabolični pokrov, samootvarajuća kosa zaklopka, trokutasti poklopac, radijalni poklopac s osi u središtu kružnice i mjerni panel.](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe-skice fig-align="center" fig-alt="Šest panela s kotama i stvarnom vodom, u kojima su tražene sile vode označene upitnikom umjesto strelicom; kosa zaklopka u Z3 ima os između donjeg ruba na pragu i gornjeg ruba, a os radijalnog poklopca u Z5 leži u središtu kružnice O."}
 
-**Napomene uz skice.** Tražene sile vode nisu nacrtane: u Z1, Z2 i Z6 označene su s „?”. Z1 i Z4 pogledi su okomito na plohu, pa sila djeluje okomito na crtež. U Z2 je ispod pokrova suhi kanal, a nacrtana je samo jedna lokalna tlačna sila $d\vec F$. U Z5 os je u $O$, a spojnica izvan presjeka. U Z6 oznaka $\pm$ znači standardnu nesigurnost.
+**Napomene uz skice.** Tražene sile vode nisu nacrtane: u Z1, Z2 i Z6 označene su s „?”. Z1 i Z4 pogledi su okomito na plohu, pa sila djeluje okomito na crtež. U Z2 je ispod pokrova suhi kanal, a nacrtana je samo jedna lokalna tlačna sila $d\vec F$. U Z3 dubina vode $y$ nije u mjerilu tražene dubine otvaranja; os i prag nacrtani su u mjerilu uzduž ploče. U Z5 os je u $O$, a spojnica izvan presjeka. U Z6 oznaka $\pm$ znači standardnu nesigurnost.
 
 ## Sažetak
 

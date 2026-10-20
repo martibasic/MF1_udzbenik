@@ -882,57 +882,66 @@ U svim zadatcima uzmi $g=9{,}81\ \text{m/s}^2$. Plovci su nepropusni, fluidi mir
 
 ::::: {.mf1-vjezbe-list}
 
-### Uzgon potpuno uronjenog tijela {#task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno .unnumbered .unlisted}
+<span id="task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno"></span>
+
+### Promjena gaza broda između mora i rijeke {#task-promjena-gaza-broda-more-rijeka .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Hermetički zatvoreno tijelo volumena $V = 0{,}085\ \text{m}^3$ i mase $m = 62\ \text{kg}$ potpuno je uronjeno u vodu gustoće $\rho = 998\ \text{kg/m}^3$.
+Brod istisnine $\Delta = 12\,000\ \text{t}$ uplovljava iz mora gustoće $\rho_{mv} = 1025\ \text{kg/m}^3$ u riječnu luku s vodom gustoće $\rho_{rij} = 998\ \text{kg/m}^3$. Površina vodne linije iznosi $A_{vl} = 2400\ \text{m}^2$ i u promatranom rasponu gaza smatra se stalnom; brod ostaje bez trima i nagiba.
 
 **Traži se**
 
-Odredi silu uzgona i silu koju treba primijeniti da tijelo ostane potpuno uronjeno i u mirovanju.
+1. Odredi istisnuti volumen u moru i u rijeci te promjenu gaza pri uplovljavanju.
+2. Odredi masu tereta koju bi trebalo iskrcati da gaz u rijeci ostane jednak gazu u moru.
+3. Odredi masu koja u moru mijenja gaz za $1\ \text{cm}$ i obrazloži zašto se ta vrijednost razlikuje u rijeci.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Postupak je isti kao u primjeru [-@ex-u07-uzgon-na-potonulo-pumpno-kuciste-pri-ispitivanju]. Uzgon je $F_U = \rho gV$; potom usporedi $F_U$ i težinu $F_G = mg$ da dobiješ potrebnu dodatnu silu.
+Masa istisnine jednaka je masi broda u obje vode, $\rho V_{ist}=\Delta$; razlika istisnutih volumena podijeljena površinom vodne linije daje promjenu gaza. Za jednak gaz istisnuti volumen mora ostati isti, pa se mijenja masa.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$F_U \approx 832\ \text{N}$; kako je $F_U > F_G = 608\ \text{N}$, potrebna je dodatna sila prema dolje $\approx 224\ \text{N}$.
+$V_{mv}\approx11\,707\ \text{m}^3$, $V_{rij}\approx12\,024\ \text{m}^3$; gaz u rijeci veći je za $\Delta T\approx0{,}132\ \text{m}$. Za isti gaz treba iskrcati $\Delta(1-\rho_{rij}/\rho_{mv})\approx316\ \text{t}$. Masa po centimetru gaza $\rho A_{vl}\cdot0{,}01\ \text{m}$ iznosi $24{,}6\ \text{t/cm}$ u moru i $24{,}0\ \text{t/cm}$ u rijeci jer je lakšoj vodi za istu masu potreban veći volumen.
 :::
 ::::
 
 [Razina: T1]{.mf1-task-level}
 
-### Gaz opterećenog pontona {#task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine .unnumbered .unlisted}
+<span id="task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine"></span>
+
+### Plutanje homogenog drvenog bloka {#task-plutanje-homogenog-bloka-stabilitet .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Pravokutni radni ponton duljine $L = 2{,}60\ \text{m}$, širine $b = 1{,}40\ \text{m}$ i visine boka $H = 0{,}38\ \text{m}$ ima vlastitu masu $m_p = 510\ \text{kg}$. Na njega se simetrično postavlja teret mase $m_t = 220\ \text{kg}$. Ponton pluta u vodi gustoće $\rho = 998\ \text{kg/m}^3$. Dodatna masa do ruba boka geometrijska je granica uspravnog modela, a ne dopuštenje za ukrcaj tolikog tereta.
+Homogeni drveni blok duljine $L = 2{,}00\ \text{m}$, širine $b = 0{,}70\ \text{m}$ i visine $h = 0{,}50\ \text{m}$ te gustoće $\rho_d = 650\ \text{kg/m}^3$ pluta u mirnoj vodi gustoće $\rho = 998\ \text{kg/m}^3$ s većom stranicom presjeka vodoravno. Nagib je malen, a bokovi okomiti.
 
 **Traži se**
 
-Odredi istisnuti volumen, srednji gaz i preostalu dodatnu masu koju ponton može primiti prije nego što rub boka dođe do razine vode.
+1. Odredi gaz $T$ i nadvođe bloka.
+2. Odredi $KB$, $BM$, $KG$ i početnu metacentarsku visinu $GM$ te zaključi je li uspravni položaj početno stabilan.
+3. Izvedi uvjet stabilnosti homogenog pravokutnog bloka u obliku omjera $b/h$ i relativne gustoće $s=\rho_d/\rho$ te odredi najmanju širinu $b_{min}$ za zadanu visinu i gustoću.
+4. Obrazloži bi li blok iste geometrije, ali gustoće $900\ \text{kg/m}^3$, bio početno stabilniji ili manje stabilan.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Postupak je isti kao u primjeru [-@ex-u07-koliki-gaz-ima-radni-ponton-pri-simetricnom]. Iz ravnoteže sila u okomitom smjeru vrijedi $\rho gV_{ist} = (m_p + m_t)g$; srednji gaz slijedi iz $V_{ist} = LbT$.
+Za homogeni blok je $T=sh$, $KB=T/2$, $KG=h/2$ i $BM=b^2/(12T)$. Uvjet $GM\ge0$ sredi po $b^2$; dobiva se izraz koji ovisi samo o $h$ i $s$. U 4. zahtjevu usporedi kako se mijenjaju $KB$ i $BM$ kad gaz raste.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
-::: {.callout-tip collapse="true" data-answer-key="true"}
+::: {.callout-tip collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
 
-$V_{ist} \approx 0{,}73\ \text{m}^3$; srednji gaz $T \approx 0{,}20\ \text{m}$; dodatna masa do ruba $\approx 650\ \text{kg}$.
+$T=0{,}326\ \text{m}$, nadvođe $0{,}174\ \text{m}$; $KB=0{,}163$, $BM=0{,}125$, $KG=0{,}250$, $GM=+0{,}038\ \text{m}$: početno stabilan, ali s malom rezervom. Uvjet $GM\ge0$ daje $b/h\ge\sqrt{6s(1-s)}$, ovdje $b_{min}\approx0{,}584\ \text{m}$. Za $\rho_d=900\ \text{kg/m}^3$: $T=0{,}451$, $KB=0{,}225$, $BM=0{,}091$, $GM=+0{,}066\ \text{m}$, dakle stabilniji; dublji uron više podiže $KB$ nego što smanjuje $BM$, a najmanju rezervu ima blok sa $s\approx0{,}5$.
 :::
 ::::
 
-[Razina: T1]{.mf1-task-level}
+[Razina: T2]{.mf1-task-level}
 
 <span id="task-u07-plutajuca-servisna-platforma-duljine-i-sirine-ima"></span>
 
@@ -989,7 +998,7 @@ $\rho_x \approx 992{,}4\ \text{kg/m}^3$; uron je veći jer otopina ima manju gus
 :::
 ::::
 
-[Razina: T2]{.mf1-task-level}
+[Razina: T1]{.mf1-task-level}
 
 <span id="task-u07-plutajuci-modul-istiskuje-volumen-vode-i-ima"></span>
 
@@ -1058,9 +1067,9 @@ $T_m=0{,}220\ \text{m}$; $(V_u,V_v)=(0{,}269;0{,}470)\ \text{m}^3$; $\Delta=689{
 
 :::::
 
-![Skice uz Z1–Z6: pontoni, areometri i plutajuće platforme.](../assets/print/u07_vjezbe_skice.svg){#fig-u07-vjezbe fig-align="center" fig-alt="Šest panela: uronjeni blok, uspravni ponton, nagnuti ponton s pomaknutim utegom, dva areometra, dva presjeka pontona i nagnuta platforma u dva fluida."}
+![Skice uz Z1–Z6: brod u moru i rijeci, drveni blok, pontoni, areometri i plutajuće platforme.](../assets/print/u07_vjezbe_skice.svg){#fig-u07-vjezbe fig-align="center" fig-alt="Šest panela: presjek broda s vodnim linijama u moru i rijeci, plutajući homogeni blok s težištem, nagnuti ponton s pomaknutim utegom, dva areometra, dva presjeka pontona i nagnuta platforma u dva fluida."}
 
-**Napomene uz skice.** U Z1 su $F_U$ i $F_G$ nacrtani jednakim shematskim duljinama, a tražena dodatna sila $F_d$ nije nacrtana. U Z2, Z3 i Z5 vodne su linije shematske jer se gazovi traže. U Z6 položaj akumulatora nije u mjerilu udaljenosti $e$, a centar uzgona nije nacrtan jer se traži.
+**Napomene uz skice.** U Z1 razmak vodnih linija nije u mjerilu tražene promjene gaza. U Z2, Z3 i Z5 vodne su linije shematske jer se gazovi traže; u Z2 centar uzgona nije nacrtan jer se traži $KB$. U Z6 položaj akumulatora nije u mjerilu udaljenosti $e$, a centar uzgona nije nacrtan jer se traži.
 
 ## Sažetak
 

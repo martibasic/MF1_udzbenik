@@ -77,7 +77,7 @@
       "kind": "chapter",
       "number": "1",
       "part": "part-1",
-      "source_sha256": "a4e2b5b7d013538b5a867dbe4ab34228b95cef7461e8230dde1ea0d1636f5000",
+      "source_sha256": "48fb8327b2a5343a74f472a5d14fcbe7c58c604247ae715835266ff496b256ba",
       "sections": [
         {
           "id": "fluid-kao-kontinuum",
@@ -178,6 +178,8 @@
         "eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-02",
         "eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-03",
         "eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-04",
+        "eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-05",
+        "eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-06",
         "fig-uvod-u01",
         "fig-u01-gustoca-sr",
         "fig-u01-optereceni-klip-i-tlak-u-zatvorenom-cilindru",
@@ -220,7 +222,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "e98e5b2fe4e5a4becffe777dbeffd71d45c55dda135a906fd480fe21d2dce5a7",
+      "source_sha256": "28c1b02821ab7d4848d9d4d474084135b6a50a668281e32910062ef5da732ad1",
       "sections": [
         {
           "id": "viskoznost",
@@ -271,6 +273,7 @@
         "eq-reologija-dinamicka-i-kinematicka-viskoznost-02",
         "eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-01",
         "eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-02",
+        "eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-03",
         "eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-01",
         "eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-02",
         "eq-reologija-matematicki-izvod-youngova-jednadzba-i-podrijetl-01",
@@ -313,19 +316,19 @@
         "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-04",
         "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-05",
         "fig-uvod-u02",
-        "fig-u02-kinematicka-viskoznost",
+        "fig-u02-rotirajuci-disk",
         "fig-u02-viskoznost-i-kapilarnost",
         "fig-u02-kapilarni-uspon-etanol",
         "fig-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom",
         "fig-u02-lezaj-temperatura",
         "fig-u02-vjezbe",
-        "ex-u02-pretvorba-dinamicke-u-kinematicku-viskoznost-t1",
+        "ex-moment-trenja-rotirajuceg-diska",
         "ex-u02-smicno-naprezanje-u-tankom-uljnom-sloju-t2",
         "ex-u02-kapilarni-uspon-etanola-u-staklenoj-cjevcici-t1",
         "ex-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom-t3",
         "ex-u02-hladni-start-i-radna-temperatura-koliko-kosta",
         "ex-u02-mikrofluidicki-kanal-u-lab-on-chip-ure",
-        "task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se",
+        "task-mjerenje-viskoznosti-kliznom-plocom",
         "task-kapljica-i-sapunasti-mjehur",
         "task-ploca-izmedu-dva-procjepa",
         "task-kapilarni-uspon-u-procjepu-limova",
@@ -352,7 +355,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "cb5b937cc553d0460dd9c8287eeccde6efb6822d9580c7186ef53080d4301275",
+      "source_sha256": "dd882e4c2fdc41d5fad7561a1f2fb182aa1db8ceb89744d492b04708cb6eee69",
       "sections": [
         {
           "id": "diferencijalna-jednadžba-hidrostatike",
@@ -446,9 +449,9 @@
         "ex-u03-tlak-na-usisu-pumpe-za-cirkulaciju-ulja",
         "ex-u03-balastni-tank-broda-tlak-iznutra-i-izvana",
         "ex-u03-iot-tlacni-senzor-za-otkrivanje-propustanja-u",
-        "task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu",
+        "task-visina-iz-barometarskog-ocitanja",
         "task-razina-vode-iz-razlike-tlakova",
-        "task-u03-cjevovod-s-uljem-gustoce-spojen-je-na",
+        "task-nagnuti-manometar-ventilacijski-kanal",
         "task-debljina-sloja-ulja-iz-tlaka",
         "task-izbor-manometra-za-podtlak",
         "task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor"
@@ -473,7 +476,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "b3c38edc25e9b2f199f2acb37122af658750ff6e757fa3b9aec0d3dd575c29f9",
+      "source_sha256": "ede3b5866d43ce6f308d00e5729d62f1146497c92599533e6ffa0ebc053a1e1c",
       "sections": [
         {
           "id": "translatorno-ubrzanje",
@@ -562,20 +565,20 @@
         "eq-separator-polumjer-razdjelnice",
         "eq-separator-vrijeme-zadrzavanja",
         "fig-uvod-u04",
-        "fig-u04-otvoreni-spremnik-na-laboratorijskim-kolicima",
+        "fig-u04-zatvoreni-puni-spremnik",
         "fig-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom",
         "fig-tank-broda-u-kruznom-zavoju",
         "fig-u04-rotirajuci-cilindricni-spremnik",
         "fig-u04-autocisterna-kocenje",
         "fig-u04-vjezbe",
-        "ex-u04-otvoreni-spremnik-na-laboratorijskim-kolicima-t2",
+        "ex-zatvoreni-puni-spremnik-odzracnik-ubrzanje",
         "ex-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom",
         "ex-tank-broda-u-kruznom-zavoju",
         "ex-u04-rotirajuci-cilindricni-spremnik-s-granicom-prelijevanja-t3",
         "ex-u04-nagib-goriva-u-spremniku-autocisterne-pri-kocenju",
         "ex-centrifugalni-separator-goriva",
         "task-u04-otvoreni-pravokutni-spremnik-duljine-i-pocetne-dubine",
-        "task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine",
+        "task-spremnik-na-dizalici-dva-ubrzanja",
         "task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce",
         "task-vrtnja-iz-radijalne-razlike-tlakova",
         "task-provjera-smirivanja-ubrzanog-fluida",
@@ -607,7 +610,7 @@
       "kind": "chapter",
       "number": "5",
       "part": "part-2",
-      "source_sha256": "ea44a48d7bc0084597256de7e590609cfff8b8702e09da151bfcc2af96162f09",
+      "source_sha256": "4c0b11e5d02c5d9c3f156e255aaa07ba546d8491bc434653b2a9f248fcb83fbb",
       "sections": [
         {
           "id": "hidrostatske-sile-na-plohe",
@@ -754,7 +757,7 @@
         "ex-u05-zglobni-cetvrtcilindricni-poklopac",
         "task-vodonepropusna-vrata-naplavljenog-odjeljka",
         "task-parabolicni-pokrov-suhog-kanala",
-        "task-pregrada-izmedu-dviju-razina-vode",
+        "task-samootvarajuca-kosa-zaklopka",
         "task-sirina-trokutastog-poklopca",
         "task-radijalni-poklopac-s-tezinom",
         "task-u05-nesigurnost-modela-i-mjerenja"
@@ -781,7 +784,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "6bbf97304365d124bec67f4275e94091ada09ea14972465fa5e36231d62acc03",
+      "source_sha256": "e6d1d67821b2b8f2a5c1154affa1a5cc8485e8878fec9a337518928f16bed3e5",
       "sections": [
         {
           "id": "sila-uzgona",
@@ -913,8 +916,8 @@
         "ex-u07-plutajuca-servisna-platforma-na-granici-ulja-i",
         "ex-u07-izolirani-puni-bocni-tank-kao-dodana-masa",
         "ex-u07-plutajuci-vjetroagregat-tipa-cilindricne-plovne-osnove-t3",
-        "task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno",
-        "task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine",
+        "task-promjena-gaza-broda-more-rijeka",
+        "task-plutanje-homogenog-bloka-stabilitet",
         "task-metacentarska-visina-iz-pokusa-nagibanja",
         "task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta",
         "task-spustanje-opreme-ili-dodavanje-balasta",
@@ -942,7 +945,7 @@
       "kind": "chapter",
       "number": "7",
       "part": "part-3",
-      "source_sha256": "ef9455c1a453119f049ec222c1d7a7b764892546404edb7fcb180b34861910c7",
+      "source_sha256": "3c401ab2f91b39b2f522bc64858f7250a38c1f53952a744eb7796383db4f9948",
       "sections": [
         {
           "id": "kinematika-strujanja",
@@ -1080,7 +1083,7 @@
         "task-grijac-ventilacijskog-zraka-strojarnice",
         "task-protok-kroz-kosu-kontrolnu-plohu",
         "task-u08-u-komoru-za-mijesanje-ulaze-dvije-vodene",
-        "task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz",
+        "task-protok-iz-izmjerenog-profila-brzine",
         "task-klip-s-protocnim-otvorom",
         "task-balastni-tank-dvodna-mijesanje-i-odzracnik"
       ]
@@ -1106,7 +1109,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "30310a74d020a2c7e6cd58e8ae4801755f5d52290c831c57501971362103a2f5",
+      "source_sha256": "029e1c33c3da992d897ff49ca419a3a76c341afcb96b709126c6b78921b8324b",
       "sections": [
         {
           "id": "mehanička-energija-idealnoga-toka",
@@ -1208,7 +1211,7 @@
         "ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2",
         "ex-u09-pitot-staticka-sonda-na-bespilotnoj-letjelici-za",
         "task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine",
-        "task-venturijeva-cijev-rashladne-vode",
+        "task-vrijeme-praznjenja-spremnika",
         "task-tlak-u-silaznom-suzenju",
         "task-pitot-s-izdignutim-senzorom",
         "task-odabir-grla-prema-tlaku",
@@ -1364,7 +1367,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "4be817bd816107875ebc2e34a5b447babcb8c1283c80786e270bc14e44ca9a56",
+      "source_sha256": "24e954fd81374e92539b980a3a6916fd2ca418abca78dbc98d54cdcdd97e4923",
       "sections": [
         {
           "id": "integralni-zakon-količine-gibanja",
@@ -1505,7 +1508,7 @@
         "ex-rotirajuca-mlaznica-pranje-tanka",
         "task-vodomlazni-potisak-broda",
         "task-propeler-aktuatorski-disk",
-        "task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez",
+        "task-koljeno-u-okomitoj-ravnini-tezina",
         "task-moment-ekscentricnog-mlaza",
         "task-mlaz-na-pomicnu-plocu",
         "task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz"
@@ -1532,7 +1535,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "f042e9f5c9bd14d06ed73be145af6e76740122bd7773372242343d69368734ee",
+      "source_sha256": "501a80b6c552763b3eb8c3517a7a93bb3b72970ed65aaf952d38de23d1722e99",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -1660,7 +1663,7 @@
         "ex-u14-buckinghamova-analiza-otpora-kugle-i-krivulja-cd",
         "ex-u14-machov-i-strouhalov-broj-stlacivost-i-vrtlozno",
         "task-ventilacijski-kanal-hidraulicki-promjer",
-        "task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom",
+        "task-dimenzije-manningove-jednadzbe",
         "task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak",
         "task-reynoldsova-slicnost-hidroprofila",
         "task-u14-frekvencija-otpustanja-vrtloga-iza-geometrijski-slicnog-tijela",
@@ -1686,7 +1689,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "09698debd2cfad8f4d7aa61a17e72a82e505ac039d8aaba9e685ff76253bd73c",
+      "source_sha256": "e75d71d911f0d52b47bf0a5af9907c57b5b80783d28374c81135e8237383b1b2",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1796,7 +1799,7 @@
         "ex-intenzitet-turbulencije",
         "ex-stepenica-mjerenje-cfd",
         "task-materijalna-derivacija",
-        "task-viskozna-difuzija",
+        "task-smicno-naprezanje-prva-celija",
         "task-poiseuille-inverzni",
         "task-couette-povrat",
         "task-granicni-sloj-model",
@@ -1992,7 +1995,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "7cc468c3c278a7c88c0365f8abe2b319068265db62201c8d7d5295097aa295ca",
+      "source_sha256": "55326998a3be8bc005e727c43969a8d9ecc4cf91f8a44d3c263bf6c940c65cd8",
       "sections": [
         {
           "id": "od-lopatice-do-turbostroja",
@@ -2102,7 +2105,7 @@
         "ex-propeler-u-napredovanju",
         "ex-u12-propeler-dronskog-kvadkoptera-u-stanju-visa-t2",
         "task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice",
-        "task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice",
+        "task-pokretna-ploca-i-kolo-s-plocama",
         "task-izlaz-lopatice-iz-izmjerene-sile",
         "task-dva-radijusa-i-rad-rotora",
         "task-vodomlazni-pogon-uz-ogranicenu-snagu",
@@ -2128,7 +2131,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "044cac01eda4da73f33e3610dc6511042bc6248cf647c3c6242bda947b4e536a",
+      "source_sha256": "dac131c071c60abd356f16f926e13db790c43cb4c894d9ab762b2a2c95af0b49",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2232,7 +2235,7 @@
         "ex-hidraulicki-skok-bazen",
         "ex-manning-osjetljivost",
         "task-otvoreni-fr",
-        "task-kriticna-dubina",
+        "task-istjecanje-ispod-ustave",
         "task-trapezni-presjek",
         "task-kontrolni-presjek-na-pragu",
         "task-skok-mjerenje",
@@ -2360,7 +2363,7 @@
       "kind": "appendix",
       "number": "C",
       "part": null,
-      "source_sha256": "1cafcde0329a6b9702629dd36802d6f7d8dd413bc19fe71d353f778e68f7644d",
+      "source_sha256": "5708274941e5c2c7b184eb88c995a0cfada42692f2d491b49d34c6c7754c05ab",
       "sections": [
         {
           "id": "globalna-provjera-prije-računa",
@@ -2518,7 +2521,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "1a2f1eb1ba825216d4299b0fe1c48fc04038d9a3ab2354dffdf9b9355590f016",
+      "source_sha256": "80f16434f817330a16746d1e54cd627324c0486866186593efcbfe651afdb2da",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -2964,6 +2967,20 @@
       "number": "1.49",
       "latex": "F_s = p_MA_s = F_p\\left(\\frac{d_s}{d_p}\\right)^2 = 420\\left(\\frac{28}{14}\\right)^2\\ \\text{N} = 1{,}680\\ \\text{kN}."
     },
+    "eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-05": {
+      "id": "eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-05",
+      "kind": "Equation",
+      "document": "u01",
+      "number": "1.50",
+      "latex": "\\begin{aligned}\n\\rho g\\Delta z &= 860\\cdot9{,}81\\cdot2{,}5 \\approx 2{,}11\\cdot10^4\\ \\text{Pa} = 21{,}1\\ \\text{kPa},\\\\\np_s &= p_M-\\rho g\\Delta z \\approx 2{,}707\\ \\text{MPa},\n\\end{aligned}"
+    },
+    "eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-06": {
+      "id": "eq-svojstva-tlak-rijeseni-primjer-hidraulicka-stezna-naprava-na-r-06",
+      "kind": "Equation",
+      "document": "u01",
+      "number": "1.51",
+      "latex": "F_s' = p_sA_s \\approx 2{,}707\\cdot10^6\\cdot6{,}158\\cdot10^{-4}\\ \\text{N} \\approx 1{,}667\\ \\text{kN}."
+    },
     "fig-uvod-u01": {
       "id": "fig-uvod-u01",
       "kind": "Figure",
@@ -3238,300 +3255,307 @@
       "kind": "Equation",
       "document": "u02",
       "number": "2.10",
-      "latex": "\\nu = \\frac{\\mu}{\\rho}."
+      "latex": "\\tau(r)=\\mu\\frac{\\omega r}{\\delta},\\qquad\n\\tau(R)=0{,}12\\cdot\\frac{62{,}83\\cdot0{,}060}{0{,}20\\cdot10^{-3}}\\approx2{,}26\\ \\text{kPa}."
     },
     "eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-02": {
       "id": "eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-02",
       "kind": "Equation",
       "document": "u02",
       "number": "2.11",
-      "latex": "\\nu = \\frac{\\mu}{\\rho} = \\frac{0{,}18}{900} = 2{,}00 \\cdot 10^{-4}\\ \\text{m}^2/\\text{s}."
+      "latex": "\\begin{aligned}\nM&=\\int_0^R \\tau(r)\\,r\\,2\\pi r\\,dr\n=\\frac{2\\pi\\mu\\omega}{\\delta}\\int_0^R r^3\\,dr\n=\\frac{\\pi\\mu\\omega R^4}{2\\delta}\\\\\n&=\\frac{\\pi\\cdot0{,}12\\cdot62{,}83\\cdot0{,}060^4}{2\\cdot0{,}20\\cdot10^{-3}}\n\\approx0{,}767\\ \\text{N m}.\n\\end{aligned}"
+    },
+    "eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-03": {
+      "id": "eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-03",
+      "kind": "Equation",
+      "document": "u02",
+      "number": "2.12",
+      "latex": "P=M\\omega=0{,}767\\cdot62{,}83\\approx48{,}2\\ \\text{W}."
     },
     "eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-01": {
       "id": "eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.12",
+      "number": "2.13",
       "latex": "\\tau_{ij} = \\mu\\!\\left(\\frac{\\partial v_i}{\\partial x_j} + \\frac{\\partial v_j}{\\partial x_i}\\right),"
     },
     "eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-02": {
       "id": "eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-02",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.13",
+      "number": "2.14",
       "latex": "\\tau_{11} + \\tau_{22} + \\tau_{33} = 2\\mu\\!\\left(\\frac{\\partial v_1}{\\partial x_1} + \\frac{\\partial v_2}{\\partial x_2} + \\frac{\\partial v_3}{\\partial x_3}\\right) = 2\\mu\\,\\nabla\\cdot\\vec{v} = 0,"
     },
     "eq-reologija-matematicki-izvod-youngova-jednadzba-i-podrijetl-01": {
       "id": "eq-reologija-matematicki-izvod-youngova-jednadzba-i-podrijetl-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.14",
+      "number": "2.15",
       "latex": "\\sigma_{sv} = \\sigma_{sl} + \\sigma_{lv}\\cos\\theta,"
     },
     "eq-reologija-matematicki-izvod-youngova-jednadzba-i-podrijetl-02": {
       "id": "eq-reologija-matematicki-izvod-youngova-jednadzba-i-podrijetl-02",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.15",
+      "number": "2.16",
       "latex": "\\cos\\theta = \\frac{\\sigma_{sv} - \\sigma_{sl}}{\\sigma_{lv}}."
     },
     "eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-05": {
       "id": "eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-05",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.16",
+      "number": "2.17",
       "latex": "F_{\\sigma,z} = \\sigma\\pi d\\cos\\theta."
     },
     "eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-06": {
       "id": "eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-06",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.17",
+      "number": "2.18",
       "latex": "F_G = \\rho gV = \\rho g\\frac{\\pi d^2}{4}h."
     },
     "eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-07": {
       "id": "eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-07",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.18",
+      "number": "2.19",
       "latex": "\\sigma \\pi d \\cos\\theta = \\rho g \\frac{\\pi d^2}{4} h."
     },
     "eq-reologija-razrada-koraka-01": {
       "id": "eq-reologija-razrada-koraka-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.19",
+      "number": "2.20",
       "latex": "\\sigma \\cos\\theta = \\rho g \\frac{d}{4} h."
     },
     "eq-reologija-razrada-koraka-02": {
       "id": "eq-reologija-razrada-koraka-02",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.20",
+      "number": "2.21",
       "latex": "h = \\frac{4\\sigma \\cos\\theta}{\\rho g d}."
     },
     "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-01": {
       "id": "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.21",
+      "number": "2.22",
       "latex": "F_{tlak} = (p_u - p_{ok})\\,\\pi r^2,"
     },
     "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-02": {
       "id": "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-02",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.22",
+      "number": "2.23",
       "latex": "F_\\sigma = \\sigma \\cdot 2\\pi r."
     },
     "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-03": {
       "id": "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-03",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.23",
+      "number": "2.24",
       "latex": "(p_u - p_{ok})\\,\\pi r^2 = \\sigma \\cdot 2\\pi r,"
     },
     "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-04": {
       "id": "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-04",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.24",
+      "number": "2.25",
       "latex": "\\Delta p = p_u - p_{ok} = \\frac{2\\sigma}{r} = \\frac{4\\sigma}{d}."
     },
     "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-05": {
       "id": "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-05",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.25",
+      "number": "2.26",
       "latex": "F_\\sigma = 2\\cdot\\sigma\\cdot 2\\pi r = 4\\pi r\\sigma,"
     },
     "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-06": {
       "id": "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-06",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.26",
+      "number": "2.27",
       "latex": "\\Delta p = \\frac{4\\sigma}{r} = \\frac{8\\sigma}{d}."
     },
     "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-07": {
       "id": "eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-07",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.27",
+      "number": "2.28",
       "latex": "\\Delta p = \\sigma\\!\\left(\\frac{1}{R_1} + \\frac{1}{R_2}\\right),"
     },
     "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-01": {
       "id": "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.28",
+      "number": "2.29",
       "latex": "\\delta = 0{,}003\\ \\text{m}."
     },
     "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-02": {
       "id": "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-02",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.29",
+      "number": "2.30",
       "latex": "\\frac{dv}{dy} = \\frac{u}{\\delta} = \\frac{0{,}90}{0{,}003} = 300\\ \\text{s}^{-1}."
     },
     "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-03": {
       "id": "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-03",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.30",
+      "number": "2.31",
       "latex": "\\tau = \\mu \\frac{dv}{dy} = 0{,}42 \\cdot 300 = 126\\ \\text{Pa}."
     },
     "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-04": {
       "id": "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-04",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.31",
+      "number": "2.32",
       "latex": "F = \\tau A = 126 \\cdot 0{,}18 = 22{,}68\\ \\text{N} \\approx 22{,}7\\ \\text{N}."
     },
     "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-05": {
       "id": "eq-reologija-rijeseni-primjer-smicno-naprezanje-u-tankom-uljn-05",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.32",
+      "number": "2.33",
       "latex": "\\nu = \\frac{\\mu}{\\rho} = \\frac{0{,}42}{870} \\approx 4{,}83 \\cdot 10^{-4}\\ \\text{m}^2/\\text{s}."
     },
     "eq-reologija-rijeseni-primjer-kapilarni-uspon-etanola-u-stakl-01": {
       "id": "eq-reologija-rijeseni-primjer-kapilarni-uspon-etanola-u-stakl-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.33",
+      "number": "2.34",
       "latex": "h = \\frac{4\\sigma\\cos\\theta}{\\rho g d} = \\frac{4 \\cdot 0{,}022 \\cdot 0{,}951}{790 \\cdot 9{,}81 \\cdot 1{,}0 \\cdot 10^{-3}} = 0{,}0108\\ \\text{m} \\approx 1{,}08\\ \\text{cm}."
     },
     "eq-reologija-1-kapilarni-uspon-01": {
       "id": "eq-reologija-1-kapilarni-uspon-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.34",
+      "number": "2.35",
       "latex": "h_{cap}=\\frac{4\\sigma\\cos\\theta}{\\rho gd}\n=\\frac{4\\cdot0{,}072}{998\\cdot9{,}81\\cdot0{,}80\\cdot10^{-3}}\n\\approx36{,}8\\ \\mathrm{mm}."
     },
     "eq-reologija-2-tlakovni-skok-na-kapljici-01": {
       "id": "eq-reologija-2-tlakovni-skok-na-kapljici-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.35",
+      "number": "2.36",
       "latex": "\\Delta p=\\frac{4\\sigma}{D}\n=\\frac{4\\cdot0{,}072}{2{,}4\\cdot10^{-3}}=120\\ \\mathrm{Pa}."
     },
     "eq-reologija-2-tlakovni-skok-na-kapljici-02": {
       "id": "eq-reologija-2-tlakovni-skok-na-kapljici-02",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.36",
+      "number": "2.37",
       "latex": "p_u=p_{atm}+\\Delta p=101325+120=101445\\ \\mathrm{Pa}\n\\approx101{,}45\\ \\mathrm{kPa}."
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-01": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.37",
+      "number": "2.38",
       "latex": "u = \\frac{\\pi D n}{60} = \\frac{\\pi \\cdot 0{,}050 \\cdot 2400}{60} \\approx 6{,}28\\ \\text{m/s}"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-02": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-02",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.38",
+      "number": "2.39",
       "latex": "\\frac{dv}{dy} \\approx \\frac{u}{\\delta} = \\frac{6{,}28}{0{,}30 \\cdot 10^{-3}} \\approx 2{,}09 \\cdot 10^4\\ \\text{s}^{-1}"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-03": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-03",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.39",
+      "number": "2.40",
       "latex": "\\tau_1 = \\mu_1 \\frac{u}{\\delta} \\approx 8{,}38 \\cdot 10^3\\ \\text{Pa}"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-04": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-04",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.40",
+      "number": "2.41",
       "latex": "\\tau_2 = \\mu_2 \\frac{u}{\\delta} \\approx 838\\ \\text{Pa}"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-05": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-05",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.41",
+      "number": "2.42",
       "latex": "A = \\pi D L = \\pi \\cdot 0{,}050 \\cdot 0{,}070 \\approx 1{,}10 \\cdot 10^{-2}\\ \\text{m}^2"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-06": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-06",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.42",
+      "number": "2.43",
       "latex": "F_1 = \\tau_1 A \\approx 92{,}1\\ \\text{N}, \\qquad M_1 = F_1 \\cdot \\frac{D}{2} \\approx 2{,}30\\ \\text{N m}"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-07": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-07",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.43",
+      "number": "2.44",
       "latex": "F_2 = \\tau_2 A \\approx 9{,}21\\ \\text{N}, \\qquad M_2 = F_2 \\cdot \\frac{D}{2} \\approx 0{,}230\\ \\text{N m}"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-08": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-08",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.44",
+      "number": "2.45",
       "latex": "\\omega = \\frac{2\\pi n}{60} \\approx 251{,}3\\ \\text{rad/s}"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-09": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-09",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.45",
+      "number": "2.46",
       "latex": "P_1 = M_1 \\omega \\approx 579\\ \\text{W}"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-10": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-10",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.46",
+      "number": "2.47",
       "latex": "P_2 = M_2 \\omega \\approx 57{,}9\\ \\text{W}"
     },
     "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-11": {
       "id": "eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-11",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.47",
+      "number": "2.48",
       "latex": "\\frac{P_1}{P_2} = \\frac{\\mu_1}{\\mu_2} = 10"
     },
     "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-01": {
       "id": "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-01",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.48",
+      "number": "2.49",
       "latex": "h = \\frac{4\\sigma\\cos\\theta}{\\rho g d} = \\frac{4 \\cdot 0{,}055 \\cdot \\cos 25^\\circ}{1010 \\cdot 9{,}81 \\cdot 60 \\cdot 10^{-6}}."
     },
     "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-02": {
       "id": "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-02",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.49",
+      "number": "2.50",
       "latex": "h = \\frac{4 \\cdot 0{,}055 \\cdot 0{,}906}{1010 \\cdot 9{,}81 \\cdot 6 \\cdot 10^{-5}} = \\frac{0{,}1993}{0{,}5945} \\approx 0{,}335\\ \\text{m}."
     },
     "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-03": {
       "id": "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-03",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.50",
+      "number": "2.51",
       "latex": "h \\approx 33{,}5\\ \\text{cm}."
     },
     "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-04": {
       "id": "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-04",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.51",
+      "number": "2.52",
       "latex": "\\Delta p = \\frac{4\\sigma\\cos\\theta}{d} = \\frac{4 \\cdot 0{,}055 \\cdot 0{,}906}{60 \\cdot 10^{-6}} \\approx 3{,}32 \\cdot 10^3\\ \\text{Pa} \\approx 3{,}32\\ \\text{kPa}."
     },
     "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-05": {
       "id": "eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-05",
       "kind": "Equation",
       "document": "u02",
-      "number": "2.52",
+      "number": "2.53",
       "latex": "h_{hidrofobno} = \\frac{4 \\cdot 0{,}055 \\cdot (-0{,}342)}{1010 \\cdot 9{,}81 \\cdot 6 \\cdot 10^{-5}} \\approx -0{,}127\\ \\text{m}."
     },
     "fig-uvod-u02": {
@@ -3548,17 +3572,17 @@
         "print_manifest": "assets/pdf-figures/manifest.json"
       }
     },
-    "fig-u02-kinematicka-viskoznost": {
-      "id": "fig-u02-kinematicka-viskoznost",
+    "fig-u02-rotirajuci-disk": {
+      "id": "fig-u02-rotirajuci-disk",
       "kind": "Figure",
       "document": "u02",
       "number": "2.2",
-      "caption": "Veza dinamičke i kinematičke viskoznosti ulja.",
-      "alt": "Sloj ulja zadane dinamičke viskoznosti i gustoće između nepomične stijenke i pokretne ploče, bez zadanog gradijenta brzine.",
-      "source": "../assets/print/u02_fig_kinematicka_viskoznost.svg",
-      "type": "mini",
+      "caption": "Rotirajući disk na uljnom filmu: bočni presjek i tlocrt s prstenom polumjera r.",
+      "alt": "Lijevo bočni presjek s nepomičnom pločom, tankim uljnim filmom debljine δ i diskom polumjera R na vratilu koje se vrti kutnom brzinom ω; desno tlocrt diska s tankim prstenom polumjera r i obodnom brzinom u = ωr.",
+      "source": "../assets/print/u02_fig_rotirajuci_disk.svg",
+      "type": "standard",
       "variants": {
-        "web": "../assets/print/u02_fig_kinematicka_viskoznost.svg",
+        "web": "../assets/print/u02_fig_rotirajuci_disk.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
       }
     },
@@ -3632,13 +3656,13 @@
         "print_manifest": "assets/pdf-figures/manifest.json"
       }
     },
-    "ex-u02-pretvorba-dinamicke-u-kinematicku-viskoznost-t1": {
-      "id": "ex-u02-pretvorba-dinamicke-u-kinematicku-viskoznost-t1",
+    "ex-moment-trenja-rotirajuceg-diska": {
+      "id": "ex-moment-trenja-rotirajuceg-diska",
       "kind": "Example",
       "document": "u02",
       "number": "2.1",
-      "title": "Pretvorba dinamičke u kinematičku viskoznost",
-      "level": "T1",
+      "title": "Moment trenja rotirajućeg diska na uljnom filmu",
+      "level": "T2",
       "label": "P1"
     },
     "ex-u02-smicno-naprezanje-u-tankom-uljnom-sloju-t2": {
@@ -3686,12 +3710,12 @@
       "level": "T2",
       "label": "P6"
     },
-    "task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se": {
-      "id": "task-u02-izme-u-dviju-paralelnih-ploca-nalazi-se",
+    "task-mjerenje-viskoznosti-kliznom-plocom": {
+      "id": "task-mjerenje-viskoznosti-kliznom-plocom",
       "kind": "Problem",
       "document": "u02",
       "number": "2.1",
-      "title": "Viskozna sila između ploča",
+      "title": "Mjerenje viskoznosti kliznom pločom",
       "level": "T1",
       "label": "Z1"
     },
@@ -4151,8 +4175,8 @@
       "kind": "Figure",
       "document": "u03",
       "number": "3.7",
-      "caption": "Skice uz Z1–Z6: spremnici, slojevi fluida i manometri.",
-      "alt": "Skice uz Z1–Z6: otvoreni spremnik, određivanje razine iz razlike tlakova, uljni U-manometar, slojevi ulja i vode, mjerenje podtlaka i izbor apsolutnog senzora.",
+      "caption": "Skice uz Z1–Z6: barometarska visina, spremnici, slojevi fluida i manometri.",
+      "alt": "Skice uz Z1–Z6: dron s barometarskim senzorom iznad baze, određivanje razine iz razlike tlakova, nagnuti manometar s posudom, slojevi ulja i vode, mjerenje podtlaka i izbor apsolutnog senzora.",
       "source": "../assets/print/u03_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -4228,12 +4252,12 @@
       "level": "T2",
       "label": "P6"
     },
-    "task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu": {
-      "id": "task-u03-otvoreni-spremnik-s-vodom-ima-slobodnu-povrsinu",
+    "task-visina-iz-barometarskog-ocitanja": {
+      "id": "task-visina-iz-barometarskog-ocitanja",
       "kind": "Problem",
       "document": "u03",
       "number": "3.1",
-      "title": "Tlak u otvorenom spremniku",
+      "title": "Visina leta iz barometarskog očitanja",
       "level": "T1",
       "label": "Z1"
     },
@@ -4246,12 +4270,12 @@
       "level": "T1",
       "label": "Z2"
     },
-    "task-u03-cjevovod-s-uljem-gustoce-spojen-je-na": {
-      "id": "task-u03-cjevovod-s-uljem-gustoce-spojen-je-na",
+    "task-nagnuti-manometar-ventilacijski-kanal": {
+      "id": "task-nagnuti-manometar-ventilacijski-kanal",
       "kind": "Problem",
       "document": "u03",
       "number": "3.3",
-      "title": "U-manometar s uljem i živom",
+      "title": "Nagnuti manometar na ventilacijskom kanalu",
       "level": "T2",
       "label": "Z3"
     },
@@ -4455,28 +4479,28 @@
       "kind": "Equation",
       "document": "u04",
       "number": "4.25",
-      "latex": "\\Delta h = \\frac{aL}{g} = \\frac{1{,}35 \\cdot 1{,}60}{9{,}81} = 0{,}220\\ \\text{m} \\approx 22{,}0\\ \\text{cm}."
+      "latex": "\\begin{aligned}\np_{M,B}&=-\\rho aL=-1000\\cdot3{,}0\\cdot1{,}50=-4{,}50\\ \\text{kPa},\\\\\np_{M,C}&=\\rho gH=1000\\cdot9{,}81\\cdot0{,}60=5{,}89\\ \\text{kPa},\n\\end{aligned}"
     },
     "eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-02": {
       "id": "eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-02",
       "kind": "Equation",
       "document": "u04",
       "number": "4.26",
-      "latex": "h_{str} = h_0 + \\frac{\\Delta h}{2} = 0{,}42 + 0{,}110 = 0{,}530\\ \\text{m},"
+      "latex": "p_{M,D}=\\rho gH-\\rho aL=5{,}89-4{,}50=1{,}39\\ \\text{kPa}."
     },
     "eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-03": {
       "id": "eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-03",
       "kind": "Equation",
       "document": "u04",
       "number": "4.27",
-      "latex": "h_{pred} = h_0 - \\frac{\\Delta h}{2} = 0{,}42 - 0{,}110 = 0{,}310\\ \\text{m}."
+      "latex": "\\frac{aL}{g}=\\frac{3{,}0\\cdot1{,}50}{9{,}81}=0{,}459\\ \\text{m}"
     },
     "eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-04": {
       "id": "eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-04",
       "kind": "Equation",
       "document": "u04",
       "number": "4.28",
-      "latex": "\\tan\\theta = \\frac{a}{g} = \\frac{1{,}35}{9{,}81} = 0{,}1376 \\quad \\Longrightarrow \\quad \\theta = \\arctan(0{,}1376) \\approx 7{,}8^\\circ."
+      "latex": "a_D=\\frac{gH}{L}=\\frac{9{,}81\\cdot0{,}60}{1{,}50}=3{,}92\\ \\text{m/s}^2."
     },
     "eq-relativno-mirovanje-rijeseni-primjer-zatvoreni-servisni-modul-s-koso-01": {
       "id": "eq-relativno-mirovanje-rijeseni-primjer-zatvoreni-servisni-modul-s-koso-01",
@@ -4674,17 +4698,17 @@
         "print_manifest": "assets/pdf-figures/manifest.json"
       }
     },
-    "fig-u04-otvoreni-spremnik-na-laboratorijskim-kolicima": {
-      "id": "fig-u04-otvoreni-spremnik-na-laboratorijskim-kolicima",
+    "fig-u04-zatvoreni-puni-spremnik": {
+      "id": "fig-u04-zatvoreni-puni-spremnik",
       "kind": "Figure",
       "document": "u04",
       "number": "4.2",
-      "caption": "Otvoreni spremnik na laboratorijskim kolicima pri vodoravnom ubrzanju.",
-      "alt": "Pravokutni spremnik na kolicima koja ubrzavaju udesno, s vodom višom uz stražnju stijenku, kotama dubina i Δh te umetkom vektora g, −a i g_eff.",
-      "source": "../assets/print/u04_val2_laboratorijska_kolica.svg",
+      "caption": "Zatvoreni puni spremnik s odzračnikom u kutu A pri ubrzanju prema naprijed; isprekidana je zamišljena slobodna površina.",
+      "alt": "Zatvoreni pravokutni spremnik pun vode s odzračnikom u gornjem stražnjem kutu A, kutovima B, C i D, isprekidanom zamišljenom slobodnom površinom koja kroz A pada prema prednjoj stijenci te strelicom ubrzanja udesno.",
+      "source": "../assets/print/u04_fig_zatvoreni_puni_spremnik.svg",
       "type": "standard",
       "variants": {
-        "web": "../assets/print/u04_val2_laboratorijska_kolica.svg",
+        "web": "../assets/print/u04_fig_zatvoreni_puni_spremnik.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
       }
     },
@@ -4750,7 +4774,7 @@
       "document": "u04",
       "number": "4.7",
       "caption": "Skice uz Z1–Z6: translacija, rotacija i granice relativnog mirovanja.",
-      "alt": "Šest panela: spremnik s nagnutom površinom, spremnik pri prvom dodiru ruba, zatvoreni cilindar s brzinom i ubrzanjima, zatvorena posuda s dvama senzorima, spremnik s grafom očitanja i rotirajući spremnik sa zatvorenim usisom u osi.",
+      "alt": "Šest panela: spremnik s nagnutom površinom, spremnik obješen o kolica dizalice s vodoravnim i okomitim ubrzanjem, zatvoreni cilindar s brzinom i ubrzanjima, zatvorena posuda s dvama senzorima, spremnik s grafom očitanja i rotirajući spremnik sa zatvorenim usisom u osi.",
       "source": "../assets/print/u04_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -4758,12 +4782,12 @@
         "print_manifest": "assets/pdf-figures/manifest.json"
       }
     },
-    "ex-u04-otvoreni-spremnik-na-laboratorijskim-kolicima-t2": {
-      "id": "ex-u04-otvoreni-spremnik-na-laboratorijskim-kolicima-t2",
+    "ex-zatvoreni-puni-spremnik-odzracnik-ubrzanje": {
+      "id": "ex-zatvoreni-puni-spremnik-odzracnik-ubrzanje",
       "kind": "Example",
       "document": "u04",
       "number": "4.1",
-      "title": "Otvoreni spremnik na laboratorijskim kolicima",
+      "title": "Zatvoreni puni spremnik s odzračnikom pri ubrzanju",
       "level": "T2",
       "label": "P1"
     },
@@ -4821,13 +4845,13 @@
       "level": "T1",
       "label": "Z1"
     },
-    "task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine": {
-      "id": "task-u04-otvoreni-spremnik-duljine-napunjen-je-do-visine",
+    "task-spremnik-na-dizalici-dva-ubrzanja": {
+      "id": "task-spremnik-na-dizalici-dva-ubrzanja",
       "kind": "Problem",
       "document": "u04",
       "number": "4.2",
-      "title": "Ubrzanje na granici prelijevanja",
-      "level": "T1",
+      "title": "Spremnik na dizalici s vodoravnim i okomitim ubrzanjem",
+      "level": "T2",
       "label": "Z2"
     },
     "task-u04-zatvoreni-vertikalni-cilindar-potpuno-ispunjen-uljem-gustoce": {
@@ -4836,7 +4860,7 @@
       "document": "u04",
       "number": "4.3",
       "title": "Tlak pri okomitom ubrzanju",
-      "level": "T2",
+      "level": "T1",
       "label": "Z3"
     },
     "task-vrtnja-iz-radijalne-razlike-tlakova": {
@@ -5158,42 +5182,42 @@
       "kind": "Equation",
       "document": "u05",
       "number": "5.42",
-      "latex": "A_x=Rb=1{,}08\\ \\mathrm{m^2},\\qquad h_{Cx}=R/2=0{,}45\\ \\mathrm{m},"
+      "latex": "\\begin{aligned}\nA_x&=Rb=1{,}08\\ \\mathrm{m^2},\\\\\nF_{H,h}&=\\rho gA_x\\frac R2=4{,}758\\ \\mathrm{kN},\\qquad\nF_{H,p}=p_{pl}A_x=21{,}60\\ \\mathrm{kN}.\n\\end{aligned}"
     },
     "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-02": {
       "id": "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-02",
       "kind": "Equation",
       "document": "u05",
       "number": "5.43",
-      "latex": "F_H=\\rho gA_xh_{Cx}=4{,}758\\ \\mathrm{kN},\\qquad\nh_H=\\frac{2R}{3}=0{,}600\\ \\mathrm{m}."
+      "latex": "F_H=26{,}36\\ \\mathrm{kN},\\qquad\nh_H=\\frac{21{,}60\\cdot0{,}450+4{,}758\\cdot0{,}600}{26{,}36}=0{,}477\\ \\mathrm{m}."
     },
     "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-03": {
       "id": "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-03",
       "kind": "Equation",
       "document": "u05",
       "number": "5.44",
-      "latex": "V^*=\\frac{\\pi R^2}{4}b=0{,}7634\\ \\mathrm{m^3},"
+      "latex": "\\begin{aligned}\nV^*&=\\frac{\\pi R^2}{4}b=0{,}7634\\ \\mathrm{m^3},\\\\\nF_{V,h}&=\\rho gV^*=7{,}474\\ \\mathrm{kN},\\qquad\nF_{V,p}=p_{pl}Rb=21{,}60\\ \\mathrm{kN}.\n\\end{aligned}"
     },
     "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-04": {
       "id": "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-04",
       "kind": "Equation",
       "document": "u05",
       "number": "5.45",
-      "latex": "F_V=-\\rho gV^*=-7{,}474\\ \\mathrm{kN}."
+      "latex": "F_V=-(7{,}474+21{,}60)=-29{,}07\\ \\mathrm{kN}."
     },
     "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-05": {
       "id": "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-05",
       "kind": "Equation",
       "document": "u05",
       "number": "5.46",
-      "latex": "x_V=\\frac{4R}{3\\pi}=0{,}382\\ \\mathrm{m}."
+      "latex": "x_V=\\frac{21{,}60\\cdot0{,}450+7{,}474\\cdot0{,}382}{29{,}07}=0{,}432\\ \\mathrm{m}."
     },
     "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-06": {
       "id": "eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-06",
       "kind": "Equation",
       "document": "u05",
       "number": "5.47",
-      "latex": "F_R=8{,}860\\ \\mathrm{kN},\\qquad\n\\theta_R=-57{,}52^\\circ."
+      "latex": "F_R=\\sqrt{26{,}36^2+29{,}07^2}=39{,}24\\ \\mathrm{kN},\\qquad\n\\theta_R=\\operatorname{atan2}(-29{,}07,\\,26{,}36)=-47{,}8^\\circ."
     },
     "eq-sile-plohe-rijeseni-primjer-zglobni-poklopac-s-vertikalnom-01": {
       "id": "eq-sile-plohe-rijeseni-primjer-zglobni-poklopac-s-vertikalnom-01",
@@ -5326,8 +5350,8 @@
       "kind": "Figure",
       "document": "u05",
       "number": "5.6",
-      "caption": "Četvrtcilindrični poklopac uz slobodnu površinu s okomitom komponentom sile prema dolje.",
-      "alt": "Četvrtina kruga koja počinje na slobodnoj površini, voda iznad luka ispunjava pomoćni volumen V*, zrak ispod, a komponenta FV usmjerena je prema dolje.",
+      "caption": "Četvrtcilindrični poklopac uz slobodnu površinu u zatvorenom spremniku s plinom iznad vode; okomita komponenta sile usmjerena je prema dolje.",
+      "alt": "Četvrtina kruga koja počinje na slobodnoj površini zatvorenog spremnika, plin s nadtlakom iznad vode, voda iznad luka ispunjava pomoćni volumen V*, zrak ispod, a komponenta FV usmjerena je prema dolje.",
       "source": "../assets/print/u06_val3_cetvrtcilindricni_poklopac.svg",
       "type": "standard",
       "variants": {
@@ -5354,8 +5378,8 @@
       "kind": "Figure",
       "document": "u05",
       "number": "5.8",
-      "caption": "Skice uz Z1–Z6: vodonepropusna vrata, parabolični pokrov, dvije razine vode, trokutasti poklopac, radijalni poklopac s osi u središtu kružnice i mjerni panel.",
-      "alt": "Šest panela s kotama i stvarnom vodom, u kojima su tražene sile vode označene upitnikom umjesto strelicom, a os radijalnog poklopca u Z5 leži u središtu kružnice O.",
+      "caption": "Skice uz Z1–Z6: vodonepropusna vrata, parabolični pokrov, samootvarajuća kosa zaklopka, trokutasti poklopac, radijalni poklopac s osi u središtu kružnice i mjerni panel.",
+      "alt": "Šest panela s kotama i stvarnom vodom, u kojima su tražene sile vode označene upitnikom umjesto strelicom; kosa zaklopka u Z3 ima os između donjeg ruba na pragu i gornjeg ruba, a os radijalnog poklopca u Z5 leži u središtu kružnice O.",
       "source": "../assets/print/u05_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -5404,8 +5428,8 @@
       "kind": "Example",
       "document": "u05",
       "number": "5.5",
-      "title": "Četvrtcilindrični poklopac uz slobodnu površinu",
-      "level": "T2",
+      "title": "Četvrtcilindrični poklopac u spremniku s nadtlakom plina",
+      "level": "T3",
       "label": "P5"
     },
     "ex-u05-zglobni-cetvrtcilindricni-poklopac": {
@@ -5435,12 +5459,12 @@
       "level": "T2",
       "label": "Z2"
     },
-    "task-pregrada-izmedu-dviju-razina-vode": {
-      "id": "task-pregrada-izmedu-dviju-razina-vode",
+    "task-samootvarajuca-kosa-zaklopka": {
+      "id": "task-samootvarajuca-kosa-zaklopka",
       "kind": "Problem",
       "document": "u05",
       "number": "5.3",
-      "title": "Pregrada između dviju razina vode",
+      "title": "Samootvarajuća kosa zaklopka kanala",
       "level": "T2",
       "label": "Z3"
     },
@@ -6155,8 +6179,8 @@
       "kind": "Figure",
       "document": "u06",
       "number": "6.7",
-      "caption": "Skice uz Z1–Z6: pontoni, areometri i plutajuće platforme.",
-      "alt": "Šest panela: uronjeni blok, uspravni ponton, nagnuti ponton s pomaknutim utegom, dva areometra, dva presjeka pontona i nagnuta platforma u dva fluida.",
+      "caption": "Skice uz Z1–Z6: brod u moru i rijeci, drveni blok, pontoni, areometri i plutajuće platforme.",
+      "alt": "Šest panela: presjek broda s vodnim linijama u moru i rijeci, plutajući homogeni blok s težištem, nagnuti ponton s pomaknutim utegom, dva areometra, dva presjeka pontona i nagnuta platforma u dva fluida.",
       "source": "../assets/print/u07_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -6218,22 +6242,22 @@
       "level": "T3",
       "label": "P6"
     },
-    "task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno": {
-      "id": "task-u07-hermeticki-zatvoreno-tijelo-volumena-i-mase-potpuno",
+    "task-promjena-gaza-broda-more-rijeka": {
+      "id": "task-promjena-gaza-broda-more-rijeka",
       "kind": "Problem",
       "document": "u06",
       "number": "6.1",
-      "title": "Uzgon potpuno uronjenog tijela",
+      "title": "Promjena gaza broda između mora i rijeke",
       "level": "T1",
       "label": "Z1"
     },
-    "task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine": {
-      "id": "task-u07-pravokutni-radni-ponton-duljine-sirine-i-visine",
+    "task-plutanje-homogenog-bloka-stabilitet": {
+      "id": "task-plutanje-homogenog-bloka-stabilitet",
       "kind": "Problem",
       "document": "u06",
       "number": "6.2",
-      "title": "Gaz opterećenog pontona",
-      "level": "T1",
+      "title": "Plutanje homogenog drvenog bloka",
+      "level": "T2",
       "label": "Z2"
     },
     "task-metacentarska-visina-iz-pokusa-nagibanja": {
@@ -6251,7 +6275,7 @@
       "document": "u06",
       "number": "6.4",
       "title": "Gustoća otopine iz očitanja areometra",
-      "level": "T2",
+      "level": "T1",
       "label": "Z4"
     },
     "task-spustanje-opreme-ili-dodavanje-balasta": {
@@ -6767,8 +6791,8 @@
       "kind": "Figure",
       "document": "u07",
       "number": "7.7",
-      "caption": "Skice uz Z1–Z6: grijač zraka, kosa ploha, komora za miješanje, razdjelnik, klip i balastni tank.",
-      "alt": "Šest panela s isprekidanim kontrolnim granicama: kanal grijača, zamišljena kosa ploha s normalom, komora s dvama ulazima, razdjelna glava s dvjema granama, klip s otvorom u cilindru i dvodni tank s odzračnom cijevi.",
+      "caption": "Skice uz Z1–Z6: grijač zraka, kosa ploha, komora za miješanje, izmjereni profil brzine, klip i balastni tank.",
+      "alt": "Šest panela: kanal grijača s kontrolnom granicom, zamišljena kosa ploha s normalom, komora s dvama ulazima, kružni kanal s izmjerenim profilom brzine po polumjeru, klip s otvorom u cilindru i dvodni tank s odzračnom cijevi.",
       "source": "../assets/print/u08_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -6857,12 +6881,12 @@
       "level": "T1",
       "label": "Z3"
     },
-    "task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz": {
-      "id": "task-u08-u-razdjelnu-glavu-ulazi-voda-protokom-kroz",
+    "task-protok-iz-izmjerenog-profila-brzine": {
+      "id": "task-protok-iz-izmjerenog-profila-brzine",
       "kind": "Problem",
       "document": "u07",
       "number": "7.4",
-      "title": "Raspodjela protoka u dvije grane",
+      "title": "Protok iz izmjerenog profila brzine u kanalu",
       "level": "T2",
       "label": "Z4"
     },
@@ -7351,8 +7375,8 @@
       "kind": "Figure",
       "document": "u08",
       "number": "8.7",
-      "caption": "Skice uz Z1–Z6: istjecanje, Venturijeva cijev, silazno suženje, brodski Pitotov brzinomjer, izbor grla i sifon s mlazom.",
-      "alt": "Šest panela: spremnik s bočnom sapnicom, Venturijeva cijev s pretvaračem, kosi silazni vod sa suženjem, Pitotova cijev ispod dna trupa sa senzorom, vod sa zamjenjivim grlom i sifon s mlazom do tla.",
+      "caption": "Skice uz Z1–Z6: istjecanje, pražnjenje spremnika, silazno suženje, brodski Pitotov brzinomjer, izbor grla i sifon s mlazom.",
+      "alt": "Šest panela: spremnik s bočnom sapnicom, cilindrični spremnik s otvorom u dnu i dvjema razinama, kosi silazni vod sa suženjem, Pitotova cijev ispod dna trupa sa senzorom, vod sa zamjenjivim grlom i sifon s mlazom do tla.",
       "source": "../assets/print/u09_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -7423,13 +7447,13 @@
       "level": "T1",
       "label": "Z1"
     },
-    "task-venturijeva-cijev-rashladne-vode": {
-      "id": "task-venturijeva-cijev-rashladne-vode",
+    "task-vrijeme-praznjenja-spremnika": {
+      "id": "task-vrijeme-praznjenja-spremnika",
       "kind": "Problem",
       "document": "u08",
       "number": "8.2",
-      "title": "Venturijeva cijev u cjevovodu rashladne vode",
-      "level": "T1",
+      "title": "Vrijeme pražnjenja spremnika kroz otvor na dnu",
+      "level": "T2",
       "label": "Z2"
     },
     "task-tlak-u-silaznom-suzenju": {
@@ -7438,7 +7462,7 @@
       "document": "u08",
       "number": "8.3",
       "title": "Tlak u silaznom suženju",
-      "level": "T2",
+      "level": "T1",
       "label": "Z3"
     },
     "task-pitot-s-izdignutim-senzorom": {
@@ -8505,8 +8529,8 @@
       "kind": "Figure",
       "document": "u10",
       "number": "10.9",
-      "caption": "Skice uz Z1–Z6: vodomlazni pogon, aktuatorski disk, koljeno, ekscentrični mlaz, ploča koja se udaljava i Y-račva.",
-      "alt": "Šest panela: bočni pogled na krmu brodice, strujna cijev kroz disk, tlocrt koljena od 90 stupnjeva s tlakovima na oba presjeka, nosač s ekscentričnim mlazom, pomična ploča i tlocrt račve.",
+      "caption": "Skice uz Z1–Z6: vodomlazni pogon, aktuatorski disk, koljeno u okomitoj ravnini, ekscentrični mlaz, ploča koja se udaljava i Y-račva.",
+      "alt": "Šest panela: bočni pogled na krmu brodice, strujna cijev kroz disk, koljeno od 90 stupnjeva u okomitoj ravnini s ulaznim tlakom, kotom visinske razlike i smjerom gravitacije, nosač s ekscentričnim mlazom, pomična ploča i tlocrt račve.",
       "source": "../assets/print/u11_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -8595,12 +8619,12 @@
       "level": "T1",
       "label": "Z2"
     },
-    "task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez": {
-      "id": "task-u11-horizontalno-koljeno-zakrece-tok-vode-za-bez",
+    "task-koljeno-u-okomitoj-ravnini-tezina": {
+      "id": "task-koljeno-u-okomitoj-ravnini-tezina",
       "kind": "Problem",
       "document": "u10",
       "number": "10.3",
-      "title": "Sile na cijevno koljeno",
+      "title": "Koljeno u okomitoj ravnini s težinom vode",
       "level": "T2",
       "label": "Z3"
     },
@@ -9078,7 +9102,7 @@
       "document": "u11",
       "number": "11.8",
       "caption": "Skice uz Z1–Z6: bezdimenzijski brojevi i modelska sličnost.",
-      "alt": "Šest malih skica: pravokutni presjek kanala, otvoreni zračni vod, usis crpke s tlačnim priključkom, dva slična profila, kružni cilindar s vrtlozima i presjeci dvaju modela preljeva.",
+      "alt": "Šest malih skica: pravokutni presjek ventilacijskog kanala, presjek pravokutnog otvorenog kanala s vodom, usis crpke s tlačnim priključkom, dva slična profila, kružni cilindar s vrtlozima i presjeci dvaju modela preljeva.",
       "source": "../assets/print/u14_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -9149,12 +9173,12 @@
       "level": "T1",
       "label": "Z1"
     },
-    "task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom": {
-      "id": "task-u14-zrak-struji-vodom-promjera-lokalnim-volumenskim-protokom",
+    "task-dimenzije-manningove-jednadzbe": {
+      "id": "task-dimenzije-manningove-jednadzbe",
       "kind": "Problem",
       "document": "u11",
       "number": "11.2",
-      "title": "Machov broj i izbor modela",
+      "title": "Dimenzijska homogenost Manningove jednadžbe",
       "level": "T1",
       "label": "Z2"
     },
@@ -9431,7 +9455,7 @@
       "document": "u12",
       "number": "12.2",
       "caption": "Skice uz Z1–Z6: lokalni tok, viskozni pogoni i profinjenje mreže.",
-      "alt": "Šest panela: polje brzine duž osi x, voda između dviju ploča, vodoravna kapilara s dvama tlačnim priključcima, uljni film između mirne i pomične ploče, ploha s vanjskim tokom i tri mreže iste domene.",
+      "alt": "Šest panela: polje brzine duž osi x, vodoravna cijev s izmjerenim padom tlaka i prvom ćelijom uz stijenku, vodoravna kapilara s dvama tlačnim priključcima, uljni film između mirne i pomične ploče, ploha s vanjskim tokom i tri mreže iste domene.",
       "source": "../assets/print/u12_realni_tok_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -9502,12 +9526,12 @@
       "level": "T1",
       "label": "Z1"
     },
-    "task-viskozna-difuzija": {
-      "id": "task-viskozna-difuzija",
+    "task-smicno-naprezanje-prva-celija": {
+      "id": "task-smicno-naprezanje-prva-celija",
       "kind": "Problem",
       "document": "u12",
       "number": "12.2",
-      "title": "Vrijeme viskozne difuzije",
+      "title": "Smično naprezanje iz pada tlaka i visina prve ćelije",
       "level": "T1",
       "label": "Z2"
     },
@@ -10570,8 +10594,8 @@
       "kind": "Figure",
       "document": "u14",
       "number": "14.7",
-      "caption": "Skice uz Z1–Z6: sile na ploču i vodilicu, obrnuti račun izlaza lopatice, zadane apsolutne brzine rotora na dvama polumjerima, vodomlazni pogon i razdjelnik s četirima izlazima.",
-      "alt": "Šest skica: mlaz na ravnu ploču, mlaz u otvorenoj vodilici, pokretna lopatica, apsolutne brzine na dvama polumjerima rotora, vodomlazni pogon broda i mlazna platforma s razdjelnikom i četirima sapnicama.",
+      "caption": "Skice uz Z1–Z6: sile na nepomičnu i pokretnu ploču, obrnuti račun izlaza lopatice, zadane apsolutne brzine rotora na dvama polumjerima, vodomlazni pogon i razdjelnik s četirima izlazima.",
+      "alt": "Šest skica: mlaz na nepomičnu ravnu ploču, mlaz na ploču koja se giba u smjeru mlaza uz naznačeno kolo s nizom ploča, pokretna lopatica, apsolutne brzine na dvama polumjerima rotora, vodomlazni pogon broda i mlazna platforma s razdjelnikom i četirima sapnicama.",
       "source": "../assets/print/u12_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -10642,12 +10666,12 @@
       "level": "T1",
       "label": "Z1"
     },
-    "task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice": {
-      "id": "task-u12-vodeni-mlaz-brzine-izlazi-iz-pravokutne-sapnice",
+    "task-pokretna-ploca-i-kolo-s-plocama": {
+      "id": "task-pokretna-ploca-i-kolo-s-plocama",
       "kind": "Problem",
       "document": "u14",
       "number": "14.2",
-      "title": "Zakretanje mlaza u vodilici",
+      "title": "Pokretna ploča i kolo s nizom ploča",
       "level": "T1",
       "label": "Z2"
     },
@@ -10888,8 +10912,8 @@
       "kind": "Figure",
       "document": "u15",
       "number": "15.2",
-      "caption": "Skice uz Z1–Z6: valovi, minimum energije, trapezni presjek, povišeno dno, kontrolni volumen skoka i provjera oborinskog kanala.",
-      "alt": "Šest panela s presjecima pravokutnog i trapeznog kanala, kvalitativnom krivuljom specifične energije, tokom preko praga, kontrolnim volumenom skoka s tlačnim silama i bazenom iza kanala.",
+      "caption": "Skice uz Z1–Z6: valovi, istjecanje ispod ustave, trapezni presjek, povišeno dno, kontrolni volumen skoka i provjera oborinskog kanala.",
+      "alt": "Šest panela s presjecima pravokutnog i trapeznog kanala, bočnim presjekom ustave sa suženim mlazom, tokom preko praga, kontrolnim volumenom skoka s tlačnim silama i bazenom iza kanala.",
       "source": "../assets/print/u15_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -10951,12 +10975,12 @@
       "level": "T1",
       "label": "Z1"
     },
-    "task-kriticna-dubina": {
-      "id": "task-kriticna-dubina",
+    "task-istjecanje-ispod-ustave": {
+      "id": "task-istjecanje-ispod-ustave",
       "kind": "Problem",
       "document": "u15",
       "number": "15.2",
-      "title": "Kritična dubina i minimalna energija",
+      "title": "Istjecanje ispod ustave i kontrakcija mlaza",
       "level": "T1",
       "label": "Z2"
     },
@@ -11131,14 +11155,6 @@
       "target": "eq-poluga-okomiti-bokovi"
     },
     {
-      "document": "u06",
-      "target": "ex-u07-uzgon-na-potonulo-pumpno-kuciste-pri-ispitivanju"
-    },
-    {
-      "document": "u06",
-      "target": "ex-u07-koliki-gaz-ima-radni-ponton-pri-simetricnom"
-    },
-    {
       "document": "u07",
       "target": "fig-uvod-u08"
     },
@@ -11201,10 +11217,6 @@
     {
       "document": "u08",
       "target": "eq-energijska-jednadzba-kv"
-    },
-    {
-      "document": "u08",
-      "target": "ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2"
     },
     {
       "document": "u08",
@@ -11620,6 +11632,10 @@
     },
     {
       "document": "u15",
+      "target": "eq-istjecanje-ispod-ustave"
+    },
+    {
+      "document": "u15",
       "target": "eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01"
     },
     {
@@ -11765,22 +11781,10 @@
     {
       "document": "d05",
       "target": "ex-stepenica-mjerenje-cfd"
-    },
-    {
-      "document": "d06",
-      "target": "ex-u07-uzgon-na-potonulo-pumpno-kuciste-pri-ispitivanju"
-    },
-    {
-      "document": "d06",
-      "target": "ex-u07-koliki-gaz-ima-radni-ponton-pri-simetricnom"
-    },
-    {
-      "document": "d06",
-      "target": "ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2"
     }
   ],
   "counts": {
-    "Equation": 781,
+    "Equation": 784,
     "Figure": 92,
     "Example": 90,
     "Problem": 90,

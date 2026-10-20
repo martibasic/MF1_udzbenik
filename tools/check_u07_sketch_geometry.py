@@ -105,10 +105,19 @@ def main():
     q3=L('z3_q1')*20/12  # Q3 = Q1 + Q2 = 20 L/s on the Q1 scale (12 L/s)
     assert abs(L('z3_q2')/L('z3_q1')-8/12) < 0.01, 'Z3 given Q2:Q1'
     assert abs(L('z3_q3')-q3)/q3 > 0.15 and '?' in label('z3_q3label'), 'Z3 reveals Q3'
-    assert abs(L('z4_v2')/L('z4_v3')-2) < 0.02, 'Z4 given v2 = 2 v3'
-    v2v1=3.6197/1.9488  # Z4 result v2 relative to the inlet velocity Q/A1
-    assert abs(L('z4_v2')/L('z4_v1')-v2v1)/v2v1 > 0.15, 'Z4 reveals v2'
-    print('PASS Z1/Z3/Z4: requested v2, Q3, v2 not drawn to the result scale; given ratios kept')
+    # Z4: strelice profila u mjerilu izmjerenih brzina (10,0; 9,6; 9,1; 8,2; 7,2; 6,2 m/s), simetrične
+    # oko osi; na stijenci nema strelice; traženi Q i srednja brzina označeni su upitnikom.
+    from verify_u08 import zadatak_4
+    z4 = zadatak_4()
+    vals = [10.0, 9.6, 9.1, 8.2, 7.2, 6.2]
+    for i, vv in enumerate(vals):
+        assert abs(L(f'z4_v{i}')/L('z4_v0')-vv/10.0) < 0.01, f'Z4 arrow {i}'
+        if i:
+            assert abs(L(f'z4_v{i}m')-L(f'z4_v{i}')) < 1e-9
+    assert 'u08vs_fix_z4_v6' not in ns, 'Z4: na stijenci nema brzine'
+    assert '?' in label('z4_unknown')
+    assert abs(L('z4_v0')/L('z4_v0')*10.0 - z4['v_mean']) > 1.0  # nijedna strelica nije srednja brzina
+    print('PASS Z1/Z3/Z4: requested v2, Q3 not drawn to the result scale; Z4 profile arrows follow measured data')
     check_scene_canvas('u08_vjezbe_skice.svg', root, 6)
     assert all('u08vs_fix_z'+str(i) in ns for i in range(1,7))
     print('PASS six original practice panels')

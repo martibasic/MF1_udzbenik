@@ -108,13 +108,28 @@ def zadatak_1(H=3.20, d=0.026, rho=998.0, g=9.81):
     return {"v": v, "Q": Q, "m_dot": m_dot}
 
 
-def zadatak_2(D_1=0.100, d=0.050, dp=12.2e3, rho=998.0, g=9.81):
-    """Z2: Venturijeva cijev za vodu s diferencijalnim pretvaracem."""
-    ratio = (D_1 / d)**2
-    v_1 = math.sqrt(2 * dp / (rho * (ratio**2 - 1)))
-    v_2 = ratio * v_1
-    Q = math.pi * D_1**2 / 4 * v_1
-    return {"v_1": v_1, "v_2": v_2, "Q": Q, "dHGL": dp / (rho * g)}
+def zadatak_2(D_T=1.60, d=0.030, C_d=0.62, H_1=3.20, H_2=0.80, g=9.81):
+    """Z2: kvazistacionarno praznjenje spremnika kroz otvor u dnu."""
+    A_T = math.pi * D_T**2 / 4
+    A_o = math.pi * d**2 / 4
+    Q_1 = C_d * A_o * math.sqrt(2 * g * H_1)
+    dhdt_1 = -Q_1 / A_T
+    k = A_T / (C_d * A_o) * math.sqrt(2 / g)
+    t = k * (math.sqrt(H_1) - math.sqrt(H_2))
+    t_naive = A_T * (H_1 - H_2) / Q_1
+    t_empty = k * math.sqrt(H_1)
+    # neovisna numericka integracija dh/dt = -C_d A_o sqrt(2 g h)/A_T (RK4)
+    h, tt, dt = H_1, 0.0, 0.05
+    f = lambda hh: -C_d * A_o * math.sqrt(2 * g * max(hh, 0.0)) / A_T
+    while h > H_2:
+        k1 = f(h); k2 = f(h + dt / 2 * k1); k3 = f(h + dt / 2 * k2); k4 = f(h + dt * k3)
+        h_new = h + dt / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+        if h_new <= H_2:
+            tt += dt * (h - H_2) / (h - h_new); h = H_2; break
+        h = h_new; tt += dt
+    return {"A_T": A_T, "A_o": A_o, "Q_1": Q_1, "dhdt_1": dhdt_1, "t": t,
+            "t_naive": t_naive, "t_empty": t_empty, "t_num": tt,
+            "naive_error": (t_naive - t) / t}
 
 
 def zadatak_3(D_1=0.120, D_2=0.070, Q=0.020, dz=2.0, rho=1000.0, g=9.81):
@@ -251,10 +266,17 @@ def verify():
     _check(out, "U09.Z1.m_dot", r["m_dot"], 4.20, "kg/s", rel=0.02)
 
     r = zadatak_2()
-    _check(out, "U09.Z2.v_1", r["v_1"], 1.28, "m/s", rel=0.003)
-    _check(out, "U09.Z2.v_2", r["v_2"], 5.11, "m/s", rel=0.001)
-    _check(out, "U09.Z2.Q_Ls", r["Q"] * 1000, 10.0, "L/s", rel=0.003)
-    _check(out, "U09.Z2.dHGL_m", r["dHGL"], 1.25, "m", rel=0.005)
+    _check(out, "U09.Z2.Q_1_Ls", r["Q_1"] * 1000, 3.47, "L/s", rel=0.002)
+    _check(out, "U09.Z2.dhdt_1_mm_s", r["dhdt_1"] * 1000, -1.73, "mm/s", rel=0.003)
+    _check(out, "U09.Z2.t_s", r["t"], 1853.0, "s", rel=0.001)
+    _check(out, "U09.Z2.t_min", r["t"] / 60, 30.9, "min", rel=0.002)
+    _check(out, "U09.Z2.t_naive_s", r["t_naive"], 1390.0, "s", rel=0.001)
+    _check(out, "U09.Z2.naive_error_percent", r["naive_error"] * 100, -25.0, "%", rel=0.01)
+    _check(out, "U09.Z2.t_empty_s", r["t_empty"], 3706.0, "s", rel=0.001)
+    _invariant(out, "U09.Z2.quasi_steady_integration",
+               abs(r["t_num"] - r["t"]) / r["t"] < 2e-3 and abs(r["t_empty"] - 2 * r["t"]) < 1e-9
+               and r["t_naive"] < r["t"],
+               "RK4 integracija bilance mase mora dati analiticko vrijeme; praznjenje do H1/4 traje polovinu ukupnog.")
 
     r = zadatak_3()
     _check(out, "U09.Z3.v_1", r["v_1"], 1.768, "m/s", rel=.0005)
@@ -293,10 +315,9 @@ def verify():
     a,b,c,d,e,f=(zadatak_1(),zadatak_2(),zadatak_3(),zadatak_4(),zadatak_5(),zadatak_6())
     _invariant(out, "U09.INV.z1_energy_mass", abs(a['v']**2/2-9.81*3.2)<1e-12
               and abs(a['m_dot']-998*a['Q'])<1e-12, "Istjecanje ne zatvara energiju i masu.")
-    _invariant(out, "U09.INV.z2_energy", abs(998/2*(b['v_2']**2-b['v_1']**2)-12.2e3)<1e-8
-              and abs(b['v_2']-4*b['v_1'])<1e-12
-              and abs(zadatak_2(dp=4*12.2e3)['Q']-2*b['Q'])<1e-12,
-              "Venturi ne zatvara energiju, kontinuitet ili korijenski zakon protoka.")
+    _invariant(out, "U09.INV.z2_torricelli_rate", abs(b['Q_1']-0.62*math.pi*0.030**2/4*math.sqrt(2*9.81*3.20))<1e-12
+               and abs(b['dhdt_1']*b['A_T']+b['Q_1'])<1e-12,
+               "Pocetni protok mora slijediti iz C_d A_o sqrt(2 g H1), a pad razine iz bilance mase.")
     ch1=cjeloviti_1_usisni_vod()
     _invariant(out, "U09.INV.ch1_energy", abs(ch1['h_P']+ch1['h_v']+2.0+1.2-101.3e3/(1025*9.81))<1e-12
               and ch1['p_P_ideal']>ch1['p_P']>0

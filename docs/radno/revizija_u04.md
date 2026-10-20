@@ -220,3 +220,17 @@ dodani `primjer_brod_u_zavoju`, `primjer_separator`. Novi
 `check_u04_sketch_geometry.py` provjerava nagib $a/g$ bez uvećanja, očuvanje
 volumena, otvorene sonde, okomitost tlaka na AB i izostanak sile/hvatišta.
 D06 i manifest obnavlja koordinator generatorima.
+
+## Revizija 19. 10. 2026. — didaktičko pojačanje (odobreno u razgovoru)
+
+Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere; kroz poglavlja uvesti po koji zahtjevniji zadatak ili zakomplicirati primjer, ne dodavati tekst. Zahvat unutar šest mjesta Z1–Z6 i raspodjele T1, T1, T2, T2, T3, T4; broj primjera ostaje. Stari ID-jevi zamijenjenih zadataka ostaju kao prazni `<span>` aliasi.
+
+| Mjesto | Staro | Novo | Razina | Didaktička korist |
+| --- | --- | --- | --- | --- |
+| P1 | Laboratorijska kolica (ponavljao P5) | Zatvoreni puni spremnik s odzračnikom pri ubrzanju (`ex-zatvoreni-puni-spremnik-odzracnik-ubrzanje`): zamišljena slobodna površina, $p_B=-4{,}50$, $p_C=5{,}89$, $p_D=1{,}39$ kPa, $a_D=3{,}92$ m/s² | T2 | Puni spremnik bez stvarne površine: student mora konstruirati zamišljenu razinu i shvatiti da položaj odzračnika pomiče cijelo polje tlaka. Nova skica `u04_fig_zatvoreni_puni_spremnik.svg`; stara `u04_val2_laboratorijska_kolica.svg` uklonjena. |
+| Z2 | $a_{max}$ prelijevanja (inverz Z1) | Spremnik na dizalici s vodoravnim i okomitim ubrzanjem (`task-spremnik-na-dizalici-dva-ubrzanja`): $\tan\theta=a_x/(g+a_z)$, $\Delta h=0{,}272$ m, $p=10{,}3$ kPa; bez $a_z$ nagib precijenjen, tlak podcijenjen 9 %; usporavanje dizanja | T2 | Dvije komponente ubrzanja i efektivna gravitacija; usporedba triju stanja. |
+| Z3 | Okomito ubrzanje | Nepromijenjen tekst, razina T1 | T1 | Raspodjela ostaje 2×T1, 2×T2, T3, T4. |
+
+D03 §4 dopunjen.
+
+Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.
