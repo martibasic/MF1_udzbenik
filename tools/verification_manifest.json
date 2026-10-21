@@ -2985,8 +2985,8 @@
         "anchor": "#task-promjer-cilindra-iz-volumena"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Laboratorijski cilindar prije mjerenja potpuno je napunjen tekućinom i odzračen. Dovedeni dodatni volumeni, mjereni od istoga početnog položaja, i pomaci klipa pri malom opterećenju prikazani su u tablici. U zasebnom pokusu s blokiranim klipom razlika tlakova preko klipa iznosi $\\Delta p = 0{,}40\\ \\text{MPa}$. | Dodatni volumen $\\Delta V$ (cm³) | Pomak $s$ (mm) | | ---: | ---: | | 5,0 | 10,0 | | 10,0 | 20,0 | | 15,0 | 30,0 | U trećem pokusu cilindar i crpka čine zatvoren sustav s početnim ukupnim volumenom tekućine $V_0=250\\ \\mathrm{cm^3}$. Crpni klip smanji volumen svoje komore za $\\Delta V_p=5{,}00\\ \\mathrm{cm^3}$, a tlak polako naraste za $\\Delta p=0{,}40\\ \\mathrm{MPa}$. Radni se klip sada može slobodno pomicati; vanjsko opterećenje prilagođava se kvazistatički. Zadan je $K=1{,}00\\ \\mathrm{GPa}$; temperatura je stalna. Nema zraka, propuštanja ni rastezanja vodova. Ukupna masa tekućine, uključujući tekućinu u crpki, ostaje ista. Zanemarivanje stlačivosti prihvatljivo je ako pomak od rezultata nestlačivog proračuna ne odstupa za više od $1{,}0\\,\\%$. **Traži se** 1. Odredi efektivnu površinu i promjer klipa iz svakog para podataka, provjeri njihovu usklađenost i predvidi idealnu silu u pokusu s blokiranim klipom. 2. Procijeni volumen stlačivanja i konačni pomak. 3. Odluči je li taj kriterij zadovoljen. Objasni zašto sama početna tablica ne jamči valjanost modela pri svakom tlaku niti otkriva uzrok mogućeg odstupanja u stvarnom uređaju.",
-        "sha256": "7c7a583757c11ac00ccf6f45cb5a0223182d652971346cdb4babb58a0d220caa",
+        "markdown": "**Tekst zadatka** Laboratorijski cilindar prije mjerenja potpuno je napunjen tekućinom i odzračen. Dovedeni dodatni volumeni, mjereni od istoga početnog položaja, i pomaci klipa pri malom opterećenju prikazani su u tablici. U zasebnom pokusu s blokiranim klipom razlika tlakova preko klipa iznosi $\\Delta p = 0{,}40\\ \\text{MPa}$. | Dodatni volumen $\\Delta V$ (cm³) | Pomak $s$ (mm) | | ---: | ---: | | 5,0 | 10,0 | | 10,0 | 20,0 | | 15,0 | 30,0 | U trećem pokusu cilindar i crpka čine zatvoren sustav s početnim ukupnim volumenom tekućine $V_0=250\\ \\mathrm{cm^3}$. Crpni klip smanji volumen svoje komore za $\\Delta V_p=5{,}00\\ \\mathrm{cm^3}$, a tlak polako naraste za $\\Delta p=0{,}40\\ \\mathrm{MPa}$. Radni se klip sada može slobodno pomicati; vanjsko opterećenje prilagođava se kvazistatički. Zadan je $K=1{,}00\\ \\mathrm{GPa}$; temperatura je stalna. Nema zraka, propuštanja ni rastezanja vodova. Ukupna masa tekućine, uključujući tekućinu u crpki, ostaje ista. Zanemarivanje stlačivosti prihvatljivo je ako pomak ne odstupa od rezultata nestlačivog proračuna za više od $1{,}0\\,\\%$. **Traži se** 1. Odredi efektivnu površinu i promjer klipa iz svakog para podataka, provjeri njihovu usklađenost i predvidi idealnu silu u pokusu s blokiranim klipom. 2. Procijeni volumen stlačivanja i konačni pomak. 3. Odluči je li taj kriterij zadovoljen. Objasni zašto sama početna tablica ne jamči valjanost modela pri svakom tlaku niti otkriva uzrok mogućeg odstupanja u stvarnom uređaju.",
+        "sha256": "f45cb2d75e5ee6bdf44af04d7a9a45a45b06817428135b3b798062b224d8c150",
         "authoritative": true
       },
       "input_data": {
@@ -3075,7 +3075,7 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Zanemarivanje stlačivosti prihvatljivo je ako pomak od rezultata nestlačivog proračuna ne odstupa za više od $1{,}0\\,\\%$.",
+            "text": "Zanemarivanje stlačivosti prihvatljivo je ako pomak ne odstupa od rezultata nestlačivog proračuna za više od $1{,}0\\,\\%$.",
             "provenance": {
               "kind": "task_statement",
               "line": 711
@@ -14434,7 +14434,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Početno: $(T,f,KG,GM)=(0{,}2227;0{,}3773;0{,}8000;0{,}1534)\\ \\text{m}$. Plan A: $(0{,}2227;0{,}3773;0{,}6800;0{,}2734)\\ \\text{m}$, prihvatljiv. Plan B: $(0{,}3563;0{,}2437;0{,}5188;0{,}1857)\\ \\text{m}$, ne zadovoljava oba uvjeta. Balast snižava $KG$, ali smanjuje i $BM$ te nadvođe $f=H-T$.",
+        "markdown": "Početno: $(T,f,KG,GM)=(0{,}2227;0{,}3773;0{,}8000;0{,}1534)\\ \\text{m}$. Plan A: $(0{,}2227;0{,}3773;0{,}6800;0{,}2734)\\ \\text{m}$, prihvatljiv. Plan B: $(0{,}3563;0{,}2437;0{,}5188;0{,}1857)\\ \\text{m}$, ne zadovoljava nijedan uvjet. Balast snižava $KG$, ali smanjuje i $BM$ te nadvođe $f=H-T$.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u06_uzgon_plivanje_i_stabilnost.md",
@@ -16141,7 +16141,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Trapezno pravilo daje $Q\\approx0{,}561\\ \\text{m}^3/\\text{s}$ i $v=Q/A\\approx7{,}94\\ \\text{m/s}$; $v/v_{max}\\approx0{,}79$, $\\dot m\\approx0{,}673\\ \\text{kg/s}$. S vršnom brzinom bilo bi $Q=0{,}707\\ \\text{m}^3/\\text{s}$, oko $26\\,\\%$ previše. Vanjski prsten nosi najveći opseg, a profil u njemu nije linearan, pa trapez ondje podcjenjuje tok; potencijski profil daje $0{,}817$, oko $3\\,\\%$ više od izmjerene diskretizacije.",
+        "markdown": "Trapezno pravilo daje $Q\\approx0{,}561\\ \\text{m}^3/\\text{s}$ i $v=Q/A\\approx7{,}94\\ \\text{m/s}$; $v/v_{max}\\approx0{,}79$, $\\dot m\\approx0{,}673\\ \\text{kg/s}$. S vršnom brzinom bilo bi $Q=0{,}707\\ \\text{m}^3/\\text{s}$, oko $26\\,\\%$ previše. Vanjski prsten nosi najveći opseg, a profil u njemu nije linearan, pa trapez ondje podcjenjuje tok; potencijski profil daje $0{,}817$, oko $3\\,\\%$ više od trapezne procjene.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md",
@@ -17689,8 +17689,8 @@
         "anchor": "#task-tlak-u-silaznom-suzenju"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Voda gustoće $\\rho=1000\\ \\text{kg/m}^3$ stacionarno teče kroz glatko silazno suženje. U vodoravnom ulaznom presjeku 1 promjer je $D_1=120\\ \\text{mm}$, a u vodoravnom izlaznom presjeku 2 $D_2=70\\ \\text{mm}$. Os presjeka 1 nalazi se $z_1-z_2=2{,}00\\ \\text{m}$ iznad osi presjeka 2. Volumenski protok je $Q=20{,}0\\ \\text{L/s}$. Zanemari gubitke i pretpostavi jednolike brzine u referentnim presjecima. **Traži se** 1. Odredi obje brzine te razliku $p_2-p_1$. 2. Provjeri tvrdnju: „U svakom suženju tlak mora pasti.”",
-        "sha256": "ea0755d187417f0a6ac1757d2a3b9bda5947f2b5b995b4df0c0d0baf21bbf368",
+        "markdown": "**Tekst zadatka** Voda gustoće $\\rho=1000\\ \\text{kg/m}^3$ stacionarno teče kroz glatko silazno suženje. U ulaznom presjeku 1 promjer je $D_1=120\\ \\text{mm}$, a u izlaznom presjeku 2 $D_2=70\\ \\text{mm}$. Os presjeka 1 nalazi se $z_1-z_2=2{,}00\\ \\text{m}$ iznad osi presjeka 2. Volumenski protok je $Q=20{,}0\\ \\text{L/s}$. Zanemari gubitke i pretpostavi jednolike brzine u referentnim presjecima. **Traži se** 1. Odredi obje brzine te razliku $p_2-p_1$. 2. Provjeri tvrdnju: „U svakom suženju tlak mora pasti.”",
+        "sha256": "cab9847fac83e6176e75e0a1d6f45a3ba92e8d43c137dabf0a7d601eff6b7c0b",
         "authoritative": true
       },
       "input_data": {
@@ -22720,8 +22720,8 @@
         "anchor": "#task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Vodoravna Y-račva prima vodu u smjeru $+x$ kroz ulaznu cijev promjera $D_1=140\\ \\text{mm}$. Nominalni protok jest $Q_1=0{,}040\\ \\text{m}^3/\\text{s}$, a manometarski tlak $p_{M1}=185\\ \\text{kPa}$. Udio $s=0{,}60$ odlazi ravno kroz granu promjera $D_2=90\\ \\text{mm}$, a ostatak kroz granu promjera $D_3=80\\ \\text{mm}$, otklonjenu za $60^\\circ$ prema $+y$ u vodoravnoj ravnini. Na oba izlaza vlada atmosferski tlak. Izlazni udio zadan je radnim režimom; ne pretpostavljaj jednaku brzinu u granama niti tok bez gubitaka. U sintetičkom pogonskom scenariju zadane su neovisne zajamčene granice: $p_{M1}=185\\pm5\\ \\text{kPa}$, $Q_1=0{,}040\\ \\text{m}^3/\\text{s}\\pm2\\ \\%$ te $s=0{,}60\\pm0{,}03$. To nisu standardne nesigurnosti za RSS. Ocjenjuje se samo taj statički kriterij rezultante u ravnini. Ponuđene su nosivosti $3{,}0\\ \\text{kN}$ i $3{,}5\\ \\text{kN}$, uz kriterij $R_{naz}\\geq1{,}15F_{max}$. **Traži se** 1. Odredi nominalne protoke, komponente sile fluida na račvu i reakciju nosača. 2. Odredi najveću rezultantu u cijelom zadanom području i provjeri gdje nastaje. 3. Odaberi manju ponuđenu nosivost koja zadovoljava zadani kriterij.",
-        "sha256": "ef1f5edc6f463e05e63cc4ac576aa28ab40543942fa06c4dd81e71a92b4d0831",
+        "markdown": "**Tekst zadatka** Vodoravna Y-račva prima vodu u smjeru $+x$ kroz ulaznu cijev promjera $D_1=140\\ \\text{mm}$. Nominalni protok jest $Q_1=0{,}040\\ \\text{m}^3/\\text{s}$, a manometarski tlak $p_{M1}=185\\ \\text{kPa}$. Udio $s=0{,}60$ odlazi ravno kroz granu promjera $D_2=90\\ \\text{mm}$, a ostatak kroz granu promjera $D_3=80\\ \\text{mm}$, otklonjenu za $60^\\circ$ prema $+y$ u vodoravnoj ravnini. Na oba izlaza vlada atmosferski tlak. Izlazni udio zadan je radnim režimom; ne pretpostavljaj jednaku brzinu u granama niti tok bez gubitaka. U sintetičkom pogonskom scenariju zadane su neovisne zajamčene granice: $p_{M1}=185\\pm5\\ \\text{kPa}$, $Q_1=0{,}040\\ \\text{m}^3/\\text{s}\\pm2\\ \\%$ te $s=0{,}60\\pm0{,}03$. To nisu standardne nesigurnosti za RSS. Ocjenjuje se samo zadani statički kriterij rezultante u ravnini. Ponuđene su nosivosti $3{,}0\\ \\text{kN}$ i $3{,}5\\ \\text{kN}$, uz kriterij $R_{naz}\\geq1{,}15F_{max}$. **Traži se** 1. Odredi nominalne protoke, komponente sile fluida na račvu i reakciju nosača. 2. Odredi najveću rezultantu u cijelom zadanom području i provjeri gdje nastaje. 3. Odaberi manju ponuđenu nosivost koja zadovoljava zadani kriterij.",
+        "sha256": "bdb12223d3d7f0061d5597ae5921c7913d018bc59a3d55e7c43114d82dccf309",
         "authoritative": true
       },
       "input_data": {
@@ -23519,8 +23519,8 @@
         "anchor": "#task-dimenzije-manningove-jednadzbe"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target=\"u15\"} rabi se empirijska Manningova jednadžba $v=\\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (površina presjeka toka kroz oplakani opseg), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\\ \\text{m}$, dubinu vode $y=0{,}80\\ \\text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$. **Traži se** 1. Provjeri dimenzijsku homogenost jednadžbe i odredi dimenziju te SI jedinicu koeficijenta $n$. 2. Odredi hidraulički radijus, srednju brzinu i protok. 3. Projektant zadrži istu brojčanu vrijednost $n$, ali $R_h$ uvrsti u stopama ($1\\ \\text{m}=3{,}2808\\ \\text{ft}$) očekujući $v$ u ft/s. Odredi faktor kojim treba pomnožiti desnu stranu da jednadžba ostane valjana i koliku bi brzinu dobio bez njega.",
-        "sha256": "f8f32ca3cfc410245fc05cb5d4a1e5d81249545dd5ab694cc791cab2f92ffcd4",
+        "markdown": "**Tekst zadatka** Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target=\"u15\"} rabi se empirijska Manningova jednadžba $v=\\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (omjer površine presjeka toka i oplakanog opsega), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\\ \\text{m}$, dubinu vode $y=0{,}80\\ \\text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$. **Traži se** 1. Provjeri dimenzijsku homogenost jednadžbe i odredi dimenziju te SI jedinicu koeficijenta $n$. 2. Odredi hidraulički radijus, srednju brzinu i protok. 3. Projektant zadrži istu brojčanu vrijednost $n$, ali $R_h$ uvrsti u stopama ($1\\ \\text{m}=3{,}2808\\ \\text{ft}$) očekujući $v$ u ft/s. Odredi faktor kojim treba pomnožiti desnu stranu da jednadžba ostane valjana i koliku bi brzinu dobio bez njega.",
+        "sha256": "50b81f6c2d53a57f79586933a3b2ceff7409ad7f3c1a962f0c95e7cb526646f1",
         "authoritative": true
       },
       "input_data": {
@@ -26297,8 +26297,8 @@
         "anchor": "#task-couette-povrat"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** U uskom procjepu gibanje gornje ploče i nepovoljan gradijent tlaka tjeraju ulje u suprotnim smjerovima. Newtonski fluid ima $\\mu=0{,}100\\ \\text{Pa s}$; donja ploča na $y=0$ miruje, a gornja na $y=H$ klizi u pozitivnom smjeru osi $x$ brzinom $u=2{,}00\\ \\text{m/s}$. Razmak ploča iznosi $H=1{,}00\\ \\text{mm}$. Za potpuno razvijeni laminarni tok i konstantan gradijent tlaka $dp/dx>0$ vrijedi $v(y)=uy/H+(dp/dx)(y^2-Hy)/(2\\mu)$. Ovdje je $\\tau_0$ komponenta sile fluida na donju ploču po jedinici površine u smjeru osi $x$. Obje su ploče nepropusne i uz njih nema klizanja. Usporedi $dp/dx=0{,}90\\,(dp/dx)_{krit}$ i $dp/dx=1{,}10\\,(dp/dx)_{krit}$. **Traži se** 1. Odredi kritični gradijent $(dp/dx)_{krit}$ pri kojem $\\tau_0=\\mu v'(0)$ mijenja znak, a zatim $\\tau_0$ za oba zadana gradijenta. 2. Skiciraj profile brzine za oba zadana pogona. Razlikuj povratni tok uz ploču od prolaza kroz nju.",
-        "sha256": "0778a213b8491b504900981b1cc703593e05143cd512d2bb45a4e43c3ea56e07",
+        "markdown": "**Tekst zadatka** U uskom procjepu gibanje gornje ploče i nepovoljan gradijent tlaka tjeraju ulje u suprotnim smjerovima. Newtonski fluid ima $\\mu=0{,}100\\ \\text{Pa s}$; donja ploča na $y=0$ miruje, a gornja na $y=H$ klizi u pozitivnom smjeru osi $x$ brzinom $u=2{,}00\\ \\text{m/s}$. Razmak ploča iznosi $H=1{,}00\\ \\text{mm}$. Za potpuno razvijeni laminarni tok i konstantan gradijent tlaka $dp/dx>0$ vrijedi $v(y)=uy/H+(dp/dx)(y^2-Hy)/(2\\mu)$. Ovdje je $\\tau_0$ komponenta sile fluida na donju ploču po jedinici površine u smjeru osi $x$. Obje su ploče nepropusne i uz njih nema klizanja. Usporedi $dp/dx=0{,}90\\,(dp/dx)_{krit}$ i $dp/dx=1{,}10\\,(dp/dx)_{krit}$. **Traži se** 1. Odredi kritični gradijent $(dp/dx)_{krit}$ pri kojem $\\tau_0=\\mu v'(0)$ mijenja predznak, a zatim $\\tau_0$ za oba zadana gradijenta. 2. Skiciraj profile brzine za oba zadana pogona. Razlikuj povratni tok uz ploču od prolaza kroz nju.",
+        "sha256": "52e965a48eb16c65931d1746d7dd63e7311cf3368c2eccbd9b7014c24652b85b",
         "authoritative": true
       },
       "input_data": {
@@ -29244,8 +29244,8 @@
         "anchor": "#task-balastna-crpka-regulacija-npsh"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Balastna crpka broda puni balastni tank morskom vodom gustoće $\\rho=1025\\ \\mathrm{kg/m^3}$ preko usisnog koša u oplati. Sintetičke nastavne karakteristike zadane su brojevnim vrijednostima, s $Q$ u $\\mathrm{L/s}$ i visinama u metrima: pri nazivnoj brzini $H_p(Q)=22-0{,}010Q^2$, sustav s otvorenim ventilom $H_s(Q)=4+0{,}015Q^2$, a prigušeni sustav $H_{s,V}(Q)=4+0{,}026Q^2$. Ukupna učinkovitost pretvorbe električne u hidrauličku snagu pretpostavlja se jednakom $\\eta=0{,}70$ u objema uspoređenim točkama; crpka radi $t=1500\\ \\mathrm{h/god}$. Primijeni afinitetno skaliranje iste crpke uz zadanu stalnu učinkovitost. Pri protoku prigušenog sustava referentni usisni presjek S crpke nalazi se $1{,}8\\ \\mathrm{m}$ **ispod** vodne linije, tj. $z_s=-1{,}8\\ \\mathrm{m}$ (napunjen usis), atmosferski tlak je $p_{atm}=101{,}3\\ \\mathrm{kPa}$, usisni gubitak koša, filtra i armature $h_{g,s}=1{,}4\\ \\mathrm{m}$, a tlak pare morske vode pri $30\\ \\mathrm{^\\circ C}$ iznosi $p_v=4{,}2\\ \\mathrm{kPa}$. Sintetički model potrebnog NPSH-a **pri nazivnoj brzini** jest $NPSH_r=2{,}5+0{,}004Q^2$ u metrima. **Traži se** 1. Odredi radnu točku prigušenog sustava, odnosno $Q$ i $H_V$, te godišnju potrošnju električne energije $E_V$. 2. Za isti protok, uz ponovno otvoren ventil, odredi omjer brzina $s=n_2/n_1$, potrebnu visinu $H_s$, godišnju energiju $E_s$ i uštedu $\\Delta E$. 3. Odredi $NPSH_a$ s apsolutnim tlakom i razliku $NPSH_a-NPSH_r$ za prigušeni slučaj. Zatim odluči koji podatci nedostaju da bi se usis proglasio prihvatljivim za oba načina regulacije i u balastnom stanju broda, kad je presjek S samo $0{,}4\\ \\mathrm{m}$ ispod vodne linije ($z_s=-0{,}4\\ \\mathrm{m}$); zadani $NPSH_r$ nemoj nekritički prenijeti na sniženu brzinu.",
-        "sha256": "64cb39fec6e3458a10f118b22e0c46b1b8a935d76ac2c8b91e79454ab5d39cd3",
+        "markdown": "**Tekst zadatka** Balastna crpka broda puni balastni tank morskom vodom gustoće $\\rho=1025\\ \\mathrm{kg/m^3}$ preko usisnog koša u oplati. Sintetičke nastavne karakteristike zadane su brojevnim vrijednostima, s $Q$ u $\\mathrm{L/s}$ i visinama u metrima: pri nazivnoj brzini $H_p(Q)=22-0{,}010Q^2$, sustav s otvorenim ventilom $H_s(Q)=4+0{,}015Q^2$, a prigušeni sustav $H_{s,V}(Q)=4+0{,}026Q^2$. Ukupna učinkovitost pretvorbe električne u hidrauličku snagu pretpostavlja se jednakom $\\eta=0{,}70$ u objema uspoređenim točkama; crpka radi $t=1500\\ \\mathrm{h/god}$. Primijeni afinitetno skaliranje iste crpke uz zadanu stalnu učinkovitost. Referentni usisni presjek S crpke nalazi se $1{,}8\\ \\mathrm{m}$ **ispod** vodne linije, tj. $z_s=-1{,}8\\ \\mathrm{m}$ (napunjen usis), atmosferski tlak je $p_{atm}=101{,}3\\ \\mathrm{kPa}$, usisni gubitak koša, filtra i armature pri protoku prigušenog sustava $h_{g,s}=1{,}4\\ \\mathrm{m}$, a tlak pare morske vode pri $30\\ \\mathrm{^\\circ C}$ iznosi $p_v=4{,}2\\ \\mathrm{kPa}$. Sintetički model potrebnog NPSH-a **pri nazivnoj brzini** jest $NPSH_r=2{,}5+0{,}004Q^2$ u metrima. **Traži se** 1. Odredi radnu točku prigušenog sustava, odnosno $Q$ i $H_V$, te godišnju potrošnju električne energije $E_V$. 2. Za isti protok, uz ponovno otvoren ventil, odredi omjer brzina $s=n_2/n_1$, potrebnu visinu $H_s$, godišnju energiju $E_s$ i uštedu $\\Delta E$. 3. Odredi $NPSH_a$ s apsolutnim tlakom i razliku $NPSH_a-NPSH_r$ za prigušeni slučaj. Zatim odluči koji podatci nedostaju da bi se usis proglasio prihvatljivim za oba načina regulacije i u balastnom stanju broda, kad je presjek S samo $0{,}4\\ \\mathrm{m}$ ispod vodne linije ($z_s=-0{,}4\\ \\mathrm{m}$); zadani $NPSH_r$ nemoj nekritički prenijeti na sniženu brzinu.",
+        "sha256": "01d6f7f6e4c0fa1c9a5197aad9549e96f042ff1f1c6f90a6e47340847ad36068",
         "authoritative": true
       },
       "input_data": {
@@ -29410,7 +29410,7 @@
             }
           },
           {
-            "text": "$z_s=-1{,}8\\ \\mathrm{m}$ (napunjen usis), atmosferski tlak je $p_{atm}=101{,}3\\ \\mathrm{kPa}$, usisni gubitak koša, filtra i armature $h_{g,s}=1{,}4\\ \\mathrm{m}$, a tlak pare morske vode pri $30\\ \\mathrm{^\\circ C}$ iznosi $p_v=4{,}2\\ \\mathrm{kPa}$.",
+            "text": "$z_s=-1{,}8\\ \\mathrm{m}$ (napunjen usis), atmosferski tlak je $p_{atm}=101{,}3\\ \\mathrm{kPa}$, usisni gubitak koša, filtra i armature pri protoku prigušenog sustava $h_{g,s}=1{,}4\\ \\mathrm{m}$, a tlak pare morske vode pri $30\\ \\mathrm{^\\circ C}$ iznosi $p_v=4{,}2\\ \\mathrm{kPa}$.",
             "provenance": {
               "kind": "task_statement",
               "line": 862
@@ -29972,8 +29972,8 @@
         "anchor": "#task-pokretna-ploca-i-kolo-s-plocama"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Vodeni mlaz gustoće $\\rho=998\\ \\mathrm{kg/m^3}$, promjera $d=25\\ \\mathrm{mm}$ i brzine $v=30\\ \\mathrm{m/s}$ udara okomito na ravnu ploču koja se giba u smjeru mlaza stalnom brzinom $u=10\\ \\mathrm{m/s}$. Usporedi dva slučaja: **(a)** jedna ploča koja se udaljava od sapnice, pa je zahvaća samo dio mlaza; **(b)** kolo s nizom ploča na kojem uvijek jedna ploča presreće cijeli mlaz, a svaka se giba istom brzinom $u$. U oba slučaja fluid se uz ploču razlijeva okomito na smjer gibanja u sustavu ploče, tlak je svuda atmosferski, a trenje i težinu zanemari. **Traži se** 1. Za oba slučaja odredi maseni protok koji dolazi na ploču, silu mlaza na ploču u smjeru gibanja, predanu snagu i hidraulički stupanj djelovanja prema snazi mlaza $\\tfrac12\\dot m_{ml}v^2$, gdje je $\\dot m_{ml}=\\rho Av$. 2. Odredi za svaki slučaj brzinu $u$ koja daje najveću snagu i pripadni najveći stupanj djelovanja. Objasni zašto je u slučaju (a) zadana brzina $u=10\\ \\mathrm{m/s}$ upravo optimalna.",
-        "sha256": "7bfec7ac6cf3f6ac2a050429ca78a0dcf33f1d30054bda29ec062e2dc56b7d49",
+        "markdown": "**Tekst zadatka** Vodeni mlaz gustoće $\\rho=998\\ \\mathrm{kg/m^3}$, promjera $d=25\\ \\mathrm{mm}$ i brzine $v=30\\ \\mathrm{m/s}$ udara okomito na ravnu ploču koja se giba u smjeru mlaza stalnom brzinom $u=10\\ \\mathrm{m/s}$. Usporedi dva slučaja: **(a)** jedna ploča koja se udaljava od sapnice, pa do nje stiže samo dio mlaza; **(b)** kolo s nizom ploča na kojem uvijek jedna ploča presreće cijeli mlaz, a svaka se giba istom brzinom $u$. U oba slučaja fluid se uz ploču razlijeva okomito na smjer gibanja u sustavu ploče, tlak je svuda atmosferski, a trenje i težinu zanemari. **Traži se** 1. Za oba slučaja odredi maseni protok koji dolazi na ploču, silu mlaza na ploču u smjeru gibanja, predanu snagu i hidrauličku učinkovitost prema snazi mlaza $\\tfrac12\\dot m_{ml}v^2$, gdje je $\\dot m_{ml}=\\rho Av$. 2. Odredi za svaki slučaj brzinu $u$ koja daje najveću snagu i pripadnu najveću učinkovitost. Objasni zašto je u slučaju (a) zadana brzina $u=10\\ \\mathrm{m/s}$ upravo optimalna.",
+        "sha256": "f57f1ab0de9df0d9ec121aa3ad15b881400495aff07b5890c52df403f92d806c",
         "authoritative": true
       },
       "input_data": {
@@ -33353,8 +33353,8 @@
         "anchor": "#task-skok-mjerenje"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Zadano je $Q=1{,}800\\pm0{,}018\\ \\mathrm{m^3/s}$, $b=1{,}200\\pm0{,}003\\ \\mathrm{m}$, $y_1=0{,}250\\pm0{,}003\\ \\mathrm{m}$ i $y_2=1{,}220\\pm0{,}008\\ \\mathrm{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Kanal je vodoravan i pravokutan. Na kratkom kontrolnom volumenu zanemari uzdužnu silu dna i stijenki; tlak u rubnim presjecima je hidrostatički, a $\\beta_1=\\beta_2=1$. U oba presjeka koristi se isti izračunati $q=Q/b$, pa njihove doprinose nesigurnosti ne smiješ tretirati kao dva neovisna protoka. **Traži se** 1. Odaberi kontrolni volumen s rubnim presjecima izvan valjka skoka, prikaži vanjske sile i usporedi rezidual s mjernom nesigurnošću. 2. Izvedi rezidual $\\Delta_I=(I_2-I_1)/(\\rho gb)$, linearno propagiraj nesigurnost svih četiriju mjerenja i primijeni kriterij $|\\Delta_I|\\le2s_{\\Delta}$, gdje je $s_{\\Delta}$ standardna nesigurnost reziduala. 3. Odredi i teorijsku spregnutu dubinu iz srednjih vrijednosti uzvodnih ulaznih podataka. Zaključak ograniči na zadani model i kriterij slaganja mjerenja.",
-        "sha256": "6e843855d6247fac0efff978dffec7773e0478a9c03d0290235bda7439ac8ff0",
+        "markdown": "**Tekst zadatka** Zadano je $Q=1{,}800\\pm0{,}018\\ \\mathrm{m^3/s}$, $b=1{,}200\\pm0{,}003\\ \\mathrm{m}$, $y_1=0{,}250\\pm0{,}003\\ \\mathrm{m}$ i $y_2=1{,}220\\pm0{,}008\\ \\mathrm{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Kanal je vodoravan i pravokutan. Na kratkom kontrolnom volumenu zanemari uzdužnu silu dna i stijenki; tlak u rubnim presjecima je hidrostatički, a $\\beta_1=\\beta_2=1$. U oba presjeka koristi se isti izračunani $q=Q/b$, pa njihove doprinose nesigurnosti ne smiješ tretirati kao dva neovisna protoka. **Traži se** 1. Odaberi kontrolni volumen s rubnim presjecima izvan valjka skoka i prikaži vanjske sile. 2. Izvedi rezidual $\\Delta_I=(I_2-I_1)/(\\rho gb)$, linearno propagiraj nesigurnost svih četiriju mjerenja i primijeni kriterij $|\\Delta_I|\\le2s_{\\Delta}$, gdje je $s_{\\Delta}$ standardna nesigurnost reziduala. 3. Odredi i teorijsku spregnutu dubinu iz srednjih vrijednosti uzvodnih ulaznih podataka. Zaključak ograniči na zadani model i kriterij slaganja mjerenja.",
+        "sha256": "4e47d3fe7f5ea993d6a66263ea4ee8a6c5ac46df77fc717cae52eab4cdfe5c3f",
         "authoritative": true
       },
       "input_data": {
@@ -33474,7 +33474,7 @@
             }
           },
           {
-            "text": "U oba presjeka koristi se isti izračunati $q=Q/b$, pa njihove doprinose nesigurnosti ne smiješ tretirati kao dva neovisna protoka.",
+            "text": "U oba presjeka koristi se isti izračunani $q=Q/b$, pa njihove doprinose nesigurnosti ne smiješ tretirati kao dva neovisna protoka.",
             "provenance": {
               "kind": "task_statement",
               "line": 548

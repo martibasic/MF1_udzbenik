@@ -274,7 +274,7 @@ $$
 \frac{aL}{g}=\frac{3{,}0\cdot1{,}50}{9{,}81}=0{,}459\ \text{m}
 $$ {#eq-relativno-mirovanje-rijeseni-primjer-otvoreni-spremnik-na-laboratori-03}
 
-ispod gornjeg ruba, dakle unutar spremnika. Iznad te plohe, u prednjem gornjem dijelu, voda je pod podtlakom: najniži je u $B$, gdje apsolutni tlak iznosi oko $96{,}8\ \text{kPa}$. Tlak u $D$ pada na nulu kad zamišljena površina dosegne dno uz prednju stijenku, $aL=gH$, odnosno pri
+ispod gornjeg ruba, dakle unutar spremnika. Iznad te plohe, u prednjem gornjem dijelu, voda je pod podtlakom, najvećim u $B$, gdje je uz $p_{atm}=101{,}3\ \text{kPa}$ apsolutni tlak oko $96{,}8\ \text{kPa}$. Tlak u $D$ pada na nulu kad zamišljena površina dosegne dno uz prednju stijenku, $aL=gH$, odnosno pri
 
 $$
 a_D=\frac{gH}{L}=\frac{9{,}81\cdot0{,}60}{1{,}50}=3{,}92\ \text{m/s}^2.
@@ -284,7 +284,7 @@ Kad bi odzračnik bio u $B$, referenca $p_M=0$ bila bi u prednjem gornjem kutu, 
 
 **Provjera i tumačenje**
 
-Razlike tlakova ovise samo o polju $\vec g_{eff}$ i udaljenostima: $p_C-p_A=p_D-p_B=\rho gH$ i $p_A-p_B=p_C-p_D=\rho aL$. Položaj odzračnika određuje samo zajedničku razinu, pa odzračnik na prednjoj strani uklanja podtlak. Pri usporavanju se predznak člana $\rho aL$ obrće. Model vrijedi dok voda potpuno ispunjava spremnik; da se odzračnik našao ispod zamišljene površine, kroz njega bi ušao zrak i nastala bi stvarna slobodna površina.
+Razlike tlakova ovise samo o polju $\vec g_{eff}$ i udaljenostima: $p_C-p_A=p_D-p_B=\rho gH$ i $p_A-p_B=p_C-p_D=\rho aL$. Položaj odzračnika određuje samo zajedničku razinu, pa odzračnik na prednjoj strani uklanja podtlak. Pri usporavanju se predznak člana $\rho aL$ obrće. Model vrijedi dok voda potpuno ispunjava spremnik; ostane li u njemu zraka, nastaje stvarna slobodna površina i raspodjela tlaka se mijenja.
 :::
 
 ::: {#ex-u04-zatvoreni-servisni-modul-s-kosom-inspekcijskom-stijenkom .mf1-we}
@@ -399,7 +399,7 @@ $$ {#eq-brod-u-zavoju-granica-prelijevanja}
 
 daleko iznad brzine broda; u ustaljenom zavoju tank se ne prelijeva.
 
-Lokalna aproksimacija: ubrzanje $v_s^2/r$ mijenja se preko tanka za $b_t/R_z = 5\ \%$. Točan račun u rotirajućem okviru daje paraboloid $z = \omega^2 r^2/(2g)$ s $\omega = v_s/R_z$, pa je razlika razina između polumjera $R_z \pm b_t/2$
+Lokalna aproksimacija: ubrzanje $\omega^2 r$ mijenja se preko tanka za $b_t/R_z = 5\ \%$. Točan račun u rotirajućem okviru daje paraboloid $z = \omega^2 r^2/(2g)$ s $\omega = v_s/R_z$, pa je razlika razina između polumjera $R_z \pm b_t/2$
 
 $$
 \Delta h = \frac{\omega^2}{2g}\left[\left(R_z + \tfrac{b_t}{2}\right)^2 - \left(R_z - \tfrac{b_t}{2}\right)^2\right] = \frac{\omega^2 R_z b_t}{g} = \frac{v_s^2 b_t}{R_z g},

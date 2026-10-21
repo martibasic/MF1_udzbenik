@@ -346,7 +346,7 @@ Nizak otvor daje veliku brzinu, ali kratko vrijeme leta; visok otvor upravo obrn
 
 **Tekst zadatka**
 
-Napunjen sifon stalnog promjera $D = 80\ \text{mm}$ odvodi vodu iz velikog otvorenog bazena $A$. Ulaz je uronjen, a otvoreni izlaz $B$ završava slobodnim mlazom $\Delta z = 3{,}6\ \text{m}$ ispod površine bazena, iznad prihvatnog kanala. Vrh $C$ je $z_C = 2{,}2\ \text{m}$ iznad površine bazena. Atmosferska tlačna visina iznosi $10{,}2\ \text{m}$, a visina tlaka pare $0{,}25\ \text{m}$ vodenog stupca. Promatraj kvazistacionarni trenutak; zanemari gubitke i brzinu površine bazena.
+Napunjen sifon stalnog promjera $D = 80\ \text{mm}$ odvodi vodu ($\rho=1000\ \text{kg/m}^3$) iz velikog otvorenog bazena $A$. Ulaz je uronjen, a otvoreni izlaz $B$ završava slobodnim mlazom $\Delta z = 3{,}6\ \text{m}$ ispod površine bazena, iznad prihvatnog kanala. Vrh $C$ je $z_C = 2{,}2\ \text{m}$ iznad površine bazena. Atmosferska tlačna visina iznosi $10{,}2\ \text{m}$, a visina tlaka pare $0{,}25\ \text{m}$ vodenog stupca. Promatraj kvazistacionarni trenutak; zanemari gubitke i brzinu površine bazena.
 
 **Traži se**
 
@@ -435,7 +435,7 @@ Crpka rashladne morske vode pomoćnih strojeva smještena je na platformi stroja
 1. Odaberi referentne presjeke i referencu tlaka te obrazloži izbor.
 2. Odredi brzinu u usisnom vodu i apsolutni tlak na ulazu u crpku; usporedi ga s idealnim modelom bez gubitaka.
 3. Odredi raspoloživu visinu iznad tlaka pare na ulazu u crpku i teorijsku najveću visinu crpke iznad vodne linije pri kojoj bi tlak na ulazu pao na tlak pare.
-4. Što se mijenja kad brod u balastu plovi s vodnom linijom $1{,}5\ \text{m}$ niže?
+4. Što se mijenja kad je brod u balastu, a vodna linija $1{,}5\ \text{m}$ niže?
 
 ![Usisni vod rashladne crpke morske vode: usisni koš ispod vodne linije i crpka iznad nje.](../assets/print/u09_ch1_bypass_sifon_suzenje_mlaz.svg){#fig-usisni-vod-rashladne-crpke fig-alt="Presjek boka broda s vodnom linijom, usisnim košem ispod vodne linije, usisnim vodom koji se uspinje do crpke iznad vodne linije i označenim kotama z_u i z_P."}
 
@@ -634,7 +634,7 @@ Vrijedi za stacionarno strujanje, nestlačivi fluid (gustoća konstantna), nevis
 Na mirnoj površini poznati su i tlak (atmosferski) i brzina (zanemariva), a sve strujnice iz mirnog bazena nose istu ukupnu visinu. Na usisnom otvoru brzina i tlak nisu poznati jer se voda prema otvoru već ubrzava. Za vrh sifona tlak se računa manometarski, ali se s tlakom pare uspoređuje tek nakon pretvorbe u apsolutni tlak.
 :::
 
-3. Zašto se Torricellijeva formula $v = \sqrt{2gH}$ izvodi izravno iz Bernoullijeve jednadžbe?
+3. Kako se Torricellijeva formula $v = \sqrt{2gH}$ izvodi izravno iz Bernoullijeve jednadžbe?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
@@ -719,7 +719,7 @@ $Q_1\approx3{,}47\ \text{L/s}$, $dh/dt\approx-1{,}73\ \text{mm/s}$. Vrijeme $t=\
 
 **Tekst zadatka**
 
-Voda gustoće $\rho=1000\ \text{kg/m}^3$ stacionarno teče kroz glatko silazno suženje. U vodoravnom ulaznom presjeku 1 promjer je $D_1=120\ \text{mm}$, a u vodoravnom izlaznom presjeku 2 $D_2=70\ \text{mm}$. Os presjeka 1 nalazi se $z_1-z_2=2{,}00\ \text{m}$ iznad osi presjeka 2. Volumenski protok je $Q=20{,}0\ \text{L/s}$. Zanemari gubitke i pretpostavi jednolike brzine u referentnim presjecima.
+Voda gustoće $\rho=1000\ \text{kg/m}^3$ stacionarno teče kroz glatko silazno suženje. U ulaznom presjeku 1 promjer je $D_1=120\ \text{mm}$, a u izlaznom presjeku 2 $D_2=70\ \text{mm}$. Os presjeka 1 nalazi se $z_1-z_2=2{,}00\ \text{m}$ iznad osi presjeka 2. Volumenski protok je $Q=20{,}0\ \text{L/s}$. Zanemari gubitke i pretpostavi jednolike brzine u referentnim presjecima.
 
 **Traži se**
 

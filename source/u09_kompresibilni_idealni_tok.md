@@ -103,7 +103,7 @@ $$
 Ma=\frac{v}{a}.
 $$ {#eq-mach}
 
-Kriterij $Ma<0{,}3$ korisna je inženjerska heuristika, a ne univerzalni zakon. U izentropskom toku kaloričkoga savršenog plina relativna promjena gustoće pri $Ma=0{,}3$ iznosi oko 5 %, a pri manjem $Ma$ još manje. I pri malom Machovu broju gustoća se može znatno mijenjati zbog grijanja, kemijske reakcije ili velike hidrostatičke razlike; kriterij se zato uvijek provjerava zajedno s termodinamičkim uvjetima.
+Kriterij $Ma<0{,}3$ korisna je inženjerska heuristika, a ne univerzalni zakon. U izentropskom toku kaloričkoga savršenog plina relativna promjena gustoće pri $Ma=0{,}3$ iznosi oko 4,4 %, a pri manjem $Ma$ još manje. I pri malom Machovu broju gustoća se može znatno mijenjati zbog grijanja, kemijske reakcije ili velike hidrostatičke razlike; kriterij se zato uvijek provjerava zajedno s termodinamičkim uvjetima.
 
 ::: {#ex-odabir-modela-kompresibilnosti .mf1-we}
 <p class="mf1-box-label">Usisni vod kompresora turbopuhala <span class="mf1-level">T1</span></p>
@@ -129,7 +129,7 @@ Model konstantne gustoće može biti početna procjena ako su zagrijavanje i pad
 
 **Provjera i tumačenje**
 
-Vod je ovdje namjerno uzak radi ilustracije granice, pa je brzina veća nego u uobičajeno dimenzioniranom usisnom vodu. Pri $Ma=0{,}3$ izentropska promjena gustoće iznosi oko 5 %; u ventilacijskim vodovima ($10$–$20\ \text{m/s}$) pitanje se ne postavlja. Odluku treba donijeti prema lokalnom maksimumu brzine, a ne prema srednjoj brzini u najvećem presjeku.
+Vod je ovdje namjerno uzak radi ilustracije granice, pa je brzina veća nego u uobičajeno dimenzioniranom usisnom vodu. Pri $Ma=0{,}3$ izentropska promjena gustoće iznosi oko 4,4 %; u ventilacijskim vodovima ($10$–$20\ \text{m/s}$) pitanje se ne postavlja. Odluku treba donijeti prema lokalnom maksimumu brzine, a ne prema srednjoj brzini u najvećem presjeku.
 :::
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
@@ -229,7 +229,7 @@ $$
 \frac{\rho^*}{\rho_0}=\left(\frac{2}{\kappa+1}\right)^{1/(\kappa-1)},
 $$ {#eq-kriticni-omjeri}
 
-koji za zrak ($\kappa=1{,}4$) iznose $0{,}833$, $0{,}528$ i $0{,}634$. Kritični omjer tlaka $0{,}528$ granica je ispod koje konvergentna sapnica više ne može slijediti protutlak.
+koji za zrak ($\kappa=1{,}4$) iznose $0{,}833$, $0{,}528$ i $0{,}634$. Kad omjer $p_b/p_0$ padne ispod kritičnih $0{,}528$, konvergentna sapnica više ne može slijediti protutlak.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Omjer površina $A/A^*$ i zagušeni maseni protok</p>
@@ -466,7 +466,7 @@ Sve relacije ovog poglavlja pretpostavljaju kalorički savršen plin sa stalnim 
 2. Procijeni najveći lokalni Machov broj $Ma$, a ne samo srednju vrijednost na ulazu.
 3. Odluči je li proces približno izentropski, adijabatski s gubitcima ili s izmjenom topline.
 4. Napiši jednadžbu kontinuiteta, energijsku jednadžbu i jednadžbu stanja; jednadžbu količine gibanja dodaj kad postoji sila ili udarni val.
-5. Provjeri zagušenje, smjer porasta entropije i granični slučaj $Ma\to0$.
+5. Provjeri zagušenje, predznak promjene entropije i granični slučaj $Ma\to0$.
 
 :::: {.mf1-samoprovjera}
 <p class="mf1-box-label">Provjeri sebe</p>
@@ -716,7 +716,7 @@ $Ma_1=2{,}000\pm0{,}007$; $\Lambda=0{,}7209\pm0{,}0032$; $\Lambda_{mj}=0{,}7204\
 - Zagušenje ograničuje maseni protok: kada nastupi, daljnje snižavanje nizvodnog tlaka više ga ne povećava.
 - Udarni val čuva masu, količinu gibanja i zaustavnu entalpiju, ali povećava entropiju i smanjuje zaustavni tlak.
 
-**Najčešća pogreška.** Kriterij zagušenja $p_b/p_0<0{,}528$ i ostali omjeri tlakova računaju se s manometarskim umjesto s apsolutnim tlakovima.
+**Najčešća pogreška.** Računati kriterij zagušenja $p_b/p_0<0{,}528$ i ostale omjere tlakova s manometarskim umjesto s apsolutnim tlakovima.
 
 **Nakon ovoga poglavlja mora biti moguće**
 

@@ -181,7 +181,7 @@ Provjera ima tri koraka. Tlak mora rasti linearno s dubinom, brzina ostati blizu
 
 :::
 
-Nedosljedna promjena referentnoga smjera ili zanemarivanje promjene fluida uzrokuje pogrešan predznak u manometarskoj jednadžbi. Jednako je važno razlikovati apsolutni, manometarski i vakuumski tlak; veza je uvijek
+Nedosljedan smjer hoda ili zanemarena promjena fluida daju pogrešan predznak ili pogrešnu gustoću u manometarskoj jednadžbi. Jednako je važno razlikovati apsolutni, manometarski i vakuumski tlak; veza je uvijek
 
 $$p_{aps} = p_{atm} + p_M$$ {#eq-hidrostatika-interaktivni-prikaz-diferencijalni-manometar-01}
 
@@ -568,7 +568,7 @@ $$
 h_{vt} = \frac{p_{M,B}}{\rho_v g} = \frac{147{,}97 \cdot 10^3}{998 \cdot 9{,}81} = 15{,}11\ \text{m}.
 $$ {#eq-vodotoranj-razina-iz-tlaka-podnozja}
 
-Zato tlak u mreži određuje kota slobodne površine vodotornja, $z_B + h_{vt} = z_A + 53{,}1\ \text{m}$, a ne duljina ni promjer vodova, sve dok voda miruje.
+Zato je tlak u mreži određen kotom slobodne površine vodotornja, $z_B + h_{vt} = z_A + 53{,}1\ \text{m}$, a ne duljinom ni promjerom vodova, sve dok voda miruje.
 
 Ako bi senzor na $A$ pokazao tlak od $4{,}70\ \text{bar}$ umjesto očekivanih $5{,}20\ \text{bar}$, pad od $\Delta p = 50\ \text{kPa}$ odgovarao bi gubitku piezometarske visine od
 

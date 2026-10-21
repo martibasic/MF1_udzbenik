@@ -286,7 +286,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-u07-areometar-mase-s-cilindricnim-vratom-promjera-pluta)
 
-**Smjernica postupka.** U oba fluida vrijedi $\rho gV_{ist} = mg$; razlika je samo u uronjenom volumenu vrata i tijela areometra.
+**Smjernica postupka.** U oba fluida vrijedi $\rho gV_{ist} = mg$; tijelo areometra potpuno je uronjeno u oba slučaja, pa se razlikuje samo uronjeni volumen vrata.
 
 **Kontrolni rezultat ili kriterij.** $\rho_x \approx 992{,}4\ \text{kg/m}^3$; uron je veći jer otopina ima manju gustoću od referentne vode, pa je za istu težinu potreban veći istisnuti volumen.
 
@@ -296,7 +296,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Za svaki plan ponovno izračunaj ukupnu masu i njezin moment $m\,KG$ s obzirom na dno. Spuštanje opreme čuva masu; dodani balast mijenja i istisninu, $KB$ i $BM$. Dva uvjeta provjeri zasebno.
 
-**Kontrolni rezultat ili kriterij.** Početno: $(T,f,KG,GM)=(0{,}2227;0{,}3773;0{,}8000;0{,}1534)\ \text{m}$. Plan A: $(0{,}2227;0{,}3773;0{,}6800;0{,}2734)\ \text{m}$, prihvatljiv. Plan B: $(0{,}3563;0{,}2437;0{,}5188;0{,}1857)\ \text{m}$, ne zadovoljava oba uvjeta. Balast snižava $KG$, ali smanjuje i $BM$ te nadvođe $f=H-T$.
+**Kontrolni rezultat ili kriterij.** Početno: $(T,f,KG,GM)=(0{,}2227;0{,}3773;0{,}8000;0{,}1534)\ \text{m}$. Plan A: $(0{,}2227;0{,}3773;0{,}6800;0{,}2734)\ \text{m}$, prihvatljiv. Plan B: $(0{,}3563;0{,}2437;0{,}5188;0{,}1857)\ \text{m}$, ne zadovoljava nijedan uvjet. Balast snižava $KG$, ali smanjuje i $BM$ te nadvođe $f=H-T$.
 
 ### Z6. Platforma na granici ulja i vode {#key-task-u07-pravokutna-servisna-platforma-duljine-i-sirine-pluta .unnumbered .unlisted}
 
@@ -312,7 +312,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#task-grijac-ventilacijskog-zraka-strojarnice)
 
-**Smjernica postupka.** Masena bilanca $\rho_1 A_1 v_1 = \rho_2 A_2 v_2$ vrijedi uvijek; volumenska $Q_1 = Q_2$ samo kad je gustoća ista na oba presjeka.
+**Smjernica postupka.** Masena bilanca $\rho_1 A_1 v_1 = \rho_2 A_2 v_2$ vrijedi i pri promjeni gustoće; volumenska $Q_1 = Q_2$ samo kad je gustoća ista na oba presjeka.
 
 **Kontrolni rezultat ili kriterij.** $\dot m = 4{,}32\ \text{kg/s}$; $v_2 \approx 17{,}6\ \text{m/s}$; $Q_1 = 3{,}60\ \text{m}^3/\text{s}$, $Q_2 \approx 4{,}24\ \text{m}^3/\text{s}$. Volumenski protok raste jer gustoća pada; jednak je samo maseni protok.
 
@@ -338,7 +338,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Element površine je prsten $dA=2\pi r\,dr$, pa integriraj funkciju $2\pi r\,v(r)$, primjerice trapeznim pravilom između susjednih mjernih točaka. Srednja brzina je $Q/A$, a maseni protok $\rho Q$. Uz stijenku brzina pada s $6{,}2\ \text{m/s}$ na nulu na samo $5\ \text{mm}$, a prsten ondje ima najveći opseg.
 
-**Kontrolni rezultat ili kriterij.** Trapezno pravilo daje $Q\approx0{,}561\ \text{m}^3/\text{s}$ i $v=Q/A\approx7{,}94\ \text{m/s}$; $v/v_{max}\approx0{,}79$, $\dot m\approx0{,}673\ \text{kg/s}$. S vršnom brzinom bilo bi $Q=0{,}707\ \text{m}^3/\text{s}$, oko $26\,\%$ previše. Vanjski prsten nosi najveći opseg, a profil u njemu nije linearan, pa trapez ondje podcjenjuje tok; potencijski profil daje $0{,}817$, oko $3\,\%$ više od izmjerene diskretizacije.
+**Kontrolni rezultat ili kriterij.** Trapezno pravilo daje $Q\approx0{,}561\ \text{m}^3/\text{s}$ i $v=Q/A\approx7{,}94\ \text{m/s}$; $v/v_{max}\approx0{,}79$, $\dot m\approx0{,}673\ \text{kg/s}$. S vršnom brzinom bilo bi $Q=0{,}707\ \text{m}^3/\text{s}$, oko $26\,\%$ previše. Vanjski prsten nosi najveći opseg, a profil u njemu nije linearan, pa trapez ondje podcjenjuje tok; potencijski profil daje $0{,}817$, oko $3\,\%$ više od trapezne procjene.
 
 ### Z5. Klip s protočnim otvorom {#key-task-klip-s-protocnim-otvorom .unnumbered .unlisted}
 
@@ -502,7 +502,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz)
 
-**Smjernica postupka.** Iz $Q_2=sQ_1$ i $Q_3=(1-s)Q_1$ odredi brzine pa brzinu izlaza 3 projiciraj s pomoću $\cos60^\circ$ i $\sin60^\circ$. Prije nego što upotrijebiš samo rubne kombinacije, provjeri kako se rezultanta mijenja s $p_{M1}$, $Q_1$ i $s$ u zadanim intervalima. Najprije pronađi najveću silu, a zatim primijeni zadani faktor; reakcija nosača ima suprotne komponente.
+**Smjernica postupka.** Iz $Q_2=sQ_1$ i $Q_3=(1-s)Q_1$ odredi brzine pa brzinu izlaza 3 projiciraj pomoću $\cos60^\circ$ i $\sin60^\circ$. Prije nego što upotrijebiš samo rubne kombinacije, provjeri kako se rezultanta mijenja s $p_{M1}$, $Q_1$ i $s$ u zadanim intervalima. Najprije pronađi najveću silu, a zatim primijeni zadani faktor; reakcija nosača ima suprotne komponente.
 
 **Kontrolni rezultat ili kriterij.** $(Q_2;\,Q_3)=(24;\,16)\ \text{L/s}$; $(F_x;\,F_y)\approx(2835{,}8;\ -44{,}0)\ \text{N}$, $|\vec F|\approx2836{,}2\ \text{N}$; $\vec R=-\vec F$. Maksimum $2918{,}3\ \text{N}$ nastaje pri $p_{M1}=190\ \text{kPa}$, $Q_1=39{,}2\ \text{L/s}$, $s=0{,}57$. Zahtjev $1{,}15F_{max}=3356{,}1\ \text{N}$: odabire se $3{,}5\ \text{kN}$; $3{,}0\ \text{kN}$ ne zadovoljava. Provjeren je samo zadani statički kriterij.
 
@@ -520,7 +520,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-dimenzije-manningove-jednadzbe)
 
-**Smjernica postupka.** Napiši dimenzije obiju strana: $\mathsf{L}\,\mathsf{T}^{-1}=[n]^{-1}\,\mathsf{L}^{2/3}$, pa $[n]$ slijedi iz uvjeta da se dimenzije podudaraju. Pri prijelazu na stope mijenja se brojčana vrijednost svake veličine s dimenzijom duljine, dok $n$ ostaje ista brojka; faktor je zato potencija omjera $3{,}2808$ s istim eksponentom kao $[n]$.
+**Smjernica postupka.** Napiši dimenzije obiju strana: $\mathsf{L}\,\mathsf{T}^{-1}=[n]^{-1}\,\mathsf{L}^{2/3}$, pa $[n]$ slijedi iz uvjeta da se dimenzije podudaraju. Pri prijelazu na stope mijenja se brojčana vrijednost svake veličine s dimenzijom duljine, dok $n$ ostaje ista brojka; faktor je zato potencija omjera $3{,}2808$ s eksponentom suprotnim eksponentu duljine u $[n]$.
 
 **Kontrolni rezultat ili kriterij.** $[n]=\mathsf{T}\,\mathsf{L}^{-1/3}$, jedinica $\text{s}/\text{m}^{1/3}$; jednadžba nije homogena bez te jedinice. $A=1{,}60\ \text{m}^2$, $P=3{,}60\ \text{m}$, $R_h=0{,}444\ \text{m}$, $v=1{,}00\ \text{m/s}$, $Q=1{,}60\ \text{m}^3/\text{s}$. Faktor je $3{,}2808^{1/3}=1{,}486$, poznat iz anglosaksonskog zapisa $v=\dfrac{1{,}486}{n}R_h^{2/3}S^{1/2}$; bez njega se dobiva $2{,}21\ \text{ft/s}$ umjesto točnih $3{,}29\ \text{ft/s}$ ($=1{,}00\ \text{m/s}$).
 

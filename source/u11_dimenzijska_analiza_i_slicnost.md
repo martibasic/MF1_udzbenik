@@ -133,7 +133,7 @@ Darcyjev koeficijent trenja $\lambda$ i koeficijent otpora $C_D$ bezdimenzijski 
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Može li se rezultat prenijeti na veći razdjelnik?** Za geometrijski slične rashladne razdjelnike usporedimo bezdimenzijska polja tlaka i brzine pri jednakom $Re$, uz jednak oblik ulaznog profila i jednaku relativnu hrapavost. Ako su važni isti mehanizmi, takva usporedba otkriva može li se rezultat jednog uređaja prenijeti na drugi. Bezdimenzijski tlak u oba se računa definira s istom referencom i istom skalom $\rho v^2/2$.
+**Može li se rezultat prenijeti na veći razdjelnik?** Za geometrijski slične rashladne razdjelnike usporedimo bezdimenzijska polja tlaka i brzine pri jednakom $Re$, uz jednak oblik ulaznog profila i jednaku relativnu hrapavost. Ako su važni isti mehanizmi, takva usporedba otkriva može li se rezultat jednog uređaja prenijeti na drugi. Bezdimenzijski tlak u oba računa definira se s istom referencom i istom skalom $\rho v^2/2$.
 
 Jednake dimenzijske vrijednosti pada tlaka nisu uvjet sličnosti. Obrnuto, slaganje koeficijenata nema značenja ako su upotrijebljene različite referentne brzine. Za izoterman jednofazni model to može biti dovoljna hidrodinamička usporedba; prijenos rezultata hlađenja traži i toplinsku sličnost.
 :::
@@ -241,7 +241,7 @@ $$
 \end{aligned}
 $$ {#eq-kugla-eksponenti-pi1}
 
-Za $\Pi_2 = \mu\,\rho^a v^b D^c$ s $[\mu]=\mathsf{M}\mathsf{L}^{-1}\mathsf{T}^{-1}$ isti sustav daje $a=b=c=-1$, pa je $\Pi_2=\mu/(\rho vD)=1/Re$; recipročna vrijednost $Re$ ravnopravan je izbor grupe.
+Za $\Pi_2 = \mu\,\rho^a v^b D^c$ s $[\mu]=\mathsf{M}\mathsf{L}^{-1}\mathsf{T}^{-1}$ analogni sustav daje $a=b=c=-1$, pa je $\Pi_2=\mu/(\rho vD)=1/Re$; recipročna vrijednost $Re$ ravnopravan je izbor grupe.
 
 Time je cijeli problem otpora sveden na jednu funkciju jedne varijable:
 
@@ -793,7 +793,7 @@ $v=8{,}00\ \text{m/s}$, $D_h=0{,}2667\ \text{m}$, $Re=1{,}42\cdot10^5$: turbulen
 
 **Tekst zadatka**
 
-Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target="u15"} rabi se empirijska Manningova jednadžba $v=\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (površina presjeka toka kroz oplakani opseg), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\ \text{m}$, dubinu vode $y=0{,}80\ \text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$.
+Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target="u15"} rabi se empirijska Manningova jednadžba $v=\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (omjer površine presjeka toka i oplakanog opsega), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\ \text{m}$, dubinu vode $y=0{,}80\ \text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$.
 
 **Traži se**
 
@@ -805,7 +805,7 @@ Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target="u15"} ra
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Napiši dimenzije obiju strana: $\mathsf{L}\,\mathsf{T}^{-1}=[n]^{-1}\,\mathsf{L}^{2/3}$, pa $[n]$ slijedi iz uvjeta da se dimenzije podudaraju. Pri prijelazu na stope mijenja se brojčana vrijednost svake veličine s dimenzijom duljine, dok $n$ ostaje ista brojka; faktor je zato potencija omjera $3{,}2808$ s istim eksponentom kao $[n]$.
+Napiši dimenzije obiju strana: $\mathsf{L}\,\mathsf{T}^{-1}=[n]^{-1}\,\mathsf{L}^{2/3}$, pa $[n]$ slijedi iz uvjeta da se dimenzije podudaraju. Pri prijelazu na stope mijenja se brojčana vrijednost svake veličine s dimenzijom duljine, dok $n$ ostaje ista brojka; faktor je zato potencija omjera $3{,}2808$ s eksponentom suprotnim eksponentu duljine u $[n]$.
 :::
 ::::
 

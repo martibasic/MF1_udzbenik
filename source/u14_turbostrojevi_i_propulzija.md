@@ -133,7 +133,7 @@ Korisni rad daje samo promjena momenta količine gibanja oko osi, pa su ulazni i
 
 **Crpka rashladnog kruga iznutra.** Dosad smo crpku opisivali njezinom karakteristikom. Želimo li promijeniti lopatice ili objasniti neravnomjerno strujanje, CFD model mora obuhvatiti rotor i nepomično kućište. Zadamo brzinu vrtnje, svojstva fluida te međusobno usklađene uvjete na ulazu i izlazu. Veza $\vec c=\vec w+\vec u$ određuje tumačenje brzina: na lopatici je relativna brzina prianjajućeg fluida nula, a apsolutna jednaka brzini lopatice.
 
-Za procjenu srednjeg rada prikladan je MRF (*Multiple Reference Frame*, više referentnih okvira): rotorsko područje rješava se u okviru koji rotira s kolom, nepomično kućište u mirujućem okviru, a na spoju se polja preslikavaju bez pomicanja mreže. Za pulsacije pri prolazu lopatica uz jezik kućišta potrebna je klizna mreža (*sliding mesh*), koja rotorski dio mreže stvarno pomiče u vremenu. Izbor ovisi o pitanju: srednja crpna visina i vremenski promjenjivo opterećenje traže različitu razinu opisa. Provjera je obvezna u oba slučaja: snaga iz integriranog momenta $P=M\omega$ mora se podudarati s Eulerovim tokom momenta količine gibanja $\dot m(u_2c_{2t}-u_1c_{1t})$ između ulaznog i izlaznog presjeka; razlika otkriva nekonvergirano rješenje, propuštanje kroz spoj okvira ili gubitke koje Eulerov zapis ne sadrži (trenje diska, procjepi).
+Za procjenu srednjeg rada prikladan je MRF (*Multiple Reference Frame*, više referentnih okvira): rotorsko područje rješava se u okviru koji rotira s kolom, nepomično kućište u mirujućem okviru, a na spoju se polja preslikavaju bez pomicanja mreže. Za pulsacije pri prolazu lopatica uz jezik kućišta potrebna je klizna mreža (*sliding mesh*), koja rotorski dio mreže stvarno pomiče u vremenu. Izbor ovisi o pitanju: srednja visina dobave i vremenski promjenjivo opterećenje traže različitu razinu opisa. Provjera je obvezna u oba slučaja: snaga iz integriranog momenta $P=M\omega$ mora se podudarati s Eulerovim tokom momenta količine gibanja $\dot m(u_2c_{2t}-u_1c_{1t})$ između ulaznog i izlaznog presjeka; razlika otkriva nekonvergirano rješenje, propuštanje kroz spoj okvira ili gubitke koje Eulerov zapis ne sadrži (trenje diska, procjepi).
 
 []{#strujanje-gledano-s-lopatice}
 :::
@@ -145,7 +145,7 @@ Za procjenu srednjeg rada prikladan je MRF (*Multiple Reference Frame*, više re
 
 **Zastani i promisli.** Ručni model jedne lopatice daje optimum $u=c_1/3$, a model cijelog kola $u=c_1/2$. Mora li jedan račun biti pogrešan?
 
-**Provjeri i protumači.** Prati trokut brzina i krivulju snage. Različiti optimumi sami po sebi ne znače pogrešku: prvi pokus zahvaća puni sapnički protok cijelog rotora, a dotok jednoj pokretnoj lopatici smanjuje se s njezinom brzinom. Nastavci obrađuju Z3–Z5.
+**Provjeri i protumači.** Prati trokut brzina i krivulju snage. Različiti optimumi sami po sebi ne znače pogrešku: model kola zahvaća puni sapnički protok, a dotok jednoj pokretnoj lopatici smanjuje se s njezinom brzinom. Nastavci obrađuju Z3–Z5.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u12_pelton_lopatica.ipynb">Pokreni u pregledniku</a>
@@ -162,7 +162,7 @@ Za procjenu srednjeg rada prikladan je MRF (*Multiple Reference Frame*, više re
 
 **Od polja oko lopatica do karakteristike crpke.** Pri zadanoj brzini vrtnje provedemo račune za više protoka. Integracijom tlaka i viskoznih naprezanja po rotoru dobivamo moment, a iz energijskih tokova na presjecima porast mehaničke energije fluida. Tok momenta količine gibanja s apsolutnim brzinama služi za neovisnu provjeru i povezuje rezultat s Eulerovom jednadžbom.
 
-Snaga na promatranim rotorskim plohama slijedi iz $P=M\omega$. Treba jasno navesti koje su plohe i koji gubitci uključeni; gubitci motora i ležajeva nisu automatski dio CFD-a. Dobivenu karakteristiku vraćamo u model rashladnog kruga. Tako se učinak promjene lopatice može iskazati mjerljivim promjenama radnog protoka, crpne visine i potrebne pogonske snage.
+Snaga na promatranim rotorskim plohama slijedi iz $P=M\omega$. Treba jasno navesti koje su plohe i koji gubitci uključeni; gubitci motora i ležajeva nisu automatski dio CFD-a. Dobivenu karakteristiku vraćamo u model rashladnog kruga. Tako se učinak promjene lopatice može iskazati mjerljivim promjenama radnog protoka, visine dobave i potrebne pogonske snage.
 :::
 
 ## Propulzija: aktuatorski disk
@@ -459,7 +459,7 @@ $$
 P_{kolo}=M_{kolo}\,\omega=F_{x,kolo}\,u=1353\cdot15{,}41=20{,}86\ \text{kW}.
 $$ {#eq-pelton-kolo-snaga}
 
-Snaga mlaza iznosi $\tfrac12\dot mc_1^2=22{,}60\ \text{kW}$, pa je hidraulička učinkovitost kola $\eta_h=20{,}86/22{,}60=0{,}923$; upravo je to Eulerov zapis $P=\dot m\,u\,(c_{1t}-c_{2t})$ s punim protokom. Raspoloživa električna snaga $P_{kolo}\,\eta_m\eta_G=20{,}86\cdot0{,}96\cdot0{,}94=18{,}8\ \text{kW}$ premašuje $P_G=9{,}5\ \text{kW}$; generator bi dakle radio na oko polovici raspoložive snage, što je pitanje regulacije sapnice, a ne dostatnosti kola. Usporedba s $10{,}49\ \text{kW}$ jedne lopatice bila bi pogrešna: ta snaga vrijedi za lopaticu koja se udaljava od mlaza, a kolo s $u/c_1\approx0{,}50$ radi upravo u optimumu modela s punim protokom.
+Snaga mlaza iznosi $\tfrac12\dot mc_1^2=22{,}60\ \text{kW}$, pa je hidraulička učinkovitost kola $\eta_h=20{,}86/22{,}60=0{,}923$; upravo je to Eulerov zapis $P=\dot m\,u\,(c_{1t}-c_{2t})$ s punim protokom. Raspoloživa električna snaga $P_{kolo}\,\eta_m\eta_G=20{,}86\cdot0{,}96\cdot0{,}94=18{,}8\ \text{kW}$ premašuje $P_G=9{,}5\ \text{kW}$; generator bi dakle radio na oko polovici raspoložive snage, što je pitanje regulacije sapnice, a ne dostatnosti kola. Usporedba s $10{,}49\ \text{kW}$ jedne lopatice bila bi pogrešna: ta snaga vrijedi za lopaticu koja se udaljava od sapnice, a kolo s $u/c_1\approx0{,}50$ radi upravo u optimumu modela s punim protokom.
 
 **Provjera i tumačenje**
 
@@ -581,7 +581,7 @@ Za manji propeler $D'=2{,}6\ \text{m}$ je $A'=5{,}31\ \text{m}^2$, $C_{Th}'=1{,}
 
 **Provjera i tumačenje**
 
-Bilanca količine gibanja $\rho Av_d(v_j-v_A)=160\ \text{kN}$ daje zadani potisak, a $P_i-F_Tv_A=212\ \text{kW}$ jest kinetička energija traga $\tfrac12\dot m(v_j-v_A)^2$. Veći disk štedi oko $87\ \text{kW}$ idealne snage, pa se bira najveći propeler koji gaz i trup dopuštaju. Disk daje donju granicu snage, a za brzinu vrtnje, moment, kavitaciju i stvarnu učinkovitost $\eta_0\approx0{,}55$–$0{,}70$ potreban je račun po lopaticama. Iza trupa je $v_A=(1-\chi)v_s$: za $v_s=7{,}0\ \text{m/s}$ zadana brzina $v_A$ odgovara $\chi\approx0{,}14$.
+Bilanca količine gibanja $\rho Av_d(v_j-v_A)=160\ \text{kN}$ daje zadani potisak, a $P_i-F_Tv_A=212\ \text{kW}$ jest tok kinetičke energije traga $\tfrac12\dot m(v_j-v_A)^2$. Veći disk štedi oko $87\ \text{kW}$ idealne snage, pa se bira najveći propeler koji gaz i trup dopuštaju. Disk daje donju granicu snage, a za brzinu vrtnje, moment, kavitaciju i stvarnu učinkovitost $\eta_0\approx0{,}55$–$0{,}70$ potreban je račun po lopaticama. Iza trupa je $v_A=(1-\chi)v_s$: za $v_s=7{,}0\ \text{m/s}$ zadana brzina $v_A$ odgovara $\chi\approx0{,}14$.
 :::
 
 Posljednji primjer prenosi aktuatorski disk iz mora u zrak: mijenjaju se medij i uređaj, ali ne i metoda, jer bilanca količine gibanja i dalje povezuje potisak, induciranu brzinu i snagu.
@@ -730,12 +730,12 @@ $\dot m\approx9{,}10\ \mathrm{kg/s}$ i $F_x\approx219\ \mathrm{N}$ u smjeru ulaz
 
 **Tekst zadatka**
 
-Vodeni mlaz gustoće $\rho=998\ \mathrm{kg/m^3}$, promjera $d=25\ \mathrm{mm}$ i brzine $v=30\ \mathrm{m/s}$ udara okomito na ravnu ploču koja se giba u smjeru mlaza stalnom brzinom $u=10\ \mathrm{m/s}$. Usporedi dva slučaja: **(a)** jedna ploča koja se udaljava od sapnice, pa je zahvaća samo dio mlaza; **(b)** kolo s nizom ploča na kojem uvijek jedna ploča presreće cijeli mlaz, a svaka se giba istom brzinom $u$. U oba slučaja fluid se uz ploču razlijeva okomito na smjer gibanja u sustavu ploče, tlak je svuda atmosferski, a trenje i težinu zanemari.
+Vodeni mlaz gustoće $\rho=998\ \mathrm{kg/m^3}$, promjera $d=25\ \mathrm{mm}$ i brzine $v=30\ \mathrm{m/s}$ udara okomito na ravnu ploču koja se giba u smjeru mlaza stalnom brzinom $u=10\ \mathrm{m/s}$. Usporedi dva slučaja: **(a)** jedna ploča koja se udaljava od sapnice, pa do nje stiže samo dio mlaza; **(b)** kolo s nizom ploča na kojem uvijek jedna ploča presreće cijeli mlaz, a svaka se giba istom brzinom $u$. U oba slučaja fluid se uz ploču razlijeva okomito na smjer gibanja u sustavu ploče, tlak je svuda atmosferski, a trenje i težinu zanemari.
 
 **Traži se**
 
-1. Za oba slučaja odredi maseni protok koji dolazi na ploču, silu mlaza na ploču u smjeru gibanja, predanu snagu i hidraulički stupanj djelovanja prema snazi mlaza $\tfrac12\dot m_{ml}v^2$, gdje je $\dot m_{ml}=\rho Av$.
-2. Odredi za svaki slučaj brzinu $u$ koja daje najveću snagu i pripadni najveći stupanj djelovanja. Objasni zašto je u slučaju (a) zadana brzina $u=10\ \mathrm{m/s}$ upravo optimalna.
+1. Za oba slučaja odredi maseni protok koji dolazi na ploču, silu mlaza na ploču u smjeru gibanja, predanu snagu i hidrauličku učinkovitost prema snazi mlaza $\tfrac12\dot m_{ml}v^2$, gdje je $\dot m_{ml}=\rho Av$.
+2. Odredi za svaki slučaj brzinu $u$ koja daje najveću snagu i pripadnu najveću učinkovitost. Objasni zašto je u slučaju (a) zadana brzina $u=10\ \mathrm{m/s}$ upravo optimalna.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}

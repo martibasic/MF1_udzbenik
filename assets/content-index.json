@@ -77,7 +77,7 @@
       "kind": "chapter",
       "number": "1",
       "part": "part-1",
-      "source_sha256": "8c60044a6ba8f9fb916017135ea74a675dc34f2234ba927d9c12fbb8dcfebc1c",
+      "source_sha256": "5ef45e7fe287313844b06c6becd64c6418d0240fc4aa53654a25327ce5741b1f",
       "sections": [
         {
           "id": "fluid-kao-kontinuum",
@@ -222,7 +222,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "dad3c70b3dd165e5acb2c08c79bdf5a595870fd35e7d4836f9ba83cdacbd054e",
+      "source_sha256": "f59f23830b633272911205007c0e95129f717f91b6541c2daecb23fd0d725eb7",
       "sections": [
         {
           "id": "viskoznost",
@@ -355,7 +355,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "082d92df6dcb06118a91a585d4d420edfd655e0634777f4b33d7289cd87243c5",
+      "source_sha256": "1e561578d05fc77993f4ea2b9988bff317ff47686f663a0d2814f521f1565915",
       "sections": [
         {
           "id": "diferencijalna-jednadžba-hidrostatike",
@@ -476,7 +476,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "9e71c5055d1b11d49d4c1ab67da76eef3e9e1cefc042ee06c24ee221a887a198",
+      "source_sha256": "416d5ecddf5c298bf5aaf0428a97d705175ce3c4d1169428e9c64adbf905a2aa",
       "sections": [
         {
           "id": "translatorno-ubrzanje",
@@ -610,7 +610,7 @@
       "kind": "chapter",
       "number": "5",
       "part": "part-2",
-      "source_sha256": "f338da712acfa64242ef3e05bea9d79f77a25b764578f62bc34efb5bbb3dc266",
+      "source_sha256": "f210e9ba9aa8064fcc33ff673fa8a459383631dbb60e8abd55991b7119d6318d",
       "sections": [
         {
           "id": "hidrostatske-sile-na-plohe",
@@ -784,7 +784,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "fac6333ee8527f48bf7144558307ac322d7a9faae24fd162c5161b576ba1718a",
+      "source_sha256": "fa153239b1f732c13ac8666aabc6a3cd8b74b738e5e0deeaaac14fc5cb7662bf",
       "sections": [
         {
           "id": "sila-uzgona",
@@ -945,7 +945,7 @@
       "kind": "chapter",
       "number": "7",
       "part": "part-3",
-      "source_sha256": "f573fbe39e82e5afe02abb683f25b70df17595ddab560400315069357d3440ae",
+      "source_sha256": "75468f7329a0958e5577cbf8f33672aeefa92a51ba13b67959308c07727f8e25",
       "sections": [
         {
           "id": "kinematika-strujanja",
@@ -1109,7 +1109,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "5d5e7b08aa96eb927d4d5b75ecc7d7fb9ff8e462fdce0457966b9a0aeb2c5b88",
+      "source_sha256": "d9a875c1deab9d9b9170ca96b61962d7ad91b5506058f5da77f45c39708a571e",
       "sections": [
         {
           "id": "mehanička-energija-idealnoga-toka",
@@ -1237,7 +1237,7 @@
       "kind": "chapter",
       "number": "9",
       "part": "part-3",
-      "source_sha256": "43e4dbd98c3bdeb0b0a253fb5a1dfa45953e931301509fe268d542f62e7b3687",
+      "source_sha256": "e528c0644a99ced5434a870f5cfb93697637db8d25635fceb496876a83904797",
       "sections": [
         {
           "id": "sec-kompresibilni-motivacija",
@@ -1367,7 +1367,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "c29d2c2b4279d10da483b6b6d21b134c6d65877bdc18beecbced4375a8cfd6fb",
+      "source_sha256": "0cad740d0f41d56028ef21c048ee481721780354004342b9b8bd6dde30d01ea8",
       "sections": [
         {
           "id": "integralni-zakon-količine-gibanja",
@@ -1535,7 +1535,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "578c4565002ebd6c04ec5bfc40315042c13eedc10e1f85a54adde670a62b9905",
+      "source_sha256": "21868b4acca5e01c8a91269f804d2802d84aefcde2a855e42daf6ca69c78f885",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -1689,7 +1689,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "ea752cedafe7c5ffd1d33fca2f4e639dc83e363ee42aaa81d7aba050dab5fc18",
+      "source_sha256": "948bdb6b1b97e8f1bb198ac936e998088b89c037302bda6062d968b89fdc73c8",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1832,7 +1832,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "7b4d56228b36cf0a103cbffc0d61cbe921eac2c0839e8c57ec7d6d05ba5c657d",
+      "source_sha256": "551bdc4ff6297d4f81333ff898bc6018f6f120860a15467daadcef8a79683c66",
       "sections": [
         {
           "id": "sec-realna-energijska-bilanca",
@@ -1995,7 +1995,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "965ffc4e74042cdb7aefee121a3626362ea0731bca31f17316821b65017d7ebf",
+      "source_sha256": "840092664a8f5a3b5727e1d4b092bcc0c9c7cedc254c38e6e03e1e15252533e1",
       "sections": [
         {
           "id": "od-lopatice-do-turbostroja",
@@ -2131,7 +2131,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "b8806a7436ce1df30602e5b84cad98e27a8db514e7008f6dbe1a23644bf10052",
+      "source_sha256": "87df9aad28e34d117588920578f5f5abad064cbfe9da762916f625e386b9fd3a",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2253,7 +2253,7 @@
       "kind": "appendix",
       "number": "A",
       "part": null,
-      "source_sha256": "ad29f3c67629501a60dfe33357cbdaf69d2000c84386d31c128456bba014d49e",
+      "source_sha256": "b6076062592e0385dbeb67b5321129840823ddef086dee3a3e6ba87d343c1924",
       "sections": [
         {
           "id": "najčešće-oznake",
@@ -2341,7 +2341,7 @@
       "kind": "appendix",
       "number": "B",
       "part": null,
-      "source_sha256": "42d1932c2aa3ff7bbf32acd71d5224a8ca4d742b723c34176fcf257f4bbeba2d",
+      "source_sha256": "05ba6be11cbade0885d1f35a98fa32923cd6ea40eae7394acd6d6f2693599318",
       "sections": [
         {
           "id": "sec-pojmovi-a-z",
@@ -2363,7 +2363,7 @@
       "kind": "appendix",
       "number": "C",
       "part": null,
-      "source_sha256": "46bf857835ccd3bfdec04a387fb035bb8100ed21f834508f27e85bc7ab32cded",
+      "source_sha256": "2b7c611ca7ec825fa6a952a15b5b0a9bd9cd38a42dd7e56a54435f4e5def73b6",
       "sections": [
         {
           "id": "globalna-provjera-prije-računa",
@@ -2397,7 +2397,7 @@
       "kind": "appendix",
       "number": "D",
       "part": null,
-      "source_sha256": "e113a96273d3b6bafa86052720042ef0cdb23a78fb53b03dd261bf75ca019dd7",
+      "source_sha256": "c5f1cc4c88cd4e73ce53c3af13fc2b1641c55d9adf041862a86fa123c2e45d37",
       "sections": [
         {
           "id": "dodatne-kratice-numeričkih-metoda",
@@ -2521,7 +2521,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "cb0474660fbde216092e0e380e6a4e54966b9433509a52347dd797aec9635ea1",
+      "source_sha256": "6c269378684582d103916315e33812c0455717becf9a2e6c882ca3e4b1a92248",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",

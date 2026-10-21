@@ -53,7 +53,7 @@ $$
 v(y)=u\,\frac{y}{\delta}, \qquad \frac{dv}{dy}=\frac{u}{\delta}.
 $$ {#eq-couette-linearni-profil}
 
-Smično naprezanje tada je jednako na obje ploče,
+Smično naprezanje tada je jednako na objema pločama,
 
 $$
 \tau = \mu\frac{u}{\delta},
@@ -118,7 +118,7 @@ $$
 \tau(R)=0{,}12\cdot\frac{62{,}83\cdot0{,}060}{0{,}20\cdot10^{-3}}\approx2{,}26\ \text{kPa}.
 $$ {#eq-reologija-kratki-primjer-pretvorba-dinamicke-u-kinematicku-01}
 
-Naprezanje raste linearno od nule u osi do $2{,}26\ \text{kPa}$ na rubu, pa se sila ne smije računati kao jedno naprezanje puta površina. Na prsten površine $dA=2\pi r\,dr$ djeluje sila $\tau\,dA$ s krakom $r$, pa je moment
+Naprezanje raste linearno od nule u osi do $2{,}26\ \text{kPa}$ na rubu, pa se moment ne smije računati s jednim naprezanjem na cijeloj plohi. Na prsten površine $dA=2\pi r\,dr$ djeluje sila $\tau\,dA$ s krakom $r$, pa je moment
 
 $$
 \begin{aligned}
@@ -140,7 +140,7 @@ Procjena s naprezanjem sa srednjeg polumjera, $\tau(R/2)=1{,}13\ \text{kPa}$, na
 
 **Provjera i tumačenje**
 
-Dimenzije: $[\mu\omega R^4/\delta]=\mathrm{Pa\,s\cdot s^{-1}\cdot m^4/m=N\,m}$. Moment raste s četvrtom potencijom polumjera jer s $r$ rastu i naprezanje, i površina prstena, i krak. Zato vanjska polovica polumjera ($r>R/2$) nosi $15/16$ momenta, a srednji polumjer podcjenjuje rezultat dvostruko. Isti integral po prstenima vrijedi za stožaste i pločaste viskozimetre; za ležaj s nosivim tlakom u filmu trebao bi još model podmazivanja, koji ovaj račun ne sadrži.
+Dimenzije: $[\mu\omega R^4/\delta]=\mathrm{Pa\,s\cdot s^{-1}\cdot m^4/m=N\,m}$. Moment raste s četvrtom potencijom polumjera jer s $r$ rastu i naprezanje, i površina prstena, i krak. Zato vanjska polovica polumjera ($r>R/2$) nosi $15/16$ momenta, a srednji polumjer podcjenjuje rezultat dvostruko. Isti postupak integracije po prstenima vrijedi za stožaste i pločaste viskozimetre; za ležaj s nosivim tlakom u filmu trebao bi još model podmazivanja, koji ovaj račun ne sadrži.
 :::
 
 ::: {.mf1-dublje}
@@ -178,7 +178,7 @@ Ručni račun u primjeru [-@ex-u02-smicno-naprezanje-u-tankom-uljnom-sloju-t2] d
 
 ## Površinska napetost i kontaktni kut
 
-Na granici fluida i druge faze molekule nemaju istu okolinu kao one u unutrašnjosti fluida. Zbog toga međupovršina ima dodatnu energiju. Taj se učinak opisuje površinskom napetošću $\sigma$.
+Molekule na granici fluida i druge faze nemaju istu okolinu kao one u unutrašnjosti fluida. Zbog toga međupovršina ima dodatnu energiju. Taj se učinak opisuje površinskom napetošću $\sigma$.
 
 Površinska se napetost izražava u jedinicama $\text{N/m}$, kao sila po jedinici duljine kontaktne linije. Budući da vrijedi $\text{N/m}=\text{J/m}^2$, može se tumačiti i kao energija po jediničnoj površini. Za stvaranje nove površine fluida potreban je rad $\sigma\Delta A$. Pri zadanom volumenu sustav teži najmanjoj površini, pa kapljice u bestežinskom stanju i sapunasti mjehuri poprimaju sferni oblik.
 
@@ -325,7 +325,7 @@ $$
 \Delta p = \sigma\!\left(\frac{1}{R_1} + \frac{1}{R_2}\right),
 $$ {#eq-reologija-matematicki-izvod-young-laplaceov-zakon-za-kaplj-07}
 
-pri čemu je $\Delta p=p_u-p_{ok}$, a zakrivljenosti su pozitivne za konveksnu kapljicu promatranu iz unutarnje faze. Uz drugu orijentaciju normale predznaci zakrivljenosti i tlačnoga skoka moraju se promijeniti zajedno. Za sferu ($R_1 = R_2 = r$) tako se dobiva $\Delta p = 2\sigma/r$, a za cilindar ($R_2 \to \infty$) $\Delta p = \sigma/R_1$.
+pri čemu je $\Delta p=p_u-p_{ok}$, a zakrivljenosti su pozitivne kada je središte zakrivljenosti u unutarnjoj fazi, kao kod kapljice. Uz drugu orijentaciju normale predznaci zakrivljenosti i tlačnoga skoka moraju se promijeniti zajedno. Za sferu ($R_1 = R_2 = r$) tako se dobiva $\Delta p = 2\sigma/r$, a za cilindar ($R_2 \to \infty$) $\Delta p = \sigma/R_1$.
 :::
 
 ::: {.mf1-fizikalno-znacenje}
@@ -573,7 +573,7 @@ $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-11}
 
 **Provjera i tumačenje**
 
-1. Dva neovisna puta računa daju istu snagu: $F_1u\approx92{,}1\cdot6{,}28\approx579\ \text{W}=M_1\omega$. U ovom modelu sve izlazne veličine linearno ovise o $\mu$, pa faktor 10 u viskoznosti daje faktor 10 u snazi samo zato što su geometrija i brzina zadržane jednakima.
+1. Dva neovisna puta računa daju istu snagu: $F_1u\approx92{,}1\cdot6{,}28\approx579\ \text{W}=M_1\omega$. U ovom modelu naprezanje, moment i snaga linearno ovise o $\mu$, pa faktor 10 u viskoznosti daje faktor 10 u snazi samo zato što su geometrija i brzina zadržane jednakima.
 2. Dobivenih $579\ \text{W}$ nije prognoza gubitka stvarnoga osovinskog voda; u službi ulje statvene cijevi obično radi hladnije od gornje nastavne granice, a prekomjerna temperatura ležaja znak je za uzbunu, a ne radno stanje.
 :::
 

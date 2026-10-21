@@ -6,7 +6,7 @@ Sila kojom fluid djeluje na stijenku ima suprotan smjer, $\vec F=-\vec R_{st\to 
 
 Poglavlje redom obrađuje integralni zakon, silu na cijevno koljeno, pomični kontrolni volumen s mlaznim pogonom i aktuatorskim diskom te moment količine gibanja. Primjene su koljena i račve u brodskim strojarnicama, vodomlazni pogon, propeler i stroj za pranje tankova. Radni model pretpostavlja stacionaran tok i jednolike profile brzine na presjecima ($\beta=1$); prolazne pojave poput vodenog udara traže i član akumulacije. Lokalni oblik zakona vodi do Navier–Stokesove jednadžbe u []{.mf1-chapter-ref target="u12"}, a Eulerova turbinska jednadžba i stvarni propeler obrađuju se u []{.mf1-chapter-ref target="u14"}.
 
-Slika [-@fig-uvod-u11] prikazuje sile na fluid u koljenu koje skreće tok za $90°$. Fluid ulazi kroz presjek 1 vodoravno, brzinom $\vec v_1$ u smjeru osi $x$, a izlazi kroz presjek 2 prema dolje brzinom $\vec v_2$. Granica KV obuhvaća fluid u koljenu i siječe tok na oba presjeka. Na presjecima djeluju tlačne sile $p_{M1}A_1$ i $p_{M2}A_2$ usmjerene u kontrolni volumen, a u sredini težina $\vec F_G$. Strelice $R_{st\to f,x}$ i $R_{st\to f,y}$ u donjem lijevom kutu pokazuju pretpostavljene pozitivne smjerove komponenata sile stijenke na fluid; stvarne predznake određuje račun.
+Slika [-@fig-uvod-u11] prikazuje sile na fluid u koljenu koje skreće tok za $90^\circ$. Fluid ulazi kroz presjek 1 vodoravno, brzinom $\vec v_1$ u smjeru osi $x$, a izlazi kroz presjek 2 prema dolje brzinom $\vec v_2$. Granica KV obuhvaća fluid u koljenu i siječe tok na oba presjeka. Na presjecima djeluju tlačne sile $p_{M1}A_1$ i $p_{M2}A_2$ usmjerene u kontrolni volumen, a u sredini težina $\vec F_G$. Strelice $R_{st\to f,x}$ i $R_{st\to f,y}$ u donjem lijevom kutu pokazuju pretpostavljene pozitivne smjerove komponenata sile stijenke na fluid; stvarne predznake određuje račun.
 
 ![Kontrolni volumen koljena od 90° sa svim vanjskim silama na fluid: tlačnim silama na presjecima, težinom i komponentama sile stijenke.](../assets/print/u11_fig_uvod_pregled.svg){#fig-uvod-u11 fig-align="center" fig-alt="Koljeno s vodoravnim ulazom slijeva i izlazom prema dolje, granicom kontrolnog volumena te strelicama brzina, tlačnih sila, težine i dviju komponenata sile stijenke."}
 
@@ -181,7 +181,7 @@ F_T=\rho A_d\,\frac{v_A+v_j}{2}\,(v_j-v_A),\qquad
 \eta_i=\frac{F_Tv_A}{F_Tv_d}=\frac{v_A}{v_d}=\frac{2v_A}{v_A+v_j}.
 $$ {#eq-aktuatorski-disk-potisak}
 
-**Provjera.** Za $v_j\to v_A$ potisak nestaje, a $\eta_i\to1$: mali prirast brzine velike mase vode najkorisniji je, što objašnjava velike promjere sporohodnih brodskih propelera. Stvarni propeler ima rotaciju mlaza, trenje lopatica i nejednoliko opterećenje, što se obrađuje u []{.mf1-chapter-ref target="u14"}.
+**Provjera.** Za $v_j\to v_A$ potisak nestaje, a $\eta_i\to1$: mali prirast brzine velike mase vode najučinkovitiji je, što objašnjava velike promjere sporohodnih brodskih propelera. Stvarni propeler ima rotaciju mlaza, trenje lopatica i nejednoliko opterećenje, što se obrađuje u []{.mf1-chapter-ref target="u14"}.
 :::
 
 ## Moment količine gibanja
@@ -368,7 +368,7 @@ pa vijci u presjeku A-A rade na vlak.
 
 **Provjera i tumačenje**
 
-Mlaznica ubrzava tok, pa je pretlak u presjeku 1 pozitivan. Vijci rade na vlak jer ulazna tlačna sila ($623\ \text{N}$) nadmašuje porast toka količine gibanja ($179\ \text{N}$); sila na ploču ($215\ \text{N}$) nije sila u vijcima.
+Mlaznica ubrzava tok, pa je pretlak u presjeku 1 pozitivan. Vijci rade na vlak jer ulazna tlačna sila ($624\ \text{N}$) nadmašuje porast toka količine gibanja ($179\ \text{N}$); sila na ploču ($215\ \text{N}$) nije sila u vijcima.
 :::
 
 ::: {#ex-u11-servisno-koljeno-na-sidrenom-nosacu-t2 .mf1-we}
@@ -709,7 +709,7 @@ iznad negativnog smjera osi $x$. Usporedba sa zadanim statičkim kriterijem rezu
 
 **Provjera i tumačenje**
 
-Inverzni postupak iz jedne izmjerene komponente rekonstruira cijeli idealizirani režim: $v\propto\sqrt{R_y}$, pa porast reakcije za 10 % znači porast brzine za oko 5 %. Rezerva od $87\ \text{N}$ (oko 9 %) manja je od tipične nesigurnosti mjerenja sile i zanemarenih gubitaka, pa odluku treba potvrditi i stvarnim tlakom $p_{M1}$; čvrstoća, zamor i prolazna opterećenja ovim modelom nisu provjereni.
+Inverzni postupak iz jedne izmjerene komponente rekonstruira cijeli idealizirani režim: $v\propto\sqrt{R_y}$, pa porast reakcije za 10 % znači porast brzine za oko 5 %. Rezerva od $87\ \text{N}$ (oko 9 %) usporediva je s nesigurnošću mjerenja sile i zanemarenim gubitcima, pa odluku treba potvrditi i stvarnim tlakom $p_{M1}$; čvrstoća, zamor i prolazna opterećenja ovim modelom nisu provjereni.
 :::
 
 ::: {#ex-u11-sila-na-koljeno-tlacnog-voda-male-hidroelektrane .mf1-we}
@@ -1061,7 +1061,7 @@ $\dot m_{rel}\approx15{,}05\ \text{kg/s}$, $F_x\approx180{,}6\ \text{N}$, $P\app
 
 Vodoravna Y-račva prima vodu u smjeru $+x$ kroz ulaznu cijev promjera $D_1=140\ \text{mm}$. Nominalni protok jest $Q_1=0{,}040\ \text{m}^3/\text{s}$, a manometarski tlak $p_{M1}=185\ \text{kPa}$. Udio $s=0{,}60$ odlazi ravno kroz granu promjera $D_2=90\ \text{mm}$, a ostatak kroz granu promjera $D_3=80\ \text{mm}$, otklonjenu za $60^\circ$ prema $+y$ u vodoravnoj ravnini. Na oba izlaza vlada atmosferski tlak.
 
-Izlazni udio zadan je radnim režimom; ne pretpostavljaj jednaku brzinu u granama niti tok bez gubitaka. U sintetičkom pogonskom scenariju zadane su neovisne zajamčene granice: $p_{M1}=185\pm5\ \text{kPa}$, $Q_1=0{,}040\ \text{m}^3/\text{s}\pm2\ \%$ te $s=0{,}60\pm0{,}03$. To nisu standardne nesigurnosti za RSS. Ocjenjuje se samo taj statički kriterij rezultante u ravnini.
+Izlazni udio zadan je radnim režimom; ne pretpostavljaj jednaku brzinu u granama niti tok bez gubitaka. U sintetičkom pogonskom scenariju zadane su neovisne zajamčene granice: $p_{M1}=185\pm5\ \text{kPa}$, $Q_1=0{,}040\ \text{m}^3/\text{s}\pm2\ \%$ te $s=0{,}60\pm0{,}03$. To nisu standardne nesigurnosti za RSS. Ocjenjuje se samo zadani statički kriterij rezultante u ravnini.
 
 Ponuđene su nosivosti $3{,}0\ \text{kN}$ i $3{,}5\ \text{kN}$, uz kriterij $R_{naz}\geq1{,}15F_{max}$.
 
@@ -1075,7 +1075,7 @@ Ponuđene su nosivosti $3{,}0\ \text{kN}$ i $3{,}5\ \text{kN}$, uz kriterij $R_{
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Iz $Q_2=sQ_1$ i $Q_3=(1-s)Q_1$ odredi brzine pa brzinu izlaza 3 projiciraj s pomoću $\cos60^\circ$ i $\sin60^\circ$. Prije nego što upotrijebiš samo rubne kombinacije, provjeri kako se rezultanta mijenja s $p_{M1}$, $Q_1$ i $s$ u zadanim intervalima. Najprije pronađi najveću silu, a zatim primijeni zadani faktor; reakcija nosača ima suprotne komponente.
+Iz $Q_2=sQ_1$ i $Q_3=(1-s)Q_1$ odredi brzine pa brzinu izlaza 3 projiciraj pomoću $\cos60^\circ$ i $\sin60^\circ$. Prije nego što upotrijebiš samo rubne kombinacije, provjeri kako se rezultanta mijenja s $p_{M1}$, $Q_1$ i $s$ u zadanim intervalima. Najprije pronađi najveću silu, a zatim primijeni zadani faktor; reakcija nosača ima suprotne komponente.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -1103,7 +1103,7 @@ $(Q_2;\,Q_3)=(24;\,16)\ \text{L/s}$; $(F_x;\,F_y)\approx(2835{,}8;\ -44{,}0)\ \t
 - Kroz pomičnu granicu masa prolazi relativnom brzinom; u energijskoj i momentnoj provjeri stoji apsolutna brzina.
 - Potisak i moment slijede iz istih bilanci kao sila na koljeno; nestacionarne pojave traže član akumulacije.
 
-**Najčešća pogreška.** Sila na ploču poistovjećuje se sa silom u vijcima, iako sila u vijcima slijedi iz drugog kontrolnog volumena, s tlakom i promjenom količine gibanja.
+**Najčešća pogreška.** Poistovjetiti silu na ploču sa silom u vijcima, iako sila u vijcima slijedi iz drugog kontrolnog volumena, s tlakom i promjenom količine gibanja.
 
 **Nakon ovoga poglavlja mora biti moguće**
 

@@ -547,7 +547,7 @@ F_H=26{,}36\ \mathrm{kN},\qquad
 h_H=\frac{21{,}60\cdot0{,}450+4{,}758\cdot0{,}600}{26{,}36}=0{,}477\ \mathrm{m}.
 $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-02}
 
-Okomita komponenta ima hidrostatički dio jednak težini stvarne vode u četvrtini valjka i plinski dio jednak $p_{pl}$ na vodoravnoj projekciji $Rb$:
+Okomita komponenta ima hidrostatički dio jednak težini stvarne vode u četvrtini valjka i plinski dio jednak sili tlaka $p_{pl}$ na vodoravnu projekciju $Rb$:
 
 $$
 \begin{aligned}
@@ -892,7 +892,7 @@ $F=12{,}218\ \mathrm{kN}$; $s(F)=0{,}192\ \mathrm{kN}$; kombinirana nesigurnost 
 
 ![Skice uz Z1–Z6: vodonepropusna vrata, parabolični pokrov, samootvarajuća kosa zaklopka, trokutasti poklopac, radijalni poklopac s osi u središtu kružnice i mjerni panel.](../assets/print/u05_vjezbe_skice.svg){#fig-u05-vjezbe-skice fig-align="center" fig-alt="Šest panela s kotama i stvarnom vodom, u kojima su tražene sile vode označene upitnikom umjesto strelicom; kosa zaklopka u Z3 ima os između donjeg ruba na pragu i gornjeg ruba, a os radijalnog poklopca u Z5 leži u središtu kružnice O."}
 
-**Napomene uz skice.** Tražene sile vode nisu nacrtane: u Z1, Z2 i Z6 označene su s „?”. Z1 i Z4 pogledi su okomito na plohu, pa sila djeluje okomito na crtež. U Z2 je ispod pokrova suhi kanal, a nacrtana je samo jedna lokalna tlačna sila $d\vec F$. U Z3 dubina vode $y$ nije u mjerilu tražene dubine otvaranja; os i prag nacrtani su u mjerilu uzduž ploče. U Z5 os je u $O$, a spojnica izvan presjeka. U Z6 oznaka $\pm$ znači standardnu nesigurnost.
+**Napomene uz skice.** Tražene sile vode nisu nacrtane: u Z1, Z2 i Z6 označene su s „?”. Z1 i Z4 prikazuju pogled okomit na plohu, pa sila djeluje okomito na crtež. U Z2 je ispod pokrova suhi kanal, a nacrtana je samo jedna lokalna tlačna sila $d\vec F$. U Z3 dubina vode $y$ nije u mjerilu tražene dubine otvaranja; os i prag nacrtani su u mjerilu uzduž ploče. U Z5 os je u $O$, a spojnica izvan presjeka. U Z6 oznaka $\pm$ znači standardnu nesigurnost.
 
 ## Sažetak
 

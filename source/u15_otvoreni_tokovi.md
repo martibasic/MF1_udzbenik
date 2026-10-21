@@ -18,7 +18,7 @@ U punoj cijevi geometrija presjeka zadaje cijelu granicu toka. U otvorenom kanal
 
 ## Geometrija presjeka i hidraulička dubina {#sec-geometrija-kanala}
 
-Za poprečni presjek toka definiramo površinu $A$, širinu slobodne površine $T$ (širinu vodnog lica, ne gaz), oplakani opseg $P$ (dio ruba presjeka u dodiru sa stijenkama i dnom, bez slobodne površine) i hidraulički polumjer
+Za poprečni presjek toka definiramo površinu $A$, širinu slobodne površine $T$ (širinu vodnog lica, ne gaz), oplakani opseg $P$ (dio ruba presjeka u dodiru sa stijenkama i dnom, bez slobodne površine) i hidraulički radijus
 
 $$
 R_h=\frac{A}{P}.
@@ -167,14 +167,14 @@ Kritična brzina je $v_c=q/y_c=2{,}70\ \text{m/s}$, a $v_c/\sqrt{gy_c}=1{,}00$. 
 
 ### Kontrolne građevine: ustava i preljev {#sec-kontrolne-gradevine}
 
-Kritični presjek nastaje ondje gdje građevina nameće vezu između protoka i razine. Ispod oštrobridne ustave s otvorom $a$ i uzvodnom dubinom $y_0$ mlaz se iza ruba ustave suzi na dubinu $y_1\approx C_ca$, gdje je $C_c$ koeficijent kontrakcije, omjer dubine suženog mlaza i visine otvora. Primijenimo li Bernoullijevu jednadžbu bez gubitaka između uzvodnog presjeka i suženog mlaza, protok iznosi
+Kritični presjek nastaje ondje gdje građevina nameće vezu između protoka i razine. Ispod oštrobridne ustave s otvorom $a$ i uzvodnom dubinom $y_0$ mlaz se iza ruba ustave suzi na dubinu $y_1\approx C_ca$, gdje je $C_c$ koeficijent kontrakcije, omjer dubine suženog mlaza i visine otvora. Bernoullijeva jednadžba između uzvodnog presjeka i suženog mlaza daje oblik izraza za protok
 
 $$
 Q=C_d\,b\,a\sqrt{2gy_0},
 \qquad C_d\approx0{,}55\text{–}0{,}60,
 $$ {#eq-istjecanje-ispod-ustave}
 
-gdje $C_d$ obuhvaća kontrakciju i gubitke, a njegova vrijednost mora potjecati iz ispitivanja za konkretnu geometriju. Preko širokog preljeva tok prolazi kritičnim presjekom. Ako je $H$ energijska visina iznad krune (u ovom poglavlju $H$ označuje samo tu visinu), iz $y_c=\tfrac23H$ dobiva se
+gdje $C_d$ obuhvaća kontrakciju, brzinu dolaska i gubitke, a njegova vrijednost mora potjecati iz ispitivanja za konkretnu geometriju. Preko širokog preljeva tok prolazi kritičnim presjekom. Ako je $H$ energijska visina iznad krune (u ovom poglavlju $H$ označuje samo tu visinu), iz $y_c=\tfrac23H$ dobiva se
 
 $$
 Q=C_{pr}\,b\,\sqrt{g}\left(\tfrac23H\right)^{3/2}\approx1{,}70\,C_{pr}\,b\,H^{3/2},
@@ -229,7 +229,7 @@ Oba korijena zadovoljavaju istu idealiziranu specifičnu energiju, ali rubni uvj
 
 **Hoće li prag uzvodno podići vodu?** U isti kanal dodamo blagi prag i usporedimo tok s izvedbom bez praga. Model mora odabrati granu rješenja spojivu s protokom i nizvodnim uvjetima. Specifična energija i kritična dubina služe za ručnu provjeru: približavanje vrijednosti $Fr=1$ upozorava na kontrolni presjek i na osjetljivost uzvodne razine.
 
-Za blage promjene često su dovoljne jednadžbe plitke vode. Ako nas zanimaju okomito ubrzanje preko kratkoga praga, odvajanje toka ili lokalni tlakovi na konstrukciji, prelazimo na prostorni CFD vode i zraka. Uspoređujemo uzvodni vodostaj, protok i položaj prijelaza režima. Hidrostatički model ne provjeravamo ondje gdje izrazita zakrivljenost toka ruši njegovu osnovnu pretpostavku.
+Za blage promjene često su dovoljne jednadžbe plitke vode. Ako nas zanimaju okomito ubrzanje preko kratkoga praga, odvajanje toka ili lokalni tlakovi na konstrukciji, prelazimo na prostorni CFD vode i zraka. Uspoređujemo uzvodni vodostaj, protok i položaj prijelaza režima. S hidrostatičkim modelom ne uspoređujemo ondje gdje izrazita zakrivljenost toka ruši njegovu osnovnu pretpostavku.
 :::
 
 ## Hidraulički skok: energija se gubi, količina gibanja zatvara prijelaz {#sec-hidraulicki-skok}
@@ -275,7 +275,7 @@ $$
 \Delta E=E_1-E_2=\frac{(y_2-y_1)^3}{4y_1y_2}.
 $$ {#eq-gubitak-skoka}
 
-**Provjera.** Za $Fr_1\to1$ korijen daje $y_2/y_1\to1$ i $\Delta E\to0$: skok iščezava u kritičnom presjeku. Za $Fr_1<1$ formula daje $y_2<y_1$ i negativan $\Delta E$, što bi značilo stvaranje mehaničke energije, pa skok iz mirnog u siloviti tok nije moguć. Energija pritom ne nestaje: $\Delta E$ se u valjku skoka pretvara u toplinu. Bilanca količine gibanja ipak ostaje zatvorena jer sile i tokovi na rubnim presjecima ne ovise o tome što se događa unutar valjka.
+**Provjera.** Za $Fr_1\to1$ korijen daje $y_2/y_1\to1$ i $\Delta E\to0$: skok iščezava u kritičnom presjeku. Za $Fr_1<1$ formula daje $y_2<y_1$ i negativan $\Delta E$, što bi značilo stvaranje mehaničke energije, pa skok iz mirnog u siloviti tok nije moguć. Energija u skoku ne nestaje: $\Delta E$ se u valjku pretvara u toplinu. Bilanca količine gibanja ipak ostaje zatvorena jer sile i tokovi na rubnim presjecima ne ovise o tome što se događa unutar valjka.
 :::
 
 ::: {.mf1-granica-modela}
@@ -351,7 +351,7 @@ Odredi protok čistoga kanala i kanala obraslog vegetacijom te relativno smanjen
 
 **Rješenje**
 
-Površina presjeka je $A=3{,}0\ \text{m}^2$, oplakani opseg $P=5{,}0\ \text{m}$, a hidraulički polumjer $R_h=0{,}60\ \text{m}$.
+Površina presjeka je $A=3{,}0\ \text{m}^2$, oplakani opseg $P=5{,}0\ \text{m}$, a hidraulički radijus $R_h=0{,}60\ \text{m}$.
 
 Za čisti kanal dobivamo
 
@@ -549,11 +549,11 @@ $y_c\approx0{,}790179\ \mathrm{m}$, $E_{min}\approx1{,}185268\ \mathrm{m}$ i $\D
 
 **Tekst zadatka**
 
-Zadano je $Q=1{,}800\pm0{,}018\ \mathrm{m^3/s}$, $b=1{,}200\pm0{,}003\ \mathrm{m}$, $y_1=0{,}250\pm0{,}003\ \mathrm{m}$ i $y_2=1{,}220\pm0{,}008\ \mathrm{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Kanal je vodoravan i pravokutan. Na kratkom kontrolnom volumenu zanemari uzdužnu silu dna i stijenki; tlak u rubnim presjecima je hidrostatički, a $\beta_1=\beta_2=1$. U oba presjeka koristi se isti izračunati $q=Q/b$, pa njihove doprinose nesigurnosti ne smiješ tretirati kao dva neovisna protoka.
+Zadano je $Q=1{,}800\pm0{,}018\ \mathrm{m^3/s}$, $b=1{,}200\pm0{,}003\ \mathrm{m}$, $y_1=0{,}250\pm0{,}003\ \mathrm{m}$ i $y_2=1{,}220\pm0{,}008\ \mathrm{m}$; navedene su neovisne standardne nesigurnosti ($k=1$). Kanal je vodoravan i pravokutan. Na kratkom kontrolnom volumenu zanemari uzdužnu silu dna i stijenki; tlak u rubnim presjecima je hidrostatički, a $\beta_1=\beta_2=1$. U oba presjeka koristi se isti izračunani $q=Q/b$, pa njihove doprinose nesigurnosti ne smiješ tretirati kao dva neovisna protoka.
 
 **Traži se**
 
-1. Odaberi kontrolni volumen s rubnim presjecima izvan valjka skoka, prikaži vanjske sile i usporedi rezidual s mjernom nesigurnošću.
+1. Odaberi kontrolni volumen s rubnim presjecima izvan valjka skoka i prikaži vanjske sile.
 2. Izvedi rezidual $\Delta_I=(I_2-I_1)/(\rho gb)$, linearno propagiraj nesigurnost svih četiriju mjerenja i primijeni kriterij $|\Delta_I|\le2s_{\Delta}$, gdje je $s_{\Delta}$ standardna nesigurnost reziduala.
 3. Odredi i teorijsku spregnutu dubinu iz srednjih vrijednosti uzvodnih ulaznih podataka. Zaključak ograniči na zadani model i kriterij slaganja mjerenja.
 
@@ -631,7 +631,7 @@ Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6
 - $Fr$ određuje smjer prijenosa informacije, a time i koji se rubni uvjet zadaje uzvodno, a koji nizvodno; $Fr=1$ označuje kritični presjek u plitkovodnom modelu.
 - Pri zadanom protoku kritična dubina minimizira specifičnu energiju; većoj energiji pripadaju dvije alternativne dubine, a rubni uvjeti biraju ostvarivu granu.
 - Ustava i preljev kontrolne su građevine: nameću vezu protoka i uzvodne razine, a njihovi koeficijenti $C_d$ i $C_{pr}$ empirijski su.
-- Hidraulički skok opisuje se bilancom količine gibanja (jednakošću impulsne funkcije $I$ u rubnim presjecima), a u njemu se disipira mehanička energija; položaj skoka određuje nizvodni vodostaj.
+- Hidraulički skok opisuje se bilancom količine gibanja (jednakošću impulsne funkcije $I$ u rubnim presjecima), a u njemu se disipira mehanička energija; položaj skoka ovisi o nizvodnom vodostaju.
 - Manningov $n$ empirijski sažima stanje kanala i mora imati izvor, raspon i analizu osjetljivosti.
 - Jednodimenzijski model ne opisuje unutrašnjost skoka, duljinu umirnog bazena ni tok preko kratkoga zakrivljenog praga.
 

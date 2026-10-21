@@ -149,7 +149,7 @@ Za procjenu opaženog reda točnosti i GCI-ja koristi barem tri sustavno profinj
 
 **Validacija: opisuje li model stvarni sustav dovoljno dobro za namjeravanu svrhu?** Rezultat viskoznog modela Venturijeve cijevi uspoređuje se s izmjerenim protocima i tlakovima pri odgovarajućoj geometriji i radnim uvjetima, uz mjerne, ulazne i numeričke nesigurnosti [@nasa-cfd-vv; @asme-vv20-2009].
 
-Osjetljivost na hrapavost, ulazni profil ili model turbulencije ispituje se zasebnom analizom, koja nije ni provjera mrežne konvergencije ni zamjena za mjerenje. Razlika između viskoznog rješenja i idealnoga Bernoullijeva rješenja obuhvaća stvarne gubitke i razliku u pretpostavkama. Na kraju navedi protok, definiciju $\Delta p$, gubitak i nesigurnost u odnosu na odluku, primjerice na potrebnu crpnu visinu. Slaganje u jednoj radnoj točki ne potvrđuje cijelo radno područje.
+Osjetljivost na hrapavost, ulazni profil ili model turbulencije ispituje se zasebnom analizom, koja nije ni provjera mrežne konvergencije ni zamjena za mjerenje. Razlika između viskoznog rješenja i idealnoga Bernoullijeva rješenja obuhvaća stvarne gubitke i razliku u pretpostavkama. Na kraju navedi protok, definiciju $\Delta p$, gubitak i nesigurnost s obzirom na odluku, primjerice na potrebnu crpnu visinu. Slaganje u jednoj radnoj točki ne potvrđuje cijelo radno područje.
 
 ## Pripremljeni V&V paketi {#sec-cfd-vv-paketi}
 

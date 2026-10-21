@@ -329,7 +329,7 @@ Metacentarska teorija opisuje samo početni odziv oko uspravnoga položaja. Stab
 ::: {.mf1-dublje}
 <p class="mf1-box-label">Dublje — Učinak slobodne površine u tanku</p>
 
-Ako tank nije pun, tekućina se u njemu pri nagibu prelijeva prema nižoj strani i njezino se težište pomiče jednako kao centar uzgona u klinu vodne linije. Taj pomak djeluje kao prividno podizanje težišta sustava za
+Ako tank nije pun, tekućina se u njemu pri nagibu prelijeva prema nižoj strani i njezino se težište pomiče jednako kao centar uzgona u klinu vodne linije. Taj pomak prividno podiže težište sustava i mijenja $GM$ za
 
 $$
 \delta GM=-\frac{\rho_t\,i_t}{\rho\,V_{ist}},
@@ -987,7 +987,7 @@ Odredi gustoću otopine $\rho_x$ i protumači zašto je uron u otopini veći neg
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-U oba fluida vrijedi $\rho gV_{ist} = mg$; razlika je samo u uronjenom volumenu vrata i tijela areometra.
+U oba fluida vrijedi $\rho gV_{ist} = mg$; tijelo areometra potpuno je uronjeno u oba slučaja, pa se razlikuje samo uronjeni volumen vrata.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -1027,7 +1027,7 @@ Za svaki plan ponovno izračunaj ukupnu masu i njezin moment $m\,KG$ s obzirom n
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-Početno: $(T,f,KG,GM)=(0{,}2227;0{,}3773;0{,}8000;0{,}1534)\ \text{m}$. Plan A: $(0{,}2227;0{,}3773;0{,}6800;0{,}2734)\ \text{m}$, prihvatljiv. Plan B: $(0{,}3563;0{,}2437;0{,}5188;0{,}1857)\ \text{m}$, ne zadovoljava oba uvjeta. Balast snižava $KG$, ali smanjuje i $BM$ te nadvođe $f=H-T$.
+Početno: $(T,f,KG,GM)=(0{,}2227;0{,}3773;0{,}8000;0{,}1534)\ \text{m}$. Plan A: $(0{,}2227;0{,}3773;0{,}6800;0{,}2734)\ \text{m}$, prihvatljiv. Plan B: $(0{,}3563;0{,}2437;0{,}5188;0{,}1857)\ \text{m}$, ne zadovoljava nijedan uvjet. Balast snižava $KG$, ali smanjuje i $BM$ te nadvođe $f=H-T$.
 :::
 ::::
 

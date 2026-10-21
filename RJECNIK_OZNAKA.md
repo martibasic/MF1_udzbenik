@@ -858,7 +858,7 @@ Napomena: SVG-ovi ovog poglavlja imaju naslijeđeni prefiks datoteke `u12_`, a I
 | simbol | naziv veličine | jedinica | gdje se pojavljuje |
 |---|---|---|---|
 | $A$, $T$, $P$ | površina presjeka toka, širina slobodne površine, oplakani opseg | m², m, m | geometrija, Z3, Z6 |
-| $R_h=A/P$, $y_h=A/T$, $D_h$ | hidraulički polumjer, hidraulička dubina, hidraulički promjer (usporedba) | m | geometrija, Z3 |
+| $R_h=A/P$, $y_h=A/T$, $D_h$ | hidraulički radijus, hidraulička dubina, hidraulički promjer (usporedba) | m | geometrija, Z3 |
 | $c=\sqrt{gy_h}$ | brzina dugog gravitacijskog vala (samo u ovom poglavlju) | m/s | Froude, Z1 |
 | $Q$, $q=Q/b$ | volumenski protok, protok po širini | m³/s, m²/s | posvuda |
 | $v$, $v_0$, $v_c$, $v_1$, $v_2$ | srednja brzina; početna (mirni dotok, uvodna skica); kritična; ispred i iza skoka | m/s | posvuda, P2, uvodna skica |

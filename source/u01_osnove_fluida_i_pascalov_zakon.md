@@ -724,7 +724,7 @@ U trećem pokusu cilindar i crpka čine zatvoren sustav s početnim ukupnim volu
 
 Ukupna masa tekućine, uključujući tekućinu u crpki, ostaje ista.
 
-Zanemarivanje stlačivosti prihvatljivo je ako pomak od rezultata nestlačivog proračuna ne odstupa za više od $1{,}0\,\%$.
+Zanemarivanje stlačivosti prihvatljivo je ako pomak ne odstupa od rezultata nestlačivog proračuna za više od $1{,}0\,\%$.
 
 **Traži se**
 

@@ -8,7 +8,7 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 |---|---|---|
 | Afinitetni zakoni | Približne veze $Q\propto n$, $H\propto n^2$, $P\propto n^3$ za istu crpku pri promjeni brzine vrtnje; $NPSH_r$ se njima ne prenosi nekritički. | [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Aktuatorski disk | Idealizirana ploha koja struji predaje energiju i količinu gibanja; model propelera i rotora s $F_T=\dot m(v_j-v_A)$ i $\eta_i=2/(1+\sqrt{1+C_{Th}})$. | [14](u14_turbostrojevi_i_propulzija.qmd) |
-| Akumulacija | Vremenska promjena ekstenzivne veličine u kontrolnom volumenu; ne nestaje samo zato što su trenutačni ulaz i izlaz jednaki. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd) |
+| Akumulacija | Vremenska promjena ekstenzivne veličine u kontrolnom volumenu; ako je jednaka nuli, to samo po sebi ne dokazuje da je strujanje stacionarno. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [10](u10_kolicina_i_moment_kolicine_gibanja.qmd) |
 | Apsolutni tlak | Tlak $p_{aps}$ mjeren od idealnog vakuuma; obvezan je u jednadžbi stanja, pri provjeri kavitacije, u $NPSH_a$ i u kompresibilnom toku. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd), [8](u08_energijska_jednadzba_i_bernoulli.qmd), [9](u09_kompresibilni_idealni_tok.qmd) |
 | Bernoullijeva jednadžba | $p/(\rho g)+v^2/(2g)+z=\text{konst.}$ duž strujnice stacionarnog nestlačivog toka bez trenja i strojeva; poseban je slučaj energijske jednadžbe. | [8](u08_energijska_jednadzba_i_bernoulli.qmd) |
 | Bezdimenzijski broj | Bezdimenzijska kombinacija veličina koja sažima utjecaj članova modela; može biti omjer sila, brzina ili vremena. | [11](u11_dimenzijska_analiza_i_slicnost.qmd) |

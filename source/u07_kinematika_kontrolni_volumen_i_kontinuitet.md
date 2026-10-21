@@ -159,7 +159,7 @@ Tek kad je riječ o istom nestlačivom fluidu kroz sve presjeke i kad je gustoć
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Granica modela — Kada kontinuitet prestaje biti jednostavan</p>
 
-Zapis $A_1 v_1 = A_2 v_2$ vrijedi samo za stacionaran tok jednoga fluida stalne gustoće kroz jedan ulaz i jedan izlaz, uz srednje normalne brzine. Promjena gustoće (zagrijani zrak u Z1), više grana, akumulacija u spremniku ili pomična kontrolna ploha (klip u Z5, brod u plovidbi u P2) vraćaju punu masenu bilancu. Jednodimenzijska srednja brzina ne govori ništa o obliku profila, vrtloženju ni tlaku: za njih su potrebne bilance energije ([]{.mf1-chapter-ref target="u08"}) i količine gibanja ([]{.mf1-chapter-ref target="u10"}) ili lokalni opis ([]{.mf1-chapter-ref target="u12"}).
+Zapis $A_1 v_1 = A_2 v_2$ vrijedi samo za stacionaran tok jednoga fluida stalne gustoće kroz jedan ulaz i jedan izlaz, uz srednje normalne brzine. Promjena gustoće (zagrijani zrak u Z1), više grana, akumulacija u spremniku ili pomična kontrolna ploha (klip u Z5, brod u plovidbi u P3) vraćaju punu masenu bilancu. Jednodimenzijska srednja brzina ne govori ništa o obliku profila, vrtloženju ni tlaku: za njih su potrebne bilance energije ([]{.mf1-chapter-ref target="u08"}) i količine gibanja ([]{.mf1-chapter-ref target="u10"}) ili lokalni opis ([]{.mf1-chapter-ref target="u12"}).
 :::
 
 ::: {.mf1-interaktivno}
@@ -182,7 +182,7 @@ Zapis $A_1 v_1 = A_2 v_2$ vrijedi samo za stacionaran tok jednoga fluida stalne 
 
 **Fizikalno pitanje.** Zakoni mehanike (očuvanje mase, Newtonov zakon, prvi zakon termodinamike) napisani su za *sustav*, tj. uvijek istu masu. Inženjer pak promatra *kontrolni volumen* (KV), dio prostora kroz koji masa prolazi. Kako se brzina promjene ekstenzivne veličine sustava $B$ (masa, količina gibanja, energija) izražava veličinama u kontrolnom volumenu? Neka je $\eta = dB/dm$ pripadna specifična veličina, pa je $B_{sustav} = \int_{sustav} \rho\eta\,dV$.
 
-**Bilanca na dva trenutka.** Odaberemo kontrolni volumen koji se u trenutku $t$ poklapa sa sustavom. Tijekom $\Delta t$ sustav se pomakne: dio njegove mase izađe kroz kontrolnu plohu (KP) u *izlazni rubni volumen* $V_{iz}$, a masa koja je u trenutku $t$ bila izvan njega ulazi iz *ulaznoga rubnog volumena* $V_{ul}$. Kontrolna ploha smije se gibati; rubni volumeni mjere se relativno prema njoj. U trenutku $t+\Delta t$ sustav zauzima $KV + V_{iz} - V_{ul}$, pa je
+**Bilanca na dva trenutka.** Odaberemo kontrolni volumen koji se u trenutku $t$ poklapa sa sustavom. Tijekom $\Delta t$ sustav se pomakne: dio njegove mase izađe kroz kontrolnu plohu (KP) u *izlazni rubni volumen* $V_{iz}$, a masa koja je u trenutku $t$ bila izvan njega ulazi u *ulazni rubni volumen* $V_{ul}$. Kontrolna ploha smije se gibati; rubni volumeni mjere se relativno prema njoj. U trenutku $t+\Delta t$ sustav zauzima $KV + V_{iz} - V_{ul}$, pa je
 
 $$
 B_{sustav}(t+\Delta t) = B_{KV}(t+\Delta t) + B_{iz} - B_{ul},
@@ -318,7 +318,7 @@ $$
 \qquad \dot m_f\approx\rho_f(\vec v_f\cdot\vec n_f)A_f.
 $$ {#eq-celijska-bilanca-mase}
 
-Indeks $n$ označuje vremensku razinu, a $f$ plohu s vanjskom normalom. Za stacionaran tok prvi član iščezava. Brzine na plohama povezuju susjedne nepoznanice: zajedno s bilancom količine gibanja dobiva se velik sustav algebarskih jednadžbi. Za Venturijevu cijev numerička je domena fluid unutar cijevi omeđen ulazom, grlom i stijenkom, mreža je skup povezanih ćelija i ploha, a iz izračunanog polja brzine dobiva se protok kroz bilo koji presjek.
+Indeks $n$ označuje vremensku razinu, a $f$ plohu s vanjskom normalom. Za stacionaran tok prvi član iščezava. Brzine na plohama povezuju susjedne nepoznanice: zajedno s bilancom količine gibanja dobiva se velik sustav algebarskih jednadžbi. Za Venturijevu cijev numerička je domena fluid unutar cijevi omeđen ulazom, izlazom i stijenkom, mreža je skup povezanih ćelija i ploha, a iz izračunanog polja brzine dobiva se protok kroz bilo koji presjek.
 
 **Provjera i primjena.** Isti tok kroz zajedničku plohu ulazi u dvije ćelije sa suprotnim predznacima. Zbrajanjem lokalnih bilanca unutarnji se tokovi poništavaju, pa ostaju samo tokovi kroz granice domene i ukupna akumulacija. Pri stacionarnom strujanju kroz Venturijevu cijev ulazni i izlazni maseni protok moraju biti jednaki. Tlak i energiju istoga problema povezuje sljedeće poglavlje, a postupak rješavanja opisan je u odjeljku [-@sec-realni-tok-cfd].
 :::
@@ -654,11 +654,11 @@ $$
 v_d' = \frac{Q}{A_{n}'} = \frac{4{,}167 \cdot 10^{-4}}{4{,}241 \cdot 10^{-4}} \approx 0{,}982\ \text{m/s},
 $$ {#eq-kinematika-kv-rijeseni-primjer-rashladni-krug-baterijskog-pake-07}
 
-što je porast od približno $6{,}6\,\%$.
+što je porast od približno $6{,}7\,\%$.
 
 **Provjera i tumačenje**
 
-Porast od 6,6 % jednak je $16/15-1$. Iz toga se ne smije zaključiti da je kvar toplinski prihvatljiv: začepljena grana nema protok, a za temperaturu je potrebna toplinska bilanca.
+Porast od 6,7 % jednak je $16/15-1$. Iz toga se ne smije zaključiti da je kvar toplinski prihvatljiv: začepljena grana nema protok, a za temperaturu je potrebna toplinska bilanca.
 :::
 
 ::: {#cfd-razdjelnik-podjela-protoka .mf1-cfd title="Računalna dinamika fluida"}
@@ -723,7 +723,7 @@ Odredi maseni protok, izlaznu srednju brzinu te volumenske protoke na ulazu i iz
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Masena bilanca $\rho_1 A_1 v_1 = \rho_2 A_2 v_2$ vrijedi uvijek; volumenska $Q_1 = Q_2$ samo kad je gustoća ista na oba presjeka.
+Masena bilanca $\rho_1 A_1 v_1 = \rho_2 A_2 v_2$ vrijedi i pri promjeni gustoće; volumenska $Q_1 = Q_2$ samo kad je gustoća ista na oba presjeka.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
@@ -820,7 +820,7 @@ Element površine je prsten $dA=2\pi r\,dr$, pa integriraj funkciju $2\pi r\,v(r
 ::: {.callout-tip collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
 
-Trapezno pravilo daje $Q\approx0{,}561\ \text{m}^3/\text{s}$ i $v=Q/A\approx7{,}94\ \text{m/s}$; $v/v_{max}\approx0{,}79$, $\dot m\approx0{,}673\ \text{kg/s}$. S vršnom brzinom bilo bi $Q=0{,}707\ \text{m}^3/\text{s}$, oko $26\,\%$ previše. Vanjski prsten nosi najveći opseg, a profil u njemu nije linearan, pa trapez ondje podcjenjuje tok; potencijski profil daje $0{,}817$, oko $3\,\%$ više od izmjerene diskretizacije.
+Trapezno pravilo daje $Q\approx0{,}561\ \text{m}^3/\text{s}$ i $v=Q/A\approx7{,}94\ \text{m/s}$; $v/v_{max}\approx0{,}79$, $\dot m\approx0{,}673\ \text{kg/s}$. S vršnom brzinom bilo bi $Q=0{,}707\ \text{m}^3/\text{s}$, oko $26\,\%$ previše. Vanjski prsten nosi najveći opseg, a profil u njemu nije linearan, pa trapez ondje podcjenjuje tok; potencijski profil daje $0{,}817$, oko $3\,\%$ više od trapezne procjene.
 :::
 ::::
 
