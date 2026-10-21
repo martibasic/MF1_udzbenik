@@ -295,7 +295,7 @@ $$ {#eq-kompresibilni-tok-rijeseni-primjer-gornja-granica-protoka-sigurnos-02}
 
 **Provjera i tumačenje**
 
-Odluka o režimu traži apsolutne tlakove: s manometarskim tlakom $p_{0,M}=499\ \text{kPa}$ (uz $p_{atm}=101\ \text{kPa}$) granica bi pogrešno ispala $263\ \text{kPa}$. Za stvarni ventil potrebni su koeficijent istjecanja i normirani proračun kapaciteta; izračunana vrijednost ne zamjenjuje sigurnosnu certifikaciju.
+Odluka o režimu traži apsolutne tlakove: s manometarskim tlakom $p_{0,M}=499\ \text{kPa}$ (uz $p_{atm}=101\ \text{kPa}$) granica bi pogrešno iznosila $263\ \text{kPa}$. Za stvarni ventil potrebni su koeficijent istjecanja i normirani proračun kapaciteta; izračunana vrijednost ne zamjenjuje sigurnosnu certifikaciju.
 :::
 
 ::: {#cfd-sapnica-prigusenje .mf1-cfd title="Računalna dinamika fluida"}
@@ -422,7 +422,7 @@ p_{e,\mathrm{I}}=\frac{500}{1{,}0315^{3{,}5}}=448{,}5\ \text{kPa},\qquad
 p_{e,\mathrm{III}}=\frac{500}{1{,}749^{3{,}5}}=70{,}7\ \text{kPa}.
 $$ {#eq-kd-sapnica-izlazni-tlakovi}
 
-Prvi je najviši protutlak pri kojem je grlo zagušeno uz posve podzvučni divergentni dio, a treći (III) projektni protutlak potpuno nadzvučnog, izentropskog izlaza.
+Prvi (I) najviši je protutlak pri kojem je grlo zagušeno uz posve podzvučni divergentni dio, a treći (III) projektni protutlak potpuno nadzvučnog, izentropskog izlaza.
 
 ### 2. Normalni val u izlaznom presjeku {.mf1-step .unnumbered .unlisted}
 
@@ -447,9 +447,9 @@ Redoslijed $p_{e,\mathrm{III}}<p_{e,\mathrm{II}}<p_{e,\mathrm{I}}<p_0$ mora vrij
 
 ::: {#cfd-sapnica-udarni-val .mf1-cfd title="Računalna dinamika fluida"}
 
-**Zastani i promisli.** Iza adijabatskog normalnog udarnog vala statički tlak raste, zaustavni tlak pada, a $T_0$ ostaje ista. Je li takav rezultat proturječan?
+**Udarni val unutar sapnice.** Pri promjeni nizvodnog tlaka val se može pomaknuti kroz divergentni dio i promijeniti tlakove na stijenci. Za svaki radni uvjet pratimo njegov položaj, stanja ispred i iza njega te gubitak zaustavnog tlaka.
 
-**Udarni val unutar sapnice.** Pri promjeni nizvodnog tlaka val se može pomaknuti kroz divergentni dio i promijeniti tlakove na stijenci. Za svaki radni uvjet pratimo njegov položaj, stanja ispred i iza njega te gubitak zaustavnog tlaka. Rast statičkog tlaka uz pad zaustavnog tlaka nije proturječje: adijabatski val povisuje entropiju, a čuva zaustavnu temperaturu.
+**Zastani i promisli.** Iza adijabatskog normalnog udarnog vala statički tlak raste, zaustavni tlak pada, a $T_0$ ostaje ista. Je li takav rezultat proturječan? Nije: adijabatski val povisuje entropiju, a zaustavnu temperaturu čuva.
 
 Ručni proračun u primjeru [-@ex-normalni-udar] daje referentne skokove za normalni adijabatski val, a primjer [-@ex-kd-sapnica-rezim] karakteristične protutlakove sapnice: uz iste ulazne podatke uspoređujemo stanja izvan prijelaza. CFD obično razmaže val preko nekoliko ćelija; ta numerička širina nije njegova fizička debljina. Omjere uspoređujemo izvan razmazanog prijelaza, a položaj vala provjeravamo profinjenjem. Za nestacionarni račun važan je i vremenski korak prema najvećoj brzini širenja signala $|v|+a$ (Courant–Friedrichs–Lewyjev, CFL uvjet). Time provjeravamo može li simulacija poduprijeti odluku o radnom području sapnice.
 :::

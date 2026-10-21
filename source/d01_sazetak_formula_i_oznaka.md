@@ -19,7 +19,7 @@ Sažetak je podsjetnik: uz svaku relaciju navedeni su uvjet primjene i poglavlje
 | $h_g$, $h_l$, $h_{loc}$; $U$ | ukupni, linijski, lokalni gubitak visine; ulaž (engl. *ullage*), udaljenost od referentne točke do površine tereta (pog. 3) | m |
 | $y$, $y_c$, $y_n$, $y_0$; $E$; $S_0$, $S_f$; $q$ | dubina, kritična i normalna dubina, uzvodna dubina ispred ustave; specifična energija; nagib dna i energijske crte; protok po širini (samo pog. 15) | m; -; m$^2$/s |
 | $D_h=4A/P$; $R_h=A/P$; $y_h=A/T$ | hidraulički promjer pune cijevi (pog. 11–13); hidraulički radijus; hidraulička dubina (pog. 15, $T$ širina površine) | m |
-| $\vec g_{eff}$; $a$; $\omega$; $n$ | efektivno ubrzanje; brzina zvuka (ubrzanje spremnika $\vec a$, pog. 4); kutna brzina; brzina vrtnje (pog. 13–14) ili Manningov koeficijent (pog. 15) | m/s$^2$; m/s; rad/s; min$^{-1}$, s/m$^{1/3}$ |
+| $\vec g_{eff}$; $a$; $\omega$; $n$ | efektivno ubrzanje; brzina zvuka (ubrzanje spremnika $\vec a$, pog. 4); kutna brzina; brzina vrtnje (pog. 2, 4, 13 i 14) ili Manningov koeficijent (pog. 15) | m/s$^2$; m/s; rad/s; min$^{-1}$, s/m$^{1/3}$ |
 | $A$, $A_p$; $V$; $I_G$, $I_T$ | površina, površina otvora; volumen; drugi moment plohe oko težišne osi, odnosno vodne linije oko uzdužne osi | m$^2$; m$^3$; m$^4$ |
 | $R$; $R_z$ | polumjer spremnika, luka ili cijevi; iznimke: plinska konstanta (pog. 9), reakcija nosača $\vec R$ (pog. 10), hidraulički otpor dionice $R$ u s$^2$/m$^5$, $h_g=RQ^2$ (pog. 13); polumjer zavoja (pog. 4) | m |
 | $V_{ist}$; $\Delta$; $T$; $f$; $b$, $b_t$, $L$, $D$, $l$ | istisnina; masa istisnine; gaz (pog. 6; temperatura u pog. 9, širina površine u pog. 15); nadvođe (frekvencija u $St$); širina (broda, pontona, kanala), širina tanka (pog. 4, 6), duljina, promjer, tetiva profila | m$^3$; kg; m |
@@ -75,7 +75,7 @@ Sažetak je podsjetnik: uz svaku relaciju navedeni su uvjet primjene i poglavlje
 | $y_{CP}=y_C+I_G\sin\theta/(Ah_C)$, $h_{CP}=h_C+I_G\sin^2\theta/(Ah_C)$ | ploha nagnuta za $\theta$; okomita: $h_{CP}=h_C+I_G/(h_CA)$; centar tlaka ispod težišta kad tlak raste s dubinom; dodatni pretlak traži momentiranje cijele raspodjele |
 | $I_G=bh^3/12$ (pravokutnik); $I_G=\pi d^4/64$ (krug); $I_G=bh^3/36$ (trokut) | drugi moment plohe oko težišne osi paralelne s vodoravnim rubom $b$; $h$ je visina plohe u njezinoj ravnini; težište trokuta je na $h/3$ od osnovice |
 | $h_{CP}=\sum F_ih_i/\sum F_i$ | momentna superpozicija; suprotni tlakovi s predznakom |
-| $F_H=\rho gh_CA_{proj}$; $\lvert F_V\rvert=\rho gV$; $F_R=\sqrt{F_H^2+F_V^2}$ | zakrivljena ploha; smjer $F_V$ iz normale i strane stvarnog fluida; rezultanta kroz jednu točku samo za kružni luk |
+| $F_H=\rho gh_CA_{proj}$; $\lvert F_V\rvert=\rho gV^*$; $F_R=\sqrt{F_H^2+F_V^2}$ | zakrivljena ploha, $V^*$ pomoćni volumen; smjer $F_V$ iz normale i strane stvarnog fluida; rezultanta kroz jednu točku samo za kružni luk |
 | $F_U=\rho gV_{ist}$; $\Delta=\rho V_{ist}=m$; $f=H-T$ | Arhimed, homogen fluid; slobodno plivanje; nadvođe |
 | $GM=KB+BM-KG$, $BM=I_T/V_{ist}$ | početni stabilitet, mali kut |
 | $m_ke=\Delta\,GM\tan\varphi$ | pokus nagibanja: uteg mase $m_k$ pomaknut poprečno za $e$; uteg uključen u $\Delta$, mali kut |
@@ -88,7 +88,7 @@ Sažetak je podsjetnik: uz svaku relaciju navedeni su uvjet primjene i poglavlje
 | Formula | Uvjet primjene i napomena |
 | --- | --- |
 | $Q=\int_A\vec v\cdot\vec n\,dA=Av$; $\dot m=\rho Q$ | nepomična ploha, vanjska normala; kosa ploha: komponenta u smjeru normale |
-| $\dfrac{dB_{sustav}}{dt}=\dfrac{d}{dt}\int_{KV}\rho\eta\,dV+\int_{KP}\rho\eta\,(\vec v-\vec v_{KP})\cdot\vec n\,dA$ | Reynoldsov transportni teorem, $\eta=dB/dm$ specifična veličina; kroz gibajuću plohu masu prenosi relativna brzina |
+| $\dfrac{dB_{sustav}}{dt}=\dfrac{d}{dt}\int_{KV}\rho\eta\,dV+\int_{KP}\rho\eta\,(\vec v-\vec v_{KP})\cdot\vec n\,dA$ | Reynoldsov transportni teorem, $\eta=dB/dm$ specifična veličina; kroz pomičnu plohu masu prenosi relativna brzina |
 | $\sum\dot m_{ul}-\sum\dot m_{iz}=dm_{KV}/dt$; $Q_{ul}-Q_{iz}=dV/dt$ | akumulacija; drugi oblik za nestlačiv fluid |
 | $p/(\rho g)+v^2/(2g)+z=\text{konst.}$ | Bernoullijeva jednadžba: duž strujnice, stacionarno, nestlačivo, bez gubitaka i strojeva |
 | $\dfrac{p_1}{\rho g}+\alpha_1\dfrac{v_1^2}{2g}+z_1+H_p=\dfrac{p_2}{\rho g}+\alpha_2\dfrac{v_2^2}{2g}+z_2+H_t+h_g$, $\alpha=\dfrac{1}{A\bar v^3}\int_Av^3\,dA$ | energijska jednadžba KV (@eq-energijska-jednadzba-kv); $h_g\ge0$; razvijeni laminarni profil u kružnoj cijevi $\alpha=2$, turbulentni $\alpha\approx1$ |

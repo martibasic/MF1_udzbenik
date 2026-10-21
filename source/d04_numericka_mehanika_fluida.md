@@ -23,7 +23,7 @@ Preporučeni redoslijed čitanja: @sec-cfd-mapa → @sec-cfd-polja-izlazi → @s
 
 ## Dodatne kratice numeričkih metoda
 
-CFD, FEM, RANS s modelima $k$–$\varepsilon$ i $k$–$\omega$ SST, SIMPLE i PISO, MRF i klizna mreža, rezidual i mrežna konvergencija definirani su u [pojmovniku](d02_pojmovnik.qmd). Ovdje su samo kratice kojih ondje nema. Imaj na umu da se metoda ne bira samo prema nazivu.
+CFD, FEM, RANS s modelima $k$–$\varepsilon$ i $k$–$\omega$ SST, SIMPLE i PISO, MRF i klizna mreža, rezidual i mrežna konvergencija definirani su u [pojmovniku](d02_pojmovnik.qmd). Ovdje su samo kratice kojih ondje nema.
 
 | Naziv | Značenje i uloga | Poveznica |
 |---|---|---|
@@ -89,7 +89,7 @@ CFD je metoda za pitanja na koja jednostavniji model više ne daje dovoljan odgo
 | Gaz i mali nagib plovila | istisnina i početni stabilitet | dinamika u valovima |
 | Protok jednostavnog Venturija | kontinuitet i Bernoulli | gubitci: najprije 1D korekcija; zatim lokalni tok |
 | Radna točka instalacije | 1D cjevovod ili mreža sustava | nepouzdan otpor složenog lokalnog elementa |
-| Odvajanje u difuzoru ili ventilu | prostorni model strujanja | ciljano polje i gubitak opravdavaju CFD |
+| Gubitak u difuzoru ili ventilu | 1D procjena s tabličnim koeficijentom | položaj odvajanja i lokalni gubitak traže prostorni CFD |
 
 Hijerarhija **analitika → 1D model → mrežni model sustava → prostorni CFD → nestacionarni ili višefazni CFD** opisuje rast potrebne razine detalja, a ne ljestvicu kvalitete. Mogući su i 2D ili osnosimetrični CFD modeli. Više detalja zahtijeva više podataka, računskog vremena i provjera te otvara dodatne izvore nesigurnosti. Vodeni udar, primjerice, često se najprije računa nestacionarnim 1D modelom elastičnog voda. U []{.mf1-chapter-ref target="u13"} lokalni CFD daje koeficijent gubitka koji se zatim vraća u jednostavniji model cijele instalacije.
 

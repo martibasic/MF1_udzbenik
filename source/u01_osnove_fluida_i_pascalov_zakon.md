@@ -4,7 +4,7 @@ Iako je fluid građen od molekula, u tehničkim proračunima promatramo ga kao n
 
 Tlak je okomita sila po jedinici površine, $p=F_n/A$. U mirujućem fluidu tlak je u istoj točki jednak u svim smjerovima, pa je skalarna veličina, iako se od točke do točke može mijenjati. Porast tlaka s dubinom obrađuje se u []{.mf1-chapter-ref target="u03"}.
 
-Pascalov zakon kaže da se promjena tlaka nametnuta na jednom mjestu zatvorenog mirujućeg fluida prenosi neumanjena u sve njegove točke. U hidrauličkim sustavima tlak koji stvaraju klipovi mnogo je veći od razlika tlaka zbog visine, pa je porast tlaka u cijelom sustavu praktički isti: $\Delta p=F_1/A_1=F_2/A_2$. Mala sila $F_1$ na malom klipu zato daje veliku silu $F_2=(A_2/A_1)F_1$ na velikom klipu. Energija se pritom ne stvara. Ulje je nestlačivo, pa su istisnuti volumeni jednaki, $A_1s_1=A_2s_2$: veliki klip prijeđe proporcionalno kraći put, a u idealnom modelu bez gubitaka vrijedi $F_1s_1=F_2s_2$.
+Pascalov zakon kaže da se promjena tlaka nametnuta na jednom mjestu zatvorenog mirujućeg fluida prenosi neumanjena u sve njegove točke. U hidrauličkim sustavima tlak koji stvaraju klipovi mnogo je veći od razlika tlaka zbog visine, pa je porast tlaka u cijelom sustavu praktički isti: $\Delta p=F_1/A_1=F_2/A_2$. Mala sila $F_1$ na malom klipu zato daje veliku silu $F_2=(A_2/A_1)F_1$ na velikom klipu. Energija se pritom ne stvara. Ulje je praktički nestlačivo, pa su istisnuti volumeni jednaki, $A_1s_1=A_2s_2$: veliki klip prijeđe proporcionalno kraći put, a u idealnom modelu bez gubitaka vrijedi $F_1s_1=F_2s_2$.
 
 Na tom se načelu temelje hidrauličke dizalice i preše, kočnice vozila te brodski kormilarski strojevi. Poglavlje redom obrađuje kontinuumski model i tlak, osnovne veličine fluida i Pascalov zakon, a zatim ih primjenjuje na hidraulički prijenos sile. Pritom pokazuje i granice idealnog modela: gubitke, stlačivost, propuštanje i visinske razlike.
 
@@ -85,7 +85,7 @@ $$ {#eq-svojstva-tlak-kratki-primjer-gustoca-specificna-tezina-i-relat-02}
 
 ![Usporedba gustoće, mase i težine jednakih volumena ulja i vode.](../assets/print/u01_fig_gustoca_sr.svg){#fig-u01-gustoca-sr fig-align="center" fig-alt="Lijevo posuda s uljem i strelicom težine u težištu ulja, desno dvije jednako napunjene posude s uljem i vodom i strelicama težina u omjeru gustoća."}
 
-**Uz skicu.** Lijevo je ulje u posudi: težina $F_G$ odnosi se samo na ulje, bez posude, i djeluje u njegovu težištu. Desno su jednaki volumeni ulja i vode, napunjeni do iste razine. Strelice njihovih težina, $F_G$ i $F_{G,v}$, nacrtane su u omjeru gustoća, pa je njihov omjer upravo relativna gustoća $s_r=\rho/\rho_v$.
+**Uz skicu.** Lijevo je ulje u posudi: težina $F_G$ odnosi se samo na ulje, bez posude, i djeluje u njegovu težištu. Desno su jednaki volumeni ulja i vode u posudama napunjenima do iste razine. Strelice njihovih težina, $F_G$ i $F_{G,v}$, nacrtane su u omjeru gustoća, pa je njihov omjer upravo relativna gustoća $s_r=\rho/\rho_v$.
 
 **Rješenje**
 
@@ -232,7 +232,7 @@ $$
 A_x = n_x A_n, \qquad A_y = n_y A_n, \qquad A_z = n_z A_n.
 $$ {#eq-svojstva-tlak-dublje-izotropnost-tlaka-cauchyjev-tetraedar-01}
 
-Za proizvoljnu orijentaciju plohe površine projekcija izražavaju se pomoću $|n_i|$, a predznak se čuva u vektoru normale i u jednadžbi sila. Ovdje odabrani prvi oktant samo pojednostavnjuje zapis i ne ograničava zaključak.
+Kad je orijentacija plohe proizvoljna, površine projekcija izražavaju se pomoću $|n_i|$, a predznak se čuva u vektoru normale i u jednadžbi sila. Ovdje odabrani prvi oktant samo pojednostavnjuje zapis i ne ograničava zaključak.
 
 Na svaku plohu djeluje normalna tlačna sila; neka su pripadni tlakovi $p_x$, $p_y$, $p_z$ na koordinatnim plohama i $p_n$ na kosoj plohi. Težinu zanemarujemo: razmjerna je volumenu, $\propto \ell^3$, pa kada $\ell \to 0$ iščezava brže od tlačnih sila, koje su razmjerne površinama, $\propto \ell^2$. Ravnoteža sila u smjeru osi $x$ tada glasi
 

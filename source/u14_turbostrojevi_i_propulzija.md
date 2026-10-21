@@ -174,7 +174,7 @@ U propulziji pogonski sustav predaje energiju fluidu. Potisak vodomlaznog pogona
 
 **Fizikalno pitanje.** Kolika je brzina kroz disk i koliku snagu zahtijeva zadani potisak u lebdenju i u napredovanju?
 
-**Bilanca.** Idealizirani rotor je tanki disk površine $A$ u stacionarnom, jednodimenzijskom, nestlačivom toku bez viskoznih gubitaka izvan tlačnog skoka na disku; opterećenje je jednoliko, bez vrtnje traga, vršnih gubitaka, utjecaja tla i susjednih rotora. Daleko ispred diska fluid ima brzinu $v_A$, kroz disk $v_d$, a u dalekom tragu $v_j$, sve pri tlaku okoline. Zakon količine gibanja za strujnu cijev, $F_T=\rho Av_d(v_j-v_A)$, i tlačni skok dobiven Bernoullijevom jednadžbom ispred i iza diska, $F_T=\tfrac12\rho A(v_j^2-v_A^2)$, daju Froudeov teorem $v_d=\tfrac12(v_A+v_j)$ (jednadžba [-@eq-aktuatorski-disk-brzina]).
+**Bilanca.** Idealizirani rotor je tanki disk površine $A$ u stacionarnom, jednodimenzijskom, nestlačivom toku bez viskoznih gubitaka izvan tlačnog skoka na disku; opterećenje je jednoliko, bez vrtnje traga, vršnih gubitaka, utjecaja tla i susjednih rotora. Daleko ispred diska fluid ima brzinu $v_A$, kroz disk $v_d$, a u dalekom tragu $v_j$; daleko ispred i iza diska tlak je jednak okolnom. Zakon količine gibanja za strujnu cijev, $F_T=\rho Av_d(v_j-v_A)$, i tlačni skok dobiven Bernoullijevom jednadžbom ispred i iza diska, $F_T=\tfrac12\rho A(v_j^2-v_A^2)$, daju Froudeov teorem $v_d=\tfrac12(v_A+v_j)$ (jednadžba [-@eq-aktuatorski-disk-brzina]).
 
 **Lebdeći režim** ($v_A = 0$) — dron u visu, helikopter na mjestu, statičko ispitivanje propelera — daje $v_d = v_j/2$, pa potisak postaje
 
@@ -591,7 +591,7 @@ Posljednji primjer prenosi aktuatorski disk iz mora u zrak: mijenjaju se medij i
 
 **Tekst zadatka**
 
-Kvadkopter mase $m = 2{,}4\ \text{kg}$ lebdi s četiri jednako opterećena propelera promjera $D = 280\ \text{mm}$. Na visini $1\,500\ \text{m}$ i temperaturi $5^\circ\text{C}$ gustoća zraka je $\rho = 1{,}045\ \text{kg/m}^3$. Faktor učinka (*figure of merit*) $FM = 0{,}70$ jest omjer idealne inducirane i potrebne snage na vratilu; to nije učinkovitost propulzije jer u visu nema korisne snage.
+Kvadkopter mase $m = 2{,}4\ \text{kg}$ lebdi s četiri jednako opterećena propelera promjera $D = 280\ \text{mm}$. Na visini $1\,500\ \text{m}$ i temperaturi $5^\circ\text{C}$ gustoća zraka je $\rho = 1{,}045\ \text{kg/m}^3$. Faktor učinka (*figure of merit*) $FM = 0{,}70$ jest omjer idealne snage predane zraku i potrebne snage na vratilu; to nije učinkovitost propulzije jer u visu nema korisne snage.
 
 Svaki propeler modeliraj jednoliko opterećenim aktuatorskim diskom u nestlačivom zraku koji daleko ispred drona miruje. Zanemari međudjelovanje mlazova pojedinih propelera, utjecaj trupa te gubitke motora, regulatora i baterije. Ukupni potisak uravnotežuje težinu.
 

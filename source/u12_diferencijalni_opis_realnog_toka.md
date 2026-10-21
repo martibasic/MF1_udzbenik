@@ -474,7 +474,7 @@ $$
 \end{aligned}
 $$ {#eq-poiseuille-fvm-celija}
 
-Lijeva je strana razlika viskoznih tokova količine gibanja kroz dvije plohe ćelije, a desna izvor zbog tlaka; to je ista logika bilance kao u jednadžbi [-@eq-celijska-bilanca-mase] za masu. Svaka ćelija daje jednu linearnu jednadžbu s nepoznanicama $v_{i-1}$, $v_i$ i $v_{i+1}$; uz $v=0$ na stijenci i nulti tok kroz os nastaje tridijagonalni sustav od $N$ jednadžbi koji se rješava izravno. Bilježnica iz interaktivnog prikaza na kraju poglavlja rješava upravo taj sustav i uspoređuje rezultat s jednadžbom [-@eq-realni-tok-hagen-poiseuilleov-tok-i-linearni-gubitak-sec-01], a Z6a obrađuje protoke triju takvih mreža. U dvodimenzijskom i trodimenzijskom računu isti zapis vrijedi po ćeliji, ali konvektivni član čini sustav nelinearnim, pa se rješava iterativno.
+Lijeva je strana razlika viskoznih tokova količine gibanja kroz dvije plohe ćelije, a desna izvor zbog tlaka; to je ista logika bilance kao u jednadžbi [-@eq-celijska-bilanca-mase] za masu. Svaka ćelija daje jednu linearnu jednadžbu s nepoznanicama $v_{i-1}$, $v_i$ i $v_{i+1}$; uz $v=0$ na stijenci i nulti tok kroz os nastaje tridijagonalni sustav od $N$ jednadžbi koji se rješava izravno. Bilježnica iz interaktivnog prikaza na kraju poglavlja rješava upravo taj sustav i uspoređuje rezultat s jednadžbom [-@eq-realni-tok-hagen-poiseuilleov-tok-i-linearni-gubitak-sec-01], a Z6 a) obrađuje protoke triju takvih mreža. U dvodimenzijskom i trodimenzijskom računu isti zapis vrijedi po ćeliji, ali konvektivni član čini sustav nelinearnim, pa se rješava iterativno.
 
 **Tlak i druge diskretizacije.** Algoritmi sprezanja tlaka i brzine (npr. SIMPLE i PISO) i metoda konačnih elemenata (FEM) samo drukčije zapisuju i rješavaju iste jednadžbe, pa ne mijenjaju fiziku modela; njihove nazive i ulogu objašnjava pojmovnik numeričkih metoda u dodatku D.
 
@@ -590,7 +590,7 @@ $\tau_{st}=\Delta p\,D/(4L)=10{,}0\ \text{Pa}$, $u_\tau=\sqrt{\tau_{st}/\rho}=0{
 
 **Tekst zadatka**
 
-Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Sintetički nastavni podatci su $Q=0{,}300\pm0{,}003\ \text{mL/min}$, $\Delta p=p_1-p_2=652\pm5\ \text{Pa}$, $L=0{,}200\pm0{,}001\ \text{m}$ i $D=0{,}500\pm0{,}005\ \text{mm}$. Znakovi $\pm$ označuju neovisne standardne nesigurnosti; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$ jer je $u$ u ovom poglavlju brzina ploče. Newtonski fluid ima gustoću $\rho=998\ \text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini.
+Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Sintetički nastavni podatci su $Q=0{,}300\pm0{,}003\ \text{mL/min}$, $\Delta p=p_1-p_2=652\pm5\ \text{Pa}$, $L=0{,}200\pm0{,}001\ \text{m}$ i $D=0{,}500\pm0{,}005\ \text{mm}$. Znakovi $\pm$ označuju neovisne standardne nesigurnosti; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$ jer u ovom poglavlju $u$ označuje brzinu ploče. Newtonski fluid ima gustoću $\rho=998\ \text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini.
 
 U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje uz stijenku, a ulazne učinke smatraj ograničenima na dio ispred mjernog razmaka.
 

@@ -6,7 +6,7 @@ Kontrolni volumen (KV) odabrani je dio prostora u kojem pratimo ulaz, izlaz i ak
 
 Takvom se bilancom analiziraju rashladni razdjelnici, ventilacijske komore strojarnice, balastni tankovi pri punjenju i pražnjenju te zahvatni usis broda u plovidbi, kroz čiju kontrolnu plohu fluid prolazi relativnom brzinom. Isti se teorem primjenjuje na energiju u []{.mf1-chapter-ref target="u08"} i na količinu gibanja u []{.mf1-chapter-ref target="u10"}.
 
-Slika [-@fig-uvod-u08] prikazuje kontrolni volumen u dva oblika. Lijevo je apstraktni uređaj koji zamjenjuje bilo koji proces, a ne krutu ovojnicu: u kontrolni volumen KV ulazi struja gustoće $\rho_1$, presjeka $A_1$ i brzine $v_1$ s masenim protokom $\dot m_{ul}$, iz njega izlaze dvije struje $\dot m_{iz,1}$ i $\dot m_{iz,2}$, a unutar njega se masa akumulira brzinom $dm_{KV}/dt$. Isprekidana crta prikazuje kontrolnu plohu KP; kratke strelice $\vec n$ vanjske su jedinične normale, na ulazu suprotne toku, a na izlazima u smjeru toka. Strelice označuju tokove, a oznaka akumulacije nije brzina fluida. Desno gore je ventilirana komora: njezine krute stijenke imaju dva stvarno otvorena priključka, a zrak u komori i priključcima isti je fluid.
+Slika [-@fig-uvod-u08] prikazuje kontrolni volumen u dva oblika. Lijevo je apstraktni uređaj koji predstavlja bilo koji proces, a ne krutu ovojnicu: u kontrolni volumen KV ulazi struja gustoće $\rho_1$, presjeka $A_1$ i brzine $v_1$ s masenim protokom $\dot m_{ul}$, iz njega izlaze dvije struje $\dot m_{iz,1}$ i $\dot m_{iz,2}$, a unutar njega se masa akumulira brzinom $dm_{KV}/dt$. Isprekidana crta prikazuje kontrolnu plohu KP; kratke strelice $\vec n$ vanjske su jedinične normale, na ulazu suprotne toku, a na izlazima u smjeru toka. Strelice označuju tokove, a oznaka akumulacije nije brzina fluida. Desno gore je ventilirana komora: njezine krute stijenke imaju dva stvarno otvorena priključka, a zrak u komori i priključcima isti je fluid.
 
 ![Kontrolni volumen s jednim ulazom, dvama izlazima i akumulacijom mase te ventilirana komora s dvama otvorenim priključcima.](../assets/print/u08_fig_uvod_pregled.svg){#fig-uvod-u08 fig-align="center" fig-alt="Isprekidana kontrolna ploha oko apstraktnog uređaja sa strelicama ulazne i dviju izlaznih struja, kratkim vanjskim normalama i oznakom akumulacije, a desno gore komora krutih stijenki s dvama priključcima."}
 
@@ -27,7 +27,7 @@ $$
 \vec{v} = \vec{v}(x, y, z, t).
 $$ {#eq-kinematika-kv-polje-brzine-01}
 
-To je središnja veličina cijele dinamike fluida: iz njega se određuje protok, a uz tlak i svojstva fluida računaju se sile i gubitci.
+To je središnja veličina cijele dinamike fluida: iz toga se polja određuje protok, a uz tlak i svojstva fluida računaju se sile i gubitci.
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
@@ -306,7 +306,7 @@ $$ {#eq-kinematika-kv-matematicki-izvod-diferencijalni-oblik-kontinuit-05}
 Isti zakon sada primijenimo na mnogo povezanih kontrolnih volumena.
 :::
 
-U primjerima koji slijede najprije, prije bilo koje jednadžbe, biramo kontrolni volumen, a zatim provjeravamo piše li se masena ili volumenska bilanca, je li problem stacionaran te postoji li jedna grana ili više ulaza i izlaza.
+U primjerima koji slijede kontrolni volumen biramo prije bilo koje jednadžbe, a zatim provjeravamo piše li se masena ili volumenska bilanca, je li problem stacionaran te postoji li jedna grana ili više ulaza i izlaza.
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 

@@ -62,7 +62,7 @@ $$
 p = p_{pov} + \rho g h.
 $$ {#eq-hidrostatika-razrada-koraka-01}
 
-Dubina $h$ pozitivna je prema dolje, a $p_{pov}$ je tlak na slobodnoj površini: atmosferski u otvorenom, tlak plina $p_{pl}$ u zatvorenom spremniku.
+Dubina $h$ mjeri se od slobodne površine prema dolje, a $p_{pov}$ je tlak na slobodnoj površini: atmosferski u otvorenom, tlak plina $p_{pl}$ u zatvorenom spremniku.
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
@@ -149,7 +149,7 @@ U zatvorenom spremniku tlak na slobodnoj površini različit je od atmosferskog,
 Najčešća je pogreška uzeti atmosferu kao nulu i kad za to nema fizikalnog opravdanja. Iz manometarskog tlaka $p_M$ odmah se čita piezometarska visina
 
 $$
-h_p = \frac{p_M}{\rho g},
+h_p = \frac{p_M}{\rho g}.
 $$ {#eq-hidrostatika-otvoreni-i-zatvoreni-spremnici-02}
 
 ::: {.mf1-fizikalno-znacenje}
@@ -540,7 +540,7 @@ Distribucijska mreža vodoopskrbe napaja se iz vodotornja. U noćnom minimumu po
 1. Odredi očekivani manometarski tlak na priključku $B$.
 2. Odredi apsolutni tlak na priključku $B$.
 3. Odredi visinu slobodne površine vode u vodotornju iznad priključka $B$.
-4. Procijeni što za stanje mreže znači ako bi senzor na $A$ umjesto $5{,}20\ \text{bar}$ pokazao $4{,}70\ \text{bar}$.
+4. Procijeni što bi za stanje mreže značilo da senzor na $A$ umjesto $5{,}20\ \text{bar}$ pokaže $4{,}70\ \text{bar}$.
 
 **Rješenje**
 
@@ -646,7 +646,7 @@ Iz izvoda izotermalne atmosfere slijedi $z=H\ln(p_0/p)$ s $H=RT_0/g$. Model stal
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$H\approx8426\ \text{m}$; $z\approx1528\ \text{m}$. Stalna gustoća $\rho_0=1{,}226\ \text{kg/m}^3$ daje $z\approx1397\ \text{m}$, oko $8{,}5\,\%$ manje: gustoća s visinom pada, pa svaki paskal razlike u visini vrijedi više metara nego pri tlu. Razlučivost od $10\ \text{Pa}$ odgovara oko $1{,}0\ \text{m}$ na vrhu ($0{,}83\ \text{m}$ na bazi).
+$H\approx8426\ \text{m}$; $z\approx1528\ \text{m}$. Stalna gustoća $\rho_0=1{,}226\ \text{kg/m}^3$ daje $z\approx1397\ \text{m}$, oko $8{,}5\,\%$ manje: gustoća s visinom pada, pa svaki paskal razlike tlaka vrijedi više metara visine nego pri tlu. Razlučivost od $10\ \text{Pa}$ odgovara oko $1{,}0\ \text{m}$ na vrhu ($0{,}83\ \text{m}$ na bazi).
 :::
 ::::
 

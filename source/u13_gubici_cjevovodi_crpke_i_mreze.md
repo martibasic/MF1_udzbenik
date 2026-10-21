@@ -354,7 +354,7 @@ $$ {#eq-npsha-spremnik}
 
 Ovdje je $z_s$ visina referentnog usisnog presjeka iznad slobodne površine: pozitivna je kad crpka usisava iznad razine, a negativna pri napunjenom usisu, kad je presjek ispod razine. Brzinska se visina u drugom zapisu pokrati jer je već uključena u Bernoullijevu bilancu do usisnog presjeka. Ta dva zapisa moraju dati isti rezultat.
 
-Proizvođač određuje potrebni $NPSH_r(Q,n)$ prema navedenom kriteriju i na temelju ispitivanja. Uporabna provjera zahtijeva usporedbu raspoloživog i potrebnog NPSH-a uz odgovarajuću projektnu marginu. Sam rezultat $NPSH_a>0$ ili činjenica da je srednji tlak na usisu iznad $p_v$ ne dokazuju da kavitacije neće biti: lokalni tlak u radnom kolu može biti niži, a dopuštena margina ovisi o crpki, režimu i kriteriju proizvođača.
+Proizvođač određuje potrebni $NPSH_r(Q,n)$ prema kriteriju koji sam navodi i na temelju ispitivanja. Uporabna provjera zahtijeva usporedbu raspoloživog i potrebnog NPSH-a uz odgovarajuću projektnu marginu. Sam rezultat $NPSH_a>0$ ili činjenica da je srednji tlak na usisu iznad $p_v$ ne dokazuju da kavitacije neće biti: lokalni tlak u radnom kolu može biti niži, a dopuštena margina ovisi o crpki, režimu i kriteriju proizvođača.
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Granica modela — Što $NPSH_a$ ne jamči</p>

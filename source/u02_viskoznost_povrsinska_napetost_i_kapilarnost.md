@@ -20,7 +20,7 @@ $$
 \tau = \mu \frac{dv}{dy}
 $$ {#eq-reologija-fizikalni-uvod-i-matematicki-izvod-01}
 
-U izrazu je $\tau$ smično naprezanje, $\mu$ dinamička viskoznost, a $dv/dy$ gradijent brzine fluida $v$ po okomici $y$ na smjer gibanja. Smično je naprezanje tangencijalna sila po jedinici površine između susjednih slojeva fluida. To nije univerzalni zakon za sve fluide, nego model za one kod kojih je taj odnos linearan. U ovom poglavlju brzinu pomične krute granice (ploče, vratila) označujemo s $u$, a brzinu fluida s $v$. Dinamička viskoznost vode pri sobnoj je temperaturi reda veličine $10^{-3}\ \text{Pa s}$, dok ulja mogu imati znatno veće vrijednosti. Viskoznost ovisi o temperaturi i vrsti fluida [@white2011].
+U izrazu je $\tau$ smično naprezanje, $\mu$ dinamička viskoznost, a $dv/dy$ gradijent brzine fluida $v$ po okomici $y$ na smjer gibanja. Smično je naprezanje tangencijalna sila po jedinici površine između susjednih slojeva fluida. To nije univerzalni zakon za sve fluide, nego model za fluide u kojima je taj odnos linearan. U ovom poglavlju brzinu pomične krute granice (ploče, vratila) označujemo s $u$, a brzinu fluida s $v$. Dinamička viskoznost vode pri sobnoj je temperaturi reda veličine $10^{-3}\ \text{Pa s}$, dok ulja mogu imati znatno veće vrijednosti. Viskoznost ovisi o temperaturi i vrsti fluida [@white2011].
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Newtonov zakon viskoznosti u Couetteovu sloju</p>
@@ -154,7 +154,7 @@ $$
 \tau_{ij} = \mu\!\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right),
 $$ {#eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-01}
 
-gdje indeksi $i, j = 1, 2, 3$ označuju koordinatne smjerove. Komponenta $\tau_{ij}$ djeluje u smjeru osi $i$ na plohu okomitu na os $j$: izvandijagonalne komponente ($i\ne j$) jesu smične, a dijagonalne ($i=j$) jesu viskozna normalna dodatna naprezanja.
+gdje indeksi $i, j = 1, 2, 3$ označuju koordinatne smjerove. Komponenta $\tau_{ij}$ djeluje u smjeru osi $i$ na plohu okomitu na os $j$: izvandijagonalne komponente ($i\ne j$) smične su, a dijagonalne ($i=j$) viskozna normalna dodatna naprezanja.
 
 Tenzor je **simetričan** ($\tau_{ij} = \tau_{ji}$), što fizikalno znači da su odgovarajuće smične komponente naprezanja na međusobno okomitim plohama jednake — posljedica je to ravnoteže momenata na infinitezimalnom elementu fluida.
 
@@ -182,7 +182,7 @@ Na granici fluida i druge faze molekule nemaju istu okolinu kao one u unutrašnj
 
 Površinska se napetost izražava u jedinicama $\text{N/m}$, kao sila po jedinici duljine kontaktne linije. Budući da vrijedi $\text{N/m}=\text{J/m}^2$, može se tumačiti i kao energija po jediničnoj površini. Za stvaranje nove površine fluida potreban je rad $\sigma\Delta A$. Pri zadanom volumenu sustav teži najmanjoj površini, pa kapljice u bestežinskom stanju i sapunasti mjehuri poprimaju sferni oblik.
 
-Kad je fluid u dodiru sa stijenkom, presudan postaje i kontaktni kut $\theta$. Znak i iznos $\cos \theta$ odlučuju penje li se tekućina u tankoj kapilari ili se razina spušta.
+Kad je fluid u dodiru sa stijenkom, presudan postaje i kontaktni kut $\theta$. Predznak i iznos $\cos \theta$ odlučuju penje li se tekućina u tankoj kapilari ili se razina spušta.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Youngova jednadžba i podrijetlo kontaktnog kuta</p>
@@ -438,7 +438,7 @@ Kako je $\theta < 90^\circ$, razina raste. Pri potpunom kvašenju ($\theta=0$) u
 
 Uspravna staklena kapilara promjera $d=0{,}80\ \mathrm{mm}$ povezana je sa širokim spremnikom vode gustoće $\rho=998\ \mathrm{kg/m^3}$ i površinske napetosti $\sigma=0{,}072\ \mathrm{N/m}$. Izlaz je $H=60\ \mathrm{mm}$ iznad površine spremnika. Pri punjenju kontaktni je kut $\theta=0^\circ$, a zrak slobodno izlazi. Nakon punjenja promatra se sferna izlazna kapljica promjera $D=2{,}4\ \mathrm{mm}$, povezana s vodom bez unutarnjeg meniskusa. Kontaktna linija zadržana je na rubu izlaza; kut punjenja ne određuje oblik kapljice.
 
-Kapljicu na izlazu održava pretlak $p_M$ iznad spremnika; njegov se iznos ovdje ne traži. Okolni atmosferski tlak iznosi $p_{atm}=101325\ \mathrm{Pa}$, a $g=9{,}81\ \mathrm{m/s^2}$. Oba su stanja kvazistatička. Zanemari promjenu razine spremnika te težinu i deformaciju kapljice; njezin rast i odvajanje nisu obuhvaćeni.
+Kapljicu na izlazu održava pretlak $p_M$ iznad vode u spremniku; njegov se iznos ovdje ne traži. Okolni atmosferski tlak iznosi $p_{atm}=101325\ \mathrm{Pa}$, a $g=9{,}81\ \mathrm{m/s^2}$. Oba su stanja kvazistatička. Zanemari promjenu razine spremnika te težinu i deformaciju kapljice; njezin rast i odvajanje nisu obuhvaćeni.
 
 **Traži se**
 
@@ -610,7 +610,7 @@ $$
 h \approx 33{,}5\ \text{cm}.
 $$ {#eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-03}
 
-Za konkavni meniskus definiraj $\Delta p=p_{zrak}-p_{tekućina}$. Prema Young–Laplaceovu zakonu za kružni presjek:
+Za konkavni meniskus definiramo $\Delta p=p_{zrak}-p_{tekućina}$. Prema Young–Laplaceovu zakonu za kružni presjek:
 
 $$
 \Delta p = \frac{4\sigma\cos\theta}{d} = \frac{4 \cdot 0{,}055 \cdot 0{,}906}{60 \cdot 10^{-6}} \approx 3{,}32 \cdot 10^3\ \text{Pa} \approx 3{,}32\ \text{kPa}.

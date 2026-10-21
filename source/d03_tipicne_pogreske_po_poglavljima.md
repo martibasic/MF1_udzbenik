@@ -59,7 +59,7 @@ Miješanje apsolutnog, manometarskog i vakuumskog tlaka; pogrešni predznaci pri
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u manometru; prema dolje tlak raste, prema gore pada. Kod slojevitog punjenja zatvori bilancu i ukupne visine i tlaka. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku $\rho g\,\delta h$ i rezervu skale; kod nagnute cjevčice okomitu visinu daje $L\sin\alpha$ uvećano za spuštanje razine u posudi. Za plin dulji od nekoliko desetaka metara gustoću ostavi pod integralom. Za teretni tank zapiši $p_{M,dno}=p_{M,pl}+\rho_ugh_u+\rho_{mv}gh_v$, a debljinu vodenog sloja uzmi iz sondiranja. Za usis crpke u radu potrebni su gubitci, brzinska visina i usporedba $NPSH_a$ s proizvođačevim $NPSH_r$, oboje na osnovi apsolutnog tlaka.
+Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u manometru; prema dolje tlak raste, prema gore pada. Kod slojevitog punjenja zatvori bilancu i ukupne visine i tlaka. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku $\rho g\,\delta h$ i rezervu skale; kod nagnute cjevčice okomitu visinu daje $L\sin\alpha$ uvećano za spuštanje razine u posudi. Za stupac plina viši od nekoliko desetaka metara gustoću ostavi pod integralom. Za teretni tank zapiši $p_{M,dno}=p_{M,pl}+\rho_ugh_u+\rho_{mv}gh_v$, a debljinu vodenog sloja uzmi iz sondiranja. Za usis crpke u radu potrebni su gubitci, brzinska visina i usporedba $NPSH_a$ s proizvođačevim $NPSH_r$, oboje na osnovi apsolutnog tlaka.
 :::
 ::::
 
@@ -69,7 +69,7 @@ Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Zamjena smjera ubrzanja smjerom brzine (pri kočenju je $a<0$ iako je brzina pozitivna); linearna umjesto kvadratne ovisnosti o polumjeru pri vrtnji; zanemarivanje okomitog ubrzanja u nagibu i u efektivnoj težini, $\tan\theta=a_x/(g+a_z)$ (Z2); u potpuno punom zatvorenom spremniku razinu tlaka određuje položaj odzračnika, a ne gornji rub (P1); zaključak o smirivanju fluida iz jednog očitanja (Z5); daljnja primjena formule za puni paraboloid nakon prelijevanja ili ogoljavanja dna (Z6); prividna sila u zavoju usmjerena prema središtu zavoja umjesto od njega, pa se viša razina pojavi na pogrešnom boku tanka.
+Zamjena smjera ubrzanja smjerom brzine (pri kočenju je $a<0$ iako je brzina pozitivna); linearna umjesto kvadratne ovisnosti o polumjeru pri vrtnji; zanemarivanje okomitog ubrzanja u nagibu i u efektivnoj težini, $\tan\theta=a_x/(g+a_z)$ (Z2); u potpuno punom zatvorenom spremniku referenca tlaka uzeta na gornjem rubu umjesto na odzračniku (P1); zaključak o smirivanju fluida iz jednog očitanja (Z5); daljnja primjena formule za puni paraboloid nakon prelijevanja ili ogoljavanja dna (Z6); prividna sila u zavoju usmjerena prema središtu zavoja umjesto od njega, pa se viša razina pojavi na pogrešnom boku tanka.
 :::
 
 ::: {.mf1-error-column}
@@ -85,7 +85,7 @@ Najprije odredi $\vec g_{eff}$ i provjeri očuvanje volumena. Pri vrtnji uspored
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Smještanje hvatišta u težište plohe: kad tlak raste s dubinom, centar tlaka leži ispod težišta, $h_{CP}=h_C+I_G/(h_CA)$; uporaba te formule bez provjere referentnog tlaka (dodatni pretlak zahtijeva računanje momenta cijele raspodjele); računanje zakrivljene plohe kao ravne; određivanje predznaka $F_V$ samo iz pomoćnoga volumena; uvjet otvaranja zaklopke postavljen s težištem umjesto s centrom tlaka (Z3); primjena $h_{CP}=h_C+I_G/(Ah_C)$ u zatvorenom spremniku s nadtlakom plina; zamjena težišta i $I_G$ trokuta vrijednostima za pravokutnik (Z4); poistovjećivanje osi u središtu kružnice sa zglobom na kraju luka (Z5); pretpostavka da rezultanta na bilo kojoj zakrivljenoj plohi prolazi kroz jednu točku, što vrijedi samo za kružni luk; $\sin\theta$ umjesto $\sin^2\theta$ u dubini centra tlaka nagnute plohe.
+Smještanje hvatišta u težište plohe: kad tlak raste s dubinom, centar tlaka leži ispod težišta, $h_{CP}=h_C+I_G/(h_CA)$; uporaba te formule bez provjere referentnog tlaka (dodatni pretlak zahtijeva računanje momenta cijele raspodjele); računanje zakrivljene plohe kao ravne; određivanje predznaka $F_V$ samo iz pomoćnoga volumena; uvjet otvaranja zaklopke postavljen s težištem umjesto s centrom tlaka (Z3); zamjena težišta i $I_G$ trokuta vrijednostima za pravokutnik (Z4); poistovjećivanje osi u središtu kružnice sa zglobom na kraju luka (Z5); pretpostavka da rezultanta na bilo kojoj zakrivljenoj plohi prolazi kroz jednu točku, što vrijedi samo za kružni luk; $\sin\theta$ umjesto $\sin^2\theta$ u dubini centra tlaka nagnute plohe.
 :::
 
 ::: {.mf1-error-column}
@@ -155,7 +155,7 @@ Miješanje brzine zvuka $a$ i brzine signala u odnosu na laboratorij $v\pm a$ (Z
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Razlikuj $a$ i $v\pm a$, koristi apsolutne tlakove i apsolutnu temperaturu te režim odredi iz rubnih uvjeta: ako je $p_b/p_0$ ispod kritičnog omjera, na izlazu je $Ma=1$ i $p_e=p^*>p_b$. Pri prolasku kroz normalni udarni val očuvaj masu, količinu gibanja i ukupnu entalpiju; zaustavni tlak pritom pada. Zaustavni tlak $p_{01}$ mjeri se u mirnoj komori uz izentropski dovod, a $p_{02}$ podzvučnom sondom iza vala.
+Razlikuj $a$ i $v\pm a$, koristi apsolutne tlakove i apsolutnu temperaturu te režim odredi iz rubnih uvjeta: ako je $p_b/p_0$ ispod kritičnog omjera, na izlazu konvergentne sapnice je $Ma=1$ i $p_e=p^*>p_b$. Pri prolasku kroz normalni udarni val očuvaj masu, količinu gibanja i zaustavnu entalpiju; zaustavni tlak pritom pada. Zaustavni tlak $p_{01}$ mjeri se u mirnoj komori uz izentropski dovod, a $p_{02}$ podzvučnom sondom iza vala.
 :::
 ::::
 
@@ -171,7 +171,7 @@ Miješanje sile na fluid, sile na konstrukciju i reakcije oslonca (predznak sile
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Nacrtaj tlocrt, označi osi i tlačne sile usmjeri prema KV-u. Razlikuj $\vec F$ (fluid na konstrukciju) i $\vec R=-\vec F$ (oslonac na konstrukciju). Moment računaj iz $\vec r\times\vec F$, a dotok kroz pomičnu plohu iz relativne brzine $v-u$; u bilancama količine gibanja i energije ostaju apsolutne brzine. Tlačne i impulsne doprinose zapiši po komponentama.
+Nacrtaj tlocrt, označi osi i tlačne sile usmjeri prema KV-u. Razlikuj $\vec F$ (fluid na konstrukciju) i $\vec R$ (oslonac na konstrukciju); $\vec R=-\vec F$ vrijedi samo bez težine elementa i drugih priključnih sila. Moment računaj iz $\vec r\times\vec F$, a dotok kroz pomičnu plohu iz relativne brzine $v-u$; u bilancama količine gibanja i energije ostaju apsolutne brzine. Tlačne i impulsne doprinose zapiši po komponentama.
 :::
 ::::
 
@@ -245,13 +245,13 @@ Odaberi kontrolni volumen i tijelo na koje sila djeluje. Provjeri $\vec c=\vec u
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Zamjena hidrauličke dubine $y_h=A/T$ hidrauličkim radijusom $R_h=A/P$ ili hidrauličkim promjerom $D_h=4A/P$ u $Fr$ kanala (Z3); koeficijent kontrakcije $C_c$ (geometrija mlaza) poistovjećen s koeficijentom protoka $C_d$ ili zanemarena brzina dolaska uzvodno od ustave (Z2); izostavljanje povišenja dna ili proizvoljan izbor korijena energijske jednadžbe (Z4); primjena Bernoullijeve jednadžbe bez gubitaka kroz skok (Z5); $\alpha=1$ i $\beta=1$ bez navođenja te pretpostavke; tretiranje istog izmjerenog protoka u oba presjeka kao dviju neovisnih veličina; poistovjećivanje kapaciteta kanala sa stvarnim dotokom u bazen (Z6).
+Zamjena hidrauličke dubine $y_h=A/T$ hidrauličkim radijusom $R_h=A/P$ ili hidrauličkim promjerom $D_h=4A/P$ u $Fr$ kanala (Z3); koeficijent kontrakcije $C_c$ (geometrija mlaza) poistovjećen s koeficijentom istjecanja $C_d$ ili zanemarena brzina dolaska uzvodno od ustave (Z2); izostavljanje povišenja dna ili proizvoljan izbor korijena energijske jednadžbe (Z4); primjena Bernoullijeve jednadžbe bez gubitaka kroz skok (Z5); $\alpha=1$ i $\beta=1$ bez navođenja te pretpostavke; tretiranje istog izmjerenog protoka u oba presjeka kao dviju neovisnih veličina; poistovjećivanje kapaciteta kanala sa stvarnim dotokom u bazen (Z6).
 :::
 
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Razdvoji $A$, širinu slobodne površine $T$ i oplakani opseg $P$. Ispod ustave poveži uzvodni presjek i suženi mlaz energijom, pa tek onda očitaj $C_d$. Na pragu provjeri raspoloživu energiju, kritičnu granicu i nastavak uzvodne grane. Skok opiši bilancom količine gibanja (impulsnom funkcijom) uz hidrostatičke sile; nesigurnost propagiraj iz zajedničkog $q=Q/b$. Provjeri nadvišenje, ulazno stanje bazena, nizvodni vodostaj i kalibraciju hrapavosti.
+Razdvoji $A$, širinu slobodne površine $T$ i oplakani opseg $P$. Ispod ustave poveži uzvodni presjek i suženi mlaz energijom, pa tek onda odredi $C_d$. Na pragu provjeri raspoloživu energiju, kritičnu granicu i nastavak uzvodne grane. Skok opiši bilancom količine gibanja (impulsnom funkcijom) uz hidrostatičke sile; nesigurnost propagiraj iz zajedničkog $q=Q/b$. Provjeri nadvišenje, ulazno stanje bazena, nizvodni vodostaj i kalibraciju hrapavosti.
 :::
 ::::
 

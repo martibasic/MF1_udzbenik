@@ -88,7 +88,7 @@ $$
 F_{neto} = F_G - F_U = 833{,}9 - 452{,}5 = 381{,}4\ \text{N}
 $$ {#eq-uzgon-stabilitet-rijeseni-primjer-uzgon-na-potonulo-pumpno-kucist-03}
 
-Kućište tone i bez dodatne sile prema dolje. Da bi ga se statički pridržalo ili ravnomjerno podizalo dok je potpuno uronjeno, potrebna je sila od približno 381 N prema gore.
+Kućište tone i bez dodatne sile prema dolje. Za statičko pridržavanje ili ravnomjerno podizanje potpuno uronjenoga kućišta potrebna je sila od približno 381 N prema gore.
 
 **Provjera i tumačenje**
 
@@ -110,9 +110,9 @@ Prosječna gustoća kućišta, $m/V_{ist}\approx1889\ \text{kg/m}^3$, veća je o
 
 :::
 
-Isti rezultat vrijedi i za proizvoljan oblik tijela: neto hidrostatička sila jednaka je težini fluida koji bi ispunio istisnuti volumen. Pravac djelovanja te sile prolazi kroz centar uzgona, tj. kroz težište istisnutoga volumena. Obrazloženje je kratko: zamislimo da istisnuti volumen ispunjava isti fluid u mirovanju; na njega djeluju isti okolni tlakovi kao na tijelo, a on je u ravnoteži pod vlastitom težinom, pa rezultanta tlakova mora biti jednaka toj težini i prolaziti njezinim težištem.
+Isti rezultat vrijedi i za proizvoljan oblik tijela: neto hidrostatička sila jednaka je težini fluida koji bi ispunio istisnuti volumen. Pravac djelovanja te sile prolazi kroz centar uzgona, tj. kroz težište istisnutoga volumena. Obrazloženje je kratko: zamislimo da istisnuti volumen ispunjava isti fluid u mirovanju; na njega djeluju isti okolni tlakovi kao na tijelo, a on je u ravnoteži pod vlastitom težinom, pa rezultanta tlakova mora biti jednaka toj težini i prolaziti težištem toga volumena.
 
-Iz toga odmah slijedi i prvo pravilo stabiliteta. Kod potpuno uronjenog tijela stabilan je onaj položaj u kojem je težište tijela $G$ ispod centra uzgona $B$; ako se te dvije točke poklope, ravnoteža je neutralna, a ako je $G$ iznad $B$, mali poremećaj daje prevrtni moment. Kod plivajućeg tijela slika je drukčija jer se pri malom nagibu oblik istisnutoga volumena mijenja, pa se i centar uzgona pomiče. Tada se uvodi metacentar $M$, a znak metacentarske visine $GM$ odlučuje o početnom stabilitetu: $GM > 0$ znači povratni moment, $GM = 0$ neutralnu ravnotežu u linearnoj aproksimaciji, a $GM < 0$ nestabilan položaj.
+Iz toga odmah slijedi i prvo pravilo stabiliteta. Kod potpuno uronjenog tijela stabilan je onaj položaj u kojem je težište tijela $G$ ispod centra uzgona $B$; ako se te dvije točke poklope, ravnoteža je neutralna, a ako je $G$ iznad $B$, mali poremećaj daje prevrtni moment. Kod plivajućeg tijela slika je drukčija jer se pri malom nagibu oblik istisnutoga volumena mijenja, pa se i centar uzgona pomiče. Tada se uvodi metacentar $M$, a predznak metacentarske visine $GM$ odlučuje o početnom stabilitetu: $GM > 0$ znači povratni moment, $GM = 0$ neutralnu ravnotežu u linearnoj aproksimaciji, a $GM < 0$ nestabilan položaj.
 
 Za plivajuće tijelo ravnoteža sila u okomitom smjeru tada daje
 
@@ -541,7 +541,7 @@ $$
 m_p + m_k = 648 + 180 = 828\ \text{kg}.
 $$ {#eq-uzgon-stabilitet-cjeloviti-zadatak-plutajuca-servisna-platforma-n-06}
 
-Ravnoteža sila u okomitom smjeru dakle je zadovoljena.
+Ravnoteža sila u okomitom smjeru time je zadovoljena.
 
 Za bočni pomak centra uzgona bitan je samo vodeni dio ispod razdjelnice jer je uljni dio simetričan po širini i ne daje bočni moment. Vodene dubine lijevo i desno iznose
 

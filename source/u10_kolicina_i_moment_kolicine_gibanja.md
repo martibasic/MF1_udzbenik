@@ -156,7 +156,7 @@ $$
 F_T=\dot m\,(v_j-v_s),\qquad \dot m=\rho A_j v_j.
 $$ {#eq-potisak-mlaznog-pogona}
 
-Korisna snaga potiska jest $F_Tv_s$, dok ukupna kinetička snaga predana vodi iznosi $\dot m(v_j^2-v_s^2)/2$; njihov omjer $2v_s/(v_j+v_s)$ idealna je propulzijska korisnost.
+Korisna snaga potiska jest $F_Tv_s$, dok ukupna kinetička snaga predana vodi iznosi $\dot m(v_j^2-v_s^2)/2$; njihov omjer $2v_s/(v_j+v_s)$ idealna je propulzijska učinkovitost.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Propeler kao aktuatorski disk</p>
@@ -174,7 +174,7 @@ $$
 \end{aligned}
 $$ {#eq-aktuatorski-disk-brzina}
 
-**Rezultat.** Potisak i idealna korisnost aktuatorskog diska jesu
+**Rezultat.** Potisak i idealna učinkovitost aktuatorskog diska jesu
 
 $$
 F_T=\rho A_d\,\frac{v_A+v_j}{2}\,(v_j-v_A),\qquad
@@ -920,7 +920,7 @@ Odaberi kontrolni volumen koji prati brod i obuhvaća cijeli pogon; u njemu je t
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$\dot m\approx1845\ \text{kg/s}$; $F_T\approx25{,}8\ \text{kN}$ u smjeru plovidbe; $P_T\approx465\ \text{kW}$ od ukupno $\approx646\ \text{kW}$ predanih vodi, pa idealna propulzijska korisnost iznosi $0{,}72$; ostatak odnosi mlaz u tragu.
+$\dot m\approx1845\ \text{kg/s}$; $F_T\approx25{,}8\ \text{kN}$ u smjeru plovidbe; $P_T\approx465\ \text{kW}$ od ukupno $\approx646\ \text{kW}$ predanih vodi, pa idealna propulzijska učinkovitost iznosi $0{,}72$; ostatak odnosi mlaz u tragu.
 :::
 ::::
 
@@ -938,7 +938,7 @@ Brodski propeler promjera $D=4{,}00\ \text{m}$ napreduje kroz morsku vodu gusto�
 
 1. Odredi brzinu vode kroz disk $v_d$ i maseni protok kroz strujnu cijev.
 2. Odredi potisak $F_T$.
-3. Odredi snagu potiska $P_T=F_Tv_A$ i idealnu korisnost $\eta_i=v_A/v_d$.
+3. Odredi snagu potiska $P_T=F_Tv_A$ i idealnu učinkovitost $\eta_i=v_A/v_d$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}

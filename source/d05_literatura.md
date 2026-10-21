@@ -14,7 +14,7 @@ Moodyjev dijagram potječe iz rada [@moody1944], a implicitna veza za turbulentn
 
 ## Brodogradnja, stabilitet i modelska ispitivanja
 
-Analiza početnog stabiliteta preko metacentarske visine u poglavlju 6 nastavni je model i ne zamjenjuje obveznu provjeru intaktnog ili oštećenog stabiliteta. Za kriterije intaktnog stabiliteta mjerodavan je IMO-ov IS Code [@imo-is-code-2008], a za aktualni okvir oštećenog stabiliteta i zahtjeve konvencije SOLAS IMO-ova dokumentacija [@imo-damage-stability]. Modelska ispitivanja, analizu nesigurnosti i ekstrapolaciju treba provoditi prema odgovarajućem aktualnom postupku ITTC-a [@ittc].
+Analiza početnog stabiliteta preko metacentarske visine u poglavlju 6 nastavni je model i ne zamjenjuje obveznu provjeru stabiliteta neoštećenog ili oštećenog broda. Za kriterije stabiliteta neoštećenog broda mjerodavan je IMO-ov IS Code [@imo-is-code-2008], a za aktualni okvir oštećenog stabiliteta i zahtjeve konvencije SOLAS IMO-ova dokumentacija [@imo-damage-stability]. Modelska ispitivanja, analizu nesigurnosti i ekstrapolaciju treba provoditi prema odgovarajućem aktualnom postupku ITTC-a [@ittc].
 
 ## Numerička mehanika fluida
 

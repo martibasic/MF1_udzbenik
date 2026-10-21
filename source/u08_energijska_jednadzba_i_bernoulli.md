@@ -338,7 +338,7 @@ $$ {#eq-energijska-bilanca-rijeseni-primjer-domet-slobodnog-mlaza-iz-veliko-05}
 
 **Provjera i tumačenje**
 
-Nizak otvor daje veliku brzinu, ali kratko vrijeme leta; visok otvor daje obrnuto. Položaji $h$ i $H-h$ daju isti domet jer u izrazu stoji njihov umnožak, što potvrđuju jednaki dometi $x_1 = x_3$ za 1 m i 3 m.
+Nizak otvor daje veliku brzinu, ali kratko vrijeme leta; visok otvor upravo obrnuto. Položaji $h$ i $H-h$ daju isti domet jer u izrazu stoji njihov umnožak, što potvrđuju jednaki dometi $x_1 = x_3$ za 1 m i 3 m.
 :::
 
 ::: {#ex-u09-privremeni-sifon-za-praznjenje-servisnog-bazena-t2 .mf1-we}

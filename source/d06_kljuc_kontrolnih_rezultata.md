@@ -114,7 +114,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Iz izvoda izotermalne atmosfere slijedi $z=H\ln(p_0/p)$ s $H=RT_0/g$. Model stalne gustoće daje $z=(p_0-p)/(\rho_0g)$, kao za tekućinu. Za razlučivost upotrijebi lokalnu gustoću $\rho=p/(RT_0)$ na vrhu.
 
-**Kontrolni rezultat ili kriterij.** $H\approx8426\ \text{m}$; $z\approx1528\ \text{m}$. Stalna gustoća $\rho_0=1{,}226\ \text{kg/m}^3$ daje $z\approx1397\ \text{m}$, oko $8{,}5\,\%$ manje: gustoća s visinom pada, pa svaki paskal razlike u visini vrijedi više metara nego pri tlu. Razlučivost od $10\ \text{Pa}$ odgovara oko $1{,}0\ \text{m}$ na vrhu ($0{,}83\ \text{m}$ na bazi).
+**Kontrolni rezultat ili kriterij.** $H\approx8426\ \text{m}$; $z\approx1528\ \text{m}$. Stalna gustoća $\rho_0=1{,}226\ \text{kg/m}^3$ daje $z\approx1397\ \text{m}$, oko $8{,}5\,\%$ manje: gustoća s visinom pada, pa svaki paskal razlike tlaka vrijedi više metara visine nego pri tlu. Razlučivost od $10\ \text{Pa}$ odgovara oko $1{,}0\ \text{m}$ na vrhu ($0{,}83\ \text{m}$ na bazi).
 
 ### Z2. Razina vode iz razlike tlakova {#key-task-razina-vode-iz-razlike-tlakova .unnumbered .unlisted}
 
@@ -464,7 +464,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Odaberi kontrolni volumen koji prati brod i obuhvaća cijeli pogon; u njemu je tok stacionaran. Primijeni jednadžbu [odgovarajući izraz](u10_kolicina_i_moment_kolicine_gibanja.qmd#eq-potisak-mlaznog-pogona) s brzinama mjerenima u sustavu broda. Kinetička snaga predana vodi jest $\dot m(v_j^2-v_s^2)/2$; omjer $P_T$ i te snage jest $2v_s/(v_j+v_s)$.
 
-**Kontrolni rezultat ili kriterij.** $\dot m\approx1845\ \text{kg/s}$; $F_T\approx25{,}8\ \text{kN}$ u smjeru plovidbe; $P_T\approx465\ \text{kW}$ od ukupno $\approx646\ \text{kW}$ predanih vodi, pa idealna propulzijska korisnost iznosi $0{,}72$; ostatak odnosi mlaz u tragu.
+**Kontrolni rezultat ili kriterij.** $\dot m\approx1845\ \text{kg/s}$; $F_T\approx25{,}8\ \text{kN}$ u smjeru plovidbe; $P_T\approx465\ \text{kW}$ od ukupno $\approx646\ \text{kW}$ predanih vodi, pa idealna propulzijska učinkovitost iznosi $0{,}72$; ostatak odnosi mlaz u tragu.
 
 ### Z2. Propeler kao aktuatorski disk {#key-task-propeler-aktuatorski-disk .unnumbered .unlisted}
 

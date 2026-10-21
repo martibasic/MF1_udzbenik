@@ -6706,7 +6706,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$H\\approx8426\\ \\text{m}$; $z\\approx1528\\ \\text{m}$. Stalna gustoća $\\rho_0=1{,}226\\ \\text{kg/m}^3$ daje $z\\approx1397\\ \\text{m}$, oko $8{,}5\\,\\%$ manje: gustoća s visinom pada, pa svaki paskal razlike u visini vrijedi više metara nego pri tlu. Razlučivost od $10\\ \\text{Pa}$ odgovara oko $1{,}0\\ \\text{m}$ na vrhu ($0{,}83\\ \\text{m}$ na bazi).",
+        "markdown": "$H\\approx8426\\ \\text{m}$; $z\\approx1528\\ \\text{m}$. Stalna gustoća $\\rho_0=1{,}226\\ \\text{kg/m}^3$ daje $z\\approx1397\\ \\text{m}$, oko $8{,}5\\,\\%$ manje: gustoća s visinom pada, pa svaki paskal razlike tlaka vrijedi više metara visine nego pri tlu. Razlučivost od $10\\ \\text{Pa}$ odgovara oko $1{,}0\\ \\text{m}$ na vrhu ($0{,}83\\ \\text{m}$ na bazi).",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
@@ -21240,7 +21240,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$\\dot m\\approx1845\\ \\text{kg/s}$; $F_T\\approx25{,}8\\ \\text{kN}$ u smjeru plovidbe; $P_T\\approx465\\ \\text{kW}$ od ukupno $\\approx646\\ \\text{kW}$ predanih vodi, pa idealna propulzijska korisnost iznosi $0{,}72$; ostatak odnosi mlaz u tragu.",
+        "markdown": "$\\dot m\\approx1845\\ \\text{kg/s}$; $F_T\\approx25{,}8\\ \\text{kN}$ u smjeru plovidbe; $P_T\\approx465\\ \\text{kW}$ od ukupno $\\approx646\\ \\text{kW}$ predanih vodi, pa idealna propulzijska učinkovitost iznosi $0{,}72$; ostatak odnosi mlaz u tragu.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u10_kolicina_i_moment_kolicine_gibanja.md",
@@ -21434,8 +21434,8 @@
         "anchor": "#task-propeler-aktuatorski-disk"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Brodski propeler promjera $D=4{,}00\\ \\text{m}$ napreduje kroz morsku vodu gustoće $\\rho_{mv}=1025\\ \\text{kg/m}^3$ brzinom napredovanja $v_A=6{,}00\\ \\text{m/s}$. Daleko iza propelera, u sustavu propelera, voda u mlazu ima brzinu $v_j=8{,}00\\ \\text{m/s}$. Propeler modeliraj kao aktuatorski disk površine jednake površini kruga promjera $D$, bez rotacije mlaza i bez gubitaka. **Traži se** 1. Odredi brzinu vode kroz disk $v_d$ i maseni protok kroz strujnu cijev. 2. Odredi potisak $F_T$. 3. Odredi snagu potiska $P_T=F_Tv_A$ i idealnu korisnost $\\eta_i=v_A/v_d$.",
-        "sha256": "366cb810a09c561d2455a7a3212e94e93a3dfab14143ecbb500d34a90dd9711a",
+        "markdown": "**Tekst zadatka** Brodski propeler promjera $D=4{,}00\\ \\text{m}$ napreduje kroz morsku vodu gustoće $\\rho_{mv}=1025\\ \\text{kg/m}^3$ brzinom napredovanja $v_A=6{,}00\\ \\text{m/s}$. Daleko iza propelera, u sustavu propelera, voda u mlazu ima brzinu $v_j=8{,}00\\ \\text{m/s}$. Propeler modeliraj kao aktuatorski disk površine jednake površini kruga promjera $D$, bez rotacije mlaza i bez gubitaka. **Traži se** 1. Odredi brzinu vode kroz disk $v_d$ i maseni protok kroz strujnu cijev. 2. Odredi potisak $F_T$. 3. Odredi snagu potiska $P_T=F_Tv_A$ i idealnu učinkovitost $\\eta_i=v_A/v_d$.",
+        "sha256": "a59ccc727dd78d9013e23cf39d160dfb4ebd94c785a2899d1b9c5ff01cf7f28a",
         "authoritative": true
       },
       "input_data": {
@@ -21507,7 +21507,7 @@
             }
           },
           {
-            "text": "Odredi snagu potiska $P_T=F_Tv_A$ i idealnu korisnost $\\eta_i=v_A/v_d$.",
+            "text": "Odredi snagu potiska $P_T=F_Tv_A$ i idealnu učinkovitost $\\eta_i=v_A/v_d$.",
             "provenance": {
               "kind": "task_statement",
               "line": 931
@@ -26037,8 +26037,8 @@
         "anchor": "#task-poiseuille-inverzni"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Sintetički nastavni podatci su $Q=0{,}300\\pm0{,}003\\ \\text{mL/min}$, $\\Delta p=p_1-p_2=652\\pm5\\ \\text{Pa}$, $L=0{,}200\\pm0{,}001\\ \\text{m}$ i $D=0{,}500\\pm0{,}005\\ \\text{mm}$. Znakovi $\\pm$ označuju neovisne standardne nesigurnosti; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$ jer je $u$ u ovom poglavlju brzina ploče. Newtonski fluid ima gustoću $\\rho=998\\ \\text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini. U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje uz stijenku, a ulazne učinke smatraj ograničenima na dio ispred mjernog razmaka. **Traži se** 1. Obrnutim Poiseuilleovim računom procijeni viskoznost i Reynoldsov broj te utvrdi koji mjerni podatak najviše pridonosi nesigurnosti. 2. Procijeni $s(\\mu)$ linearnom propagacijom nesigurnosti uz korijen zbroja kvadrata doprinosa (RSS) i posebno pokaži doprinos promjera.",
-        "sha256": "0b3f7b11149e27f632eba05541c17c93f32451eb25b75efcb9d5cf60b0f93889",
+        "markdown": "**Tekst zadatka** Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Sintetički nastavni podatci su $Q=0{,}300\\pm0{,}003\\ \\text{mL/min}$, $\\Delta p=p_1-p_2=652\\pm5\\ \\text{Pa}$, $L=0{,}200\\pm0{,}001\\ \\text{m}$ i $D=0{,}500\\pm0{,}005\\ \\text{mm}$. Znakovi $\\pm$ označuju neovisne standardne nesigurnosti; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$ jer u ovom poglavlju $u$ označuje brzinu ploče. Newtonski fluid ima gustoću $\\rho=998\\ \\text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini. U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje uz stijenku, a ulazne učinke smatraj ograničenima na dio ispred mjernog razmaka. **Traži se** 1. Obrnutim Poiseuilleovim računom procijeni viskoznost i Reynoldsov broj te utvrdi koji mjerni podatak najviše pridonosi nesigurnosti. 2. Procijeni $s(\\mu)$ linearnom propagacijom nesigurnosti uz korijen zbroja kvadrata doprinosa (RSS) i posebno pokaži doprinos promjera.",
+        "sha256": "2563e623599b1ead69412df4e50b0e9bb390d56acf8ac07691c3139192d0977e",
         "authoritative": true
       },
       "input_data": {
