@@ -222,7 +222,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "f59f23830b633272911205007c0e95129f717f91b6541c2daecb23fd0d725eb7",
+      "source_sha256": "65b2506ab11a7c073036ac2af67ca0f14bab8c6cbff865855c4d6be26c4681c6",
       "sections": [
         {
           "id": "viskoznost",
@@ -355,7 +355,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "1e561578d05fc77993f4ea2b9988bff317ff47686f663a0d2814f521f1565915",
+      "source_sha256": "e3ea7a68c4da88594531a93173354cff9980892ae38f348351dd5b4015f5359e",
       "sections": [
         {
           "id": "diferencijalna-jednadžba-hidrostatike",
@@ -1535,7 +1535,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "21868b4acca5e01c8a91269f804d2802d84aefcde2a855e42daf6ca69c78f885",
+      "source_sha256": "755e92faa6f580d10ed667f7c266d391baed4076c5fd717f39636e9145aa9705",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",

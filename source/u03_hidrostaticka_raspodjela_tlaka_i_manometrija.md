@@ -480,6 +480,8 @@ Bočni balastni tank tankera s dvostrukim trupom visok je $H_{tk} = 5{,}0\ \text
 
 **Rješenje**
 
+### 1. Tlak mora izvana {.mf1-step .unnumbered .unlisted}
+
 Manometarski tlak mora na dnu tanka (dubina od vodne linije $T$) i na ploči $P$ (dubina $T-z_P$):
 
 $$
@@ -489,7 +491,7 @@ p_{M,van,P} &= \rho_{mv} g (T - z_P) = 1025 \cdot 9{,}81 \cdot 6{,}5 = 65{,}36\ 
 \end{aligned}
 $$ {#eq-hidrostatika-rijeseni-primjer-balastni-tank-broda-tlak-iznutr-01}
 
-### 1. Stanje A – tank pun balasta {.mf1-step .unnumbered .unlisted}
+### 2. Stanje A – tank pun balasta {.mf1-step .unnumbered .unlisted}
 
 Unutarnji manometarski tlak na dnu (dubina $H_{tk}$) i na ploči $P$ (dubina $H_{tk}-z_P$):
 
@@ -506,7 +508,7 @@ $$
 \Delta p_{dno}^{A} = 85{,}47 - 50{,}28 = 35{,}19\ \text{kPa}, \qquad \Delta p_{P}^{A} = 65{,}36 - 30{,}17 = 35{,}19\ \text{kPa}.
 $$ {#eq-hidrostatika-rijeseni-primjer-balastni-tank-broda-tlak-iznutr-03}
 
-### 2. Stanje B – tank prazan {.mf1-step .unnumbered .unlisted}
+### 3. Stanje B – tank prazan {.mf1-step .unnumbered .unlisted}
 
 Unutarnji tlak jednak je atmosferskom, pa je manometarski tlak jednak nuli i cijeli vanjski tlak opterećuje oplatu:
 
@@ -514,7 +516,7 @@ $$
 \Delta p_{dno}^{B} = p_{M,van,dno} - 0 = 85{,}47\ \text{kPa}, \qquad \Delta p_{P}^{B} = 65{,}36\ \text{kPa}.
 $$ {#eq-hidrostatika-rijeseni-primjer-balastni-tank-broda-tlak-iznutr-04}
 
-### 3. Stanje C – razina iz sondiranja {.mf1-step .unnumbered .unlisted}
+### 4. Stanje C – razina iz sondiranja {.mf1-step .unnumbered .unlisted}
 
 Sonda pokazuje $h_s = 3{,}0\ \text{m}$, pa je ulaž, udaljenost od vrha tanka do površine, $H_{tk} - h_s = 2{,}0\ \text{m}$. Neto tlak na dno iznosi
 

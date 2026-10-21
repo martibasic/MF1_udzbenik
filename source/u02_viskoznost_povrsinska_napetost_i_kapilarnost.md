@@ -431,7 +431,7 @@ $$ {#eq-reologija-rijeseni-primjer-kapilarni-uspon-etanola-u-stakl-01}
 Kako je $\theta < 90^\circ$, razina raste. Pri potpunom kvašenju ($\theta=0$) uspon bi bio $11{,}4\ \mathrm{mm}$; dobiveni $10{,}8\ \mathrm{mm}$ manji je upravo za faktor $\cos18^\circ\approx0{,}951$.
 :::
 
-::: {#ex-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom-t3 .mf1-ch}
+::: {#ex-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom-t3 .mf1-we}
 <p class="mf1-box-label">Kapilarni mikrodozator s izlaznom kapljicom&nbsp;<span class="mf1-level">T2</span></p>
 
 **Tekst zadatka**
@@ -582,7 +582,7 @@ $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-11}
 
 **Tekst zadatka**
 
-Uspravni kružni mikrokanal dijagnostičkog laboratorija na čipu (engl. *lab-on-chip*) promjera $d = 60\ \mu\text{m}$ puni se razrijeđenim uzorkom krvi gustoće $\rho = 1010\ \text{kg/m}^3$ i površinske napetosti $\sigma = 0{,}055\ \text{N/m}$. Obrađena površina PDMS-a ima kontaktni kut $\theta = 25^\circ$; za usporedbu razmotri hidrofobni premaz s kutom $\theta = 110^\circ$. Kut je svojstvo zadane površine, a ne univerzalna vrijednost za PDMS. Promatraj statičku ravnotežu jednofazne tekućine uz stalan kut duž stijenke, bez kinetike punjenja, histereze i promjene površinske obrade; viskoznost ne ulazi u ravnotežni račun, pa nenewtonsko ponašanje krvi ovdje nije bitno.
+Uspravni kružni mikrokanal dijagnostičkog laboratorija na čipu (engl. *lab-on-chip*) promjera $d = 60\ \mu\text{m}$ puni se razrijeđenim uzorkom krvi gustoće $\rho = 1010\ \text{kg/m}^3$ i površinske napetosti $\sigma = 0{,}055\ \text{N/m}$. Obrađena površina PDMS-a (polidimetilsiloksana) ima kontaktni kut $\theta = 25^\circ$; za usporedbu razmotri hidrofobni premaz s kutom $\theta = 110^\circ$. Kut je svojstvo zadane površine, a ne univerzalna vrijednost za PDMS. Promatraj statičku ravnotežu jednofazne tekućine uz stalan kut duž stijenke, bez kinetike punjenja, histereze i promjene površinske obrade; viskoznost ne ulazi u ravnotežni račun, pa nenewtonsko ponašanje krvi ovdje nije bitno.
 
 **Traži se**
 

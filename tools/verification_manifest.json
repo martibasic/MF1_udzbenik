@@ -6585,7 +6585,7 @@
       "level": "T1",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 627,
+        "line": 629,
         "anchor": "#task-visina-iz-barometarskog-ocitanja"
       },
       "statement": {
@@ -6673,7 +6673,7 @@
             "text": "Zrak smatraj izotermalnim idealnim plinom s $T_0 = 288\\ \\text{K}$ i $R = 287\\ \\text{J/(kg K)}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 627
+              "line": 629
             }
           }
         ],
@@ -6683,21 +6683,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           }
         ],
@@ -6710,7 +6710,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 647
+          "line": 649
         }
       },
       "tolerance": {
@@ -6946,7 +6946,7 @@
       "level": "T1",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 657,
+        "line": 659,
         "anchor": "#task-razina-vode-iz-razlike-tlakova"
       },
       "statement": {
@@ -6997,21 +6997,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           }
         ],
@@ -7024,7 +7024,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 678
+          "line": 680
         }
       },
       "tolerance": {
@@ -7135,7 +7135,7 @@
       "level": "T2",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 688,
+        "line": 690,
         "anchor": "#task-nagnuti-manometar-ventilacijski-kanal"
       },
       "statement": {
@@ -7221,14 +7221,14 @@
             "text": "Gustoću zraka zanemari.",
             "provenance": {
               "kind": "task_statement",
-              "line": 688
+              "line": 690
             }
           },
           {
             "text": "Odredi pretlak u kanalu uz pretpostavku da se razina ulja u posudi ne mijenja.",
             "provenance": {
               "kind": "task_statement",
-              "line": 688
+              "line": 690
             }
           }
         ],
@@ -7238,21 +7238,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           }
         ],
@@ -7265,7 +7265,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 708
+          "line": 710
         }
       },
       "tolerance": {
@@ -7590,7 +7590,7 @@
       "level": "T2",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 718,
+        "line": 720,
         "anchor": "#task-debljina-sloja-ulja-iz-tlaka"
       },
       "statement": {
@@ -7665,21 +7665,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           }
         ],
@@ -7692,7 +7692,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 737
+          "line": 739
         }
       },
       "tolerance": {
@@ -7928,7 +7928,7 @@
       "level": "T3",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 747,
+        "line": 749,
         "anchor": "#task-izbor-manometra-za-podtlak"
       },
       "statement": {
@@ -8053,21 +8053,21 @@
             "text": "Lokalni atmosferski tlak iznosi $p_{atm} = 98{,}6\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 747
+              "line": 749
             }
           },
           {
             "text": "Gustoće i $g$ u ovom se proračunu smatraju točnima.",
             "provenance": {
               "kind": "task_statement",
-              "line": 747
+              "line": 749
             }
           },
           {
             "text": "Kreni od atmosferskog tlaka i uspona kroz manometarsku tekućinu prema strani podtlaka.",
             "provenance": {
               "kind": "task_hint",
-              "line": 764
+              "line": 766
             }
           }
         ],
@@ -8077,21 +8077,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           }
         ],
@@ -8104,7 +8104,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 770
+          "line": 772
         }
       },
       "tolerance": {
@@ -8354,7 +8354,7 @@
       "level": "T4",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 778,
+        "line": 780,
         "anchor": "#task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor"
       },
       "statement": {
@@ -8498,21 +8498,21 @@
             "text": "Uzmi $\\rho_v = 998\\ \\text{kg/m}^3$ i $p_{atm} = 100{,}9\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 778
+              "line": 780
             }
           },
           {
             "text": "Za izbor apsolutnoga pretvornika tlaka uzmi tolerancije $\\Delta h\\pm2\\ \\text{mm}$, $h_1\\pm5\\ \\text{mm}$, $h_2\\pm5\\ \\text{mm}$ i $p_{atm}\\pm0{,}4\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 778
+              "line": 780
             }
           },
           {
             "text": "Za konzervativnu gornju granicu istodobno uzmi najveće $p_{atm}$, $\\Delta h$ i $h_2$, a najmanje $h_1$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 795
+              "line": 797
             }
           }
         ],
@@ -8522,21 +8522,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 619
+              "line": 621
             }
           }
         ],
@@ -8549,7 +8549,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 801
+          "line": 803
         }
       },
       "tolerance": {
