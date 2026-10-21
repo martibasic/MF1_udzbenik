@@ -24,7 +24,7 @@ gdje je $\vec v$ vektor brzine fluida, a indeksi ul i iz označuju ulazni i izla
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Za stacionarni tok rezultantna vanjska sila na fluid u nepomičnom kontrolnom volumenu jednaka je razlici izlaznog i ulaznog toka količine gibanja. Promjena iznosa ili smjera brzine zato zahtijeva djelovanje sila. Ako fluid skrene za $90°$ u koljenu, sile tlaka i stijenke mijenjaju smjer njegove količine gibanja. Prema trećem Newtonovu zakonu fluid na stijenku djeluje silom jednakog iznosa i suprotnog smjera od sile stijenke na fluid. To opterećenje mora preuzeti konstrukcija.
+Za stacionarni tok rezultantna vanjska sila na fluid u nepomičnom kontrolnom volumenu jednaka je razlici izlaznog i ulaznog toka količine gibanja. Promjena iznosa ili smjera brzine zato zahtijeva djelovanje sila. Ako fluid skrene za $90^\circ$ u koljenu, sile tlaka i stijenke mijenjaju smjer njegove količine gibanja. Prema trećem Newtonovu zakonu fluid na stijenku djeluje silom jednakog iznosa i suprotnog smjera od sile stijenke na fluid. To opterećenje mora preuzeti konstrukcija.
 :::
 
 Pritom se zbroj sila ne smije svesti samo na reakciju stijenke. U tipičnom cijevnom elementu treba odvojeno prepoznati:
@@ -68,7 +68,7 @@ $$ {#eq-momentum-matematicki-izvod-koeficijent-kolicine-gibanja-i-02}
 
 Za **laminarni parabolični profil** $v_{lok}(r)=v_{max}(1-(r/R)^2)$ analitički je $\beta=4/3\approx1{,}33$. Idealizirani razvijeni turbulentni profil s eksponentom $1/7$ daje $\beta\approx1{,}02{-}1{,}03$. Uporaba $\beta\approx1$ odluka je o modelu profila, a ne univerzalno pravilo [@white2011]; u primjeru [-@ex-u11-servisno-koljeno-na-sidrenom-nosacu-t2] brojčano je pokazano koliko ta odluka mijenja silu.
 
-Ovaj koeficijent analogan je **Coriolisovu koeficijentu $\alpha$**, koji u energijskoj bilanci korigira kinetičku energiju zbog nejednolikog profila: $\alpha$ stoji uz $v^2/(2g)$, a $\beta$ uz $\dot m v$. Za nenegativan jednosmjerni profil vrijedi $\alpha\ge\beta^{3/2}$, pa su oba veća od jedan ako profil nije jednolik. Za laminarni parabolični profil analitički je $\alpha=2$ i $\beta=4/3$. Pri povratnom toku ili drukčije definiranih presjeka te se nejednakosti ne smiju primijeniti bez ponovne integracije.
+Ovaj koeficijent analogan je **Coriolisovu koeficijentu $\alpha$**, koji u energijskoj bilanci korigira kinetičku energiju zbog nejednolikog profila: $\alpha$ stoji uz $v^2/(2g)$, a $\beta$ uz $\dot m v$. Za nenegativan jednosmjerni profil vrijedi $\alpha\ge\beta^{3/2}$, pa su oba veća od jedan ako profil nije jednolik. Za laminarni parabolični profil analitički je $\alpha=2$ i $\beta=4/3$. Pri povratnom toku ili drukčije definiranim presjecima te se nejednakosti ne smiju primijeniti bez ponovne integracije.
 :::
 
 No taj oblik nije dovoljan dok se vanjske sile ne rastave na stvarne doprinose. Za tipičan cijevni element vrijedi
@@ -92,7 +92,7 @@ Tlačni članovi otpadaju tek kad su relevantni presjeci otvoreni atmosferi ili 
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Koljeno rashladnog voda i njegov nosač.** Ručni račun obuhvaća cijelo koljeno jednim kontrolnim volumenom, a CFD postavlja istu bilancu za svaku ćeliju, pa daje i raspodjelu tlaka unutar zavoja. Silu fluida na koljeno CFD dobiva integracijom tlaka i viskoznih naprezanja po unutarnjoj stijenci. Neovisno je provjerimo bilancom kontrolnog volumena: uključimo tokove količine gibanja, tlakove na otvorima, težinu i, pri promjenjivom toku, akumulaciju. Ručni @ex-u11-servisno-koljeno-na-sidrenom-nosacu-t2 polazi od zadanih tlakova i srednjih brzina. Za usporedbu s CFD-om uskladi presjeke i korekcije nejednolikih profila. Usporedba oštrog i postupnijeg koljena pri istom dotoku pokazuje da manji gubitak ne jamči jednako povoljno opterećenje nosača.
+**Koljeno rashladnog voda i njegov nosač.** Ručni račun obuhvaća cijelo koljeno jednim kontrolnim volumenom, a CFD postavlja istu bilancu za svaku ćeliju, pa daje i raspodjelu tlaka unutar zavoja. Silu fluida na koljeno CFD dobiva integracijom tlaka i viskoznih naprezanja po unutarnjoj stijenci. Neovisno je provjerimo bilancom kontrolnog volumena: uključimo tokove količine gibanja, tlakove na otvorima, težinu i, pri promjenjivom toku, akumulaciju. Ručni @ex-u11-servisno-koljeno-na-sidrenom-nosacu-t2 polazi od zadanih tlakova i srednjih brzina. Za usporedbu s CFD-om uskladi presjeke i korekcije nejednolikih profila. Usporedba oštrog i blažeg koljena pri istom dotoku pokazuje da manji gubitak ne jamči jednako povoljno opterećenje nosača.
 
 []{#ista-bilanca-za-mnogo-malih-dijelova-fluida}
 
@@ -115,7 +115,7 @@ Suprotni predznaci sile stijenke na fluid i sile fluida na stijenku nisu neslaga
 </div>
 
 <div class="mf1-interaktivno-pitanja">
-**Pitanja za samostalno istraživanje:** (a) Koje su vrijednosti $F_x$ i $F_y$ pri $\theta = 90°$ i kako mora biti orijentiran nosač? (b) Zašto granični slučaj $\theta \to 180°$ daje najveću silu pri istom $Q$ i $D$? (c) Kada u impulsnoj funkciji $I=pA+\dot m v$ prevladava impulsni dio $\dot m v$, a kada tlačni $pA$?
+**Pitanja za samostalno istraživanje:** (a) Koje su vrijednosti $F_x$ i $F_y$ pri $\theta = 90^\circ$ i kako mora biti orijentiran nosač? (b) Zašto granični slučaj $\theta \to 180^\circ$ daje najveću silu pri istom $Q$ i $D$? (c) Kada u impulsnoj funkciji $I=pA+\dot m v$ prevladava impulsni dio $\dot m v$, a kada tlačni $pA$?
 </div>
 :::
 
@@ -124,7 +124,7 @@ Suprotni predznaci sile stijenke na fluid i sile fluida na stijenku nisu neslaga
 
 Radni zapis $\sum\vec F=\dot m(\vec v_2-\vec v_1)$ vrijedi uz četiri prešutne pretpostavke koje treba provjeriti prije svakog računa:
 
-- **jednoliki profili na presjecima** ($\beta=1$): za laminarni ulaz impulsni član raste za trećinu, pa presjeke treba birati tamo gdje je profil poznat;
+- **jednoliki profili na presjecima** ($\beta=1$): za laminarni ulaz impulsni član raste za trećinu, pa presjeke treba birati ondje gdje je profil poznat;
 - **manometarski tlak** smije zamijeniti apsolutni samo ako atmosfera djeluje po cijeloj vanjskoj plohi elementa; za uronjene ili zatvorene sustave rezultanta okolnog tlaka ne poništava se sama;
 - **viskozna naprezanja na otvorima** zanemarena su, što vrijedi kad su presjeci okomiti na tok i daleko od zavoja; trenje na stijenci unutar KV nije zanemareno jer je dio $\vec R_{st\to f}$;
 - **slobodni mlaz bez gravitacije** između sapnice i ploče zadržava brzinu i presjek; za duge ili spore mlazove to prestaje vrijediti.
@@ -197,7 +197,7 @@ $$ {#eq-moment-kolicine-gibanja}
 
 Lijeva strana sadrži momente svih vanjskih sila na fluid oko $O$: tlačnih sila na presjecima, težine i momenta kojim stijenka, krak ili vratilo djeluje na fluid. Desna strana jest neto tok momenta količine gibanja kroz granicu.
 
-- **Izbor pola.** Pol se bira na osi vrtnje; tada osni dotok i tlačne sile na osno simetričnim presjecima nemaju moment oko osi, pa ostaju samo moment stijenke i doprinos tangencijalne komponente brzine na izlazu.
+- **Izbor pola.** Pol se bira na osi vrtnje; tada osni dotok i tlačne sile na osnosimetričnim presjecima nemaju moment oko osi, pa ostaju samo moment stijenke i doprinos tangencijalne komponente brzine na izlazu.
 - **Predznak.** Pozitivan smjer momenta jest smjer pozitivne osi $z$ (u tlocrtu suprotno od kazaljke na satu). Moment fluida na konstrukciju suprotan je momentu stijenke na fluid.
 - **Rotor.** Za presjeke na radijusima $r_1$ i $r_2$ s tangencijalnim komponentama apsolutne brzine $v_{t1}$, $v_{t2}$ osna komponenta momenta glasi $M_z=\dot m(r_2v_{t2}-r_1v_{t1})$; pomnožena kutnom brzinom daje snagu. To je Eulerova turbinska jednadžba, koja se izvodi u []{.mf1-chapter-ref target="u14"}.
 :::
@@ -885,7 +885,7 @@ Jednadžba količine gibanja sadrži oba doprinosa — tok količine gibanja i s
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Smije, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne zahtijeva pretpostavku idealnog (bezgubitnog) strujanja. Razlika između idealnog i realnog slučaja ulazi kroz različite tlakove na ulaznom i izlaznom presjeku — gubitci energije smanjuju tlak na izlazu, što treba uračunati proširenom Bernoullijevom jednadžbom ili izravnim mjerenjem.
+Smije, jer zakon količine gibanja proizlazi iz Newtonovih zakona i ne zahtijeva pretpostavku idealnog strujanja bez gubitaka. Razlika između idealnog i realnog slučaja ulazi kroz različite tlakove na ulaznom i izlaznom presjeku — gubitci energije smanjuju tlak na izlazu, što treba uračunati proširenom Bernoullijevom jednadžbom ili izravnim mjerenjem.
 :::
 :::
 

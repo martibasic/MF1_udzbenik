@@ -8953,8 +8953,8 @@
         "anchor": "#task-spremnik-na-dizalici-dva-ubrzanja"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Otvoreni pravokutni spremnik duljine $L = 2{,}00\\ \\text{m}$ i visine $H = 1{,}20\\ \\text{m}$ s vodom gustoće $\\rho_v=1000\\ \\text{kg/m}^3$ do mirne razine $h_0 = 0{,}80\\ \\text{m}$ visi na lučkoj dizalici. Kolica dizalice ubrzavaju vodoravno ubrzanjem $a_x = 1{,}5\\ \\text{m/s}^2$ u smjeru duljine spremnika, a vitlo istodobno ubrzava teret prema gore ubrzanjem $a_z = 1{,}2\\ \\text{m/s}^2$. Spremnik ne njiše, a voda u odnosu na njega miruje. **Traži se** 1. Odredi nagib slobodne površine, razliku razina na krajevima spremnika i dubine uz stražnju i prednju stijenku. 2. Odredi manometarski tlak na dnu uz stražnju stijenku te usporedi rezultate s računom koji okomito ubrzanje zanemaruje. 3. Ponovi račun nagiba, dubina i tlaka za trenutak kad vitlo, još dižući teret, usporava istim iznosom ubrzanja; provjeri prelijevanje u oba stanja.",
-        "sha256": "c6bac46e3c2e05cb173115b0c8ff53641ccb7966a90ee56ce57b98c6d245888a",
+        "markdown": "**Tekst zadatka** Otvoreni pravokutni spremnik duljine $L = 2{,}00\\ \\text{m}$ i visine $H = 1{,}20\\ \\text{m}$ s vodom gustoće $\\rho_v=1000\\ \\text{kg/m}^3$ do mirne razine $h_0 = 0{,}80\\ \\text{m}$ visi na lučkoj dizalici. Kolica dizalice ubrzavaju vodoravno ubrzanjem $a_x = 1{,}5\\ \\text{m/s}^2$ u smjeru duljine spremnika, a vitlo istodobno ubrzava teret prema gore ubrzanjem $a_z = 1{,}2\\ \\text{m/s}^2$. Spremnik se ne njiše, a voda u odnosu na njega miruje. **Traži se** 1. Odredi nagib slobodne površine, razliku razina na krajevima spremnika i dubine uz stražnju i prednju stijenku. 2. Odredi manometarski tlak na dnu uz stražnju stijenku te usporedi rezultate s računom koji okomito ubrzanje zanemaruje. 3. Ponovi račun nagiba, dubina i tlaka za trenutak kad vitlo, još dižući teret, usporava istim iznosom ubrzanja; provjeri prelijevanje u oba stanja.",
+        "sha256": "ed0af4262912318eb431869bde5ec657df0faf0db1b27acf3e730a45f70aeb0b",
         "authoritative": true
       },
       "input_data": {
@@ -13149,7 +13149,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$V_{mv}\\approx11\\,707\\ \\text{m}^3$, $V_{rij}\\approx12\\,024\\ \\text{m}^3$; gaz u rijeci veći je za $\\Delta T\\approx0{,}132\\ \\text{m}$. Za isti gaz treba iskrcati $\\Delta(1-\\rho_{rij}/\\rho_{mv})\\approx316\\ \\text{t}$. Masa po centimetru gaza $\\rho A_{vl}\\cdot0{,}01\\ \\text{m}$ iznosi $24{,}6\\ \\text{t/cm}$ u moru i $24{,}0\\ \\text{t/cm}$ u rijeci jer je lakšoj vodi za istu masu potreban veći volumen.",
+        "markdown": "$V_{mv}\\approx11\\,707\\ \\text{m}^3$, $V_{rij}\\approx12\\,024\\ \\text{m}^3$; gaz u rijeci veći je za $\\Delta T\\approx0{,}132\\ \\text{m}$. Za isti gaz treba iskrcati $\\Delta(1-\\rho_{rij}/\\rho_{mv})\\approx316\\ \\text{t}$. Masa po centimetru gaza $\\rho A_{vl}\\cdot0{,}01\\ \\text{m}$ iznosi $24{,}6\\ \\text{t/cm}$ u moru i $24{,}0\\ \\text{t/cm}$ u rijeci jer je u lakšoj vodi za istu masu potreban veći istisnuti volumen.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u06_uzgon_plivanje_i_stabilnost.md",
@@ -23254,8 +23254,8 @@
         "anchor": "#task-ventilacijski-kanal-hidraulicki-promjer"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $a=0{,}400\\ \\text{m}$ i visine $b=0{,}200\\ \\text{m}$. Zrak kinematičke viskoznosti $\\nu=1{,}50\\cdot10^{-5}\\ \\text{m}^2/\\text{s}$ struji volumenskim protokom $Q=0{,}640\\ \\text{m}^3/\\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ oplakani opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno. **Traži se** 1. Odredi srednju brzinu i hidraulički promjer. 2. Odredi Reynoldsov broj i prosudi režim. 3. Koliki bi $Re$ ispao da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\\lambda(Re,k_s/D)$.",
-        "sha256": "e8c9c5797264db2e6e25315f3e39bedd886780ad015ef700a216d404f4b0aeb5",
+        "markdown": "**Tekst zadatka** Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $a=0{,}400\\ \\text{m}$ i visine $b=0{,}200\\ \\text{m}$. Zrak kinematičke viskoznosti $\\nu=1{,}50\\cdot10^{-5}\\ \\text{m}^2/\\text{s}$ struji volumenskim protokom $Q=0{,}640\\ \\text{m}^3/\\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ omočeni opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno. **Traži se** 1. Odredi srednju brzinu i hidraulički promjer. 2. Odredi Reynoldsov broj i prosudi režim. 3. Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\\lambda(Re,k_s/D)$.",
+        "sha256": "84faea382fb1666a50a8f31e419ad6e3be5ec90e89b400a746d1a1eec041cc75",
         "authoritative": true
       },
       "input_data": {
@@ -23322,7 +23322,7 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Koliki bi $Re$ ispao da se umjesto $D_h$ uzme dulja stranica $a$?",
+            "text": "Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $a$?",
             "provenance": {
               "kind": "task_statement",
               "line": 760
@@ -23519,8 +23519,8 @@
         "anchor": "#task-dimenzije-manningove-jednadzbe"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target=\"u15\"} rabi se empirijska Manningova jednadžba $v=\\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (površina presjeka toka kroz oplakani opseg), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\\ \\text{m}$, dubinu vode $y=0{,}80\\ \\text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$. **Traži se** 1. Provjeri dimenzijsku homogenost jednadžbe i odredi dimenziju te SI jedinicu koeficijenta $n$. 2. Odredi hidraulički radijus, srednju brzinu i protok. 3. Projektant zadrži istu brojčanu vrijednost $n$, ali $R_h$ uvrsti u stopama ($1\\ \\text{m}=3{,}2808\\ \\text{ft}$) očekujući $v$ u ft/s. Odredi faktor kojim treba pomnožiti desnu stranu da jednadžba ostane valjana i koliku bi brzinu dobio bez njega.",
-        "sha256": "f8f32ca3cfc410245fc05cb5d4a1e5d81249545dd5ab694cc791cab2f92ffcd4",
+        "markdown": "**Tekst zadatka** Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target=\"u15\"} rabi se empirijska Manningova jednadžba $v=\\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (površina presjeka toka kroz omočeni opseg), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\\ \\text{m}$, dubinu vode $y=0{,}80\\ \\text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$. **Traži se** 1. Provjeri dimenzijsku homogenost jednadžbe i odredi dimenziju te SI jedinicu koeficijenta $n$. 2. Odredi hidraulički radijus, srednju brzinu i protok. 3. Projektant zadrži istu brojčanu vrijednost $n$, ali $R_h$ uvrsti u stopama ($1\\ \\text{m}=3{,}2808\\ \\text{ft}$) očekujući $v$ u ft/s. Odredi faktor kojim treba pomnožiti desnu stranu da jednadžba ostane valjana i koliku bi brzinu dobio bez njega.",
+        "sha256": "daf040f3193df99ee48a1fd697a3bb84fcf8002f7dc62532da3bb12470844efc",
         "authoritative": true
       },
       "input_data": {
@@ -23604,7 +23604,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$[n]=\\mathsf{T}\\,\\mathsf{L}^{-1/3}$, jedinica $\\text{s}/\\text{m}^{1/3}$; jednadžba nije homogena bez te jedinice. $A=1{,}60\\ \\text{m}^2$, $P=3{,}60\\ \\text{m}$, $R_h=0{,}444\\ \\text{m}$, $v=1{,}00\\ \\text{m/s}$, $Q=1{,}60\\ \\text{m}^3/\\text{s}$. Faktor je $3{,}2808^{1/3}=1{,}486$, poznat iz anglosaksonskog zapisa $v=\\dfrac{1{,}486}{n}R_h^{2/3}S^{1/2}$; bez njega ispada $2{,}21\\ \\text{ft/s}$ umjesto točnih $3{,}29\\ \\text{ft/s}$ ($=1{,}00\\ \\text{m/s}$).",
+        "markdown": "$[n]=\\mathsf{T}\\,\\mathsf{L}^{-1/3}$, jedinica $\\text{s}/\\text{m}^{1/3}$; jednadžba nije homogena bez te jedinice. $A=1{,}60\\ \\text{m}^2$, $P=3{,}60\\ \\text{m}$, $R_h=0{,}444\\ \\text{m}$, $v=1{,}00\\ \\text{m/s}$, $Q=1{,}60\\ \\text{m}^3/\\text{s}$. Faktor je $3{,}2808^{1/3}=1{,}486$, poznat iz anglosaksonskog zapisa $v=\\dfrac{1{,}486}{n}R_h^{2/3}S^{1/2}$; bez njega se dobiva $2{,}21\\ \\text{ft/s}$ umjesto točnih $3{,}29\\ \\text{ft/s}$ ($=1{,}00\\ \\text{m/s}$).",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u11_dimenzijska_analiza_i_slicnost.md",
@@ -23859,8 +23859,8 @@
         "anchor": "#task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Na referentnom presjeku usisa crpke senzor pokazuje manometarski tlak $p_M=-20{,}0\\ \\text{kPa}$, odnosno podtlak od $20{,}0\\ \\text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\\ \\text{kPa}$. Gustoća vode je $\\rho=1000\\ \\text{kg/m}^3$, a tlak pare $p_v=2340\\ \\text{Pa}$. U zadanom nastavnom modelu karakteristike početak kavitacije za oba razmatrana režima odgovara vrijednosti $\\sigma_{kr}=3{,}0$, uz iste referentne veličine. Ocjenjuje se samo taj kriterij; granična jednakost ne daje dodatnu pogonsku rezervu. Usporedi režime s brzinama $v_1=4{,}00\\ \\text{m/s}$ i $v_2=8{,}00\\ \\text{m/s}$ pri istom tlaku. **Traži se** 1. Najprije odredi apsolutni tlak i kavitacijski broj za brzinu $v_1$. 2. Zatim prosudi režim s brzinom $v_2$ pri istom očitanju tlaka. 3. Koji bi najmanji manometarski tlak senzor morao pokazivati pri $v_2$ da bi bio zadovoljen zadani kriterij $\\sigma_{kav}\\geq\\sigma_{kr}$?",
-        "sha256": "bbbbf57d02b450f5fb9d95b4b4767b482a28a81515fb1fcd8441f06b1b03ec0f",
+        "markdown": "**Tekst zadatka** Na referentnom presjeku usisa crpke senzor pokazuje manometarski tlak $p_M=-20{,}0\\ \\text{kPa}$, odnosno podtlak od $20{,}0\\ \\text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\\ \\text{kPa}$. Gustoća vode je $\\rho=1000\\ \\text{kg/m}^3$, a tlak pare $p_v=2340\\ \\text{Pa}$. Prema zadanom nastavnom modelu karakteristike, početak kavitacije za oba razmatrana režima odgovara vrijednosti $\\sigma_{kr}=3{,}0$, uz iste referentne veličine. Ocjenjuje se samo taj kriterij; granična jednakost ne daje dodatnu pogonsku rezervu. Usporedi režime s brzinama $v_1=4{,}00\\ \\text{m/s}$ i $v_2=8{,}00\\ \\text{m/s}$ pri istom tlaku. **Traži se** 1. Najprije odredi apsolutni tlak i kavitacijski broj za brzinu $v_1$. 2. Zatim prosudi režim s brzinom $v_2$ pri istom očitanju tlaka. 3. Koji bi najmanji manometarski tlak senzor morao pokazivati pri $v_2$ da bi bio zadovoljen zadani kriterij $\\sigma_{kav}\\geq\\sigma_{kr}$?",
+        "sha256": "48a4a0157eeada466a73b613cf66c6ee72939d104df01de35d0e12b254b5def6",
         "authoritative": true
       },
       "input_data": {
@@ -25387,8 +25387,8 @@
         "anchor": "#task-materijalna-derivacija"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Jednodimenzijsko kinematičko polje glasi $v(x,t)=a_0t+bx^2$, gdje su $a_0=2\\ \\text{m/s}^2$ i $b=1\\ \\text{m}^{-1}\\text{s}^{-1}$. Promatra se položaj $x=1\\ \\text{m}$ u trenutku $t=2\\ \\text{s}$. Polje služi za vježbu materijalne derivacije i ne opisuje potpuno nestlačivo strujanje u cijevi. **Traži se** Odredi brzinu, lokalno, konvektivno i ukupno ubrzanje čestice u zadanom položaju i trenutku.",
-        "sha256": "650cc57e0359402c1210808c163aa8b586bab3dbe65bb3132965ee8834ca6d59",
+        "markdown": "**Tekst zadatka** Jednodimenzijsko kinematičko polje glasi $v(x,t)=a_0t+bx^2$, gdje su $a_0=2\\ \\text{m/s}^2$ i $b=1\\ \\text{m}^{-1}\\text{s}^{-1}$. Promatra se položaj $x=1\\ \\text{m}$ u trenutku $t=2\\ \\text{s}$. Polje služi za vježbu materijalne derivacije, a ne kao prikaz stvarnoga nestlačivog strujanja u cijevi. **Traži se** Odredi brzinu, lokalno, konvektivno i ukupno ubrzanje čestice u zadanom položaju i trenutku.",
+        "sha256": "282091039c07881b0f4d4dbaeb959d96ba2b33e37556ef8ab5f7c6be7b5e4633",
         "authoritative": true
       },
       "input_data": {
@@ -26849,8 +26849,8 @@
         "anchor": "#task-cfd-tri-mreze"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** **a) Izbor mreže.** Sintetički Poiseuilleov skup podataka iz `data/cfd/poiseuille_laminar` prikazan je sa zaokruženim vrijednostima. Tri sustavno profinjene mreže imaju $h/h_f=(4;\\ 2;\\ 1)$, protoke $(Q_g;\\ Q_{sr};\\ Q_f)=(8{,}16814;\\ 7{,}93252;\\ 7{,}87362)\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$ i masene debalanse $(0{,}040;\\ 0{,}010;\\ 0{,}0025)\\,\\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima, uz omjer koraka susjednih mreža $\\lambda_h=2$ i faktor sigurnosti $F_s=1{,}25$; zahtijevaju se $GCI\\le0{,}50\\,\\%$ i maseni debalans najviše $0{,}0050\\,\\%$. **b) Usporedba otpora.** Za profil NACA 0012 pri $Re_l=6\\cdot10^6$ (prema tetivi $l$), $Ma=0{,}15$ i napadnom kutu $\\theta=10{,}00^\\circ$ uzmi $C_{D,CFD}=0{,}01222$ (najfinija FUN3D mreža) i $C_{D,ref}=0{,}01166$ (linearna interpolacija javno dostupnih mjerenja na isti kut; podrijetlo i ograde navedeni su u dodatku D). Zadane standardne nesigurnosti nastavnog scenarija jesu mjerna $s_{mj}=0{,}00020$, numerička $s_{num}=0{,}00010$ (ukupna; GCI iz dijela a) ne pribraja se) i doprinos usklađivanja uvjeta i interpolacije $s_{uv}=0{,}00010$. Doprinosi su neovisni, normalno raspodijeljeni i nakon korekcija centrirani na nulu. To su pretpostavke za vježbu, a ne objavljene nesigurnosti NASA-ina pokusa. Usporedba je sukladna zadanom kriteriju ako $|E|\\le 2s_E$, gdje je $s_E$ standardna nesigurnost razlike (dvostruka standardna nesigurnost daje približno 95 % pokrivanja). Dodatno razmotri $s_{mj}=0{,}00030$ uz nepromijenjene ostale vrijednosti. **Traži se** 1. **Dio a).** Odredi opaženi red konvergencije $n_h$, Richardsonovu ekstrapolaciju $Q_{ext}$ te $GCI_{sr}$ i $GCI_f$ srednje i fine mreže. Odaberi najgrublju mrežu koja zadovoljava zadane numeričke kriterije. 2. **Dio b).** Izračunaj $E=C_{D,CFD}-C_{D,ref}$, relativno odstupanje prema referenci i proširenu nesigurnost razlike $2s_E=2\\sqrt{s_{mj}^2+s_{num}^2+s_{uv}^2}$. 3. Ponovi odluku za veću zadanu vrijednost $s_{mj}$ uz nepromijenjene ostale vrijednosti. Objasni znači li eventualno zadovoljen kriterij točniji model i zašto rezultat dijela a) ne dokazuje valjanost modela profila.",
-        "sha256": "2d0ed1e1ff9e95511e281eaa2a4b7106a33a049f1aba1ec94a704e019893e10b",
+        "markdown": "**Tekst zadatka** **a) Izbor mreže.** Sintetički Poiseuilleov skup podataka iz `data/cfd/poiseuille_laminar` prikazan je sa zaokruženim vrijednostima. Tri sustavno profinjene mreže imaju $h/h_f=(4;\\ 2;\\ 1)$, protoke $(Q_g;\\ Q_{sr};\\ Q_f)=(8{,}16814;\\ 7{,}93252;\\ 7{,}87362)\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$ i masene neravnoteže $(0{,}040;\\ 0{,}010;\\ 0{,}0025)\\,\\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima, uz omjer koraka susjednih mreža $\\lambda_h=2$ i faktor sigurnosti $F_s=1{,}25$; zahtijevaju se $GCI\\le0{,}50\\,\\%$ i masena neravnoteža najviše $0{,}0050\\,\\%$. **b) Usporedba otpora.** Za profil NACA 0012 pri $Re_l=6\\cdot10^6$ (prema tetivi $l$), $Ma=0{,}15$ i napadnom kutu $\\theta=10{,}00^\\circ$ uzmi $C_{D,CFD}=0{,}01222$ (najfinija FUN3D mreža) i $C_{D,ref}=0{,}01166$ (linearna interpolacija javno dostupnih mjerenja na isti kut; podrijetlo i ograde navedeni su u dodatku D). Zadane standardne nesigurnosti nastavnog scenarija jesu mjerna $s_{mj}=0{,}00020$, numerička $s_{num}=0{,}00010$ (ukupna; GCI iz dijela a) ne pribraja se) i doprinos usklađivanja uvjeta i interpolacije $s_{uv}=0{,}00010$. Doprinosi su neovisni, normalno raspodijeljeni i nakon korekcija centrirani na nulu. To su pretpostavke za vježbu, a ne objavljene nesigurnosti NASA-ina pokusa. Usporedba je sukladna zadanom kriteriju ako $|E|\\le 2s_E$, gdje je $s_E$ standardna nesigurnost razlike (dvostruka standardna nesigurnost daje približno 95 % pokrivanja). Dodatno razmotri $s_{mj}=0{,}00030$ uz nepromijenjene ostale vrijednosti. **Traži se** 1. **Dio a).** Odredi opaženi red konvergencije $n_h$, Richardsonovu ekstrapolaciju $Q_{ext}$ te $GCI_{sr}$ i $GCI_f$ srednje i fine mreže. Odaberi najgrublju mrežu koja zadovoljava zadane numeričke kriterije. 2. **Dio b).** Izračunaj $E=C_{D,CFD}-C_{D,ref}$, relativno odstupanje prema referenci i proširenu nesigurnost razlike $2s_E=2\\sqrt{s_{mj}^2+s_{num}^2+s_{uv}^2}$. 3. Ponovi odluku za veću zadanu vrijednost $s_{mj}$ uz nepromijenjene ostale vrijednosti. Objasni znači li eventualno zadovoljen kriterij točniji model i zašto rezultat dijela a) ne dokazuje valjanost modela profila.",
+        "sha256": "ce619c1418dc963fabb10c0888b611beb2acfad825333420d459c72f73827dea",
         "authoritative": true
       },
       "input_data": {
@@ -27054,7 +27054,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "**a)** $n_h\\approx2{,}000$, $Q_{ext}\\approx7{,}8540\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$, $GCI_{sr}\\approx1{,}237\\,\\%$ i $GCI_f\\approx0{,}312\\,\\%$. Odabire se fina mreža: debalans je $0{,}0025\\,\\%$; srednja krši oba uvjeta, a gruba maseni uvjet. **b)** $E=+0{,}00056$, odnosno približno $+4{,}80\\,\\%$; CFD daje veći otpor. Za $s_{mj}=0{,}00020$ dobiva se $2s_E\\approx0{,}000490$ i $|E|/(2s_E)\\approx1{,}14>1$: kriterij nije zadovoljen. Za $s_{mj}=0{,}00030$ vrijedi $2s_E\\approx0{,}000663$ i $|E|/(2s_E)\\approx0{,}844<1$: kriterij je zadovoljen. Razlika ostaje ista; širi interval znači slabiju sposobnost razlikovanja modela od reference, a ne poboljšanje modela. To je uvjetna procjena za zadane nastavne pretpostavke: stvarna validacija traži dokumentirane reziduale, povijesti sila, masenu bilancu i stvarni proračun nesigurnosti (dodatak D). Konvergencija Poiseuilleova protoka ne potvrđuje turbulentni otpor profila.",
+        "markdown": "**a)** $n_h\\approx2{,}000$, $Q_{ext}\\approx7{,}8540\\cdot10^{-6}\\ \\text{m}^3/\\text{s}$, $GCI_{sr}\\approx1{,}237\\,\\%$ i $GCI_f\\approx0{,}312\\,\\%$. Odabire se fina mreža: masena neravnoteža iznosi $0{,}0025\\,\\%$; srednja krši oba uvjeta, a gruba maseni uvjet. **b)** $E=+0{,}00056$, odnosno približno $+4{,}80\\,\\%$; CFD daje veći otpor. Za $s_{mj}=0{,}00020$ dobiva se $2s_E\\approx0{,}000490$ i $|E|/(2s_E)\\approx1{,}14>1$: kriterij nije zadovoljen. Za $s_{mj}=0{,}00030$ vrijedi $2s_E\\approx0{,}000663$ i $|E|/(2s_E)\\approx0{,}844<1$: kriterij je zadovoljen. Razlika ostaje ista; širi interval znači slabiju sposobnost razlikovanja modela od reference, a ne poboljšanje modela. To je uvjetna procjena za zadane nastavne pretpostavke: stvarna validacija traži dokumentirane reziduale, povijesti sila, masenu bilancu i stvarni proračun nesigurnosti (dodatak D). Konvergencija Poiseuilleova protoka ne potvrđuje turbulentni otpor profila.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u12_diferencijalni_opis_realnog_toka.md",
@@ -33018,8 +33018,8 @@
         "anchor": "#task-kontrolni-presjek-na-pragu"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Pravokutni kanal stalne širine vodi $q=2{,}20\\ \\mathrm{m^2/s}$ pri potkritičnoj uzvodnoj dubini $y_1=1{,}200\\ \\mathrm{m}$. Dno na tjemenu praga više je za $\\Delta z=0{,}120\\ \\mathrm{m}$. Zanemari gubitke; tlak je približno hidrostatički, a $\\alpha=1$. Nizvodni uvjet dopušta glatki potkritični nastavak. Promatraj presjeke daleko od lokalne zakrivljenosti prijelaza. Za odabrani korijen zahtijevaj energijski rezidual manji od $\\varepsilon_E=10^{-6}\\ \\mathrm{m}$. **Traži se** 1. Odredi $y_c$, $E_{min}$ i najveće povišenje dna $\\Delta z_{max}$ koje još ne izaziva uzvodni uspor. 2. Za zadani prag odredi specifičnu energiju na tjemenu i oba pozitivna matematička korijena, a zatim prema fizikalnim uvjetima odaberi dubinu $y_t$ i odredi pripadni $Fr_t$. 3. Objasni što se u modelu mora promijeniti ako je prag pri istom protoku viši od izračunate granice.",
-        "sha256": "0ee0776ebad07f4e1c35d0d0fcbc17cff3496b6cc39e597982aa7203ef4d5018",
+        "markdown": "**Tekst zadatka** Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Pravokutni kanal stalne širine vodi $q=2{,}20\\ \\mathrm{m^2/s}$ pri potkritičnoj uzvodnoj dubini $y_1=1{,}200\\ \\mathrm{m}$. Dno na tjemenu praga više je za $\\Delta z=0{,}120\\ \\mathrm{m}$. Zanemari gubitke; tlak je približno hidrostatički, a $\\alpha=1$. Nizvodni uvjet dopušta glatki potkritični nastavak. Promatraj presjeke daleko od lokalne zakrivljenosti prijelaza. Za odabrani korijen zahtijevaj energijski rezidual manji od $\\varepsilon_E=10^{-6}\\ \\mathrm{m}$. **Traži se** 1. Odredi $y_c$, $E_{min}$ i najveće povišenje dna $\\Delta z_{max}$ koje još ne izaziva uzvodni uspor. 2. Za zadani prag odredi specifičnu energiju na tjemenu i oba pozitivna matematička korijena, a zatim prema fizikalnim uvjetima odaberi dubinu $y_t$ i odredi pripadni $Fr_t$. 3. Objasni što se u modelu mora promijeniti ako je prag pri istom protoku viši od izračunane granice.",
+        "sha256": "5a92e82872a54e248326228ee4e0b51657d2ceeddbbd5ac4de3595129a0ad9f4",
         "authoritative": true
       },
       "input_data": {

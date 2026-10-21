@@ -100,7 +100,7 @@ U jednolikom gravitacijskom polju bez drugih volumenskih sila iz tih komponenata
 
 Pretpostavka konstantne gustoće $\rho$ vrijedi za tekućine (voda, ulje, živa), ali ne za plinove, u kojima se gustoća mijenja s tlakom i temperaturom. Za **izotermalnu atmosferu**, uz pretpostavku $T=T_0=\text{konst.}$, može se izvesti raspodjela tlaka po visini.
 
-Iz jednadžbe stanja idealnog plina vrijedi
+Iz jednadžbe stanja idealnog plina slijedi
 
 $$
 p = \rho R T_0 \quad\Longrightarrow\quad \rho = \frac{p}{R T_0},
@@ -408,7 +408,7 @@ $$
 \rho_{pl} g U = 1{,}2 \cdot 9{,}81 \cdot 2{,}31 = 27{,}2\ \text{Pa},
 $$ {#eq-sondiranje-stupac-inertnog-plina}
 
-što je $0{,}02\ \%$ očitanja na dnu i manje od $1\ \%$ pretlaka plina; zanemaruje se. Sustav mjerenja razine mora, međutim, uzeti u obzir pretlak inertnog plina i sondiranu debljinu vode, odnosno primijeniti dvofluidni model s plinskim pretlakom.
+što je $0{,}02\ \%$ očitanja na dnu i manje od $1\ \%$ pretlaka plina; zanemaruje se. Sustav mjerenja razine ipak mora uzeti u obzir pretlak inertnog plina i sondiranu debljinu vode, odnosno primijeniti dvofluidni model s plinskim pretlakom.
 
 **Provjera i tumačenje**
 

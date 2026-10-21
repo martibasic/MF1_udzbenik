@@ -59,6 +59,7 @@ Sažetak je podsjetnik: uz svaku relaciju navedeni su uvjet primjene i poglavlje
 | $h=4\sigma\cos\theta/(\rho gd)$ | kapilarni uspon u cijevi promjera $d$ |
 | $h=2\sigma\cos\theta/(\rho gb)$ | procjep širine $b$ između paralelnih ploha; jedna zakrivljenost, faktor 2 |
 | $p_u-p_{atm}=\sigma(1/R_1+1/R_2)$; kapljica $4\sigma/d$, sapunasti mjehur $8\sigma/d$ | Young–Laplace, mirno sučelje; pazi na broj međupovršina |
+
 ## pog. 3–6: Hidrostatika, relativno mirovanje, plohe, uzgon i stabilitet
 
 | Formula | Uvjet primjene i napomena |

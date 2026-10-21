@@ -57,7 +57,7 @@ U jednolikom gravitacijskom polju uzgon ovisi o istisnutom volumenu i gustoći f
 :::
 
 ::: {#ex-u07-uzgon-na-potonulo-pumpno-kuciste-pri-ispitivanju .mf1-we}
-<p class="mf1-box-label">Uzgon na potonulo kućište crpke pri ispitivanju &nbsp;<span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">Uzgon na potonulo kućište crpke pri ispitivanju&nbsp;<span class="mf1-level">T1</span></p>
 
 **Tekst zadatka**
 
@@ -321,7 +321,7 @@ $$
 W=\rho gV_{ist}\int_{\varphi_1}^{\varphi_2}GZ(\varphi)\,d\varphi.
 $$ {#eq-uzgon-stabilitet-matematicki-izvod-krivulja-stabilnosti-i-finitni-04}
 
-Za brodove na koje se primjenjuju opći kriteriji IMO-ova *2008 Intact Stability Codea* provjerava se skup uvjeta, među ostalim: površina najmanje $0{,}055\ \text{m rad}$ do $30^\circ$; najmanje $0{,}09\ \text{m rad}$ do $40^\circ$ ili kuta naplavljivanja ako je manji; najmanje $0{,}03\ \text{m rad}$ između $30^\circ$ i te gornje granice; $GZ\ge0{,}20\ \text{m}$ pri kutu od najmanje $30^\circ$; maksimum $GZ$ pri kutu ne manjem od $25^\circ$; te početni $GM_0\ge0{,}15\ \text{m}$ [@imo-is-code-2008]. Primjenjivost, dodatni kriteriji i iznimke ovise o vrsti broda i mjerodavnoj administraciji, pa sami kriteriji površina ne dokazuju usklađenost.
+Za brodove na koje se primjenjuju opći kriteriji IMO-ova pravilnika *2008 Intact Stability Code* provjerava se skup uvjeta, među ostalim: površina najmanje $0{,}055\ \text{m rad}$ do $30^\circ$; najmanje $0{,}09\ \text{m rad}$ do $40^\circ$ ili kuta naplavljivanja ako je manji; najmanje $0{,}03\ \text{m rad}$ između $30^\circ$ i te gornje granice; $GZ\ge0{,}20\ \text{m}$ pri kutu od najmanje $30^\circ$; maksimum $GZ$ pri kutu ne manjem od $25^\circ$; te početni $GM_0\ge0{,}15\ \text{m}$ [@imo-is-code-2008]. Primjenjivost, dodatni kriteriji i iznimke ovise o vrsti broda i mjerodavnoj administraciji, pa sami kriteriji površina ne dokazuju usklađenost.
 
 Metacentarska teorija opisuje samo početni odziv oko uspravnoga položaja. Stabilitet pri konačnom nagibu, na valovima ili nakon oštećenja zahtijeva odgovarajuću krivulju $GZ$, otvore i kut naplavljivanja, dinamičke utjecaje te posebne kriterije za neoštećeni ili oštećeni brod [@imo-damage-stability].
 :::
@@ -783,7 +783,7 @@ Vrijednost $31{,}1^\circ$ samo je geometrijska ekstrapolacija krutoga pravokutni
 :::
 
 ::: {#ex-u07-plutajuci-vjetroagregat-tipa-cilindricne-plovne-osnove-t3 .mf1-we}
-<p class="mf1-box-label">Plutajući vjetroagregat tipa cilindrične plovne osnove &nbsp;<span class="mf1-level">T3</span></p>
+<p class="mf1-box-label">Plutajući vjetroagregat tipa cilindrične plovne osnove&nbsp;<span class="mf1-level">T3</span></p>
 
 **Tekst zadatka**
 
@@ -865,14 +865,14 @@ Pri vrlo malim kutovima da: nagib slijedi iz $m_ke=\Delta GM\tan\varphi$ i ovisi
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Gustoća slane vode veća je od gustoće slatke vode, pa je za istu masu broda potreban manji istisnuti volumen i brod u slanoj vodi plovi s manjim gazom. Dopuštena masa tereta ipak se ne određuje samo gustoćom trenutačne vode, nego linijama opterećenja, uvjetima plovidbe, čvrstoćom i stabilitetom; iz samog Arhimedova zakona ne slijedi dopuštenje za ukrcaj dodatnoga tereta.
+Gustoća slane vode veća je od gustoće slatke vode, pa je za istu masu broda potreban manji istisnuti volumen i brod u slanoj vodi plovi s manjim gazom. Dopuštena masa tereta ipak se ne određuje samo gustoćom trenutačne vode, nego teretnim linijama, uvjetima plovidbe, čvrstoćom i stabilitetom; iz samog Arhimedova zakona ne slijedi dopuštenje za ukrcaj dodatnoga tereta.
 :::
 
 4. Vrijedi li Arhimedov zakon i u ulju ili plinu, ili samo u vodi?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor
-Vrijedi u bilo kojem fluidu, uključujući plinove. U zraku je sila uzgona obično mala zbog male gustoće zraka, ali je treba uračunati za balone, dirižable i precizna mjerenja mase u zraku. U idealnom vakuumu nema fluida ni uzgona. U uljnim sustavima Arhimedov se zakon primjenjuje pri proračunu uzgona kliznih elemenata i u višefaznim separatorima.
+Vrijedi u bilo kojem fluidu, uključujući plinove. U zraku je sila uzgona obično mala zbog male gustoće zraka, ali je treba uračunati za balone, zračne brodove i precizna mjerenja mase u zraku. U idealnom vakuumu nema fluida ni uzgona. U uljnim sustavima Arhimedov se zakon primjenjuje pri proračunu uzgona kliznih elemenata i u višefaznim separatorima.
 :::
 :::
 
@@ -906,7 +906,7 @@ Masa istisnine jednaka je masi broda u obje vode, $\rho V_{ist}=\Delta$; razlika
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$V_{mv}\approx11\,707\ \text{m}^3$, $V_{rij}\approx12\,024\ \text{m}^3$; gaz u rijeci veći je za $\Delta T\approx0{,}132\ \text{m}$. Za isti gaz treba iskrcati $\Delta(1-\rho_{rij}/\rho_{mv})\approx316\ \text{t}$. Masa po centimetru gaza $\rho A_{vl}\cdot0{,}01\ \text{m}$ iznosi $24{,}6\ \text{t/cm}$ u moru i $24{,}0\ \text{t/cm}$ u rijeci jer je lakšoj vodi za istu masu potreban veći volumen.
+$V_{mv}\approx11\,707\ \text{m}^3$, $V_{rij}\approx12\,024\ \text{m}^3$; gaz u rijeci veći je za $\Delta T\approx0{,}132\ \text{m}$. Za isti gaz treba iskrcati $\Delta(1-\rho_{rij}/\rho_{mv})\approx316\ \text{t}$. Masa po centimetru gaza $\rho A_{vl}\cdot0{,}01\ \text{m}$ iznosi $24{,}6\ \text{t/cm}$ u moru i $24{,}0\ \text{t/cm}$ u rijeci jer je u lakšoj vodi za istu masu potreban veći istisnuti volumen.
 :::
 ::::
 

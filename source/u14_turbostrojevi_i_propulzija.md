@@ -2,7 +2,7 @@ Crpka i ventilator predaju rad fluidu, turbina ga od fluida preuzima, a brodski 
 
 Prema turbostrojarskom standardu $c$ je apsolutna brzina fluida, $u$ obodna brzina lopatice, a $w$ relativna brzina fluida; povezane su vektorski, $\vec c=\vec u+\vec w$. Kontrolni volumen koji prati jednu pokretnu lopaticu prima relativni maseni protok $\dot m_{rel}=\rho A(c_1-u)$, dok kolo s mnogo lopatica zahvaća puni sapnički protok $\dot m=\rho Ac_1$. Zato jedna lopatica prima najveću snagu pri $u=c_1/3$, a Peltonovo kolo pri $u=c_1/2$. Kad su ulaz i izlaz rotora na različitim polumjerima, moment količine gibanja vodi do Eulerove jednadžbe turbostrojarstva, $P=\dot m(u_2c_{2t}-u_1c_{1t})=M\omega$; ta je snaga pozitivna kad rotor predaje rad fluidu, kao u crpki. Rad daje samo promjena tangencijalne komponente brzine $c_t$, pa su kutovi lopatica $\beta_1$ i $\beta_2$, mjereni od smjera $-u$, izravni projektni parametri.
 
-Propeler i vodomlazni pogon modeliraju se aktuatorskim diskom, idealiziranim propelerom koji daje potisak $F_T$; njegova idealna (Froudeova) učinkovitost $\eta_i=2v_A/(v_A+v_j)$ pada što je brzina mlaza $v_j$ veća od brzine napredovanja $v_A$. Za isti potisak veći disk traži manju induciranu brzinu i snagu, kao kod drona u visu, a iza trupa broda brzinu napredovanja smanjuje sustrujanje.
+Propeler i vodomlazni pogon modeliraju se aktuatorskim diskom, idealiziranim propelerom koji daje potisak $F_T$; njegova idealna (Froudeova) učinkovitost $\eta_i=2v_A/(v_A+v_j)$ to je manja što je brzina mlaza $v_j$ veća od brzine napredovanja $v_A$. Za isti potisak veći disk traži manju induciranu brzinu i snagu, kao kod drona u visu, a iza trupa broda brzinu napredovanja smanjuje sustrujanje.
 
 Poglavlje redom obrađuje pokretnu lopaticu s kutom skretanja i gubitkom relativne brzine, Eulerovu jednadžbu s trokutima brzina na radnom kolu balastne crpke te aktuatorski disk u visu i napredovanju. Radna točka crpke u cjevovodu određuje se u []{.mf1-chapter-ref target="u13"}, a potisak se povezuje s otporom trupa, koji se iz modelnih ispitivanja prenosi Froudeovom sličnošću iz []{.mf1-chapter-ref target="u11"}. Modeli s jednolikim brzinama na presjecima i s jednoliko opterećenim diskom, bez vrtnje traga i bez utjecaja trupa, daju gornju granicu učinkovitosti; hidrauličke, mehaničke i generatorske gubitke treba procijeniti zasebno.
 
@@ -121,7 +121,7 @@ $$ {#eq-turbostrojevi-matematicki-izvod-eulerova-turbinska-jednadzba-i-04}
 Pozitivan $P_{r\to f}$ opisuje rad koji rotor predaje fluidu, kao u crpki ili ventilatoru. Pozitivan $P_{f\to r}$ opisuje rad koji fluid predaje rotoru, kao u turbini. Ovdje je $u_i=\omega r_i$. Za Peltonov rotor vrijedi $r_1=r_2=r$ i $u_1=u_2=u$, pa snaga koju fluid predaje rotoru postaje
 
 $$
-P_{f\to r} = \dot m\,u\,(c_{1t} - c_{2t}),
+P_{f\to r} = \dot m\,u\,(c_{1t} - c_{2t}).
 $$ {#eq-turbostrojevi-matematicki-izvod-eulerova-turbinska-jednadzba-i-05}
 
 **Provjera.** Izraz ima isti oblik kao umnožak $F_xu$ sile na pokretnu lopaticu iz jednadžbe [-@eq-turbostrojevi-razrada-koraka-04] i obodne brzine, zapisan komponentama brzine umjesto izlaznog kuta, ali s punim protokom $\dot m$ umjesto $\dot m_{rel}$: Eulerov zapis vrijedi za kolo, a ne za jednu lopaticu.
@@ -154,7 +154,7 @@ Za procjenu srednjeg rada prikladan je MRF (*Multiple Reference Frame*, više re
 </div>
 
 <div class="mf1-interaktivno-pitanja">
-**Pitanja za samostalno istraživanje:** (a) Zašto puni sapnički protok daje maksimum pri $u=c_1/2$? (b) Zašto stvarne lopatice nemaju potpuni povrat mlaza ($\beta_2=0°$)?
+**Pitanja za samostalno istraživanje:** (a) Zašto puni sapnički protok daje maksimum pri $u=c_1/2$? (b) Zašto stvarne lopatice nemaju potpuni povrat mlaza ($\beta_2=0^\circ$)?
 </div>
 :::
 
@@ -447,7 +447,7 @@ $$ {#eq-turbostrojevi-cjeloviti-zadatak-reprezentativna-peltonova-lopa-09}
 
 ### 5. Cijelo kolo s punim sapničkim protokom {.mf1-step .unnumbered .unlisted}
 
-Kolo zahvaća sav protok sapnice, $\dot m=\rho Ac_1=998\cdot1{,}521\cdot10^{-3}\cdot31=47{,}04\ \text{kg/s}$. Trokut brzina svake lopatice isti je kao gore, pa je tangencijalna sila na kolo
+Kolo zahvaća sav protok sapnice, $\dot m=\rho Ac_1=998\cdot1{,}521\cdot10^{-3}\cdot31=47{,}04\ \text{kg/s}$. Trokut brzina svake lopatice isti je kao u prethodnom koraku, pa je tangencijalna sila na kolo
 
 $$
 F_{x,kolo}=\dot m\,(c_1-c_{2x})=47{,}04\,(31-2{,}23)=1353\ \text{N},
@@ -683,7 +683,7 @@ Isti potisak kroz veću površinu traži manju induciranu brzinu, pa trag odnosi
 Uz dodatne idealizacije $k=1$, $u=c_1/2$ i $\beta_2=0^\circ$, apsolutna izlazna brzina mlaza teorijski je jednaka nuli. Ako se samo kut lopatice promijeni na $\beta_2=15^\circ$, kutni faktor postaje $(1+\cos15^\circ)/2\approx0{,}983$, odnosno oko $98{,}3\,\%$ idealne vrijednosti. Ostali hidraulički i mehanički gubitci odvojeno smanjuju stvarni korisni rad.
 :::
 
-4. Vrijedi li isti pristup (trokut brzina, relativna brzina) i kod aksijalnih lopatica vjetroagregata ili samo kod hidroturbina?
+4. Vrijedi li isti pristup (trokut brzina, relativna brzina) i za aksijalne lopatice vjetroagregata ili samo za hidroturbine?
 
 ::: {.callout-note collapse="true"}
 ### Odgovor

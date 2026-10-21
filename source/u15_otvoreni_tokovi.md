@@ -6,7 +6,7 @@ Energijska bilanca s gubitkom visine $h_g$ nastavlja se na []{.mf1-chapter-ref t
 
 Poglavlje redom obrađuje geometriju presjeka, Froudeov broj i širenje poremećaja, specifičnu energiju i kritičnu dubinu s ustavom i širokim preljevom, postupno promjenjiv tok, hidraulički skok te uniformni tok s Manningovom jednadžbom. Jednodimenzijski model sa srednjom brzinom pretpostavlja blag nagib i približno hidrostatičku raspodjelu tlaka; on ne opisuje unutrašnjost skoka ni tok preko kratkoga zakrivljenog praga. Koeficijenti $C_d$ i $C_{pr}$ te Manningov $n$ empirijski su i vrijede samo u ispitanom rasponu.
 
-Slika [-@fig-otvoreni-tok-pregled] prikazuje ilustrativni tok s $q=1{,}40\,\mathrm{m^2/s}$ preko blagog praga. Lijevo je mirni tok početne (uzvodne) dubine $y_0=1{,}30\,\mathrm{m}$ i brzine $v_0$. Na tjemenu praga tok prolazi kritičnim presjekom s kritičnom brzinom $v_c$, a niz nizvodnu stranu praga ubrzava se u siloviti tok. Visina dna $z$ mijenja se duž praga, a do skoka vrijedi $z+E=\text{konst.}$ Indeksi 1 i 2 označuju, kao u izvodu hidrauličkog skoka, silovit presjek neposredno ispred skoka ($y_1$, $v_1$) i mirni presjek iza njega ($y_2$, $v_2$); isprekidane crte omeđuju kontrolni volumen skoka. Duljina skoka nacrtana je shematski.
+Slika [-@fig-otvoreni-tok-pregled] prikazuje ilustrativni tok s $q=1{,}40\,\mathrm{m^2/s}$ preko blagog praga. Lijevo je mirni tok početne (uzvodne) dubine $y_0=1{,}30\,\mathrm{m}$ i brzine $v_0$. Na tjemenu praga tok prolazi kritičnim presjekom s kritičnom brzinom $v_c$, a niz nizvodnu stranu praga ubrzava se u siloviti tok. Visina dna $z$ mijenja se duž praga, a do skoka vrijedi $z+E=\text{konst.}$ Indeksi 1 i 2 označuju, kao u izvodu hidrauličkog skoka, siloviti presjek neposredno ispred skoka ($y_1$, $v_1$) i mirni presjek iza njega ($y_2$, $v_2$); isprekidane crte omeđuju kontrolni volumen skoka. Duljina skoka nacrtana je shematski.
 
 ![Otvoreni tok prelazi iz mirnog u kritični i siloviti režim te kroz hidraulički skok ponovno u dublji tok.](../assets/print/u15_fig_uvod_otvoreni_tok.svg){#fig-otvoreni-tok-pregled fig-align="center" fig-alt="Uzdužni presjek kanala: mirni tok ispred blagog praga, kritični presjek na tjemenu, siloviti tok niz prag i hidraulički skok s isprekidanim kontrolnim volumenom."}
 
@@ -256,7 +256,7 @@ $$ {#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01}
 pa bilanca glasi $I_1=I_2$. Nakon preuređenja dobivamo
 
 $$
-\frac{y_1^2-y_2^2}{2}=\frac{q^2}{g}\left(\frac{1}{y_2}-\frac{1}{y_1}\right)=\frac{q^2}{g}\,\frac{y_1-y_2}{y_1y_2},
+\frac{y_1^2-y_2^2}{2}=\frac{q^2}{g}\left(\frac{1}{y_2}-\frac{1}{y_1}\right)=\frac{q^2}{g}\,\frac{y_1-y_2}{y_1y_2}.
 $$ {#eq-skok-preuredjeno}
 
 Jednadžbu dijelimo faktorom $(y_1-y_2)$, koji pripada trivijalnom rješenju $y_1=y_2$, pa ostaje $\tfrac12(y_1+y_2)y_1y_2=q^2/g$. Uz $q^2=Fr_1^2gy_1^3$ to je kvadratna jednadžba za omjer $y_2/y_1$: $(y_2/y_1)^2+(y_2/y_1)-2Fr_1^2=0$.
@@ -368,7 +368,7 @@ Budući da je $Q\propto1/n$, omjer protoka točno je jednak omjeru $0{,}015/0{,}
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Cijeli kanal i detalj oko ustave.** Dug gradski kanal možemo opisati dubinski integriranim modelom s Manningovim koeficijentom otpora, a okolinu ustave izdvojiti za 3D CFD. Prvi model daje dotok i nizvodne vodostaje za lokalni račun, a lokalni rezultat može pomoći odrediti vezu između protoka, otvora i razlike razina za model cijele dionice.
+**Cijeli kanal i detalj oko ustave.** Dug gradski kanal možemo opisati dubinski integriranim modelom s Manningovim koeficijentom otpora, a okolinu ustave izdvojiti za 3D CFD. Prvi model daje dotok i nizvodne vodostaje za lokalni račun, a lokalni rezultat može pomoći u određivanju veze između protoka, otvora i razlike razina za model cijele dionice.
 
 Oba modela moraju imati usklađenu ukupnu bilancu vode i isti raspon radnih uvjeta. Manningov $n$ opisuje otpor bez razlučivanja profila brzine po dubini, dok 3D model računa naprezanje na stijenci uz odabrani način modeliranja stijenke; $n$ nije molekularna viskoznost ni izravna visina hrapavosti. Uniformni tok omogućuje jednostavnu provjeru ekvivalentnog otpora. Istu logiku povezivanja lokalnoga CFD-a s modelom sustava primijenili smo u []{.mf1-chapter-ref target="u13"} na razdjelnik rashladnog kruga, čiji je CFD rezultat postao koeficijent lokalnog gubitka u proračunu cjevovoda.
 :::
@@ -525,7 +525,7 @@ Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Pravokutni kanal
 
 1. Odredi $y_c$, $E_{min}$ i najveće povišenje dna $\Delta z_{max}$ koje još ne izaziva uzvodni uspor.
 2. Za zadani prag odredi specifičnu energiju na tjemenu i oba pozitivna matematička korijena, a zatim prema fizikalnim uvjetima odaberi dubinu $y_t$ i odredi pripadni $Fr_t$.
-3. Objasni što se u modelu mora promijeniti ako je prag pri istom protoku viši od izračunate granice.
+3. Objasni što se u modelu mora promijeniti ako je prag pri istom protoku viši od izračunane granice.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}

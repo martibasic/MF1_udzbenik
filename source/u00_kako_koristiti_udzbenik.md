@@ -37,7 +37,7 @@ Riješeni primjeri označeni su **P1, P2, … zasebno u svakom poglavlju**. Ozna
 
 Zadatci za vježbu označeni su **Z1–Z6 zasebno u svakom poglavlju**, uz kratak naslov problema. Ključ rezultata u dodatku F koristi iste oznake i naslove. Upućivanje na zadatak uključuje i oznaku poglavlja, primjerice „poglavlje 3, Z2”.
 
-Razine T1–T4, sitno navedene na kraju zadatka, pokazuju koliko samostalnog izbora zadatak traži, a ne samo koliko je račun dug.
+Razine T1–T4, navedene sitnim slovima na kraju zadatka, pokazuju koliko samostalnog izbora zadatak traži, a ne samo koliko je račun dug.
 
 | Razina | Što zadatak traži |
 | --- | --- |
@@ -64,7 +64,7 @@ Oznake vektora uz strelice pisane su podebljano, a oznake skalara (kote, tlakovi
 
 ## Numerički pokusi i izdanja
 
-Numerički pokusi istražuju osjetljivost, bilance i pogrešku jednostavnih modela i nisu same po sebi CFD simulacije. Bilježnice (*Jupyter notebooks*) otvaraju se preko poveznica ili QR kodova u JupyterLiteu, bez prijave; pričuvna je mogućnost Google Colab. Prvo pokretanje traži mrežnu vezu i može potrajati minutu ili dvije. Blok *Interaktivni prikaz* otvara laboratorij s klizačima, a blok *Numerički pokus* bilježnicu u kojoj se model provjerava računom.
+Numerički pokusi istražuju osjetljivost, bilance i pogrešku jednostavnih modela i nisu sami po sebi CFD simulacije. Bilježnice (*Jupyter notebooks*) otvaraju se preko poveznica ili QR kodova u JupyterLiteu, bez prijave; pričuvna je mogućnost Google Colab. Prvo pokretanje traži mrežnu vezu i može potrajati minutu ili dvije. Blok *Interaktivni prikaz* otvara laboratorij s klizačima, a blok *Numerički pokus* bilježnicu u kojoj se model provjerava računom.
 
 **Za čitanje i rješavanje zadataka dovoljan je tekst priručnika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. Izdanje u PDF-u namijenjeno je ispisu i radu bez mrežne veze.
 

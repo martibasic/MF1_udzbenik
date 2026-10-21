@@ -4,7 +4,7 @@ Iako je fluid građen od molekula, u tehničkim proračunima promatramo ga kao n
 
 Tlak je okomita sila po jedinici površine, $p=F_n/A$. U mirujućem fluidu tlak je u istoj točki jednak u svim smjerovima, pa je skalarna veličina, iako se od točke do točke može mijenjati. Porast tlaka s dubinom obrađuje se u []{.mf1-chapter-ref target="u03"}.
 
-Pascalov zakon kaže da se promjena tlaka nametnuta na jednom mjestu zatvorenog mirujućeg fluida prenosi nesmanjena u sve njegove točke. U hidrauličkim sustavima tlak koji stvaraju klipovi mnogo je veći od razlika tlaka zbog visine, pa je porast tlaka u cijelom sustavu praktički isti: $\Delta p=F_1/A_1=F_2/A_2$. Mala sila $F_1$ na malom klipu zato daje veliku silu $F_2=(A_2/A_1)F_1$ na velikom klipu. Energija se pritom ne stvara. Ulje je nestlačivo, pa su istisnuti volumeni jednaki, $A_1s_1=A_2s_2$: veliki klip prijeđe proporcionalno kraći put, a u idealnom modelu bez gubitaka vrijedi $F_1s_1=F_2s_2$.
+Pascalov zakon kaže da se promjena tlaka nametnuta na jednom mjestu zatvorenog mirujućeg fluida prenosi neumanjena u sve njegove točke. U hidrauličkim sustavima tlak koji stvaraju klipovi mnogo je veći od razlika tlaka zbog visine, pa je porast tlaka u cijelom sustavu praktički isti: $\Delta p=F_1/A_1=F_2/A_2$. Mala sila $F_1$ na malom klipu zato daje veliku silu $F_2=(A_2/A_1)F_1$ na velikom klipu. Energija se pritom ne stvara. Ulje je nestlačivo, pa su istisnuti volumeni jednaki, $A_1s_1=A_2s_2$: veliki klip prijeđe proporcionalno kraći put, a u idealnom modelu bez gubitaka vrijedi $F_1s_1=F_2s_2$.
 
 Na tom se načelu temelje hidrauličke dizalice i preše, kočnice vozila te brodski kormilarski strojevi. Poglavlje redom obrađuje kontinuumski model i tlak, osnovne veličine fluida i Pascalov zakon, a zatim ih primjenjuje na hidraulički prijenos sile. Pritom pokazuje i granice idealnog modela: gubitke, stlačivost, propuštanje i visinske razlike.
 
@@ -376,7 +376,7 @@ Rad je spor, a gubitci, stlačivost i hidrostatičke razlike tlaka zanemaruju se
 1. Odredi manometarski tlak $p_M$ u ulju.
 2. Odredi silu jednoga radnog cilindra i ukupnu idealiziranu podiznu silu $F_G$, odnosno najveću težinu tereta koju platforma može podići.
 3. Odredi zbroj hodova crpnog klipa potreban da se platforma podigne za $s_L$.
-4. Odredi najmanji broj punih tlačnih hodova kojim se platforma podiže barem za zadanu visinu te duljinu zadnjega djelomičnog hoda kojim se postiže točno zadana visina.
+4. Odredi najmanji broj punih tlačnih hodova kojim se platforma podiže barem za zadanu visinu te duljinu posljednjega djelomičnog hoda kojim se postiže točno zadana visina.
 
 ![Dvostruka hidraulička platforma s ručnom crpkom.](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg){#fig-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom fig-alt="Platforma s teretom na dvama radnim cilindrima površine 150 cm² sa zajedničkim pomakom, spojenima vodom s ručnom crpkom površine 5 cm² na koju djeluje sila 460 N."}
 
@@ -432,8 +432,8 @@ $$ {#eq-svojstva-tlak-4-broj-punih-pumpnih-hodova-01}
 
 pa je za podizaj od **barem** 25 mm potrebno najmanje $n=9$ punih tlačnih
 hodova. Oni daju podizaj $s_{L,9}=27{,}0\ \mathrm{mm}$. Za **točno**
-25 mm dovoljno je osam punih hodova i zadnji djelomični hod
-$s_{zad}=1{,}50-8\cdot0{,}180=0{,}060\ \mathrm{m}=60\ \mathrm{mm}$.
+25 mm dovoljno je osam punih hodova i posljednji djelomični hod
+$s_{posl}=1{,}50-8\cdot0{,}180=0{,}060\ \mathrm{m}=60\ \mathrm{mm}$.
 Zbroj hodova nije duljina jednoga crpnog cilindra.
 
 **Provjera i tumačenje**

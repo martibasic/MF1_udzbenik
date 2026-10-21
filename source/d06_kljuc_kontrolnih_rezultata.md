@@ -264,7 +264,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Masa istisnine jednaka je masi broda u obje vode, $\rho V_{ist}=\Delta$; razlika istisnutih volumena podijeljena površinom vodne linije daje promjenu gaza. Za jednak gaz istisnuti volumen mora ostati isti, pa se mijenja masa.
 
-**Kontrolni rezultat ili kriterij.** $V_{mv}\approx11\,707\ \text{m}^3$, $V_{rij}\approx12\,024\ \text{m}^3$; gaz u rijeci veći je za $\Delta T\approx0{,}132\ \text{m}$. Za isti gaz treba iskrcati $\Delta(1-\rho_{rij}/\rho_{mv})\approx316\ \text{t}$. Masa po centimetru gaza $\rho A_{vl}\cdot0{,}01\ \text{m}$ iznosi $24{,}6\ \text{t/cm}$ u moru i $24{,}0\ \text{t/cm}$ u rijeci jer je lakšoj vodi za istu masu potreban veći volumen.
+**Kontrolni rezultat ili kriterij.** $V_{mv}\approx11\,707\ \text{m}^3$, $V_{rij}\approx12\,024\ \text{m}^3$; gaz u rijeci veći je za $\Delta T\approx0{,}132\ \text{m}$. Za isti gaz treba iskrcati $\Delta(1-\rho_{rij}/\rho_{mv})\approx316\ \text{t}$. Masa po centimetru gaza $\rho A_{vl}\cdot0{,}01\ \text{m}$ iznosi $24{,}6\ \text{t/cm}$ u moru i $24{,}0\ \text{t/cm}$ u rijeci jer je u lakšoj vodi za istu masu potreban veći istisnuti volumen.
 
 ### Z2. Plutanje homogenog drvenog bloka {#key-task-plutanje-homogenog-bloka-stabilitet .unnumbered .unlisted}
 
@@ -522,7 +522,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Napiši dimenzije obiju strana: $\mathsf{L}\,\mathsf{T}^{-1}=[n]^{-1}\,\mathsf{L}^{2/3}$, pa $[n]$ slijedi iz uvjeta da se dimenzije podudaraju. Pri prijelazu na stope mijenja se brojčana vrijednost svake veličine s dimenzijom duljine, dok $n$ ostaje ista brojka; faktor je zato potencija omjera $3{,}2808$ s istim eksponentom kao $[n]$.
 
-**Kontrolni rezultat ili kriterij.** $[n]=\mathsf{T}\,\mathsf{L}^{-1/3}$, jedinica $\text{s}/\text{m}^{1/3}$; jednadžba nije homogena bez te jedinice. $A=1{,}60\ \text{m}^2$, $P=3{,}60\ \text{m}$, $R_h=0{,}444\ \text{m}$, $v=1{,}00\ \text{m/s}$, $Q=1{,}60\ \text{m}^3/\text{s}$. Faktor je $3{,}2808^{1/3}=1{,}486$, poznat iz anglosaksonskog zapisa $v=\dfrac{1{,}486}{n}R_h^{2/3}S^{1/2}$; bez njega ispada $2{,}21\ \text{ft/s}$ umjesto točnih $3{,}29\ \text{ft/s}$ ($=1{,}00\ \text{m/s}$).
+**Kontrolni rezultat ili kriterij.** $[n]=\mathsf{T}\,\mathsf{L}^{-1/3}$, jedinica $\text{s}/\text{m}^{1/3}$; jednadžba nije homogena bez te jedinice. $A=1{,}60\ \text{m}^2$, $P=3{,}60\ \text{m}$, $R_h=0{,}444\ \text{m}$, $v=1{,}00\ \text{m/s}$, $Q=1{,}60\ \text{m}^3/\text{s}$. Faktor je $3{,}2808^{1/3}=1{,}486$, poznat iz anglosaksonskog zapisa $v=\dfrac{1{,}486}{n}R_h^{2/3}S^{1/2}$; bez njega se dobiva $2{,}21\ \text{ft/s}$ umjesto točnih $3{,}29\ \text{ft/s}$ ($=1{,}00\ \text{m/s}$).
 
 ### Z3. Manometarski tlak senzora i kavitacijski kriterij {#key-task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak .unnumbered .unlisted}
 
@@ -604,7 +604,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Za monotoni niz koristi $n_h=\ln[(Q_g-Q_{sr})/(Q_{sr}-Q_f)]/\ln\lambda_h$ i $Q_{ext}=Q_f+(Q_f-Q_{sr})/(\lambda_h^{n_h}-1)$. Zatim izračunaj $GCI_f=F_s|(Q_f-Q_{sr})/Q_f|/(\lambda_h^{n_h}-1)$; za $GCI_{sr}$ zamijeni par $(Q_f,Q_{sr})$ parom $(Q_{sr},Q_g)$. Razlomke pretvori u postotke i provjeri oba uvjeta. U dijelu b) sve su nesigurnosti apsolutne i bezdimenzijske, kao i $C_D$. Relativno odstupanje iznosi $100E/C_{D,ref}$ u postotcima. Provjeri sadrži li interval $[E-2s_E;\ E+2s_E]$ nulu.
 
-**Kontrolni rezultat ili kriterij.** **a)** $n_h\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_{sr}\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: debalans je $0{,}0025\,\%$; srednja krši oba uvjeta, a gruba maseni uvjet. **b)** $E=+0{,}00056$, odnosno približno $+4{,}80\,\%$; CFD daje veći otpor. Za $s_{mj}=0{,}00020$ dobiva se $2s_E\approx0{,}000490$ i $|E|/(2s_E)\approx1{,}14>1$: kriterij nije zadovoljen. Za $s_{mj}=0{,}00030$ vrijedi $2s_E\approx0{,}000663$ i $|E|/(2s_E)\approx0{,}844<1$: kriterij je zadovoljen. Razlika ostaje ista; širi interval znači slabiju sposobnost razlikovanja modela od reference, a ne poboljšanje modela. To je uvjetna procjena za zadane nastavne pretpostavke: stvarna validacija traži dokumentirane reziduale, povijesti sila, masenu bilancu i stvarni proračun nesigurnosti (dodatak D). Konvergencija Poiseuilleova protoka ne potvrđuje turbulentni otpor profila.
+**Kontrolni rezultat ili kriterij.** **a)** $n_h\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_{sr}\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: masena neravnoteža iznosi $0{,}0025\,\%$; srednja krši oba uvjeta, a gruba maseni uvjet. **b)** $E=+0{,}00056$, odnosno približno $+4{,}80\,\%$; CFD daje veći otpor. Za $s_{mj}=0{,}00020$ dobiva se $2s_E\approx0{,}000490$ i $|E|/(2s_E)\approx1{,}14>1$: kriterij nije zadovoljen. Za $s_{mj}=0{,}00030$ vrijedi $2s_E\approx0{,}000663$ i $|E|/(2s_E)\approx0{,}844<1$: kriterij je zadovoljen. Razlika ostaje ista; širi interval znači slabiju sposobnost razlikovanja modela od reference, a ne poboljšanje modela. To je uvjetna procjena za zadane nastavne pretpostavke: stvarna validacija traži dokumentirane reziduale, povijesti sila, masenu bilancu i stvarni proračun nesigurnosti (dodatak D). Konvergencija Poiseuilleova protoka ne potvrđuje turbulentni otpor profila.
 
 ## Gubitci, cjevovodi, crpke i mreže
 
@@ -628,7 +628,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-uravnotezenje-paralelnih-grana)
 
-**Smjernica postupka.** Cilj je $Q_1=Q_2=Q/2$. Izjednači ukupne gubitke između čvorova A i B uz dodatak ventila. Prigušenje otpor može samo povećati, pa $R_v$ ne smije ispasti negativan.
+**Smjernica postupka.** Cilj je $Q_1=Q_2=Q/2$. Izjednači ukupne gubitke između čvorova A i B uz dodatak ventila. Prigušenje može otpor samo povećati, pa $R_v$ ne smije biti negativan.
 
 **Kontrolni rezultat ili kriterij.** Ventil ide u granu 1: $R_v=36\,000\ \mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\ \mathrm{L/s}$, $h_{AB}=4{,}80\ \mathrm{m}$ i $h_{g,V}=3{,}60\ \mathrm{m}$. Provjera: $(R_1+R_v)Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$.
 

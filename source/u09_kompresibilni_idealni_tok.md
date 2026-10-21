@@ -266,7 +266,7 @@ $$ {#eq-priguseni-protok}
 **Provjera.** Za $Ma=1$ uglata zagrada jednaka je jedinici, pa je $A/A^*=1$. Za $Ma\to0$ i $Ma\to\infty$ omjer raste bez granice, što odgovara minimumu površine u grlu. Uvrštavanjem jedinica u jednadžbu [-@eq-priguseni-protok] dobiva se $\text{m}^2\cdot\text{Pa}\cdot\text{K}^{-1/2}\cdot(\text{J/(kg K)})^{-1/2}=\text{kg/s}$.
 :::
 
-Kada je nizvodni tlak dovoljno nizak, maseni protok dostiže granicu iz jednadžbe [-@eq-priguseni-protok]: uz iste $p_0$, $T_0$ i površinu grla daljnje ga snižavanje nizvodnog tlaka više ne povećava, pa je tok **zagušen** (engl. *choked*). Zagušenje treba razlikovati od prigušenja, namjernog smanjenja tlaka ventilom.
+Kada je nizvodni tlak dovoljno nizak, maseni protok doseže granicu iz jednadžbe [-@eq-priguseni-protok]: uz iste $p_0$, $T_0$ i površinu grla daljnje ga snižavanje nizvodnog tlaka više ne povećava, pa je tok **zagušen** (engl. *choked*). Zagušenje treba razlikovati od prigušenja, namjernog smanjenja tlaka ventilom.
 
 ::: {#ex-priguseni-ventil .mf1-we}
 <p class="mf1-box-label">Gornja granica protoka sigurnosnog otvora <span class="mf1-level">T2</span></p>
@@ -415,7 +415,7 @@ Ispitna osnosimetrična konvergentno-divergentna sapnica (shema na slici [-@fig-
 
 ### 1. Dva izentropska rješenja za $A_e/A^*=1{,}6$ {.mf1-step .unnumbered .unlisted}
 
-Jednadžba [-@eq-omjer-povrsina] s $A_e/A^*=1{,}6$ nema rješenje po $Ma$ u zatvorenom obliku; rješava se iterativno ili pomoću tablica. Podzvučna grana daje $Ma_{e}=0{,}397$ (provjera: $\tfrac{1}{0{,}397}\bigl[\tfrac{1{,}0315}{1{,}2}\bigr]^{3}=1{,}600$), a nadzvučna $Ma_{e}=1{,}935$ (provjera: $\tfrac{1}{1{,}935}\bigl[\tfrac{1{,}749}{1{,}2}\bigr]^{3}=1{,}600$). Iz jednadžbe [-@eq-stagnacijski-omjeri] slijede pripadni izlazni tlakovi
+Jednadžba [-@eq-omjer-povrsina] s $A_e/A^*=1{,}6$ nema rješenja po $Ma$ u zatvorenom obliku; rješava se iterativno ili pomoću tablica. Podzvučna grana daje $Ma_{e}=0{,}397$ (provjera: $\tfrac{1}{0{,}397}\bigl[\tfrac{1{,}0315}{1{,}2}\bigr]^{3}=1{,}600$), a nadzvučna $Ma_{e}=1{,}935$ (provjera: $\tfrac{1}{1{,}935}\bigl[\tfrac{1{,}749}{1{,}2}\bigr]^{3}=1{,}600$). Iz jednadžbe [-@eq-stagnacijski-omjeri] slijede pripadni izlazni tlakovi
 
 $$
 p_{e,\mathrm{I}}=\frac{500}{1{,}0315^{3{,}5}}=448{,}5\ \text{kPa},\qquad

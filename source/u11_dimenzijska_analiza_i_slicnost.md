@@ -761,13 +761,13 @@ Najprije se popišu svi mehanizmi i bezdimenzijski rubni uvjeti koji mogu utjeca
 
 **Tekst zadatka**
 
-Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $a=0{,}400\ \text{m}$ i visine $b=0{,}200\ \text{m}$. Zrak kinematičke viskoznosti $\nu=1{,}50\cdot10^{-5}\ \text{m}^2/\text{s}$ struji volumenskim protokom $Q=0{,}640\ \text{m}^3/\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ oplakani opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno.
+Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $a=0{,}400\ \text{m}$ i visine $b=0{,}200\ \text{m}$. Zrak kinematičke viskoznosti $\nu=1{,}50\cdot10^{-5}\ \text{m}^2/\text{s}$ struji volumenskim protokom $Q=0{,}640\ \text{m}^3/\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ omočeni opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno.
 
 **Traži se**
 
 1. Odredi srednju brzinu i hidraulički promjer.
 2. Odredi Reynoldsov broj i prosudi režim.
-3. Koliki bi $Re$ ispao da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\lambda(Re,k_s/D)$.
+3. Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\lambda(Re,k_s/D)$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -793,7 +793,7 @@ $v=8{,}00\ \text{m/s}$, $D_h=0{,}2667\ \text{m}$, $Re=1{,}42\cdot10^5$: turbulen
 
 **Tekst zadatka**
 
-Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target="u15"} rabi se empirijska Manningova jednadžba $v=\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (površina presjeka toka kroz oplakani opseg), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\ \text{m}$, dubinu vode $y=0{,}80\ \text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$.
+Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target="u15"} rabi se empirijska Manningova jednadžba $v=\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (površina presjeka toka kroz omočeni opseg), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\ \text{m}$, dubinu vode $y=0{,}80\ \text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$.
 
 **Traži se**
 
@@ -813,7 +813,7 @@ Napiši dimenzije obiju strana: $\mathsf{L}\,\mathsf{T}^{-1}=[n]^{-1}\,\mathsf{L
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$[n]=\mathsf{T}\,\mathsf{L}^{-1/3}$, jedinica $\text{s}/\text{m}^{1/3}$; jednadžba nije homogena bez te jedinice. $A=1{,}60\ \text{m}^2$, $P=3{,}60\ \text{m}$, $R_h=0{,}444\ \text{m}$, $v=1{,}00\ \text{m/s}$, $Q=1{,}60\ \text{m}^3/\text{s}$. Faktor je $3{,}2808^{1/3}=1{,}486$, poznat iz anglosaksonskog zapisa $v=\dfrac{1{,}486}{n}R_h^{2/3}S^{1/2}$; bez njega ispada $2{,}21\ \text{ft/s}$ umjesto točnih $3{,}29\ \text{ft/s}$ ($=1{,}00\ \text{m/s}$).
+$[n]=\mathsf{T}\,\mathsf{L}^{-1/3}$, jedinica $\text{s}/\text{m}^{1/3}$; jednadžba nije homogena bez te jedinice. $A=1{,}60\ \text{m}^2$, $P=3{,}60\ \text{m}$, $R_h=0{,}444\ \text{m}$, $v=1{,}00\ \text{m/s}$, $Q=1{,}60\ \text{m}^3/\text{s}$. Faktor je $3{,}2808^{1/3}=1{,}486$, poznat iz anglosaksonskog zapisa $v=\dfrac{1{,}486}{n}R_h^{2/3}S^{1/2}$; bez njega se dobiva $2{,}21\ \text{ft/s}$ umjesto točnih $3{,}29\ \text{ft/s}$ ($=1{,}00\ \text{m/s}$).
 :::
 ::::
 
@@ -823,7 +823,7 @@ $[n]=\mathsf{T}\,\mathsf{L}^{-1/3}$, jedinica $\text{s}/\text{m}^{1/3}$; jednad�
 
 **Tekst zadatka**
 
-Na referentnom presjeku usisa crpke senzor pokazuje manometarski tlak $p_M=-20{,}0\ \text{kPa}$, odnosno podtlak od $20{,}0\ \text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\ \text{kPa}$. Gustoća vode je $\rho=1000\ \text{kg/m}^3$, a tlak pare $p_v=2340\ \text{Pa}$. U zadanom nastavnom modelu karakteristike početak kavitacije za oba razmatrana režima odgovara vrijednosti $\sigma_{kr}=3{,}0$, uz iste referentne veličine. Ocjenjuje se samo taj kriterij; granična jednakost ne daje dodatnu pogonsku rezervu.
+Na referentnom presjeku usisa crpke senzor pokazuje manometarski tlak $p_M=-20{,}0\ \text{kPa}$, odnosno podtlak od $20{,}0\ \text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\ \text{kPa}$. Gustoća vode je $\rho=1000\ \text{kg/m}^3$, a tlak pare $p_v=2340\ \text{Pa}$. Prema zadanom nastavnom modelu karakteristike, početak kavitacije za oba razmatrana režima odgovara vrijednosti $\sigma_{kr}=3{,}0$, uz iste referentne veličine. Ocjenjuje se samo taj kriterij; granična jednakost ne daje dodatnu pogonsku rezervu.
 
 Usporedi režime s brzinama $v_1=4{,}00\ \text{m/s}$ i $v_2=8{,}00\ \text{m/s}$ pri istom tlaku.
 

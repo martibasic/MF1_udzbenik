@@ -27,7 +27,7 @@ Miješanje mase fluida s masom posude (tarom) te gustoće $\rho$ sa specifičnom
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Oduzmi taru, provjeri površine, volumen i rad: $F_1s_1=F_2s_2$. Za pogrešku pomaka usporedi volumen stlačivanja $V_0\Delta p/K$ s istisnutim volumenom. Razlikuj pune poteze od djelomičnoga zadnjeg poteza. Odabrana ručna crpka mora zadovoljiti i uvjet sile i uvjet zbroja hodova; provjeri krajeve zadanih intervala. Pascalov kvazistatički model ne znači trenutačno širenje tlaka.
+Oduzmi taru, provjeri površine, volumen i rad: $F_1s_1=F_2s_2$. Za pogrešku pomaka usporedi volumen stlačivanja $V_0\Delta p/K$ s istisnutim volumenom. Razlikuj pune poteze od djelomičnoga posljednjeg poteza. Odabrana ručna crpka mora zadovoljiti i uvjet sile i uvjet zbroja hodova; provjeri krajeve zadanih intervala. Pascalov kvazistatički model ne znači trenutačno širenje tlaka.
 :::
 ::::
 
@@ -59,7 +59,7 @@ Miješanje apsolutnog, manometarskog i vakuumskog tlaka; pogrešni predznaci pri
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u manometru; prema dolje tlak raste, prema gore pada. Kod slojevitog punjenja zatvori bilancu i ukupne visine i tlaka. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku $\rho g\,\delta h$ i rezervu skale; kod nagnute cjevčice okomitu visinu daje $L\sin\alpha$ uvećano za spuštanje razine u posudi. Za plin dulji od nekoliko desetaka metara gustoću ostavi pod integralom. Za teretni tank zapiši $p_{M,dno}=p_{M,pl}+\rho_ugh_u+\rho_{mv}gh_v$ a debljinu vodenog sloja uzmi iz sondiranja. Za usis crpke u radu potrebni su gubitci, brzinska visina i usporedba $NPSH_a$ s proizvođačevim $NPSH_r$, oboje na osnovi apsolutnog tlaka.
+Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u manometru; prema dolje tlak raste, prema gore pada. Kod slojevitog punjenja zatvori bilancu i ukupne visine i tlaka. Pri izboru instrumenta provjeri visinu stupca, tlačnu pogrešku $\rho g\,\delta h$ i rezervu skale; kod nagnute cjevčice okomitu visinu daje $L\sin\alpha$ uvećano za spuštanje razine u posudi. Za plin dulji od nekoliko desetaka metara gustoću ostavi pod integralom. Za teretni tank zapiši $p_{M,dno}=p_{M,pl}+\rho_ugh_u+\rho_{mv}gh_v$, a debljinu vodenog sloja uzmi iz sondiranja. Za usis crpke u radu potrebni su gubitci, brzinska visina i usporedba $NPSH_a$ s proizvođačevim $NPSH_r$, oboje na osnovi apsolutnog tlaka.
 :::
 ::::
 
@@ -69,7 +69,7 @@ Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Zamjena smjera ubrzanja smjerom brzine (pri kočenju je $a<0$ iako je brzina pozitivna); linearna umjesto kvadratne ovisnosti o polumjeru pri vrtnji; zanemarivanje okomitog ubrzanja u nagibu i u efektivnoj težini, $\tan\theta=a_x/(g+a_z)$ (Z2); u potpuno punom zatvorenom spremniku razinu tlaka određuje položaj odzračnika, a ne gornji rub (P1); zaključak o smirivanju fluida iz jednog očitanja (Z5); daljnja primjena formule za puni paraboloid nakon prelijevanja ili ogoljenja dna (Z6); prividna sila u zavoju usmjerena prema središtu zavoja umjesto od njega, pa se viša razina pojavi na pogrešnom boku tanka.
+Zamjena smjera ubrzanja smjerom brzine (pri kočenju je $a<0$ iako je brzina pozitivna); linearna umjesto kvadratne ovisnosti o polumjeru pri vrtnji; zanemarivanje okomitog ubrzanja u nagibu i u efektivnoj težini, $\tan\theta=a_x/(g+a_z)$ (Z2); u potpuno punom zatvorenom spremniku razinu tlaka određuje položaj odzračnika, a ne gornji rub (P1); zaključak o smirivanju fluida iz jednog očitanja (Z5); daljnja primjena formule za puni paraboloid nakon prelijevanja ili ogoljavanja dna (Z6); prividna sila u zavoju usmjerena prema središtu zavoja umjesto od njega, pa se viša razina pojavi na pogrešnom boku tanka.
 :::
 
 ::: {.mf1-error-column}
@@ -91,8 +91,7 @@ Smještanje hvatišta u težište plohe: kad tlak raste s dubinom, centar tlaka 
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Utvrdi orijentaciju plohe i referentni tlak, zasebno zatvori bilancu sila i bilancu momenata te za zakrivljenu plohu nacrtaj lokalnu normalu od stvarnoga fluida prema stijenci. Projekcija daje $F_H$, pomoćni volumen iznos $\lvert F_V\rvert$, a geometrija stvarnoga fluida njegov smjer. Kod zaklopke koja se sama otvara uvjet je položaj centra tlaka u osi vrtnje; s nadtlakom plina sila i hvatište računaju se iz cijele raspodjele $p_{pl}+
-ho gh$. Na radijalnom poklopcu sve tlačne normale prolaze kroz središte kružnice; moment težine i kapacitet spojnice provjeri zasebno.
+Utvrdi orijentaciju plohe i referentni tlak, zasebno zatvori bilancu sila i bilancu momenata te za zakrivljenu plohu nacrtaj lokalnu normalu od stvarnoga fluida prema stijenci. Projekcija daje $F_H$, pomoćni volumen iznos $\lvert F_V\rvert$, a geometrija stvarnoga fluida njegov smjer. Kod zaklopke koja se sama otvara uvjet je položaj centra tlaka u osi vrtnje; s nadtlakom plina sila i hvatište računaju se iz cijele raspodjele $p_{pl}+\rho gh$. Na radijalnom poklopcu sve tlačne normale prolaze kroz središte kružnice; moment težine i kapacitet spojnice provjeri zasebno.
 :::
 ::::
 

@@ -217,7 +217,7 @@ Uz izvod treba jasno navesti i pretpostavke modela. U ovom poglavlju Bernoullije
 - između promatranih točaka nema strojnog rada ni druge vanjske mehaničke dobave energije
 - dvije točke leže na istoj strujnici
 
-Posljednja pretpostavka često se primjenjuje šire nego što izgleda. Kad jedna točka leži na mirnoj površini velikog spremnika, sve strujnice koje iz njega izlaze nose istu ukupnu visinu $p_{atm}/(\rho g) + z_A$; zato smijemo spojiti površinu s bilo kojim presjekom cijevi ili mlaza, iako ne znamo koja strujnica vodi do koje točke presjeka. Isto vrijedi za bezvrtložno strujanje, u kojem je Bernoullijeva konstanta jednaka u cijelom polju.
+Posljednja pretpostavka često se primjenjuje šire nego što se čini. Kad jedna točka leži na mirnoj površini velikog spremnika, sve strujnice koje iz njega izlaze nose istu ukupnu visinu $p_{atm}/(\rho g) + z_A$; zato smijemo spojiti površinu s bilo kojim presjekom cijevi ili mlaza, iako ne znamo koja strujnica vodi do koje točke presjeka. Isto vrijedi za bezvrtložno strujanje, u kojem je Bernoullijeva konstanta jednaka u cijelom polju.
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Granica modela — Što Bernoullijeva jednadžba ne opisuje</p>
@@ -360,7 +360,7 @@ Napunjen sifon stalnog promjera $D = 80\ \text{mm}$ odvodi vodu iz velikog otvor
 
 **Rješenje**
 
-Referentne točke biramo tamo gdje znamo najviše: $A$ je mirna površina bazena (poznat tlak, brzina zanemariva), a $B$ slobodni izlaz (poznat tlak, nepoznata brzina). Sve strujnice izlaze iz mirnog bazena s istom ukupnom visinom, pa ih smijemo spojiti. Bernoullijeva jednadžba između $A$ i $B$ daje
+Referentne točke biramo ondje gdje znamo najviše: $A$ je mirna površina bazena (poznat tlak, brzina zanemariva), a $B$ slobodni izlaz (poznat tlak, nepoznata brzina). Sve strujnice izlaze iz mirnog bazena s istom ukupnom visinom, pa ih smijemo spojiti. Bernoullijeva jednadžba između $A$ i $B$ daje
 
 $$
 \frac{p_A}{\rho g} + \frac{v_A^2}{2g} + z_A = \frac{p_B}{\rho g} + \frac{v_B^2}{2g} + z_B.
@@ -602,7 +602,7 @@ $$
 v' = \sqrt{\frac{2 \cdot 380}{1{,}25}} = \sqrt{608} \approx 24{,}7\ \text{m/s}.
 $$ {#eq-energijska-bilanca-rijeseni-primjer-pitot-staticka-sonda-na-bespilo-04}
 
-Razlika u izračunatoj brzini iznosi približno $1{,}45\ \text{m/s}$ ili $5{,}5\,\%$ od $26{,}1\ \text{m/s}$ — znatna pogreška ako se ne primijeni korekcija prema lokalnoj gustoći zraka.
+Razlika u izračunanoj brzini iznosi približno $1{,}45\ \text{m/s}$ ili $5{,}5\,\%$ od $26{,}1\ \text{m/s}$ — znatna pogreška ako se ne primijeni korekcija prema lokalnoj gustoći zraka.
 
 Reynoldsov broj sonde iznosi
 

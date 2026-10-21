@@ -31,7 +31,7 @@ To je središnja veličina cijele dinamike fluida: iz njega se određuje protok,
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Polje brzine nije brzina jedne čestice, nego „snimka” brzina svih čestica odjednom. Ako u presjeku cijevi izmjerimo brzinu u svakoj točki, dobivamo dio polja brzine u tom trenutku. Zato senzor na nepomičnom mjestu (Eulerov pogled) mjeri kako se mijenja brzina *tamo*, a ne što se događa s jednom određenom česticom koja je već prošla pokraj senzora.
+Polje brzine nije brzina jedne čestice, nego „snimka” brzina svih čestica odjednom. Ako u presjeku cijevi izmjerimo brzinu u svakoj točki, dobivamo dio polja brzine u tom trenutku. Zato senzor na nepomičnom mjestu (Eulerov pogled) mjeri kako se mijenja brzina *ondje*, a ne što se događa s jednom određenom česticom koja je već prošla pokraj senzora.
 :::
 
 ### Strujnica, trajektorija i strujna cijev
@@ -433,7 +433,7 @@ $$
 \vec v = \vec v_{KP} - w\,\vec i = (9{,}26 - 1{,}25)\,\vec i = 8{,}01\ \text{m/s}\ \vec i .
 $$ {#eq-zahvatni-usis-apsolutna-brzina}
 
-Voda se u ravnini otvora giba prema pramcu gotovo brzinom broda jer ju je usis zahvatio i ubrzao. Da smo u bilancu uvrstili apsolutnu brzinu, dobili bismo $\rho A_u v = 1025 \cdot 0{,}040 \cdot 8{,}01 \approx 328\ \text{kg/s}$ „prema van”, šest puta više od stvarnog protoka i suprotnog smjera. Kroz pomičnu plohu masu nosi samo relativna brzina.
+Voda se u ravnini otvora giba prema pramcu gotovo brzinom broda jer ju je usis zahvatio i ubrzao. Da smo u bilancu uvrstili apsolutnu brzinu, dobili bismo $\rho A_u v = 1025 \cdot 0{,}040 \cdot 8{,}01 \approx 328\ \text{kg/s}$ „prema van”, šest puta više od stvarnog protoka i u suprotnom smjeru. Kroz pomičnu plohu masu nosi samo relativna brzina.
 
 ### 4. Brod na sidru {.mf1-step .unnumbered .unlisted}
 

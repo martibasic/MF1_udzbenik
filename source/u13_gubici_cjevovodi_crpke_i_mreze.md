@@ -26,7 +26,7 @@ $$
 +H_t+h_g .
 $$ {#eq-realna-energijska-bilanca}
 
-Svi članovi imaju jedinicu metra promatranog fluida. Tlakovi $p_1$ i $p_2$ moraju imati istu referencu: oba apsolutna ili oba manometarska. Za dvije otvorene slobodne površine atmosferski se tlakovi mogu pokratiti, ali se u NPSH računu ne smiju izostaviti jer je ondje referenca apsolutna.
+Svi članovi imaju jedinicu metra promatranog fluida. Tlakovi $p_1$ i $p_2$ moraju imati istu referencu: oba apsolutna ili oba manometarska. Za dvije otvorene slobodne površine atmosferski se tlakovi mogu pokratiti, ali se u računu NPSH-a ne smiju izostaviti jer je ondje referenca apsolutna.
 
 Koeficijent kinetičke energije
 
@@ -62,7 +62,7 @@ $$ {#eq-cjevovodi-disipacija-kao-izvor-gubitka-02}
 Zato je doprinos $h_g$ nenegativan, a u idealnom graničnom slučaju $\mu=0$ nestaje. U jednodimenzijskom računu Darcyjev i lokalni koeficijent gubitka sažimaju ovaj učinak; u RANS proračunu dio prijenosa i disipacije opisuje turbulencijski model. To tumačenje ne uklanja potrebu za mrežnom konvergencijom, validacijom i fizikalno odgovarajućim rubnim uvjetima.
 :::
 
-![U realnom toku energijska crta pada zbog linijskih i lokalnih gubitaka; lokalni element daje nagliji pad.](../assets/print/u10_fig_uvod_pregled.svg){#fig-energijska-crta-gubitci fig-align="center" fig-alt="Lijevo cijev od presjeka 1 do presjeka 2 s ventilom i padajućim energijskom i piezometarskom crtom, desno ravna dionica s profilom brzine i koljeno kao primjeri linijskoga i lokalnoga gubitka."}
+![U realnom toku energijska crta pada zbog linijskih i lokalnih gubitaka; lokalni element daje nagliji pad.](../assets/print/u10_fig_uvod_pregled.svg){#fig-energijska-crta-gubitci fig-align="center" fig-alt="Lijevo cijev od presjeka 1 do presjeka 2 s ventilom i padajućom energijskom i piezometarskom crtom, desno ravna dionica s profilom brzine i koljeno kao primjeri linijskoga i lokalnoga gubitka."}
 
 **Tumačenje skice.** Bez stroja vrijedi $H_1=H_2+h_g$: EGL pada zbog linijskih i lokalnih gubitaka, HGL prikazuje zbroj tlačne i geodetske visine, a uz $\alpha=1$ razmak je $EGL-HGL=v^2/(2g)$. Prikazani laminarni profil zadovoljava prianjanje uz stijenke; koljeno mijenja smjer toka bez pregrade ili prekida prolaza.
 
@@ -321,7 +321,7 @@ P_{el}=\frac{P_{vr}}{\eta_m\eta_f}
 =\frac{\rho gQH_p}{\eta_p\eta_m\eta_f}.
 $$ {#eq-elektricna-snaga-crpke}
 
-Redoslijed pretvorbe snage dakle je
+Redoslijed pretvorbe snage dakle glasi
 
 $$
 P_{el}\longrightarrow P_{vr}\longrightarrow P_h
@@ -352,7 +352,7 @@ NPSH_a=
 \frac{p_{atm}}{\rho g}-z_s-h_{g,s}-\frac{p_v}{\rho g}.
 $$ {#eq-npsha-spremnik}
 
-Ovdje je $z_s$ visina referentnog usisnog presjeka iznad slobodne površine: pozitivna je kad crpka usisava iznad razine, a negativna kod napunjenog usisa, kad je presjek ispod razine. Brzinska se visina u drugom zapisu pokrati jer je već uključena u Bernoullijevu bilancu do usisnog presjeka. Ta dva zapisa moraju dati isti rezultat.
+Ovdje je $z_s$ visina referentnog usisnog presjeka iznad slobodne površine: pozitivna je kad crpka usisava iznad razine, a negativna pri napunjenom usisu, kad je presjek ispod razine. Brzinska se visina u drugom zapisu pokrati jer je već uključena u Bernoullijevu bilancu do usisnog presjeka. Ta dva zapisa moraju dati isti rezultat.
 
 Proizvođač određuje potrebni $NPSH_r(Q,n)$ prema navedenom kriteriju i na temelju ispitivanja. Uporabna provjera zahtijeva usporedbu raspoloživog i potrebnog NPSH-a uz odgovarajuću projektnu marginu. Sam rezultat $NPSH_a>0$ ili činjenica da je srednji tlak na usisu iznad $p_v$ ne dokazuju da kavitacije neće biti: lokalni tlak u radnom kolu može biti niži, a dopuštena margina ovisi o crpki, režimu i kriteriju proizvođača.
 
@@ -786,7 +786,7 @@ Dva rashladna ogranka između zajedničkih čvorova A i B trebaju dobivati jedna
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Cilj je $Q_1=Q_2=Q/2$. Izjednači ukupne gubitke između čvorova A i B uz dodatak ventila. Prigušenje otpor može samo povećati, pa $R_v$ ne smije ispasti negativan.
+Cilj je $Q_1=Q_2=Q/2$. Izjednači ukupne gubitke između čvorova A i B uz dodatak ventila. Prigušenje može otpor samo povećati, pa $R_v$ ne smije biti negativan.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}

@@ -99,7 +99,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | s_p | ukupni zbroj hodova crpnog klipa | m | P4 (ch), Z5, Z6 |
 | F_L | sila jednog radnog cilindra (P4); stalna sila na radnom klipu (Z5) | N | P4 (ch), Z5 |
 | n | broj punih hodova (P4); broj stega (P6) | – | P4, P6 |
-| s_{L,9}, s_zad | podizaj nakon 9 hodova; zadnji djelomični hod | m | P4 |
+| s_{L,9}, s_posl | podizaj nakon 9 hodova; posljednji djelomični hod | m | P4 |
 | ΔV | volumen potreban za podizaj (P4); dodatni dovedeni volumen (Z4) | m³ | P4, Z4 |
 | i; a, 5a | omjer poluge papučice; krakovi poluge od zgloba | –; m | P5 |
 | F_M, d_M, A_M | sila na glavni klip, promjer i površina glavnog cilindra | N, m, m² | P5 |

@@ -532,7 +532,7 @@ Smično naprezanje $\tau_{st}=\mu\,dv/dr|_R$ ovisi o nagibu profila u prvoj ćel
 
 **Tekst zadatka**
 
-Jednodimenzijsko kinematičko polje glasi $v(x,t)=a_0t+bx^2$, gdje su $a_0=2\ \text{m/s}^2$ i $b=1\ \text{m}^{-1}\text{s}^{-1}$. Promatra se položaj $x=1\ \text{m}$ u trenutku $t=2\ \text{s}$. Polje služi za vježbu materijalne derivacije i ne opisuje potpuno nestlačivo strujanje u cijevi.
+Jednodimenzijsko kinematičko polje glasi $v(x,t)=a_0t+bx^2$, gdje su $a_0=2\ \text{m/s}^2$ i $b=1\ \text{m}^{-1}\text{s}^{-1}$. Promatra se položaj $x=1\ \text{m}$ u trenutku $t=2\ \text{s}$. Polje služi za vježbu materijalne derivacije, a ne kao prikaz stvarnoga nestlačivog strujanja u cijevi.
 
 **Traži se**
 
@@ -680,7 +680,7 @@ $Re_x=6{,}00\cdot10^5$, $\delta_B\approx2{,}58\ \text{mm}$, $k_s/\delta_B\approx
 
 **Tekst zadatka**
 
-**a) Izbor mreže.** Sintetički Poiseuilleov skup podataka iz `data/cfd/poiseuille_laminar` prikazan je sa zaokruženim vrijednostima. Tri sustavno profinjene mreže imaju $h/h_f=(4;\ 2;\ 1)$, protoke $(Q_g;\ Q_{sr};\ Q_f)=(8{,}16814;\ 7{,}93252;\ 7{,}87362)\cdot10^{-6}\ \text{m}^3/\text{s}$ i masene debalanse $(0{,}040;\ 0{,}010;\ 0{,}0025)\,\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima, uz omjer koraka susjednih mreža $\lambda_h=2$ i faktor sigurnosti $F_s=1{,}25$; zahtijevaju se $GCI\le0{,}50\,\%$ i maseni debalans najviše $0{,}0050\,\%$.
+**a) Izbor mreže.** Sintetički Poiseuilleov skup podataka iz `data/cfd/poiseuille_laminar` prikazan je sa zaokruženim vrijednostima. Tri sustavno profinjene mreže imaju $h/h_f=(4;\ 2;\ 1)$, protoke $(Q_g;\ Q_{sr};\ Q_f)=(8{,}16814;\ 7{,}93252;\ 7{,}87362)\cdot10^{-6}\ \text{m}^3/\text{s}$ i masene neravnoteže $(0{,}040;\ 0{,}010;\ 0{,}0025)\,\%$, redom od grube do fine. Računaj s ovdje ispisanim brojevima, uz omjer koraka susjednih mreža $\lambda_h=2$ i faktor sigurnosti $F_s=1{,}25$; zahtijevaju se $GCI\le0{,}50\,\%$ i masena neravnoteža najviše $0{,}0050\,\%$.
 
 **b) Usporedba otpora.** Za profil NACA 0012 pri $Re_l=6\cdot10^6$ (prema tetivi $l$), $Ma=0{,}15$ i napadnom kutu $\theta=10{,}00^\circ$ uzmi $C_{D,CFD}=0{,}01222$ (najfinija FUN3D mreža) i $C_{D,ref}=0{,}01166$ (linearna interpolacija javno dostupnih mjerenja na isti kut; podrijetlo i ograde navedeni su u dodatku D). Zadane standardne nesigurnosti nastavnog scenarija jesu mjerna $s_{mj}=0{,}00020$, numerička $s_{num}=0{,}00010$ (ukupna; GCI iz dijela a) ne pribraja se) i doprinos usklađivanja uvjeta i interpolacije $s_{uv}=0{,}00010$. Doprinosi su neovisni, normalno raspodijeljeni i nakon korekcija centrirani na nulu. To su pretpostavke za vježbu, a ne objavljene nesigurnosti NASA-ina pokusa. Usporedba je sukladna zadanom kriteriju ako $|E|\le 2s_E$, gdje je $s_E$ standardna nesigurnost razlike (dvostruka standardna nesigurnost daje približno 95 % pokrivanja). Dodatno razmotri $s_{mj}=0{,}00030$ uz nepromijenjene ostale vrijednosti.
 
@@ -703,7 +703,7 @@ U dijelu b) sve su nesigurnosti apsolutne i bezdimenzijske, kao i $C_D$. Relativ
 ::: {.callout-tip collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
 
-**a)** $n_h\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_{sr}\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: debalans je $0{,}0025\,\%$; srednja krši oba uvjeta, a gruba maseni uvjet.
+**a)** $n_h\approx2{,}000$, $Q_{ext}\approx7{,}8540\cdot10^{-6}\ \text{m}^3/\text{s}$, $GCI_{sr}\approx1{,}237\,\%$ i $GCI_f\approx0{,}312\,\%$. Odabire se fina mreža: masena neravnoteža iznosi $0{,}0025\,\%$; srednja krši oba uvjeta, a gruba maseni uvjet.
 
 **b)** $E=+0{,}00056$, odnosno približno $+4{,}80\,\%$; CFD daje veći otpor. Za $s_{mj}=0{,}00020$ dobiva se $2s_E\approx0{,}000490$ i $|E|/(2s_E)\approx1{,}14>1$: kriterij nije zadovoljen. Za $s_{mj}=0{,}00030$ vrijedi $2s_E\approx0{,}000663$ i $|E|/(2s_E)\approx0{,}844<1$: kriterij je zadovoljen. Razlika ostaje ista; širi interval znači slabiju sposobnost razlikovanja modela od reference, a ne poboljšanje modela. To je uvjetna procjena za zadane nastavne pretpostavke: stvarna validacija traži dokumentirane reziduale, povijesti sila, masenu bilancu i stvarni proračun nesigurnosti (dodatak D). Konvergencija Poiseuilleova protoka ne potvrđuje turbulentni otpor profila.
 :::
@@ -744,5 +744,5 @@ U dijelu b) sve su nesigurnosti apsolutne i bezdimenzijske, kao i $C_D$. Relativ
 1. iz zadanog polja brzine odrediti lokalno, konvektivno i ukupno ubrzanje čestice;
 2. iz Navier–Stokesove jednadžbe uz rubne uvjete izvesti profil između ploča i Hagen–Poiseuilleov profil te iz njega $\Delta p\propto Q$ i $\lambda=64/Re$;
 3. procijeniti debljinu graničnog sloja i provjeriti uvjete primjene Blasiusova rješenja;
-4. odvojiti mrežnu konvergenciju (GCI, maseni debalans) od validacije mjerenjem.
+4. odvojiti mrežnu konvergenciju (GCI, masena neravnoteža) od validacije mjerenjem.
 :::

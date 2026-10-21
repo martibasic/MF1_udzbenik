@@ -207,7 +207,7 @@ U konačnom stanju relativna brzina u okviru spremnika jednaka je nuli, dok je l
 
 **Predvidi.** Kako udvostručenje kutne brzine mijenja razliku razina? Hoće li se prvo ogoliti dno ili dosegnuti rub?
 
-**Provjeri i protumači.** Pokreni ćelije, mijenjaj brzinu i punjenje te prati razine i očuvanje volumena do prve granice modela. Objasni zašto ravnotežni prikaz ne daje vrijeme uspostavljanja vrtnje. Prvo pokretanje traži internetsku vezu i 1–2 minute.
+**Provjeri i protumači.** Pokreni ćelije, mijenjaj brzinu i punjenje te prati razine i očuvanje volumena do prve granice modela. Objasni zašto ravnotežni prikaz ne daje vrijeme uspostavljanja vrtnje. Prvo pokretanje traži mrežnu vezu i 1–2 minute.
 
 <div class="mf1-interaktivno-akcija">
 <a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u04_paraboloidna_povrsina.ipynb">Pokreni u pregledniku</a>
@@ -680,7 +680,7 @@ $\Delta h \approx 0{,}22\ \text{m}$; $h_{str} \approx 0{,}45\ \text{m}$, $h_{pre
 
 **Tekst zadatka**
 
-Otvoreni pravokutni spremnik duljine $L = 2{,}00\ \text{m}$ i visine $H = 1{,}20\ \text{m}$ s vodom gustoće $\rho_v=1000\ \text{kg/m}^3$ do mirne razine $h_0 = 0{,}80\ \text{m}$ visi na lučkoj dizalici. Kolica dizalice ubrzavaju vodoravno ubrzanjem $a_x = 1{,}5\ \text{m/s}^2$ u smjeru duljine spremnika, a vitlo istodobno ubrzava teret prema gore ubrzanjem $a_z = 1{,}2\ \text{m/s}^2$. Spremnik ne njiše, a voda u odnosu na njega miruje.
+Otvoreni pravokutni spremnik duljine $L = 2{,}00\ \text{m}$ i visine $H = 1{,}20\ \text{m}$ s vodom gustoće $\rho_v=1000\ \text{kg/m}^3$ do mirne razine $h_0 = 0{,}80\ \text{m}$ visi na lučkoj dizalici. Kolica dizalice ubrzavaju vodoravno ubrzanjem $a_x = 1{,}5\ \text{m/s}^2$ u smjeru duljine spremnika, a vitlo istodobno ubrzava teret prema gore ubrzanjem $a_z = 1{,}2\ \text{m/s}^2$. Spremnik se ne njiše, a voda u odnosu na njega miruje.
 
 **Traži se**
 
