@@ -11716,7 +11716,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Djelomično uronjena ploča otvorila bi se tek pri omočenoj duljini $3a=2{,}40\\ \\mathrm{m}>L$, pa je pri otvaranju potpuno uronjena: $h_C=L^2\\sin\\theta/[12(L/2-a)]=1{,}443\\ \\mathrm{m}$, $y_{otv}=2{,}309\\ \\mathrm{m}$, gornji rub $0{,}577\\ \\mathrm{m}$ ispod površine. Pri $y=1{,}80\\ \\mathrm{m}$: $F=27{,}43\\ \\mathrm{kN}$, hvatište $0{,}691\\ \\mathrm{m}$ od donjeg ruba, dakle ispod osi; moment oko osi $2{,}99\\ \\mathrm{kN\\,m}$; sila praga $R=3{,}74\\ \\mathrm{kN}$ okomito na ploču. Sila u težištu, $1{,}00\\ \\mathrm{m}$ od donjeg ruba i iznad osi, dala bi otvaranje pri svakoj dubini; smjer momenta određuje hvatište u centru tlaka, ne težište.",
+        "markdown": "Djelomično uronjena ploča otvorila bi se tek pri oplakanoj duljini $3a=2{,}40\\ \\mathrm{m}>L$, pa je pri otvaranju potpuno uronjena: $h_C=L^2\\sin\\theta/[12(L/2-a)]=1{,}443\\ \\mathrm{m}$, $y_{otv}=2{,}309\\ \\mathrm{m}$, gornji rub $0{,}577\\ \\mathrm{m}$ ispod površine. Pri $y=1{,}80\\ \\mathrm{m}$: $F=27{,}43\\ \\mathrm{kN}$, hvatište $0{,}691\\ \\mathrm{m}$ od donjeg ruba, dakle ispod osi; moment oko osi $2{,}99\\ \\mathrm{kN\\,m}$; sila praga $R=3{,}74\\ \\mathrm{kN}$ okomito na ploču. Sila u težištu, $1{,}00\\ \\mathrm{m}$ od donjeg ruba i iznad osi, dala bi otvaranje pri svakoj dubini; smjer momenta određuje hvatište u centru tlaka, ne težište.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u05_hidrostatske_sile_na_plohe.md",
@@ -23254,8 +23254,8 @@
         "anchor": "#task-ventilacijski-kanal-hidraulicki-promjer"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $a=0{,}400\\ \\text{m}$ i visine $b=0{,}200\\ \\text{m}$. Zrak kinematičke viskoznosti $\\nu=1{,}50\\cdot10^{-5}\\ \\text{m}^2/\\text{s}$ struji volumenskim protokom $Q=0{,}640\\ \\text{m}^3/\\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ omočeni opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno. **Traži se** 1. Odredi srednju brzinu i hidraulički promjer. 2. Odredi Reynoldsov broj i prosudi režim. 3. Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\\lambda(Re,k_s/D)$.",
-        "sha256": "84faea382fb1666a50a8f31e419ad6e3be5ec90e89b400a746d1a1eec041cc75",
+        "markdown": "**Tekst zadatka** Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $a=0{,}400\\ \\text{m}$ i visine $b=0{,}200\\ \\text{m}$. Zrak kinematičke viskoznosti $\\nu=1{,}50\\cdot10^{-5}\\ \\text{m}^2/\\text{s}$ struji volumenskim protokom $Q=0{,}640\\ \\text{m}^3/\\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ oplakani opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno. **Traži se** 1. Odredi srednju brzinu i hidraulički promjer. 2. Odredi Reynoldsov broj i prosudi režim. 3. Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\\lambda(Re,k_s/D)$.",
+        "sha256": "835a80a112445c2950f7fc945dfd0320904c6b201a5f3a02c58c217e81a0b88c",
         "authoritative": true
       },
       "input_data": {
@@ -23519,8 +23519,8 @@
         "anchor": "#task-dimenzije-manningove-jednadzbe"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target=\"u15\"} rabi se empirijska Manningova jednadžba $v=\\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (površina presjeka toka kroz omočeni opseg), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\\ \\text{m}$, dubinu vode $y=0{,}80\\ \\text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$. **Traži se** 1. Provjeri dimenzijsku homogenost jednadžbe i odredi dimenziju te SI jedinicu koeficijenta $n$. 2. Odredi hidraulički radijus, srednju brzinu i protok. 3. Projektant zadrži istu brojčanu vrijednost $n$, ali $R_h$ uvrsti u stopama ($1\\ \\text{m}=3{,}2808\\ \\text{ft}$) očekujući $v$ u ft/s. Odredi faktor kojim treba pomnožiti desnu stranu da jednadžba ostane valjana i koliku bi brzinu dobio bez njega.",
-        "sha256": "daf040f3193df99ee48a1fd697a3bb84fcf8002f7dc62532da3bb12470844efc",
+        "markdown": "**Tekst zadatka** Za uniformni tok u dugom otvorenom kanalu u []{.mf1-chapter-ref target=\"u15\"} rabi se empirijska Manningova jednadžba $v=\\dfrac{1}{n}R_h^{2/3}S^{1/2}$, gdje je $R_h=A/P$ hidraulički radijus (površina presjeka toka kroz oplakani opseg), $S$ bezdimenzijski nagib dna, a $n$ Manningov koeficijent, zadan brojčanom vrijednošću koja vrijedi u sustavu SI. Betonski pravokutni kanal ima širinu $b=2{,}00\\ \\text{m}$, dubinu vode $y=0{,}80\\ \\text{m}$, nagib dna $S=0{,}0005$ i $n=0{,}013$. **Traži se** 1. Provjeri dimenzijsku homogenost jednadžbe i odredi dimenziju te SI jedinicu koeficijenta $n$. 2. Odredi hidraulički radijus, srednju brzinu i protok. 3. Projektant zadrži istu brojčanu vrijednost $n$, ali $R_h$ uvrsti u stopama ($1\\ \\text{m}=3{,}2808\\ \\text{ft}$) očekujući $v$ u ft/s. Odredi faktor kojim treba pomnožiti desnu stranu da jednadžba ostane valjana i koliku bi brzinu dobio bez njega.",
+        "sha256": "f8f32ca3cfc410245fc05cb5d4a1e5d81249545dd5ab694cc791cab2f92ffcd4",
         "authoritative": true
       },
       "input_data": {
@@ -32716,8 +32716,8 @@
         "anchor": "#task-trapezni-presjek"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Simetrični trapezni kanal ima širinu dna $b=2{,}40\\ \\mathrm{m}$, koeficijent pokosa $m_{pok}=1{,}50$ (vodoravno na jedan okomito; $z$ ostaje visina dna), dubinu $y=0{,}900\\ \\mathrm{m}$ i protok $Q=3{,}60\\ \\mathrm{m^3/s}$. Tok je jednodimenzijski, s približno hidrostatičkim tlakom. Slobodna površina nije dio omočenog opsega. **Traži se** 1. Izračunaj $A$, $T$, $P$, $y_h$, $R_h$, srednju brzinu i $Fr$. U trapeznom kanalu razlikuj površinu poprečnog presjeka toka, širinu slobodne površine i omočeni opseg. 2. Klasificiraj tok. Obrazloži koja duljina ulazi u brzinu gravitacijskog vala i zašto je ne smiješ zamijeniti duljinom mjerodavnom za otpor strujanju.",
-        "sha256": "3d35ebd8969316af4648a5273de9f8e1c251357328853caf895c0adac0371add",
+        "markdown": "**Tekst zadatka** Simetrični trapezni kanal ima širinu dna $b=2{,}40\\ \\mathrm{m}$, koeficijent pokosa $m_{pok}=1{,}50$ (vodoravno na jedan okomito; $z$ ostaje visina dna), dubinu $y=0{,}900\\ \\mathrm{m}$ i protok $Q=3{,}60\\ \\mathrm{m^3/s}$. Tok je jednodimenzijski, s približno hidrostatičkim tlakom. Slobodna površina nije dio oplakanog opsega. **Traži se** 1. Izračunaj $A$, $T$, $P$, $y_h$, $R_h$, srednju brzinu i $Fr$. U trapeznom kanalu razlikuj površinu poprečnog presjeka toka, širinu slobodne površine i oplakani opseg. 2. Klasificiraj tok. Obrazloži koja duljina ulazi u brzinu gravitacijskog vala i zašto je ne smiješ zamijeniti duljinom mjerodavnom za otpor strujanju.",
+        "sha256": "9bd492135cf45f26829a66a616377a09b3c91810d2d52c2aa32c9c70024e7b26",
         "authoritative": true
       },
       "input_data": {

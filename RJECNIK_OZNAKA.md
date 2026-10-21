@@ -148,7 +148,7 @@ Izvor: stvarni tekst poglavlja (13. 10. 2026.), dopunski d01/d02.
 | ρ | gustoća | kg/m³ | P1, P2, P3, P5, P6 (ch), Z4, Z6 |
 | δ | debljina sloja / procjepa | m | izvod, P2, P4, Z1, Z5 |
 | δ_1, δ_2 | debljine gornjeg i donjeg procjepa | m | Z3 |
-| A | aktivna površina ploče; omočena površina osovine (P4) | m² | izvod, P2, P4, Z1, Z3, Z5 |
+| A | aktivna površina ploče; oplakana površina osovine (P4) | m² | izvod, P2, P4, Z1, Z3, Z5 |
 | F | vučna (vanjska) sila na pokretnu ploču | N | uvod, izvod, P2, Z1, Z3 |
 | F_v | sila ulja (uzorka) na ploču (viskozni otpor) | N | tumačenje uvodne skice; Z5 („Napomene uz skice”) |
 | F_1, F_2 | sila trenja pri 0 °C i 90 °C (P4); sile na gornjoj/donjoj strani ploče (Z3) | N | P4, Z3 |
@@ -857,7 +857,7 @@ Napomena: SVG-ovi ovog poglavlja imaju naslijeđeni prefiks datoteke `u12_`, a I
 
 | simbol | naziv veličine | jedinica | gdje se pojavljuje |
 |---|---|---|---|
-| $A$, $T$, $P$ | površina presjeka toka, širina slobodne površine, omočen opseg | m², m, m | geometrija, Z3, Z6 |
+| $A$, $T$, $P$ | površina presjeka toka, širina slobodne površine, oplakani opseg | m², m, m | geometrija, Z3, Z6 |
 | $R_h=A/P$, $y_h=A/T$, $D_h$ | hidraulički polumjer, hidraulička dubina, hidraulički promjer (usporedba) | m | geometrija, Z3 |
 | $c=\sqrt{gy_h}$ | brzina dugog gravitacijskog vala (samo u ovom poglavlju) | m/s | Froude, Z1 |
 | $Q$, $q=Q/b$ | volumenski protok, protok po širini | m³/s, m²/s | posvuda |

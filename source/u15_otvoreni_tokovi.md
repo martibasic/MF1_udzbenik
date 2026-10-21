@@ -18,7 +18,7 @@ U punoj cijevi geometrija presjeka zadaje cijelu granicu toka. U otvorenom kanal
 
 ## Geometrija presjeka i hidraulička dubina {#sec-geometrija-kanala}
 
-Za poprečni presjek toka definiramo površinu $A$, širinu slobodne površine $T$ (širinu vodnog lica, ne gaz), omočeni opseg $P$ (dio ruba presjeka u dodiru sa stijenkama i dnom, bez slobodne površine) i hidraulički polumjer
+Za poprečni presjek toka definiramo površinu $A$, širinu slobodne površine $T$ (širinu vodnog lica, ne gaz), oplakani opseg $P$ (dio ruba presjeka u dodiru sa stijenkama i dnom, bez slobodne površine) i hidraulički polumjer
 
 $$
 R_h=\frac{A}{P}.
@@ -351,7 +351,7 @@ Odredi protok čistoga kanala i kanala obraslog vegetacijom te relativno smanjen
 
 **Rješenje**
 
-Površina presjeka je $A=3{,}0\ \text{m}^2$, omočeni opseg $P=5{,}0\ \text{m}$, a hidraulički polumjer $R_h=0{,}60\ \text{m}$.
+Površina presjeka je $A=3{,}0\ \text{m}^2$, oplakani opseg $P=5{,}0\ \text{m}$, a hidraulički polumjer $R_h=0{,}60\ \text{m}$.
 
 Za čisti kanal dobivamo
 
@@ -488,11 +488,11 @@ $y_1=0{,}244\ \mathrm{m}$, $q\approx1{,}443\ \mathrm{m^2/s}$, $Q\approx2{,}886\ 
 
 **Tekst zadatka**
 
-Simetrični trapezni kanal ima širinu dna $b=2{,}40\ \mathrm{m}$, koeficijent pokosa $m_{pok}=1{,}50$ (vodoravno na jedan okomito; $z$ ostaje visina dna), dubinu $y=0{,}900\ \mathrm{m}$ i protok $Q=3{,}60\ \mathrm{m^3/s}$. Tok je jednodimenzijski, s približno hidrostatičkim tlakom. Slobodna površina nije dio omočenog opsega.
+Simetrični trapezni kanal ima širinu dna $b=2{,}40\ \mathrm{m}$, koeficijent pokosa $m_{pok}=1{,}50$ (vodoravno na jedan okomito; $z$ ostaje visina dna), dubinu $y=0{,}900\ \mathrm{m}$ i protok $Q=3{,}60\ \mathrm{m^3/s}$. Tok je jednodimenzijski, s približno hidrostatičkim tlakom. Slobodna površina nije dio oplakanog opsega.
 
 **Traži se**
 
-1. Izračunaj $A$, $T$, $P$, $y_h$, $R_h$, srednju brzinu i $Fr$. U trapeznom kanalu razlikuj površinu poprečnog presjeka toka, širinu slobodne površine i omočeni opseg.
+1. Izračunaj $A$, $T$, $P$, $y_h$, $R_h$, srednju brzinu i $Fr$. U trapeznom kanalu razlikuj površinu poprečnog presjeka toka, širinu slobodne površine i oplakani opseg.
 2. Klasificiraj tok. Obrazloži koja duljina ulazi u brzinu gravitacijskog vala i zašto je ne smiješ zamijeniti duljinom mjerodavnom za otpor strujanju.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}

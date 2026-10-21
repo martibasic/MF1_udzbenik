@@ -222,7 +222,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "28c1b02821ab7d4848d9d4d474084135b6a50a668281e32910062ef5da732ad1",
+      "source_sha256": "d06cff6519ba6f320620d6df2e314ec8435a420d4630930d923ca29d76b336b7",
       "sections": [
         {
           "id": "viskoznost",
@@ -355,7 +355,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "70a654c086655c8ca59f9dee064db74cd3007047173ae1d415a6494abf3ed50d",
+      "source_sha256": "0e5e574f149af8618508636dd90d5dca2783120d03131655cf074bdbb6242921",
       "sections": [
         {
           "id": "diferencijalna-jednadžba-hidrostatike",
@@ -610,7 +610,7 @@
       "kind": "chapter",
       "number": "5",
       "part": "part-2",
-      "source_sha256": "4c0b11e5d02c5d9c3f156e255aaa07ba546d8491bc434653b2a9f248fcb83fbb",
+      "source_sha256": "f338da712acfa64242ef3e05bea9d79f77a25b764578f62bc34efb5bbb3dc266",
       "sections": [
         {
           "id": "hidrostatske-sile-na-plohe",
@@ -1535,7 +1535,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "2631fa65e6c877f9e99be0cac6996f1f3789dde09ffb996c87fb4631acd74d2c",
+      "source_sha256": "578c4565002ebd6c04ec5bfc40315042c13eedc10e1f85a54adde670a62b9905",
       "sections": [
         {
           "id": "dimenzijska-analiza-i-sličnost",
@@ -1832,7 +1832,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "840fb927540657e8e92edace7c5ece68e583f0c26971dafdce908d03c9811a68",
+      "source_sha256": "732da4b48c4022d1ddc0bf340811a5d1fd4e51f17d8a869b3cec5b21e3b0f24d",
       "sections": [
         {
           "id": "sec-realna-energijska-bilanca",
@@ -2131,7 +2131,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "a9e951b79a97e5c0274e7b682785030440b688bdc56a0802d59214de14240b11",
+      "source_sha256": "b8806a7436ce1df30602e5b84cad98e27a8db514e7008f6dbe1a23644bf10052",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2363,7 +2363,7 @@
       "kind": "appendix",
       "number": "C",
       "part": null,
-      "source_sha256": "b3cf03e3fcce08972129b06a208178a477d7a2f049791f38d1a879bd5a50bd42",
+      "source_sha256": "f8f03b4efa87501481df659119e06b290e6bb20cdf5bf919b4612b44b35af013",
       "sections": [
         {
           "id": "globalna-provjera-prije-računa",
@@ -2521,7 +2521,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "c178b6783bde8968142be5754c3cbb39d6619e7454d2119e98a0a0d939ca04ff",
+      "source_sha256": "d16ccc1b8e7f5e77b7e016cfb0a3b9ee380af003509e4f210feab0b773649ab7",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",

@@ -770,7 +770,7 @@ Pravokutna zaklopka širine $b=1{,}50\ \mathrm{m}$ i duljine $L=2{,}00\ \mathrm{
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Za dubinu manju od $L\sin\theta$ omočen je samo dio ploče, a hvatište je na trećini omočene duljine od dna; provjeri je li uvjet „hvatište u osi” u tom području uopće ostvariv. Za potpuno uronjenu ploču koristi $y_{CP}-y_C=I_G\sin\theta/(Ah_C)$ s koordinatom uzduž ploče i $h_C=y-(L/2)\sin\theta$, pa uvjet $L/2-(y_{CP}-y_C)=a$ riješi po $h_C$. Moment oko osi računaj s krakom uzduž ploče.
+Za dubinu manju od $L\sin\theta$ oplakan je samo dio ploče, a hvatište je na trećini oplakane duljine od dna; provjeri je li uvjet „hvatište u osi” u tom području uopće ostvariv. Za potpuno uronjenu ploču koristi $y_{CP}-y_C=I_G\sin\theta/(Ah_C)$ s koordinatom uzduž ploče i $h_C=y-(L/2)\sin\theta$, pa uvjet $L/2-(y_{CP}-y_C)=a$ riješi po $h_C$. Moment oko osi računaj s krakom uzduž ploče.
 :::
 ::::
 ::::
@@ -779,7 +779,7 @@ Za dubinu manju od $L\sin\theta$ omočen je samo dio ploče, a hvatište je na t
 ::: {.callout-tip collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
 
-Djelomično uronjena ploča otvorila bi se tek pri omočenoj duljini $3a=2{,}40\ \mathrm{m}>L$, pa je pri otvaranju potpuno uronjena: $h_C=L^2\sin\theta/[12(L/2-a)]=1{,}443\ \mathrm{m}$, $y_{otv}=2{,}309\ \mathrm{m}$, gornji rub $0{,}577\ \mathrm{m}$ ispod površine. Pri $y=1{,}80\ \mathrm{m}$: $F=27{,}43\ \mathrm{kN}$, hvatište $0{,}691\ \mathrm{m}$ od donjeg ruba, dakle ispod osi; moment oko osi $2{,}99\ \mathrm{kN\,m}$; sila praga $R=3{,}74\ \mathrm{kN}$ okomito na ploču. Sila u težištu, $1{,}00\ \mathrm{m}$ od donjeg ruba i iznad osi, dala bi otvaranje pri svakoj dubini; smjer momenta određuje hvatište u centru tlaka, ne težište.
+Djelomično uronjena ploča otvorila bi se tek pri oplakanoj duljini $3a=2{,}40\ \mathrm{m}>L$, pa je pri otvaranju potpuno uronjena: $h_C=L^2\sin\theta/[12(L/2-a)]=1{,}443\ \mathrm{m}$, $y_{otv}=2{,}309\ \mathrm{m}$, gornji rub $0{,}577\ \mathrm{m}$ ispod površine. Pri $y=1{,}80\ \mathrm{m}$: $F=27{,}43\ \mathrm{kN}$, hvatište $0{,}691\ \mathrm{m}$ od donjeg ruba, dakle ispod osi; moment oko osi $2{,}99\ \mathrm{kN\,m}$; sila praga $R=3{,}74\ \mathrm{kN}$ okomito na ploču. Sila u težištu, $1{,}00\ \mathrm{m}$ od donjeg ruba i iznad osi, dala bi otvaranje pri svakoj dubini; smjer momenta određuje hvatište u centru tlaka, ne težište.
 :::
 ::::
 

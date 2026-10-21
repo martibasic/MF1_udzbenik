@@ -524,7 +524,7 @@ $$ {#eq-hidrostatika-rijeseni-primjer-balastni-tank-broda-tlak-iznutr-05}
 
 **Provjera i tumačenje**
 
-1. Uz jednake gustoće neto tlak na cijeloj omočenoj oplati punog tanka iznosi $\rho_{mv} g (T - H_{tk}) = 1025 \cdot 9{,}81 \cdot 3{,}5 = 35{,}19\ \text{kPa}$, pa dno i ploča $P$ nose isti neto tlak. Razlika stanja B i A, $50{,}28\ \text{kPa}$, jednaka je $\rho_{mv} g H_{tk}$, a stanje C leži između njih.
+1. Uz jednake gustoće neto tlak na cijeloj oplakanoj oplati punog tanka iznosi $\rho_{mv} g (T - H_{tk}) = 1025 \cdot 9{,}81 \cdot 3{,}5 = 35{,}19\ \text{kPa}$, pa dno i ploča $P$ nose isti neto tlak. Razlika stanja B i A, $50{,}28\ \text{kPa}$, jednaka je $\rho_{mv} g H_{tk}$, a stanje C leži između njih.
 2. Prazan tank ovdje najjače opterećuje oplatu, ali mjerodavno projektno stanje određuju propisane kombinacije opterećenja i konstrukcijski model. Tlak na dnu pretvara se u razinu samo uz poznatu gustoću, kao u primjeru [-@ex-sondiranje-teretnog-tanka-s-tlacnim-mjeracem-razine].
 :::
 

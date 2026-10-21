@@ -531,7 +531,7 @@ $$
 \tau_2 = \mu_2 \frac{u}{\delta} \approx 838\ \text{Pa}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-04}
 
-Omočena površina osovine:
+Oplakana površina osovine:
 
 $$
 A = \pi D L = \pi \cdot 0{,}050 \cdot 0{,}070 \approx 1{,}10 \cdot 10^{-2}\ \text{m}^2

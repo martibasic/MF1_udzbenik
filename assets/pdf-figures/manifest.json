@@ -4,7 +4,7 @@
     "tools/build_print_figures.mjs": "4b695d1282ac4e91a26f75117596f0fd080dd3312ecc337536fd2be86e50a5e7",
     "assets/figure-tokens.json": "5d0e62e89920146860914f5b7fd267a3ab2c9d5ba72f2aa4478cc600358c83f8",
     "assets/figure-compositions.json": "ad84e3227b657f1953e069762f51d1ef6797e147436c04b558f0a658a866698c",
-    "assets/print-layouts.json": "b33e987691707373159280c546d0b9945d53ad476dbc8a368e1c0823ca9244c1"
+    "assets/print-layouts.json": "463e59faccf6485290a9bc6d15ee39838fdcd24bd87a70f27ffd097a6bb30f1f"
   },
   "tokens": {
     "text-width-pt": 447.874,
@@ -9978,7 +9978,7 @@
             3
           ],
           "keep_with_next": false,
-          "sha256": "1465ec1767a29dde8888f11ef08991d30ab1b1d65057c3b47fc86ae3183114bc"
+          "sha256": "dea8ae5ab92ebb9c72d6be62e055aafba56ae9233d44167d25a87ebf209a53ac"
         },
         {
           "file": "u15_vjezbe_skice--3.svg",
@@ -10230,7 +10230,7 @@
           ]
         }
       ],
-      "source_sha1": "d54ba915f83260535a3cdf1dc1a3c4250da9a68d"
+      "source_sha1": "e38c2afcd6c7c149fb4bf4e4ae8145c5a836322c"
     },
     "u13_ch1_serijsko_paralelna_mreza.svg": {
       "rows": [

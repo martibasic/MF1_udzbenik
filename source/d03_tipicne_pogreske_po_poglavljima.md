@@ -251,7 +251,7 @@ Zamjena hidrauličke dubine $y_h=A/T$ hidrauličkim radijusom $R_h=A/P$ ili hidr
 ::: {.mf1-error-column}
 **Što provjeriti**
 
-Razdvoji $A$, širinu slobodne površine $T$ i omočeni opseg $P$. Ispod ustave poveži uzvodni presjek i suženi mlaz energijom, pa tek onda očitaj $C_d$. Na pragu provjeri raspoloživu energiju, kritičnu granicu i nastavak uzvodne grane. Skok opiši bilancom količine gibanja (impulsnom funkcijom) uz hidrostatičke sile; nesigurnost propagiraj iz zajedničkog $q=Q/b$. Provjeri nadvišenje, ulazno stanje bazena, nizvodni vodostaj i kalibraciju hrapavosti.
+Razdvoji $A$, širinu slobodne površine $T$ i oplakani opseg $P$. Ispod ustave poveži uzvodni presjek i suženi mlaz energijom, pa tek onda očitaj $C_d$. Na pragu provjeri raspoloživu energiju, kritičnu granicu i nastavak uzvodne grane. Skok opiši bilancom količine gibanja (impulsnom funkcijom) uz hidrostatičke sile; nesigurnost propagiraj iz zajedničkog $q=Q/b$. Provjeri nadvišenje, ulazno stanje bazena, nizvodni vodostaj i kalibraciju hrapavosti.
 :::
 ::::
 

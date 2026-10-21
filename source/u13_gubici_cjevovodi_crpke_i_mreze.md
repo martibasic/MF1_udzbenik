@@ -131,7 +131,7 @@ $$ {#eq-cjevovodi-3-od-reynoldsova-broja-do-koeficijenta-trenja-01}
 
 **Fizikalno pitanje.** Kolika sila stijenke koči potpuno razvijen tok u ravnoj kružnoj cijevi i kako se ona sažima u jedan bezdimenzijski koeficijent?
 
-**Bilanca.** Promatra se odsječak fluida duljine $L$ koji ispunjava cijev promjera $D$. U razvijenom stacionarnom toku količina gibanja odsječka ne mijenja se, pa tlačna sila na presjecima mora uravnotežiti smičnu silu kojom stijenka djeluje na fluid, odnosno $\tau_{st}$ po omočenoj plohi $\pi DL$:
+**Bilanca.** Promatra se odsječak fluida duljine $L$ koji ispunjava cijev promjera $D$. U razvijenom stacionarnom toku količina gibanja odsječka ne mijenja se, pa tlačna sila na presjecima mora uravnotežiti smičnu silu kojom stijenka djeluje na fluid, odnosno $\tau_{st}$ po oplakanoj plohi $\pi DL$:
 
 $$
 \Delta p\,\frac{\pi D^2}{4}=\tau_{st}\,\pi D L
