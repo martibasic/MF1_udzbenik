@@ -754,7 +754,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Na dopuštenoj dubini $y_{kon}-f_{min}$ izračunaj $A$, $P$, $R_h$ i kapacitet iz jednadžbe [(15.25)](u15_otvoreni_tokovi.qmd#eq-manning). Pri $Q_d$ numerički riješi Manningovu jednadžbu po dubini (bisekcijom ili tablično); veći $n$ smanjuje kapacitet i povećava normalnu dubinu. Za bazen upotrijebi $q=Q_d/b_{baz}$ i jednadžbu [(15.20)](u15_otvoreni_tokovi.qmd#eq-spregnute-dubine).
 
-**Kontrolni rezultat ili kriterij.** Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$. Uvjet slobodnog ruba zadovoljavaju A i B, a C ne. Pri $Q_d$ je $y_2=1{,}059\ \mathrm{m}<1{,}40\ \mathrm{m}$.
+**Kontrolni rezultat ili kriterij.** Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$. Uvjet slobodnog ruba zadovoljavaju A i B, a C ne. Pri $Q_d$ je $y_2=1{,}059\ \mathrm{m}<1{,}40\ \mathrm{m}$, pa skok ostaje u bazenu.
 
 ::: {.mf1-mini-summary}
 <p class="mf1-box-label">Opseg ključa</p>

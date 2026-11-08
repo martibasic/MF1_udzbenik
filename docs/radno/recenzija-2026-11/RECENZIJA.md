@@ -123,3 +123,17 @@ Svaki obrazac javlja se u svim ili većini skupina; mjesta su u `PROVJERA.md`.
   nepotvrdive dok ih autorica ne potvrdi u literaturi.
 - Uredničko čitanje i nakon ograničenja daje 30–40 nalaza P2 po skupini; za iduću reviziju
   vrijedi ga voditi poglavlje po poglavlje, zajedno s provedbom.
+
+## 10. Provedba
+
+**8. 11. 2026. — tekstni P1** (brojevi i rezultati nepromijenjeni; verifikatori, auditi i render prolaze):
+
+| # | Provedeno |
+| --- | --- |
+| G1-01 | Pog. 4 Z2: spremnik je „kruto ovješen o kolica lučke dizalice” i „ne naginje se ni njiše”; napomena uz skice navodi da bi slobodno obješen teret zadržao površinu usporednu s dnom; opis skice i alt usklađeni. |
+| G3-02 | Pog. 10 P7: 440 W je snaga koju dovod predaje vodi; mlazovi odnose $\dot m(w-u)^2/2\approx369$ W. |
+| G3-03 | Pog. 12 uvod: zakon viskoznosti je slučaj konstitutivne veze koja ulazi u Navier–Stokesovu jednadžbu. |
+| G4-02 | Pog. 15 Z2 ključ: $C_d$ pada jer se razlika $y_0-y_1$ relativno smanjuje; brzina dolaska taj pad djelomično nadoknađuje. U PDF-u ključ taj dio odgovora i dalje skraćuje (G4-15). |
+| G4-03 | Pog. 15 Z6: $y_{2,dop}$ je dubina koju nizvodni vodostaj može održati; „Traži se 2” traži odluku ostaje li skok u bazenu; navedeno da $y_1$ daje brzotok ili pad dna; ključ i oznaka na skici („nizvodno”) usklađeni. |
+
+Preostali P1 (G2-01, G3-01, G4-01) traže promjenu brojeva ili zadataka i čekaju autoričinu odluku.

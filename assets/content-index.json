@@ -476,7 +476,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "727030195ec5c9851eb58a544ad1dbe5114884ee47d1d25379f37ea5272d648a",
+      "source_sha256": "d04aa7e8f0bf75aaf1e9285c2c515125eb423ee8364caebf70614972afd05e98",
       "sections": [
         {
           "id": "translatorno-ubrzanje",
@@ -1367,7 +1367,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "0cad740d0f41d56028ef21c048ee481721780354004342b9b8bd6dde30d01ea8",
+      "source_sha256": "5c7422d579b603414648a6117505491c6deff7bc3807d81a14f46f88ebdb79c0",
       "sections": [
         {
           "id": "integralni-zakon-količine-gibanja",
@@ -1689,7 +1689,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "ac00aefe5c4fd7c881233a6ac09bc5d2d9272c60b2f34de63e875568f8760f0b",
+      "source_sha256": "7256c0535aa72f0f6b93029a8dd34964f424be9fbfef8067ad4ac13845da6891",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -2133,7 +2133,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "87df9aad28e34d117588920578f5f5abad064cbfe9da762916f625e386b9fd3a",
+      "source_sha256": "7d4ef62acc73c5e23d2ef66ec900f353f2d5a34995351964a3808875820b4ee8",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2523,7 +2523,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "e8b4753ba1feb0ea57ac862cb2472e40ebf1efbc2f50800d5d4be86a825863bb",
+      "source_sha256": "2189c1fce8d04cbd563fd738422770e9ac3573125bd1ed8bedd4013838fdd499",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -4776,7 +4776,7 @@
       "document": "u04",
       "number": "4.7",
       "caption": "Skice uz Z1–Z6: translacija, rotacija i granice relativnog mirovanja.",
-      "alt": "Šest panela: spremnik s nagnutom površinom, spremnik obješen o kolica dizalice s vodoravnim i okomitim ubrzanjem, zatvoreni cilindar s brzinom i ubrzanjima, zatvorena posuda s dvama senzorima, spremnik s grafom očitanja i rotirajući spremnik sa zatvorenim usisom u osi.",
+      "alt": "Šest panela: spremnik s nagnutom površinom, spremnik kruto ovješen o kolica dizalice s vodoravnim i okomitim ubrzanjem, zatvoreni cilindar s brzinom i ubrzanjima, zatvorena posuda s dvama senzorima, spremnik s grafom očitanja i rotirajući spremnik sa zatvorenim usisom u osi.",
       "source": "../assets/print/u04_vjezbe_skice.svg",
       "type": "composite",
       "variants": {

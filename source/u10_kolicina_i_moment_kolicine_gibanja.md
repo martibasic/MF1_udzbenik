@@ -854,7 +854,7 @@ $$ {#eq-rotirajuca-mlaznica-granicna-vrtnja}
 
 **Provjera i tumačenje**
 
-Sile dvaju mlazova poništavaju se, pa ležaj ne nosi poprečnu silu, a momenti se zbrajaju. Moment ovisi o apsolutnoj brzini $w-u$ i linearno pada s $\omega$. Kočena snaga ($71\ \text{W}$) mali je dio snage mlazova $\dot m(w^2-u^2)/2\approx440\ \text{W}$; ostatak odnosi mlaz prema stijenci tanka, što je i svrha uređaja.
+Sile dvaju mlazova poništavaju se, pa ležaj ne nosi poprečnu silu, a momenti se zbrajaju. Moment ovisi o apsolutnoj brzini $w-u$ i linearno pada s $\omega$. Kočena snaga ($71\ \text{W}$) mali je dio snage $\dot m(w^2-u^2)/2\approx440\ \text{W}$ koju dovod predaje vodi; ostatak, $\dot m(w-u)^2/2\approx369\ \text{W}$, odnose mlazovi prema stijenci tanka, što je i svrha uređaja.
 :::
 
 ::: {.mf1-samoprovjera}

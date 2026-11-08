@@ -478,7 +478,7 @@ Napiši $y_0+q^2/(2gy_0^2)=y_1+q^2/(2gy_1^2)$ i riješi po $q$: $q=y_1\sqrt{2g(y
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$y_1=0{,}244\ \mathrm{m}$, $q\approx1{,}443\ \mathrm{m^2/s}$, $Q\approx2{,}886\ \mathrm{m^3/s}$ i $C_d\approx0{,}576$, unutar raspona 0,55–0,60. $Fr_0\approx0{,}163$ (mirni tok) i $Fr_1\approx3{,}82$ (siloviti tok): tok prolazi kroz kritično stanje ispod ustave, pa uzvodna razina ovisi samo o protoku i otvoru, a ne o nizvodnom stanju. Pri $a=0{,}800\ \mathrm{m}$ je $y_1=0{,}488\ \mathrm{m}$, $q\approx2{,}741\ \mathrm{m^2/s}$, dakle $1{,}90$ puta više: $C_d$ pada na $0{,}547$ jer brzina dolaska uzvodno raste, a raspoloživa razlika $y_0-y_1$ se smanjuje.
+$y_1=0{,}244\ \mathrm{m}$, $q\approx1{,}443\ \mathrm{m^2/s}$, $Q\approx2{,}886\ \mathrm{m^3/s}$ i $C_d\approx0{,}576$, unutar raspona 0,55–0,60. $Fr_0\approx0{,}163$ (mirni tok) i $Fr_1\approx3{,}82$ (siloviti tok): tok prolazi kroz kritično stanje ispod ustave, pa uzvodna razina ovisi samo o protoku i otvoru, a ne o nizvodnom stanju. Pri $a=0{,}800\ \mathrm{m}$ je $y_1=0{,}488\ \mathrm{m}$, $q\approx2{,}741\ \mathrm{m^2/s}$, dakle $1{,}90$ puta više: $C_d$ pada na $0{,}547$ jer veći otvor daje dublji suženi mlaz, pa se razlika $y_0-y_1$ relativno smanjuje; veća brzina dolaska taj pad samo djelomično nadoknađuje.
 :::
 ::::
 
@@ -583,12 +583,12 @@ Simetrični trapezni kanal ima $b=3{,}00\ \mathrm{m}$, koeficijent pokosa $m_{po
 
 Nastavne procjene hrapavosti za tri stanja održavanja jesu A: $n_A=0{,}018\pm0{,}001\ \mathrm{s/m^{1/3}}$, B: $n_B=0{,}026\pm0{,}002\ \mathrm{s/m^{1/3}}$ i C: $n_C=0{,}035\pm0{,}004\ \mathrm{s/m^{1/3}}$. Navedene standardne nesigurnosti u ovom zadatku ne ulaze u račun; nastavak s nepovoljnijom procjenom nalazi se u bilježnici.
 
-Bazen je zaseban vodoravni pravokutni kontrolni volumen širine $b_{baz}=5{,}00\ \mathrm{m}$. Zadana je ulazna dubina $y_1=0{,}350\ \mathrm{m}$, a dopuštena spregnuta dubina iznosi $y_{2,dop}=1{,}40\ \mathrm{m}$. Ulazni tok je natkritičan, rubni tlakovi su hidrostatički, $\beta=1$, a uzdužne sile trenja zanemarive.
+Bazen je zaseban vodoravni pravokutni kontrolni volumen širine $b_{baz}=5{,}00\ \mathrm{m}$. Zadana je ulazna dubina $y_1=0{,}350\ \mathrm{m}$, koju daje brzotok ili pad dna između kanala i bazena; taj prijelaz ovdje se ne računa. Nizvodni vodostaj u bazenu može održati dubinu do $y_{2,dop}=1{,}40\ \mathrm{m}$: skok ostaje u bazenu ako potrebna spregnuta dubina nije veća od te vrijednosti. Ulazni tok je natkritičan, rubni tlakovi su hidrostatički, $\beta=1$, a uzdužne sile trenja zanemarive.
 
 **Traži se**
 
 1. Za svako stanje održavanja odredi kapacitet kanala na dopuštenoj dubini $y_{kon}-f_{min}$ te normalnu dubinu pri $Q_d$ i pripadni slobodni rub. Navedi koja stanja zadovoljavaju uvjet $f\ge f_{min}$.
-2. Pri $Q_d$ odredi spregnutu dubinu u bazenu i usporedi je s dopuštenom.
+2. Pri $Q_d$ odredi spregnutu dubinu u bazenu, usporedi je s $y_{2,dop}$ i odluči ostaje li skok u bazenu.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -602,7 +602,7 @@ Na dopuštenoj dubini $y_{kon}-f_{min}$ izračunaj $A$, $P$, $R_h$ i kapacitet i
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$. Uvjet slobodnog ruba zadovoljavaju A i B, a C ne. Pri $Q_d$ je $y_2=1{,}059\ \mathrm{m}<1{,}40\ \mathrm{m}$.
+Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$. Uvjet slobodnog ruba zadovoljavaju A i B, a C ne. Pri $Q_d$ je $y_2=1{,}059\ \mathrm{m}<1{,}40\ \mathrm{m}$, pa skok ostaje u bazenu.
 :::
 ::::
 

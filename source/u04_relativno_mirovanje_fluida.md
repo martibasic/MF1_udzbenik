@@ -680,7 +680,7 @@ $\Delta h \approx 0{,}22\ \text{m}$; $h_{str} \approx 0{,}45\ \text{m}$, $h_{pre
 
 **Tekst zadatka**
 
-Otvoreni pravokutni spremnik duljine $L = 2{,}00\ \text{m}$ i visine $H = 1{,}20\ \text{m}$ s vodom gustoće $\rho_v=1000\ \text{kg/m}^3$ do mirne razine $h_0 = 0{,}80\ \text{m}$ visi na lučkoj dizalici. Kolica dizalice ubrzavaju vodoravno ubrzanjem $a_x = 1{,}5\ \text{m/s}^2$ u smjeru duljine spremnika, a vitlo istodobno ubrzava teret prema gore ubrzanjem $a_z = 1{,}2\ \text{m/s}^2$. Spremnik se ne njiše, a voda u odnosu na njega miruje.
+Otvoreni pravokutni spremnik duljine $L = 2{,}00\ \text{m}$ i visine $H = 1{,}20\ \text{m}$ s vodom gustoće $\rho_v=1000\ \text{kg/m}^3$ do mirne razine $h_0 = 0{,}80\ \text{m}$ kruto je ovješen o kolica lučke dizalice: krute spojnice i vodilice drže ga vodoravnim. Kolica dizalice ubrzavaju vodoravno ubrzanjem $a_x = 1{,}5\ \text{m/s}^2$ u smjeru duljine spremnika, a vitlo istodobno ubrzava teret prema gore ubrzanjem $a_z = 1{,}2\ \text{m/s}^2$. Spremnik se ne naginje ni njiše, a voda u odnosu na njega miruje.
 
 **Traži se**
 
@@ -848,9 +848,9 @@ $\omega_{max}\approx7{,}83$ rad/s. Za $k=0{,}80$: dubine (os, rub) ≈ (0,3576; 
 
 :::::
 
-![Skice uz Z1–Z6: translacija, rotacija i granice relativnog mirovanja.](../assets/print/u04_vjezbe_skice.svg){#fig-u04-vjezbe fig-align="center" fig-alt="Šest panela: spremnik s nagnutom površinom, spremnik obješen o kolica dizalice s vodoravnim i okomitim ubrzanjem, zatvoreni cilindar s brzinom i ubrzanjima, zatvorena posuda s dvama senzorima, spremnik s grafom očitanja i rotirajući spremnik sa zatvorenim usisom u osi."}
+![Skice uz Z1–Z6: translacija, rotacija i granice relativnog mirovanja.](../assets/print/u04_vjezbe_skice.svg){#fig-u04-vjezbe fig-align="center" fig-alt="Šest panela: spremnik s nagnutom površinom, spremnik kruto ovješen o kolica dizalice s vodoravnim i okomitim ubrzanjem, zatvoreni cilindar s brzinom i ubrzanjima, zatvorena posuda s dvama senzorima, spremnik s grafom očitanja i rotirajući spremnik sa zatvorenim usisom u osi."}
 
-**Napomene uz skice.** Nagnute površine u Z1, Z2 i Z5 i radni paraboloid u Z6 shematski su i ne prikazuju traženi rezultat. U Z2 oba ubrzanja odnose se na spremnik koji visi bez njihanja. U Z4 smjer vrtnje nije zadan. U Z5 točke su očitanja, a referentni model nije ucrtan. Z6 prikazuje zatvoren usis bez protoka.
+**Napomene uz skice.** Nagnute površine u Z1, Z2 i Z5 i radni paraboloid u Z6 shematski su i ne prikazuju traženi rezultat. U Z2 oba ubrzanja odnose se na kruto vođen spremnik koji se ne naginje. Slobodno obješen teret nagnuo bi se u smjer efektivnog polja, pa bi slobodna površina ostala usporedna s dnom. U Z4 smjer vrtnje nije zadan. U Z5 točke su očitanja, a referentni model nije ucrtan. Z6 prikazuje zatvoren usis bez protoka.
 
 ## Sažetak
 
