@@ -170,6 +170,7 @@ isti dan; tablica prikazuje stanje nakon ispravka.
 | Rečenice iznad 40 riječi | 17 (pog. 3, 4, 6, 7, 8, 11, 12, 14, 15) | 1 u dodatku D |
 | Istaknute formule | 784, sve numerirane | završna recenzija: referencirano oko 49 (V1) |
 | Nalazi alata K1, K4, K5, K7, K8, K12, K13 | 0 | 0 |
+| Pravila dodana nakon pilota (K8 lanac s kosom crtom, K12 opisno upućivanje) | 10 (pog. 3, 4, 5, 7, 12, 13, 14) | — |
 
 ## Oznake težine nalaza
 
