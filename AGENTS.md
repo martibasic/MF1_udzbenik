@@ -5,6 +5,15 @@ u razgovoru. Izričite korisnikove upute imaju prednost; već dano odobrenje za
 provedbu vrijedi i dalje. Pravila nisu razlog za ponovno traženje odobrenja
 za već dogovoreni posao.
 
+## Pisanje, lektura i recenzija teksta
+
+Svaki tekst koji čitatelj vidi slijedi pravila K1–K16 iz
+[konvencija pisanja](docs/konvencije_pisanja.md). Za pregled, recenziju,
+lekturu, probnu recenziju ili pripremu predaje Povjerenstvu FESB-a slijedi
+skill [recenzija-prirucnika](.claude/skills/recenzija-prirucnika/SKILL.md).
+Nakon svake prerade teksta pročitaj cijeli diff i pokreni
+`python tools/prirucnik_stats.py --usporedi <commit prije prerade>`.
+
 ## Prije analize ili zamjene zadataka i primjera
 
 Pročitaj aktualne dokumente, ne oslanjaj se samo na prethodni razgovor:
