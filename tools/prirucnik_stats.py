@@ -145,7 +145,7 @@ INLINE_MATH_RE = re.compile(r"(?<!\\)\$(?!\$)(.+?)(?<!\\)\$")
 HTML_TAG_RE = re.compile(r"<[^>]+>")
 ATTR_RE = re.compile(r"\{[#.][^}]*\}|\{[a-z-]+=[^}]*\}")
 LINK_RE = re.compile(r"\]\([^)]*\)")
-URL_RE = re.compile(r"https?://\S+")
+URL_RE = re.compile(r"https?://[^\s)\]>]+")
 CHREF_RE = re.compile(r"\[\]\{[^}]*\}")
 CROSSREF_RE = re.compile(r"\[?-?@[\w:-]+\]?")
 IMAGE_RE = re.compile(r"^\s*!\[(?P<cap>.*?)\]\((?P<path>[^)]*)\)(?P<attrs>\{.*\})?\s*$")
@@ -158,6 +158,8 @@ FENCE_CLOSE_RE = re.compile(r"^\s*:{3,}\s*$")
 def _math_zamjena(m: re.Match[str]) -> str:
     # Formula na kraju rečenice često nosi završnu točku u sebi: „… = \text{konst.}$ Svaki …”.
     kraj = m.group(1).rstrip()
+    if kraj.endswith(".}"):          # konst. na kraju rečenice, zapisano kao text-naredba
+        kraj = kraj[:-1]
     return " X" + (kraj[-1] if kraj.endswith((".", ",")) else "") + " "
 
 
