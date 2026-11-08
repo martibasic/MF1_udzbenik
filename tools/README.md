@@ -128,7 +128,7 @@ ključa treba pregledati nakon svake sadržajne izmjene.
 
 | Skripta | Namjena |
 |---|---|
-| `prirucnik_stats.py` | Profil vidljive proze po poglavlju (duljina rečenica, istaknute formule, P/Z, blokovi „Granica modela” i CFD) i nalazi prema pravilima K1, K3, K4, K7, K8, K12 i K13 iz [konvencija pisanja](../docs/konvencije_pisanja.md). `--nalazi` ispisuje nalaze s retkom, `--nacrt IZVOR` obrnuti nacrt poglavlja, `--usporedi REV` nakon prerade uspoređuje radnu kopiju s Git revizijom: izgubljeni i dodani brojevi, ID-jevi i citati te promijenjene rečenice s brojem, nijekanjem, ogradom, snagom tvrdnje ili poredbom. Ne mijenja datoteke. Nalazi su upute za čitanje; ne dokazuju ni pogrešku ni sačuvano značenje. |
+| `prirucnik_stats.py` | Profil vidljive proze po poglavlju (duljina rečenica, istaknute formule, P/Z, blokovi „Granica modela” i CFD) i nalazi prema pravilima K1, K3, K4, K5, K7, K8, K12 i K13 iz [konvencija pisanja](../docs/konvencije_pisanja.md). `--nalazi` ispisuje nalaze s retkom, `--nacrt IZVOR` obrnuti nacrt poglavlja, `--usporedi REV` nakon prerade uspoređuje radnu kopiju s Git revizijom: izgubljeni i dodani brojevi, ID-jevi i citati te promijenjene rečenice s brojem, nijekanjem, ogradom, snagom tvrdnje ili poredbom. Ne mijenja datoteke. Nalazi su upute za čitanje; ne dokazuju ni pogrešku ni sačuvano značenje. |
 
 ## SVG obrada i QA (trajno)
 

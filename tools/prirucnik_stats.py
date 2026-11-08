@@ -81,7 +81,9 @@ PRAVILA_TEKST: list[Pravilo] = [
     Pravilo("K7", "usisna košara → usisni koš", _r(r"\busisn\w*\s+košar\w*"), "usisni koš (engl. sea chest)"),
     Pravilo("K7", "brodski vijak → propeler", _r(r"\bbrodsk\w*\s+vij(ak|ka|ku|kom|ci|aka)\b"), "propeler"),
     Pravilo("K7", "disipacijski → umirni bazen", _r(r"\bdisipacijsk\w*\s+bazen\w*"), "umirni bazen"),
-    Pravilo("K7", "no-slip bez oznake engl.", _r(r"(?<!engl\. )\bno-?slip\b"), "uvjet prianjanja; engleski izraz kao (engl. *no-slip*)"),
+    Pravilo("K5", "engleski izraz bez „engl.”",
+            _r(r"(?<!engl\. )\b(no-?slip|choking|throttling|sliding mesh|ullage|sea chest|scale effect)\b"),
+            "Pri prvom spomenu: hrvatski naziv (engl. *izraz*); dalje samo hrvatski."),
     Pravilo("K7", "izračunat- → izračunan-", _r(r"\bizračunat(a|o|u|om|oj|ih|im|e)?\b"), "izračunan, izračunana, izračunano"),
     Pravilo("K7", "Bernoulli jednadžba", _r(r"\bBernoulli\s+jednadžb\w*"), "Bernoullijeva jednadžba"),
     Pravilo("K7", "kratica MF1 u tekstu", _r(r"(?<![\w/.-])MF1(?![\w-])", 0), "„u ovom priručniku” ili „Mehanika fluida 1”"),
@@ -95,15 +97,15 @@ PRAVILA_TEKST: list[Pravilo] = [
 # Pravila nad matematikom ($…$ i $$…$$).
 PRAVILA_MATEMATIKA: list[Pravilo] = [
     Pravilo("K8", "decimalna točka u formuli", _r(r"(?<![\w.])\d+\.\d+(?![\w.])", 0), "decimalni zarez kao {,}: 9{,}81"),
-    Pravilo("K8", "zarez bez {,} među znamenkama", _r(r"(?<=\d),(?=\d)", 0), "decimale 9{,}81; popis (26;\\,0)"),
+    Pravilo("K8", "zarez bez {,} među znamenkama", _r(r"(?<=\d),\s*(?=\d)", 0), "decimale 9{,}81; popis (26;\\,0)"),
     Pravilo("K8", "konst. bez \\text", _r(r"(?<!\\text\{)\bkonst\b|\bconst\b", 0), "\\text{konst.}"),
 ]
 
 # Riječi kojima se u --usporedi prati promjena značenja.
 NIJEKANJE = _r(r"\b(ne|nije|nisu|nema|nemaju|bez|nikad\w*|nijed\w*|ništa)\b")
-SNAGA = _r(r"\b(uvijek|samo|točno|isključivo|svak\w*|mora\w*|nužno|jedin\w*|potpuno|nikad\w*)\b")
+SNAGA = _r(r"\b(uvijek|samo|točno|isključivo|svak\w*|mora\w*|nužno|jedin(?:i|a|o|e|u|om|ih|im)|potpuno|nikad\w*)\b")
 OGRADA = _r(r"\b(približno|oko|otprilike|može|mogu|smije|obično|uglavnom|pretežno|reda|gotovo|tipično)\b|\\approx|≈")
-POREDBA = _r(r"\b(već\w*|manj\w*|viš\w*|niž\w*|brž\w*|sporij\w*|dulj\w*|krać\w*|deblj\w*|tanj\w*)\b")
+POREDBA = _r(r"\b(već\w*|manj\w*|viš\w*|niž\w*|brž\w*|sporij\w*|dulj(?:i|a|e|eg|em|ih|im|u)|krać\w*|deblj(?:i|a|e|eg|em|ih|im)|tanj(?:i|a|e|eg|em|ih|im))\b")
 
 KRATICE = (
     "pog", "npr", "tj", "sl", "engl", "konst", "str", "itd", "br", "god", "prof", "dr",
@@ -514,8 +516,14 @@ def _recenice_izvora(tekst: str) -> list[str]:
         if not s or FENCE_CLOSE_RE.match(s) or FENCE_OPEN_RE.match(s) or s.startswith(("<", "|", "![")):
             continue
         s = re.sub(r"\{[#.][^}]*\}", " ", s)
+        s = OZNAKA_POPISA_RE.sub("", s)
         out.extend(recenice(s))
     return out
+
+
+def _norm(tekst: str) -> str:
+    """Tekst za usporedbu sadržaja: mala slova, bez interpunkcije na rubovima riječi."""
+    return " ".join(re.sub(r"[.;:,!?()„”\"*]", " ", tekst.lower()).split())
 
 
 def _oznake(recenica: str) -> dict[str, Counter]:
@@ -567,9 +575,16 @@ def usporedi(rev: str, putanje: list[Path]) -> int:
         dodane = [r for r in nove if r not in skup_starih]
         iskoristene: set[int] = set()
         parovi = 0
+        spojene_nove = _norm(" ".join(dodane))
+        podijeljene = 0
         for r in uklonjene:
             o_r = _oznake(r)
             if not any(o_r.values()):
+                continue
+            # Rečenica razdijeljena u natuknice ili kraće rečenice: svaki njezin dio postoji u novom tekstu.
+            dijelovi = [d for d in (_norm(x) for x in re.split(r"[;:]\s", r)) if d]
+            if len(dijelovi) > 1 and all(d in spojene_nove for d in dijelovi):
+                podijeljene += 1
                 continue
             najbolja, omjer = -1, 0.0
             for j, d in enumerate(dodane):
@@ -591,8 +606,11 @@ def usporedi(rev: str, putanje: list[Path]) -> int:
             print(f"\n  • STARO: {r[:220]}")
             print(f"    NOVO:  {par[:220] if par else '— nema bliske zamjene (rečenica uklonjena?) —'}")
             print(f"    promjena: {'; '.join(promjene)}")
+        if podijeljene:
+            print(f"\n  {podijeljene} rečenica razdijeljeno u natuknice ili kraće rečenice bez promjene riječi.")
+        stare_spojene = _norm(" ".join(stare))
         nove_tvrdnje = [d for j, d in enumerate(dodane) if j not in iskoristene
-                        and (SNAGA.search(d) or _brojevi(d))]
+                        and (SNAGA.search(d) or _brojevi(d)) and _norm(d) not in stare_spojene]
         if nove_tvrdnje:
             print(f"\n  Dodane rečenice s brojem ili jakom tvrdnjom ({len(nove_tvrdnje)}):")
             for d in nove_tvrdnje[:40]:

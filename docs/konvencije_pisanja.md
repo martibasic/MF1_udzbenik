@@ -143,29 +143,33 @@ Iz korijena repozitorija:
 
 ```powershell
 python tools/prirucnik_stats.py                 # profil po poglavljima: duljina rečenica, formule, P/Z, nalazi po pravilu
-python tools/prirucnik_stats.py --nalazi        # svaki nalaz K1, K3, K4, K7, K8, K12, K13 s retkom i prijedlogom
+python tools/prirucnik_stats.py --nalazi        # svaki nalaz K1, K3, K4, K5, K7, K8, K12, K13 s retkom i prijedlogom
 python tools/prirucnik_stats.py --nacrt source/uNN_….md   # obrnuti nacrt jednog poglavlja
 python tools/prirucnik_stats.py --usporedi HEAD source/uNN_….md   # nakon svake prerade: brojevi, ID-jevi, nijekanja, ograde
 ```
 
-Alat nalazi oblike, ne značenje. Pravila K2, K5, K6, K9, K10, K11, K14, K15 i
+Alat nalazi oblike, ne značenje; za K5 prepoznaje samo poznate engleske izraze. Pravila K2, K5, K6, K9, K10, K11, K14, K15 i
 K16 traže čitanje. `--usporedi` pokazuje promijenjene rečenice s brojem,
 nijekanjem, ogradom ili poredbom, ali ne dokazuje da je značenje sačuvano.
 Strukturu, brojeve i prikaz i dalje provjeravaju `tools/audit_publication.py`,
 `tools/verify_all.py`, `tools/qa_audit.py`, `tools/audit_pdf_layout.py` i puni
 objavni CI iz `scripts/check_publication.py`.
 
-### Stanje 8. studenoga 2026. (commit `49e2304`)
+### Stanje 8. studenoga 2026.
 
-Mjere su orijentacija za usporedbu nakon izmjena, a ne cilj.
+Mjere su orijentacija za usporedbu nakon izmjena, a ne cilj. Prvo mjerenje
+(commit `49e2304`) našlo je tri naslova zadataka u obliku pitanja, šest popisa
+brojeva sa zarezom u formulama, sedam engleskih izraza bez „engl.” i u dodatku C
+nizove pogrešaka od 57 do 101 riječi u jednoj rečenici. Ti su nalazi ispravljeni
+isti dan; tablica prikazuje stanje nakon ispravka.
 
-| Mjera | Poglavlja 1–15 | Napomena |
+| Mjera | Poglavlja 1–15 | Dodatci |
 | --- | --- | --- |
-| Prosječna duljina rečenice | 13,3–15,3 riječi | dodatak C: 25,7 (nizovi pogrešaka odvojeni točkom-zarezom) |
-| Rečenice iznad 30 riječi | 1,1–4,3 % | dodatak C: 16,1 % |
-| Rečenice iznad 40 riječi | 17 u poglavljima | 15 u dodatku C, 1 u dodatku D |
+| Prosječna duljina rečenice | 13,3–15,3 riječi | 12,2–17,6 (dodatak C prije: 25,7) |
+| Rečenice iznad 30 riječi | 1,1–4,3 % | najviše 1,0 % |
+| Rečenice iznad 40 riječi | 17 (pog. 3, 4, 6, 7, 8, 11, 12, 14, 15) | 1 u dodatku D |
 | Istaknute formule | 784, sve numerirane | završna recenzija: referencirano oko 49 (V1) |
-| Nalazi alata | K4: 3 naslova zadataka u obliku pitanja (pog. 2, 4, 9); K8: 6 popisa sa zarezom u pog. 12 ($i=1,2,3$, $(v_x(y),0,0)$); K7: „(no-slip)” bez „engl.” u dodatku B | autorica odlučuje je li pitanje u naslovu T3/T4 zadatka svjesna iznimka |
+| Nalazi alata K1, K4, K5, K7, K8, K12, K13 | 0 | 0 |
 
 ## Oznake težine nalaza
 
