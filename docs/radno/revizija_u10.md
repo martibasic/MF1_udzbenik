@@ -190,3 +190,12 @@ Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere
 Skica Z3: geometrija zadržana, kota $\Delta z$, strelica $g$, os $z$, $p_{M2}=?$. `verify_u11.py`: `zadatak_3`, `U11.Z3.weight_and_elevation_terms`. D03 §10 dopunjen.
 
 Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.
+
+## Revizija nakon recenzije (8. studenoga 2026.)
+
+Nalaz G3-01 (`docs/radno/recenzija-2026-11/G3/PROVJERA.md`): Z5 korak po korak ponavlja P1, a
+optimum $u=v/3$ odgovoren je u tekstu.
+
+| Mjesto | Postojeći ID i uloga | Odluka / studentska aktivnost | Razina | Završni ID | Povezane provjere | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Z5 | `task-mlaz-na-pomicnu-plocu`; ploča zadane brzine | PREPRAVITI: ploča na kočenim kolicima ($F_o=120$ i $240\ \mathrm{N}$); student iz ravnoteže određuje ustaljenu brzinu, snagu i objašnjava zašto sporija ploča prima veću snagu | T3 | isti | `verify_u11.py` (Z5), bilježnica `u11_sila_na_koljeno.ipynb`, oznake u `u11_vjezbe_skice.svg`, D06 | provedeno |

@@ -187,3 +187,15 @@ Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere
 Skica Z2 (`u12_vjezbe_skice.svg`): geometrija kao Z1 plus strelica $u$ i dvije crtkane ploče kola; sila i snaga nisu nacrtane. `check_u14_sketch_geometry.py`: Z2 (pokretna ploča, $u<v$, crtkane ploče, bez sile). `verify_u12.py`: `zadatak_2`, `U12.Z2.optimum_and_full_flow`. D03 §14 dopunjen.
 
 Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.
+
+## Revizija nakon recenzije (8. studenoga 2026.)
+
+Nalaz G4-01 (`docs/radno/recenzija-2026-11/G4/PROVJERA.md`): Z1–Z2 vježbaju gradivo pog. 10,
+a aktuatorski disk s $C_{Th}$ i $\eta_i$ nema samostalnog zadatka.
+
+| Mjesto | Postojeći ID i uloga | Odluka / studentska aktivnost | Razina | Završni ID | Povezane provjere | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Z1 | `task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice`; sila mlaza na nepomičnu ploču (ponavlja pog. 10) | ZAMIJENITI: isti potisak, dva promjera propelera; $C_{Th}$, $\eta_i$, $P_i$ i odluka o promjeru | T1 | `task-propeler-isti-potisak-dva-promjera` | `verify_u12.py` (`zadatak_1`, provjera energijom i potiskom), panel Z1 u `u12_vjezbe_skice.svg` preuzet iz panela aktuatorskog diska pog. 10, D06 i manifest generatorima | provedeno |
+
+Stari ID nije zadržan kao alias jer bi ga generatori brojali kao zadatak; na njega nije
+upućivalo nijedno mjesto osim generiranog ključa i indeksa.

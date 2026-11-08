@@ -207,10 +207,18 @@ def primjer_kvadrokopter(m=2.4, rotor_count=4, D=0.280, rho=1.045,
     }
 
 
-def zadatak_1(d=0.022, v=24.0, rho=998.0):
-    A = math.pi*d*d/4
-    m_dot = rho*A*v
-    return {"m_dot": m_dot, "F": m_dot*v, "P": 0.0}
+def zadatak_1(D=1.6, F_T=60e3, v_A=5.0, rho=1025.0):
+    """Z1: idealni aktuatorski disk; C_Th, eta_i i P_i za zadani potisak."""
+    A = math.pi*D*D/4
+    C_Th = F_T/(0.5*rho*v_A**2*A)
+    eta_i = 2/(1+math.sqrt(1+C_Th))
+    v_j = v_A*math.sqrt(1+C_Th)
+    # Neovisno: P_i kao porast toka kinetičke energije kroz disk.
+    v_d = (v_A+v_j)/2
+    m_dot = rho*A*v_d
+    P_kin = 0.5*m_dot*(v_j**2-v_A**2)
+    return {"C_Th": C_Th, "eta_i": eta_i, "v_j": v_j, "P_i": F_T*v_A/eta_i, "P_kin": P_kin,
+            "thrust_check": m_dot*(v_j-v_A)}
 
 
 def zadatak_2(d=0.025, v=30.0, u=10.0, rho=998.0):
@@ -413,13 +421,20 @@ def verify():
     _check(out, "U12.P6.P_total", r["P_total"], 227.0, "W", rel=0.02)
     _check(out, "U12.P6.duration_min", r["duration_min"], 19.5, "min", rel=0.02)
 
-    r = zadatak_1()
-    _check(out, "U12.Z1.m_dot", r["m_dot"], 9.10, "kg/s", abs_tol=.005)
-    _check(out, "U12.Z1.F", r["F"], 219.0, "N", abs_tol=.5)
-    _check(out, "U12.Z1.P", r["P"], 0.0, "W", abs_tol=1e-12)
-    faster = zadatak_1(v=48.0)
-    _invariant(out, "U12.Z1.quadratic_velocity", abs(faster["F"]/r["F"]-4)<1e-12,
-               "Sila na nepomicnu plocu raste kvadratom brzine pri istom presjeku.")
+    r = zadatak_1(D=1.6)
+    _check(out, "U12.Z1.C_Th_small", r["C_Th"], 2.33, "", abs_tol=.005)
+    _check(out, "U12.Z1.eta_i_small", r["eta_i"], 0.708, "", abs_tol=.0005)
+    _check(out, "U12.Z1.P_i_small_kW", r["P_i"]/1000, 424.0, "kW", abs_tol=.5)
+    _check(out, "U12.Z1.v_j_small", r["v_j"], 9.12, "m/s", abs_tol=.005)
+    big = zadatak_1(D=2.4)
+    _check(out, "U12.Z1.C_Th_large", big["C_Th"], 1.04, "", abs_tol=.005)
+    _check(out, "U12.Z1.eta_i_large", big["eta_i"], 0.824, "", abs_tol=.0005)
+    _check(out, "U12.Z1.P_i_large_kW", big["P_i"]/1000, 364.0, "kW", abs_tol=.5)
+    _check(out, "U12.Z1.v_j_large", big["v_j"], 7.13, "m/s", abs_tol=.005)
+    _check(out, "U12.Z1.power_saving_pct", 100*(1-big["P_i"]/r["P_i"]), 14.0, "%", abs_tol=.5)
+    _invariant(out, "U12.Z1.energy_and_thrust",
+               all(abs(z["P_kin"]-z["P_i"])<1e-6*z["P_i"] and abs(z["thrust_check"]-60e3)<1e-6 for z in (r, big)),
+               "Idealna snaga jednaka je porastu toka kinetičke energije, a mdot*(v_j-v_A) vraća potisak.")
 
     r = zadatak_2()
     _check(out, "U12.Z2.m_jet", r["m_jet"], 14.70, "kg/s", abs_tol=.005)

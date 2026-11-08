@@ -367,13 +367,25 @@ def verify():
     _check(out, "U11.Z4.R_x", r["R_x"], -287.4, "N", abs_tol=0.05)
     _check(out, "U11.Z4.M_Rz", r["M_Rz"], 100.6, "N m", abs_tol=0.05)
 
-    r = zadatak_5()
-    _check(out, "U11.Z5.mdot_rel", r["mdot_rel"], 15.05, "kg/s", abs_tol=0.005)
-    _check(out, "U11.Z5.F_x", r["F_x"], 180.6, "N", abs_tol=0.05)
-    _check(out, "U11.Z5.power_kW", r["power"] / 1000, 1.445, "kW", abs_tol=0.0005)
-    _check(out, "U11.Z5.v_2", r["v_2"], 14.42, "m/s", abs_tol=0.005)
-    _check(out, "U11.Z5.u_opt", r["u_opt"], 6.667, "m/s", abs_tol=0.0005)
-    _check(out, "U11.Z5.power_max_kW", r["power_max"] / 1000, 1.486, "kW", abs_tol=0.0005)
+    # Z5: ustaljena brzina kočenih kolica iz ravnoteže rho*A*(v-u)^2 = F_o.
+    def steady_speed(F_o, d=0.040, v=20.0, rho=998.0):
+        A = math.pi * d**2 / 4
+        return v - math.sqrt(F_o / (rho * A))
+    u_120 = steady_speed(120.0)
+    r = zadatak_5(u=u_120)
+    _check(out, "U11.Z5.u_steady", u_120, 10.22, "m/s", abs_tol=0.005)
+    _check(out, "U11.Z5.mdot_rel", r["mdot_rel"], 12.27, "kg/s", abs_tol=0.005)
+    _check(out, "U11.Z5.F_x", r["F_x"], 120.0, "N", abs_tol=1e-9)
+    _check(out, "U11.Z5.power_kW", r["power"] / 1000, 1.226, "kW", abs_tol=0.0005)
+    _check(out, "U11.Z5.v_2", r["v_2"], 14.15, "m/s", abs_tol=0.005)
+    u_240 = steady_speed(240.0)
+    r240 = zadatak_5(u=u_240)
+    _check(out, "U11.Z5.u_steady_240", u_240, 6.17, "m/s", abs_tol=0.005)
+    _check(out, "U11.Z5.power_240_kW", r240["power"] / 1000, 1.480, "kW", abs_tol=0.0005)
+    _invariant(out, "U11.Z5.slower_plate_more_power",
+               u_240 < u_120 and r240["power"] > r["power"]
+               and abs(u_240 - r["u_opt"]) < abs(u_120 - r["u_opt"]),
+               "Veća sila otpora daje sporiju ploču bližu optimumu v/3 i veću snagu.")
 
     r = zadatak_6()
     _check(out, "U11.Z6.Q_2_Ls", r["Q_2"] * 1000, 24.0, "L/s")

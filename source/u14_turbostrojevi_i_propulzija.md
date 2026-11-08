@@ -693,32 +693,32 @@ Vrijedi za sve rotacijske lopatične strojeve u kojima fluid mijenja smjer ili i
 
 ## Zadatci za vježbu {#sec-u14-zadatci}
 
-![Skice uz Z1–Z6: sile na nepomičnu i pokretnu ploču, obrnuti račun izlaza lopatice, zadane apsolutne brzine rotora na dvama polumjerima, vodomlazni pogon i razdjelnik s četirima izlazima.](../assets/print/u12_vjezbe_skice.svg){#fig-u12-vjezbe fig-align="center" fig-alt="Šest skica: mlaz na nepomičnu ravnu ploču, mlaz na ploču koja se giba u smjeru mlaza uz naznačeno kolo s nizom ploča, pokretna lopatica, apsolutne brzine na dvama polumjerima rotora, vodomlazni pogon broda i mlazna platforma s razdjelnikom i četirima sapnicama."}
+![Skice uz Z1–Z6: aktuatorski disk propelera, sila na pokretnu ploču, obrnuti račun izlaza lopatice, zadane apsolutne brzine rotora na dvama polumjerima, vodomlazni pogon i razdjelnik s četirima izlazima.](../assets/print/u12_vjezbe_skice.svg){#fig-u12-vjezbe fig-align="center" fig-alt="Šest skica: strujna cijev kroz aktuatorski disk propelera, mlaz na ploču koja se giba u smjeru mlaza uz naznačeno kolo s nizom ploča, pokretna lopatica, apsolutne brzine na dvama polumjerima rotora, vodomlazni pogon broda i mlazna platforma s razdjelnikom i četirima sapnicama."}
 
-**Napomene uz skice.** U Z2 crtkane ploče naznačuju kolo s nizom ploča iz slučaja (b); sila i snaga nisu nacrtane. U Z3 smjer izlaza $\vec w_2$ nacrtan je shematski jer se kut i $k$ traže. U Z4 nacrtane su samo zadane apsolutne brzine; trokute $\vec c=\vec u+\vec w$ crta student. U Z5 brzine su u brodskom okviru, a krug označuje crpku. Z6 prikazuje trenutak mirovanja platforme; duljine strelica $F_T$ i $mg$ nisu u mjerilu.
+**Napomene uz skice.** U Z1 strujna cijev i disk nacrtani su shematski, ne u mjerilu rezultata; oba promjera zadana su brojem. U Z2 crtkane ploče naznačuju kolo s nizom ploča iz slučaja (b); sila i snaga nisu nacrtane. U Z3 smjer izlaza $\vec w_2$ nacrtan je shematski jer se kut i $k$ traže. U Z4 nacrtane su samo zadane apsolutne brzine; trokute $\vec c=\vec u+\vec w$ crta student. U Z5 brzine su u brodskom okviru, a krug označuje crpku. Z6 prikazuje trenutak mirovanja platforme; duljine strelica $F_T$ i $mg$ nisu u mjerilu.
 
 ::::: {.mf1-vjezbe-list}
 
-### Sila mlaza na nepomičnu ploču {#task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice .unnumbered .unlisted}
+### Isti potisak, dva promjera propelera {#task-propeler-isti-potisak-dva-promjera .unnumbered .unlisted}
 
 **Tekst zadatka**
 
-Vodeni mlaz udara okomito na nepomičnu ravnu ploču i slobodno se razlijeva uz njezinu prednju stranu. Zadano je $\rho=998\ \mathrm{kg/m^3}$, brzina $v=24\ \mathrm{m/s}$ i promjer slobodnog mlaza $d=22\ \mathrm{mm}$. Ploča zahvaća cijeli mlaz. Tok je stacionaran, tlak na slobodnim granicama atmosferski, a izlazna komponenta brzine okomita na ploču jednaka nuli. Težinu fluida u smjeru udara zanemari.
+Propeler broda u morskoj vodi gustoće $\rho=1025\ \mathrm{kg/m^3}$ mora pri brzini napredovanja $v_A=5{,}0\ \mathrm{m/s}$ dati potisak $F_T=60\ \mathrm{kN}$. Razmatraju se dva promjera, $D=1{,}6\ \mathrm{m}$ i $D=2{,}4\ \mathrm{m}$. Propeler modeliraj idealnim aktuatorskim diskom.
 
 **Traži se**
 
-Odredi maseni protok i silu fluida na ploču u smjeru ulaznog mlaza.
+Za oba promjera odredi koeficijent opterećenja potiskom $C_{Th}$, idealnu učinkovitost $\eta_i$ i idealnu snagu $P_i$, a zatim obrazloži što se dobiva većim promjerom.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Izračunaj $\dot m=\rho Av$. Bilanca količine gibanja daje silu ploče na fluid; za silu fluida na ploču promijeni predznak. Provjeri da nepomična ploča ne prima mehaničku snagu.
+Koeficijent opterećenja odnosi potisak na dinamički tlak napredovanja i površinu diska. Idealna snaga jednaka je korisnoj snazi $F_Tv_A$ podijeljenoj s $\eta_i$. Usporedi kako se mijenjaju $C_{Th}$ i brzina traga kad površina diska raste.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$\dot m\approx9{,}10\ \mathrm{kg/s}$ i $F_x\approx219\ \mathrm{N}$ u smjeru ulaznog mlaza. Ploča miruje, pa je predana mehanička snaga $P=0$ unatoč sili različitoj od nule.
+$D=1{,}6\ \mathrm{m}$: $C_{Th}\approx2{,}33$, $\eta_i\approx0{,}708$, $P_i\approx424\ \mathrm{kW}$. $D=2{,}4\ \mathrm{m}$: $C_{Th}\approx1{,}04$, $\eta_i\approx0{,}824$, $P_i\approx364\ \mathrm{kW}$. Veći disk isti potisak daje većem protoku uz manji prirast brzine ($v_j\approx7{,}13$ prema $9{,}12\ \mathrm{m/s}$), pa u tragu ostaje manje kinetičke energije i idealna snaga pada za oko 14 %. Promjer u praksi ograničavaju gaz, zračnost prema trupu i brzina vrtnje.
 :::
 ::::
 

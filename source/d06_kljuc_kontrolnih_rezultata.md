@@ -494,9 +494,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-mlaz-na-pomicnu-plocu)
 
-**Smjernica postupka.** Dotok kroz pomičnu granicu određen je razlikom $v-u$. Apsolutna izlazna komponenta $x$ jednaka je $u$, a relativna izlazna brzina usmjerena je tangencijalno i iznosi $v-u$. Snagu računaj kao $P=F_xu$ i kao $\dot m_{rel}(v^2-v_2^2)/2$. Maksimiziraj $u(v-u)^2$ na zadanom intervalu; provjeri i njegove rubove.
+**Smjernica postupka.** Dotok kroz pomičnu granicu određen je razlikom $v-u$, pa sila mlaza ovisi o $(v-u)^2$. Ustaljeno stanje traži ravnotežu sile mlaza i sile otpora; od dvaju rješenja zadrži ono s $0<u<v$. Apsolutna izlazna komponenta $x$ jednaka je $u$, a relativna izlazna brzina tangencijalna je i iznosi $v-u$; snagu provjeri i kao $\dot m_{rel}(v^2-v_2^2)/2$.
 
-**Kontrolni rezultat ili kriterij.** $\dot m_{rel}\approx15{,}05\ \text{kg/s}$, $F_x\approx180{,}6\ \text{N}$, $P\approx1{,}445\ \text{kW}$. $v_2=\sqrt{u^2+(v-u)^2}\approx14{,}42\ \text{m/s}$ daje istu snagu iz energije. Maksimum: $u=v/3\approx6{,}667\ \text{m/s}$, $P_{max}\approx1{,}486\ \text{kW}$. Relativni dotok manji je od protoka sapnice jer se slobodni mlaz između sapnice i ploče produljuje.
+**Kontrolni rezultat ili kriterij.** $F_x=\rho A(v-u)^2=F_o$ daje $v-u\approx9{,}782\ \text{m/s}$, dakle $u\approx10{,}22\ \text{m/s}$; $\dot m_{rel}\approx12{,}27\ \text{kg/s}$ i $P=F_ou\approx1{,}226\ \text{kW}$. $v_2=\sqrt{u^2+(v-u)^2}\approx14{,}15\ \text{m/s}$ daje istu snagu iz energije. Za $F_o=240\ \text{N}$ je $u\approx6{,}17\ \text{m/s}$ i $P\approx1{,}480\ \text{kW}$: snaga $\rho A(v-u)^2u$ najveća je pri $u=v/3\approx6{,}67\ \text{m/s}$, a sporija ploča bliža je tom optimumu.
 
 ### Z6. Sile na Y-račvu {#key-task-u11-vodoravna-y-racva-prima-vodu-kroz-ulaz .unnumbered .unlisted}
 
@@ -658,13 +658,13 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 ## Turbostrojevi i propulzija
 
-### Z1. Sila mlaza na nepomičnu ploču {#key-task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice .unnumbered .unlisted}
+### Z1. Isti potisak, dva promjera propelera {#key-task-propeler-isti-potisak-dva-promjera .unnumbered .unlisted}
 
-[Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice)
+[Vrati se na zadatak](u14_turbostrojevi_i_propulzija.qmd#task-propeler-isti-potisak-dva-promjera)
 
-**Smjernica postupka.** Izračunaj $\dot m=\rho Av$. Bilanca količine gibanja daje silu ploče na fluid; za silu fluida na ploču promijeni predznak. Provjeri da nepomična ploča ne prima mehaničku snagu.
+**Smjernica postupka.** Koeficijent opterećenja odnosi potisak na dinamički tlak napredovanja i površinu diska. Idealna snaga jednaka je korisnoj snazi $F_Tv_A$ podijeljenoj s $\eta_i$. Usporedi kako se mijenjaju $C_{Th}$ i brzina traga kad površina diska raste.
 
-**Kontrolni rezultat ili kriterij.** $\dot m\approx9{,}10\ \mathrm{kg/s}$ i $F_x\approx219\ \mathrm{N}$ u smjeru ulaznog mlaza. Ploča miruje, pa je predana mehanička snaga $P=0$ unatoč sili različitoj od nule.
+**Kontrolni rezultat ili kriterij.** $D=1{,}6\ \mathrm{m}$: $C_{Th}\approx2{,}33$, $\eta_i\approx0{,}708$, $P_i\approx424\ \mathrm{kW}$. $D=2{,}4\ \mathrm{m}$: $C_{Th}\approx1{,}04$, $\eta_i\approx0{,}824$, $P_i\approx364\ \mathrm{kW}$. Veći disk isti potisak daje većem protoku uz manji prirast brzine ($v_j\approx7{,}13$ prema $9{,}12\ \mathrm{m/s}$), pa u tragu ostaje manje kinetičke energije i idealna snaga pada za oko 14 %. Promjer u praksi ograničavaju gaz, zračnost prema trupu i brzina vrtnje.
 
 ### Z2. Pokretna ploča i kolo s nizom ploča {#key-task-pokretna-ploca-i-kolo-s-plocama .unnumbered .unlisted}
 

@@ -1026,30 +1026,29 @@ $F_x\approx+287{,}4\ \text{N}$, $F_y=0$; $M_{O,z}\approx-100{,}6\ \text{N m}$ (u
 
 **Tekst zadatka**
 
-Nepomična sapnica daje vodeni mlaz promjera $d=40\ \text{mm}$ i laboratorijske brzine $v=20{,}0\ \text{m/s}$. Dovoljno velika ravna ploča okomita na mlaz jednoliko se udaljava brzinom $u=8{,}00\ \text{m/s}$ u smjeru $+x$. Promatraj razdoblje u kojem mlaz neprekidno doseže ploču. U sustavu ploče idealiziraj razlijevanje bez gubitka relativne brzine: voda izlazi tangencijalno uz ploču, simetrično u poprečnim smjerovima.
+Nepomična sapnica daje vodeni mlaz gustoće $\rho=998\ \text{kg/m}^3$, promjera $d=40\ \text{mm}$ i laboratorijske brzine $v=20{,}0\ \text{m/s}$. Dovoljno velika ravna ploča okomita na mlaz pričvršćena je na kolica koja se udaljavaju u smjeru $+x$, a koči ih stalna sila otpora $F_o=120\ \text{N}$. Promatraj ustaljeno stanje u kojem se kolica gibaju stalnom brzinom, a mlaz neprekidno doseže ploču. U sustavu ploče idealiziraj razlijevanje bez gubitka relativne brzine: voda izlazi tangencijalno uz ploču, simetrično u poprečnim smjerovima.
 
 Zanemari gravitaciju u kratkoj zoni udara; na slobodnim presjecima vlada atmosferski tlak.
 
 **Traži se**
 
-1. Odaberi kontrolni volumen koji prati ploču.
-2. Odredi maseni protok koji zaista doseže ploču, silu fluida na nju i predanu mehaničku snagu.
-3. Odredi laboratorijski iznos izlazne brzine vode i neovisno provjeri snagu promjenom toka kinetičke energije kroz taj pomični volumen.
-4. Za isti mlaz pronađi brzinu $0<u<v$ pri kojoj je snaga predana toj jednoj ploči najveća.
-5. Obrazloži zašto u bilanci kroz pomičnu granicu ne smiješ jednostavno uzeti sav maseni protok nepomične sapnice.
+1. Odaberi kontrolni volumen koji prati ploču i izrazi silu mlaza na ploču kao funkciju brzine ploče $u$.
+2. Odredi ustaljenu brzinu ploče, maseni protok koji doseže ploču i snagu predanu kolicima.
+3. Neovisno provjeri snagu promjenom toka kinetičke energije kroz pomični kontrolni volumen.
+4. Ponovi dio 2 za silu otpora $F_o=240\ \text{N}$ i objasni zašto je predana snaga veća iako se ploča giba sporije.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Dotok kroz pomičnu granicu određen je razlikom $v-u$. Apsolutna izlazna komponenta $x$ jednaka je $u$, a relativna izlazna brzina usmjerena je tangencijalno i iznosi $v-u$. Snagu računaj kao $P=F_xu$ i kao $\dot m_{rel}(v^2-v_2^2)/2$. Maksimiziraj $u(v-u)^2$ na zadanom intervalu; provjeri i njegove rubove.
+Dotok kroz pomičnu granicu određen je razlikom $v-u$, pa sila mlaza ovisi o $(v-u)^2$. Ustaljeno stanje traži ravnotežu sile mlaza i sile otpora; od dvaju rješenja zadrži ono s $0<u<v$. Apsolutna izlazna komponenta $x$ jednaka je $u$, a relativna izlazna brzina tangencijalna je i iznosi $v-u$; snagu provjeri i kao $\dot m_{rel}(v^2-v_2^2)/2$.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$\dot m_{rel}\approx15{,}05\ \text{kg/s}$, $F_x\approx180{,}6\ \text{N}$, $P\approx1{,}445\ \text{kW}$. $v_2=\sqrt{u^2+(v-u)^2}\approx14{,}42\ \text{m/s}$ daje istu snagu iz energije. Maksimum: $u=v/3\approx6{,}667\ \text{m/s}$, $P_{max}\approx1{,}486\ \text{kW}$. Relativni dotok manji je od protoka sapnice jer se slobodni mlaz između sapnice i ploče produljuje.
+$F_x=\rho A(v-u)^2=F_o$ daje $v-u\approx9{,}782\ \text{m/s}$, dakle $u\approx10{,}22\ \text{m/s}$; $\dot m_{rel}\approx12{,}27\ \text{kg/s}$ i $P=F_ou\approx1{,}226\ \text{kW}$. $v_2=\sqrt{u^2+(v-u)^2}\approx14{,}15\ \text{m/s}$ daje istu snagu iz energije. Za $F_o=240\ \text{N}$ je $u\approx6{,}17\ \text{m/s}$ i $P\approx1{,}480\ \text{kW}$: snaga $\rho A(v-u)^2u$ najveća je pri $u=v/3\approx6{,}67\ \text{m/s}$, a sporija ploča bliža je tom optimumu.
 :::
 ::::
 

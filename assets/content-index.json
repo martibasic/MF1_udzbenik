@@ -784,7 +784,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "fa153239b1f732c13ac8666aabc6a3cd8b74b738e5e0deeaaac14fc5cb7662bf",
+      "source_sha256": "38a7220d5bd3a51f54508c722a51b0137edaf523b417b8ea95a07c2f62a28b51",
       "sections": [
         {
           "id": "sila-uzgona",
@@ -1367,7 +1367,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "5c7422d579b603414648a6117505491c6deff7bc3807d81a14f46f88ebdb79c0",
+      "source_sha256": "8e73f79a47a955a7a145bbe2b805876f700ce0aaf8ef9211467bd67adf5cf89f",
       "sections": [
         {
           "id": "integralni-zakon-količine-gibanja",
@@ -1997,7 +1997,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "88c3bd1b1dfe67d6b082cf50c4e6cf0d8f4109cdea50f3a5e1e1c2b53fe253a7",
+      "source_sha256": "bdde497de733e08b968ff9266ab0bd6d0186862b0c98c2ddc849ce6ab4eabba4",
       "sections": [
         {
           "id": "od-lopatice-do-turbostroja",
@@ -2106,7 +2106,7 @@
         "ex-radijalno-kolo-crpke-euler",
         "ex-propeler-u-napredovanju",
         "ex-u12-propeler-dronskog-kvadkoptera-u-stanju-visa-t2",
-        "task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice",
+        "task-propeler-isti-potisak-dva-promjera",
         "task-pokretna-ploca-i-kolo-s-plocama",
         "task-izlaz-lopatice-iz-izmjerene-sile",
         "task-dva-radijusa-i-rad-rotora",
@@ -2523,7 +2523,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "2189c1fce8d04cbd563fd738422770e9ac3573125bd1ed8bedd4013838fdd499",
+      "source_sha256": "818d822597f6d86a6f626a06d903ede916f61db40300ab9453d2ec7039401ccf",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -10610,8 +10610,8 @@
       "kind": "Figure",
       "document": "u14",
       "number": "14.7",
-      "caption": "Skice uz Z1–Z6: sile na nepomičnu i pokretnu ploču, obrnuti račun izlaza lopatice, zadane apsolutne brzine rotora na dvama polumjerima, vodomlazni pogon i razdjelnik s četirima izlazima.",
-      "alt": "Šest skica: mlaz na nepomičnu ravnu ploču, mlaz na ploču koja se giba u smjeru mlaza uz naznačeno kolo s nizom ploča, pokretna lopatica, apsolutne brzine na dvama polumjerima rotora, vodomlazni pogon broda i mlazna platforma s razdjelnikom i četirima sapnicama.",
+      "caption": "Skice uz Z1–Z6: aktuatorski disk propelera, sila na pokretnu ploču, obrnuti račun izlaza lopatice, zadane apsolutne brzine rotora na dvama polumjerima, vodomlazni pogon i razdjelnik s četirima izlazima.",
+      "alt": "Šest skica: strujna cijev kroz aktuatorski disk propelera, mlaz na ploču koja se giba u smjeru mlaza uz naznačeno kolo s nizom ploča, pokretna lopatica, apsolutne brzine na dvama polumjerima rotora, vodomlazni pogon broda i mlazna platforma s razdjelnikom i četirima sapnicama.",
       "source": "../assets/print/u12_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -10673,12 +10673,12 @@
       "level": "T2",
       "label": "P6"
     },
-    "task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice": {
-      "id": "task-u12-vodeni-mlaz-brzine-izlazi-iz-kruzne-sapnice",
+    "task-propeler-isti-potisak-dva-promjera": {
+      "id": "task-propeler-isti-potisak-dva-promjera",
       "kind": "Problem",
       "document": "u14",
       "number": "14.1",
-      "title": "Sila mlaza na nepomičnu ploču",
+      "title": "Isti potisak, dva promjera propelera",
       "level": "T1",
       "label": "Z1"
     },

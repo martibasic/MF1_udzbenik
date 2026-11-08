@@ -143,7 +143,7 @@ def main():
             (p5, ('u14p5_rotation',), 'angular-velocity'),
             (intro, ('u14intro_force', 'u14intro_thrust'), 'force'),
             (p1, ('u14p1_forceX', 'u14p1_forceY', 'u14p1_reaction'), 'force'),
-            (ex, ('u14ex_z1force', 'u14ex_z3forceX', 'u14ex_z3forceY',
+            (ex, ('u14ex_z1thrust', 'u14ex_z3forceX', 'u14ex_z3forceY',
                   'u14ex_z6thrust', 'u14ex_z6weight'), 'force')):
         for id in ids:
             vector_kind(r, id, kind)
@@ -265,8 +265,16 @@ def main():
         direction(r, prefix+'forceY', -90)
     for n in range(1, 7):
         node(ex, 'u14ex_z'+str(n))
-    plate(ex, 'u14ex_z1')
-    close(delta(node(ex, 'u14ex_z1d'))[1], 26, 'Z1: poprečna kota mlaza')
+    # Z1: aktuatorski disk je crtkani presjek strujne cijevi; kota D mjeri disk, potisak na fluid ide u -x.
+    disk = node(ex, 'u14ex_z1disk')
+    check(disk.get('x1') == disk.get('x2') and disk.get('stroke-dasharray') is not None,
+          'Z1: disk je okomiti crtkani presjek strujne cijevi, ne stijenka')
+    close(delta(node(ex, 'u14ex_z1D'))[1], float(disk.get('y2')) - float(disk.get('y1')),
+          'Z1: kota D mjeri promjer diska')
+    for id in ('u14ex_z1vA', 'u14ex_z1vd', 'u14ex_z1vj'):
+        vector_kind(ex, id, 'velocity')
+        direction(ex, id, 0)
+    direction(ex, 'u14ex_z1thrust', 180)
     # Z2: pokretna ploča; mlaz i ploča gibaju se u +x, u < v po duljini strelica; kolo naznačeno crtkanim pločama.
     plate(ex, 'u14ex_z2')
     close(delta(node(ex, 'u14ex_z2d'))[1], 26, 'Z2: poprečna kota mlaza')

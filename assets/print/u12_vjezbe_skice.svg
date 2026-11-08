@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 902 967" role="img" aria-labelledby="u14ex_title u14ex_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:902px;height:auto;">
   <title id="u14ex_title">Skice šest vježbi turbostrojeva i propulzije</title>
-  <desc id="u14ex_desc">Z1 do Z6: nepropusna ploča s razlijevanjem; nepropusna ploča koja se giba u smjeru mlaza brzinom u, s razlijevanjem okomito na gibanje i dvjema crtkanim pločama kola koje slijede, sila i snaga nisu nacrtane (F, P = ?); rekonstrukcija izlaza iz sile, smjer i širina izlaza lopatice shematski, ne pod traženim kutom; zadane apsolutne brzine c1 i c2 u lokalnim osima u istom mjerilu, bez trokuta brzina koje crta student; dvije kružne cijevi vodomlaznih kandidata s otvorenim presjecima, brzine u istom mjerilu, a promjeri shematski (d = ?); platforma s dva vodoravna dovoda i četirima otvorenim izlazima, potisak i težina shematski jednake duljine. Vektori: sile debljom crtom i punim vrhom, brzine tanjom crtom i otvorenim vrhom. Kote označuju unutarnje presjeke, a zidovi ostaju izvan fluida. Isprekidana granica označuje odabrani kontrolni volumen fluida; uz krutu stijenku granice se podudaraju. U Z6 granica obuhvaća platformu i zadržani fluid ukupne mase m; siječe dva dovoda i četiri izlaza.</desc>
+  <desc id="u14ex_desc">Z1 do Z6: strujna cijev kroz aktuatorski disk propelera sa zadanim potiskom, brzinom napredovanja i dvama promjerima diska; nepropusna ploča koja se giba u smjeru mlaza brzinom u, s razlijevanjem okomito na gibanje i dvjema crtkanim pločama kola koje slijede, sila i snaga nisu nacrtane (F, P = ?); rekonstrukcija izlaza iz sile, smjer i širina izlaza lopatice shematski, ne pod traženim kutom; zadane apsolutne brzine c1 i c2 u lokalnim osima u istom mjerilu, bez trokuta brzina koje crta student; dvije kružne cijevi vodomlaznih kandidata s otvorenim presjecima, brzine u istom mjerilu, a promjeri shematski (d = ?); platforma s dva vodoravna dovoda i četirima otvorenim izlazima, potisak i težina shematski jednake duljine. Vektori: sile debljom crtom i punim vrhom, brzine tanjom crtom i otvorenim vrhom. Kote označuju unutarnje presjeke, a zidovi ostaju izvan fluida. Isprekidana granica označuje odabrani kontrolni volumen fluida; uz krutu stijenku granice se podudaraju. U Z6 granica obuhvaća platformu i zadržani fluid ukupne mase m; siječe dva dovoda i četiri izlaza.</desc>
   <defs>
     <marker id="u14ex_vopen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#356b83" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <pattern id="u14ex_hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -35,24 +35,29 @@
     <g font-family="Arial, Liberation Sans, sans-serif" fill="#3a4a56">
       <g id="u14ex_z1" transform="translate(24 24)">
         <text x="15" y="19" font-size="14" fill="#263746" text-anchor="start" font-weight="700">Z1</text>
-        <text x="52" y="19" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Mlaz na nepomičnu ploču</text>
-        <path id="u14ex_z1fluid" d="M48 137.0 H254 Q273 137.0 273 118.0 V75 H280 V224 H273 V182.0 Q273 163.0 254 163.0 H48 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
-        <line id="u14ex_z1top" x1="48" y1="137.0" x2="100" y2="137.0" stroke="#3a4a56" stroke-width="2" />
-        <line id="u14ex_z1bottom" x1="48" y1="163.0" x2="100" y2="163.0" stroke="#3a4a56" stroke-width="2" />
-        <rect id="u14ex_z1plate" x="280" y="83" width="12" height="133" rx="0" fill="url(#u14ex_hatch)" stroke="#3a4a56" stroke-width="1.2" />
-        <path id="u14ex_z1inflow" d="M132.0000000 150.0000000 L221.0000000 150.0000000" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ex_vopen)" data-mf1-vector="velocity" />
-        <text x="176.5" y="128" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic" font-weight="700">v</tspan> = 24 m/s</text>
-        <path id="u14ex_z1outTop" d="M276.5000000 75.0000000 L276.5000000 50.0000000" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ex_vopen)" data-mf1-vector="velocity" />
-        <path id="u14ex_z1outBottom" d="M276.5000000 224.0000000 L276.5000000 249.0000000" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ex_vopen)" data-mf1-vector="velocity" />
-        <line x1="106" y1="137" x2="116" y2="137" stroke="#657781" stroke-width="1.2" />
-        <line x1="106" y1="163" x2="116" y2="163" stroke="#657781" stroke-width="1.2" />
-        <path id="u14ex_z1d" d="M111 137 L111 163" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ex_dim)" marker-end="url(#u14ex_dim)" data-mf1-role="dimension" />
-        <text x="106" y="119" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan> = 22 mm</text>
-        <path id="u14ex_z1force" d="M300 150 L392 150" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u14ex_forceMarker)" data-mf1-vector="force" />
-        <text x="332" y="132" font-size="13" fill="#263746" text-anchor="end" font-weight="700" font-style="italic">F<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">x</tspan></text>
-        <text x="336" y="132" font-size="13" fill="#263746" text-anchor="start">na ploču</text>
-        <text x="40" y="276" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">ρ</tspan> = 998 kg/m³</text>
-        <path id="u14ex_z1controlVolume" d="M48 137.0 H254 Q273 137.0 273 118.0 V75 H280 V224 H273 V182.0 Q273 163.0 254 163.0 H48 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" data-mf1-role="control-volume" />
+        <text x="52" y="19" font-size="13" fill="#263746" text-anchor="start" font-weight="700">Isti potisak, dva promjera propelera</text>
+        <path id="u14ex_z1fluid" d="M40 115 Q150 117 220 120 Q290 120.6 400 121 V199 Q290 199.4 220 200 Q150 203 40 205 Z" fill="#dcebf1" stroke="none" stroke-width="1.8" />
+        <line id="u14ex_z1disk" x1="220" y1="120" x2="220" y2="200" stroke="#356b83" stroke-width="2.5" stroke-dasharray="6 4" />
+        <path id="u14ex_z1vA" d="M60 160 L105 160" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ex_vopen)" data-mf1-vector="velocity" />
+        <text x="82.5" y="151" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">v<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">A</tspan></tspan> = 5 m/s</text>
+        <path id="u14ex_z1vd" d="M232 160 L272 160" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ex_vopen)" data-mf1-vector="velocity" />
+        <text x="252" y="151" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">v<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">d</tspan></tspan> = ?</text>
+        <path id="u14ex_z1vj" d="M320 160 L380 160" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u14ex_vopen)" data-mf1-vector="velocity" />
+        <text x="350" y="151" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">v<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">j</tspan></tspan> = ?</text>
+        <path id="u14ex_z1thrust" d="M250 84 L190 84" fill="none" stroke="#356b83" stroke-width="2.8" marker-end="url(#u14ex_forceMarker)" data-mf1-vector="force" />
+        <text x="220" y="75" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">F<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">T</tspan></tspan> = 60 kN (voda → propeler)</text>
+        <text x="110" y="100" font-size="12" fill="#263746" text-anchor="middle">strujna cijev</text>
+        <line x1="220" y1="120" x2="204" y2="120" stroke="#657781" stroke-width="1" />
+        <line x1="220" y1="200" x2="204" y2="200" stroke="#657781" stroke-width="1" />
+        <path id="u14ex_z1D" d="M208 120 L208 200" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ex_dim)" marker-end="url(#u14ex_dim)" data-mf1-role="dimension" />
+        <text x="160" y="232" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">D</tspan> = 1,6 m ili 2,4 m</text>
+        <text x="238" y="220" font-size="12" fill="#263746" text-anchor="start">aktuatorski disk</text>
+        <text x="15" y="262" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.75em">mv</tspan> = 1025 kg/m³; sustav propelera</text>
+        <path d="M354 265 L384 265" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u14ex_axisMarker)" data-mf1-role="axis" />
+        <text x="392" y="269" font-size="13" fill="#263746" text-anchor="middle" font-style="italic">x</text>
+        <path d="M354 265 L354 235" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u14ex_axisMarker)" data-mf1-role="axis" />
+        <text x="354" y="226" font-size="13" fill="#263746" text-anchor="middle" font-style="italic">y</text>
+        <path id="u14ex_z1controlVolume" d="M40 115 Q150 117 220 120 Q290 120.6 400 121 V199 Q290 199.4 220 200 Q150 203 40 205 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" stroke-linejoin="round" data-mf1-role="control-volume" />
       </g>
     </g>
   </g>
