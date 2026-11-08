@@ -1832,7 +1832,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "551bdc4ff6297d4f81333ff898bc6018f6f120860a15467daadcef8a79683c66",
+      "source_sha256": "0dc58bc04e20ef113884cdf17727336f9b0ea6ac93e8af09b42acd292bda2782",
       "sections": [
         {
           "id": "sec-realna-energijska-bilanca",
@@ -1930,6 +1930,8 @@
         "eq-cjevovodi-snaga-bez-mijesanja-energijskih-razina-sec-ledge-02",
         "eq-npsha",
         "eq-npsha-spremnik",
+        "eq-gubitci-dionice-reynolds-hrapavost",
+        "eq-gubitci-dionice-swamee-jain",
         "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-01",
         "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-02",
         "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-03",
@@ -2469,7 +2471,7 @@
       "kind": "appendix",
       "number": "E",
       "part": null,
-      "source_sha256": "37572cab9ace4a45d5354def92c3adfca7c5416c3eec894eb6cb8a3d6254a3c9",
+      "source_sha256": "982dc22f76849ef5cba7044bb4a2f1a379c2973812cd880357a09240f5576d32",
       "sections": [
         {
           "id": "temelji-i-integralne-bilance",
@@ -2521,7 +2523,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "dd93b275e182e9082ba7f873a33369c8fc8c5af284aec55e20619748be42a8a0",
+      "source_sha256": "e8b4753ba1feb0ea57ac862cb2472e40ebf1efbc2f50800d5d4be86a825863bb",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -9681,7 +9683,7 @@
       "kind": "Equation",
       "document": "u13",
       "number": "13.16",
-      "latex": "\\lambda=\\frac{0{,}25}{\\left[\\log_{10}\\!\\left(\\frac{k_s/D}{3{,}7}+\\frac{5{,}74}{Re^{0{,}9}}\\right)\\right]^2},\n\\qquad 5000<Re<10^8,"
+      "latex": "\\lambda=\\frac{0{,}25}{\\left[\\log_{10}\\!\\left(\\frac{k_s/D}{3{,}7}+\\frac{5{,}74}{Re^{0{,}9}}\\right)\\right]^2},\n\\qquad 5000<Re<10^8,\\quad 10^{-6}<k_s/D<10^{-2},"
     },
     "eq-hidraulicki-otpor": {
       "id": "eq-hidraulicki-otpor",
@@ -9767,186 +9769,200 @@
       "number": "13.28",
       "latex": "NPSH_a=\n\\frac{p_{atm}}{\\rho g}-z_s-h_{g,s}-\\frac{p_v}{\\rho g}."
     },
+    "eq-gubitci-dionice-reynolds-hrapavost": {
+      "id": "eq-gubitci-dionice-reynolds-hrapavost",
+      "kind": "Equation",
+      "document": "u13",
+      "number": "13.29",
+      "latex": "Re=\\frac{vD}{\\nu}=\\frac{2{,}4\\cdot0{,}12}{1{,}0\\cdot10^{-6}}=2{,}88\\cdot10^5,\n\\qquad\n\\frac{k_s}{D}=\\frac{0{,}26}{120}=2{,}17\\cdot10^{-3}."
+    },
+    "eq-gubitci-dionice-swamee-jain": {
+      "id": "eq-gubitci-dionice-swamee-jain",
+      "kind": "Equation",
+      "document": "u13",
+      "number": "13.30",
+      "latex": "\\lambda=\\frac{0{,}25}{\\left[\\log_{10}\\!\\left(\\dfrac{2{,}17\\cdot10^{-3}}{3{,}7}+\\dfrac{5{,}74}{\\left(2{,}88\\cdot10^5\\right)^{0{,}9}}\\right)\\right]^2}=0{,}02467."
+    },
     "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-01": {
       "id": "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-01",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.29",
-      "latex": "\\frac{v^2}{2g}=\\frac{2{,}4^2}{2\\cdot9{,}81}=0{,}294\\ \\mathrm{m}."
+      "number": "13.31",
+      "latex": "\\frac{v^2}{2g}=\\frac{2{,}4^2}{2\\cdot9{,}81}=0{,}2936\\ \\mathrm{m}."
     },
     "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-02": {
       "id": "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-02",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.30",
-      "latex": "h_l=0{,}028\\frac{36}{0{,}12}(0{,}294)=2{,}47\\ \\mathrm{m},"
+      "number": "13.32",
+      "latex": "h_l=0{,}02467\\frac{36}{0{,}12}(0{,}2936)=2{,}173\\ \\mathrm{m},"
     },
     "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-03": {
       "id": "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-03",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.31",
-      "latex": "h_{loc}=4{,}6(0{,}294)=1{,}35\\ \\mathrm{m},\n\\qquad\nh_g=3{,}82\\ \\mathrm{m}."
+      "number": "13.33",
+      "latex": "h_{loc}=4{,}6(0{,}2936)=1{,}351\\ \\mathrm{m},\n\\qquad\nh_g=3{,}524\\ \\mathrm{m}."
     },
     "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-04": {
       "id": "eq-cjevovodi-rijeseni-primjer-linijski-i-lokalni-gubitci-jedn-04",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.32",
-      "latex": "\\Delta p=\\rho gh_g=1000\\cdot9{,}81\\cdot3{,}82\n=37{,}4\\ \\mathrm{kPa}."
+      "number": "13.34",
+      "latex": "\\Delta p=\\rho gh_g=1000\\cdot9{,}81\\cdot3{,}524\n=34{,}57\\ \\mathrm{kPa}."
     },
     "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-01": {
       "id": "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-01",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.33",
+      "number": "13.35",
       "latex": "A=\\frac{\\pi D^2}{4}=1{,}257\\cdot10^{-5}\\ \\mathrm{m^2},\n\\qquad\nv=\\frac QA=0{,}637\\ \\mathrm{m/s}."
     },
     "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-02": {
       "id": "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-02",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.34",
+      "number": "13.36",
       "latex": "Re=\\frac{vD}{\\nu}=509,\n\\qquad\n\\lambda=\\frac{64}{Re}=0{,}1257."
     },
     "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-03": {
       "id": "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-03",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.35",
+      "number": "13.37",
       "latex": "h_l=0{,}1257\\frac{2}{0{,}004}\n\\frac{0{,}637^2}{2\\cdot9{,}81}\n=1{,}298\\ \\mathrm{m},"
     },
     "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-04": {
       "id": "eq-cjevovodi-rijeseni-primjer-laminarni-vod-rashladnog-modula-04",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.36",
+      "number": "13.38",
       "latex": "\\Delta p=\\frac{128\\mu LQ}{\\pi D^4}=13{,}37\\ \\mathrm{kPa}."
     },
     "eq-petlja-otpori": {
       "id": "eq-petlja-otpori",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.37",
+      "number": "13.39",
       "latex": "R_{AB}=7181,\\quad R_{BC}=45\\,445,\\quad R_{CD}=11\\,913,\\quad R_{DA}=8378\\ \\ \\mathrm{s^2/m^5}."
     },
     "eq-petlja-iteracija-1": {
       "id": "eq-petlja-iteracija-1",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.38",
+      "number": "13.40",
       "latex": "\\begin{aligned}\n\\sum R_iQ_i|Q_i|&=3{,}476+4{,}544-0{,}429-2{,}715=4{,}877\\ \\mathrm{m}, \\\\\n2\\sum R_i|Q_i|&=1669\\ \\mathrm{s/m^2},\n\\end{aligned}"
     },
     "eq-petlja-korekcija-1": {
       "id": "eq-petlja-korekcija-1",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.39",
+      "number": "13.41",
       "latex": "\\Delta Q=-\\frac{4{,}877}{1669}=-2{,}92\\ \\mathrm{L/s}."
     },
     "eq-petlja-protoci": {
       "id": "eq-petlja-protoci",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.40",
+      "number": "13.42",
       "latex": "Q_{AB}=18{,}89,\\quad Q_{BC}=6{,}89,\\quad Q_{CD}=-9{,}11,\\quad Q_{DA}=-21{,}11\\ \\mathrm{L/s},"
     },
     "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-01": {
       "id": "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-01",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.41",
+      "number": "13.43",
       "latex": "H_p(Q)=25-0{,}0175Q^2,\n\\qquad\nH_s(Q)=6+0{,}0303Q^2."
     },
     "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-02": {
       "id": "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-02",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.42",
+      "number": "13.44",
       "latex": "25-0{,}0175Q^2=6+0{,}0303Q^2,"
     },
     "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-03": {
       "id": "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-03",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.43",
+      "number": "13.45",
       "latex": "Q_{op}=19{,}94\\ \\mathrm{L/s},\n\\qquad H_{op}=18{,}04\\ \\mathrm{m}."
     },
     "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-04": {
       "id": "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-04",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.44",
+      "number": "13.46",
       "latex": "H_s(Q_2)=6+0{,}0303(17{,}24)^2=15{,}01\\ \\mathrm{m}."
     },
     "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-05": {
       "id": "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-05",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.45",
+      "number": "13.47",
       "latex": "H_{p,2}(Q)=s^2H_p(Q/s)=25s^2-0{,}0175Q^2."
     },
     "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-06": {
       "id": "eq-cjevovodi-rijeseni-primjer-radna-tocka-i-promjena-brzine-06",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.46",
+      "number": "13.48",
       "latex": "25s^2-0{,}0175(17{,}24)^2=15{,}01,\n\\qquad s=0{,}899."
     },
     "eq-cjevovodi-rijeseni-primjer-godisnja-energija-rashladnog-kr-01": {
       "id": "eq-cjevovodi-rijeseni-primjer-godisnja-energija-rashladnog-kr-01",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.47",
+      "number": "13.49",
       "latex": "P_h=\\rho gQH_p\n=1000\\cdot9{,}81\\cdot0{,}006\\cdot12\n=0{,}706\\ \\mathrm{kW}."
     },
     "eq-cjevovodi-rijeseni-primjer-godisnja-energija-rashladnog-kr-02": {
       "id": "eq-cjevovodi-rijeseni-primjer-godisnja-energija-rashladnog-kr-02",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.48",
+      "number": "13.50",
       "latex": "P_{vr}=\\frac{0{,}706}{0{,}78}=0{,}906\\ \\mathrm{kW},"
     },
     "eq-cjevovodi-rijeseni-primjer-godisnja-energija-rashladnog-kr-03": {
       "id": "eq-cjevovodi-rijeseni-primjer-godisnja-energija-rashladnog-kr-03",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.49",
+      "number": "13.51",
       "latex": "P_{el}=\\frac{0{,}906}{0{,}92\\cdot0{,}97}\n=1{,}015\\ \\mathrm{kW}."
     },
     "eq-cjevovodi-rijeseni-primjer-godisnja-energija-rashladnog-kr-04": {
       "id": "eq-cjevovodi-rijeseni-primjer-godisnja-energija-rashladnog-kr-04",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.50",
+      "number": "13.52",
       "latex": "E_{el}=P_{el}t=1{,}015\\cdot7000=7{,}10\\ \\mathrm{MWh/god}."
     },
     "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-01": {
       "id": "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-01",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.51",
+      "number": "13.53",
       "latex": "v_s=\\frac{Q}{\\pi D^2/4}=2{,}785\\ \\mathrm{m/s},"
     },
     "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-02": {
       "id": "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-02",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.52",
+      "number": "13.54",
       "latex": "h_{g,s}=\\left(0{,}030\\frac{5}{0{,}08}+1{,}8\\right)\n\\frac{2{,}785^2}{2\\cdot9{,}81}\n=1{,}453\\ \\mathrm{m}."
     },
     "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-03": {
       "id": "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-03",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.53",
+      "number": "13.55",
       "latex": "\\frac{p_{aps,s}}{\\rho g}\n=\\frac{p_{atm}}{\\rho g}-z_s-\\frac{v_s^2}{2g}-h_{g,s}\n=5{,}847\\ \\mathrm{m},"
     },
     "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-04": {
       "id": "eq-cjevovodi-rijeseni-primjer-raspolozivi-npsh-servisne-crpke-04",
       "kind": "Equation",
       "document": "u13",
-      "number": "13.54",
+      "number": "13.56",
       "latex": "NPSH_a=5{,}847+0{,}395-0{,}239=6{,}00\\ \\mathrm{m}."
     },
     "fig-cjevovodna-mreza-pregled": {
@@ -9955,7 +9971,7 @@
       "document": "u13",
       "number": "13.1",
       "caption": "Od pojedine dionice do serijsko-paralelne mreže: protok određuje brzinu i režim, a gubitci zatvaraju energijsku bilancu.",
-      "alt": "Gornji spremnik A spojen je dovodnom cijevi s čvorom C, iz kojega dvije paralelne grane vode do čvora D i dalje do donjeg spremnika B, uz kotu H između slobodnih površina i energijsku crtu koja pada stepenasto duž triju dionica.",
+      "alt": "Gornji spremnik A spojen je dovodnom cijevi s čvorom C, iz kojega dvije paralelne grane vode do čvora D i dalje do donjeg spremnika B, uz kotu Δz između slobodnih površina i energijsku crtu koja pada stepenasto duž triju dionica.",
       "source": "../assets/print/u13_fig_uvod_pregled.svg",
       "type": "standard",
       "variants": {
@@ -10011,7 +10027,7 @@
       "document": "u13",
       "number": "13.1",
       "title": "Linijski i lokalni gubitci jedne dionice",
-      "level": "T1",
+      "level": "T2",
       "label": "P1"
     },
     "ex-laminarni-rashladni-vod": {
@@ -11532,6 +11548,14 @@
     },
     {
       "document": "u13",
+      "target": "eq-swamee-jain"
+    },
+    {
+      "document": "u13",
+      "target": "eq-colebrook-white"
+    },
+    {
+      "document": "u13",
       "target": "eq-poiseuille-u13"
     },
     {
@@ -11549,6 +11573,10 @@
     {
       "document": "u13",
       "target": "eq-swamee-jain"
+    },
+    {
+      "document": "u13",
+      "target": "eq-npsha-spremnik"
     },
     {
       "document": "u13",
@@ -11784,7 +11812,7 @@
     }
   ],
   "counts": {
-    "Equation": 784,
+    "Equation": 786,
     "Figure": 92,
     "Example": 90,
     "Problem": 90,

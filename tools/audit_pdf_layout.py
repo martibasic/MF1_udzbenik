@@ -52,6 +52,9 @@ def typography_issues(document: pymupdf.Document) -> list[str]:
                  for line in b.get("lines", []) for s in line["spans"]
                  if s["text"].strip()]
         body = [s for s in spans if 55 < s["bbox"][1] and s["bbox"][3] < 790]
+        # Upućivanje „(13.16)” u tekstu ili ključu poveznica je na jednadžbu,
+        # a ne njezin broj; broj jednadžbe nikad nije poveznica.
+        link_rects = [pymupdf.Rect(link["from"]) for link in page.get_links()]
         for span in body:
             text = span["text"].strip()
             label = re.match(r"^([PZ]\d+)\.", text)
@@ -61,7 +64,8 @@ def typography_issues(document: pymupdf.Document) -> list[str]:
                 elif chapter == "F":
                     key_labels.append(label[1])
             if (span["bbox"][0] > 470
-                    and re.fullmatch(r"\((?:\d+|[A-F])\.\d+\)", text)):
+                    and re.fullmatch(r"\((?:\d+|[A-F])\.\d+\)", text)
+                    and not any(pymupdf.Rect(span["bbox"]).intersects(r) for r in link_rects)):
                 equations.append(text[1:-1])
             if (number < first_body or "LibertinusSerif-Bold" != span["font"]
                     or span["size"] < PDF_TOKENS["h4_pt"] - .05
@@ -129,6 +133,7 @@ def equation_issues(document: pymupdf.Document) -> list[str]:
         # Equation numbers occupy the right margin; inline references do not.
         right_chars = [(i, c, pymupdf.Rect(c["bbox"])) for i, c in enumerate(chars)
                        if c["bbox"][2] > 466 and c["c"].strip()]
+        link_rects = [pymupdf.Rect(link["from"]) for link in page.get_links()]
         for match in re.finditer(r"\((?:\d+|[A-F])\.\d+\)", string):
             # An inline reference such as „jednadžbe (14.2)“ may end a justified
             # line; only a display equation number stands without such a word.
@@ -139,6 +144,9 @@ def equation_issues(document: pymupdf.Document) -> list[str]:
             for char in selected[1:]:
                 rect |= pymupdf.Rect(char["bbox"])
             if rect.x0 < 470 or rect.x1 < 500:
+                continue
+            # Poveznica na jednadžbu nije broj jednadžbe, bez obzira na riječ ispred nje.
+            if any(rect.intersects(link) for link in link_rects):
                 continue
             neighbours = []
             for index, char, box in right_chars:
@@ -237,8 +245,9 @@ def bibliography_issues(document: pymupdf.Document) -> list[str]:
     text = "\n".join(document[i].get_text() for i in range(starts[0] - 1, ends[0] - 1))
     heading = text.find("Bibliografski zapisi")
     numbers = re.findall(r"(?m)^\[(\d+)\]", text[heading:]) if heading >= 0 else []
-    if numbers != [str(i) for i in range(1, 24)]:
-        return [f"E.7 mora sadržavati 23 bibliografska zapisa; nađene oznake {numbers}"]
+    expected = len(re.findall(r"(?m)^@\w+\{", (ROOT / "references.bib").read_text(encoding="utf-8")))
+    if numbers != [str(i) for i in range(1, expected + 1)]:
+        return [f"E.7 mora sadržavati {expected} bibliografskih zapisa (references.bib); nađene oznake {numbers}"]
     after_key = "\n".join(document[i].get_text() for i in range(ends[0] - 1, len(document)))
     if re.search(r"(?m)^\[1\]", after_key):
         return ["bibliografija se ponavlja iza dodatka F"]
@@ -443,7 +452,7 @@ def main() -> int:
             print(f"  - {issue}")
         return 1
     print(f"PDF layout PASS: {checked} raster-checked QR codes with links, equation clearance, "
-          "23 bibliography entries in E.7, captions and QR descriptions kept with content; "
+          "all references.bib entries in E.7, captions and QR descriptions kept with content; "
           f"all print-SVG labels present per figure, labels >= {FIGURE_TOKENS['figure-small-label-size']} pt "
           f"and indices >= {FIGURE_TOKENS['figure-index-min-size']} pt; "
           "heading baselines, column bounds, equation numbers and P/Z labels match.")

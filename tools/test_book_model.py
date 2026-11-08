@@ -147,7 +147,10 @@ Hint B.
             self.assertTrue(article.text().strip().startswith(obj['label']+'.'))
         self.assertTrue(any(n.attrs.get('data-component')=='Given' for n in nodes))
         self.assertTrue(any(n.attrs.get('data-component')=='Solution' for n in nodes))
-        self.assertIn('primjer '+example['number'],result.stdout)
+        # Upućivanje nosi vidljivu oznaku primjera (P1), ne globalni broj (1.1),
+        # koji se u knjizi poklapa s brojevima jednadžbi.
+        self.assertIn('primjer '+example['label'],result.stdout)
+        self.assertNotIn('primjer '+example['number'],result.stdout)
 
     def test_physical_figure_canvas_follows_margins(self):
         self.assertEqual(figure_text_width({'paper':'a4','margin_x_mm':26}),447.874)

@@ -1791,11 +1791,15 @@
       },
       "known_self_comparisons": [],
       "published_numeric_results": [
+        "U13.CANON.P1.Re",
+        "U13.CANON.P1.lam_swamee_jain",
+        "U13.CANON.P1.colebrook_rhs",
         "U13.CANON.P1.velocity_head",
         "U13.CANON.P1.h_l",
         "U13.CANON.P1.h_loc",
         "U13.CANON.P1.h_w",
         "U13.CANON.P1.dp_kPa",
+        "U13.CANON.P1.local_share",
         "U13.CANON.P2.A",
         "U13.CANON.P2.v",
         "U13.CANON.P2.Re",
@@ -1849,6 +1853,9 @@
         "U13.CANON.Z2.dp_B_kPa",
         "U13.CANON.Z2.dp_A_double_kPa",
         "U13.CANON.Z2.dp_B_double_kPa",
+        "U13.CANON.Z3.free_Q1_Ls",
+        "U13.CANON.Z3.free_Q2_Ls",
+        "U13.CANON.Z3.free_h_AB",
         "U13.CANON.Z3.Q1_Ls",
         "U13.CANON.Z3.Q2_Ls",
         "U13.CANON.Z3.h_AB",
@@ -27464,7 +27471,7 @@
       "level": "T1",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 720,
+        "line": 732,
         "anchor": "#task-dopusteni-pad-tlaka-dionice"
       },
       "statement": {
@@ -27563,14 +27570,14 @@
             "text": "Tekst zadatka** Voda gustoće $\\rho=998\\ \\mathrm{kg/m^3}$ stacionarno protječe vodoravnom cijevi stalnog unutarnjeg promjera $D=0{,}10\\ \\mathrm{m}$ i duljine $L=50\\ \\mathrm{m}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 720
+              "line": 732
             }
           },
           {
             "text": "U obama presjecima uzmi isti profil brzine.",
             "provenance": {
               "kind": "task_statement",
-              "line": 720
+              "line": 732
             }
           }
         ],
@@ -27585,7 +27592,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 738
+          "line": 750
         }
       },
       "tolerance": {
@@ -27665,7 +27672,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 422
+              "line": 433
             }
           },
           {
@@ -27682,7 +27689,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 423
+              "line": 434
             }
           },
           {
@@ -27699,7 +27706,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 424
+              "line": 435
             }
           },
           {
@@ -27716,7 +27723,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 425
+              "line": 436
             }
           },
           {
@@ -27733,7 +27740,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 426
+              "line": 437
             }
           },
           {
@@ -27744,7 +27751,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 427
+              "line": 438
             }
           }
         ]
@@ -27757,7 +27764,7 @@
       "level": "T1",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 747,
+        "line": 759,
         "anchor": "#task-dva-fluida-isti-vod"
       },
       "statement": {
@@ -27869,7 +27876,7 @@
             "text": "ulazno područje i lokalne gubitke zanemari.",
             "provenance": {
               "kind": "task_statement",
-              "line": 747
+              "line": 759
             }
           }
         ],
@@ -27884,7 +27891,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 766
+          "line": 778
         }
       },
       "tolerance": {
@@ -27996,7 +28003,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 434
+              "line": 445
             }
           },
           {
@@ -28013,7 +28020,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 435
+              "line": 446
             }
           },
           {
@@ -28030,7 +28037,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 436
+              "line": 447
             }
           },
           {
@@ -28047,7 +28054,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 437
+              "line": 448
             }
           },
           {
@@ -28064,7 +28071,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 438
+              "line": 449
             }
           },
           {
@@ -28081,7 +28088,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 439
+              "line": 450
             }
           },
           {
@@ -28098,7 +28105,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 440
+              "line": 451
             }
           },
           {
@@ -28115,7 +28122,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 442
+              "line": 453
             }
           },
           {
@@ -28132,7 +28139,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 443
+              "line": 454
             }
           },
           {
@@ -28143,7 +28150,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 444
+              "line": 455
             }
           }
         ]
@@ -28156,12 +28163,12 @@
       "level": "T2",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 775,
+        "line": 787,
         "anchor": "#task-uravnotezenje-paralelnih-grana"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Dva rashladna ogranka između zajedničkih čvorova A i B trebaju dobivati jednak protok. Zadani su približno stalni otpori grana bez novoga ventila: $R_1=12\\,000\\ \\mathrm{s^2/m^5}$ i $R_2=48\\,000\\ \\mathrm{s^2/m^5}$. Regulacija održava ukupni protok $Q=0{,}020\\ \\mathrm{m^3/s}$ i može osigurati potrebnu visinu. U svakom ogranku vrijedi kvadratni model $h_i=R_iQ_i^2$; novi ventil dodaje $h_{g,V}=R_vQ_i^2$ s $R_v\\ge0$. Lokalni otpori postojećih spojeva već su uključeni u zadane $R_i$. **Traži se** 1. Odredi u koju granu treba ugraditi ventil te $R_v$, oba protoka, zajednički gubitak $h_{AB}$ i doprinos samog ventila. 2. Zatim zatvori kontinuitet i usporedi gubitke na obama putovima.",
-        "sha256": "ffe944349889f91b6352cc39a7fbe2300e0f46c494986cc944cbbcfa079590bd",
+        "markdown": "**Tekst zadatka** Dva rashladna ogranka između zajedničkih čvorova A i B trebaju dobivati jednak protok. Zadani su približno stalni otpori grana bez novoga ventila: $R_1=12\\,000\\ \\mathrm{s^2/m^5}$ i $R_2=48\\,000\\ \\mathrm{s^2/m^5}$. Regulacija održava ukupni protok $Q=0{,}020\\ \\mathrm{m^3/s}$ i može osigurati potrebnu visinu. U svakom ogranku vrijedi kvadratni model $h_i=R_iQ_i^2$; novi ventil dodaje $h_{g,V}=R_VQ_i^2$ s $R_V\\ge0$. Lokalni otpori postojećih spojeva već su uključeni u zadane $R_i$. **Traži se** 1. Odredi raspodjelu protoka i zajednički gubitak $h_{AB}$ prije ugradnje ventila. 2. Odredi u koju granu treba ugraditi ventil te $R_V$, oba protoka, zajednički gubitak $h_{AB}$ i doprinos samog ventila. 3. Zatim provjeri kontinuitet i usporedi gubitke na obama putovima.",
+        "sha256": "2288070c5567be4a53e6fcfdd668bea1cf33b436de3edb2332bbe891c789d3c3",
         "authoritative": true
       },
       "input_data": {
@@ -28184,8 +28191,8 @@
           "R_1=12\\,000\\ \\mathrm{s^2/m^5}",
           "R_2=48\\,000\\ \\mathrm{s^2/m^5}",
           "h_i=R_iQ_i^2",
-          "h_{g,V}=R_vQ_i^2",
-          "R_v\\ge0"
+          "h_{g,V}=R_VQ_i^2",
+          "R_V\\ge0"
         ],
         "parse_status": "conservative_partial",
         "authoritative_fallback": "statement.markdown"
@@ -28199,16 +28206,37 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Ventil ide u granu 1: $R_v=36\\,000\\ \\mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\\ \\mathrm{L/s}$, $h_{AB}=4{,}80\\ \\mathrm{m}$ i $h_{g,V}=3{,}60\\ \\mathrm{m}$. Provjera: $(R_1+R_v)Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$.",
+        "markdown": "Bez ventila $Q_1=13{,}33$ i $Q_2=6{,}67\\ \\mathrm{L/s}$, $h_{AB}=2{,}13\\ \\mathrm{m}$. Ventil ide u granu 1: $R_V=36\\,000\\ \\mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\\ \\mathrm{L/s}$, $h_{AB}=4{,}80\\ \\mathrm{m}$ i $h_{g,V}=3{,}60\\ \\mathrm{m}$. Provjera: $(R_1+R_V)Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 794
+          "line": 807
         }
       },
       "tolerance": {
         "kind": "per_result",
         "contracts": [
+          {
+            "result_id": "U13.CANON.Z3.free_Q1_Ls",
+            "kind": "absolute",
+            "value": 0.005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U13.CANON.Z3.free_Q2_Ls",
+            "kind": "absolute",
+            "value": 0.005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U13.CANON.Z3.free_h_AB",
+            "kind": "absolute",
+            "value": 0.005,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
+          },
           {
             "result_id": "U13.CANON.Z3.Q1_Ls",
             "kind": "absolute",
@@ -28256,10 +28284,12 @@
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
+          "_close(free['h1'], free['h2'], 1e-10)",
           "_close(r['h1'], r['h2'], 1e-10)",
           "abs(r['Q1'] + r['Q2'] - 0.02) < 1e-14 and r['Rv'] >= 0 and (r['h_valve'] > 0) and (balanced_branches(R1=48000, R2=12000)['valve_branch'] == 2)"
         ],
         "verifier_result_ids": [
+          "U13.CANON.Z3.free_equal_head",
           "U13.CANON.Z3.equal_head",
           "U13.CANON.Z3.passive_balance_and_continuity"
         ],
@@ -28270,6 +28300,10 @@
         "exercise_id": "U13.CANON.Z3",
         "classification": "golden",
         "result_ids": [
+          "U13.CANON.Z3.free_Q1_Ls",
+          "U13.CANON.Z3.free_Q2_Ls",
+          "U13.CANON.Z3.free_h_AB",
+          "U13.CANON.Z3.free_equal_head",
           "U13.CANON.Z3.Q1_Ls",
           "U13.CANON.Z3.Q2_Ls",
           "U13.CANON.Z3.h_AB",
@@ -28280,6 +28314,68 @@
           "U13.CANON.Z3.passive_balance_and_continuity"
         ],
         "result_contracts": [
+          {
+            "result_id": "U13.CANON.Z3.free_Q1_Ls",
+            "verification": "golden",
+            "target": 13.33,
+            "target_kind": "literal",
+            "unit": "L/s",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 463
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z3.free_Q2_Ls",
+            "verification": "golden",
+            "target": 6.67,
+            "target_kind": "literal",
+            "unit": "L/s",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 464
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z3.free_h_AB",
+            "verification": "golden",
+            "target": 2.13,
+            "target_kind": "literal",
+            "unit": "m",
+            "tolerance": {
+              "kind": "absolute",
+              "value": 0.005,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 465
+            }
+          },
+          {
+            "result_id": "U13.CANON.Z3.free_equal_head",
+            "verification": "invariant",
+            "criterion_expression": "_close(free['h1'], free['h2'], 1e-10)",
+            "failure_message": "Bez ventila paralelne grane imaju jednak pad.",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u13_integrated.py",
+              "line": 466
+            }
+          },
           {
             "result_id": "U13.CANON.Z3.Q1_Ls",
             "verification": "golden",
@@ -28294,7 +28390,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 452
+              "line": 470
             }
           },
           {
@@ -28311,7 +28407,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 453
+              "line": 471
             }
           },
           {
@@ -28328,7 +28424,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 454
+              "line": 472
             }
           },
           {
@@ -28345,7 +28441,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 455
+              "line": 473
             }
           },
           {
@@ -28362,7 +28458,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 456
+              "line": 474
             }
           },
           {
@@ -28379,7 +28475,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 457
+              "line": 475
             }
           },
           {
@@ -28390,7 +28486,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 458
+              "line": 476
             }
           },
           {
@@ -28401,7 +28497,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 459
+              "line": 477
             }
           }
         ]
@@ -28414,12 +28510,12 @@
       "level": "T2",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 803,
+        "line": 816,
         "anchor": "#task-radna-tocka-hrapavog-voda"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Sintetička karakteristika crpke zadana je brojevnim vrijednostima $H_p=30-30\\,000Q^2$, uz $Q$ u $\\mathrm{m^3/s}$ i $H_p$ u metrima. Razlika visina slobodnih površina iznosi $\\Delta z=8{,}0\\ \\mathrm{m}$. Vod ima $D=0{,}100\\ \\mathrm{m}$, $L=150\\ \\mathrm{m}$, ekvivalentnu hrapavost $k_s=0{,}100\\ \\mathrm{mm}$ i $\\sum\\xi=6{,}0$, uključujući ulaz i izlaz, prema brzini u tom vodu. Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$ i $\\nu=1{,}00\\cdot10^{-6}\\ \\mathrm{m^2/s}$. Zadane su ukupna učinkovitost crpke $\\eta_p=0{,}76$ i učinkovitost motora $\\eta_m=0{,}92$. Gubitke pretvarača zanemari. Interval traženja radne točke jest $0{,}005\\le Q\\le0{,}030\\ \\mathrm{m^3/s}$. Energijski rezidual mora biti manji od $10^{-6}\\ \\mathrm{m}$, a apsolutni Colebrookov rezidual manji od $10^{-6}$. **Traži se** 1. Numerički odredi radnu točku u zadanom intervalu; računski alat (bilježnica, tablični kalkulator ili program) ovdje je obvezan jer se $\\lambda$ i radna točka određuju iterativno. U svakoj iteraciji ponovno provjeri trenje u cijevi. Upotrijebi Darcy–Weisbachov model i Colebrookovu jednadžbu; na kraju provjeri je li režim turbulentan. 2. Navedi $Q_{op}$, $H_{op}$, $Re$ i $\\lambda$ te provjeri zadane granice obaju reziduala. 3. Odredi $P_h$, $P_{vr}$ i $P_{el}$.",
-        "sha256": "fea6eeac7e7dfb7c70a7bfa8095ec96926822db0dc9240491c344c61d1bc26cf",
+        "markdown": "**Tekst zadatka** Crpka potiskuje vodu između dvaju velikih otvorenih spremnika. Sintetička karakteristika crpke zadana je brojevnim vrijednostima $H_p=30-30\\,000Q^2$, uz $Q$ u $\\mathrm{m^3/s}$ i $H_p$ u metrima. Razlika visina slobodnih površina iznosi $\\Delta z=8{,}0\\ \\mathrm{m}$. Vod ima $D=0{,}100\\ \\mathrm{m}$, $L=150\\ \\mathrm{m}$, ekvivalentnu hrapavost $k_s=0{,}100\\ \\mathrm{mm}$ i $\\sum\\xi=6{,}0$, uključujući ulaz i izlaz, prema brzini u tom vodu. Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$ i $\\nu=1{,}00\\cdot10^{-6}\\ \\mathrm{m^2/s}$. Zadane su ukupna učinkovitost crpke $\\eta_p=0{,}76$ i učinkovitost motora $\\eta_m=0{,}92$. Gubitke pretvarača zanemari. Interval traženja radne točke jest $0{,}005\\le Q\\le0{,}030\\ \\mathrm{m^3/s}$. Energijski rezidual mora biti manji od $10^{-6}\\ \\mathrm{m}$, a apsolutni Colebrookov rezidual manji od $10^{-6}$. **Traži se** 1. Numerički odredi radnu točku u zadanom intervalu; računski alat (bilježnica, tablični kalkulator ili program) ovdje je obvezan jer se $\\lambda$ i radna točka određuju iterativno. U svakoj iteraciji ponovno provjeri trenje u cijevi. Upotrijebi Darcy–Weisbachovu jednadžbu i Colebrookovu jednadžbu; na kraju provjeri je li režim turbulentan. 2. Navedi $Q_{op}$, $H_{op}$, $Re$ i $\\lambda$ te provjeri zadane granice obaju reziduala. 3. Odredi $P_h$, $P_{vr}$ i $P_{el}$.",
+        "sha256": "6272c420de1a81870897ca317c278b92ae78d8c8f6992de7d9c17d59339039ea",
         "authoritative": true
       },
       "input_data": {
@@ -28588,14 +28684,14 @@
             "text": "Za vodu uzmi $\\rho=1000\\ \\mathrm{kg/m^3}$ i $\\nu=1{,}00\\cdot10^{-6}\\ \\mathrm{m^2/s}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 803
+              "line": 816
             }
           },
           {
             "text": "Gubitke pretvarača zanemari.",
             "provenance": {
               "kind": "task_statement",
-              "line": 803
+              "line": 816
             }
           }
         ],
@@ -28610,7 +28706,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 827
+          "line": 840
         }
       },
       "tolerance": {
@@ -28712,7 +28808,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 466
+              "line": 484
             }
           },
           {
@@ -28729,7 +28825,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 467
+              "line": 485
             }
           },
           {
@@ -28746,7 +28842,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 468
+              "line": 486
             }
           },
           {
@@ -28763,7 +28859,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 469
+              "line": 487
             }
           },
           {
@@ -28780,7 +28876,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 470
+              "line": 488
             }
           },
           {
@@ -28797,7 +28893,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 471
+              "line": 489
             }
           },
           {
@@ -28814,7 +28910,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 472
+              "line": 490
             }
           },
           {
@@ -28825,7 +28921,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 473
+              "line": 491
             }
           },
           {
@@ -28836,7 +28932,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 474
+              "line": 492
             }
           },
           {
@@ -28847,7 +28943,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 479
+              "line": 497
             }
           }
         ]
@@ -28860,7 +28956,7 @@
       "level": "T3",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 834,
+        "line": 847,
         "anchor": "#task-robustan-izbor-promjera"
       },
       "statement": {
@@ -28964,11 +29060,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "Nova cijev: $\\lambda\\approx0{,}0238/0{,}0228/0{,}0221$ i $h_g\\approx33{,}1/10{,}8/3{,}56\\ \\mathrm{m}$ za 80/100/125 mm; svi su tokovi turbulentni ($Re\\approx1{,}8$–$2{,}9\\cdot10^5$). Najmanji dopušteni promjer je 100 mm. Nakon starenja ($k_s=0{,}50\\ \\mathrm{mm}$) za 100 mm je $\\lambda\\approx0{,}0309$ i $h_g\\approx14{,}0\\ \\mathrm{m}$, još unutar granice, ali s rezervom od samo $1\\ \\mathrm{m}$.",
+        "markdown": "Nova cijev, za $D=80$; $100$ i $125\\ \\mathrm{mm}$: $\\lambda\\approx(0{,}0238;\\,0{,}0228;\\,0{,}0221)$ i $h_g\\approx(33{,}1;\\,10{,}8;\\,3{,}56)\\ \\mathrm{m}$; svi su tokovi turbulentni ($Re\\approx1{,}8$–$2{,}9\\cdot10^5$). Najmanji dopušteni promjer je 100 mm. Nakon starenja ($k_s=0{,}50\\ \\mathrm{mm}$) za 100 mm je $\\lambda\\approx0{,}0309$ i $h_g\\approx14{,}0\\ \\mathrm{m}$, još unutar granice, ali s rezervom od samo $1\\ \\mathrm{m}$.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 853
+          "line": 866
         }
       },
       "tolerance": {
@@ -29080,7 +29176,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 485
+              "line": 503
             }
           },
           {
@@ -29097,7 +29193,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 486
+              "line": 504
             }
           },
           {
@@ -29114,7 +29210,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 487
+              "line": 505
             }
           },
           {
@@ -29131,7 +29227,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 488
+              "line": 506
             }
           },
           {
@@ -29148,7 +29244,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 489
+              "line": 507
             }
           },
           {
@@ -29165,7 +29261,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 490
+              "line": 508
             }
           },
           {
@@ -29182,7 +29278,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 491
+              "line": 509
             }
           },
           {
@@ -29199,7 +29295,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 493
+              "line": 511
             }
           },
           {
@@ -29216,7 +29312,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 494
+              "line": 512
             }
           },
           {
@@ -29227,7 +29323,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 495
+              "line": 513
             }
           }
         ]
@@ -29240,12 +29336,12 @@
       "level": "T4",
       "source": {
         "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-        "line": 862,
+        "line": 875,
         "anchor": "#task-balastna-crpka-regulacija-npsh"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Balastna crpka broda puni balastni tank morskom vodom gustoće $\\rho=1025\\ \\mathrm{kg/m^3}$ preko usisnog koša u oplati. Sintetičke nastavne karakteristike zadane su brojevnim vrijednostima, s $Q$ u $\\mathrm{L/s}$ i visinama u metrima: pri nazivnoj brzini $H_p(Q)=22-0{,}010Q^2$, sustav s otvorenim ventilom $H_s(Q)=4+0{,}015Q^2$, a prigušeni sustav $H_{s,V}(Q)=4+0{,}026Q^2$. Ukupna učinkovitost pretvorbe električne u hidrauličku snagu pretpostavlja se jednakom $\\eta=0{,}70$ u objema uspoređenim točkama; crpka radi $t=1500\\ \\mathrm{h/god}$. Primijeni afinitetno skaliranje iste crpke uz zadanu stalnu učinkovitost. Referentni usisni presjek S crpke nalazi se $1{,}8\\ \\mathrm{m}$ **ispod** vodne linije, tj. $z_s=-1{,}8\\ \\mathrm{m}$ (napunjen usis), atmosferski tlak je $p_{atm}=101{,}3\\ \\mathrm{kPa}$, usisni gubitak koša, filtra i armature pri protoku prigušenog sustava $h_{g,s}=1{,}4\\ \\mathrm{m}$, a tlak pare morske vode pri $30\\ \\mathrm{^\\circ C}$ iznosi $p_v=4{,}2\\ \\mathrm{kPa}$. Sintetički model potrebnog NPSH-a **pri nazivnoj brzini** jest $NPSH_r=2{,}5+0{,}004Q^2$ u metrima. **Traži se** 1. Odredi radnu točku prigušenog sustava, odnosno $Q$ i $H_V$, te godišnju potrošnju električne energije $E_V$. 2. Za isti protok, uz ponovno otvoren ventil, odredi omjer brzina $s=n_2/n_1$, potrebnu visinu $H_s$, godišnju energiju $E_s$ i uštedu $\\Delta E$. 3. Odredi $NPSH_a$ s apsolutnim tlakom i razliku $NPSH_a-NPSH_r$ za prigušeni slučaj. Zatim odluči koji podatci nedostaju da bi se usis proglasio prihvatljivim za oba načina regulacije i u balastnom stanju broda, kad je presjek S samo $0{,}4\\ \\mathrm{m}$ ispod vodne linije ($z_s=-0{,}4\\ \\mathrm{m}$); zadani $NPSH_r$ nemoj nekritički prenijeti na sniženu brzinu.",
-        "sha256": "01d6f7f6e4c0fa1c9a5197aad9549e96f042ff1f1c6f90a6e47340847ad36068",
+        "markdown": "**Tekst zadatka** Balastna crpka manjeg obalnog broda puni balastni tank morskom vodom gustoće $\\rho=1025\\ \\mathrm{kg/m^3}$ preko usisnog koša u oplati. Sintetičke nastavne karakteristike zadane su brojevnim vrijednostima, s $Q$ u $\\mathrm{L/s}$ i visinama u metrima: pri nazivnoj brzini vrtnje $H_p(Q)=22-0{,}010Q^2$, sustav s otvorenim ventilom $H_s(Q)=4+0{,}015Q^2$, a prigušeni sustav $H_{s,V}(Q)=4+0{,}026Q^2$. Statička visina $4\\ \\mathrm{m}$ srednja je vrijednost tijekom punjenja; promjenu razine u tanku i gaza zanemari. Ukupna učinkovitost pretvorbe električne u hidrauličku snagu pretpostavlja se jednakom $\\eta=0{,}70$ u objema uspoređenim točkama; crpka radi $t=1500\\ \\mathrm{h/god}$. Primijeni afinitetno skaliranje iste crpke uz zadanu stalnu učinkovitost. Referentni usisni presjek S crpke nalazi se $1{,}8\\ \\mathrm{m}$ **ispod** vodne linije, tj. $z_s=-1{,}8\\ \\mathrm{m}$ (napunjen usis). Atmosferski tlak je $p_{atm}=101{,}3\\ \\mathrm{kPa}$, a usisni gubitak koša, filtra i armature pri protoku prigušenog sustava iznosi $h_{g,s}=1{,}4\\ \\mathrm{m}$. Tlak pare morske vode pri $30\\ \\mathrm{^\\circ C}$ iznosi $p_v=4{,}2\\ \\mathrm{kPa}$. Sintetički model potrebnog NPSH-a **pri nazivnoj brzini vrtnje** glasi $NPSH_r=2{,}5+0{,}004Q^2$ u metrima. **Traži se** 1. Odredi radnu točku prigušenog sustava, odnosno $Q$ i $H_V$, te godišnju potrošnju električne energije $E_V$. 2. Za isti protok, uz ponovno otvoren ventil, odredi omjer brzina vrtnje $s=n_2/n_1$, potrebnu visinu $H_s$, godišnju energiju $E_n$ pri regulaciji brzinom vrtnje i uštedu $\\Delta E$. 3. Odredi $NPSH_a$ prema jednadžbi [-@eq-npsha-spremnik], s apsolutnim referentnim tlakom, i razliku $NPSH_a-NPSH_r$ za prigušeni slučaj. Zatim odluči koji podatci nedostaju da bi se usis proglasio prihvatljivim za oba načina regulacije i pri najmanjem gazu broda tijekom balastiranja, kad je presjek S samo $0{,}4\\ \\mathrm{m}$ ispod vodne linije ($z_s=-0{,}4\\ \\mathrm{m}$). Zadani $NPSH_r$ nemoj nekritički prenijeti na sniženu brzinu vrtnje.",
+        "sha256": "19974f7b3510969329029dfeda0464287d2dee16881caa15496371d5194a2d0b",
         "authoritative": true
       },
       "input_data": {
@@ -29261,6 +29357,19 @@
             "si": {
               "value": 1025.0,
               "unit": "kg/m^3"
+            }
+          },
+          {
+            "symbol": null,
+            "relation": "context_value",
+            "value_text": "4",
+            "value": 4.0,
+            "unit_text": "\\ \\mathrm{m}",
+            "normalized_unit": "m",
+            "provenance": "task_statement_inline_math",
+            "si": {
+              "value": 4.0,
+              "unit": "m"
             }
           },
           {
@@ -29403,17 +29512,24 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Ukupna učinkovitost pretvorbe električne u hidrauličku snagu pretpostavlja se jednakom $\\eta=0{,}70$ u objema uspoređenim točkama;",
+            "text": "promjenu razine u tanku i gaza zanemari.",
             "provenance": {
               "kind": "task_statement",
-              "line": 862
+              "line": 875
             }
           },
           {
-            "text": "$z_s=-1{,}8\\ \\mathrm{m}$ (napunjen usis), atmosferski tlak je $p_{atm}=101{,}3\\ \\mathrm{kPa}$, usisni gubitak koša, filtra i armature pri protoku prigušenog sustava $h_{g,s}=1{,}4\\ \\mathrm{m}$, a tlak pare morske vode pri $30\\ \\mathrm{^\\circ C}$ iznosi $p_v=4{,}2\\ \\mathrm{kPa}$.",
+            "text": "Ukupna učinkovitost pretvorbe električne u hidrauličku snagu pretpostavlja se jednakom $\\eta=0{,}70$ u objema uspoređenim točkama;",
             "provenance": {
               "kind": "task_statement",
-              "line": 862
+              "line": 875
+            }
+          },
+          {
+            "text": "Atmosferski tlak je $p_{atm}=101{,}3\\ \\mathrm{kPa}$, a usisni gubitak koša, filtra i armature pri protoku prigušenog sustava iznosi $h_{g,s}=1{,}4\\ \\mathrm{m}$.",
+            "provenance": {
+              "kind": "task_statement",
+              "line": 875
             }
           }
         ],
@@ -29424,11 +29540,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$Q\\approx22{,}36\\ \\mathrm{L/s}$; $(H_V,H_s)\\approx(17{,}00;11{,}50)\\ \\mathrm{m}$ i $s\\approx0{,}866$. $(E_V,E_s,\\Delta E)\\approx(8{,}19;5{,}54;2{,}65)\\ \\mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a,NPSH_r,NPSH_a-NPSH_r)\\approx(10{,}06;4{,}50;5{,}56)\\ \\mathrm{m}$; u balastnom stanju $NPSH_a\\approx8{,}66\\ \\mathrm{m}$. Za odluku nedostaju kriterij margine proizvođača, $NPSH_r(Q,n_2)$ za sniženu brzinu, stvarni porast $h_{g,s}$ zbog zaprljanog filtra te provjera uvlačenja zraka pri njihanju i trimu, što NPSH ne opisuje.",
+        "markdown": "$Q\\approx22{,}36\\ \\mathrm{L/s}$; $(H_V;\\,H_s)\\approx(17{,}00;\\,11{,}50)\\ \\mathrm{m}$ i $s\\approx0{,}866$. $(E_V;\\,E_n;\\,\\Delta E)\\approx(8{,}19;\\,5{,}54;\\,2{,}65)\\ \\mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a;\\,NPSH_r;\\,NPSH_a-NPSH_r)\\approx(10{,}06;\\,4{,}50;\\,5{,}56)\\ \\mathrm{m}$; pri najmanjem gazu $NPSH_a\\approx8{,}66\\ \\mathrm{m}$. Za odluku nedostaju kriterij margine proizvođača, $NPSH_r(Q,n_2)$ za sniženu brzinu, stvarni porast $h_{g,s}$ zbog zaprljanog filtra te provjera uvlačenja zraka pri ljuljanju i trimu, što NPSH ne opisuje.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u13_gubici_cjevovodi_crpke_i_mreze.md",
-          "line": 884
+          "line": 897
         }
       },
       "tolerance": {
@@ -29559,7 +29675,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 503
+              "line": 521
             }
           },
           {
@@ -29576,7 +29692,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 504
+              "line": 522
             }
           },
           {
@@ -29593,7 +29709,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 505
+              "line": 523
             }
           },
           {
@@ -29610,7 +29726,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 506
+              "line": 524
             }
           },
           {
@@ -29627,7 +29743,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 507
+              "line": 525
             }
           },
           {
@@ -29644,7 +29760,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 508
+              "line": 526
             }
           },
           {
@@ -29661,7 +29777,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 509
+              "line": 527
             }
           },
           {
@@ -29678,7 +29794,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 510
+              "line": 528
             }
           },
           {
@@ -29695,7 +29811,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 511
+              "line": 529
             }
           },
           {
@@ -29712,7 +29828,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 512
+              "line": 530
             }
           },
           {
@@ -29729,7 +29845,7 @@
             },
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 513
+              "line": 531
             }
           },
           {
@@ -29740,7 +29856,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 514
+              "line": 532
             }
           },
           {
@@ -29751,7 +29867,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u13_integrated.py",
-              "line": 520
+              "line": 538
             }
           }
         ]

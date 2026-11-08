@@ -4,7 +4,7 @@
     "tools/build_print_figures.mjs": "4b695d1282ac4e91a26f75117596f0fd080dd3312ecc337536fd2be86e50a5e7",
     "assets/figure-tokens.json": "5d0e62e89920146860914f5b7fd267a3ab2c9d5ba72f2aa4478cc600358c83f8",
     "assets/figure-compositions.json": "ad84e3227b657f1953e069762f51d1ef6797e147436c04b558f0a658a866698c",
-    "assets/print-layouts.json": "463e59faccf6485290a9bc6d15ee39838fdcd24bd87a70f27ffd097a6bb30f1f"
+    "assets/print-layouts.json": "3e01bea15eb256649a1e141313f53c4dd7cd9517a5e9ecf434d0eeb9c3c567c5"
   },
   "tokens": {
     "text-width-pt": 447.874,
@@ -6775,7 +6775,7 @@
             1
           ],
           "keep_with_next": true,
-          "sha256": "d669ac57b6bdcca53189736d5851f005adab51b7797ba439094f8a52b46408c5"
+          "sha256": "7866f21f4e33ec445cbd69626194c61eb81affcd570993f63ec7d7d05640f1dd"
         }
       ],
       "kind": "composite",
@@ -6786,7 +6786,7 @@
       "panels": [
         {
           "width": 216.937,
-          "height": 238.16984761904763,
+          "height": 223.16984761904763,
           "kind": "subfigure",
           "conflicts": 0,
           "geometry": [
@@ -6873,7 +6873,7 @@
           ]
         }
       ],
-      "source_sha1": "2ed8fa516465649bfa060543094039ae8a189a2e"
+      "source_sha1": "418704002907409c50349366f3e44f365294b69d"
     },
     "u11_ch1_t_racva_konzola.svg": {
       "rows": [
@@ -8812,7 +8812,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "5772c7e5d27dc5fd20ba64cdbd16f130c4d4675a861afed2d8776e2125ca0932"
+          "sha256": "a1a497c32bcdf7be05729e2ff5e95f8ee4817bbb6a355399ffdfc8be01d7f036"
         }
       ],
       "kind": "standard",
@@ -8894,7 +8894,7 @@
           ]
         }
       ],
-      "source_sha1": "54bfe7148fe290fede8a55d3071687549cbe88a2"
+      "source_sha1": "0a4e46cddfa2f1a6b52c30ca2fe29e1b520ead83"
     },
     "u13_mreze_vjezbe_skice.svg": {
       "rows": [
@@ -8928,7 +8928,7 @@
             4
           ],
           "keep_with_next": false,
-          "sha256": "9a98cb7a5ba3dfcd623cbf598ce51a32f7a5a4a7566bc8b5bc2621fad157acce"
+          "sha256": "d653b0ba5d7a9471dd6b42be3254610df22ed66eb6a5f85167962ab08ea81ede"
         },
         {
           "file": "u13_mreze_vjezbe_skice--4.svg",
@@ -8938,13 +8938,13 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "88e80f9fd6e8006688bd5e05e57676961d18e277ee63b7381fc5c3bceeb3842c"
+          "sha256": "f2f3eb0c716577a9fcaa3e280c1d8710f292225bf7a214b2b371f0b9cd201e93"
         }
       ],
       "kind": "composite",
       "triptych_conflicts": null,
       "source_text_count": 68,
-      "source_geometry_count": 99,
+      "source_geometry_count": 101,
       "removed_decorations": [],
       "panels": [
         {
@@ -9153,10 +9153,12 @@
             149,
             150,
             152,
+            153,
             154,
             156,
-            157,
-            158
+            158,
+            159,
+            160
           ],
           "texts": [
             56,
@@ -9175,7 +9177,7 @@
           ]
         }
       ],
-      "source_sha1": "b510b77e6c5475e307dd27f11e8ff2024b70f616"
+      "source_sha1": "e2f430cb951233f0e946c6d0bb1bd04c67838b1b"
     },
     "u14_ch1_kugla_struja.svg": {
       "rows": [

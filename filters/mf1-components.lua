@@ -138,13 +138,28 @@ local function adapt_div(div)
   return div
 end
 
+-- Document being rendered: chapter metadata, or the current chapter header
+-- inside the print collection. Used to name the chapter of a P/Z target.
+local current_doc=nil
+-- P/Z objects are shown with their visible label (P3, Z5), as in their
+-- headings; a target in another chapter also names that chapter.
+local function object_text(object)
+  if (object.kind=="Example" or object.kind=="Problem") and object.label then
+    if current_doc and object.document~=current_doc and documents[object.document] then
+      return object.label.." iz pog.\u{00A0}"..documents[object.document].number
+    end
+    return object.label
+  end
+  return object.number
+end
+
 local function reference(target, content)
   local object=index.objects[target]
   if not object then error("Unknown MF1 object reference: "..target) end
   local doc=documents[object.document]
   if not content or #content==0 then
     local names={Example="primjer",Problem="zadatak",Equation="jednadžba",Figure="slika",Table="tablica"}
-    content={pandoc.Str((names[object.kind] or object.kind).." "..object.number)}
+    content={pandoc.Str((names[object.kind] or object.kind).." "..object_text(object))}
   end
   local href=FORMAT:match('typst') and ('#'..target) or ('/'..doc.path..'#'..target)
   return pandoc.Link(content,href,"",pandoc.Attr("",{"mf1-reference"}))
@@ -237,7 +252,7 @@ local function adapt_cite(cite)
     -- [-@id] ispisuje samo broj, pa tekst sam sklanja imenicu:
     -- "u primjeru [-@ex-...]", "prema jednadžbi [-@eq-...]".
     if cite.citations[1].mode=="SuppressAuthor" then
-      return reference(object.id,{pandoc.Str(object.number)})
+      return reference(object.id,{pandoc.Str(object_text(object))})
     end
     return reference(object.id)
   end
@@ -394,9 +409,24 @@ local function collection_headers(doc)
 end
 
 return {
-  {Meta=function(meta) collection=meta['mf1-print-collection'] and text(meta['mf1-print-collection'])=='true' or false end},
+  {Meta=function(meta)
+    collection=meta['mf1-print-collection'] and text(meta['mf1-print-collection'])=='true' or false
+    current_doc=meta['mf1-document-id'] and text(meta['mf1-document-id']) or nil
+  end},
   {Div=adapt_div},
-  {Blocks=adapt_blocks,Span=adapt_span,RawInline=adapt_raw_inline,Cite=adapt_cite,Table=adapt_table,Figure=adapt_figure,FloatRefTarget=adapt_float,Callout=adapt_callout},
+  {Blocks=adapt_blocks,Span=adapt_span,RawInline=adapt_raw_inline,Table=adapt_table,Figure=adapt_figure,FloatRefTarget=adapt_float,Callout=adapt_callout},
+  -- Document order matters: the print collection changes chapter at each
+  -- collection header, so references are resolved in a top-down pass.
+  {traverse='topdown',
+   Header=function(header)
+     if header.classes:includes('mf1-collection-chapter') then
+       current_doc=header.attributes['data-document']
+     elseif header.level==1 and titles[text(header.content)] then
+       -- Spojena knjiga (PDF): poglavlje počinje svojim naslovom razine 1.
+       current_doc=titles[text(header.content)].id
+     end
+   end,
+   Cite=adapt_cite},
   {Link=pdf_document_link},
   {Pandoc=collection_headers},
 }

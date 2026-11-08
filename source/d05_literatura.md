@@ -10,7 +10,7 @@ Kompresibilni idealni tok, sapnice i udarni valovi u poglavlju 9 slijede standar
 
 ## Cjevovodi i otvoreni tokovi
 
-Moodyjev dijagram potječe iz rada [@moody1944], a implicitna veza za turbulentni koeficijent trenja iz rada [@colebrook1939]. Za otvorene tokove, specifičnu energiju, postupno promjenjiv tok i hidraulički skok referentni je izvor Chow [@chow1959]. Empirijske koeficijente uvijek treba uzeti iz izvora koji odgovara geometriji, hrapavosti i rasponu Reynoldsova broja konkretnog problema.
+Moodyjev dijagram potječe iz rada [@moody1944], a implicitna veza za turbulentni koeficijent trenja iz rada [@colebrook1939]. Eksplicitnu aproksimaciju te veze daju Swamee i Jain [@swamee1976], a iterativni postupak za petlje cjevovodne mreže Cross [@cross1936]. Ispitivanje crpki i potrebni NPSH pri padu visine dobave od 3 % definira norma ISO 9906 [@iso9906]. Za otvorene tokove, specifičnu energiju, postupno promjenjiv tok i hidraulički skok referentni je izvor Chow [@chow1959]. Empirijske koeficijente uvijek treba uzeti iz izvora koji odgovara geometriji, hrapavosti i rasponu Reynoldsova broja konkretnog problema.
 
 ## Brodogradnja, stabilitet i modelska ispitivanja
 

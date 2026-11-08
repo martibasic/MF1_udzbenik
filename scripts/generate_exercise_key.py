@@ -67,16 +67,22 @@ def compact(text: str, limit: int = 240) -> str:
     return value[:cut].rstrip(" ,;:") + ("…" if cut < len(value) else "")
 
 
-def portable_xrefs(text: str, wrapper_name: str) -> str:
-    """Pretvori lokalne Pandoc xrefove u veze koje rade i u izdvojenom D06."""
+def portable_xrefs(text: str, wrapper_name: str, numbers: dict[str, str]) -> str:
+    """Pretvori lokalne Pandoc xrefove u veze koje rade i u izdvojenom D06.
 
-    return re.sub(
-        r"\[-@(?P<id>(?:eq|fig|tbl|sec)-[A-Za-z0-9_-]+)\]",
-        lambda match: (
-            f"[odgovarajući izraz]({wrapper_name}#{match.group('id')})"
-        ),
-        text,
-    )
+    Tekst veze je broj objekta, kao u poglavlju: jednadžba „(13.16)”,
+    slika ili odjeljak „13.2”. Nepoznat ID je pogreška, ne rezervni tekst.
+    """
+
+    def link(match: re.Match[str]) -> str:
+        identifier = match.group("id")
+        if identifier not in numbers:
+            raise ValueError(f"Ključ upućuje na nepoznat objekt: {identifier}")
+        number = numbers[identifier]
+        label = f"({number})" if identifier.startswith("eq-") else number
+        return f"[{label}]({wrapper_name}#{identifier})"
+
+    return re.sub(r"\[-@(?P<id>(?:eq|fig|tbl|sec)-[A-Za-z0-9_-]+)\]", link, text)
 
 
 def tasks_from_source(path: Path) -> list[dict[str, str]]:
@@ -136,6 +142,13 @@ def build(root=ROOT) -> str:
     ]
     seen: set[str] = set()
     total = 0
+    # Brojevi se računaju iz izvora, pa ne ovise o redoslijedu obnove indeksa.
+    from content_index import build_index
+
+    index = build_index(root)
+    numbers = {key: str(obj["number"]) for key, obj in index["objects"].items() if obj.get("number")}
+    numbers.update({sec["id"]: str(sec["number"]) for doc in index.get("documents", {}).values()
+                    for sec in doc.get("sections", []) if isinstance(sec, dict) and sec.get("id") and sec.get("number")})
     for chapter in documents(load_book(root), kind="chapter"):
         wrapper_name = Path(chapter["path"]).name
         title = chapter["title"]
@@ -149,8 +162,8 @@ def build(root=ROOT) -> str:
             seen.add(task["id"])
             total += 1
             key_id = f"key-{task['id']}"
-            hint = portable_xrefs(task["hint"], wrapper_name)
-            answer = portable_xrefs(task["answer"], wrapper_name)
+            hint = portable_xrefs(task["hint"], wrapper_name, numbers)
+            answer = portable_xrefs(task["answer"], wrapper_name, numbers)
             lines.extend(
                 [
                     f"### Z{task['number']}. {task['title']} {{#{key_id} .unnumbered .unlisted}}",

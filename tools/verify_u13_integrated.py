@@ -348,12 +348,23 @@ def ballast_regulation_task(
 def verify():
     out = []
 
-    r = section_losses(0.12, 36.0, 2.4, 0.028, 4.6)
-    _check(out, "U13.CANON.P1.velocity_head", r["velocity_head"], 0.294, "m", rel=0.02)
-    _check(out, "U13.CANON.P1.h_l", r["h_l"], 2.47, "m", rel=0.02)
-    _check(out, "U13.CANON.P1.h_loc", r["h_loc"], 1.35, "m", rel=0.02)
-    _check(out, "U13.CANON.P1.h_w", r["h_w"], 3.82, "m", rel=0.02)
-    _check(out, "U13.CANON.P1.dp_kPa", r["dp"] / 1000, 37.4, "kPa", rel=0.02)
+    # P1: turbulentni lambda iz Re i k_s/D (Swamee-Jain), provjera Colebrookom.
+    Re_p1 = 2.4 * 0.12 / 1.0e-6
+    lam_p1 = swamee_jain(Re_p1, 0.26e-3 / 0.12)
+    lam_cb, _ = colebrook_factor(Re_p1, 0.26e-3 / 0.12)
+    rhs_cb = (-2 * math.log10(0.26e-3 / 0.12 / 3.7 + 2.51 / (Re_p1 * math.sqrt(lam_p1)))) ** -2
+    _check(out, "U13.CANON.P1.Re", Re_p1, 2.88e5, "", rel=0.005)
+    _check(out, "U13.CANON.P1.lam_swamee_jain", lam_p1, 0.02467, "", rel=0.002)
+    _check(out, "U13.CANON.P1.colebrook_rhs", rhs_cb, 0.02452, "", rel=0.002)
+    _invariant(out, "U13.CANON.P1.explicit_within_1pct", abs(lam_p1 / lam_cb - 1) < 0.01,
+               "Swamee-Jain mora biti unutar 1 % od Colebrooka, kako tvrdi tekst.")
+    r = section_losses(0.12, 36.0, 2.4, lam_p1, 4.6)
+    _check(out, "U13.CANON.P1.velocity_head", r["velocity_head"], 0.2936, "m", rel=0.002)
+    _check(out, "U13.CANON.P1.h_l", r["h_l"], 2.173, "m", rel=0.002)
+    _check(out, "U13.CANON.P1.h_loc", r["h_loc"], 1.351, "m", rel=0.002)
+    _check(out, "U13.CANON.P1.h_w", r["h_w"], 3.524, "m", rel=0.002)
+    _check(out, "U13.CANON.P1.dp_kPa", r["dp"] / 1000, 34.57, "kPa", rel=0.002)
+    _check(out, "U13.CANON.P1.local_share", 4.6 / (lam_p1 * 36.0 / 0.12 + 4.6), r["h_loc"] / r["h_w"], "", rel=1e-12)
 
     r = laminar_pipe(1050.0, 5.0e-6, 0.004, 2.0, 8.0e-6)
     _check(out, "U13.CANON.P2.A", r["A"], 1.257e-5, "m2", rel=0.02)
@@ -447,6 +458,13 @@ def verify():
                and abs(double["fluids"][1]["dp"] / b["dp"] - 2**1.75) < 1e-12
                and double["fluids"][0]["Re"] < 2300,
                "Isti vod daje laminarni i turbulentni režim; skaliranja s Q moraju pratiti 64/Re i Blasiusa.")
+
+    free = parallel_branches()
+    _check(out, "U13.CANON.Z3.free_Q1_Ls", free["Q1"] * 1000, 13.33, "L/s", abs_tol=0.005)
+    _check(out, "U13.CANON.Z3.free_Q2_Ls", free["Q2"] * 1000, 6.67, "L/s", abs_tol=0.005)
+    _check(out, "U13.CANON.Z3.free_h_AB", free["h1"], 2.13, "m", abs_tol=0.005)
+    _invariant(out, "U13.CANON.Z3.free_equal_head", _close(free["h1"], free["h2"], 1e-10),
+               "Bez ventila paralelne grane imaju jednak pad.")
 
     r = balanced_branches()
     _check(out, "U13.CANON.Z3.Q1_Ls", r["Q1"] * 1000, 10.00, "L/s", abs_tol=0.005)

@@ -420,7 +420,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-zrak-za-upucivanje-motora)
 
-**Smjernica postupka.** Usporedi omjer apsolutnih tlakova $p_b/p_0$ s kritičnim omjerom $0{,}528$. Ako je tok zagušen, maseni protok izračunaj iz jednadžbe [odgovarajući izraz](u09_kompresibilni_idealni_tok.qmd#eq-priguseni-protok), uzimajući stanje boce kao zaustavno, a trajanje je $t=m/\dot m$. Pad tlaka boce tijekom upućivanja produljuje stvarno vrijeme.
+**Smjernica postupka.** Usporedi omjer apsolutnih tlakova $p_b/p_0$ s kritičnim omjerom $0{,}528$. Ako je tok zagušen, maseni protok izračunaj iz jednadžbe [(9.20)](u09_kompresibilni_idealni_tok.qmd#eq-priguseni-protok), uzimajući stanje boce kao zaustavno, a trajanje je $t=m/\dot m$. Pad tlaka boce tijekom upućivanja produljuje stvarno vrijeme.
 
 **Kontrolni rezultat ili kriterij.** $p_b/p_0=0{,}267<0{,}528$: tok je zagušen i protok ne ovisi o tlaku u vodu. $\dot m\approx0{,}850\ \text{kg/s}$; $t\approx2{,}94\ \text{s}$ uz stalno stanje boce, što je donja granica trajanja.
 
@@ -444,7 +444,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-sapnica-model)
 
-**Smjernica postupka.** Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši zagušeni protok kao $\dot m=C_dA_g\,(\dot m_{max}/A^*)$, gdje omjer $\dot m_{max}/A^*$ prema jednadžbi [odgovarajući izraz](u09_kompresibilni_idealni_tok.qmd#eq-priguseni-protok) ovisi samo o $p_0$ i $T_0$. Protok određuje samo produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
+**Smjernica postupka.** Najprije usporedi $p_b/p_0$ s kritičnim omjerom. Napiši zagušeni protok kao $\dot m=C_dA_g\,(\dot m_{max}/A^*)$, gdje omjer $\dot m_{max}/A^*$ prema jednadžbi [(9.20)](u09_kompresibilni_idealni_tok.qmd#eq-priguseni-protok) ovisi samo o $p_0$ i $T_0$. Protok određuje samo produkt; odvojeno mjerenje stvarne površine omogućuje procjenu koeficijenta. Nazivna površina nije mjerenje stvarnog prolaza.
 
 **Kontrolni rezultat ili kriterij.** $p_b/p_0=0{,}167<0{,}528$; $C_dA_g\approx42{,}50\ \text{mm}^2$. Za $A_g=48{,}0\ \text{mm}^2$: $\dot m_{ideal}\approx0{,}0672\ \text{kg/s}$ i $C_d\approx0{,}885$. Sama razlika površine ne objašnjava manji protok. Bez optičkog mjerenja poznat je samo produkt, a ne pojedini faktori. Veći otvor sam ne jamči $C_d=1$.
 
@@ -462,7 +462,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-vodomlazni-potisak-broda)
 
-**Smjernica postupka.** Odaberi kontrolni volumen koji prati brod i obuhvaća cijeli pogon; u njemu je tok stacionaran. Primijeni jednadžbu [odgovarajući izraz](u10_kolicina_i_moment_kolicine_gibanja.qmd#eq-potisak-mlaznog-pogona) s brzinama mjerenima u sustavu broda. Kinetička snaga predana vodi jest $\dot m(v_j^2-v_s^2)/2$; omjer $P_T$ i te snage jest $2v_s/(v_j+v_s)$.
+**Smjernica postupka.** Odaberi kontrolni volumen koji prati brod i obuhvaća cijeli pogon; u njemu je tok stacionaran. Primijeni jednadžbu [(10.9)](u10_kolicina_i_moment_kolicine_gibanja.qmd#eq-potisak-mlaznog-pogona) s brzinama mjerenima u sustavu broda. Kinetička snaga predana vodi jest $\dot m(v_j^2-v_s^2)/2$; omjer $P_T$ i te snage jest $2v_s/(v_j+v_s)$.
 
 **Kontrolni rezultat ili kriterij.** $\dot m\approx1845\ \text{kg/s}$; $F_T\approx25{,}8\ \text{kN}$ u smjeru plovidbe; $P_T\approx465\ \text{kW}$ od ukupno $\approx646\ \text{kW}$ predanih vodi, pa idealna propulzijska učinkovitost iznosi $0{,}72$; ostatak odnosi mlaz u tragu.
 
@@ -470,7 +470,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u10_kolicina_i_moment_kolicine_gibanja.qmd#task-propeler-aktuatorski-disk)
 
-**Smjernica postupka.** Prema jednadžbi [odgovarajući izraz](u10_kolicina_i_moment_kolicine_gibanja.qmd#eq-aktuatorski-disk-brzina) brzina kroz disk srednja je vrijednost brzina daleko ispred i iza njega. Maseni protok računaj s površinom diska i $v_d$, a potisak iz jednadžbe [odgovarajući izraz](u10_kolicina_i_moment_kolicine_gibanja.qmd#eq-aktuatorski-disk-potisak). Provjeri da isti potisak slijedi iz skoka tlaka $\rho_{mv}(v_j^2-v_A^2)/2$ pomnoženog površinom diska.
+**Smjernica postupka.** Prema jednadžbi [(10.10)](u10_kolicina_i_moment_kolicine_gibanja.qmd#eq-aktuatorski-disk-brzina) brzina kroz disk srednja je vrijednost brzina daleko ispred i iza njega. Maseni protok računaj s površinom diska i $v_d$, a potisak iz jednadžbe [(10.11)](u10_kolicina_i_moment_kolicine_gibanja.qmd#eq-aktuatorski-disk-potisak). Provjeri da isti potisak slijedi iz skoka tlaka $\rho_{mv}(v_j^2-v_A^2)/2$ pomnoženog površinom diska.
 
 **Kontrolni rezultat ili kriterij.** $v_d=7{,}00\ \text{m/s}$; $\dot m\approx9{,}02\cdot10^{4}\ \text{kg/s}$; $F_T\approx180\ \text{kN}$ (isto iz $\Delta p\,A_d$ s $\Delta p\approx14{,}35\ \text{kPa}$); $P_T\approx1{,}08\ \text{MW}$; $\eta_i=0{,}857$.
 
@@ -620,7 +620,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-dva-fluida-isti-vod)
 
-**Smjernica postupka.** Brzina je ista za oba fluida; razlikuju se $Re$ (dakle režim i $\lambda$) i gustoća. Za $Re<2300$ upotrijebi $\lambda=64/Re$, a za $Re>4000$ u glatkoj cijevi Blasiusov zapis $\lambda=0{,}3164\,Re^{-1/4}$. Udvostručenje $Q$ u laminarnom toku udvostručuje $\Delta p$, a u Blasiusovu području množi ga s $2^{1{,}75}$.
+**Smjernica postupka.** Brzina je ista za oba fluida; razlikuju se $Re$ (dakle režim i $\lambda$) i gustoća. Za $Re<2300$ upotrijebi $\lambda=64/Re$, a za $Re>4000$ u glatkoj cijevi Blasiusov zapis $\lambda=0{,}3164\,Re^{-1/4}$. Za drugi dio izrazi $\Delta p$ kao potenciju od $Q$ za svaki zapis $\lambda$.
 
 **Kontrolni rezultat ili kriterij.** $v=0{,}597\ \mathrm{m/s}$. A: $Re=796$ (laminarno), $\lambda=0{,}0804$, $\Delta p_A=7{,}73\ \mathrm{kPa}$. B: $Re=4775$ (turbulentno), $\lambda=0{,}0381$, $\Delta p_B=3{,}38\ \mathrm{kPa}$. Pri $2Q$: $\Delta p_A=15{,}5\ \mathrm{kPa}$ (ostaje laminarno, $Re=1592$), $\Delta p_B\approx11{,}4\ \mathrm{kPa}$.
 
@@ -628,9 +628,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-uravnotezenje-paralelnih-grana)
 
-**Smjernica postupka.** Cilj je $Q_1=Q_2=Q/2$. Izjednači ukupne gubitke između čvorova A i B uz dodatak ventila. Prigušenje može otpor samo povećati, pa $R_v$ ne smije biti negativan.
+**Smjernica postupka.** Cilj je $Q_1=Q_2=Q/2$. Izjednači ukupne gubitke između čvorova A i B uz dodatak ventila. Prigušenje može otpor samo povećati, pa $R_V$ ne smije biti negativan.
 
-**Kontrolni rezultat ili kriterij.** Ventil ide u granu 1: $R_v=36\,000\ \mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\ \mathrm{L/s}$, $h_{AB}=4{,}80\ \mathrm{m}$ i $h_{g,V}=3{,}60\ \mathrm{m}$. Provjera: $(R_1+R_v)Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$.
+**Kontrolni rezultat ili kriterij.** Bez ventila $Q_1=13{,}33$ i $Q_2=6{,}67\ \mathrm{L/s}$, $h_{AB}=2{,}13\ \mathrm{m}$. Ventil ide u granu 1: $R_V=36\,000\ \mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\ \mathrm{L/s}$, $h_{AB}=4{,}80\ \mathrm{m}$ i $h_{g,V}=3{,}60\ \mathrm{m}$. Provjera: $(R_1+R_V)Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$.
 
 ### Z4. Radna točka hrapavog voda {#key-task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
 
@@ -644,17 +644,17 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-robustan-izbor-promjera)
 
-**Smjernica postupka.** Za svaki $D$: $v=4Q/(\pi D^2)$, $Re=vD/\nu$, $k_s/D$, pa $\lambda$ iz jednadžbe [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-swamee-jain) i $h_g=(\lambda L/D+\sum\xi)v^2/(2g)$. I $Re$ i $k_s/D$ mijenjaju se s promjerom, pa se mijenja i $\lambda$. Odluku donesi prema najmanjem promjeru s $h_g\le15\ \mathrm{m}$, a zatim ponovi račun s većom hrapavošću.
+**Smjernica postupka.** Za svaki $D$: $v=4Q/(\pi D^2)$, $Re=vD/\nu$, $k_s/D$, pa $\lambda$ iz jednadžbe [(13.16)](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-swamee-jain) i $h_g=(\lambda L/D+\sum\xi)v^2/(2g)$. I $Re$ i $k_s/D$ mijenjaju se s promjerom, pa se mijenja i $\lambda$. Odluku donesi prema najmanjem promjeru s $h_g\le15\ \mathrm{m}$, a zatim ponovi račun s većom hrapavošću.
 
-**Kontrolni rezultat ili kriterij.** Nova cijev: $\lambda\approx0{,}0238/0{,}0228/0{,}0221$ i $h_g\approx33{,}1/10{,}8/3{,}56\ \mathrm{m}$ za 80/100/125 mm; svi su tokovi turbulentni ($Re\approx1{,}8$–$2{,}9\cdot10^5$). Najmanji dopušteni promjer je 100 mm. Nakon starenja ($k_s=0{,}50\ \mathrm{mm}$) za 100 mm je $\lambda\approx0{,}0309$ i $h_g\approx14{,}0\ \mathrm{m}$, još unutar granice, ali s rezervom od samo $1\ \mathrm{m}$.
+**Kontrolni rezultat ili kriterij.** Nova cijev, za $D=80$; $100$ i $125\ \mathrm{mm}$: $\lambda\approx(0{,}0238;\,0{,}0228;\,0{,}0221)$ i $h_g\approx(33{,}1;\,10{,}8;\,3{,}56)\ \mathrm{m}$; svi su tokovi turbulentni ($Re\approx1{,}8$–$2{,}9\cdot10^5$). Najmanji dopušteni promjer je 100 mm. Nakon starenja ($k_s=0{,}50\ \mathrm{mm}$) za 100 mm je $\lambda\approx0{,}0309$ i $h_g\approx14{,}0\ \mathrm{m}$, još unutar granice, ali s rezervom od samo $1\ \mathrm{m}$.
 
 ### Z6. Regulacija balastne crpke i usisna rezerva {#key-task-balastna-crpka-regulacija-npsh .unnumbered .unlisted}
 
 [Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-balastna-crpka-regulacija-npsh)
 
-**Smjernica postupka.** Model: presjecište $H_p=H_{s,V}$, afinitetno skaliranje $H_{p,2}(Q)=s^2H_p(Q/s)$ pri istom $Q$, $P_{el}=\rho gQH/\eta$ (s $Q$ u $\mathrm{m^3/s}$) i usisna bilanca prema jednadžbi [odgovarajući izraz](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-npsha-spremnik) uz $z_s<0$ (napunjen usis). Kriterij: $NPSH_a-NPSH_r$ uz marginu proizvođača; potrebni NPSH vrijedi samo pri nazivnoj brzini.
+**Smjernica postupka.** Model: presjecište $H_p=H_{s,V}$, afinitetno skaliranje $H_{p,2}(Q)=s^2H_p(Q/s)$ pri istom $Q$, $P_{el}=\rho gQH/\eta$ (s $Q$ u $\mathrm{m^3/s}$) i usisna bilanca prema jednadžbi [(13.28)](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-npsha-spremnik) uz $z_s<0$ (napunjen usis). Kriterij: $NPSH_a-NPSH_r$ uz marginu proizvođača; potrebni NPSH vrijedi samo pri nazivnoj brzini.
 
-**Kontrolni rezultat ili kriterij.** $Q\approx22{,}36\ \mathrm{L/s}$; $(H_V,H_s)\approx(17{,}00;11{,}50)\ \mathrm{m}$ i $s\approx0{,}866$. $(E_V,E_s,\Delta E)\approx(8{,}19;5{,}54;2{,}65)\ \mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a,NPSH_r,NPSH_a-NPSH_r)\approx(10{,}06;4{,}50;5{,}56)\ \mathrm{m}$; u balastnom stanju $NPSH_a\approx8{,}66\ \mathrm{m}$. Za odluku nedostaju kriterij margine proizvođača, $NPSH_r(Q,n_2)$ za sniženu brzinu, stvarni porast $h_{g,s}$ zbog zaprljanog filtra te provjera uvlačenja zraka pri njihanju i trimu, što NPSH ne opisuje.
+**Kontrolni rezultat ili kriterij.** $Q\approx22{,}36\ \mathrm{L/s}$; $(H_V;\,H_s)\approx(17{,}00;\,11{,}50)\ \mathrm{m}$ i $s\approx0{,}866$. $(E_V;\,E_n;\,\Delta E)\approx(8{,}19;\,5{,}54;\,2{,}65)\ \mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a;\,NPSH_r;\,NPSH_a-NPSH_r)\approx(10{,}06;\,4{,}50;\,5{,}56)\ \mathrm{m}$; pri najmanjem gazu $NPSH_a\approx8{,}66\ \mathrm{m}$. Za odluku nedostaju kriterij margine proizvođača, $NPSH_r(Q,n_2)$ za sniženu brzinu, stvarni porast $h_{g,s}$ zbog zaprljanog filtra te provjera uvlačenja zraka pri ljuljanju i trimu, što NPSH ne opisuje.
 
 ## Turbostrojevi i propulzija
 
@@ -744,7 +744,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-skok-mjerenje)
 
-**Smjernica postupka.** Model: bilanca količine gibanja s impulsnom funkcijom iz jednadžbe [odgovarajući izraz](u15_otvoreni_tokovi.qmd#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01) u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti (GUM) i sukladnost ako je $|\Delta_I|\le2s_{\Delta}$; slaganje ne dokazuje pretpostavke modela.
+**Smjernica postupka.** Model: bilanca količine gibanja s impulsnom funkcijom iz jednadžbe [(15.18)](u15_otvoreni_tokovi.qmd#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01) u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti (GUM) i sukladnost ako je $|\Delta_I|\le2s_{\Delta}$; slaganje ne dokazuje pretpostavke modela.
 
 **Kontrolni rezultat ili kriterij.** $q=1{,}5000\ \mathrm{m^2/s}$, $s_q\approx0{,}01546\ \mathrm{m^2/s}$, $\Delta_I\approx-0{,}01648\ \mathrm{m^2}$ i $s_{\Delta}\approx0{,}02010\ \mathrm{m^2}$. Omjer je $|\Delta_I|/s_{\Delta}\approx0{,}820<2$, pa su mjerenja prema zadanom kriteriju sukladna bilanci. Teorijska spregnuta dubina iznosi $1{,}2353\ \mathrm{m}$. Slaganje samo po sebi ne dokazuje sve pretpostavke modela. Najveći doprinos nesigurnosti $s_{\Delta}$ daje zajednički $q$, pa bi za strožu provjeru trebalo točnije izmjeriti protok.
 
@@ -752,7 +752,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-klimatski-kanal)
 
-**Smjernica postupka.** Na dopuštenoj dubini $y_{kon}-f_{min}$ izračunaj $A$, $P$, $R_h$ i kapacitet iz jednadžbe [odgovarajući izraz](u15_otvoreni_tokovi.qmd#eq-manning). Pri $Q_d$ numerički riješi Manningovu jednadžbu po dubini (bisekcijom ili tablično); veći $n$ smanjuje kapacitet i povećava normalnu dubinu. Za bazen upotrijebi $q=Q_d/b_{baz}$ i jednadžbu [odgovarajući izraz](u15_otvoreni_tokovi.qmd#eq-spregnute-dubine).
+**Smjernica postupka.** Na dopuštenoj dubini $y_{kon}-f_{min}$ izračunaj $A$, $P$, $R_h$ i kapacitet iz jednadžbe [(15.25)](u15_otvoreni_tokovi.qmd#eq-manning). Pri $Q_d$ numerički riješi Manningovu jednadžbu po dubini (bisekcijom ili tablično); veći $n$ smanjuje kapacitet i povećava normalnu dubinu. Za bazen upotrijebi $q=Q_d/b_{baz}$ i jednadžbu [(15.20)](u15_otvoreni_tokovi.qmd#eq-spregnute-dubine).
 
 **Kontrolni rezultat ili kriterij.** Redom A/B/C (protoci u m³/s, dubine i rubovi u m): $Q_{cap}=(11{,}759;8{,}141;6{,}047)$; $y_n=(0{,}985;1{,}189;1{,}380)$; $f=(0{,}515;0{,}311;0{,}120)$. Uvjet slobodnog ruba zadovoljavaju A i B, a C ne. Pri $Q_d$ je $y_2=1{,}059\ \mathrm{m}<1{,}40\ \mathrm{m}$.
 
