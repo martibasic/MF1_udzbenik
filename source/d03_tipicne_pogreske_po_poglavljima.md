@@ -277,7 +277,8 @@ Najprije provjeri dimenzijsku homogenost i jedinicu svakog empirijskog koeficije
 - Miješanje strujnice i putanje čestice.
 - Rješavanje Navier–Stokesovih jednadžbi bez početnih i rubnih uvjeta.
 - Tumačenje vremenskog mjerila $H^2/\nu$ kao točnog vremena uspostave profila.
-- Hagen–Poiseuilleov izraz primijenjen na turbulentni tok ili bilanca sila $\tau_{st}=\Delta p\,D/(4L)$ pogrešno ograničena na laminarni režim, visina prve ćelije odabrana bez brzine trenja (Z2).
+- Hagen–Poiseuilleov izraz primijenjen na turbulentni tok ili bilanca sila $\tau_{st}=\Delta p\,D/(4L)$ pogrešno ograničena na laminarni režim (Z2).
+- Visina prve ćelije odabrana bez brzine trenja (Z2).
 - Tumačenje lokalnog povratnog toka kao prolaza kroz stijenku (Z4).
 - Primjena Blasiusova rješenja uz gradijent tlaka ili hrapavost (Z5).
 - Poistovjećivanje numeričke konvergencije s validacijom (Z6).
@@ -322,7 +323,7 @@ Najprije odredi $Re$ i režim, zatim $\lambda$; zatvori bilancu kontinuiteta i g
 - Zamjena relativnog dotoka na jednu lopaticu ili ploču punim protokom kola, pa pogrešan optimum $u=v/2$ umjesto $u=v/3$ za jednu ploču (Z2).
 - Prihvaćanje rekonstruiranog izlaza bez provjere gubitka i pasivnosti lopatice (Z3).
 - Isti polumjer u oba člana Eulerove jednadžbe (Z4).
-- Izostavljen ulazni tok količine gibanja $\dot mv_A$ u bilanci potiska (Z5).
+- Izostavljen ulazni tok količine gibanja $\dot mv_s$ u bilanci potiska (Z5).
 - Poistovjećivanje učinkovitosti pogona s propulzijskom učinkovitošću.
 - Kut lopatice $\beta_2$ zamijenjen korekcijskim faktorom $\beta$.
 - Snaga Peltonova kola računana s protokom jedne lopatice $\rho A(c_1-u)$ umjesto cijelog sapničkog protoka $\rho Ac_1$.

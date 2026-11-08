@@ -19,7 +19,7 @@ Tlak je lokalna veličina, dok je opterećenje poklopca, vrata ili stijenke odre
 1. koliki su iznos i smjer rezultantne sile;
 2. kojim pravcem ta sila djeluje.
 
-Na ravnoj plohi sve lokalne tlačne sile imaju isti smjer, pa se integracijom traže iznos i centar tlaka. Na zakrivljenoj plohi lokalne normale mijenjaju smjer, pa je pouzdanije najprije odrediti vodoravnu i okomitu komponentu. Oba slučaja proizlaze iz istoga temeljnog zapisa
+Za ravnu plohu integracijom se traže iznos i centar tlaka, a za zakrivljenu je pouzdanije najprije odrediti vodoravnu i okomitu komponentu. Oba slučaja proizlaze iz istoga temeljnog zapisa
 
 $$
 d\vec F=p\,\vec n_f\,dA,
@@ -131,7 +131,7 @@ $$
 F=\rho gAh_C,
 $$ {#eq-sile-plohe-nagnuta-ploha-i-jasno-definiran-kut-02}
 
-ali to znači jednaku silu samo za plohe jednake površine i jednake dubine težišta. Nagib nije nestao iz geometrije: određuje dubine rubova, smjer normale i krak sile prema zglobu.
+pa sila ne ovisi o nagibu: plohe jednake površine i jednake dubine težišta nose jednaku silu. Nagib ipak nije nestao iz geometrije: određuje dubine rubova, smjer normale i krak sile prema zglobu.
 
 Moment oko težišne osi paralelne sa slobodnom površinom daje položaj centra tlaka duž plohe
 
@@ -167,7 +167,7 @@ $$ {#eq-u05-centar-tlaka-nagnuta}
 
 **Zatvorena ustava i njezin pogon.** Za nagnutu ustavu gradskoga kanala želimo znati silu vode i moment oko osi vrtnje koji mora uravnotežiti pogon ili prag. Fizikalni model je mirujući fluid, kao u zadatku Z3 ovoga poglavlja: ulazi su širina i nagib ustave, razina vode i položaj osi vrtnje; izlazi su vektor sile i moment oko te osi. Tlak izračunan CFD-om integriramo po cijeloj plohi, a svaki doprinos momentu množimo njegovim krakom prema osi ustave. Provjera: sila i krak njezina hvatišta prema osi iz Z3 moraju se poklopiti s integriranim izlazima, uključujući dubinu pri kojoj moment mijenja predznak; za slojeviti fluid isti je postupak proveden u primjeru [-@ex-u05-pregrada-ulje-voda]. Odluka se odnosi na potreban moment pogona i raspodjelu reakcija na zglob i prag. Zapis iste integracije u CFD-u, s normalom iz tijela u fluid i zato s negativnim predznakom, navodi tablica u odjeljku [-@sec-cfd-mapa].
 
-Zatim možemo istražiti djelomično otvaranje: pojavljuje se mlaz ispod ustave, pa hidrostatička raspodjela uz otvor više nije dovoljan opis. CFD tada povezuje položaj ustave, protok i opterećenje pogona. Točna ukupna sila ne jamči točan moment, a tlak u jednoj točki ne opisuje cijelu plohu. Isti se postupak primjenjuje na stijenku cisterne iz prethodnog poglavlja; nizvodni mlaz i skok pratimo u []{.mf1-chapter-ref target="u15"}.
+Zatim možemo istražiti djelomično otvaranje: pojavljuje se mlaz ispod ustave, pa hidrostatička raspodjela uz otvor više nije dovoljan opis. CFD tada povezuje položaj ustave, protok i opterećenje pogona. Točna ukupna sila ne jamči točan moment, a tlak u jednoj točki ne opisuje cijelu plohu. Isti se postupak primjenjuje na stijenku cisterne iz []{.mf1-chapter-ref target="u04"}; nizvodni mlaz i skok pratimo u []{.mf1-chapter-ref target="u15"}.
 :::
 
 
@@ -228,7 +228,7 @@ Tlak na rubovima iznosi $19{,}58$ i $48{,}95\ \mathrm{kPa}$; umnožak srednje vr
 
 **Tekst zadatka**
 
-Pravokutni poklopac širine $b=0{,}90\ \mathrm{m}$ i duljine $L=1{,}20\ \mathrm{m}$ zglobno je vezan na gornjem rubu $A$, na dubini $h_A=0{,}80\ \mathrm{m}$. Ploha je nagnuta za $\theta=60^\circ$ prema vodoravnici, a spojnica na donjem rubu djeluje okomito na nju. Voda miruje, a atmosferski se tlak poništava. Zanemari težinu poklopca i trenje zgloba.
+Pravokutni poklopac širine $b=0{,}90\ \mathrm{m}$ i duljine $L=1{,}20\ \mathrm{m}$ zglobno je vezan na gornjem rubu $A$, na dubini $h_A=0{,}80\ \mathrm{m}$. Ploha je nagnuta za $\theta=60^\circ$ prema vodoravnici, a spojnica na donjem rubu djeluje okomito na nju. Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ miruje, a atmosferski se tlak poništava. Zanemari težinu poklopca i trenje zgloba.
 
 **Traži se**
 
@@ -438,7 +438,7 @@ Kut $\theta_R$ rezultante mjeri se od vodoravnice; indeks $R$ razlikuje ga od ku
 
 **Zastani i promisli.** Dvije raspodjele tlaka daju jednaku silu na ustavu, ali različit moment oko istog zgloba. Daju li jednako opterećenje pogona?
 
-Ručni proračun u primjeru [-@ex-u05-zglobni-cetvrtcilindricni-poklopac] pokazuje zašto moment računamo oko zgloba $A$, a ne oko središta zakrivljenosti $O$. Jednake rezultante dviju raspodjela tlaka ne jamče jednak moment: usporedi njihove krakove prema istoj osi. Pogon zato provjeravamo i silom i momentom. Nakon otvaranja dodaju se strujanje i viskozna naprezanja. Tada mreža mora vjerno opisati zakrivljenost, a konačan izlaz čine komponente sile i moment, povezane s konkretnim položajem zatvarača.
+Ručni proračun u primjeru [-@ex-u05-zglobni-cetvrtcilindricni-poklopac] pokazuje zašto moment računamo oko zgloba $A$, a ne oko središta zakrivljenosti $O$. Jednake rezultante dviju raspodjela tlaka ne jamče jednak moment: usporedimo njihove krakove prema istoj osi. Pogon zato provjeravamo i silom i momentom. Nakon otvaranja dodaju se strujanje i viskozna naprezanja. Tada mreža mora vjerno opisati zakrivljenost, a konačan izlaz čine komponente sile i moment, povezane s konkretnim položajem zatvarača.
 :::
 
 
@@ -578,7 +578,7 @@ $$ {#eq-sile-plohe-rijeseni-primjer-cetvrtcilindricni-poklopac-uz-s-06}
 
 **Provjera i tumačenje**
 
-Na kružnom luku sve tlačne normale prolaze kroz $O$ za bilo koju raspodjelu tlaka, pa moment komponenata oko $O$ mora iščeznuti: $F_Hh_H=26{,}36\cdot0{,}477=12{,}58\ \mathrm{kN\,m}$ i $|F_V|x_V=29{,}07\cdot0{,}432=12{,}58\ \mathrm{kN\,m}$. Uz $p_{pl}=0$ ostaju samo hidrostatički dijelovi, $F_H=4{,}758\ \mathrm{kN}$ na $0{,}600\ \mathrm{m}$ i $F_V=-7{,}474\ \mathrm{kN}$ na $0{,}382\ \mathrm{m}$, s omjerom $|F_V|/F_H=\pi/2$ koji daje izravna integracija po luku. Nadtlak od $20\ \mathrm{kPa}$, oko dva metra vodenog stupca, povećava silu četiri do pet puta i pomiče oba hvatišta prema težištima projekcija. Zato se formula $h_{CP}=h_C+I_G/(Ah_C)$, izvedena samo za $p=\rho gh$, u zatvorenom spremniku ne smije primijeniti; moment se računa iz cijele raspodjele, kako je najavljeno u odjeljku o referentnom tlaku.
+Na kružnom luku sve tlačne normale prolaze kroz $O$ za bilo koju raspodjelu tlaka, pa moment komponenata oko $O$ mora iščeznuti: $F_Hh_H=26{,}36\cdot0{,}477=12{,}58\ \mathrm{kN\,m}$ i $|F_V|x_V=29{,}07\cdot0{,}432=12{,}58\ \mathrm{kN\,m}$. Uz $p_{pl}=0$ ostaju samo hidrostatički dijelovi, $F_H=4{,}758\ \mathrm{kN}$ na $0{,}600\ \mathrm{m}$ i $F_V=-7{,}474\ \mathrm{kN}$ na $0{,}382\ \mathrm{m}$, s omjerom $|F_V|/F_H=\pi/2$ koji daje izravna integracija po luku. Nadtlak od $20\ \mathrm{kPa}$, oko dva metra vodenog stupca, povećava silu četiri do pet puta i pomiče oba hvatišta prema težištima projekcija. Zato se formula $h_{CP}=h_C+I_G/(Ah_C)$, izvedena samo za $p=\rho gh$, u zatvorenom spremniku ne smije primijeniti; moment se računa iz cijele raspodjele, kako upozorava tekst uz jednadžbu [-@eq-sile-plohe-referentni-tlak-i-smjer-sile-02].
 :::
 
 ::: {#ex-u05-zglobni-cetvrtcilindricni-poklopac .mf1-we}
@@ -586,7 +586,7 @@ Na kružnom luku sve tlačne normale prolaze kroz $O$ za bilo koju raspodjelu tl
 
 **Tekst zadatka**
 
-Kruti četvrtcilindrični poklopac širine $b=1{,}40\ \mathrm{m}$ i polumjera $R=1{,}10\ \mathrm{m}$ ima zglob u gornjoj točki $A$ na slobodnoj površini vode. Donji rub pridržava vodoravna spojnica. Voda miruje i kvasi konveksnu donju i lijevu stranu; atmosferski se tlak poništava. Zanemari težinu poklopca i trenje zgloba. Pozitivni okomiti smjer je prema gore.
+Kruti četvrtcilindrični poklopac širine $b=1{,}40\ \mathrm{m}$ i polumjera $R=1{,}10\ \mathrm{m}$ ima zglob u gornjoj točki $A$ na slobodnoj površini vode. Donji rub pridržava vodoravna spojnica. Voda gustoće $\rho=998\ \mathrm{kg/m^3}$ miruje i kvasi konveksnu donju i lijevu stranu; atmosferski se tlak poništava. Zanemari težinu poklopca i trenje zgloba. Pozitivni okomiti smjer je prema gore.
 
 **Traži se**
 
@@ -695,7 +695,7 @@ U svim zadatcima uzmi $g=9{,}81\ \mathrm{m/s^2}$. Ako nije drukčije navedeno, v
 
 **Tekst zadatka**
 
-Poprečna pregrada broda dijeli naplavljeni odjeljak od suhoga. U njoj su okomita pravokutna vodonepropusna vrata širine $b=0{,}80\ \mathrm{m}$ i visine $H=1{,}60\ \mathrm{m}$, sa šarkama duž lijevog okomitog ruba i zasunima duž desnoga. Morska voda gustoće $\rho=1025\ \mathrm{kg/m^3}$ naplavila je odjeljak tako da je gornji rub vrata $h_1=1{,}40\ \mathrm{m}$ ispod njezine slobodne površine; suha strana i slobodna površina na atmosferskom su tlaku. Rub vrata uz zasune krut je i oslanja se na dva zasuna, jedan u visini gornjega i jedan u visini donjega ruba vrata. Uzmi $+x$ od naplavljene prema suhoj strani.
+Poprečna pregrada broda dijeli naplavljeni odjeljak od suhoga. U njoj su okomita pravokutna vodonepropusna vrata širine $b=0{,}80\ \mathrm{m}$ i visine $H=1{,}60\ \mathrm{m}$, sa šarkama duž lijevog okomitog ruba i zasunima duž desnoga. Morska voda gustoće $\rho=1025\ \mathrm{kg/m^3}$ naplavila je odjeljak tako da je gornji rub vrata $h_1=1{,}40\ \mathrm{m}$ ispod njezine slobodne površine; suha strana i slobodna površina na atmosferskom su tlaku. Rub vrata uz zasune krut je i oslanja se na dva zasuna, jedan u visini gornjega i jedan u visini donjega ruba vrata. Vrata nose opterećenje kao niz vodoravnih traka oslonjenih na šarke i zasune. Uzmi $+x$ od naplavljene prema suhoj strani.
 
 **Traži se**
 
@@ -862,7 +862,7 @@ $F_x=+11{,}089\ \mathrm{kN}$; $F_y=+13{,}713\ \mathrm{kN}$; $M_{O,\mathrm{voda}}
 
 **Tekst zadatka**
 
-Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\ \mathrm{m}$ i $H=0{,}80\ \mathrm{m}$. Gornji je rub na izmjerenoj dubini $h_1=0{,}90\ \mathrm{m}$ sa standardnom nesigurnošću $s(h_1)=0{,}020\ \mathrm{m}$, a gustoća je $\rho=998\ \mathrm{kg/m^3}$ uz $s(\rho)=3\ \mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\ \mathrm{kN}$ uz $s(F_m)=0{,}30\ \mathrm{kN}$. Standardnu nesigurnost veličine $x$ označujemo sa $s(x)$, kao u ostatku priručnika. Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti.
+Pravokutni mjerni panel ima točno poznate dimenzije $b=1{,}20\ \mathrm{m}$ i $H=0{,}80\ \mathrm{m}$. Gornji je rub na izmjerenoj dubini $h_1=0{,}90\ \mathrm{m}$ sa standardnom nesigurnošću $s(h_1)=0{,}020\ \mathrm{m}$, a gustoća je $\rho=998\ \mathrm{kg/m^3}$ uz $s(\rho)=3\ \mathrm{kg/m^3}$. Neovisna mjerna ćelija daje $F_m=11{,}60\ \mathrm{kN}$ uz $s(F_m)=0{,}30\ \mathrm{kN}$. Standardna nesigurnost veličine $x$ označuje se sa $s(x)$, kao u ostatku priručnika. Pretpostavi neovisne ulaze i primijeni linearnu propagaciju nesigurnosti.
 
 **Traži se**
 
@@ -898,7 +898,7 @@ $F=12{,}218\ \mathrm{kN}$; $s(F)=0{,}192\ \mathrm{kN}$; kombinirana nesigurnost 
 
 ::: {.mf1-zavrsni-okvir}
 - Prije integriranja nacrtaju se obje strane plohe: računa se neto tlak, a jednoliki tlak plina koji se ne poništava mijenja i silu i hvatište.
-- Za ravnu plohu pri $p=\rho gh$ vrijedi $F=\rho gAh_C$; ista sila na nagnutoj plohi znači samo jednaku površinu i jednaku dubinu težišta.
+- Za ravnu plohu pri $p=\rho gh$ vrijedi $F=\rho gAh_C$. Sila ne ovisi o nagibu: plohe jednake površine i dubine težišta nose jednaku silu, ali centar tlaka ovisi o nagibu.
 - Centar tlaka slijedi iz momenta **iste** raspodjele: $h_{CP}=h_C+I_G/(Ah_C)$ leži ispod težišta, a za nagnutu plohu kut se mjeri prema vodoravnici i u dubini stoji $\sin^2\theta$.
 - Za zakrivljenu plohu $F_H$ se dobiva iz sile na okomitu projekciju, a $|F_V|$ iz težine pomoćnog volumena u otvorenom manometarskom slučaju.
 - Smjer $F_V$ određuje stvarna strana koju fluid kvasi i normala $\vec n_f$, a ne položaj nacrtanog $V^*$.

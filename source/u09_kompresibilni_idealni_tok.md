@@ -4,7 +4,7 @@ Tlačni poremećaj širi se u odnosu na plin brzinom zvuka $a$, koja za kalorič
 
 Relacija $dA/A=(Ma^2-1)\,dv/v$ pokazuje da podzvučni tok ubrzava u suženju, a nadzvučni u proširenju. U izentropskoj konvergentno-divergentnoj sapnici pri zagušenju tok u grlu $A^*$ doseže $Ma=1$, a maseni protok najveću vrijednost određenu s $p_0$, $T_0$ i $A^*$. Izlazni presjek $A_e$ i protutlak $p_b$ određuju što se događa u divergentnom dijelu: tok ondje ostaje podzvučan, ubrzava do nadzvučnog izlaza ili prolazi kroz normalni udarni val. Kroz normalni udarni val nadzvučni tok prelazi u podzvučni: statički tlak raste, $p_2>p_1$, zaustavni tlak pada, $p_{02}<p_{01}$, dok zaustavna temperatura ostaje ista, $T_{02}=T_{01}$.
 
-Takav je račun potreban za odziv pneumatskih vodova, kapacitet sigurnosnih otvora, usis turbopuhala i sustav stlačenog zraka za upućivanje brodskog dizelskog motora. Poglavlje redom obrađuje brzinu zvuka, Machov broj, zaustavne veličine, sapnicu i zagušenje te normalni udarni val, a završava postupkom analize. Model pretpostavlja kalorički savršen plin sa stalnim $\kappa$, jednolike veličine po presjeku te zanemarivo trenje i izmjenu topline. Sile koje tok i mlaz prenose na konstrukciju računaju se integralnom bilancom količine gibanja u []{.mf1-chapter-ref target="u10"}.
+Takav je račun potreban za odziv pneumatskih vodova, kapacitet sigurnosnih otvora, usis turbopuhala i sustav stlačenog zraka za upućivanje brodskog dizelskog motora. Poglavlje redom obrađuje brzinu zvuka, Machov broj, zaustavne veličine, sapnicu i zagušenje te normalni udarni val, a završava postupkom analize. Sile koje tok i mlaz prenose na konstrukciju računaju se integralnom bilancom količine gibanja u []{.mf1-chapter-ref target="u10"}.
 
 Slika [-@fig-kompresibilni-pregled] prikazuje tri temeljne pojave. Lijevo je tlačni poremećaj iz izvora O u mirujućem plinu ($v=0$), s frontama koje se šire brzinama $-a$ i $+a$. U sredini je izentropska sapnica napajana iz komore stanja $p_0$, $T_0$: u konvergentnom dijelu je $Ma<1$, u grlu $A^*$ vrijedi $Ma=1$, a u divergentnom dijelu $Ma>1$ sve do izlaznog presjeka $A_e$, iza kojeg djeluje protutlak $p_b$. Sapnica je nacrtana kao osnosimetrična, s omjerom površina izlaza i grla $A_e/A^*=1{,}6$ iz primjera [-@ex-kd-sapnica-rezim]; omjer nacrtanih promjera zato je $\sqrt{1{,}6}\approx1{,}26$. Desno je normalni udarni val kroz koji tok s $Ma_1>1$ prelazi u tok s $Ma_2<1$.
 
@@ -103,7 +103,7 @@ $$
 Ma=\frac{v}{a}.
 $$ {#eq-mach}
 
-Kriterij $Ma<0{,}3$ korisna je inženjerska heuristika, a ne univerzalni zakon. U izentropskom toku kaloričkoga savršenog plina relativna promjena gustoće pri $Ma=0{,}3$ iznosi oko 4,4 %, a pri manjem $Ma$ još manje. I pri malom Machovu broju gustoća se može znatno mijenjati zbog grijanja, kemijske reakcije ili velike hidrostatičke razlike; kriterij se zato uvijek provjerava zajedno s termodinamičkim uvjetima.
+Kriterij $Ma<0{,}3$ korisna je inženjerska heuristika, a ne univerzalni zakon. U izentropskom toku kalorički savršenog plina relativna promjena gustoće pri $Ma=0{,}3$ iznosi oko 4,4 %, a pri manjem $Ma$ još manje. I pri malom Machovu broju gustoća se može znatno mijenjati zbog grijanja, kemijske reakcije ili velike hidrostatičke razlike; kriterij se zato uvijek provjerava zajedno s termodinamičkim uvjetima.
 
 ::: {#ex-odabir-modela-kompresibilnosti .mf1-we}
 <p class="mf1-box-label">Usisni vod kompresora turbopuhala <span class="mf1-level">T1</span></p>
@@ -129,14 +129,14 @@ Model konstantne gustoće može biti početna procjena ako su zagrijavanje i pad
 
 **Provjera i tumačenje**
 
-Vod je ovdje namjerno uzak radi ilustracije granice, pa je brzina veća nego u uobičajeno dimenzioniranom usisnom vodu. Pri $Ma=0{,}3$ izentropska promjena gustoće iznosi oko 4,4 %; u ventilacijskim vodovima ($10$–$20\ \text{m/s}$) pitanje se ne postavlja. Odluku treba donijeti prema lokalnom maksimumu brzine, a ne prema srednjoj brzini u najvećem presjeku.
+Vod je ovdje namjerno uzak radi ilustracije granice, pa je brzina veća nego u uobičajeno dimenzioniranom usisnom vodu. U ventilacijskim vodovima ($10$–$20\ \text{m/s}$) pitanje se ne postavlja. Odluku treba donijeti prema lokalnom maksimumu brzine, a ne prema srednjoj brzini u najvećem presjeku.
 :::
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Zračna sapnica za čišćenje hladne ploče.** Za mlaz stlačenog zraka zanimaju nas potrošnja zraka i stanje mlaza na izlazu. Za razliku od ranije obrađenoga kruga s kapljevinom, u sapnici se gustoća i temperatura mogu znatno promijeniti. CFD zato zajedno rješava masu, količinu gibanja i energiju, uz jednadžbu stanja. Tlak u $p=\rho RT$ mora biti apsolutan, a temperatura u kelvinima.
+**Zračna sapnica za čišćenje hladne ploče.** Za mlaz stlačenog zraka zanimaju nas potrošnja zraka i stanje mlaza na izlazu. Za razliku od rashladnoga kruga s kapljevinom iz []{.mf1-chapter-ref target="u07"}, u sapnici se gustoća i temperatura mogu znatno promijeniti. CFD zato zajedno rješava masu, količinu gibanja i energiju, uz jednadžbu stanja. Tlak u $p=\rho RT$ mora biti apsolutan, a temperatura u kelvinima.
 
-Zadamo stanje dovodnoga spremnika, geometriju sapnice i uvjete okoline. Pratimo maseni protok, lokalni Machov broj i temperaturu. Mali Machov broj u širokom dovodu nije dovoljan da cijeli model proglasimo nestlačivim: u grlu tok snažno ubrzava. Ista geometrijska ideja suženja time dobiva dodatnu fiziku, koja u Venturijevoj cijevi s vodom nije bila potrebna. Odluka o sapnici donosi se iz potrošnje zraka i stanja mlaza, a ne iz samog ulaznog $Ma$.
+Zadamo stanje dovodnoga spremnika, geometriju sapnice i uvjete okoline. Pratimo maseni protok, lokalni Machov broj i temperaturu. Mali Machov broj u širokom dovodu nije dovoljan da cijeli model proglasimo nestlačivim: u grlu tok snažno ubrzava. Ista geometrijska ideja suženja time dobiva dodatnu fiziku, koja u Venturijevoj cijevi s vodom iz []{.mf1-chapter-ref target="u08"} nije bila potrebna. Odluka o sapnici donosi se iz potrošnje zraka i stanja mlaza, a ne iz samog ulaznog $Ma$.
 :::
 
 ## Zaustavne veličine u izentropskom toku {#sec-stagnacijske-velicine}
@@ -359,7 +359,7 @@ Ma_2^2&=\frac{1+\tfrac{\kappa-1}{2}Ma_1^2}{\kappa Ma_1^2-\tfrac{\kappa-1}{2}},\q
 \end{aligned}
 $$ {#eq-normalni-skok}
 
-**Rezultat.** Promjena specifične entropije kaloričkoga savršenog plina iznosi
+**Rezultat.** Promjena specifične entropije kalorički savršenog plina iznosi
 
 $$
 \Delta s=c_p\ln\frac{T_2}{T_1}-R\ln\frac{p_2}{p_1}.
@@ -442,7 +442,7 @@ $$ {#eq-kd-sapnica-maseni-protok}
 
 **Provjera i tumačenje**
 
-Redoslijed $p_{e,\mathrm{III}}<p_{e,\mathrm{II}}<p_{e,\mathrm{I}}<p_0$ mora vrijediti za svaku sapnicu. Za $p_b=350\ \text{kPa}$ iteracija, koja nadilazi ispitnu razinu, smješta val u presjek $A_x/A^*=1{,}39$ (ispred njega $Ma_1=1{,}75$); on smanjuje zaustavni tlak na $0{,}833\,p_0$, pa podzvučni ostatak izlazi upravo s $350\ \text{kPa}$: položaj vala određuje protutlak. Iznad $448{,}5\ \text{kPa}$ grlo više nije zagušeno.
+Redoslijed $p_{e,\mathrm{III}}<p_{e,\mathrm{II}}<p_{e,\mathrm{I}}<p_0$ mora vrijediti za svaku sapnicu. Za $p_b=350\ \text{kPa}$ iteracija, zahtjevnija od razine ovog primjera, smješta val u presjek $A_x/A^*=1{,}39$ (ispred njega $Ma_1=1{,}75$); on smanjuje zaustavni tlak na $0{,}833\,p_0$, pa podzvučni ostatak izlazi upravo s $350\ \text{kPa}$: položaj vala određuje protutlak. Iznad $448{,}5\ \text{kPa}$ grlo više nije zagušeno.
 :::
 
 ::: {#cfd-sapnica-udarni-val .mf1-cfd title="Računalna dinamika fluida"}

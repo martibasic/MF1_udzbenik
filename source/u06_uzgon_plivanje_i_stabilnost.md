@@ -1,6 +1,6 @@
 Čelični brod pluta, a čelična kugla jednake mase tone. Razliku ne određuje materijal, nego volumen fluida koji tijelo istisne. Uronjeno tijelo preuzima tlakove fluida s cijele oplakane površine, a kako tlak raste s dubinom, donja strana prima veću tlačnu silu od gornje. Tlačne sile na pojedine ravne i zakrivljene plohe određene su u []{.mf1-chapter-ref target="u05"}; uzgon je njihova rezultanta po zatvorenoj plohi tijela.
 
-Prema Arhimedovu zakonu uzgon $F_U=\rho gV_{ist}$ jednak je težini fluida koji bi ispunio istisnuti volumen $V_{ist}$. Jednoliki tlak na slobodnoj površini poništava se, pa uzgon ne ovisi o atmosferskom tlaku. Budući da je $F_U$ rezultanta tlakova na tijelo, ne dodaje se još jednom ako su tlačne sile već zbrojene. Pravac uzgona prolazi kroz centar uzgona $B$, težište istisnutoga volumena, a težina $F_G=mg$ kroz težište tijela $G$.
+Prema Arhimedovu zakonu uzgon $F_U=\rho gV_{ist}$ jednak je težini fluida koji bi ispunio istisnuti volumen $V_{ist}$. Budući da je $F_U$ rezultanta tlakova na tijelo, ne dodaje se još jednom ako su tlačne sile već zbrojene. Pravac uzgona prolazi kroz centar uzgona $B$, težište istisnutoga volumena, a težina $F_G=mg$ kroz težište tijela $G$.
 
 Za plivajuće tijelo ravnoteža sila u okomitom smjeru daje $\rho gV_{ist}=F_G=mg$, odnosno $V_{ist}=m/\rho$. Ta ravnoteža određuje gaz, ali ne i nagib, pa težinu, istisnuti volumen i momentni raspored sila treba promatrati odvojeno. Pri malom nagibu centar uzgona pomiče se prema uronjenijoj strani, a okomica kroz njega siječe os simetrije u metacentru $M$, udaljenom $BM=I_T/V_{ist}$ od $B$. Ako je metacentar $M$ iznad $G$, odnosno $GM=KB+BM-KG>0$, moment pri malom nagibu vraća tijelo prema uspravnom položaju.
 
@@ -14,9 +14,7 @@ Slika [-@fig-uvod-u07] prikazuje obje razine analize. Lijevo je potpuno uronjeno
 
 ## Sila uzgona
 
-Za tijelo koje miruje u fluidu sila uzgona jednaka je težini istisnutog fluida:
-
-$$F_U = \rho g V_{ist}$$ {#eq-uzgon-stabilitet-fizikalni-uvod-i-matematicki-izvod-01}
+Za tijelo koje miruje u fluidu sila uzgona jednaka je težini istisnutog fluida, $F_U=\rho gV_{ist}$; izvod slijedi u jednadžbi [-@eq-uzgon-stabilitet-matematicki-izvod-04].
 
 Za plivajuće tijelo u ravnoteži ta sila mora biti jednaka ukupnoj težini tijela i svih tereta na njemu. Drugi je korak geometrija: gdje djeluju težina i uzgon i kakav moment nastaje ako je teret bočno pomaknut. Kod prizmatičnih tijela s ravnim dnom često se može odvojiti srednji gaz od nagiba:
 
@@ -25,7 +23,7 @@ Za plivajuće tijelo u ravnoteži ta sila mora biti jednaka ukupnoj težini tije
 
 To je razdvajanje temelj početnih zadataka o plivanju i stabilitetu.
 
-## Matematički izvod
+## Arhimedov zakon, plivanje i metacentar
 
 Najjednostavniji put prema Arhimedovu zakonu polazi od potpuno uronjenoga prizmatičnog tijela s vodoravnim plohama površine $A$. Neka na slobodnoj površini djeluje tlak $p_{pov}$. Na gornju plohu na dubini $h_1$ djeluje sila
 
@@ -57,11 +55,11 @@ U jednolikom gravitacijskom polju uzgon ovisi o istisnutom volumenu i gustoći f
 :::
 
 ::: {#ex-u07-uzgon-na-potonulo-pumpno-kuciste-pri-ispitivanju .mf1-we}
-<p class="mf1-box-label">Uzgon na potonulo kućište crpke pri ispitivanju&nbsp;<span class="mf1-level">T1</span></p>
+<p class="mf1-box-label">Uzgon na uronjeno kućište crpke pri ispitivanju&nbsp;<span class="mf1-level">T1</span></p>
 
 **Tekst zadatka**
 
-Kućište crpke mase $m = 85\ \text{kg}$ i istisnutog volumena $V_{ist} = 0{,}045\ \text{m}^3$ potpuno je uronjeno u mirnu morsku vodu gustoće $\rho = 1025\ \text{kg/m}^3$, bez dodira s dnom.
+Kućište crpke zatvoreno je slijepim prirubnicama (hermetično), ima masu $m = 85\ \text{kg}$ i istisnuti volumen $V_{ist} = 0{,}045\ \text{m}^3$. Potpuno je uronjeno u mirnu morsku vodu gustoće $\rho = 1025\ \text{kg/m}^3$, bez dodira s dnom.
 
 **Traži se**
 
@@ -110,9 +108,9 @@ Prosječna gustoća kućišta, $m/V_{ist}\approx1889\ \text{kg/m}^3$, veća je o
 
 :::
 
-Isti rezultat vrijedi i za proizvoljan oblik tijela: neto hidrostatička sila jednaka je težini fluida koji bi ispunio istisnuti volumen. Pravac djelovanja te sile prolazi kroz centar uzgona, tj. kroz težište istisnutoga volumena. Obrazloženje je kratko: zamislimo da istisnuti volumen ispunjava isti fluid u mirovanju; na njega djeluju isti okolni tlakovi kao na tijelo, a on je u ravnoteži pod vlastitom težinom, pa rezultanta tlakova mora biti jednaka toj težini i prolaziti težištem toga volumena.
+Isti rezultat vrijedi i za proizvoljan oblik tijela: neto hidrostatička sila jednaka je težini fluida koji bi ispunio istisnuti volumen. Pravac djelovanja te sile prolazi kroz centar uzgona, tj. kroz težište istisnutoga volumena. Zamislimo da istisnuti volumen ispunjava isti fluid u mirovanju. Na njega djeluju isti okolni tlakovi kao na tijelo, a on je u ravnoteži pod vlastitom težinom. Rezultanta tlakova zato mora biti jednaka toj težini i prolaziti težištem toga volumena.
 
-Iz toga odmah slijedi i prvo pravilo stabiliteta. Kod potpuno uronjenog tijela stabilan je onaj položaj u kojem je težište tijela $G$ ispod centra uzgona $B$; ako se te dvije točke poklope, ravnoteža je neutralna, a ako je $G$ iznad $B$, mali poremećaj daje prevrtni moment. Kod plivajućeg tijela slika je drukčija jer se pri malom nagibu oblik istisnutoga volumena mijenja, pa se i centar uzgona pomiče. Tada se uvodi metacentar $M$, a predznak metacentarske visine $GM$ odlučuje o početnom stabilitetu: $GM > 0$ znači povratni moment, $GM = 0$ neutralnu ravnotežu u linearnoj aproksimaciji, a $GM < 0$ nestabilan položaj.
+Iz toga odmah slijedi i prvo pravilo stabiliteta. Kod potpuno uronjenog tijela stabilan je onaj položaj u kojem je težište tijela $G$ ispod centra uzgona $B$; ako se te dvije točke poklope, ravnoteža je neutralna, a ako je $G$ iznad $B$, mali poremećaj daje prevrtni moment. Kod plivajućeg tijela slika je drukčija jer se pri malom nagibu oblik istisnutoga volumena mijenja, pa se i centar uzgona pomiče. Tada se uvodi metacentar $M$, a o početnom stabilitetu odlučuje predznak metacentarske visine $GM$ (jednadžba [-@eq-uzgon-stabilitet-matematicki-izvod-metacentarski-radijus-07]).
 
 Za plivajuće tijelo ravnoteža sila u okomitom smjeru tada daje
 
@@ -173,7 +171,7 @@ $$ {#eq-uzgon-stabilitet-matematicki-izvod-bocni-pomak-centra-uzgona-pri-04}
 
 Provjera: pri simetričnom gazu $T_L = T_D = T_m$ dobiva se $y_B = 0$, što znači da centar uzgona ostaje u središnjoj okomici. Pri tipičnoj razlici gazova $T_L - T_D = 0{,}05\ \text{m}$ na pontonu širine $b = 1{,}2\ \text{m}$ sa srednjim gazom $T_m = 0{,}2\ \text{m}$ pomak centra uzgona iznosi $y_B = 1{,}2 \cdot 0{,}05/(12 \cdot 0{,}2) = 0{,}025\ \text{m}$, dakle $2{,}5\ \text{cm}$.
 
-Ta je veličina **geometrijski pomak centra uzgona u koordinatama tijela**, a nije sama po sebi poluga stabiliteta $GZ$ ni razmak pravaca djelovanja uzgona i ukupne težine. Trapez s okomitim stranicama slika je prvoga reda: kruti nagnuti pravokutnik ima i nagnute bokove, a razlika višeg reda u kutu obrađena je u okviru o granici modela. Iz geometrije rubnih gazova vrijedi
+Ta je veličina **geometrijski pomak centra uzgona u koordinatama tijela**, a nije sama po sebi poluga stabiliteta $GZ$ ni razmak pravaca djelovanja uzgona i ukupne težine. Trapez s okomitim stranicama slika je prvoga reda: kruti nagnuti pravokutnik ima i nagnute bokove, a razlika višeg reda u kutu obrađena je jednadžbom [-@eq-poluga-okomiti-bokovi]. Iz geometrije rubnih gazova vrijedi
 
 $$
 \tan\varphi=\frac{T_L-T_D}{b},
@@ -231,7 +229,12 @@ $$ {#eq-uzgon-stabilitet-matematicki-izvod-metacentarski-radijus-06}
 
 Za pravokutne, geometrijski usporedive vodne linije pri **stalnim** $L$ i $V_{ist}$ vrijedi $BM\propto b^3$. Šira vodna linija tada snažno povećava metacentarski radijus. To samo po sebi nije potpuna tvrdnja o stabilitetu broda: konačni $GM$ ovisi i o visini težišta, obliku trupa, istisnini i stanju opterećenja.
 
-**Dva fluida.** Ako tijelo pluta u sloju lakšeg fluida gustoće $\rho_u$ i debljine $\delta$ iznad težeg fluida gustoće $\rho_v$, a dno mu je u težem fluidu, pri nagibu nastaju dva para klinova: na slobodnoj površini klin lakšeg fluida s momentom $\rho_u I_T\varphi$ i na razdjelnici klin u kojem teži fluid zamjenjuje lakši, s momentom $(\rho_v-\rho_u)I_T\varphi$. Zbroj je $\rho_v I_T\varphi$, pa uz masu istisnine $\Delta=\rho_uV_u+\rho_vV_v$ vrijedi
+**Dva fluida.** Neka tijelo pluta u sloju lakšeg fluida gustoće $\rho_u$ i debljine $\delta$ iznad težeg fluida gustoće $\rho_v$, a dno mu je u težem fluidu. Pri nagibu tada nastaju dva para klinova:
+
+- na slobodnoj površini klin lakšeg fluida, s momentom $\rho_u I_T\varphi$;
+- na razdjelnici klin u kojem teži fluid zamjenjuje lakši, s momentom $(\rho_v-\rho_u)I_T\varphi$.
+
+Zbroj je $\rho_v I_T\varphi$, pa uz masu istisnine $\Delta=\rho_uV_u+\rho_vV_v$ vrijedi
 
 $$
 BM_{eq}=\frac{\rho_v I_T}{\rho_uV_u+\rho_vV_v}.
@@ -263,20 +266,14 @@ Predznak $GM$ odlučuje o **početnom** stabilitetu uspravnoga položaja. Pri $G
 :::
 
 ::: {.mf1-granica-modela}
-<p class="mf1-box-label">Granica modela — Koliko je „mali” kut za pravokutni ponton?</p>
+<p class="mf1-box-label">Granica modela — Granica malog kuta za pravokutni ponton</p>
 
-Za trup s okomitim bokovima, dok je dno uronjeno i paluba suha, pomak centra uzgona može se izračunati točno: vodoravno $BM\tan\varphi$, a okomito $\tfrac12BM\tan^2\varphi$. Poluga stabiliteta tada glasi
-
-$$
-GZ=\left(GM+\tfrac12BM\tan^2\varphi\right)\sin\varphi,
-$$ {#eq-poluga-okomiti-bokovi}
-
-pa je relativna pogreška linearne aproksimacije $GZ\approx GM\sin\varphi$ jednaka $\tfrac12BM\tan^2\varphi/GM$. Za platformu iz primjera [-@ex-u07-plutajuca-servisna-platforma-s-pomaknutim-kompresorom-t2] ($GM=0{,}245\ \text{m}$, $BM=0{,}298\ \text{m}$, $\varphi=6{,}84^\circ$) korekcija iznosi $0{,}0021\ \text{m}$, oko $0{,}9\ \%$ od $GM$; pri $\varphi=5^\circ$ pada ispod $0{,}5\ \%$, što je razlog zadane granice $|\varphi|\le5^\circ$ u zadatcima Z3 i Z6. Granica stoga nije univerzalna: ovisi o omjeru $BM/GM$ i prestaje vrijediti čim rub palube uroni ili dno izroni. Za druge oblike trupa i veće kutove treba krivulja $GZ(\varphi)$ iz stvarne geometrije.
+Linearna aproksimacija $GZ\approx GM\sin\varphi$ zanemaruje okomiti pomak centra uzgona i za trup s okomitim bokovima griješi za udio $\tfrac12(BM/GM)\tan^2\varphi$ (jednadžba [-@eq-poluga-okomiti-bokovi]). Granica malog kuta stoga nije univerzalna: ovisi o omjeru $BM/GM$ i prestaje vrijediti čim rub palube uroni ili dno izroni. Za druge oblike trupa i veće kutove treba krivulja $GZ(\varphi)$ iz stvarne geometrije.
 :::
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Vraća li se ponton i koliko se dugo njiše?** Dvije izvedbe pontona s istom masom, ali različitom visinom težišta, najprije držimo na malom zadanom nagibu. Nakon smirivanja vode iz tlaka dobijemo moment i usporedimo ga s početnim $GM$. To je statička provjera smjera i jačine vraćanja.
+**Povratni moment i njihanje pontona.** Dvije izvedbe pontona s istom masom, ali različitom visinom težišta, najprije držimo na malom zadanom nagibu. Nakon smirivanja vode iz tlaka dobijemo moment i usporedimo ga s početnim $GM$. To je statička provjera smjera i jačine vraćanja.
 
 Zatim ponton pustimo iz tog nagiba i pratimo kut kroz vrijeme. Uz masu i težište sada trebamo moment tromosti tijela; voda dodaje pridruženu masu (dodatnu tromost fluida koji se giba s tijelom) i prigušenje, pa mijenja odziv. Iz zapisa procjenjujemo period i prigušenje njihanja. Sam pozitivan $GM$ ne određuje ni jedno ni drugo. Za odziv na valove dodajemo dolazni val i granice koje ne vraćaju neželjene odraze. Prijenos pokusa s manjega modela na stvarni ponton razmatra se u []{.mf1-chapter-ref target="u11"}.
 :::
@@ -293,6 +290,14 @@ GZ(0)=0,\qquad \left.\frac{dGZ}{d\varphi}\right|_{\varphi=0}=GM,
 $$ {#eq-uzgon-stabilitet-matematicki-izvod-krivulja-stabilnosti-i-finitni-01}
 
 pa je za dovoljno mali kut $GZ\approx GM\sin\varphi\approx GM\varphi$.
+
+Za trup s okomitim bokovima, dok je dno uronjeno i paluba suha, pomak centra uzgona može se izračunati točno: vodoravno $BM\tan\varphi$, a okomito $\tfrac12BM\tan^2\varphi$. Poluga stabiliteta tada glasi
+
+$$
+GZ=\left(GM+\tfrac12BM\tan^2\varphi\right)\sin\varphi,
+$$ {#eq-poluga-okomiti-bokovi}
+
+pa je relativna pogreška linearne aproksimacije $GZ\approx GM\sin\varphi$ jednaka $\tfrac12BM\tan^2\varphi/GM$. Za platformu iz primjera [-@ex-u07-plutajuca-servisna-platforma-s-pomaknutim-kompresorom-t2] ($GM=0{,}245\ \text{m}$, $BM=0{,}298\ \text{m}$, $\varphi=6{,}84^\circ$) korekcija iznosi $0{,}0021\ \text{m}$, oko $0{,}9\ \%$ od $GM$; pri $\varphi=5^\circ$ pada ispod $0{,}5\ \%$, što je razlog zadane granice $|\varphi|\le5^\circ$ u zadatcima Z3 i Z6.
 
 Povratni moment para težine i uzgona iznosi
 
@@ -321,7 +326,16 @@ $$
 W=\rho gV_{ist}\int_{\varphi_1}^{\varphi_2}GZ(\varphi)\,d\varphi.
 $$ {#eq-uzgon-stabilitet-matematicki-izvod-krivulja-stabilnosti-i-finitni-04}
 
-Za brodove na koje se primjenjuju opći kriteriji IMO-ova pravilnika *2008 Intact Stability Code* provjerava se skup uvjeta, među ostalim: površina najmanje $0{,}055\ \text{m rad}$ do $30^\circ$; najmanje $0{,}09\ \text{m rad}$ do $40^\circ$ ili kuta naplavljivanja ako je manji; najmanje $0{,}03\ \text{m rad}$ između $30^\circ$ i te gornje granice; $GZ\ge0{,}20\ \text{m}$ pri kutu od najmanje $30^\circ$; maksimum $GZ$ pri kutu ne manjem od $25^\circ$; te početni $GM_0\ge0{,}15\ \text{m}$ [@imo-is-code-2008]. Primjenjivost, dodatni kriteriji i iznimke ovise o vrsti broda i mjerodavnoj administraciji, pa sami kriteriji površina ne dokazuju usklađenost.
+Za brodove na koje se primjenjuju opći kriteriji pravilnika Međunarodne pomorske organizacije *2008 Intact Stability Code* [@imo-is-code-2008] provjerava se skup uvjeta, među ostalim:
+
+- površina najmanje $0{,}055\ \text{m rad}$ do $30^\circ$;
+- površina najmanje $0{,}09\ \text{m rad}$ do $40^\circ$ ili do kuta naplavljivanja ako je manji;
+- površina najmanje $0{,}03\ \text{m rad}$ između $30^\circ$ i te gornje granice;
+- $GZ\ge0{,}20\ \text{m}$ pri kutu od najmanje $30^\circ$;
+- maksimum $GZ$ pri kutu ne manjem od $25^\circ$;
+- početni $GM_0\ge0{,}15\ \text{m}$.
+
+Primjenjivost, dodatni kriteriji i iznimke ovise o vrsti broda i mjerodavnoj administraciji, pa sami kriteriji površina ne dokazuju usklađenost.
 
 Metacentarska teorija opisuje samo početni odziv oko uspravnoga položaja. Stabilitet pri konačnom nagibu, na valovima ili nakon oštećenja zahtijeva odgovarajuću krivulju $GZ$, otvore i kut naplavljivanja, dinamičke utjecaje te posebne kriterije za neoštećeni ili oštećeni brod [@imo-damage-stability].
 :::
@@ -335,7 +349,7 @@ $$
 \delta GM=-\frac{\rho_t\,i_t}{\rho\,V_{ist}},
 $$ {#eq-ucinak-slobodne-povrsine}
 
-gdje je $i_t$ drugi moment slobodne površine tanka oko njegove uzdužne osi, $\rho_t$ gustoća tekućine u tanku, a $\rho V_{ist}=\Delta$ masa istisnine. Učinak ne ovisi o količini tekućine u tanku dok slobodna površina postoji, nego o njezinoj širini na treću potenciju. Da je tank iz primjera [-@ex-u07-izolirani-puni-bocni-tank-kao-dodana-masa] napola pun morem, a masa koja nedostaje nadoknađena na istoj visini drugdje na brodu, tako da istisnina i težište ostanu isti, vrijedilo bi $i_t=L_tb_t^3/12=15\cdot6^3/12=270\ \text{m}^4$ i $\delta GM=-270/4172\approx-0{,}065\ \text{m}$: $GM$ bi pao s $4{,}23$ na oko $4{,}16\ \text{m}$. Bez te nadoknade manja masa vode u tanku spustila bi težište i smanjila istisninu, pa bi stvarni $GM$ mogao čak porasti; učinak slobodne površine zato se procjenjuje zajedno s promjenom mase i težišta. Na malom pontonu s tankom preko cijele širine isti izraz može poništiti cijeli $GM$; zato se tankovi drže punima ili praznima, a slobodne površine ograničavaju uzdužnim pregradama.
+gdje je $i_t$ drugi moment slobodne površine tanka oko njegove uzdužne osi, $\rho_t$ gustoća tekućine u tanku, a $\rho V_{ist}=\Delta$ masa istisnine. Učinak ne ovisi o količini tekućine u tanku dok slobodna površina postoji, nego o njezinoj širini na treću potenciju. Da je tank iz primjera [-@ex-u07-izolirani-puni-bocni-tank-kao-dodana-masa] napola pun morem, a masa koja nedostaje nadoknađena na istoj visini drugdje na brodu, tako da istisnina i težište ostanu isti, vrijedilo bi $i_t=L_tb_t^3/12=15\cdot6^3/12=270\ \text{m}^4$ i $\delta GM=-270/4172\approx-0{,}065\ \text{m}$: $GM$ bi pao s $4{,}23$ na oko $4{,}16\ \text{m}$. Bez te nadoknade manja masa vode u tanku spustila bi težište i smanjila istisninu, pa bi stvarni $GM$ mogao čak porasti; učinak slobodne površine zato se procjenjuje zajedno s promjenom mase i težišta. Na malom pontonu s tankom preko cijele širine isti izraz može poništiti cijeli $GM$; zato je, kao orijentacija, povoljno tankove držati punima ili praznima, a slobodne površine ograničiti uzdužnim pregradama.
 :::
 
 
@@ -779,7 +793,7 @@ Vrijednost $31{,}1^\circ$ samo je geometrijska ekstrapolacija krutoga pravokutni
 **Provjera i tumačenje**
 
 1. Bilanca: $\Delta T=m_v/(\rho_{mv}Lb)\approx0{,}225\ \text{m}$ i $e_G=GM\tan\varphi$ potvrđuju ravnotežu sila u okomitom smjeru i ravnotežu momenata; nagib od oko $4^\circ$ ostavlja približno $4\ \text{m}$ nadvođa na nižem rubu.
-2. To je početna ravnoteža idealiziranoga trupa metodom dodane težine. Stabilitet oštećenoga broda može zahtijevati metodu izgubljenoga uzgona, propusnost prostora, progresivno naplavljivanje i probabilističke scenarije; ništa od toga ovdje nije obuhvaćeno. Da tank nije pun, slobodna površina smanjila bi $GM$ (vidi blok „Učinak slobodne površine u tanku”).
+2. To je početna ravnoteža idealiziranoga trupa metodom dodane težine. Stabilitet oštećenoga broda može zahtijevati metodu izgubljenoga uzgona, propusnost prostora, progresivno naplavljivanje i probabilističke scenarije; ništa od toga ovdje nije obuhvaćeno. Da tank nije pun, slobodna površina smanjila bi $GM$ (jednadžba [-@eq-ucinak-slobodne-povrsine]).
 :::
 
 ::: {#ex-u07-plutajuci-vjetroagregat-tipa-cilindricne-plovne-osnove-t3 .mf1-we}
@@ -787,7 +801,7 @@ Vrijednost $31{,}1^\circ$ samo je geometrijska ekstrapolacija krutoga pravokutni
 
 **Tekst zadatka**
 
-Uspravna cilindrična plovna osnova (spar) promjera $D = 12{,}0\ \text{m}$ i duljine $H = 100\ \text{m}$ nosi vjetroagregat iznad mora. Ukupna masa sustava s čvrstim balastom u dnu iznosi $m_{uk} = 9\,000\ \text{t} = 9{,}00 \cdot 10^6\ \text{kg}$, a gustoća mora $\rho_{mv} = 1\,025\ \text{kg/m}^3$. Promatraj mirnu vodu bez vjetra i valova; vodna je linija kružna.
+Uspravna cilindrična plovna osnova (engl. *spar*) promjera $D = 12{,}0\ \text{m}$ i duljine $H = 100\ \text{m}$ nosi vjetroagregat iznad mora. Ukupna masa sustava s čvrstim i vodenim balastom u dnu iznosi $m_{uk} = 9\,000\ \text{t} = 9{,}00 \cdot 10^6\ \text{kg}$, a gustoća mora $\rho_{mv} = 1\,025\ \text{kg/m}^3$. Promatraj mirnu vodu bez vjetra i valova; vodna je linija kružna.
 
 **Traži se**
 
@@ -811,7 +825,7 @@ T = \frac{V_{ist}}{A} = \frac{8\,780}{113{,}1} \approx 77{,}6\ \text{m},\qquad
 f = H - T = 100 - 77{,}6 \approx 22{,}4\ \text{m}.
 $$ {#eq-uzgon-stabilitet-rijeseni-primjer-plutajuci-vjetroagregat-tipa-ci-02}
 
-Promjena mase za $\pm 5\,\%$ (naslage i led, odnosno ispuštanje balasta) mijenja gaz linearno:
+Promjena mase za $\pm 5\,\%$ (naslage i led, odnosno ispuštanje vodenog balasta) mijenja gaz linearno:
 
 $$
 T_{+5\%} \approx 1{,}05 \cdot 77{,}64 \approx 81{,}5\ \text{m}, \qquad
@@ -830,7 +844,7 @@ KM &= KB + BM \approx 38{,}9\ \text{m}.
 \end{aligned}
 $$ {#eq-uzgon-stabilitet-rijeseni-primjer-plutajuci-vjetroagregat-tipa-ci-04}
 
-Početni stabilitet zahtijeva $GM=KM-KG>0$, dakle $KG<38{,}9\ \text{m}$. Budući da je $BM$ zanemariv u odnosu na $KB$, uvjet se praktički svodi na $KG<KB$: težište mora ležati ispod centra uzgona. Gondola i rotor nalaze se visoko iznad vrha plovne osnove (reda $100\ \text{m}$ iznad mora), pa bez balasta težište sustava leži visoko (npr. $KG=45\ \text{m}$ daje $GM\approx-6{,}1\ \text{m}$). Čvrsti balast u dnu spušta $KG$: uz $KG=32\ \text{m}$ dobiva se $GM\approx6{,}9\ \text{m}$.
+Početni stabilitet zahtijeva $GM=KM-KG>0$, dakle $KG<38{,}9\ \text{m}$. Budući da je $BM$ zanemariv u odnosu na $KB$, uvjet se praktički svodi na $KG<KB$: težište mora ležati ispod centra uzgona. Gondola i rotor nalaze se visoko iznad vrha plovne osnove (reda $100\ \text{m}$ iznad mora), pa položaj balasta odlučuje o predznaku $GM$. Balast u dnu spušta $KG$: uz $KG=32\ \text{m}$ dobiva se $GM\approx6{,}9\ \text{m}$. Isti balast smješten više podiže težište sustava: uz $KG=45\ \text{m}$, $13\ \text{m}$ više, dobiva se $GM\approx-6{,}1\ \text{m}$.
 
 $$
 \begin{aligned}
@@ -841,7 +855,7 @@ $$ {#eq-uzgon-stabilitet-rijeseni-primjer-plutajuci-vjetroagregat-tipa-ci-05}
 
 **Provjera i tumačenje**
 
-Gaz od oko $78\ \text{m}$ i nadvođe od oko $22\ \text{m}$ odgovaraju redu veličine izvedenih plovnih osnova tipa spar. Izbor modela: kod pontona stabilitet daje široka vodna linija (velik $BM$), a kod spara uska vodna linija ne daje gotovo ništa ($BM\approx0{,}1\ \text{m}$) i cijeli stabilitet dolazi iz razmaka $KB-KG$, kao kod njihala. Zato spar bez balasta nije stabilan ni u mirnoj vodi. Za stvarnu plovnu osnovu treba još analizirati krivulju $GZ$, hidrodinamički odziv, sidrenje i konstrukcijska opterećenja.
+Prema nastavnoj procjeni, gaz od oko $78\ \text{m}$ i nadvođe od oko $22\ \text{m}$ odgovaraju redu veličine izvedenih plovnih osnova tipa spar. Izbor modela: kod pontona stabilitet daje široka vodna linija (velik $BM$), a kod spara uska vodna linija ne daje gotovo ništa ($BM\approx0{,}1\ \text{m}$) i cijeli stabilitet dolazi iz razmaka $KB-KG$, kao kod njihala. Zato spar bez nisko smještenog balasta nije stabilan ni u mirnoj vodi. Za stvarnu plovnu osnovu treba još analizirati krivulju $GZ$, hidrodinamički odziv, sidrenje i konstrukcijska opterećenja.
 :::
 
 ::: {.mf1-samoprovjera}
@@ -924,20 +938,20 @@ Homogeni drveni blok duljine $L = 2{,}00\ \text{m}$, širine $b = 0{,}70\ \text{
 
 1. Odredi gaz $T$ i nadvođe bloka.
 2. Odredi $KB$, $BM$, $KG$ i početnu metacentarsku visinu $GM$ te zaključi je li uspravni položaj početno stabilan.
-3. Izvedi uvjet stabilnosti homogenog pravokutnog bloka u obliku omjera $b/h$ i relativne gustoće $s=\rho_d/\rho$ te odredi najmanju širinu $b_{min}$ za zadanu visinu i gustoću.
+3. Izvedi uvjet stabiliteta homogenog pravokutnog bloka u obliku omjera $b/h$ i relativne gustoće $s_r=\rho_d/\rho$ te odredi najmanju širinu $b_{min}$ za zadanu visinu i gustoću.
 4. Obrazloži bi li blok iste geometrije, ali gustoće $900\ \text{kg/m}^3$, bio početno stabilniji ili manje stabilan.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Za homogeni blok je $T=sh$, $KB=T/2$, $KG=h/2$ i $BM=b^2/(12T)$. Uvjet $GM\ge0$ sredi po $b^2$; dobiva se izraz koji ovisi samo o $h$ i $s$. U 4. zahtjevu usporedi kako se mijenjaju $KB$ i $BM$ kad gaz raste.
+Za homogeni blok je $T=s_rh$, $KB=T/2$, $KG=h/2$ i $BM=b^2/(12T)$. Uvjet $GM\ge0$ sredi po $b^2$; dobiva se izraz koji ovisi samo o $h$ i $s_r$. U 4. zahtjevu usporedi kako se mijenjaju $KB$ i $BM$ kad gaz raste.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
 
-$T=0{,}326\ \text{m}$, nadvođe $0{,}174\ \text{m}$; $KB=0{,}163$, $BM=0{,}125$, $KG=0{,}250$, $GM=+0{,}038\ \text{m}$: početno stabilan, ali s malom rezervom. Uvjet $GM\ge0$ daje $b/h\ge\sqrt{6s(1-s)}$, ovdje $b_{min}\approx0{,}584\ \text{m}$. Za $\rho_d=900\ \text{kg/m}^3$: $T=0{,}451$, $KB=0{,}225$, $BM=0{,}091$, $GM=+0{,}066\ \text{m}$, dakle stabilniji; dublji uron više podiže $KB$ nego što smanjuje $BM$, a najmanju rezervu ima blok sa $s\approx0{,}5$.
+$T=0{,}326\ \text{m}$, nadvođe $0{,}174\ \text{m}$; $KB=0{,}163$, $BM=0{,}125$, $KG=0{,}250$, $GM=+0{,}038\ \text{m}$: početno stabilan, ali s malom rezervom. Uvjet $GM\ge0$ daje $b/h\ge\sqrt{6s_r(1-s_r)}$, ovdje $b_{min}\approx0{,}584\ \text{m}$. Za $\rho_d=900\ \text{kg/m}^3$: $T=0{,}451$, $KB=0{,}225$, $BM=0{,}091$, $GM=+0{,}066\ \text{m}$, dakle stabilniji; dublji uron više podiže $KB$ nego što smanjuje $BM$, a najmanju rezervu ima blok sa $s_r\approx0{,}5$.
 :::
 ::::
 

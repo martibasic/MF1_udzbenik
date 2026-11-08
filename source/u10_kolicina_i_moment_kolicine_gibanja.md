@@ -4,7 +4,7 @@ Za stacionaran tok kroz nepomičan kontrolni volumen zbroj svih vanjskih sila na
 
 Sila kojom fluid djeluje na stijenku ima suprotan smjer, $\vec F=-\vec R_{st\to f}$, a reakcija nosača $\vec R$ slijedi tek iz ravnoteže samog elementa, uz njegovu težinu i ostale priključne sile. Zato uz svaku silu treba reći na koje tijelo djeluje. Isti zakon, zapisan u sustavu tijela koje se giba stalnom brzinom, opisuje mlaz na lopaticu ili ploču te potisak vodomlaznog pogona i propelera. Vektorskim množenjem s vektorom položaja $\vec r$ zakon prelazi u zakon momenta količine gibanja, kojim se računaju rotirajuće mlaznice, raspršivači i rotori.
 
-Poglavlje redom obrađuje integralni zakon, silu na cijevno koljeno, pomični kontrolni volumen s mlaznim pogonom i aktuatorskim diskom te moment količine gibanja. Primjene su koljena i račve u brodskim strojarnicama, vodomlazni pogon, propeler i stroj za pranje tankova. Radni model pretpostavlja stacionaran tok i jednolike profile brzine na presjecima ($\beta=1$); prolazne pojave poput vodenog udara traže i član akumulacije. Lokalni oblik zakona vodi do Navier–Stokesove jednadžbe u []{.mf1-chapter-ref target="u12"}, a Eulerova turbinska jednadžba i stvarni propeler obrađuju se u []{.mf1-chapter-ref target="u14"}.
+Poglavlje redom obrađuje integralni zakon, silu na cijevno koljeno, pomični kontrolni volumen s mlaznim pogonom i aktuatorskim diskom te moment količine gibanja. Primjene su koljena i račve u cijevnim sustavima brodova i kopnenih postrojenja, vodomlazni pogon, propeler i stroj za pranje tankova. Radni model pretpostavlja stacionaran tok i jednolike profile brzine na presjecima ($\beta=1$); prolazne pojave poput vodenog udara traže i član akumulacije. Lokalni oblik zakona vodi do Navier–Stokesove jednadžbe u []{.mf1-chapter-ref target="u12"}, a Eulerova turbinska jednadžba i stvarni propeler obrađuju se u []{.mf1-chapter-ref target="u14"}.
 
 Slika [-@fig-uvod-u11] prikazuje sile na fluid u koljenu koje skreće tok za $90^\circ$. Fluid ulazi kroz presjek 1 vodoravno, brzinom $\vec v_1$ u smjeru osi $x$, a izlazi kroz presjek 2 prema dolje brzinom $\vec v_2$. Granica KV obuhvaća fluid u koljenu i siječe tok na oba presjeka. Na presjecima djeluju tlačne sile $p_{M1}A_1$ i $p_{M2}A_2$ usmjerene u kontrolni volumen, a u sredini težina $\vec F_G$. Strelice $R_{st\to f,x}$ i $R_{st\to f,y}$ u donjem lijevom kutu pokazuju pretpostavljene pozitivne smjerove komponenata sile stijenke na fluid; stvarne predznake određuje račun.
 
@@ -24,7 +24,7 @@ gdje je $\vec v$ vektor brzine fluida, a indeksi ul i iz označuju ulazni i izla
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje</p>
-Za stacionarni tok rezultantna vanjska sila na fluid u nepomičnom kontrolnom volumenu jednaka je razlici izlaznog i ulaznog toka količine gibanja. Promjena iznosa ili smjera brzine zato zahtijeva djelovanje sila. Ako fluid skrene za $90^\circ$ u koljenu, sile tlaka i stijenke mijenjaju smjer njegove količine gibanja. Prema trećem Newtonovu zakonu fluid na stijenku djeluje silom jednakog iznosa i suprotnog smjera od sile stijenke na fluid. To opterećenje mora preuzeti konstrukcija.
+Za stacionarni tok rezultantna vanjska sila na fluid u nepomičnom kontrolnom volumenu jednaka je razlici izlaznog i ulaznog toka količine gibanja. Promjena iznosa ili smjera brzine zato zahtijeva djelovanje sila. Ako fluid skrene za $90^\circ$ u koljenu, sile tlaka i stijenke mijenjaju smjer njegove količine gibanja. Suprotnu silu fluida na stijenku mora preuzeti konstrukcija.
 :::
 
 Pritom se zbroj sila ne smije svesti samo na reakciju stijenke. U tipičnom cijevnom elementu treba odvojeno prepoznati:
@@ -71,7 +71,7 @@ Za **laminarni parabolični profil** $v_{lok}(r)=v_{max}(1-(r/R)^2)$ analitički
 Ovaj koeficijent analogan je **Coriolisovu koeficijentu $\alpha$**, koji u energijskoj bilanci korigira kinetičku energiju zbog nejednolikog profila: $\alpha$ stoji uz $v^2/(2g)$, a $\beta$ uz $\dot m v$. Za nenegativan jednosmjerni profil vrijedi $\alpha\ge\beta^{3/2}$, pa su oba veća od jedan ako profil nije jednolik. Za laminarni parabolični profil analitički je $\alpha=2$ i $\beta=4/3$. Pri povratnom toku ili drukčije definiranim presjecima te se nejednakosti ne smiju primijeniti bez ponovne integracije.
 :::
 
-No taj oblik nije dovoljan dok se vanjske sile ne rastave na stvarne doprinose. Za tipičan cijevni element vrijedi
+No oblik iz jednadžbe [-@eq-momentum-numericki-trag-01] nije dovoljan dok se vanjske sile ne rastave na stvarne doprinose. Za tipičan cijevni element vrijedi
 
 $$
 \vec F_p + \vec F_G + \vec R_{st\to f} = \dot m(\vec v_2 - \vec v_1),
@@ -88,11 +88,11 @@ U cijelom poglavlju $\vec F$ označuje silu fluida na element, $\vec R_{st\to f}
 Tlačni članovi otpadaju tek kad su relevantni presjeci otvoreni atmosferi ili kad se njihova rezultanta doista poništi geometrijom kontrolnog volumena. Član $\dot m\vec v$ opisuje tok količine gibanja, a $pA$ silu na zamišljenom presjeku; njihov zbroj na jednom presjeku, **impulsna funkcija** $I=pA+\dot m v$, u primjeru [-@ex-u11-sila-na-koljeno-tlacnog-voda-male-hidroelektrane] sažima silu na koljeno stalnog promjera.
 
 
-## Provjera sile na cijevno koljeno
+## Provjera sile na cijevno koljeno {#sec-provjera-sile-na-koljeno}
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Koljeno rashladnog voda i njegov nosač.** Ručni račun obuhvaća cijelo koljeno jednim kontrolnim volumenom, a CFD postavlja istu bilancu za svaku ćeliju, pa daje i raspodjelu tlaka unutar zavoja. Silu fluida na koljeno CFD dobiva integracijom tlaka i viskoznih naprezanja po unutarnjoj stijenci. Neovisno je provjerimo bilancom kontrolnog volumena: uključimo tokove količine gibanja, tlakove na otvorima, težinu i, pri promjenjivom toku, akumulaciju. Ručni @ex-u11-servisno-koljeno-na-sidrenom-nosacu-t2 polazi od zadanih tlakova i srednjih brzina. Za usporedbu s CFD-om uskladi presjeke i korekcije nejednolikih profila. Usporedba oštrog i blažeg koljena pri istom dotoku pokazuje da manji gubitak ne jamči jednako povoljno opterećenje nosača.
+**Koljeno rashladnog voda i njegov nosač.** Ručni račun obuhvaća cijelo koljeno jednim kontrolnim volumenom, a CFD postavlja istu bilancu za svaku ćeliju, pa daje i raspodjelu tlaka unutar zavoja. Silu fluida na koljeno CFD dobiva integracijom tlaka i viskoznih naprezanja po unutarnjoj stijenci. Neovisno je provjerimo bilancom kontrolnog volumena: uključimo tokove količine gibanja, tlakove na otvorima, težinu i, pri promjenjivom toku, akumulaciju. Ručni @ex-u11-servisno-koljeno-na-sidrenom-nosacu-t2 polazi od zadanih tlakova i srednjih brzina. Za usporedbu s CFD-om uskladi presjeke i korekcije nejednolikih profila. Usporedba oštrog i blažeg koljena pri istom dotoku može pokazati da manji gubitak ne jamči jednako povoljno opterećenje nosača.
 
 []{#ista-bilanca-za-mnogo-malih-dijelova-fluida}
 
@@ -119,9 +119,6 @@ Suprotni predznaci sile stijenke na fluid i sile fluida na stijenku nisu neslaga
 </div>
 :::
 
-::: {.mf1-granica-modela}
-<p class="mf1-box-label">Granica modela — Stacionarna bilanca s jednolikim presjecima</p>
-
 Radni zapis $\sum\vec F=\dot m(\vec v_2-\vec v_1)$ vrijedi uz četiri prešutne pretpostavke koje treba provjeriti prije svakog računa:
 
 - **jednoliki profili na presjecima** ($\beta=1$): za laminarni ulaz impulsni član raste za trećinu, pa presjeke treba birati ondje gdje je profil poznat;
@@ -129,7 +126,10 @@ Radni zapis $\sum\vec F=\dot m(\vec v_2-\vec v_1)$ vrijedi uz četiri prešutne 
 - **viskozna naprezanja na otvorima** zanemarena su, što vrijedi kad su presjeci okomiti na tok i daleko od zavoja; trenje na stijenci unutar KV nije zanemareno jer je dio $\vec R_{st\to f}$;
 - **slobodni mlaz bez gravitacije** između sapnice i ploče zadržava brzinu i presjek; za duge ili spore mlazove to prestaje vrijediti.
 
-Stacionarna bilanca ne opisuje prolazne pojave, vodeni udar ni brzu promjenu protoka: tada se vraća član akumulacije iz jednadžbe [-@eq-momentum-fizikalno-znacenje-01].
+::: {.mf1-granica-modela}
+<p class="mf1-box-label">Granica modela — Stacionarna bilanca s jednolikim presjecima</p>
+
+Radni zapis ne vrijedi kad je narušena bilo koja od četiriju upravo nabrojenih pretpostavki. Stacionarna bilanca ne opisuje prolazne pojave, vodeni udar ni brzu promjenu protoka: tada se vraća član akumulacije iz jednadžbe [-@eq-momentum-fizikalno-znacenje-01].
 :::
 
 ::: {.mf1-dublje}
@@ -156,7 +156,7 @@ $$
 F_T=\dot m\,(v_j-v_s),\qquad \dot m=\rho A_j v_j.
 $$ {#eq-potisak-mlaznog-pogona}
 
-Korisna snaga potiska jest $F_Tv_s$, dok ukupna kinetička snaga predana vodi iznosi $\dot m(v_j^2-v_s^2)/2$; njihov omjer $2v_s/(v_j+v_s)$ idealna je propulzijska učinkovitost.
+Korisna snaga potiska jest $F_Tv_s$. Ukupna kinetička snaga predana vodi u sustavu broda iznosi $\dot m(v_j^2-v_s^2)/2$; to je snaga pogona. U sustavu obale ista snaga glasi $F_Tv_s+\dot m(v_j-v_s)^2/2$: korisnoj snazi pribraja se kinetička snaga zaostalog mlaza. Omjer korisne i ukupne snage, $2v_s/(v_j+v_s)$, idealna je propulzijska učinkovitost.
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Propeler kao aktuatorski disk</p>
@@ -221,7 +221,7 @@ Ako se ruka slobodno zalijeće, dodajemo jednadžbu njezina gibanja, moment trom
 
 **Tekst zadatka**
 
-Vodeni mlaz promjera $d = 50\ \text{mm}$ i brzine $v = 30\ \text{m/s}$ udara u lopaticu Peltonove turbine koja se u smjeru mlaza giba stalnom brzinom $u = 12\ \text{m/s}$. Lopatica skreće relativni tok simetrično za $\theta = 165^\circ$, tako da relativna izlazna brzina zatvara kut od $15^\circ$ s dolaznim mlazom. Gustoća vode je $\rho = 998\ \text{kg/m}^3$; zanemari trenje na lopatici, težinu i razliku visina. Slobodni presjeci mlaza izloženi su atmosferskom tlaku.
+Vodeni mlaz promjera $d = 50\ \text{mm}$ i brzine $v = 30\ \text{m/s}$ udara u lopaticu Peltonove turbine koja se u smjeru mlaza giba stalnom brzinom $u = 12\ \text{m/s}$. Lopatica skreće relativni tok simetrično za $\theta = 165^\circ$, tako da relativna izlazna brzina zatvara kut od $15^\circ$ sa smjerom suprotnim dolaznom mlazu. Gustoća vode je $\rho = 998\ \text{kg/m}^3$; zanemari trenje na lopatici, težinu i razliku visina. Slobodni presjeci mlaza izloženi su atmosferskom tlaku.
 
 **Traži se**
 
@@ -449,7 +449,7 @@ Sidreni nosač mora preuzeti jednaku i suprotnu silu, $\vec R=-\vec F$: ulijevo 
 
 **Provjera i tumačenje**
 
-Zadani tlakovi odgovaraju gubitku $p_{M1}+\rho v_1^2/2-p_{M2}-\rho v_2^2/2\approx2{,}7\ \text{kPa}$, odnosno $\xi\approx0{,}34$ prema izlaznoj brzini, što je uobičajeno za koljeno sa suženjem. Odluka o profilu malo mijenja rezultat: $\beta=1{,}02$ daje $R_{st\to f,x}=-1404\ \text{N}$ i $R_{st\to f,y}=669\ \text{N}$, a tek laminarni ulaz s $\beta=4/3$ dao bi $-1429\ \text{N}$ i $725\ \text{N}$, jer ovdje prevladavaju tlačni članovi koje $\beta$ ne mijenja. Ista bilanca neovisno provjerava silu koju za to koljeno daje CFD; usporedi s CFD odlomkom u odjeljku [Provjera sile na cijevno koljeno](#provjera-sile-na-cijevno-koljeno).
+Zadani tlakovi odgovaraju gubitku $p_{M1}+\rho v_1^2/2-p_{M2}-\rho v_2^2/2\approx2{,}7\ \text{kPa}$, odnosno $\xi\approx0{,}34$ prema izlaznoj brzini, što je uobičajeno za koljeno sa suženjem. Odluka o profilu malo mijenja rezultat: $\beta=1{,}02$ daje $R_{st\to f,x}=-1404\ \text{N}$ i $R_{st\to f,y}=669\ \text{N}$, a tek laminarni ulaz s $\beta=4/3$ dao bi $-1429\ \text{N}$ i $725\ \text{N}$, jer ovdje prevladavaju tlačni članovi koje $\beta$ ne mijenja. Istom bilancom neovisno provjeravamo silu koju za to koljeno daje CFD, kako opisuje CFD odlomak u odjeljku [-@sec-provjera-sile-na-koljeno].
 :::
 
 ::: {#ex-u11-t-racva-na-sidrenoj-konzoli-t3 .mf1-ch}
@@ -705,11 +705,11 @@ $$
 \theta_R = \arctan \frac{625}{665} = 43{,}2^\circ
 $$ {#eq-momentum-cjeloviti-zadatak-y-racva-s-mjerenom-reakcijom-15}
 
-iznad negativnog smjera osi $x$. Usporedba sa zadanim statičkim kriterijem rezultante daje $1{,}0\ \text{kN} - 0{,}913\ \text{kN} = 0{,}087\ \text{kN}$, pa proračunati režim zadovoljava taj kriterij s rezervom od oko $87\ \text{N}$. To nije potpuna provjera konzole ni spojeva.
+iznad negativnog smjera osi $x$. Usporedba sa zadanim statičkim kriterijem rezultante daje $1{,}0\ \text{kN} - 0{,}913\ \text{kN} = 0{,}087\ \text{kN}$, pa proračunani režim zadovoljava taj kriterij s rezervom od oko $87\ \text{N}$. To nije potpuna provjera konzole ni spojeva.
 
 **Provjera i tumačenje**
 
-Inverzni postupak iz jedne izmjerene komponente rekonstruira cijeli idealizirani režim: $v\propto\sqrt{R_y}$, pa porast reakcije za 10 % znači porast brzine za oko 5 %. Rezerva od $87\ \text{N}$ (oko 9 %) usporediva je s nesigurnošću mjerenja sile i zanemarenim gubitcima, pa odluku treba potvrditi i stvarnim tlakom $p_{M1}$; čvrstoća, zamor i prolazna opterećenja ovim modelom nisu provjereni.
+Inverzni postupak iz jedne izmjerene komponente rekonstruira cijeli idealizirani režim: $v\propto\sqrt{R_y}$, pa porast reakcije za 10 % znači porast brzine za oko 5 %. Rezerva od $87\ \text{N}$ (oko 9 %) mogla bi biti usporediva s nesigurnošću mjerenja sile, koja ovdje nije zadana, i sa zanemarenim gubitcima, pa odluku treba potvrditi i stvarnim tlakom $p_{M1}$; čvrstoća, zamor i prolazna opterećenja ovim modelom nisu provjereni.
 :::
 
 ::: {#ex-u11-sila-na-koljeno-tlacnog-voda-male-hidroelektrane .mf1-we}
@@ -979,7 +979,7 @@ Pri stalnom promjeru brzina se ne mijenja, pa $p_{M2}$ slijedi iz $p_{M1}/(\rho 
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
-::: {.callout-tip collapse="true" data-answer-key="true"}
+::: {.callout-tip collapse="true" data-answer-key="true" data-key-full="true"}
 ### Kontrolni rezultat
 
 $v\approx2{,}865\ \text{m/s}$; $p_{M2}\approx144{,}9\ \text{kPa}$. $F_x\approx+4{,}97\ \text{kN}$, $F_z\approx-5{,}10\ \text{kN}$, $|\vec F|\approx7{,}12\ \text{kN}$; nosač daje $\vec R=-\vec F$, dakle ulijevo i prema gore. Težina vode $294\ \text{N}$ čini oko $5{,}8\,\%$ okomite komponente. Račun u vodoravnoj ravnini dao bi $F_z\approx-4{,}97\ \text{kN}$: pad tlaka zbog visine i gubitka ($5{,}1\ \text{kPa}$) smanjuje tlačnu silu na izlazu za $162\ \text{N}$, a težina vode dodaje $294\ \text{N}$, pa je stvarna okomita komponenta oko $3\,\%$ veća.
@@ -1058,15 +1058,15 @@ $F_x=\rho A(v-u)^2=F_o$ daje $v-u\approx9{,}782\ \text{m/s}$, dakle $u\approx10{
 
 **Tekst zadatka**
 
-Vodoravna Y-račva prima vodu u smjeru $+x$ kroz ulaznu cijev promjera $D_1=140\ \text{mm}$. Nominalni protok jest $Q_1=0{,}040\ \text{m}^3/\text{s}$, a manometarski tlak $p_{M1}=185\ \text{kPa}$. Udio $s=0{,}60$ odlazi ravno kroz granu promjera $D_2=90\ \text{mm}$, a ostatak kroz granu promjera $D_3=80\ \text{mm}$, otklonjenu za $60^\circ$ prema $+y$ u vodoravnoj ravnini. Na oba izlaza vlada atmosferski tlak.
+Vodoravna Y-račva prima vodu u smjeru $+x$ kroz ulaznu cijev promjera $D_1=140\ \text{mm}$. Nazivni protok jest $Q_1=0{,}040\ \text{m}^3/\text{s}$, a manometarski tlak $p_{M1}=185\ \text{kPa}$. Udio $s=0{,}60$ odlazi ravno kroz granu promjera $D_2=90\ \text{mm}$, a ostatak kroz granu promjera $D_3=80\ \text{mm}$, otklonjenu za $60^\circ$ prema $+y$ u vodoravnoj ravnini. Na oba izlaza vlada atmosferski tlak.
 
-Izlazni udio zadan je radnim režimom; ne pretpostavljaj jednaku brzinu u granama niti tok bez gubitaka. U sintetičkom pogonskom scenariju zadane su neovisne zajamčene granice: $p_{M1}=185\pm5\ \text{kPa}$, $Q_1=0{,}040\ \text{m}^3/\text{s}\pm2\ \%$ te $s=0{,}60\pm0{,}03$. To nisu standardne nesigurnosti za RSS. Ocjenjuje se samo zadani statički kriterij rezultante u ravnini.
+Izlazni udio zadan je radnim režimom; ne pretpostavljaj jednaku brzinu u granama niti tok bez gubitaka. U sintetičkom pogonskom scenariju zadane su neovisne zajamčene granice: $p_{M1}=185\pm5\ \text{kPa}$, $Q_1=0{,}040\ \text{m}^3/\text{s}\pm2\ \%$ te $s=0{,}60\pm0{,}03$. To nisu standardne nesigurnosti, pa se ne zbrajaju korijenom zbroja kvadrata. Ocjenjuje se samo zadani statički kriterij rezultante u ravnini.
 
 Ponuđene su nosivosti $3{,}0\ \text{kN}$ i $3{,}5\ \text{kN}$, uz kriterij $R_{naz}\geq1{,}15F_{max}$.
 
 **Traži se**
 
-1. Odredi nominalne protoke, komponente sile fluida na račvu i reakciju nosača.
+1. Odredi nazivne protoke, komponente sile fluida na račvu i reakciju nosača.
 2. Odredi najveću rezultantu u cijelom zadanom području i provjeri gdje nastaje.
 3. Odaberi manju ponuđenu nosivost koja zadovoljava zadani kriterij.
 

@@ -4,10 +4,10 @@ Ovaj dodatak povezuje ćelijsku bilancu iz []{.mf1-chapter-ref target="u07"}, an
 
 | Primjena | Povezani odlomci | Što želimo odlučiti |
 |---|---|---|
-| Rashladni krug baterije | [početni model](u01_osnove_fluida_i_pascalov_zakon.qmd#cfd-rashladni-krug-model) → [podjela protoka](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#cfd-razdjelnik-podjela-protoka) → [mjerenje i gubitak](u08_energijska_jednadzba_i_bernoulli.qmd#cfd-venturi-mjerenje-gubitak) → [toplina](u12_diferencijalni_opis_realnog_toka.qmd#cfd-hladna-ploca-toplina) → [radna točka](u13_gubici_cjevovodi_crpke_i_mreze.qmd#cfd-krug-radna-tocka) → [rotor](u14_turbostrojevi_i_propulzija.qmd#cfd-rotor-karakteristika) | raspored kanala, protoci i pogon |
-| Cisterna i ponton | [kočenje i valovi](u04_relativno_mirovanje_fluida.qmd#cfd-cisterna-kocenje) → [gaz i stabilitet](u06_uzgon_plivanje_i_stabilnost.qmd#cfd-ponton-gaz-stabilitet) → [prijenos mjerila](u11_dimenzijska_analiza_i_slicnost.qmd#cfd-ponton-slicnost) | učinak pregrada ili položaja tereta |
-| Gradski kanal s ustavom | [sila i moment](u05_hidrostatske_sile_na_plohe.qmd#cfd-ustava-opterecenje) → [vodostaji](u15_otvoreni_tokovi.qmd#cfd-kanal-vodostaji) → [mlaz i skok](u15_otvoreni_tokovi.qmd#cfd-ustava-hidraulicki-skok) | opterećenje pogona i umirni bazen |
-| Zračna sapnica | [zagušenje](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-prigusenje) → [udarni val](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-udarni-val) | potrošnja zraka i radno područje |
+| Rashladni krug baterije | [početni model](u01_osnove_fluida_i_pascalov_zakon.qmd#cfd-rashladni-krug-model) (pog. 1) → [podjela protoka](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd#cfd-razdjelnik-podjela-protoka) (pog. 7) → [mjerenje i gubitak](u08_energijska_jednadzba_i_bernoulli.qmd#cfd-venturi-mjerenje-gubitak) (pog. 8) → [toplina](u12_diferencijalni_opis_realnog_toka.qmd#cfd-hladna-ploca-toplina) (pog. 12) → [radna točka](u13_gubici_cjevovodi_crpke_i_mreze.qmd#cfd-krug-radna-tocka) (pog. 13) → [rotor](u14_turbostrojevi_i_propulzija.qmd#cfd-rotor-karakteristika) (pog. 14) | raspored kanala, protoci i pogon |
+| Cisterna i ponton | [kočenje i valovi](u04_relativno_mirovanje_fluida.qmd#cfd-cisterna-kocenje) (pog. 4) → [gaz i stabilitet](u06_uzgon_plivanje_i_stabilnost.qmd#cfd-ponton-gaz-stabilitet) (pog. 6) → [prijenos mjerila](u11_dimenzijska_analiza_i_slicnost.qmd#cfd-ponton-slicnost) (pog. 11) | učinak pregrada ili položaja tereta |
+| Gradski kanal s ustavom | [sila i moment](u05_hidrostatske_sile_na_plohe.qmd#cfd-ustava-opterecenje) (pog. 5) → [vodostaji](u15_otvoreni_tokovi.qmd#cfd-kanal-vodostaji) (pog. 15) → [mlaz i skok](u15_otvoreni_tokovi.qmd#cfd-ustava-hidraulicki-skok) (pog. 15) | opterećenje pogona i umirni bazen |
+| Zračna sapnica | [zagušenje](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-prigusenje) (pog. 9) → [udarni val](u09_kompresibilni_idealni_tok.qmd#cfd-sapnica-udarni-val) (pog. 9) | potrošnja zraka i radno područje |
 
 : {.mf1-reference-table tbl-colwidths="[27,46,27]"}
 
@@ -151,9 +151,9 @@ Za procjenu opaženog reda točnosti i GCI-ja koristi barem tri sustavno profinj
 
 Osjetljivost na hrapavost, ulazni profil ili model turbulencije ispituje se zasebnom analizom, koja nije ni provjera mrežne konvergencije ni zamjena za mjerenje. Razlika između viskoznog rješenja i idealnoga Bernoullijeva rješenja obuhvaća stvarne gubitke i razliku u pretpostavkama. Na kraju navedi protok, definiciju $\Delta p$, gubitak i nesigurnost s obzirom na odluku, primjerice na potrebnu crpnu visinu. Slaganje u jednoj radnoj točki ne potvrđuje cijelo radno područje.
 
-## Pripremljeni V&V paketi {#sec-cfd-vv-paketi}
+## Pripremljeni paketi za verifikaciju i validaciju (V&V) {#sec-cfd-vv-paketi}
 
-Paketi u mapi `data/cfd/` [repozitorija priručnika](https://github.com/martibasic/MF1_udzbenik/tree/main/data/cfd) omogućuju obradu rezultata bez instaliranja rješavača; svaki paket ima vlastiti opis podataka i podrijetla. Provjere se nadovezuju na poznato: analitičko rješenje daje referencu, kontinuitet bilancu, profinjenje numeričku procjenu, a eksperiment podatke za validaciju.[]{#tri-pripremljena-vv-paketa}
+Pakete preuzimaš iz [repozitorija priručnika](https://github.com/martibasic/MF1_udzbenik/tree/main/data/cfd) i rezultate obrađuješ bez instaliranja rješavača; svaki paket ima vlastiti opis podataka i podrijetla. Provjere se nadovezuju na poznato: analitičko rješenje daje referencu, kontinuitet bilancu, profinjenje numeričku procjenu, a eksperiment podatke za validaciju.[]{#tri-pripremljena-vv-paketa}
 
 | Paket | Dostupni podatci | Dopušten zaključak |
 |---|---|---|
@@ -164,13 +164,13 @@ Paketi u mapi `data/cfd/` [repozitorija priručnika](https://github.com/martibas
 
 Venturijev paket odnosi se na vodu, promjere 100/50 mm i protok 10 L/s. To je zaseban nastavni skup iste vrste problema, a ne simulacija uljne Venturijeve cijevi iz odjeljka [-@sec-cfd-venturi]. Propisani koeficijent gubitka $\xi=0{,}2$ (u datotekama paketa označen `K`) ne prenosi se na taj primjer.
 
-Validator `python tools/validate_cfd_vv.py` provjerava reference, bilance, podrijetlo, opaženi red i GCI. **GCI nije automatski standardna nesigurnost**, a tri monotone vrijednosti same po sebi nisu dokaz asimptotskog područja. Aeroprofil ostaje primjer usporedbe s nepotpunim arhivom: izvorni reziduali, zapisi sila kroz iteracije i masena bilanca nisu dostupni u pregledanim izvorima. Zaseban pokus sa strujanjem iza stepenice daje stvarna mjerenja za izravan račun odstupanja, ali ni ondje usporedba jednog izlaza ne zamjenjuje cjelovitu validaciju.
+Priloženom skriptom provjeravaš reference, bilance, podrijetlo, opaženi red i GCI. **GCI nije automatski standardna nesigurnost**, a tri monotone vrijednosti same po sebi nisu dokaz asimptotskog područja. Aeroprofil ostaje primjer usporedbe s nepotpunim arhivom: izvorni reziduali, zapisi sila kroz iteracije i masena bilanca nisu dostupni u pregledanim izvorima. Zaseban pokus sa strujanjem iza stepenice daje stvarna mjerenja za izravan račun odstupanja, ali ni ondje usporedba jednog izlaza ne zamjenjuje cjelovitu validaciju.
 
 **Veza sa Z6 u []{.mf1-chapter-ref target="u12"}.** Rezultat FUN3D na najfinijoj mreži iznosi $C_D\approx0{,}01222$. Ladsonove točke (napadni kut; $C_D$) $=(8{,}08^\circ;\,0{,}00995)$ i $(10{,}10^\circ;\,0{,}01175)$ pri $Re_l=6\cdot10^6$, $Ma=0{,}15$ i prisilnom prijelazu (120 grit) linearnom interpolacijom na $10{,}00^\circ$ daju $C_D\approx0{,}01166$.
 
 Zadani $s_{mj}=0{,}00020$, $s_{num}=0{,}00010$ i $s_{uv}=0{,}00010$ **nastavne su pretpostavke**, a ne objavljene nesigurnosti pokusa ili rješavača. Red veličine $s_{uv}$ obrazlaže se lokalnim nagibom od približno $0{,}000891$ po stupnju: nesigurnost kuta reda $0{,}1^\circ$ dala bi doprinos od oko $0{,}00009$. Doprinos $s_{num}$ obuhvaća ukupnu numeričku nesigurnost scenarija; GCI mu se ne dodaje ponovno, a osobito ne GCI iz drugog slučaja.
 
-Za zadane neovisne normalne doprinose centrirane na nulu, s poznatim standardnim nesigurnostima, zbrajaju se varijance, $s_E=\sqrt{s_{mj}^2+s_{num}^2+s_{uv}^2}$, a dvostruka standardna nesigurnost razlike $2s_E$ daje približno 95 % pokrivanja. Kriterij $|E|\le 2s_E$ ispituje slaganje u toj točki. Povećanje $s_{mj}$ na $0{,}00030$ širi interval, ali ne poboljšava CFD model. Pretpostavke i podrijetlo podataka sačuvani su u `teaching_comparison.json`.
+Za zadane neovisne normalne doprinose centrirane na nulu, s poznatim standardnim nesigurnostima, zbrajaju se varijance, $s_E=\sqrt{s_{mj}^2+s_{num}^2+s_{uv}^2}$, a dvostruka standardna nesigurnost razlike $2s_E$ daje približno 95 % pokrivanja. Kriterij $|E|\le 2s_E$ ispituje slaganje u toj točki. Povećanje $s_{mj}$ na $0{,}00030$ širi interval, ali ne poboljšava CFD model. Pretpostavke i podrijetlo podataka zapisani su u opisu paketa.
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Aeroprofil nije automatski hidroprofil</p>

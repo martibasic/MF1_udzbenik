@@ -4,7 +4,7 @@
     "tools/build_print_figures.mjs": "4b695d1282ac4e91a26f75117596f0fd080dd3312ecc337536fd2be86e50a5e7",
     "assets/figure-tokens.json": "5d0e62e89920146860914f5b7fd267a3ab2c9d5ba72f2aa4478cc600358c83f8",
     "assets/figure-compositions.json": "ad84e3227b657f1953e069762f51d1ef6797e147436c04b558f0a658a866698c",
-    "assets/print-layouts.json": "41db70da917a5d4c4c10add58111c1e3f4d6432203d870c3e95feaa8cca060a4"
+    "assets/print-layouts.json": "c835e6b397f70d45945016d18044584614a75ea2846fa95af82ad4b0167fa026"
   },
   "tokens": {
     "text-width-pt": 447.874,
@@ -7358,7 +7358,7 @@
             5
           ],
           "keep_with_next": true,
-          "sha256": "8aa49804b583950e081df49c668fb832086e4078370ecbd41c255542dfbf22a6"
+          "sha256": "dd2a89b1781c07243c2828052828c04cc2ab2de9ad676e5dd2a04199ea8a0d8d"
         }
       ],
       "kind": "composite",
@@ -7637,7 +7637,7 @@
           ]
         }
       ],
-      "source_sha1": "4e8dff65f5d76f9d89f24d02075dc23e70ae66e1"
+      "source_sha1": "ec4dcd7d21e0f70a9ecd6503a76516c436360845"
     },
     "u12_ch1_pokretna_zakrivljena_lopatica.svg": {
       "rows": [
@@ -8541,7 +8541,7 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "fa03cd2bc40ee12367a0ab32431b7f94e1038d5c315a96cd385435f676f51361"
+          "sha256": "61921cc6b1423f7a37ff1ac83ce5f40c9d5fe9a05b0f93e73b4a2a708a6f4899"
         },
         {
           "file": "u12_vjezbe_skice--2.svg",
@@ -8806,7 +8806,7 @@
           ]
         }
       ],
-      "source_sha1": "acbfced5e300b30bbe8a2a1f8a10ba95f66ffaa4"
+      "source_sha1": "66d24c43dbbb8a698f2764bfd1d687f40213f8ad"
     },
     "u13_fig_uvod_pregled.svg": {
       "rows": [

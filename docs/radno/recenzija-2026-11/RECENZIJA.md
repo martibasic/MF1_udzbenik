@@ -137,3 +137,32 @@ Svaki obrazac javlja se u svim ili većini skupina; mjesta su u `PROVJERA.md`.
 | G4-03 | Pog. 15 Z6: $y_{2,dop}$ je dubina koju nizvodni vodostaj može održati; „Traži se 2” traži odluku ostaje li skok u bazenu; navedeno da $y_1$ daje brzotok ili pad dna; ključ i oznaka na skici („nizvodno”) usklađeni. |
 
 Preostali P1 (G2-01, G3-01, G4-01) traže promjenu brojeva ili zadataka i čekaju autoričinu odluku.
+
+**8. 11. 2026. — preostali P1 (najjednostavniji zahvat)**
+
+| # | Provedeno |
+| --- | --- |
+| G2-01 | Pog. 6: ilustracija izrijekom pretpostavlja nadoknadu mase na istoj visini; dodana rečenica da bi bez nje $GM$ mogao porasti. Brojevi ostaju. |
+| G3-01 | Pog. 10 Z5: ploča na kolicima kočenim silom $F_o$; student određuje ustaljenu brzinu (10,22 m/s; 6,17 m/s za 240 N) i objašnjava zašto sporija ploča prima veću snagu. Verifikator, bilježnica i skica usklađeni (`docs/radno/revizija_u10.md`). |
+| G4-01 | Pog. 14 Z1: isti potisak s dva promjera propelera ($C_{Th}$, $\eta_i$, $P_i$) umjesto mlaza na nepomičnu ploču; novi ID, panel iz skice aktuatorskog diska pog. 10 (`docs/radno/revizija_u14.md`). |
+
+**8. 11. 2026. — tekstni P2** (provedba po skupinama: `G1`–`G4/PROVEDBA.md`)
+
+| Skupina | Provedeno | Preskočeno (BROJ/MODEL, SKICA, AUTORSKA ODLUKA, NEPOTVRDIVO, ODBAČENO) | Neprimjenjivo |
+| --- | ---: | ---: | ---: |
+| G1 (1–4) | 32 | 13 | 0 |
+| G2 (5–8) | 29 | 13 | 0 |
+| G3 (9–12) | 36 | 15 | 3 |
+| G4 (14–15, dodatci) | 36 | 13 | 3 |
+
+Glavni agent pregledao je izmjene: nijedan konačni ili kontrolni rezultat nije promijenjen;
+uklonjeno je šest doslovno ponovljenih numeriranih jednadžbi bez upućivanja (780 umjesto 786);
+zaokruženi su međurezultati u pog. 3 (K8); ključevi pog. 10 Z3, 14 Z2 i 15 Z2 ispisuju se u
+cijelosti (`data-key-full`); novi ID-jevi `sec-provjera-sile-na-koljeno` i
+`tbl-bezdimenzijski-brojevi`; u pog. 12 iznos $\tau_{st}=\mu|dv/dr|_R$ usklađen s konvencijom.
+
+Za autoričino čitanje (formulacije provedbe bez vanjskog izvora): kriterij za zanemarivanje
+trenja (pog. 8), samousisna izvedba ili zalijevanje u pog. 8 P4, ograde „nastavna procjena” i
+„kao orijentacija” (pog. 6–8, pog. 3 ulaž), ograda „otvor malen prema uzvodnoj dubini” (pog. 15),
+definicija meridijanske komponente (pog. 14). Preskočeno ostaje: izvori za dodatak E
+(`references.bib`), skice, promjene brojeva i autorske odluke iz `PROVJERA.md`.

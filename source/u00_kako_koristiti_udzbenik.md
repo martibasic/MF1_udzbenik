@@ -4,7 +4,7 @@ Sveučilišni priručnik namijenjen je studentima druge godine strojarstva i bro
 
 Primjene u brodogradnji obuhvaćaju hidrostatička opterećenja, uzgon i početni stabilitet, sličnost pri modelskim ispitivanjima te propulziju. Primjeri iz građevinarstva, energetike, zaštite okoliša, biomedicine i procesne tehnike uključeni su kad prenose isti model i pomažu prepoznati njegovu opću strukturu.
 
-Rješavanje tehničkog zadatka počinje skicom sustava i popisom pretpostavki; zatim slijede odgovarajuća bilanca, proračun i provjera rezultata. Pri prvom čitanju drži se glavnog teksta, riješenih primjera i zadataka. Blokovi *Dublje* i odlomci *Računalna dinamika fluida* dodatno su štivo: osnovno gradivo priručnika možeš pratiti i bez učenja CFD postupaka.
+Rješavanje tehničkog zadatka počinje skicom sustava i popisom pretpostavki; zatim slijede odgovarajuća bilanca, proračun i provjera rezultata. Pri prvom čitanju drži se glavnog teksta, riješenih primjera i zadataka. Blokovi *Dublje* i odlomci *Računalna dinamika fluida* (engl. *Computational Fluid Dynamics*, CFD) dodatno su štivo: osnovno gradivo priručnika možeš pratiti i bez učenja CFD postupaka.
 
 ## Predznanje
 
@@ -35,7 +35,7 @@ Neki se sustavi u knjizi pojavljuju više puta. Rashladnom krugu postupno dodaje
 
 Riješeni primjeri označeni su **P1, P2, … zasebno u svakom poglavlju**. Oznaka stoji lijevo od naslova. Koraci rješenja numerirani su redom 1., 2., 3., bez dodatne numeracije odjeljka.
 
-Zadatci za vježbu označeni su **Z1–Z6 zasebno u svakom poglavlju**, uz kratak naslov problema. Ključ rezultata u dodatku F koristi iste oznake i naslove. Upućivanje na zadatak uključuje i oznaku poglavlja, primjerice „poglavlje 3, Z2”.
+Zadatci za vježbu označeni su **Z1–Z6 zasebno u svakom poglavlju**, uz kratak naslov problema. Ključ rezultata u dodatku F koristi iste oznake i naslove. Upućivanje na zadatak uključuje i oznaku poglavlja, primjerice „pog. 3, Z2”.
 
 Razine T1–T4, navedene sitnim slovima na kraju zadatka, pokazuju koliko samostalnog izbora zadatak traži, a ne samo koliko je račun dug.
 
@@ -68,7 +68,7 @@ Numerički pokusi istražuju osjetljivost, bilance i pogrešku jednostavnih mode
 
 **Za čitanje i rješavanje zadataka dovoljan je tekst priručnika.** Mrežno izdanje i PDF sadrže isto gradivo, a bilježnice ga nadopunjuju. Izdanje u PDF-u namijenjeno je ispisu i radu bez mrežne veze.
 
-## Dodaci za brzo snalaženje
+## Dodatci za brzo snalaženje {#dodaci-za-brzo-snalaženje}
 
 - **A — Sažetak formula i oznaka:** podsjetnik na relacije, jedinice i uvjete primjene.
 - **B — Pojmovnik:** kratke definicije i upućivanja na pripadno poglavlje.

@@ -88,7 +88,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Promatraj dio procjepa duljine $L$: dvije kontaktne linije ukupne duljine $2L$ nose stupac volumena $bLh$. Kružna kapilara ima drukčiji omjer oboda i presjeka. Negativan $h$ znači spuštanje razine, odnosno ulaznu barijeru za suh procjep.
 
-**Kontrolni rezultat ili kriterij.** $h=2\sigma\cos\theta/(\rho gb)$; $h_1\approx62{,}9\ \text{mm}$. Kružna formula s $d=b$ dala bi $125{,}7\ \text{mm}$, dvostruko više, jer kružni presjek ima dvostruko dulju kontaktnu liniju po jedinici površine presjeka. Za premaz $h_2\approx-18{,}8\ \text{mm}$: razina u procjepu spušta se ispod vanjske, a suh procjep voda ne puni bez nadtlaka od oko $189\ \text{Pa}$.
+**Kontrolni rezultat ili kriterij.** $h=2\sigma\cos\theta/(\rho gb)$; $h_1\approx62{,}9\ \text{mm}$. Kružna formula s $d=b$ dala bi $125{,}7\ \text{mm}$, dvostruko više, jer kružni presjek ima dvostruko dulju kontaktnu liniju po jedinici površine presjeka. Za premaz $h_2\approx-18{,}8\ \text{mm}$: razina u procjepu spušta se ispod vanjske, a suh procjep voda ne puni bez pretlaka od oko $189\ \text{Pa}$.
 
 ### Z5. Newtonski model iz mjerenja dvaju uzoraka {#key-task-newtonski-model-iz-mjerenja .unnumbered .unlisted}
 
@@ -270,9 +270,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u06_uzgon_plivanje_i_stabilnost.qmd#task-plutanje-homogenog-bloka-stabilitet)
 
-**Smjernica postupka.** Za homogeni blok je $T=sh$, $KB=T/2$, $KG=h/2$ i $BM=b^2/(12T)$. Uvjet $GM\ge0$ sredi po $b^2$; dobiva se izraz koji ovisi samo o $h$ i $s$. U 4. zahtjevu usporedi kako se mijenjaju $KB$ i $BM$ kad gaz raste.
+**Smjernica postupka.** Za homogeni blok je $T=s_rh$, $KB=T/2$, $KG=h/2$ i $BM=b^2/(12T)$. Uvjet $GM\ge0$ sredi po $b^2$; dobiva se izraz koji ovisi samo o $h$ i $s_r$. U 4. zahtjevu usporedi kako se mijenjaju $KB$ i $BM$ kad gaz raste.
 
-**Kontrolni rezultat ili kriterij.** $T=0{,}326\ \text{m}$, nadvođe $0{,}174\ \text{m}$; $KB=0{,}163$, $BM=0{,}125$, $KG=0{,}250$, $GM=+0{,}038\ \text{m}$: početno stabilan, ali s malom rezervom. Uvjet $GM\ge0$ daje $b/h\ge\sqrt{6s(1-s)}$, ovdje $b_{min}\approx0{,}584\ \text{m}$. Za $\rho_d=900\ \text{kg/m}^3$: $T=0{,}451$, $KB=0{,}225$, $BM=0{,}091$, $GM=+0{,}066\ \text{m}$, dakle stabilniji; dublji uron više podiže $KB$ nego što smanjuje $BM$, a najmanju rezervu ima blok sa $s\approx0{,}5$.
+**Kontrolni rezultat ili kriterij.** $T=0{,}326\ \text{m}$, nadvođe $0{,}174\ \text{m}$; $KB=0{,}163$, $BM=0{,}125$, $KG=0{,}250$, $GM=+0{,}038\ \text{m}$: početno stabilan, ali s malom rezervom. Uvjet $GM\ge0$ daje $b/h\ge\sqrt{6s_r(1-s_r)}$, ovdje $b_{min}\approx0{,}584\ \text{m}$. Za $\rho_d=900\ \text{kg/m}^3$: $T=0{,}451$, $KB=0{,}225$, $BM=0{,}091$, $GM=+0{,}066\ \text{m}$, dakle stabilniji; dublji uron više podiže $KB$ nego što smanjuje $BM$, a najmanju rezervu ima blok sa $s_r\approx0{,}5$.
 
 ### Z3. Metacentarska visina iz pokusa nagibanja {#key-task-metacentarska-visina-iz-pokusa-nagibanja .unnumbered .unlisted}
 
@@ -480,7 +480,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Pri stalnom promjeru brzina se ne mijenja, pa $p_{M2}$ slijedi iz $p_{M1}/(\rho g)=p_{M2}/(\rho g)+\Delta z+h_g$. U bilanci za os $z$ uz tok količine gibanja i tlačnu silu na izlazu djeluje i težina vode $\rho gV$ prema dolje; sve tri stavke stijenka mora uravnotežiti.
 
-**Kontrolni rezultat ili kriterij.** $v\approx2{,}865\ \text{m/s}$; $p_{M2}\approx144{,}9\ \text{kPa}$. $F_x\approx+4{,}97\ \text{kN}$, $F_z\approx-5{,}10\ \text{kN}$, $|\vec F|\approx7{,}12\ \text{kN}$; nosač daje $\vec R=-\vec F$, dakle ulijevo i prema gore. Težina vode $294\ \text{N}$ čini oko $5{,}8\,\%$ okomite komponente.
+**Kontrolni rezultat ili kriterij.** $v\approx2{,}865\ \text{m/s}$; $p_{M2}\approx144{,}9\ \text{kPa}$. $F_x\approx+4{,}97\ \text{kN}$, $F_z\approx-5{,}10\ \text{kN}$, $|\vec F|\approx7{,}12\ \text{kN}$; nosač daje $\vec R=-\vec F$, dakle ulijevo i prema gore. Težina vode $294\ \text{N}$ čini oko $5{,}8\,\%$ okomite komponente. Račun u vodoravnoj ravnini dao bi $F_z\approx-4{,}97\ \text{kN}$: pad tlaka zbog visine i gubitka ($5{,}1\ \text{kPa}$) smanjuje tlačnu silu na izlazu za $162\ \text{N}$, a težina vode dodaje $294\ \text{N}$, pa je stvarna okomita komponenta oko $3\,\%$ veća.
 
 ### Z4. Moment ekscentričnog mlaza {#key-task-moment-ekscentricnog-mlaza .unnumbered .unlisted}
 
@@ -552,7 +552,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-u14-preljev-brane-ispituje-se-vodenim-modelom-u)
 
-**Smjernica postupka.** Iz $Fr_m=Fr_p$ slijedi omjer brzina; kontinuitet i geometrijska sličnost daju omjer protoka. Interval sile množi se istim faktorom kao nominalna sila. Provjeri donju granicu očitanja, a ne samo sredinu. $Re_p/Re_m=\lambda_L^{3/2}$ pokazuje zašto Froudeov prijenos ostaje uvjetan.
+**Smjernica postupka.** Iz $Fr_m=Fr_p$ slijedi omjer brzina; kontinuitet i geometrijska sličnost daju omjer protoka. Interval sile množi se istim faktorom kao nazivna sila. Provjeri donju granicu očitanja, a ne samo sredinu. $Re_p/Re_m=\lambda_L^{3/2}$ pokazuje zašto Froudeov prijenos ostaje uvjetan.
 
 **Kontrolni rezultat ili kriterij.** Redom za $\lambda_L=20;\ 30$: $v_m\approx(1{,}342;1{,}095)\ \text{m/s}$, $Q_m\approx(268{,}3;97{,}37)\ \text{L/s}$, $Re_m\approx(5{,}03;2{,}74)\cdot10^5$. Prenesene sile na prototipu iznose $(224\pm4{,}8)\ \text{kN}$ i $(216\pm5{,}4)\ \text{kN}$, a presjek je $[219{,}2;221{,}4]\ \text{kN}$. Odabire se mjerilo 20: oba su protoka dopuštena, ali za 30 i gornja granica sile iznosi samo $8{,}20\ \text{N}<10\ \text{N}$. Slaganje intervala ne dokazuje malu mjerilnu pogrešku.
 
@@ -672,7 +672,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** U sustavu ploče mlaz dolazi relativnom brzinom $v-u$. Jedna ploča prima $\dot m_{rel}=\rho A(v-u)$, pa je $F=\rho A(v-u)^2$; kolo prima cijeli protok $\rho Av$, pa je $F=\rho Av(v-u)$. Snaga je $P=Fu$; deriviraj $P(u)$ i izjednači s nulom.
 
-**Kontrolni rezultat ili kriterij.** $A=4{,}909\cdot10^{-4}\ \mathrm{m^2}$, $\dot m_{ml}=14{,}70\ \mathrm{kg/s}$, snaga mlaza $6{,}61\ \mathrm{kW}$. (a) $\dot m_{rel}=9{,}80\ \mathrm{kg/s}$, $F=196\ \mathrm{N}$, $P=1{,}96\ \mathrm{kW}$, $\eta=29{,}6\ \%$. (b) $\dot m=14{,}70\ \mathrm{kg/s}$, $F=294\ \mathrm{N}$, $P=2{,}94\ \mathrm{kW}$, $\eta=44{,}4\ \%$.
+**Kontrolni rezultat ili kriterij.** $A=4{,}909\cdot10^{-4}\ \mathrm{m^2}$, $\dot m_{ml}=14{,}70\ \mathrm{kg/s}$, snaga mlaza $6{,}61\ \mathrm{kW}$. (a) $\dot m_{rel}=9{,}80\ \mathrm{kg/s}$, $F=196\ \mathrm{N}$, $P=1{,}96\ \mathrm{kW}$, $\eta=29{,}6\ \%$. (b) $\dot m=14{,}70\ \mathrm{kg/s}$, $F=294\ \mathrm{N}$, $P=2{,}94\ \mathrm{kW}$, $\eta=44{,}4\ \%$. Optimum: (a) $u=v/3=10\ \mathrm{m/s}$ s $\eta_{max}=8/27=29{,}6\ \%$, što je upravo zadani slučaj; (b) $u=v/2=15\ \mathrm{m/s}$ s $F=220\ \mathrm{N}$, $P=3{,}31\ \mathrm{kW}$ i $\eta_{max}=50\ \%$. Kolo iskorištava cijeli protok, pa je i pri istoj brzini $u$ bolje od jedne ploče.
 
 ### Z3. Izlaz lopatice iz izmjerene sile {#key-task-izlaz-lopatice-iz-izmjerene-sile .unnumbered .unlisted}
 
@@ -722,7 +722,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Napiši $y_0+q^2/(2gy_0^2)=y_1+q^2/(2gy_1^2)$ i riješi po $q$: $q=y_1\sqrt{2g(y_0-y_1)/[1-(y_1/y_0)^2]}$. Iz usporedbe s $q=C_da\sqrt{2gy_0}$ slijedi $C_d=C_c/\sqrt{1+C_ca/y_0}$, pa $C_d$ pada s porastom omjera $a/y_0$.
 
-**Kontrolni rezultat ili kriterij.** $y_1=0{,}244\ \mathrm{m}$, $q\approx1{,}443\ \mathrm{m^2/s}$, $Q\approx2{,}886\ \mathrm{m^3/s}$ i $C_d\approx0{,}576$, unutar raspona 0,55–0,60. $Fr_0\approx0{,}163$ (mirni tok) i $Fr_1\approx3{,}82$ (siloviti tok): tok prolazi kroz kritično stanje ispod ustave, pa uzvodna razina ovisi samo o protoku i otvoru, a ne o nizvodnom stanju.
+**Kontrolni rezultat ili kriterij.** $y_1=0{,}244\ \mathrm{m}$, $q\approx1{,}443\ \mathrm{m^2/s}$, $Q\approx2{,}886\ \mathrm{m^3/s}$ i $C_d\approx0{,}576$, unutar raspona 0,55–0,60. $Fr_0\approx0{,}163$ (mirni tok) i $Fr_1\approx3{,}82$ (siloviti tok): tok prolazi kroz kritično stanje ispod ustave, pa uzvodna razina ovisi samo o protoku i otvoru, a ne o nizvodnom stanju. Pri $a=0{,}800\ \mathrm{m}$ je $y_1=0{,}488\ \mathrm{m}$, $q\approx2{,}741\ \mathrm{m^2/s}$, dakle $1{,}90$ puta više: $C_d$ pada na $0{,}547$ jer veći otvor daje dublji suženi mlaz, pa se razlika $y_0-y_1$ relativno smanjuje; veća brzina dolaska taj pad samo djelomično nadoknađuje.
 
 ### Z3. Geometrija i tok trapeznog kanala {#key-task-trapezni-presjek .unnumbered .unlisted}
 
@@ -744,7 +744,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-skok-mjerenje)
 
-**Smjernica postupka.** Model: bilanca količine gibanja s impulsnom funkcijom iz jednadžbe [(15.18)](u15_otvoreni_tokovi.qmd#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01) u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti (GUM) i sukladnost ako je $|\Delta_I|\le2s_{\Delta}$; slaganje ne dokazuje pretpostavke modela.
+**Smjernica postupka.** Model: bilanca količine gibanja s impulsnom funkcijom iz jednadžbe [(15.18)](u15_otvoreni_tokovi.qmd#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01) u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti prema vodiču (engl. *Guide to the Expression of Uncertainty in Measurement*, GUM) i sukladnost ako je $|\Delta_I|\le2s_{\Delta}$; slaganje ne dokazuje pretpostavke modela.
 
 **Kontrolni rezultat ili kriterij.** $q=1{,}5000\ \mathrm{m^2/s}$, $s_q\approx0{,}01546\ \mathrm{m^2/s}$, $\Delta_I\approx-0{,}01648\ \mathrm{m^2}$ i $s_{\Delta}\approx0{,}02010\ \mathrm{m^2}$. Omjer je $|\Delta_I|/s_{\Delta}\approx0{,}820<2$, pa su mjerenja prema zadanom kriteriju sukladna bilanci. Teorijska spregnuta dubina iznosi $1{,}2353\ \mathrm{m}$. Slaganje samo po sebi ne dokazuje sve pretpostavke modela. Najveći doprinos nesigurnosti $s_{\Delta}$ daje zajednički $q$, pa bi za strožu provjeru trebalo točnije izmjeriti protok.
 

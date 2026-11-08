@@ -47,7 +47,7 @@ Sažetak je podsjetnik: uz svaku relaciju navedeni su uvjet primjene i poglavlje
 
 : {.mf1-reference-table tbl-colwidths="[24,56,20]"}
 
-## pog. 1–2: Osnovne veličine, tlak, viskoznost i kapilarnost
+## Pog. 1–2: Osnovne veličine, tlak, viskoznost i kapilarnost
 
 | Formula | Uvjet primjene i napomena |
 | --- | --- |
@@ -60,7 +60,7 @@ Sažetak je podsjetnik: uz svaku relaciju navedeni su uvjet primjene i poglavlje
 | $h=2\sigma\cos\theta/(\rho gb)$ | procjep širine $b$ između paralelnih ploha; jedna zakrivljenost, faktor 2 |
 | $p_u-p_{atm}=\sigma(1/R_1+1/R_2)$; kapljica $4\sigma/d$, sapunasti mjehur $8\sigma/d$ | Young–Laplace, mirno sučelje; pazi na broj međupovršina |
 
-## pog. 3–6: Hidrostatika, relativno mirovanje, plohe, uzgon i stabilitet
+## Pog. 3–6: Hidrostatika, relativno mirovanje, plohe, uzgon i stabilitet
 
 | Formula | Uvjet primjene i napomena |
 | --- | --- |
@@ -83,7 +83,7 @@ Sažetak je podsjetnik: uz svaku relaciju navedeni su uvjet primjene i poglavlje
 | $\tan\varphi_{lim}=2f/b$ | kut uronjenja ruba palube; okomiti bokovi, okretanje oko sredine vodne linije (tangens, ne sinus) |
 | $\delta GM=-\rho_ti_t/(\rho V_{ist})$ | učinak slobodne površine djelomično punog tanka |
 
-## pog. 7–8: Kontinuitet, Reynoldsov transportni teorem i energijska jednadžba
+## Pog. 7–8: Kontinuitet, Reynoldsov transportni teorem i energijska jednadžba
 
 | Formula | Uvjet primjene i napomena |
 | --- | --- |
@@ -98,7 +98,7 @@ Sažetak je podsjetnik: uz svaku relaciju navedeni su uvjet primjene i poglavlje
 | $x=2\sqrt{h(H-h)}$ | vodoravni domet mlaza iz otvora na visini $h$ |
 | $p_0-p=\tfrac12\rho v^2$, $v=\sqrt{2(p_0-p)/\rho}$ | Pitotova cijev, nestlačivo; očitanje senzora prenesi na visinu otvora |
 
-## pog. 9: Kompresibilni idealni tok
+## Pog. 9: Kompresibilni idealni tok
 
 Kalorički savršen plin; apsolutni tlakovi i temperature; $\kappa$ je izentropski eksponent.
 
@@ -116,7 +116,7 @@ Kalorički savršen plin; apsolutni tlakovi i temperature; $\kappa$ je izentrops
 | $\dfrac{p_2}{p_1}=1+\dfrac{2\kappa}{\kappa+1}(Ma_1^2-1)$, $Ma_2^2=\dfrac{1+\tfrac{\kappa-1}{2}Ma_1^2}{\kappa Ma_1^2-\tfrac{\kappa-1}{2}}$, $\dfrac{T_2}{T_1}=\dfrac{p_2}{p_1}\dfrac{2+(\kappa-1)Ma_1^2}{(\kappa+1)Ma_1^2}$ | normalni udarni val: očuvane su masa, količina gibanja i zaustavna entalpija; $T_0$ ostaje, $p_0$ pada; izentropske relacije ne vrijede kroz val (@eq-normalni-skok) |
 | $\Delta s=c_p\ln(T_2/T_1)-R\ln(p_2/p_1)$ | mora biti $\ge0$; isključuje ekspanzijski skok (@eq-entropija-udar) |
 
-## pog. 10: Količina i moment količine gibanja
+## Pog. 10: Količina i moment količine gibanja
 
 | Formula | Uvjet primjene i napomena |
 | --- | --- |
@@ -128,7 +128,7 @@ Kalorički savršen plin; apsolutni tlakovi i temperature; $\kappa$ je izentrops
 | $\sum\vec M_O=\sum_{iz}\dot m(\vec r\times\vec v)-\sum_{ul}\dot m(\vec r\times\vec v)$ | stacionarno, nepomičan KV; krak je okomita udaljenost (@eq-moment-kolicine-gibanja) |
 | $I=pA+\dot mv$ | impulsna funkcija; razlika dvaju presjeka jednaka je sili stijenke na fluid |
 
-## pog. 11: Bezdimenzijski brojevi i sličnost
+## Pog. 11: Bezdimenzijski brojevi i sličnost
 
 | Formula | Uvjet primjene i napomena |
 | --- | --- |
@@ -144,7 +144,7 @@ Kalorički savršen plin; apsolutni tlakovi i temperature; $\kappa$ je izentrops
 
 Pri različitim mjerilima i istom $g$ Froudeova i Reynoldsova sličnost ne mogu se istodobno zadovoljiti s istim fluidom; bira se dominantni broj, a drugi se korigira.
 
-## pog. 12: Diferencijalni opis realnog toka
+## Pog. 12: Diferencijalni opis realnog toka
 
 | Formula | Uvjet primjene i napomena |
 | --- | --- |
@@ -160,7 +160,7 @@ Pri različitim mjerilima i istom $g$ Froudeova i Reynoldsova sličnost ne mogu 
 | $dp_e/dx=-\rho U_e\,dU_e/dx$ | usporavanje vanjskog toka daje nepovoljan gradijent i moguće odvajanje |
 | $I_t=v'_{rms}/\bar v$; $k=\tfrac32(I_t\bar v)^2$, $\omega=\sqrt k/(C_\mu^{1/4}\ell)$, $\varepsilon=C_\mu k\omega$ | ulazni uvjeti za RANS (@eq-anemometar-ulazni-uvjet-rans); $\ell$ je pretpostavka, $\omega$ se ne mjeri |
 
-## pog. 13: Gubitci, cjevovodi, crpke i mreže
+## Pog. 13: Gubitci, cjevovodi, crpke i mreže
 
 | Formula | Uvjet primjene i napomena |
 | --- | --- |
@@ -178,7 +178,7 @@ Pri različitim mjerilima i istom $g$ Froudeova i Reynoldsova sličnost ne mogu 
 | $P_h=\rho gQH_p$, $P_{vr}=P_h/\eta_p$, $P_{el}=P_{vr}/\eta_m$ | razine snage se ne miješaju; godišnja energija iz $P_{el}$ |
 | $NPSH_a=p_{aps,s}/(\rho g)+v_s^2/(2g)-p_v/(\rho g)$; iz spremnika $p_{atm}/(\rho g)-z_s-h_{g,s}-p_v/(\rho g)$ | apsolutni tlak; $z_s$ visina usisnog presjeka iznad slobodne površine ($z_s<0$ kod napunjenog usisa); $NPSH_a\ge NPSH_r$ + margina pri istom protoku i brzini |
 
-## pog. 14: Turbostrojevi i propulzija
+## Pog. 14: Turbostrojevi i propulzija
 
 | Formula | Uvjet primjene i napomena |
 | --- | --- |
@@ -189,7 +189,7 @@ Pri različitim mjerilima i istom $g$ Froudeova i Reynoldsova sličnost ne mogu 
 | $C_{Th}=F_T/(\tfrac12\rho v_A^2A_d)$, $v_d=\tfrac{v_A}{2}(1+\sqrt{1+C_{Th}})$, $\eta_i=v_A/v_d=2/(1+\sqrt{1+C_{Th}})$ | aktuatorski disk; gornja granica učinkovitosti; vodomlazni pogon $\eta_i=2v_s/(v_s+v_j)$ |
 | $v_A=(1-\chi)v_s$ | sustrujanje; uz odbitak potiska traži pokus s trupom |
 
-## pog. 15: Otvoreni tokovi
+## Pog. 15: Otvoreni tokovi
 
 | Formula | Uvjet primjene i napomena |
 | --- | --- |

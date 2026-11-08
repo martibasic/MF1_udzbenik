@@ -20,7 +20,7 @@ $$
 \tau = \mu \frac{dv}{dy}
 $$ {#eq-reologija-fizikalni-uvod-i-matematicki-izvod-01}
 
-U izrazu je $\tau$ smično naprezanje, $\mu$ dinamička viskoznost, a $dv/dy$ gradijent brzine fluida $v$ po okomici $y$ na smjer gibanja. Smično je naprezanje tangencijalna sila po jedinici površine između susjednih slojeva fluida. To nije univerzalni zakon za sve fluide, nego model za fluide u kojima je taj odnos linearan. U ovom poglavlju brzinu pomične krute granice (ploče, vratila) označujemo s $u$, a brzinu fluida s $v$. Dinamička viskoznost vode pri sobnoj je temperaturi reda veličine $10^{-3}\ \text{Pa s}$, dok ulja mogu imati znatno veće vrijednosti. Viskoznost ovisi o temperaturi i vrsti fluida [@white2011].
+U izrazu je $\tau$ smično naprezanje, $\mu$ dinamička viskoznost, a $dv/dy$ gradijent brzine fluida $v$ po okomici $y$ na smjer gibanja. Smično je naprezanje tangencijalna sila po jedinici površine između susjednih slojeva fluida. U ovom poglavlju brzinu pomične krute granice (ploče, vratila) označujemo s $u$, a brzinu fluida s $v$. Dinamička viskoznost vode pri sobnoj je temperaturi reda veličine $10^{-3}\ \text{Pa s}$, dok ulja mogu imati znatno veće vrijednosti. Viskoznost ovisi o temperaturi i vrsti fluida [@white2011].
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Newtonov zakon viskoznosti u Couetteovu sloju</p>
@@ -65,7 +65,7 @@ $$
 F = \tau A = \mu A\frac{u}{\delta}.
 $$ {#eq-reologija-konstitutivna-motivacija-newtonov-zakon-viskozno-02}
 
-**Rezultat i provjera.** Dobiveni izraz ima upravo pokusom utvrđen oblik, što određuje $\mu$ kao konstantu razmjernosti s jedinicom $\mathrm{Pa\,s}$. Za $u\to0$ sila nestaje, a tanji procjep uz istu brzinu daje veću silu. Linearan profil nije ulazna pretpostavka, nego posljedica bilance i newtonskog modela; za nenewtonski fluid u istom sloju $\tau$ je i dalje stalan po visini, ali gradijent brzine ne mora biti. U zapisu $\tau$ označuje komponentu smičnoga naprezanja s unaprijed odabranim pozitivnim smjerovima: promijene li se orijentacija normale ili smjer brzine, mijenja se i predznak te komponente, a $|\tau|$ je njezin iznos.
+**Rezultat i provjera.** Dobiveni izraz ima upravo pokusom utvrđen oblik, što određuje $\mu$ kao konstantu razmjernosti s jedinicom $\mathrm{Pa\,s}$. Za $u\to0$ sila nestaje, a tanji procjep uz istu brzinu daje veću silu. Linearan profil nije ulazna pretpostavka, nego posljedica bilance i newtonskog modela; za nenewtonski fluid u istom sloju $\tau$ je i dalje stalan po visini, pa je stalan i gradijent brzine ako naprezanje ovisi samo o lokalnom gradijentu. Newtonski je model tvrdnja da je njihov omjer isti pri svim brzinama. U zapisu $\tau$ označuje komponentu smičnoga naprezanja s unaprijed odabranim pozitivnim smjerovima: promijene li se orijentacija normale ili smjer brzine, mijenja se i predznak te komponente, a $|\tau|$ je njezin iznos.
 :::
 
 ### Dinamička i kinematička viskoznost
@@ -173,7 +173,7 @@ Skalarni jednodimenzijski oblik $\tau = \mu\,dv/dy$ služi kao radni oblik u svi
 
 **Uski kanal hladne ploče.** Smanjenjem razmaka među stijenkama tekućinu dovodimo bliže površini koju želimo hladiti, ali povećavamo gradijente brzine i potrebnu pogonsku snagu. CFD iz profila brzine i viskoznosti računa smično naprezanje; Newtonov zakon daje vezu između gibanja i trenja. Prianjanje određuje brzinu na stijenci, a dovoljan broj ćelija po širini razmaka omogućuje razlučivanje profila.
 
-Ručni račun u primjeru [-@ex-u02-smicno-naprezanje-u-tankom-uljnom-sloju-t2] daje takav test: linearni profil proizlazi iz gibanja ploče bez gradijenta tlaka. U kanalu s nepomičnim stijenkama, u kojem strujanje pokreće razlika tlakova, profil je drukčiji. Usporedba geometrija zatim povezuje otpor s raspodjelom toka, dok ocjena hlađenja zahtijeva i toplinski račun.
+Ručni račun u primjeru [-@ex-u02-smicno-naprezanje-u-tankom-uljnom-sloju-t2] daje referentni test za takav CFD model: linearni profil proizlazi iz gibanja ploče bez gradijenta tlaka. U kanalu s nepomičnim stijenkama, u kojem strujanje pokreće razlika tlakova, profil je drukčiji. Usporedba geometrija zatim povezuje otpor s raspodjelom toka, dok ocjena hlađenja zahtijeva i toplinski račun.
 :::
 
 ## Površinska napetost i kontaktni kut
@@ -330,20 +330,25 @@ pri čemu je $\Delta p=p_u-p_{ok}$, a zakrivljenosti su pozitivne kada je sredi�
 
 ::: {.mf1-fizikalno-znacenje}
 <p class="mf1-box-label">Fizikalno značenje — Tlačni skok na zakrivljenoj površini</p>
-Zakrivljena površina zahtijeva tlačni skok koji uravnotežuje površinsku napetost. Što je promjer manji, to su zakrivljenost i potreban skok tlaka veći. Faktor 4 za kapljicu nastaje jer sfera ima jednu granicu faza i polumjer $r=d/2$, a faktor 8 za sapunasti mjehur potječe od dviju površina opne. Isti nadtlak $2\sigma/r$ otežava rast vrlo malih mjehurića pare pri kavitaciji ([]{.mf1-chapter-ref target="u13"}).
+Zakrivljena površina zahtijeva tlačni skok koji uravnotežuje površinsku napetost. Što je promjer manji, to su zakrivljenost i potreban skok tlaka veći. Faktor 4 za kapljicu nastaje jer sfera ima jednu granicu faza i polumjer $r=d/2$, a faktor 8 za sapunasti mjehur potječe od dviju površina opne. Isti pretlak $2\sigma/r$ otežava rast vrlo malih mjehurića pare pri kavitaciji ([]{.mf1-chapter-ref target="u13"}).
 :::
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
 **Od mirne kapljice do raspršivanja.** Kod mlaznice za raspršivanje tekućine zanima nas ostaje li mlaz povezan ili se raspada na kapljice. Prije takva nestacionarnog računa isti model međupovršine provjeravamo na mirnoj sfernoj kapljici: model mora sačuvati njezin volumen i dati skok tlaka $4\sigma/d$ bez znatnog neželjenog strujanja.
 
-U mlaznici zatim uspoređujemo brzinu dotoka, svojstva tekućine i okolnog plina te oblik otvora. Pratimo oblik mlaza i veličine kapljica koje mreža može razlučiti. Mreža koja dobro opisuje veliki mlaz ne mora opisati najsitnije kapljice; za njih može trebati zaseban model. Time se površinska napetost povezuje s inercijom, a njihov omjer kasnije opisuje Weberov broj.
+U mlaznici zatim uspoređujemo brzinu dotoka, svojstva tekućine i okolnog plina te oblik otvora. Pratimo oblik mlaza i veličine kapljica koje mreža može razlučiti. Mreža koja dobro opisuje veliki mlaz ne mora opisati najsitnije kapljice; za njih može trebati zaseban model. Time se površinska napetost povezuje s inercijom, a njihov omjer opisuje Weberov broj u []{.mf1-chapter-ref target="u11"}.
 :::
 
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Granica modela — Newtonski sloj i statički meniskus</p>
 
-Svi računi u ovom poglavlju počivaju na četirima pretpostavkama koje treba provjeriti prije uvrštavanja. Newtonski model vrijedi samo ako je omjer $\tau$ i $dv/dy$ stalan u ispitanom rasponu i pri istoj temperaturi; suspenzije, polimerne otopine i krv pri malim gradijentima to ne zadovoljavaju (Z5). Linearni Couetteov profil zahtijeva stacionarno smicanje bez gradijenta tlaka i bez zagrijavanja smicanjem; u ležaju s ekscentricitetom ili u kanalu u kojem strujanje pokreće razlika tlakova profil je drukčiji, pa $\tau=\mu u/\delta$ daje samo procjenu. Kapilarni izrazi opisuju statički meniskus sa stalnim kontaktnim kutom; histereza kuta, hrapavost i onečišćenje stijenke mijenjaju $\theta$, a vrijeme punjenja uopće nije obuhvaćeno. U tlačnim bilancama kapljice zanemaren je hidrostatički član $\rho gD$ kroz visinu kapljice promjera $D$; kad je rezerva modela manja od te skale (Z6), ravnotežni račun nije dovoljan za odluku o stvarnom uređaju.
+Svi računi u ovom poglavlju počivaju na četirima pretpostavkama koje treba provjeriti prije uvrštavanja:
+
+- Newtonski model vrijedi samo ako je omjer $\tau$ i $dv/dy$ stalan u ispitanom rasponu i pri istoj temperaturi. Suspenzije, polimerne otopine i krv pri malim gradijentima to ne zadovoljavaju (Z5).
+- Linearni Couetteov profil zahtijeva stacionarno smicanje bez gradijenta tlaka i bez zagrijavanja smicanjem. U ležaju s ekscentricitetom ili u kanalu u kojem strujanje pokreće razlika tlakova profil je drukčiji, pa $\tau=\mu u/\delta$ daje samo procjenu.
+- Kapilarni izrazi opisuju statički meniskus sa stalnim kontaktnim kutom. Histereza kuta, hrapavost i onečišćenje stijenke mijenjaju $\theta$, a vrijeme punjenja uopće nije obuhvaćeno.
+- U tlačnim bilancama kapljice zanemaren je hidrostatički član $\rho gD$ kroz visinu kapljice promjera $D$. Kad je rezerva modela manja od te skale (Z6), ravnotežni račun nije dovoljan za odluku o stvarnom uređaju.
 :::
 
 ## Riješeni primjeri
@@ -574,7 +579,7 @@ $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-11}
 **Provjera i tumačenje**
 
 1. Dva neovisna puta računa daju istu snagu: $F_1u\approx92{,}1\cdot6{,}28\approx579\ \text{W}=M_1\omega$. U ovom modelu naprezanje, moment i snaga linearno ovise o $\mu$, pa faktor 10 u viskoznosti daje faktor 10 u snazi samo zato što su geometrija i brzina zadržane jednakima.
-2. Dobivenih $579\ \text{W}$ nije prognoza gubitka stvarnoga osovinskog voda; u službi ulje statvene cijevi obično radi hladnije od gornje nastavne granice, a prekomjerna temperatura ležaja znak je za uzbunu, a ne radno stanje.
+2. Dobivenih $579\ \text{W}$ nije prognoza gubitka stvarnoga osovinskog voda; prema nastavnoj procjeni, u službi ulje statvene cijevi obično radi hladnije od gornje nastavne granice, a prekomjerna temperatura ležaja znak je za uzbunu, a ne radno stanje.
 :::
 
 ::: {#ex-u02-mikrofluidicki-kanal-u-lab-on-chip-ure .mf1-we}
@@ -622,7 +627,7 @@ $$
 h_{hidrofobno} = \frac{4 \cdot 0{,}055 \cdot (-0{,}342)}{1010 \cdot 9{,}81 \cdot 6 \cdot 10^{-5}} \approx -0{,}127\ \text{m}.
 $$ {#eq-reologija-rijeseni-primjer-mikrofluidicki-kanal-u-lab-on-05}
 
-Negativna vrijednost znači kapilarnu depresiju u uspravnoj cijevi. Ako tekućina tek treba ući u suh hidrofobni kanal, isti predznak odgovara kapilarnoj ulaznoj barijeri koju vanjski nadtlak mora svladati; sam rezultat ne dokazuje da tekućina ni u kojim uvjetima neće ući.
+Negativna vrijednost znači kapilarnu depresiju u uspravnoj cijevi. Ako tekućina tek treba ući u suh hidrofobni kanal, isti predznak odgovara kapilarnoj ulaznoj barijeri koju vanjski pretlak mora svladati; sam rezultat ne dokazuje da tekućina ni u kojim uvjetima neće ući.
 
 **Provjera i tumačenje**
 
@@ -777,7 +782,7 @@ Promatraj dio procjepa duljine $L$: dvije kontaktne linije ukupne duljine $2L$ n
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$h=2\sigma\cos\theta/(\rho gb)$; $h_1\approx62{,}9\ \text{mm}$. Kružna formula s $d=b$ dala bi $125{,}7\ \text{mm}$, dvostruko više, jer kružni presjek ima dvostruko dulju kontaktnu liniju po jedinici površine presjeka. Za premaz $h_2\approx-18{,}8\ \text{mm}$: razina u procjepu spušta se ispod vanjske, a suh procjep voda ne puni bez nadtlaka od oko $189\ \text{Pa}$.
+$h=2\sigma\cos\theta/(\rho gb)$; $h_1\approx62{,}9\ \text{mm}$. Kružna formula s $d=b$ dala bi $125{,}7\ \text{mm}$, dvostruko više, jer kružni presjek ima dvostruko dulju kontaktnu liniju po jedinici površine presjeka. Za premaz $h_2\approx-18{,}8\ \text{mm}$: razina u procjepu spušta se ispod vanjske, a suh procjep voda ne puni bez pretlaka od oko $189\ \text{Pa}$.
 :::
 ::::
 

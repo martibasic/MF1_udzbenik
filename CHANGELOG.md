@@ -3,6 +3,16 @@
 Ovaj dokument prati sadržajne i tehničke promjene javnih izdanja. Potvrđene
 pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
+## Ispravci prema recenziji — 8. studenoga 2026.
+
+- **P1**: pog. 4 Z2 (kruto vođen spremnik), pog. 6 (pretpostavka uz slobodnu površinu),
+  pog. 10 P7 (snaga dovoda i mlazova) i Z5 (ustaljena brzina kočene ploče), pog. 12
+  (konstitutivna veza), pog. 14 Z1 (aktuatorski disk, dva promjera), pog. 15 Z2 i Z6.
+- **P2 (tekst)**: 133 potvrđene stavke u pog. 1–12, 14, 15, 0 i dodatcima: kratice i
+  oznake uz definiciju, upućivanja brojem, uklonjena doslovna ponavljanja (šest dvaput
+  numeriranih jednadžbi), dvoznačne rečenice, nazivlje, ograde uz tvrdnje o praksi,
+  cjeloviti ispis triju ključeva. Konačni i kontrolni rezultati nepromijenjeni.
+
 ## Recenzija cijele knjige i ispravci pog. 13 — 8. studenoga 2026.
 
 - **Recenzija**: 17 neovisnih čitanja (struka, primjena, urednik, simulirani

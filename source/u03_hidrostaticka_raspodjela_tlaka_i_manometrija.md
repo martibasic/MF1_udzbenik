@@ -62,10 +62,8 @@ $$
 p = p_{pov} + \rho g h.
 $$ {#eq-hidrostatika-razrada-koraka-01}
 
-Dubina $h$ mjeri se od slobodne površine prema dolje, a $p_{pov}$ je tlak na slobodnoj površini: atmosferski u otvorenom, tlak plina $p_{pl}$ u zatvorenom spremniku.
-
 ::: {.mf1-fizikalno-znacenje}
-<p class="mf1-box-label">Fizikalno značenje</p>
+<p class="mf1-box-label">Fizikalno značenje — Gradijent tlaka i težina fluida</p>
 Lokalni gradijent tlaka uravnotežuje težinu fluida; negativan predznak znači da tlak pada s porastom koordinate $z$. Poznatom tlaku na slobodnoj površini dodaje se hidrostatički porast $\rho g h$: za vodu ($\rho \approx 1000\ \text{kg/m}^3$) svaki metar dubine donosi oko $9{,}81\ \text{kPa}$, a za živu ($\rho \approx 13600\ \text{kg/m}^3$) oko $133\ \text{kPa}$. Ista jednadžba vrijedi i unazad: iz poznatog tlaka u jednoj točki računa se tlak na svakoj drugoj visini u istom spojenom fluidu. Relacija $dp/dz=-\rho(z)g$ vrijedi i pri promjenjivoj gustoći, ali se tada gustoća ne može izlučiti iz integrala; linearni porast $\rho gh$ poseban je slučaj kad su $\rho$ i $g$ približno konstantni.
 :::
 
@@ -146,24 +144,31 @@ U otvorenom spremniku tlak na slobodnoj površini jednak je atmosferskom tlaku. 
 
 U zatvorenom spremniku tlak na slobodnoj površini različit je od atmosferskog, pa raspodjela nije samo $\rho g h$: u jednadžbi [-@eq-hidrostatika-razrada-koraka-01] $p_{pov}$ je tlak plinskog prostora.
 
-Najčešća je pogreška uzeti atmosferu kao nulu i kad za to nema fizikalnog opravdanja. Iz manometarskog tlaka $p_M$ odmah se čita piezometarska visina
+Česta je pogreška uzeti atmosferu kao nulu i kad za to nema fizikalnog opravdanja. Primjerice, tlak plina u zatvorenom spremniku nije atmosferski, a s tlakom pare $p_v$ uspoređuje se apsolutni tlak.
+
+Iz manometarskog tlaka $p_M$ odmah se čita piezometarska visina
 
 $$
 h_p = \frac{p_M}{\rho g}.
 $$ {#eq-hidrostatika-otvoreni-i-zatvoreni-spremnici-02}
 
 ::: {.mf1-fizikalno-znacenje}
-<p class="mf1-box-label">Fizikalno značenje</p>
+<p class="mf1-box-label">Fizikalno značenje — Piezometarska visina</p>
 Piezometarska visina geometrijski je prikaz tlaka: pokazuje do koje bi se visine voda (ili drugi fluid) podignula u otvorenoj cjevčici priključenoj na to mjesto. Manometarski pretlak od $10\ \text{kPa}$ u vodi odgovara piezometarskoj visini oko $1{,}02\ \text{m}$. Piezometri zato daju izravno i pregledno mjerenje u spremnicima, geotehničkim istraživanjima i distribucijskim mrežama kad su ispunjeni njihovi mjerni uvjeti.
 :::
 
-Ni piezometar ni manometar ne uvode novi zakon, nego su instrumentacijski zapis iste hidrostatičke ravnoteže kroz jedan ili više spojenih stupaca fluida. U praksi je dovoljno držati se jednoga slijeda: odabrati jednu referentnu točku ili jednu poznatu vrijednost tlaka, kretati se kroz stupce fluida u jednom dosljednom smjeru, pri silasku dodavati $\rho g \Delta h$, pri usponu oduzimati isti član te na istoj vodoravnoj razini istog mirujućeg fluida izjednačiti tlakove.
+Ni piezometar ni manometar ne uvode novi zakon, nego su instrumentacijski zapis iste hidrostatičke ravnoteže kroz jedan ili više spojenih stupaca fluida. U praksi je dovoljno držati se jednoga slijeda:
+
+1. odabrati jednu referentnu točku ili jednu poznatu vrijednost tlaka;
+2. kretati se kroz stupce fluida u jednom dosljednom smjeru;
+3. pri silasku dodavati $\rho g \Delta h$, a pri usponu oduzimati isti član;
+4. na istoj vodoravnoj razini istog mirujućeg fluida izjednačiti tlakove.
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
 **Balastni tank prije početka balastiranja.** Inženjersko pitanje glasi: daje li CFD model bočnog balastnog tanka iz primjera [-@ex-u03-balastni-tank-broda-tlak-iznutra-i-izvana] ispravno neto opterećenje zajedničke oplate prije nego što uključimo punjenje? Fizikalni model jest mirujuća morska voda u tanku i uz oplatu, s gravitacijom te atmosferskim tlakom na vodnoj liniji i na odzračniku. Podatci su gustoća $1025\ \text{kg/m}^3$, gaz, visina tanka i početna razina; izlazi su tlak na dnu i na ploči $P$ s obiju strana oplate te brzina u svakoj ćeliji.
 
-Provjera ima tri koraka. Tlak mora rasti linearno s dubinom, brzina ostati blizu nule, a neto tlak na oplatu punog tanka biti jednak ručnom računu $\rho_{mv} g(T-H_{tk})$. Rješavači koji pohranjuju $p_{rgh}=p-\rho g h$, tlak bez hidrostatičkog doprinosa, moraju u mirnoj vodi dati konstantan $p_{rgh}$; s mjeračem se uspoređuje tek obnovljeni $p$. Odluka: punjenje tanka i gibanje broda simuliraju se tek kad ovaj statički test prođe, jer se pogrešna referenca tlaka ili neuravnotežen početni uvjet poslije više ne mogu razlučiti od stvarnog odziva.
+Provjera ima tri koraka. Tlak mora rasti linearno s dubinom, brzina ostati blizu nule, a neto tlak na oplatu punog tanka biti jednak ručnom računu $\rho_{mv} g(T-H_{tk})$ iz primjera [-@ex-u03-balastni-tank-broda-tlak-iznutra-i-izvana], s gazom $T$ i visinom tanka $H_{tk}$. Rješavači koji pohranjuju $p_{rgh}=p-\rho g h$, tlak bez hidrostatičkog doprinosa, moraju u mirnoj vodi dati konstantan $p_{rgh}$; s mjeračem se uspoređuje tek obnovljeni $p$. Odluka: punjenje tanka i gibanje broda simuliraju se tek kad ovaj statički test prođe, jer se pogrešna referenca tlaka ili neuravnotežen početni uvjet poslije više ne mogu razlučiti od stvarnog odziva.
 :::
 
 ::: {.mf1-interaktivno}
@@ -186,8 +191,8 @@ Nedosljedan smjer hoda ili zanemarena promjena fluida daju pogrešan predznak il
 $$p_{aps} = p_{atm} + p_M$$ {#eq-hidrostatika-interaktivni-prikaz-diferencijalni-manometar-01}
 
 ::: {.mf1-fizikalno-znacenje}
-<p class="mf1-box-label">Fizikalno značenje</p>
-Apsolutni tlak mjeri se u odnosu na idealni vakuum ($p=0$), dok je manometarski tlak razlika prema lokalnom atmosferskom tlaku. Vakuumski tlak opisuje koliko je apsolutni tlak ispod atmosferskoga ($p_{vak}=p_{atm}-p_{aps}$). Negativan rezultat za apsolutni tlak u uobičajenom modelu kapljevine ili plina nije „veći podtlak”, nego znak da su pretpostavke računa napuštene; kavitacijski se kriterij pritom uspoređuje s tlakom zasićene pare, a ne s nulom. Zamjena referenci jedna je od najtipičnijih pogrešaka u manometriji.
+<p class="mf1-box-label">Fizikalno značenje — Reference tlaka</p>
+Apsolutni tlak mjeri se u odnosu na idealni vakuum ($p=0$), dok je manometarski tlak razlika prema lokalnom atmosferskom tlaku. Vakuumski tlak opisuje koliko je apsolutni tlak ispod atmosferskoga. Negativan rezultat za apsolutni tlak u uobičajenom modelu kapljevine ili plina nije „veći podtlak”, nego znak da su pretpostavke računa napuštene; kavitacijski se kriterij pritom uspoređuje s tlakom zasićene pare, a ne s nulom.
 :::
 
 Za podtlak vrijedi i relacija
@@ -197,13 +202,19 @@ $$p_{vak} = p_{atm} - p_{aps} = -p_M \qquad (p_M<0)$$ {#eq-hidrostatika-fizikaln
 ::: {.mf1-granica-modela}
 <p class="mf1-box-label">Granica modela — Kada hidrostatički lanac prestaje vrijediti</p>
 
-Sve relacije ovog poglavlja pretpostavljaju fluid koji miruje u odnosu na stijenke, stalnu gustoću u svakom segmentu i poznat tlak u jednoj referentnoj točki. Model prestaje vrijediti čim fluid struji: tada se javljaju doprinosi brzine i gubitaka, obrađeni u []{.mf1-chapter-ref target="u08"} i []{.mf1-chapter-ref target="u13"}. Pri promjenjivoj gustoći, kao u atmosferi, gustoća ostaje pod integralom; stupac plina zanemaruje se samo kad je $\rho_{pl} g \Delta h$ zanemariv prema traženoj točnosti. Ubrzani ili rotirajući spremnik zahtijeva efektivno polje sila iz []{.mf1-chapter-ref target="u04"}, a kapilarni učinci u uskim cjevčicama korekciju iz []{.mf1-chapter-ref target="u02"}. Manometarski i apsolutni tlak moraju se voditi s istom referencom do kraja računa.
+Sve relacije ovog poglavlja pretpostavljaju fluid koji miruje u odnosu na stijenke, stalnu gustoću u svakom segmentu i poznat tlak u jednoj referentnoj točki. Model prestaje vrijediti ili traži dopunu:
+
+- čim fluid struji, jer se tada javljaju doprinosi brzine i gubitaka, obrađeni u []{.mf1-chapter-ref target="u08"} i []{.mf1-chapter-ref target="u13"};
+- pri promjenjivoj gustoći, kao u atmosferi, kad gustoća ostaje pod integralom; stupac plina zanemaruje se samo kad je $\rho_{pl} g \Delta h$ zanemariv prema traženoj točnosti;
+- u ubrzanom ili rotirajućem spremniku, koji zahtijeva efektivno polje sila iz []{.mf1-chapter-ref target="u04"}, i u uskim cjevčicama, u kojima kapilarni učinci traže korekciju iz []{.mf1-chapter-ref target="u02"}.
+
+Manometarski i apsolutni tlak moraju se voditi s istom referencom do kraja računa.
 :::
 
 
 ::: {.mf1-cfd title="Računalna dinamika fluida"}
 
-**Što znači nizak tlak na usisu?** Neki rješavači pohranjuju tlak podijeljen gustoćom, a neki izdvajaju hidrostatički doprinos, kao OpenFOAMov $p_{rgh}$ [@openfoam-hydrostatic]. Prije usporedbe s mjeračem treba obnoviti tlak u paskalima i njegovu referencu. Za opterećenje stijenke važna je razlika tlakova s njezinih strana, a za mogućnost nastanka pare apsolutni tlak pri radnoj temperaturi.
+**Nizak tlak na usisu i referenca tlaka.** Neki rješavači pohranjuju tlak podijeljen gustoćom, a neki izdvajaju hidrostatički doprinos, kao OpenFOAMov $p_{rgh}$ [@openfoam-hydrostatic]. Prije usporedbe s mjeračem treba obnoviti tlak u paskalima i njegovu referencu. Za opterećenje stijenke važna je razlika tlakova s njezinih strana, a za mogućnost nastanka pare apsolutni tlak pri radnoj temperaturi.
 
 **Zastani i promisli.** CFD na usisu pokazuje negativan manometarski tlak, a senzor pozitivan apsolutni tlak. Moraju li se rezultati razlikovati?
 
@@ -240,13 +251,13 @@ $$ {#eq-hidrostatika-rijeseni-primjer-tlak-u-prikljucku-zatvorenog-vo-01}
 Tlak u točki $A$ dobiva se silaskom kroz vodu za dubinu $h$:
 
 $$
-p_A = p_{pl} + \rho_v g h = 118800 + 998 \cdot 9{,}81 \cdot 1{,}40 = 132506{,}532\ \text{Pa} \approx 132{,}5\ \text{kPa}.
+p_A = p_{pl} + \rho_v g h = 118800 + 998 \cdot 9{,}81 \cdot 1{,}40 \approx 132500\ \text{Pa} = 132{,}5\ \text{kPa}.
 $$ {#eq-hidrostatika-rijeseni-primjer-tlak-u-prikljucku-zatvorenog-vo-02}
 
 Manometarski tlak u točki $A$ zato iznosi
 
 $$
-p_{M,A} = p_A - p_{atm} = 132506{,}532 - 100800 = 31706{,}532\ \text{Pa} \approx 31{,}7\ \text{kPa}.
+p_{M,A} = p_A - p_{atm} = 132500 - 100800 = 31700\ \text{Pa} = 31{,}7\ \text{kPa}.
 $$ {#eq-hidrostatika-rijeseni-primjer-tlak-u-prikljucku-zatvorenog-vo-03}
 
 **Provjera i tumačenje**
@@ -326,7 +337,7 @@ $$ {#eq-hidrostatika-rijeseni-primjer-diferencijalni-manometar-izme-u-05}
 
 **Provjera i tumačenje**
 
-Član žive ($13{,}3\ \text{kPa}$) dominira, a zrak mijenja rezultat za $0{,}24\ \%$, pa je njegovo zanemarivanje opravdano. Pozitivan $p_1-p_2$ znači da je tlak veći u vodu slatke vode.
+Član žive ($13{,}3\ \text{kPa}$) dominira, a zrak mijenja rezultat za $0{,}24\ \%$, pa je njegovo zanemarivanje opravdano. Pozitivan $p_1-p_2$ znači da je tlak veći u vodu kojim teče slatka voda.
 :::
 
 U brodskoj se praksi istim hodom kroz slojeve određuje razina tereta iz tlaka na dnu tanka, pretlaka plina i sondiranja vodenog taloga.<span id="ex-u03-zatvoreni-vodeni-spremnik-s-uljnim-referentnim-spremnikom"></span>
@@ -374,7 +385,7 @@ $$
 U = H_{ref} - h_v - h_u = 18{,}60 - 0{,}35 - 15{,}940 = 2{,}310\ \text{m}.
 $$ {#eq-sondiranje-ullage-iz-geometrije}
 
-Vrpca pokazuje $U_m = 2{,}31\ \text{m}$; dva neovisna mjerenja razine slažu se unutar $1\ \text{mm}$, što je bolje od razlučivosti vrpce.
+Vrpca pokazuje $U_m = 2{,}31\ \text{m}$; dva neovisna mjerenja razine slažu se unutar mjerne nesigurnosti tlačnog pretvornika, reda nekoliko centimetara stupca ulja. Podudaranje na milimetar posljedica je nastavno složenih podataka.
 
 ### 2. Apsolutni tlak na dnu {.unnumbered .unlisted .mf1-step}
 
@@ -413,7 +424,7 @@ $$ {#eq-sondiranje-stupac-inertnog-plina}
 **Provjera i tumačenje**
 
 1. Tlak na dnu i vrpca daju isti ulaž, pa se dva neovisna mjerenja međusobno potvrđuju. Oba pojednostavljenja precjenjuju količinu ulja jer se pretlak plina i gušća voda pripisuju stupcu ulja.
-2. Stupac plina od nekoliko desetaka paskala zanemariv je, ali pretlak plina od $3\ \text{kPa}$ nije: o zanemarivanju odlučuje red veličine člana, ne vrsta fluida. Pri ljuljanju, trimu ili emulgiranoj vodi mjerenje treba ponoviti u mirnim uvjetima ili korigirati.
+2. Stupac plina od nekoliko desetaka paskala zanemariv je, ali pretlak plina od $3\ \text{kPa}$ nije: o zanemarivanju odlučuje red veličine člana, ne vrsta fluida. Gustoću $\rho_u$ treba uzeti pri temperaturi tereta: uz koeficijent toplinskog širenja plinskog ulja reda $8\cdot10^{-4}\ \mathrm{K^{-1}}$ pogreška temperature od $10\ \text{K}$ mijenja izračunani stupac ulja za oko $0{,}1\ \text{m}$. Pri ljuljanju, trimu ili emulgiranoj vodi mjerenje treba ponoviti u mirnim uvjetima ili korigirati. Koeficijent i postupak u ovoj točki nastavna su procjena, a ne propis mjerenja tereta.
 :::
 
 ::: {#ex-u03-tlak-na-usisu-pumpe-za-cirkulaciju-ulja .mf1-we}
@@ -439,13 +450,13 @@ Usis crpke nalazi se $H = 2{,}40\ \text{m}$ iznad površine otvorenog spremnika 
 Manometarski tlak na usisu crpke (uspon od slobodne površine za $H$):
 
 $$
-p_M = -\rho_u g H = -870 \cdot 9{,}81 \cdot 2{,}40 = -20483{,}28\ \text{Pa} \approx -20{,}5\ \text{kPa}
+p_M = -\rho_u g H = -870 \cdot 9{,}81 \cdot 2{,}40 \approx -20480\ \text{Pa} \approx -20{,}5\ \text{kPa}
 $$ {#eq-hidrostatika-rijeseni-primjer-tlak-na-usisu-pumpe-za-01}
 
 Apsolutni tlak na usisu:
 
 $$
-p_{aps} = p_{atm} + p_M = 101300 - 20483{,}28 = 80816{,}72\ \text{Pa} \approx 80{,}8\ \text{kPa}
+p_{aps} = p_{atm} + p_M = 101300 - 20480 = 80820\ \text{Pa} \approx 80{,}8\ \text{kPa}
 $$ {#eq-hidrostatika-rijeseni-primjer-tlak-na-usisu-pumpe-za-03}
 
 Statička granična visina stupca pri $p_{aps}=p_v$:
@@ -456,7 +467,7 @@ $$ {#eq-hidrostatika-rijeseni-primjer-tlak-na-usisu-pumpe-za-04}
 
 **Provjera i tumačenje**
 
-$11{,}8\ \text{m}$ samo je gornja granica stupca pri nultom protoku. Za crpku u radu potrebni su bilanca energije s brzinom i gubitcima te usporedba $NPSH_a$ s proizvođačevim $NPSH_r$, pa se iz ovoga računa ne može propisati opća „sigurna usisna visina”.
+$11{,}8\ \text{m}$ samo je gornja granica stupca pri nultom protoku. Za crpku u radu potrebni su bilanca energije s brzinom i gubitcima te usporedba raspoložive kavitacijske rezerve $NPSH_a$ s potrebnom $NPSH_r$ koju daje proizvođač ([]{.mf1-chapter-ref target="u13"}), pa se iz ovoga računa ne može propisati opća „sigurna usisna visina”. Za ulje je, prema nastavnoj procjeni, praktična granica usisa niža od ove statičke granice jer se pri sniženom tlaku iz ulja izdvaja otopljeni zrak, pa se prednost daje potopljenom usisu.
 
 :::
 
@@ -465,14 +476,14 @@ $11{,}8\ \text{m}$ samo je gornja granica stupca pri nultom protoku. Za crpku u 
 
 **Tekst zadatka**
 
-Bočni balastni tank tankera s dvostrukim trupom visok je $H_{tk} = 5{,}0\ \text{m}$; njegova je vanjska stijenka oplata boka, a dno oplata dna na razini kobilice. Gaz broda iznosi $T = 8{,}5\ \text{m}$. Promatra se ploča oplate boka $P$ na visini $z_P = 2{,}0\ \text{m}$ iznad dna tanka. Izvana je more gustoće $\rho_{mv} = 1025\ \text{kg/m}^3$, a tank se balastira istom morskom vodom. Tank je odzračnom cijevi otvoren prema atmosferi; razina balasta provjerava se sondiranjem kroz sondnu cijev. Razmotri stanje A, tank pun do vrha, i stanje B, tank prazan; za usporedbu uzmi i stanje C, u kojem sonda pokazuje razinu balasta $h_s = 3{,}0\ \text{m}$ iznad dna. Brod i fluidi miruju, stijenke su krute i nepropusne, gustoće stalne, a $g = 9{,}81\ \text{m/s}^2$.
+Donji bočni balastni tank tankera s dvostrukim trupom (nastavno pojednostavnjenje) visok je $H_{tk} = 5{,}0\ \text{m}$; njegova je vanjska stijenka oplata boka, a dno oplata dna na razini kobilice. Gaz broda iznosi $T = 8{,}5\ \text{m}$. Promatra se ploča oplate boka $P$ na visini $z_P = 2{,}0\ \text{m}$ iznad dna tanka. Izvana je more gustoće $\rho_{mv} = 1025\ \text{kg/m}^3$, a tank se balastira istom morskom vodom. Tank je odzračnom cijevi otvoren prema atmosferi; razina balasta provjerava se sondiranjem kroz sondnu cijev. Razmotri stanje A, tank pun do vrha, i stanje B, tank prazan; za usporedbu uzmi i stanje C, u kojem sonda pokazuje razinu balasta $h_s = 3{,}0\ \text{m}$ iznad dna. Brod i fluidi miruju, stijenke su krute i nepropusne, gustoće stalne, a $g = 9{,}81\ \text{m/s}^2$.
 
 **Traži se**
 
 1. Odredi manometarski tlak mora na razini dna tanka i na razini ploče $P$.
 2. Odredi manometarski tlak balasta na dnu tanka i na ploči $P$ u stanju A.
 3. Odredi neto manometarski tlak na dno u stanjima A i B te na ploču $P$ u stanju A; navedi smjer u kojem je oplata tlačena.
-4. Odredi ulaž i neto tlak na dno u stanju C.
+4. Odredi visinu praznog prostora iznad balasta i neto tlak na dno u stanju C.
 
 ![Bočni balastni tank: more izvana i balast iznutra opterećuju oplatu dna i ploču P; sondna cijev i odzračnik otvoreni su prema palubi.](../assets/print/u03_fig_balastni_tank.svg){#fig-u03-balastni-tank fig-align="center" fig-alt="Bočni balastni tank uz oplatu broda: more izvana, balastna voda iznutra, ploča oplate P, sondna cijev i otvoreni odzračnik; kote gaza, visine tanka i položaja ploče."}
 
@@ -518,7 +529,7 @@ $$ {#eq-hidrostatika-rijeseni-primjer-balastni-tank-broda-tlak-iznutr-04}
 
 ### 4. Stanje C – razina iz sondiranja {.mf1-step .unnumbered .unlisted}
 
-Sonda pokazuje $h_s = 3{,}0\ \text{m}$, pa je ulaž, udaljenost od vrha tanka do površine, $H_{tk} - h_s = 2{,}0\ \text{m}$. Neto tlak na dno iznosi
+Sonda pokazuje $h_s = 3{,}0\ \text{m}$, pa je visina praznog prostora iznad balasta, mjerena od vrha tanka, $H_{tk} - h_s = 2{,}0\ \text{m}$. Neto tlak na dno iznosi
 
 $$
 \Delta p_{dno}^{C} = p_{M,van,dno} - \rho_{mv} g h_s = 85{,}47 - 30{,}17 = 55{,}30\ \text{kPa}.
@@ -526,16 +537,16 @@ $$ {#eq-hidrostatika-rijeseni-primjer-balastni-tank-broda-tlak-iznutr-05}
 
 **Provjera i tumačenje**
 
-1. Uz jednake gustoće neto tlak na cijeloj oplakanoj oplati punog tanka iznosi $\rho_{mv} g (T - H_{tk}) = 1025 \cdot 9{,}81 \cdot 3{,}5 = 35{,}19\ \text{kPa}$, pa dno i ploča $P$ nose isti neto tlak. Razlika stanja B i A, $50{,}28\ \text{kPa}$, jednaka je $\rho_{mv} g H_{tk}$, a stanje C leži između njih.
+1. Uz jednake gustoće neto tlak na cijeloj oplakanoj oplati punog tanka iznosi $\rho_{mv} g (T - H_{tk}) = 1025 \cdot 9{,}81 \cdot 3{,}5 = 35{,}19\ \text{kPa}$, pa dno i ploča $P$ nose isti neto tlak. Razlika stanja B i A, $50{,}28\ \text{kPa}$, jednaka je $\rho_{mv} g H_{tk}$, a stanje C leži između njih. Kad bi tank bio viši od gaza, iznad vodne linije vanjski bi manometarski tlak bio nula, pa bi neto tlak $\rho_{mv}g(H_{tk}-z)$ punog tanka ondje tlačio oplatu prema van.
 2. Prazan tank ovdje najjače opterećuje oplatu, ali mjerodavno projektno stanje određuju propisane kombinacije opterećenja i konstrukcijski model. Tlak na dnu pretvara se u razinu samo uz poznatu gustoću, kao u primjeru [-@ex-sondiranje-teretnog-tanka-s-tlacnim-mjeracem-razine].
 :::
 
 ::: {#ex-u03-iot-tlacni-senzor-za-otkrivanje-propustanja-u .mf1-we}
-<p class="mf1-box-label">Tlak u mreži iz kote vodotornja i IoT senzor za otkrivanje propuštanja&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Tlak u mreži iz kote vodotornja i umreženi tlačni senzor za otkrivanje propuštanja&nbsp;<span class="mf1-level">T2</span></p>
 
 **Tekst zadatka**
 
-Distribucijska mreža vodoopskrbe napaja se iz vodotornja. U noćnom minimumu potrošnje voda u mreži praktički miruje. IoT tlačni senzor u nižem čvoru $A$ pokazuje manometarski tlak $p_{M,A} = 5{,}20\ \text{bar} = 520\ \text{kPa}$. Priključak $B$ u podnožju vodotornja viši je za $\Delta z = z_B - z_A = 38\ \text{m}$, a spremnik vodotornja otvoren je prema atmosferi. Čvorove povezuje ista vodena masa gustoće $\rho_v = 998\ \text{kg/m}^3$, bez otvaranja prema atmosferi između njih. Atmosferski tlak je $p_{atm} = 101{,}3\ \text{kPa}$. Zanemari gubitke i promjenu gustoće. Za usporedbu razmotri i očitanje $4{,}70\ \text{bar}$ u $A$.
+Distribucijska mreža vodoopskrbe napaja se iz vodotornja. U noćnom minimumu potrošnje voda u mreži praktički miruje. Umreženi tlačni senzor u nižem čvoru $A$ pokazuje manometarski tlak $p_{M,A} = 5{,}20\ \text{bar} = 520\ \text{kPa}$. Priključak $B$ u podnožju vodotornja viši je za $\Delta z = z_B - z_A = 38\ \text{m}$, a spremnik vodotornja otvoren je prema atmosferi. Čvorove povezuje ista vodena masa gustoće $\rho_v = 998\ \text{kg/m}^3$, bez otvaranja prema atmosferi između njih. Atmosferski tlak je $p_{atm} = 101{,}3\ \text{kPa}$. Zanemari gubitke i promjenu gustoće. Za usporedbu razmotri i očitanje $4{,}70\ \text{bar}$ u $A$.
 
 **Traži se**
 
@@ -697,7 +708,7 @@ Pretlak zraka u ventilacijskom kanalu mjeri se nagnutim manometrom. Posuda unuta
 
 1. Odredi pretlak u kanalu uz pretpostavku da se razina ulja u posudi ne mijenja.
 2. Uključi spuštanje razine u posudi, odredi točan pretlak i relativnu pogrešku pojednostavljenja.
-3. Odredi osjetljivost instrumenta, pomak očitanja po paskalu, i usporedi je s okomitim U-manometrom s istim uljem. Obrazloži zašto se kut ne smanjuje proizvoljno.
+3. Odredi osjetljivost instrumenta, pomak očitanja po paskalu, i usporedi je s okomitim U-manometrom s istim uljem (očitanje je razlika razina dvaju krakova). Obrazloži zašto se kut ne smanjuje proizvoljno.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
@@ -709,7 +720,7 @@ Pretlak nosi okomita razlika razina ulja: $L\sin\alpha$ u cjevčici i spuštanje
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-Bez spuštanja razine: $h=L\sin\alpha=47{,}9\ \text{mm}$, $p_M\approx385\ \text{Pa}$. S posudom: $\delta=L(d/D)^2=2{,}9\ \text{mm}$, $h=50{,}8\ \text{mm}$, $p_M\approx408\ \text{Pa}$; pojednostavljenje podcjenjuje tlak za $5{,}7\,\%$. Osjetljivost $1/[\rho_ug(\sin\alpha+a/A)]\approx0{,}45\ \text{mm/Pa}$, $3{,}6$ puta više od U-manometra ($0{,}124\ \text{mm/Pa}$). Pri vrlo malom kutu meniskus se razvlači i zaustavlja uz stijenku, a nagib postaje osjetljiv na horizontiranje, pa se u praksi ne ide ispod $5$–$10^\circ$.
+Bez spuštanja razine: $h=L\sin\alpha=47{,}9\ \text{mm}$, $p_M\approx385\ \text{Pa}$. S posudom: $\delta=L(d/D)^2=2{,}9\ \text{mm}$, $h=50{,}8\ \text{mm}$, $p_M\approx408\ \text{Pa}$; pojednostavljenje podcjenjuje tlak za $5{,}7\,\%$. Osjetljivost $1/[\rho_ug(\sin\alpha+a/A)]\approx0{,}45\ \text{mm/Pa}$, $3{,}6$ puta više od U-manometra ($0{,}124\ \text{mm/Pa}$). Pri vrlo malom kutu meniskus se razvlači i zaustavlja uz stijenku, a nagib postaje osjetljiv na vodoravno postavljanje instrumenta, pa se prema nastavnoj procjeni ne ide ispod $5$–$10^\circ$.
 :::
 ::::
 
@@ -818,7 +829,7 @@ Kao most prema []{.mf1-chapter-ref target="u04"} usporedimo ravnotežu tlaka u s
 
 ![Jednak tlak na istoj dubini u spojenim posudama i nagnuta slobodna površina okomita na efektivno polje u ubrzanom spremniku.](../assets/print/u03_balans_tlaka_i_geff.svg){#fig-u03-staticka-zamjena-za-ravnotezu-tlaka-i-efektivno fig-alt="Lijevo spojene posude s vodom i točkama A i B na istoj dubini h, desno ubrzani spremnik s nagnutom površinom i trokutom vektora g, minus a i g_eff s kutom theta."}
 
-**Tumačenje skice.** U spojenim posudama isti mirujući fluid na istoj dubini ima jednak tlak: $p_A=p_B=p_{pov}+\rho gh$. U ubrzanom spremniku slobodna površina okomita je na efektivno polje $\vec g_{eff}=\vec g-\vec a$. Za vodoravno ubrzanje vrijede $\tan\theta=a/g$ i $g_{eff}=\sqrt{g^2+a^2}$, što povezuje hidrostatiku s relativnim mirovanjem u sljedećem poglavlju.
+**Tumačenje skice.** U spojenim posudama isti mirujući fluid na istoj dubini ima jednak tlak: $p_A=p_B=p_{pov}+\rho gh$. U ubrzanom spremniku slobodna površina okomita je na efektivno polje $\vec g_{eff}=\vec g-\vec a$. Za vodoravno ubrzanje vrijede $\tan\theta=a/g$ i $g_{eff}=\sqrt{g^2+a^2}$, što povezuje hidrostatiku s relativnim mirovanjem u []{.mf1-chapter-ref target="u04"}.
 
 ## Sažetak
 

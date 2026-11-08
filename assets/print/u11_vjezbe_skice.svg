@@ -208,7 +208,7 @@
         <text x="280" y="278" font-size="14" fill="#263746" text-anchor="start"><tspan font-weight="700" font-style="italic">v<tspan baseline-shift="sub" font-size="0.75em" font-style="normal">2</tspan></tspan> = ?</text>
         <path id="u11vs_z5motion" d="M304 164 L334 164" fill="none" stroke="#356b83" stroke-width="1.6" marker-end="url(#u11vs_vopen)" data-mf1-vector="velocity" />
         <text x="319.0" y="155" font-size="12" fill="#263746" text-anchor="middle"><tspan font-weight="700" font-style="italic">u</tspan> = ?</text>
-        <text x="319.0" y="133" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.75em">o</tspan> = 120 N</text>
+        <text x="304.0" y="133" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.75em">o</tspan> = 120 N</text>
         <path id="u11vs_z5cv" d="M230 77 H275 V245 H230 Z" fill="none" stroke="#263746" stroke-width="1.8" stroke-dasharray="6 4" data-mf1-role="control-volume" />
         <text x="82" y="217" font-size="13" fill="#263746" text-anchor="start">KV prati ploču</text>
         <path d="M375 242 L406 242" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u11vs_axisMarker)" data-mf1-role="axis" />

@@ -2,9 +2,9 @@ Tekućine i plinovi zajedno se nazivaju fluidima. Od krutina se razlikuju po tom
 
 Iako je fluid građen od molekula, u tehničkim proračunima promatramo ga kao neprekidnu sredinu, kontinuum. U takvom modelu gustoća, tlak i brzina imaju određenu vrijednost u svakoj točki prostora. Gustoća $\rho=m/V$ kazuje koliko mase sadrži jedinica volumena, specifična težina $\gamma=\rho g$ koliko ta masa teži, a relativna gustoća $s_r=\rho/\rho_v$ uspoređuje fluid s vodom. Litra ulja gustoće $860\ \text{kg/m}^3$ tako je za približno $1{,}37\ \text{N}$ lakša od litre vode.
 
-Tlak je okomita sila po jedinici površine, $p=F_n/A$. U mirujućem fluidu tlak je u istoj točki jednak u svim smjerovima, pa je skalarna veličina, iako se od točke do točke može mijenjati. Porast tlaka s dubinom obrađuje se u []{.mf1-chapter-ref target="u03"}.
+Tlak je okomita sila po jedinici površine, $p=F_n/A$. Porast tlaka s dubinom obrađuje se u []{.mf1-chapter-ref target="u03"}.
 
-Pascalov zakon kaže da se promjena tlaka nametnuta na jednom mjestu zatvorenog mirujućeg fluida prenosi neumanjena u sve njegove točke. U hidrauličkim sustavima tlak koji stvaraju klipovi mnogo je veći od razlika tlaka zbog visine, pa je porast tlaka u cijelom sustavu praktički isti: $\Delta p=F_1/A_1=F_2/A_2$. Mala sila $F_1$ na malom klipu zato daje veliku silu $F_2=(A_2/A_1)F_1$ na velikom klipu. Energija se pritom ne stvara. Ulje je praktički nestlačivo, pa su istisnuti volumeni jednaki, $A_1s_1=A_2s_2$: veliki klip prijeđe proporcionalno kraći put, a u idealnom modelu bez gubitaka vrijedi $F_1s_1=F_2s_2$.
+Pascalov zakon kaže da se promjena tlaka nametnuta na jednom mjestu zatvorenog mirujućeg fluida prenosi neumanjena u sve njegove točke. Porast tlaka zbog opterećenja klipa zato je isti u cijelom sustavu. U hidrauličkim sustavima tlak koji stvaraju klipovi mnogo je veći od razlika tlaka zbog visine, pa ravnoteža sila na klipovima daje $\Delta p=F_1/A_1=F_2/A_2$. Mala sila $F_1$ na malom klipu zato daje veliku silu $F_2=(A_2/A_1)F_1$ na velikom klipu. Energija se pritom ne stvara. Ulje je praktički nestlačivo, pa su istisnuti volumeni jednaki, $A_1s_1=A_2s_2$: veliki klip prijeđe proporcionalno kraći put, a u idealnom modelu bez gubitaka vrijedi $F_1s_1=F_2s_2$.
 
 Na tom se načelu temelje hidrauličke dizalice i preše, kočnice vozila te brodski kormilarski strojevi. Poglavlje redom obrađuje kontinuumski model i tlak, osnovne veličine fluida i Pascalov zakon, a zatim ih primjenjuje na hidraulički prijenos sile. Pritom pokazuje i granice idealnog modela: gubitke, stlačivost, propuštanje i visinske razlike.
 
@@ -137,9 +137,6 @@ Primjerice, omjer $A_2/A_1=35$ daje 35 puta veću izlaznu silu, ali i 35 puta ma
 
 :::
 
-::: {.mf1-granica-modela}
-<p class="mf1-box-label">Granica modela — Kada stlačivost utječe na pomak klipa?</p>
-
 Volumni modul elastičnosti $K$ povezuje porast tlaka i smanjenje volumena
 iste količine tekućine. Za mali porast tlaka pri stalnoj temperaturi i
 približno stalnom $K$ vrijedi
@@ -154,7 +151,12 @@ pozitivan iznos njegova smanjenja. Ako crpni klip iz svoje komore istisne
 volumen $\Delta V_p$, dio tog volumena odlazi na stlačivanje tekućine,
 pa radni klip površine $A_L$ dobiva pomak $s_L$ prema
 $A_Ls_L\approx\Delta V_p-\Delta V_c$. To vrijedi ako nema propuštanja,
-zraka ni rastezanja vodova. Nije dovoljno usporediti $\Delta p/K$ s malim
+zraka ni rastezanja vodova.
+
+::: {.mf1-granica-modela}
+<p class="mf1-box-label">Granica modela — Utjecaj stlačivosti na pomak klipa</p>
+
+Nestlačivi model zanemaruje volumen stlačivanja $\Delta V_c$. Nije dovoljno usporediti $\Delta p/K$ s malim
 brojem: za točnost pomaka mjerodavan je omjer $\Delta V_c/\Delta V_p$.
 Mala promjena gustoće može biti važna kada je istisnuti volumen malen.
 :::
@@ -166,7 +168,7 @@ Mala promjena gustoće može biti važna kada je istisnuti volumen malen.
 
 **Zastani i promisli.** Preša daje veću izlaznu silu. Student iz toga zaključuje da daje i veći izlazni rad. Koju veličinu još mora usporediti?
 
-Sama veća izlazna sila ne potvrđuje veći rad: usporedi i hodove. U granici sporog gibanja, uz jednake visine i zanemarive gubitke, račun mora dati omjer sila $A_2/A_1$ i očuvanje istisnutoga volumena. Pri brzom odzivu treba razmotriti stlačivost tekućine preko modula $K$, podatljivost vodova i eventualni zarobljeni zrak. Za odziv cijele instalacije u početku je često dovoljan jednostavniji dinamički model, a CFD primjenjujemo na dio u kojem prostorna slika strujanja bitno utječe na odziv.
+Sama veća izlazna sila ne potvrđuje veći rad: usporedimo i hodove. U granici sporog gibanja, uz jednake visine i zanemarive gubitke, račun mora dati omjer sila $A_2/A_1$ i očuvanje istisnutoga volumena. Pri brzom odzivu treba razmotriti stlačivost tekućine preko modula $K$, podatljivost vodova i eventualni zarobljeni zrak. Za odziv cijele instalacije u početku je često dovoljan jednostavniji dinamički model, a CFD primjenjujemo na dio u kojem prostorna slika strujanja bitno utječe na odziv.
 :::
 
 ::: {.mf1-izvod}
@@ -180,19 +182,13 @@ $$
 \Delta p = \frac{F_1}{A_1}.
 $$ {#eq-svojstva-tlak-matematicki-izvod-pascalov-zakon-i-ocuvanje-rada-01}
 
-U mirujućem fluidu taj se dodatni tlak ne prenosi kao smična sila, nego kao porast normalnog naprezanja koji se kroz istu povezanu tekućinu očituje jednako u svim smjerovima. Da je taj prijenos neumanjen, pokazuje hidrostatička jednadžba iz []{.mf1-chapter-ref target="u03"}: tlakovi u dvjema točkama iste tekućine razlikuju se samo za hidrostatički član $\rho g\,\Delta z$, koji ovdje zanemarujemo. Zato iz ravnoteže velikoga klipa površine $A_2$ slijedi isti porast tlaka,
+U mirujućem fluidu taj se dodatni tlak ne prenosi kao smična sila, nego kao porast normalnog naprezanja koji se kroz istu povezanu tekućinu očituje jednako u svim smjerovima. Da je taj prijenos neumanjen, pokazuje hidrostatička jednadžba iz []{.mf1-chapter-ref target="u03"}: tlakovi u dvjema točkama iste tekućine razlikuju se samo za hidrostatički član $\rho g\,\Delta z$, koji se pri opterećenju klipa ne mijenja. Porast tlaka zato je isti u svim točkama tekućine, za bilo koji $\Delta z$. Član $\rho g\,\Delta z$ zanemarujemo tek u ravnoteži ukupnih sila na klipovima na različitim visinama, a ovdje su klipovi približno na istoj visini. Zato iz ravnoteže velikoga klipa površine $A_2$ slijedi isti porast tlaka,
 
 $$
 \Delta p = \frac{F_2}{A_2}.
 $$ {#eq-svojstva-tlak-matematicki-izvod-pascalov-zakon-i-ocuvanje-rada-02}
 
-Izjednačavanjem dvaju izraza dobiva se temeljni omjer hidrauličkoga sustava
-
-$$
-\frac{F_1}{A_1} = \frac{F_2}{A_2}
-\qquad \Longrightarrow \qquad
-F_2 = F_1 \frac{A_2}{A_1}.
-$$ {#eq-svojstva-tlak-matematicki-izvod-pascalov-zakon-i-ocuvanje-rada-03}
+Izjednačavanjem dvaju izraza dobiva se temeljni omjer hidrauličkoga sustava $F_1/A_1=F_2/A_2$, odnosno $F_2=F_1A_2/A_1$, kako je zapisan u jednadžbama [-@eq-svojstva-tlak-pascalov-zakon-kao-prvi-inzenjerski-alat-01] i [-@eq-svojstva-tlak-pascalov-zakon-kao-prvi-inzenjerski-alat-02].
 
 U izrazu je $F_1$ ulazna sila, $A_1$ površina ulaznog klipa, $F_2$ izlazna radna sila, a $A_2$ površina izlaznog klipa.
 
@@ -265,7 +261,7 @@ Klip promjera $d_k = 160\ \text{mm}$ opterećen je teretom ukupne težine $F_G =
 2. Odredi manometarski tlak $p_M$ u ulju neposredno ispod klipa.
 3. Odredi silu na radnom klipu površine $A_2$.
 
-![Opterećeni klip i tlak u zatvorenom cilindru.](../assets/print/u01_val1_klip_manometar.svg){#fig-u01-optereceni-klip-i-tlak-u-zatvorenom-cilindru fig-alt="Klip promjera 160 mm s teretom težine 3,60 kN povezan je uljem s radnim klipom površine 450 cm², a oznake pM pokazuju isti manometarski tlak ispod obaju klipova."}
+![Klip s teretom i radni klip povezani uljem, s istim manometarskim tlakom ispod obaju klipova.](../assets/print/u01_val1_klip_manometar.svg){#fig-u01-optereceni-klip-i-tlak-u-zatvorenom-cilindru fig-alt="Klip promjera 160 mm s teretom težine 3,60 kN povezan je uljem s radnim klipom površine 450 cm², a oznake pM pokazuju isti manometarski tlak ispod obaju klipova."}
 
 **Veza s proračunom.** Težina tereta $F_G$ djeluje na klip promjera $d_k$, a $F_2$ je sila ulja na radni klip; ispuna označuje isti fluid. Hodovi, razmaci i duljine strelica nisu u zajedničkom mjerilu.
 
@@ -305,7 +301,7 @@ Omjer sila $F_2/F_G\approx2{,}24$ jednak je omjeru površina $A_2/A_k$, kako pre
 
 **Tekst zadatka**
 
-Hidraulička dizalica ima upravljački klip površine $A_1 = 6\ \text{cm}^2$ i radni klip površine $A_2 = 210\ \text{cm}^2$. Sila $F_1 = 150\ \text{N}$ pomakne mali klip za $s_1 = 18\ \text{cm}$. Rad je kvazistatički, vanjske strane klipova izložene su atmosferi, a gubitci, stlačivost ulja i razlika visina zanemaruju se.
+Hidraulička dizalica ima crpni klip površine $A_1 = 6\ \text{cm}^2$ i radni klip površine $A_2 = 210\ \text{cm}^2$. Sila $F_1 = 150\ \text{N}$ pomakne mali klip za $s_1 = 18\ \text{cm}$. Rad je kvazistatički, vanjske strane klipova izložene su atmosferi, a gubitci, stlačivost ulja i razlika visina zanemaruju se.
 
 **Traži se**
 
@@ -313,7 +309,7 @@ Hidraulička dizalica ima upravljački klip površine $A_1 = 6\ \text{cm}^2$ i r
 2. Odredi silu na velikom klipu.
 3. Odredi pomak velikog klipa.
 
-![Servisna hidraulička dizalica.](../assets/print/u01_val2_hidraulicna_dizalica.svg){#fig-u01-servisna-hidraulicna-dizalica fig-alt="Mali klip površine 6 cm² gurnut silom 150 N za 18 cm i veliki klip površine 210 cm² s nepoznatim pomakom; isprekidana crta označuje početni položaj tlačne plohe."}
+![Hidraulička dizalica: mali i veliki klip povezani uljem, s hodovima obaju klipova.](../assets/print/u01_val2_hidraulicna_dizalica.svg){#fig-u01-servisna-hidraulicna-dizalica fig-alt="Mali klip površine 6 cm² gurnut silom 150 N za 18 cm i veliki klip površine 210 cm² s nepoznatim pomakom; isprekidana crta označuje početni položaj tlačne plohe."}
 
 **Veza s proračunom.** Isprekidana crta označuje početnu tlačnu plohu istoga klipa; hodovi i promjeri prikazani su u zasebnim mjerilima.
 
@@ -378,7 +374,7 @@ Rad je spor, a gubitci, stlačivost i hidrostatičke razlike tlaka zanemaruju se
 3. Odredi zbroj hodova crpnog klipa potreban da se platforma podigne za $s_L$.
 4. Odredi najmanji broj punih tlačnih hodova kojim se platforma podiže barem za zadanu visinu te duljinu posljednjega djelomičnog hoda kojim se postiže točno zadana visina.
 
-![Dvostruka hidraulička platforma s ručnom crpkom.](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg){#fig-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom fig-alt="Platforma s teretom na dvama radnim cilindrima površine 150 cm² sa zajedničkim pomakom, spojenima vodom s ručnom crpkom površine 5 cm² na koju djeluje sila 460 N."}
+![Platforma na dvama mehanički vođenima radnim cilindrima koje ručna crpka puni uljem pri tlačnom potezu.](../assets/print/u01_ch1_dvostruka_platforma_manometar.svg){#fig-u01-dvostruka-hidraulicna-platforma-s-rucnom-pumpom fig-alt="Platforma s teretom na dvama radnim cilindrima površine 150 cm² sa zajedničkim pomakom, spojenima vodom s ručnom crpkom površine 5 cm² na koju djeluje sila 460 N."}
 
 **Veza s proračunom.** Prikazan je samo tlačni potez; ventili i spremnik su izostavljeni. Ispuna označuje isti fluid, a hodovi i strelice sila imaju zasebna mjerila.
 
@@ -660,7 +656,7 @@ Hidraulički kormilarski stroj okreće struk kormila preko ruda s dva kraka. Na 
 **Traži se**
 
 1. Odredi silu kojom ulje djeluje na klip jednoga cilindra pod tlakom.
-2. Odredi ukupni moment kojim cilindri pod tlakom djeluju na struk kormila.
+2. Odredi ukupni moment kojim cilindri pod tlakom djeluju na struk kormila u srednjem položaju kormila.
 3. Odredi volumen ulja koji crpka mora dobaviti za zadani hod klipa.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}

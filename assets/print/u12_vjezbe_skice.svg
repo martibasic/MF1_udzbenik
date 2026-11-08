@@ -51,7 +51,7 @@
         <line x1="220" y1="200" x2="204" y2="200" stroke="#657781" stroke-width="1" />
         <path id="u14ex_z1D" d="M208 120 L208 200" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14ex_dim)" marker-end="url(#u14ex_dim)" data-mf1-role="dimension" />
         <text x="160" y="232" font-size="12" fill="#263746" text-anchor="middle"><tspan font-style="italic">D</tspan> = 1,6 m ili 2,4 m</text>
-        <text x="238" y="220" font-size="12" fill="#263746" text-anchor="start">aktuatorski disk</text>
+        <text x="228" y="112" font-size="12" fill="#263746" text-anchor="start">aktuatorski disk</text>
         <text x="15" y="262" font-size="12" fill="#263746" text-anchor="start"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.75em">mv</tspan> = 1025 kg/m³; sustav propelera</text>
         <path d="M354 265 L384 265" fill="none" stroke="#3a4a56" stroke-width="1.4" marker-end="url(#u14ex_axisMarker)" data-mf1-role="axis" />
         <text x="392" y="269" font-size="13" fill="#263746" text-anchor="middle" font-style="italic">x</text>
