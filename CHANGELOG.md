@@ -3,6 +3,26 @@
 Ovaj dokument prati sadržajne i tehničke promjene javnih izdanja. Potvrđene
 pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
+## Recenzija cijele knjige i ispravci pog. 13 — 8. studenoga 2026.
+
+- **Recenzija**: 17 neovisnih čitanja (struka, primjena, urednik, simulirani
+  student) i četiri provjere nalaza po skupinama poglavlja;
+  `docs/radno/recenzija-2026-11/RECENZIJA.md`. Svi brojčani rezultati knjige
+  ponovno su izračunani bez odstupanja; osam nalaza P1 čeka autoričinu odluku.
+- **Pog. 13**: P1 računa turbulentni koeficijent trenja iz $Re$ i $k_s/D$
+  (Swamee–Jain, provjera Colebrookom); definirane oznake uz NPSH, hidraulički
+  otpor $R$ i $H_{stat}$; P5 objašnjava regulaciju brzinom vrtnje; skaliranje
+  krivulje crpke u teoriji; P3 sa zadanom početnom raspodjelom; Z3 počinje
+  izravnim problemom paralelnih grana; Z6 kao manji obalni brod sa zapornim
+  ventilom iza oplate; $NPSH_3$ prema ISO 9906; izvori Swamee i Jain, Cross;
+  uklonjena ponavljanja uvoda i jedna rečenica o ispravnosti skice; kota
+  $\Delta z$ na slici 13.1. Verifikator `verify_u13_integrated.py` proširen.
+- **Cijela knjiga**: ključ (dodatak F) upisuje broj jednadžbe umjesto teksta
+  „odgovarajući izraz”; upućivanja na primjere i zadatke glase „primjer P3”,
+  a prema drugom poglavlju „primjer P5 iz pog. 8”. `audit_pdf_layout.py` broj
+  zapisa literature čita iz `references.bib`, a upućivanja-poveznice ne broji
+  kao brojeve jednadžbi.
+
 ## Konvencije pisanja i skill za recenziju — 8. studenoga 2026.
 
 - **Pravila i postupak**: `docs/konvencije_pisanja.md` (pravila K1–K16), skill

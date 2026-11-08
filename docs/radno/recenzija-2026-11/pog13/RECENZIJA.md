@@ -161,3 +161,24 @@ Zaključci:
 - **Čitatelji nisu otvarali bilježnice**, pa su dva neovisno pogriješila oko „Z3 i Z6”. Neovisnost dvaju čitatelja nije dokaz.
 - **Alat je propustio** popise s kosom crtom u formulama, opisna upućivanja („sljedeće poglavlje”, „ranijem … primjeru”) i kratice prije definicije; dvije od tih provjera mogu se dodati.
 - Provjera nalaza u ovom opsegu (≈130 stavki) traje koliko i samo čitanje; za 15 poglavlja treba je razdijeliti.
+
+## 11. Provedba (8. 11. 2026., grana `konvencije-recenzije`)
+
+Provedeno na autoričin zahtjev („provedi nađene ispravke”):
+
+| Nalaz | Što je učinjeno |
+| --- | --- |
+| A1 | P1 sada zadaje $\nu$ i $k_s=0{,}26$ mm (lijevano željezo, Moody); računa $Re=2{,}88\cdot10^5$, $\lambda=0{,}02467$ (Swamee–Jain), provjera Colebrookom (0,02452, 0,6 %) i udjelom lokalnih gubitaka; razina T1 → T2; verifikator proširen. |
+| A2, D1 | Definirani $p_{aps,s}$, $v_s$, $h_{g,s}$, hidraulički otpor $R$ i $H_{stat}=\Delta z$; kota na slici 13.1 je $\Delta z$. |
+| B1–B5, B8–B10 | Mehanizam istog protoka u P5; skaliranje krivulje $H_{p,2}(Q)=s^2H_p(Q/s)$ u 13.5; uvlačenje zraka u granici modela NPSH; P3 sa zadanom početnom raspodjelom i energijskim visinama; neovisna provjera P1; turbulentna disipacija u bloku „Dublje”; „suženju presjeka”; Z6.3 s upućivanjem na (13.28). |
+| B7 (dio) | Z3 sada počinje izravnim problemom (raspodjela bez ventila: 13,33 i 6,67 L/s, 2,13 m); ključ i verifikator usklađeni. |
+| C3, C4, C5 | P6: temperatura uz $p_v$ i komentar brzine na usisu; Z6: manji obalni brod, srednja statička visina, „najmanji gaz tijekom balastiranja”, zaporni ventil iza oplate na skici; $NPSH_3$ uz izvor ISO 9906. |
+| D2 | $R_V$ i $E_n$; $s$ ostaje omjer brzina vrtnje uz izričitu definiciju. |
+| D3 | „ventil (simbol)” → „ventil” uz simbol. Ventil ostaje izdvojeni simbol, kako je namjerno crtano (opis skice: „ne krutom preprekom u fluidu”). **Otvoreno:** u tiskovnoj izvedenici generator i dalje smješta oznaku „2” pod sredinu cijevi; na webu je na izlazu. |
+| D4 | Izvori Swamee i Jain (1976), Cross (1936), ISO 9906:2012 u literaturi; Blasius uz Schlichtinga; raspon $k_s/D$ za Swamee–Jaina. `audit_pdf_layout.py` broj zapisa čita iz `references.bib`. |
+| D5–D10 | Upućivanja brojem poglavlja; uklonjeni ponovljeni odlomci uvoda i rečenica o $NPSH_a$ u CFD odlomku; sažetak r. 898 i 903; popisi s točkom-zarezom; uklonjena rečenica o ispravnosti skice; ujednačen naziv Darcy–Weisbachove jednadžbe, „mreža ćelija”, „brzina vrtnje”. |
+| K-1 | Generator ključa upisuje broj jednadžbe, npr. „(13.16)”; nepoznat ID je pogreška. |
+| K-2 | Upućivanje na primjer ili zadatak ispisuje „primjer P3”, a za drugo poglavlje „primjer P5 iz pog. 8”. |
+| P3 | Z5 skica bez upute „računaj”; naputak Z2 više ne odgovara na drugi dio; naslov okvira „Jednak pad energije paralelnih grana”; puni naziv NPSH. |
+
+Nije provedeno (autoričina odluka ili nepotvrđen podatak): B6 (razine Z2, Z4), C1 (ravnoteža struka), C2 (stupnjevi djelovanja u P5 — rasponi samo po sjećanju), K-3 (vidljivost „Provjeri sebe”), nazivlje „učinkovitost” / „stupanj djelovanja” i „usisni koš”, dio B7 (zbrajanje $\xi$ s različitim brzinama), P3 „lijevano željezo” u P3.
