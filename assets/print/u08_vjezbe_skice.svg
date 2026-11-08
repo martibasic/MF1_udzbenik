@@ -200,7 +200,7 @@
       <text x="150.5" y="60" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">KV</text>
       <text x="146" y="172" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle">grijač</text>
       <text x="151" y="192" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 0,30 m²; <tspan font-style="italic">A</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 0,24 m²; <tspan font-style="italic">v</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 12,0 m/s</text>
-      <text x="151" y="214" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,20 kg/m³; <tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 1,02 kg/m³</text>
+      <text x="151" y="214" font-family="Arial, Liberation Sans, sans-serif" font-size="10" fill="#263746" text-anchor="middle"><tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,34 kg/m³; <tspan font-style="italic">ρ</tspan><tspan baseline-shift="sub" font-size="0.7em">2</tspan> = 1,20 kg/m³</text>
     </g>
   </g>
   <g id="u08vs_title-scene-2" transform="translate(-0.9787 -6.7660)">

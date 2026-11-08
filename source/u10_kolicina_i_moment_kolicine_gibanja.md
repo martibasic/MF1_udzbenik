@@ -4,7 +4,7 @@ Za stacionaran tok kroz nepomičan kontrolni volumen zbroj svih vanjskih sila na
 
 Sila kojom fluid djeluje na stijenku ima suprotan smjer, $\vec F=-\vec R_{st\to f}$, a reakcija nosača $\vec R$ slijedi tek iz ravnoteže samog elementa, uz njegovu težinu i ostale priključne sile. Zato uz svaku silu treba reći na koje tijelo djeluje. Isti zakon, zapisan u sustavu tijela koje se giba stalnom brzinom, opisuje mlaz na lopaticu ili ploču te potisak vodomlaznog pogona i propelera. Vektorskim množenjem s vektorom položaja $\vec r$ zakon prelazi u zakon momenta količine gibanja, kojim se računaju rotirajuće mlaznice, raspršivači i rotori.
 
-Poglavlje redom obrađuje integralni zakon, silu na cijevno koljeno, pomični kontrolni volumen s mlaznim pogonom i aktuatorskim diskom te moment količine gibanja. Primjene su koljena i račve u cijevnim sustavima brodova i kopnenih postrojenja, vodomlazni pogon, propeler i stroj za pranje tankova. Radni model pretpostavlja stacionaran tok i jednolike profile brzine na presjecima ($\beta=1$); prolazne pojave poput vodenog udara traže i član akumulacije. Lokalni oblik zakona vodi do Navier–Stokesove jednadžbe u []{.mf1-chapter-ref target="u12"}, a Eulerova turbinska jednadžba i stvarni propeler obrađuju se u []{.mf1-chapter-ref target="u14"}.
+Poglavlje redom obrađuje integralni zakon, silu na cijevno koljeno, pomični kontrolni volumen s mlaznim pogonom i aktuatorskim diskom te moment količine gibanja. Primjene su koljena i račve u cijevnim sustavima brodova i kopnenih postrojenja, vodomlazni pogon, propeler i reakcijska glava za ispiranje spremnika. Radni model pretpostavlja stacionaran tok i jednolike profile brzine na presjecima ($\beta=1$); prolazne pojave poput vodenog udara traže i član akumulacije. Lokalni oblik zakona vodi do Navier–Stokesove jednadžbe u []{.mf1-chapter-ref target="u12"}, a Eulerova turbinska jednadžba i stvarni propeler obrađuju se u []{.mf1-chapter-ref target="u14"}.
 
 Slika [-@fig-uvod-u11] prikazuje sile na fluid u koljenu koje skreće tok za $90^\circ$. Fluid ulazi kroz presjek 1 vodoravno, brzinom $\vec v_1$ u smjeru osi $x$, a izlazi kroz presjek 2 prema dolje brzinom $\vec v_2$. Granica KV obuhvaća fluid u koljenu i siječe tok na oba presjeka. Na presjecima djeluju tlačne sile $p_{M1}A_1$ i $p_{M2}A_2$ usmjerene u kontrolni volumen, a u sredini težina $\vec F_G$. Strelice $R_{st\to f,x}$ i $R_{st\to f,y}$ u donjem lijevom kutu pokazuju pretpostavljene pozitivne smjerove komponenata sile stijenke na fluid; stvarne predznake određuje račun.
 
@@ -790,11 +790,11 @@ Za koljeno stalnog promjera iznos rezultante jest $2I\sin(\theta/2)$, što za $\
 :::
 
 ::: {#ex-rotirajuca-mlaznica-pranje-tanka .mf1-we}
-<p class="mf1-box-label">Rotirajuća mlaznica za pranje tanka&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Reakcijska glava za ispiranje spremnika&nbsp;<span class="mf1-level">T2</span></p>
 
 **Tekst zadatka**
 
-Stroj za pranje teretnog tanka ima dvije suprotno usmjerene mlaznice promjera $d = 10\ \text{mm}$ na krajevima krakova duljine $r = 0{,}25\ \text{m}$ od osi vrtnje. Voda gustoće $\rho = 998\ \text{kg/m}^3$ dovodi se duž osi ukupnim protokom $Q = 2{,}80\ \text{L/s}$, a svaki mlaz napušta mlaznicu tangencijalno, okomito na krak. Reduktor drži stalnu brzinu vrtnje $n = 60\ \text{min}^{-1}$, pri čemu se glava vrti u smjeru suprotnom od izlaznih mlazova. Zanemari trenje ležaja, razliku visina i tlačne sile na izlazu (mlazovi izlaze na atmosferski tlak).
+Reakcijska glava za ispiranje spremnika ima dvije suprotno usmjerene mlaznice promjera $d = 10\ \text{mm}$ na krajevima krakova duljine $r = 0{,}25\ \text{m}$ od osi vrtnje. Voda gustoće $\rho = 998\ \text{kg/m}^3$ dovodi se duž osi ukupnim protokom $Q = 2{,}80\ \text{L/s}$, a svaki mlaz napušta mlaznicu tangencijalno, okomito na krak. Reduktor drži stalnu brzinu vrtnje $n = 60\ \text{min}^{-1}$, pri čemu se glava vrti u smjeru suprotnom od izlaznih mlazova. Zanemari trenje ležaja, razliku visina i tlačne sile na izlazu (mlazovi izlaze na atmosferski tlak).
 
 **Traži se**
 
@@ -803,7 +803,7 @@ Stroj za pranje teretnog tanka ima dvije suprotno usmjerene mlaznice promjera $d
 3. Odredi snagu koju reduktor mora kočiti i usporedi moment s momentom na zadržanoj glavi ($\omega=0$).
 4. Odredi brzinu vrtnje pri kojoj bi moment nestao kad reduktor ne bi kočio.
 
-![Tlocrt rotirajuće mlaznice: dva kraka s tangencijalnim mlazovima, obodna brzina i moment oko osi.](../assets/print/u11_val_rotirajuca_mlaznica.svg){#fig-rotirajuca-mlaznica fig-align="center" fig-alt="Tlocrt glave za pranje tanka s dva kraka duljine r, mlazovima koji izlaze tangencijalno u suprotnim smjerovima i kutnom brzinom glave u suprotnom smjeru od mlazova."}
+![Tlocrt rotirajuće mlaznice: dva kraka s tangencijalnim mlazovima, obodna brzina i moment oko osi.](../assets/print/u11_val_rotirajuca_mlaznica.svg){#fig-rotirajuca-mlaznica fig-align="center" fig-alt="Tlocrt glave za ispiranje spremnika s dva kraka duljine r, mlazovima koji izlaze tangencijalno u suprotnim smjerovima i kutnom brzinom glave u suprotnom smjeru od mlazova."}
 
 **Veza s proračunom.** Pol je na osi vrtnje, u točki dovoda; strelice $w$ su relativne izlazne brzine, a $u$ obodna brzina mlaznice. $M$ je moment kojim voda djeluje na glavu.
 

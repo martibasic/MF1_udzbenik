@@ -38,7 +38,7 @@ def primjer_1(rho=998.0, p_pl_m=18e3, h=1.40, p_atm=100.8e3, g=9.81):
     return {"p_pl": p_pl, "p_A": p_A, "p_A_m": p_A_m}
 
 
-def primjer_3(rho_v=1000.0, rho_mv=1035.0, rho_Hg=13600.0, rho_zr=1.2,
+def primjer_3(rho_v=1000.0, rho_mv=1025.0, rho_Hg=13600.0, rho_zr=1.2,
               h1=0.60, h2=0.10, h3=0.70, h4=0.40, g=9.81):
     dp_bez_zraka = g * (rho_Hg * h2 - rho_mv * h4 - rho_v * h1)
     dp_sa_zrakom = g * (rho_Hg * h2 + rho_zr * h3 - rho_mv * h4 - rho_v * h1)
@@ -168,7 +168,7 @@ def zadatak_5(p_vac=6e3, p_atm=98.6e3, rho_u=860.0, rho_w=998.0,
 
 def zadatak_6(h1=0.65, dh=0.210, h_tocka=1.30, rho_w=998.0, rho_Hg=13600.0,
               p_atm=100.9e3, dh_tol=0.002, h_tol=0.005,
-              p_atm_tol=0.4e3, scale_margin=0.05, g=9.81):
+              p_atm_tol=0.4e3, scale_margin=0.03, g=9.81):
     # Granica vode i zive je na visini prikljucka u svim dopustenim stanjima.
     p_priklj = p_atm + rho_Hg * g * dh
     p_G = p_priklj - rho_w * g * h1
@@ -184,6 +184,7 @@ def zadatak_6(h1=0.65, dh=0.210, h_tocka=1.30, rho_w=998.0, rho_Hg=13600.0,
         "p_tocka": p_tocka,
         "p_max": p_max,
         "required_full_scale": (1 + scale_margin) * p_max,
+        "nominal_full_scale": (1 + scale_margin) * p_tocka,
     }
 
 
@@ -196,8 +197,8 @@ def verify():
     _check(out, "U03.P1.p_A_m_kPa", r["p_A_m"] / 1000, 31.706532, "kPa", rel=1e-9)
 
     r = primjer_3()
-    _check(out, "U03.P3.dp_bez_zraka_Pa", r["dp_bez_zraka"], 3394.26, "Pa", rel=1e-9)
-    _check(out, "U03.P3.dp_sa_zrakom_Pa", r["dp_sa_zrakom"], 3402.50, "Pa", rel=2e-7)
+    _check(out, "U03.P3.dp_bez_zraka_Pa", r["dp_bez_zraka"], 3433.50, "Pa", rel=1e-9)
+    _check(out, "U03.P3.dp_sa_zrakom_Pa", r["dp_sa_zrakom"], 3441.74, "Pa", rel=2e-6)
 
     r = cjeloviti_sondiranje()
     _check(out, "U03.CH1.p_water_Pa", r["p_water"], 3519.3, "Pa", rel=2e-5)
@@ -312,7 +313,10 @@ def verify():
     _check(out, "U03.Z6.p_G_kPa", z6["p_G"] / 1000, 122.6, "kPa")
     _check(out, "U03.Z6.p_tocka_kPa", z6["p_tocka"] / 1000, 135.3, "kPa")
     _check(out, "U03.Z6.p_max_kPa", z6["p_max"] / 1000, 136.05, "kPa", rel=0.00005)
-    _check(out, "U03.Z6.required_full_scale_kPa", z6["required_full_scale"] / 1000, 142.85, "kPa", rel=0.00005)
+    _check(out, "U03.Z6.required_full_scale_kPa", z6["required_full_scale"] / 1000, 140.13, "kPa", rel=0.00005)
+    _check(out, "U03.Z6.nominal_full_scale_kPa", z6["nominal_full_scale"] / 1000, 139.34, "kPa", rel=0.00005)
+    _invariant(out, "U03.Z6.tolerance_changes_choice", z6["nominal_full_scale"] <= 140e3 < z6["required_full_scale"],
+               "Tolerancije moraju promijeniti izbor mjernog podrucja (T4).")
     corners = [pa + 13600*9.81*dh + 998*9.81*(h2-h1)
                for pa,dh,h1,h2 in product((100500,101300),(.208,.212),(.645,.655),(1.295,1.305))]
     _invariant(out, "U03.Z6.interval_corners", abs(max(corners)-z6["p_max"]) < 1e-8,

@@ -168,6 +168,7 @@ def ship_model_boundary_layer(
         "delta_turbulent_over_L": delta_turbulent / model_length,
         "C_F_model": ittc_1957(reynolds_L),
         "C_F_ship": ittc_1957(ship_reynolds),
+        "C_F_laminar": 1.328 / math.sqrt(reynolds_L),
     }
 
 
@@ -418,7 +419,8 @@ def verify() -> list[dict[str, str]]:
     _check(out, "U12.REAL.P4.Re_L_fifth_root", r["reynolds_L_fifth_root"], 25.5, "", abs_tol=0.05)
     _check(out, "U12.REAL.P4.delta_turbulent_mm", r["delta_turbulent_mm"], 87.0, "mm", abs_tol=0.5)
     _check(out, "U12.REAL.P4.C_F_model", r["C_F_model"], 2.96e-3, "", abs_tol=0.005e-3)
-    _check(out, "U12.REAL.P4.C_F_ship", r["C_F_ship"], 1.48e-3, "", abs_tol=0.005e-3)
+    _check(out, "U12.REAL.P4.C_F_laminar", r["C_F_laminar"], 4.04e-4, "", abs_tol=0.005e-4)
+    _check(out, "U12.REAL.P4.C_F_ratio", r["C_F_model"] / r["C_F_laminar"], 7.3, "", abs_tol=0.05)
     _invariant(out, "U12.REAL.P4.friction_and_thin_layer",
                r["C_F_model"] > r["C_F_ship"]
                and abs(r["C_F_model"] / r["C_F_ship"] - 2.0) < 0.02

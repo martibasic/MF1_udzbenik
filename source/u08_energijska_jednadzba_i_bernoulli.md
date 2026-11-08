@@ -26,20 +26,6 @@ $$
 \frac{p_1}{\rho g} + \frac{v_1^2}{2g} + z_1 = \frac{p_2}{\rho g} + \frac{v_2^2}{2g} + z_2
 $$ {#eq-energijska-bilanca-fizikalni-uvod-i-matematicki-izvod-02}
 
-::: {.mf1-interaktivno}
-<p class="mf1-box-label">Interaktivni prikaz — Venturijeva cijev</p>
-
-**Predvidi.** Kako se mijenja protok ako se izmjerena razlika tlakova učetverostruči?
-
-**Provjeri i protumači.** Usporedi račun i predviđanje, zatim povećaj nesigurnost promjera grla. Objasni treba li poboljšati mjerenje promjera ili tlaka. Bilježnica odvaja uljni primjer iz knjige od zasebnoga kalibracijskog slučaja s vodom.
-
-<div class="mf1-interaktivno-akcija">
-<a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u09_venturi.ipynb">Pokreni u pregledniku</a>
-<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u09_venturi.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
-<img class="mf1-interaktivno-qr" src="../assets/qr/u09_venturi.svg" alt="QR kod za interaktivni prikaz Venturijeve cijevi"/>
-</div>
-
-:::
 
 Ako jedan član raste, barem jedan od preostala dva mora pasti; to je fizikalna srž Venturijeve cijevi, Pitotove sonde, mlaza i sifona bez gubitaka. Iz istih članova proizlaze dvije crte za prikaz energije toka. Piezometarska visina zbroj je tlačne i geodetske visine; nanesena duž toka daje piezometarsku crtu (HGL),
 
@@ -66,14 +52,6 @@ $$ {#eq-energijska-bilanca-fizikalno-znacenje-01}
 
 Za vodu je $1\ \text{m}$ tlačne visine oko $9{,}81\ \text{kPa}$, a $10\ \text{kPa}$ približno $1{,}02\ \text{m}$ vodenog stupca; pad statičkog tlaka $\Delta p$ u vodoravnom vodu ujedno je pad HGL-a za $\Delta p/(\rho g)$. Pri pretvorbi visine u tlak mora biti jasno je li visina apsolutna ili manometarska; atmosferski se tlak dodaje samo pri prijelazu na apsolutnu referencu.
 
-::: {#cfd-venturi-mjerenje-gubitak .mf1-cfd title="Računalna dinamika fluida"}
-
-**Venturi u rashladnom vodu: mjerenje i gubitak.** Venturijev mjerač iz interaktivnog prikaza u ovom odjeljku sužava tok i tako povećava brzinu u grlu. CFD daje statički tlak na priključcima i brzinu u presjecima. Za nestlačiv tok, koji ovdje pretpostavljamo, ukupni je tlak $p_t=p+\rho v^2/2$; na različitim kotama u mehaničku energiju ulazi i gravitacijski član. Bočni priključak i idealna Pitotova sonda zato ne očitavaju istu veličinu.
-
-**Zastani i promisli.** Statički tlak pada prema grlu Venturija. Smijemo li cijeli pad proglasiti gubitkom energije?
-
-Pad statičkog tlaka do grla nije sam dokaz gubitka: dio tlačne energije prelazi u kinetičku i može se vratiti u difuzoru. Provjeravamo ukupnu mehaničku energiju prije cijelog mjerača i poslije njega. Tako odvajamo koristan mjerni signal od trajnog opterećenja crpke.
-:::
 
 ::: {.mf1-izvod}
 <p class="mf1-box-label">Matematički izvod — Eulerova jednadžba duž strujnice iz Newtonova zakona</p>
@@ -495,7 +473,7 @@ $$
 p_{aps,P} \approx 49{,}9\ \text{kPa},
 $$ {#eq-usisni-vod-balast}
 
-a visina iznad tlaka pare pada na $5{,}15\ \text{m}$. Gaz broda izravno utječe na usisne uvjete crpke; pri plovidbi bi se dodatno promijenio i tlak na otvoru koša (@ex-zahvatni-usis-morske-vode-u-plovidbi u []{.mf1-chapter-ref target="u07"}).
+a visina iznad tlaka pare pada na $5{,}15\ \text{m}$. Gaz broda izravno utječe na usisne uvjete crpke. Ovdje je otvor koša u ravnini oplate; zahvatni usis okrenut prema pramcu iz primjera [-@ex-zahvatni-usis-morske-vode-u-plovidbi] drugačija je izvedba, kod koje plovidba mijenja i tlak na otvoru.
 
 **Provjera i tumačenje**
 
@@ -553,6 +531,30 @@ Brzina u grlu iznosi $v_2=7{,}424\ \text{m/s}$, a HGL je ondje za $\Delta p/(\rh
 **Nastavak istog mjernog problema.** Ovaj primjer pretpostavlja tok bez gubitaka; zato služi kao referenca za idealni odnos tlaka i brzine, a ne kao procjena stvarnog otpora uređaja. U odjeljku [-@sec-cfd-venturi] dodaju se geometrija difuzora, polja brzine i tlaka te provjere gubitka. Isti uređaj tako povezuje očitanje manometra, bilancu mase i energijsku cijenu mjerenja.
 :::
 
+:::
+
+::: {.mf1-interaktivno}
+<p class="mf1-box-label">Interaktivni prikaz — Venturijeva cijev</p>
+
+**Predvidi.** Kako se mijenja protok ako se izmjerena razlika tlakova učetverostruči?
+
+**Provjeri i protumači.** Usporedi račun i predviđanje, zatim povećaj nesigurnost promjera grla. Objasni treba li poboljšati mjerenje promjera ili tlaka. Bilježnica odvaja uljni primjer iz knjige od zasebnoga kalibracijskog slučaja s vodom.
+
+<div class="mf1-interaktivno-akcija">
+<a class="mf1-interaktivno-veza" href="https://martibasic.github.io/MF1_udzbenik/jlite/lab/index.html?path=u09_venturi.ipynb">Pokreni u pregledniku</a>
+<a class="mf1-interaktivno-veza" href="https://colab.research.google.com/github/martibasic/MF1_udzbenik/blob/main/notebooks/u09_venturi.ipynb" target="_blank" rel="noopener">Pričuvno: otvori u Colabu</a>
+<img class="mf1-interaktivno-qr" src="../assets/qr/u09_venturi.svg" alt="QR kod za interaktivni prikaz Venturijeve cijevi"/>
+</div>
+
+:::
+
+::: {#cfd-venturi-mjerenje-gubitak .mf1-cfd title="Računalna dinamika fluida"}
+
+**Venturi u rashladnom vodu: mjerenje i gubitak.** Venturijev mjerač iz primjera [-@ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2] sužava tok i tako povećava brzinu u grlu. CFD daje statički tlak na priključcima i brzinu u presjecima. Za nestlačiv tok, koji ovdje pretpostavljamo, ukupni je tlak $p_t=p+\rho v^2/2$; na različitim kotama u mehaničku energiju ulazi i gravitacijski član. Bočni priključak i idealna Pitotova sonda zato ne očitavaju istu veličinu.
+
+**Zastani i promisli.** Statički tlak pada prema grlu Venturija. Smijemo li cijeli pad proglasiti gubitkom energije?
+
+Pad statičkog tlaka do grla nije sam dokaz gubitka: dio tlačne energije prelazi u kinetičku i može se vratiti u difuzoru. Provjeravamo ukupnu mehaničku energiju prije cijelog mjerača i poslije njega. Tako odvajamo koristan mjerni signal od trajnog opterećenja crpke.
 :::
 
 Pitotovom sondom brzina se određuje iz razlike zaustavnog (stagnacijskog) i statičkog tlaka.
@@ -818,7 +820,7 @@ Sustav treba zajamčiti $Q\ge15{,}0\ \text{L/s}$ i apsolutni tlak $p_{aps,C}\ge3
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Bernoullijevom jednadžbom između slobodne površine i izlaza odredi idealni $v$, a između slobodne površine i vrha sifona odredi tlak. Domet mlaza izračunaj prema modelu vodoravnog hica s visine $1{,}2\ \text{m}$. Za izvedeni sustav koristi $v=\sqrt{2g\Delta z/(1+\zeta_\Sigma)}$ i $p_{aps,C}=p_{atm}-\rho g[z_C+(1+\zeta_C)v^2/(2g)]$. Najmanji protok daje najveći $\zeta_\Sigma$; najmanji tlak u vrhu provjeri rubnim kombinacijama zadanih intervala, ne samo nominalnim koeficijentima.
+Bernoullijevom jednadžbom između slobodne površine i izlaza odredi idealni $v$, a između slobodne površine i vrha sifona odredi tlak. Domet mlaza izračunaj prema modelu vodoravnog hica s visine $1{,}2\ \text{m}$. Za izvedeni sustav koristi zadane bilance s gubitcima. Najmanji protok daje najveći $\zeta_\Sigma$; najmanji tlak u vrhu provjeri rubnim kombinacijama zadanih intervala, ne samo nominalnim koeficijentima.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}

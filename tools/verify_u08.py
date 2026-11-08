@@ -119,7 +119,7 @@ def primjer_ev_hladenje(D_1=0.020, d=0.006, n=16, Q_L_min=25.0):
     }
 
 
-def zadatak_1(rho_1=1.20, v_1=12.0, A_1=0.30, rho_2=1.02, A_2=0.24):
+def zadatak_1(rho_1=1.34, v_1=12.0, A_1=0.30, rho_2=1.20, A_2=0.24):
     """Z1: grijač ventilacijskog zraka, masena bilanca uz promjenu gustoće."""
     m_dot = rho_1 * A_1 * v_1
     v_2 = m_dot / (rho_2 * A_2)
@@ -244,10 +244,10 @@ def verify():
     _check(out, "U08.P6.rise_percent", r["rise_percent"], 6.67, "%", rel=0.02)
 
     r = zadatak_1()
-    _check(out, "U08.Z1.m_dot", r["m_dot"], 4.32, "kg/s", rel=1e-10)
-    _check(out, "U08.Z1.v_2", r["v_2"], 17.6, "m/s", rel=0.003)
+    _check(out, "U08.Z1.m_dot", r["m_dot"], 4.82, "kg/s", rel=0.001)
+    _check(out, "U08.Z1.v_2", r["v_2"], 16.8, "m/s", rel=0.003)
     _check(out, "U08.Z1.Q_1", r["Q_1"], 3.60, "m^3/s", rel=1e-10)
-    _check(out, "U08.Z1.Q_2", r["Q_2"], 4.24, "m^3/s", rel=0.002)
+    _check(out, "U08.Z1.Q_2", r["Q_2"], 4.02, "m^3/s", rel=0.002)
 
     r = zadatak_2()
     _check(out, "U08.Z2.v_n", r["v_n"], 1.50, "m/s", rel=0.001)
@@ -297,9 +297,9 @@ def verify():
 
     z1,z2,z3,z4,z5,z6 = (zadatak_1(),zadatak_2(),zadatak_3(),
                          zadatak_4(),zadatak_5(),zadatak_6())
-    _invariant(out, "U08.INV.z1_mass_not_volume", abs(1.02*.24*z1["v_2"]-z1["m_dot"]) < 1e-12
+    _invariant(out, "U08.INV.z1_mass_not_volume", abs(1.20*.24*z1["v_2"]-z1["m_dot"]) < 1e-12
                and z1["Q_2"] > z1["Q_1"] and z1["v_2"] > 12.0
-               and abs(zadatak_1(rho_2=1.20)["Q_2"]-z1["Q_1"]) < 1e-12,
+               and abs(zadatak_1(rho_2=1.34)["Q_2"]-z1["Q_1"]) < 1e-12,
                "Grijac ne zatvara masenu bilancu ili volumenski protok ne raste s padom gustoce.")
     p2 = primjer_2_zahvatni_usis()
     _invariant(out, "U08.INV.p2_relative_velocity", abs(1025*.040*p2["w"]-p2["m_dot"]) < 1e-12

@@ -1,6 +1,6 @@
 Crpka i ventilator predaju rad fluidu, turbina ga od fluida preuzima, a brodski propeler i vodomlazni pogon ubrzavaju vodu prema krmi i reakcijom dobivaju potisak. Svi ti turbostrojevi i propulzori izmjenjuju energiju s fluidom promjenom njegove količine gibanja i momenta količine gibanja, pa se poglavlje izravno oslanja na bilance kontrolnog volumena iz []{.mf1-chapter-ref target="u10"}. Novo je to što se lopatice gibaju, pa brzinu koju vidi nepomični promatrač treba razlikovati od one koju vidi lopatica.
 
-Prema turbostrojarskom standardu $c$ je apsolutna brzina fluida, $u$ obodna brzina lopatice, a $w$ relativna brzina fluida; povezane su vektorski, $\vec c=\vec u+\vec w$. Kontrolni volumen koji prati jednu pokretnu lopaticu prima relativni maseni protok $\dot m_{rel}=\rho A(c_1-u)$, dok kolo s mnogo lopatica zahvaća puni sapnički protok $\dot m=\rho Ac_1$. Zato jedna lopatica prima najveću snagu pri $u=c_1/3$, a Peltonovo kolo pri $u=c_1/2$. Kad su ulaz i izlaz rotora na različitim polumjerima, moment količine gibanja vodi do Eulerove jednadžbe turbostrojarstva, $P=\dot m(u_2c_{2t}-u_1c_{1t})=M\omega$; ta je snaga pozitivna kad rotor predaje rad fluidu, kao u crpki. Rad daje samo promjena tangencijalne komponente brzine $c_t$, pa su kutovi lopatica $\beta_1$ i $\beta_2$, mjereni od smjera $-u$, izravni projektni parametri.
+Prema turbostrojarskom standardu $c$ je apsolutna brzina fluida, $u$ obodna brzina lopatice, a $w$ relativna brzina fluida; povezane su vektorski, $\vec c=\vec u+\vec w$. Kontrolni volumen koji prati jednu pokretnu lopaticu prima relativni maseni protok $\dot m_{rel}=\rho A(c_1-u)$, dok kolo s mnogo lopatica zahvaća puni sapnički protok $\dot m=\rho Ac_1$. Zato jedna lopatica prima najveću snagu pri $u=c_1/3$, a Peltonovo kolo pri $u=c_1/2$. Kad su ulaz i izlaz rotora na različitim polumjerima, moment količine gibanja vodi do Eulerove turbinske jednadžbe, $P=\dot m(u_2c_{2t}-u_1c_{1t})=M\omega$; ta je snaga pozitivna kad rotor predaje rad fluidu, kao u crpki.
 
 Propeler se modelira aktuatorskim diskom, idealiziranim propelerom koji daje potisak $F_T$; njegova idealna (Froudeova) učinkovitost $\eta_i=2v_A/(v_A+v_j)$ to je manja što je brzina mlaza $v_j$ veća od brzine napredovanja $v_A$. Vodomlazni pogon ima isti izraz za idealnu učinkovitost uz $v_A=v_s$, gdje je $v_s$ brzina broda. Za isti potisak veći disk traži manju induciranu brzinu i snagu, kao kod drona u visu, a iza trupa broda brzinu napredovanja smanjuje sustrujanje.
 
@@ -82,11 +82,6 @@ $$
 P = F_t u = M\omega
 $$ {#eq-turbostrojevi-matematicki-izvod-optimum-obodne-brzine-za-jednu-09}
 
-::: {.mf1-fizikalno-znacenje}
-<p class="mf1-box-label">Fizikalno značenje</p>
-Radijalna i aksijalna promjena brzine opterećuju ležajeve, ali ne prenose snagu; rad daje samo promjena tangencijalne komponente. Zato su ulazni i izlazni kut lopatice izravni uvjeti korisnog učinka, a ne geometrijski detalj.
-:::
-
 ## Eulerova jednadžba i trokuti brzina
 
 Kad su ulaz i izlaz rotora na različitim polumjerima $r_1$ i $r_2$, umjesto sile treba primijeniti **moment količine gibanja**.
@@ -108,7 +103,7 @@ $$
 M_{r\to f} = \dot m\,(r_2 c_{2t} - r_1 c_{1t}).
 $$ {#eq-turbostrojevi-matematicki-izvod-eulerova-turbinska-jednadzba-i-03}
 
-Reakcijski moment fluida na rotor ima suprotan predznak, $M_{f\to r}=-M_{r\to f}$. To je jezgra **Eulerove jednadžbe turbostrojarstva** za crpke, ventilatore, turbine i kompresore.
+Reakcijski moment fluida na rotor ima suprotan predznak, $M_{f\to r}=-M_{r\to f}$. To je jezgra **Eulerove turbinske jednadžbe** za crpke, ventilatore, turbine i kompresore.
 
 Množenjem s kutnom brzinom $\omega$ dobivaju se dvije jednako valjane, ali suprotno orijentirane bilance snage:
 

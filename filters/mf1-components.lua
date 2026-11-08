@@ -165,9 +165,10 @@ local function reference(target, content)
   return pandoc.Link(content,href,"",pandoc.Attr("",{"mf1-reference"}))
 end
 
--- "pog. 5" never breaks between the abbreviation and its number.
+-- "pog. 5" never breaks between the abbreviation and its number. Running text
+-- shows only the number; the chapter title stays available as the link title.
 local function chapter_link(doc)
-  return pandoc.Link({pandoc.Str("pog.\u{00A0}"..doc.number.." "..doc.title)},"/"..doc.path,"",pandoc.Attr("",{"mf1-ch-ref"}))
+  return pandoc.Link({pandoc.Str("pog.\u{00A0}"..doc.number)},"/"..doc.path,doc.title,pandoc.Attr("",{"mf1-ch-ref"}))
 end
 
 -- Inline and raw-HTML components follow the same registry visibility policy

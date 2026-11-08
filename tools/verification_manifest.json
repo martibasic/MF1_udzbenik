@@ -308,6 +308,7 @@
         "U03.Z6.p_tocka_kPa",
         "U03.Z6.p_max_kPa",
         "U03.Z6.required_full_scale_kPa",
+        "U03.Z6.nominal_full_scale_kPa",
         "U03.balastni.p_ext_dno_kPa",
         "U03.balastni.p_ext_P_kPa",
         "U03.balastni.p_int_dno_A_kPa",
@@ -1716,7 +1717,8 @@
         "U12.REAL.P4.Re_L_fifth_root",
         "U12.REAL.P4.delta_turbulent_mm",
         "U12.REAL.P4.C_F_model",
-        "U12.REAL.P4.C_F_ship",
+        "U12.REAL.P4.C_F_laminar",
+        "U12.REAL.P4.C_F_ratio",
         "U12.REAL.P5.I",
         "U12.REAL.P5.I_percent",
         "U12.REAL.P5.k",
@@ -6599,7 +6601,7 @@
       "level": "T1",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 640,
+        "line": 647,
         "anchor": "#task-visina-iz-barometarskog-ocitanja"
       },
       "statement": {
@@ -6687,7 +6689,7 @@
             "text": "Zrak smatraj izotermalnim idealnim plinom s $T_0 = 288\\ \\text{K}$ i $R = 287\\ \\text{J/(kg K)}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 640
+              "line": 647
             }
           }
         ],
@@ -6697,21 +6699,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           }
         ],
@@ -6724,7 +6726,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 660
+          "line": 667
         }
       },
       "tolerance": {
@@ -6823,7 +6825,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 231
+              "line": 232
             }
           },
           {
@@ -6840,7 +6842,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 232
+              "line": 233
             }
           },
           {
@@ -6857,7 +6859,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 233
+              "line": 234
             }
           },
           {
@@ -6874,7 +6876,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 234
+              "line": 235
             }
           },
           {
@@ -6891,7 +6893,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 235
+              "line": 236
             }
           },
           {
@@ -6908,7 +6910,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 236
+              "line": 237
             }
           },
           {
@@ -6925,7 +6927,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 237
+              "line": 238
             }
           },
           {
@@ -6936,7 +6938,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 238
+              "line": 239
             }
           },
           {
@@ -6947,7 +6949,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 242
+              "line": 243
             }
           }
         ]
@@ -6960,7 +6962,7 @@
       "level": "T1",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 670,
+        "line": 677,
         "anchor": "#task-razina-vode-iz-razlike-tlakova"
       },
       "statement": {
@@ -7011,21 +7013,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           }
         ],
@@ -7038,7 +7040,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 691
+          "line": 698
         }
       },
       "tolerance": {
@@ -7097,7 +7099,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 246
+              "line": 247
             }
           },
           {
@@ -7114,7 +7116,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 247
+              "line": 248
             }
           },
           {
@@ -7125,7 +7127,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 248
+              "line": 249
             }
           },
           {
@@ -7136,7 +7138,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 251
+              "line": 252
             }
           }
         ]
@@ -7149,7 +7151,7 @@
       "level": "T2",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 701,
+        "line": 708,
         "anchor": "#task-nagnuti-manometar-ventilacijski-kanal"
       },
       "statement": {
@@ -7235,14 +7237,14 @@
             "text": "Gustoću zraka zanemari.",
             "provenance": {
               "kind": "task_statement",
-              "line": 701
+              "line": 708
             }
           },
           {
             "text": "Odredi pretlak u kanalu uz pretpostavku da se razina ulja u posudi ne mijenja.",
             "provenance": {
               "kind": "task_statement",
-              "line": 701
+              "line": 708
             }
           }
         ],
@@ -7252,21 +7254,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           }
         ],
@@ -7279,7 +7281,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 721
+          "line": 728
         }
       },
       "tolerance": {
@@ -7405,7 +7407,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 255
+              "line": 256
             }
           },
           {
@@ -7422,7 +7424,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 256
+              "line": 257
             }
           },
           {
@@ -7439,7 +7441,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 257
+              "line": 258
             }
           },
           {
@@ -7456,7 +7458,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 258
+              "line": 259
             }
           },
           {
@@ -7473,7 +7475,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 259
+              "line": 260
             }
           },
           {
@@ -7490,7 +7492,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 260
+              "line": 261
             }
           },
           {
@@ -7507,7 +7509,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 261
+              "line": 262
             }
           },
           {
@@ -7524,7 +7526,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 262
+              "line": 263
             }
           },
           {
@@ -7541,7 +7543,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 263
+              "line": 264
             }
           },
           {
@@ -7558,7 +7560,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 264
+              "line": 265
             }
           },
           {
@@ -7569,7 +7571,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 265
+              "line": 266
             }
           },
           {
@@ -7580,7 +7582,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 269
+              "line": 270
             }
           },
           {
@@ -7591,7 +7593,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 273
+              "line": 274
             }
           }
         ]
@@ -7604,7 +7606,7 @@
       "level": "T2",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 731,
+        "line": 738,
         "anchor": "#task-debljina-sloja-ulja-iz-tlaka"
       },
       "statement": {
@@ -7679,21 +7681,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           }
         ],
@@ -7706,7 +7708,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 750
+          "line": 757
         }
       },
       "tolerance": {
@@ -7805,7 +7807,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 277
+              "line": 278
             }
           },
           {
@@ -7822,7 +7824,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 278
+              "line": 279
             }
           },
           {
@@ -7839,7 +7841,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 279
+              "line": 280
             }
           },
           {
@@ -7856,7 +7858,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 280
+              "line": 281
             }
           },
           {
@@ -7873,7 +7875,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 281
+              "line": 282
             }
           },
           {
@@ -7890,7 +7892,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 282
+              "line": 283
             }
           },
           {
@@ -7907,7 +7909,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 283
+              "line": 284
             }
           },
           {
@@ -7918,7 +7920,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 284
+              "line": 285
             }
           },
           {
@@ -7929,7 +7931,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 289
+              "line": 290
             }
           }
         ]
@@ -7942,7 +7944,7 @@
       "level": "T3",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 760,
+        "line": 767,
         "anchor": "#task-izbor-manometra-za-podtlak"
       },
       "statement": {
@@ -8067,21 +8069,21 @@
             "text": "Lokalni atmosferski tlak iznosi $p_{atm} = 98{,}6\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 760
+              "line": 767
             }
           },
           {
             "text": "Gustoće i $g$ u ovom se proračunu smatraju točnima.",
             "provenance": {
               "kind": "task_statement",
-              "line": 760
+              "line": 767
             }
           },
           {
             "text": "Kreni od atmosferskog tlaka i uspona kroz manometarsku tekućinu prema strani podtlaka.",
             "provenance": {
               "kind": "task_hint",
-              "line": 777
+              "line": 784
             }
           }
         ],
@@ -8091,21 +8093,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           }
         ],
@@ -8118,7 +8120,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 783
+          "line": 790
         }
       },
       "tolerance": {
@@ -8220,7 +8222,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 294
+              "line": 295
             }
           },
           {
@@ -8237,7 +8239,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 295
+              "line": 296
             }
           },
           {
@@ -8254,7 +8256,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 296
+              "line": 297
             }
           },
           {
@@ -8271,7 +8273,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 297
+              "line": 298
             }
           },
           {
@@ -8288,7 +8290,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 298
+              "line": 299
             }
           },
           {
@@ -8305,7 +8307,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 299
+              "line": 300
             }
           },
           {
@@ -8322,7 +8324,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 300
+              "line": 301
             }
           },
           {
@@ -8333,7 +8335,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 301
+              "line": 302
             }
           },
           {
@@ -8344,7 +8346,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 303
+              "line": 304
             }
           },
           {
@@ -8355,7 +8357,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 307
+              "line": 308
             }
           }
         ]
@@ -8368,12 +8370,12 @@
       "level": "T4",
       "source": {
         "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-        "line": 791,
+        "line": 798,
         "anchor": "#task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Zatvoreni spremnik s vodom ima plinski prostor nepoznatog apsolutnog tlaka. Bočni priključak na dubini $h_1 = 0{,}65\\ \\text{m}$ spojen je na otvoreni U-manometar sa živom gustoće $\\rho_{Hg} = 13600\\ \\text{kg/m}^3$, pri čemu je razlika razina žive $\\Delta h = 0{,}210\\ \\text{m}$, a razina žive na strani spremnika niža. Spojni vod od priključka do žive potpuno je ispunjen vodom; granica vode i žive nalazi se **na istoj visini kao priključak**. Dublja točka leži $h_2=1{,}30\\ \\text{m}$ ispod slobodne površine vode. Uzmi $\\rho_v = 998\\ \\text{kg/m}^3$ i $p_{atm} = 100{,}9\\ \\text{kPa}$. Za izbor apsolutnoga pretvornika tlaka uzmi tolerancije $\\Delta h\\pm2\\ \\text{mm}$, $h_1\\pm5\\ \\text{mm}$, $h_2\\pm5\\ \\text{mm}$ i $p_{atm}\\pm0{,}4\\ \\text{kPa}$. Tolerancije su zajamčeni granični intervali, ne standardne nesigurnosti; dopuštena je svaka kombinacija njihovih vrijednosti. Geometrijski uvjet jednake visine priključka i granice vode i žive vrijedi u svim tim kombinacijama. **Traži se** 1. Odredi apsolutni tlak plina u spremniku i apsolutni tlak u dubljoj točki. 2. Odredi konzervativni najveći očekivani tlak u dubljoj točki i izaberi mjerno područje $0$–$140\\ \\text{kPa}$ ili $0$–$160\\ \\text{kPa}$ ako puna skala mora biti barem $5\\ \\%$ veća od najvećega očekivanog tlaka.",
-        "sha256": "182999957a6922764850d33f067d8bdb7e8a04731241cb97dc1a6388434ff683",
+        "markdown": "**Tekst zadatka** Zatvoreni spremnik s vodom ima plinski prostor nepoznatog apsolutnog tlaka. Bočni priključak na dubini $h_1 = 0{,}65\\ \\text{m}$ spojen je na otvoreni U-manometar sa živom gustoće $\\rho_{Hg} = 13600\\ \\text{kg/m}^3$, pri čemu je razlika razina žive $\\Delta h = 0{,}210\\ \\text{m}$, a razina žive na strani spremnika niža. Spojni vod od priključka do žive potpuno je ispunjen vodom; granica vode i žive nalazi se **na istoj visini kao priključak**. Dublja točka leži $h_2=1{,}30\\ \\text{m}$ ispod slobodne površine vode. Uzmi $\\rho_v = 998\\ \\text{kg/m}^3$ i $p_{atm} = 100{,}9\\ \\text{kPa}$. Za izbor apsolutnoga pretvornika tlaka uzmi tolerancije $\\Delta h\\pm2\\ \\text{mm}$, $h_1\\pm5\\ \\text{mm}$, $h_2\\pm5\\ \\text{mm}$ i $p_{atm}\\pm0{,}4\\ \\text{kPa}$. Tolerancije su zajamčeni granični intervali, ne standardne nesigurnosti; dopuštena je svaka kombinacija njihovih vrijednosti. Geometrijski uvjet jednake visine priključka i granice vode i žive vrijedi u svim tim kombinacijama. **Traži se** 1. Odredi apsolutni tlak plina u spremniku i apsolutni tlak u dubljoj točki. 2. Odredi konzervativni najveći očekivani tlak u dubljoj točki i izaberi mjerno područje $0$–$140\\ \\text{kPa}$ ili $0$–$160\\ \\text{kPa}$ ako puna skala mora biti barem $3\\ \\%$ veća od najvećega očekivanog tlaka.",
+        "sha256": "23f11ad39d3a9631fafa85029788b870539f05b7a51b44dc7d00982988e6e0fd",
         "authoritative": true
       },
       "input_data": {
@@ -8485,13 +8487,13 @@
           {
             "symbol": null,
             "relation": "context_value",
-            "value_text": "5",
-            "value": 5.0,
+            "value_text": "3",
+            "value": 3.0,
             "unit_text": "\\ \\%",
             "normalized_unit": "%",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 0.05,
+              "value": 0.03,
               "unit": "1"
             }
           }
@@ -8512,21 +8514,21 @@
             "text": "Uzmi $\\rho_v = 998\\ \\text{kg/m}^3$ i $p_{atm} = 100{,}9\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 791
+              "line": 798
             }
           },
           {
             "text": "Za izbor apsolutnoga pretvornika tlaka uzmi tolerancije $\\Delta h\\pm2\\ \\text{mm}$, $h_1\\pm5\\ \\text{mm}$, $h_2\\pm5\\ \\text{mm}$ i $p_{atm}\\pm0{,}4\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 791
+              "line": 798
             }
           },
           {
             "text": "Za konzervativnu gornju granicu istodobno uzmi najveće $p_{atm}$, $\\Delta h$ i $h_2$, a najmanje $h_1$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 808
+              "line": 815
             }
           }
         ],
@@ -8536,21 +8538,21 @@
             "text": "U svim zadatcima uzmi $g = 9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Fluidi miruju, gustoće su stalne, a utjecaji kapilarnosti i težine plina zanemaruju se;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           },
           {
             "text": "Podatci i mjerna ograničenja nastavne su pretpostavke;",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 632
+              "line": 639
             }
           }
         ],
@@ -8559,11 +8561,11 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$p_{pl} \\approx 122{,}6\\ \\text{kPa}$ (aps.); na dubini $1{,}30\\ \\text{m}$: $p \\approx 135{,}3\\ \\text{kPa}$. Konzervativna gornja granica iznosi $p_{max}\\approx136{,}05\\ \\text{kPa}$, pa uz rezervu od $5\\ \\%$ treba puna skala od najmanje $142{,}85\\ \\text{kPa}$. Pretvornik $0$–$140\\ \\text{kPa}$ nije dostatan; bira se područje $0$–$160\\ \\text{kPa}$.",
+        "markdown": "$p_{pl} \\approx 122{,}6\\ \\text{kPa}$ (aps.); na dubini $1{,}30\\ \\text{m}$: $p \\approx 135{,}3\\ \\text{kPa}$. Nominalni tlak uz rezervu od $3\\ \\%$ traži punu skalu od $139{,}34\\ \\text{kPa}$, pa bi prošao pretvornik $0$–$140\\ \\text{kPa}$. Konzervativna gornja granica iznosi $p_{max}\\approx136{,}05\\ \\text{kPa}$ i traži najmanje $140{,}13\\ \\text{kPa}$, pa zbog tolerancija treba područje $0$–$160\\ \\text{kPa}$.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u03_hidrostaticka_raspodjela_tlaka_i_manometrija.md",
-          "line": 814
+          "line": 821
         }
       },
       "tolerance": {
@@ -8596,17 +8598,26 @@
             "value": 5e-05,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
+          },
+          {
+            "result_id": "U03.Z6.nominal_full_scale_kPa",
+            "kind": "relative",
+            "value": 5e-05,
+            "value_kind": "literal",
+            "provenance": "verifier_call_keyword"
           }
         ]
       },
       "independent_check": {
         "kind": "executed_invariant",
         "criterion": [
+          "z6['nominal_full_scale'] <= 140000.0 < z6['required_full_scale']",
           "abs(max(corners) - z6['p_max']) < 1e-08",
           "abs(z6['p_G'] + 998 * 9.81 * 0.65 - 13600 * 9.81 * 0.21 - 100900) < 1e-08",
           "140000.0 < z6['required_full_scale'] <= 160000.0"
         ],
         "verifier_result_ids": [
+          "U03.Z6.tolerance_changes_choice",
           "U03.Z6.interval_corners",
           "U03.Z6.manometer_walk",
           "U03.Z6.sensor_range_choice"
@@ -8622,6 +8633,8 @@
           "U03.Z6.p_tocka_kPa",
           "U03.Z6.p_max_kPa",
           "U03.Z6.required_full_scale_kPa",
+          "U03.Z6.nominal_full_scale_kPa",
+          "U03.Z6.tolerance_changes_choice",
           "U03.Z6.interval_corners",
           "U03.Z6.manometer_walk",
           "U03.Z6.sensor_range_choice"
@@ -8641,7 +8654,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 312
+              "line": 313
             }
           },
           {
@@ -8658,7 +8671,7 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 313
+              "line": 314
             }
           },
           {
@@ -8675,13 +8688,13 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 314
+              "line": 315
             }
           },
           {
             "result_id": "U03.Z6.required_full_scale_kPa",
             "verification": "golden",
-            "target": 142.85,
+            "target": 140.13,
             "target_kind": "literal",
             "unit": "kPa",
             "tolerance": {
@@ -8692,7 +8705,35 @@
             },
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 315
+              "line": 316
+            }
+          },
+          {
+            "result_id": "U03.Z6.nominal_full_scale_kPa",
+            "verification": "golden",
+            "target": 139.34,
+            "target_kind": "literal",
+            "unit": "kPa",
+            "tolerance": {
+              "kind": "relative",
+              "value": 5e-05,
+              "value_kind": "literal",
+              "provenance": "verifier_call_keyword"
+            },
+            "provenance": {
+              "path": "tools/verify_u03.py",
+              "line": 317
+            }
+          },
+          {
+            "result_id": "U03.Z6.tolerance_changes_choice",
+            "verification": "invariant",
+            "criterion_expression": "z6['nominal_full_scale'] <= 140000.0 < z6['required_full_scale']",
+            "failure_message": "Tolerancije moraju promijeniti izbor mjernog podrucja (T4).",
+            "failure_message_kind": "literal",
+            "provenance": {
+              "path": "tools/verify_u03.py",
+              "line": 318
             }
           },
           {
@@ -8703,7 +8744,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 318
+              "line": 322
             }
           },
           {
@@ -8714,7 +8755,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 320
+              "line": 324
             }
           },
           {
@@ -8725,7 +8766,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u03.py",
-              "line": 323
+              "line": 327
             }
           }
         ]
@@ -15402,8 +15443,8 @@
         "anchor": "#task-grijac-ventilacijskog-zraka-strojarnice"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Zrak gustoće $\\rho_1 = 1{,}20\\ \\text{kg/m}^3$ ulazi u grijač ventilacijskog kanala strojarnice srednjom brzinom $v_1 = 12{,}0\\ \\text{m/s}$ kroz presjek površine $A_1 = 0{,}30\\ \\text{m}^2$. Zagrijani zrak gustoće $\\rho_2 = 1{,}02\\ \\text{kg/m}^3$ izlazi kroz presjek površine $A_2 = 0{,}24\\ \\text{m}^2$. Strujanje je stacionarno; nema drugih priključaka ni akumulacije. **Traži se** Odredi maseni protok, izlaznu srednju brzinu te volumenske protoke na ulazu i izlazu. Objasni zašto ovdje ne vrijedi $A_1 v_1 = A_2 v_2$.",
-        "sha256": "372cc1cb3c96b43d567388598b9b553a55951c182e63e803c8e28e9d7f34d3e7",
+        "markdown": "**Tekst zadatka** Zimski vanjski zrak gustoće $\\rho_1 = 1{,}34\\ \\text{kg/m}^3$ (oko −10 °C) ulazi u grijač ventilacijskog kanala strojarnice srednjom brzinom $v_1 = 12{,}0\\ \\text{m/s}$ kroz presjek površine $A_1 = 0{,}30\\ \\text{m}^2$. Zagrijani zrak gustoće $\\rho_2 = 1{,}20\\ \\text{kg/m}^3$ (oko 20 °C) izlazi kroz presjek površine $A_2 = 0{,}24\\ \\text{m}^2$. Strujanje je stacionarno; nema drugih priključaka ni akumulacije. **Traži se** Odredi maseni protok, izlaznu srednju brzinu te volumenske protoke na ulazu i izlazu. Objasni zašto ovdje ne vrijedi $A_1 v_1 = A_2 v_2$.",
+        "sha256": "5de160cb273b246d501b761efd857a4dd8fd8c2fca30bef85b2fb057e138d8a9",
         "authoritative": true
       },
       "input_data": {
@@ -15411,13 +15452,13 @@
           {
             "symbol": "\\rho_1",
             "relation": "=",
-            "value_text": "1{,}20",
-            "value": 1.2,
+            "value_text": "1{,}34",
+            "value": 1.34,
             "unit_text": "\\ \\text{kg/m}^3",
             "normalized_unit": "kg/m^3",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 1.2,
+              "value": 1.34,
               "unit": "kg/m^3"
             }
           },
@@ -15450,13 +15491,13 @@
           {
             "symbol": "\\rho_2",
             "relation": "=",
-            "value_text": "1{,}02",
-            "value": 1.02,
+            "value_text": "1{,}20",
+            "value": 1.2,
             "unit_text": "\\ \\text{kg/m}^3",
             "normalized_unit": "kg/m^3",
             "provenance": "task_statement_inline_math",
             "si": {
-              "value": 1.02,
+              "value": 1.2,
               "unit": "kg/m^3"
             }
           },
@@ -15505,7 +15546,7 @@
       },
       "published_control": {
         "kind": "numeric",
-        "markdown": "$\\dot m = 4{,}32\\ \\text{kg/s}$; $v_2 \\approx 17{,}6\\ \\text{m/s}$; $Q_1 = 3{,}60\\ \\text{m}^3/\\text{s}$, $Q_2 \\approx 4{,}24\\ \\text{m}^3/\\text{s}$. Volumenski protok raste jer gustoća pada; jednak je samo maseni protok.",
+        "markdown": "$\\dot m \\approx 4{,}82\\ \\text{kg/s}$; $v_2 \\approx 16{,}8\\ \\text{m/s}$; $Q_1 = 3{,}60\\ \\text{m}^3/\\text{s}$, $Q_2 \\approx 4{,}02\\ \\text{m}^3/\\text{s}$. Volumenski protok raste jer gustoća pada; jednak je samo maseni protok.",
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u07_kinematika_kontrolni_volumen_i_kontinuitet.md",
@@ -15518,7 +15559,7 @@
           {
             "result_id": "U08.Z1.m_dot",
             "kind": "relative",
-            "value": 1e-10,
+            "value": 0.001,
             "value_kind": "literal",
             "provenance": "verifier_call_keyword"
           },
@@ -15587,12 +15628,12 @@
           {
             "result_id": "U08.Z1.m_dot",
             "verification": "golden",
-            "target": 4.32,
+            "target": 4.82,
             "target_kind": "literal",
             "unit": "kg/s",
             "tolerance": {
               "kind": "relative",
-              "value": 1e-10,
+              "value": 0.001,
               "value_kind": "literal",
               "provenance": "verifier_call_keyword"
             },
@@ -15604,7 +15645,7 @@
           {
             "result_id": "U08.Z1.v_2",
             "verification": "golden",
-            "target": 17.6,
+            "target": 16.8,
             "target_kind": "literal",
             "unit": "m/s",
             "tolerance": {
@@ -15638,7 +15679,7 @@
           {
             "result_id": "U08.Z1.Q_2",
             "verification": "golden",
-            "target": 4.24,
+            "target": 4.02,
             "target_kind": "literal",
             "unit": "m^3/s",
             "tolerance": {
@@ -17123,7 +17164,7 @@
       "level": "T1",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 654,
+        "line": 656,
         "anchor": "#task-u09-veliki-otvoreni-spremnik-sadrzi-vodu-do-visine"
       },
       "statement": {
@@ -17183,21 +17224,21 @@
             "text": "Za vodu uzmi $\\rho=998\\ \\text{kg/m}^3$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 654
+              "line": 656
             }
           },
           {
             "text": "Promatraj kvazistacionarni trenutak dok se razina velikog spremnika zanemarivo mijenja.",
             "provenance": {
               "kind": "task_statement",
-              "line": 654
+              "line": 656
             }
           },
           {
             "text": "Zanemari gubitke.",
             "provenance": {
               "kind": "task_statement",
-              "line": 654
+              "line": 656
             }
           }
         ],
@@ -17207,14 +17248,14 @@
             "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           },
           {
             "text": "U Z2 Bernoullijeva se jednadžba primjenjuje kvazistacionarno: u svakom trenutku vrijedi za trenutačnu razinu, a njezinu promjenu prati bilanca mase spremnika.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           }
         ],
@@ -17227,7 +17268,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 672
+          "line": 674
         }
       },
       "tolerance": {
@@ -17350,7 +17391,7 @@
       "level": "T2",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 684,
+        "line": 686,
         "anchor": "#task-vrijeme-praznjenja-spremnika"
       },
       "statement": {
@@ -17440,14 +17481,14 @@
             "text": "Voda je nestlačiva, a strujanje u svakom trenutku kvazistacionarno.",
             "provenance": {
               "kind": "task_statement",
-              "line": 684
+              "line": 686
             }
           },
           {
             "text": "Usporedi to vrijeme s procjenom koja početni protok smatra stalnim te odredi vrijeme potpunog pražnjenja.",
             "provenance": {
               "kind": "task_statement",
-              "line": 684
+              "line": 686
             }
           }
         ],
@@ -17457,14 +17498,14 @@
             "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           },
           {
             "text": "U Z2 Bernoullijeva se jednadžba primjenjuje kvazistacionarno: u svakom trenutku vrijedi za trenutačnu razinu, a njezinu promjenu prati bilanca mase spremnika.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           }
         ],
@@ -17477,7 +17518,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 704
+          "line": 706
         }
       },
       "tolerance": {
@@ -17699,7 +17740,7 @@
       "level": "T1",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 714,
+        "line": 716,
         "anchor": "#task-tlak-u-silaznom-suzenju"
       },
       "statement": {
@@ -17787,14 +17828,14 @@
             "text": "Tekst zadatka** Voda gustoće $\\rho=1000\\ \\text{kg/m}^3$ stacionarno teče kroz glatko silazno suženje.",
             "provenance": {
               "kind": "task_statement",
-              "line": 714
+              "line": 716
             }
           },
           {
             "text": "Zanemari gubitke i pretpostavi jednolike brzine u referentnim presjecima.",
             "provenance": {
               "kind": "task_statement",
-              "line": 714
+              "line": 716
             }
           }
         ],
@@ -17804,14 +17845,14 @@
             "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           },
           {
             "text": "U Z2 Bernoullijeva se jednadžba primjenjuje kvazistacionarno: u svakom trenutku vrijedi za trenutačnu razinu, a njezinu promjenu prati bilanca mase spremnika.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           }
         ],
@@ -17824,7 +17865,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 733
+          "line": 735
         }
       },
       "tolerance": {
@@ -17947,7 +17988,7 @@
       "level": "T2",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 743,
+        "line": 745,
         "anchor": "#task-pitot-s-izdignutim-senzorom"
       },
       "statement": {
@@ -18020,21 +18061,21 @@
             "text": "Senzor očitava $p_{M,S}=24{,}0\\ \\text{kPa}$ prema istoj atmosferskoj referenci.",
             "provenance": {
               "kind": "task_statement",
-              "line": 743
+              "line": 745
             }
           },
           {
             "text": "Zanemari gubitke pri zaustavljanju struje, kapilarne učinke i utjecaj graničnog sloja trupa;",
             "provenance": {
               "kind": "task_statement",
-              "line": 743
+              "line": 745
             }
           },
           {
             "text": "Koliku bi brzinu dao račun koji zanemari visinsku razliku senzora?",
             "provenance": {
               "kind": "task_statement",
-              "line": 743
+              "line": 745
             }
           }
         ],
@@ -18044,14 +18085,14 @@
             "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           },
           {
             "text": "U Z2 Bernoullijeva se jednadžba primjenjuje kvazistacionarno: u svakom trenutku vrijedi za trenutačnu razinu, a njezinu promjenu prati bilanca mase spremnika.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           }
         ],
@@ -18064,7 +18105,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 764
+          "line": 766
         }
       },
       "tolerance": {
@@ -18247,7 +18288,7 @@
       "level": "T3",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 774,
+        "line": 776,
         "anchor": "#task-odabir-grla-prema-tlaku"
       },
       "statement": {
@@ -18350,14 +18391,14 @@
             "text": "U idealnom modelu bez gubitaka potrebno je istodobno ostvariti apsolutni tlak u grlu (presjek 2) $p_{aps,2}\\ge60\\ \\text{kPa}$ i razliku statičkih tlakova za mjerenje $p_1-p_2\\ge40\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 774
+              "line": 776
             }
           },
           {
             "text": "Pretpostavi jednolike brzine u referentnim presjecima;",
             "provenance": {
               "kind": "task_statement",
-              "line": 774
+              "line": 776
             }
           }
         ],
@@ -18367,14 +18408,14 @@
             "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           },
           {
             "text": "U Z2 Bernoullijeva se jednadžba primjenjuje kvazistacionarno: u svakom trenutku vrijedi za trenutačnu razinu, a njezinu promjenu prati bilanca mase spremnika.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           }
         ],
@@ -18387,7 +18428,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 794
+          "line": 796
         }
       },
       "tolerance": {
@@ -18660,7 +18701,7 @@
       "level": "T4",
       "source": {
         "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-        "line": 802,
+        "line": 804,
         "anchor": "#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako"
       },
       "statement": {
@@ -18810,35 +18851,35 @@
             "text": "Promatraj kvazistacionarni trenutak i uzmi gustoću vode $\\rho=1000\\ \\text{kg/m}^3$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 802
+              "line": 804
             }
           },
           {
             "text": "Idealni sifon promjera $D = 70\\ \\text{mm}$ prazni otvoreni spremnik tako da je izlaz vodoravan i nalazi se $\\Delta z = 2{,}6\\ \\text{m}$ ispod slobodne površine.",
             "provenance": {
               "kind": "task_statement",
-              "line": 802
+              "line": 804
             }
           },
           {
             "text": "Atmosferski tlak je $p_{atm} = 101{,}3\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 802
+              "line": 804
             }
           },
           {
             "text": "Najprije zanemari gubitke i odredi brzinu i volumenski protok u sifonu, apsolutni tlak u vrhu sifona te vodoravni domet mlaza nakon izlaza.",
             "provenance": {
               "kind": "task_statement",
-              "line": 802
+              "line": 804
             }
           },
           {
             "text": "Bernoullijevom jednadžbom između slobodne površine i izlaza odredi idealni $v$, a između slobodne površine i vrha sifona odredi tlak.",
             "provenance": {
               "kind": "task_hint",
-              "line": 820
+              "line": 822
             }
           }
         ],
@@ -18848,14 +18889,14 @@
             "text": "Za sve vježbe uzmi $g=9{,}81\\ \\text{m/s}^2$.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           },
           {
             "text": "U Z2 Bernoullijeva se jednadžba primjenjuje kvazistacionarno: u svakom trenutku vrijedi za trenutačnu razinu, a njezinu promjenu prati bilanca mase spremnika.",
             "provenance": {
               "kind": "chapter_exercise_preamble",
-              "line": 648
+              "line": 650
             }
           }
         ],
@@ -18868,7 +18909,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u08_energijska_jednadzba_i_bernoulli.md",
-          "line": 826
+          "line": 828
         }
       },
       "tolerance": {
@@ -23331,14 +23372,14 @@
         "anchor": "#task-ventilacijski-kanal-hidraulicki-promjer"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $a=0{,}400\\ \\text{m}$ i visine $b=0{,}200\\ \\text{m}$. Zrak kinematičke viskoznosti $\\nu=1{,}50\\cdot10^{-5}\\ \\text{m}^2/\\text{s}$ struji volumenskim protokom $Q=0{,}640\\ \\text{m}^3/\\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ oplakani opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno. **Traži se** 1. Odredi srednju brzinu i hidraulički promjer. 2. Odredi Reynoldsov broj i prosudi režim. 3. Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\\lambda(Re,k_s/D)$.",
-        "sha256": "835a80a112445c2950f7fc945dfd0320904c6b201a5f3a02c58c217e81a0b88c",
+        "markdown": "**Tekst zadatka** Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $B=0{,}400\\ \\text{m}$ i visine $H=0{,}200\\ \\text{m}$. Zrak kinematičke viskoznosti $\\nu=1{,}50\\cdot10^{-5}\\ \\text{m}^2/\\text{s}$ struji volumenskim protokom $Q=0{,}640\\ \\text{m}^3/\\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ oplakani opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno. **Traži se** 1. Odredi srednju brzinu i hidraulički promjer. 2. Odredi Reynoldsov broj i prosudi režim. 3. Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $B$? Objasni zašto takav broj nije usporediv s dijagramom $\\lambda(Re,k_s/D)$.",
+        "sha256": "c3337bea3dacf9bf05e932057b9111bbd6f3dcb28db0ddf7f703479962648e36",
         "authoritative": true
       },
       "input_data": {
         "scalars": [
           {
-            "symbol": "a",
+            "symbol": "B",
             "relation": "=",
             "value_text": "0{,}400",
             "value": 0.4,
@@ -23351,7 +23392,7 @@
             }
           },
           {
-            "symbol": "b",
+            "symbol": "H",
             "relation": "=",
             "value_text": "0{,}200",
             "value": 0.2,
@@ -23399,7 +23440,7 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $a$?",
+            "text": "Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $B$?",
             "provenance": {
               "kind": "task_statement",
               "line": 763
@@ -23936,8 +23977,8 @@
         "anchor": "#task-u14-na-referentnom-presjeku-usisa-crpke-apsolutni-tlak"
       },
       "statement": {
-        "markdown": "**Tekst zadatka** Na referentnom presjeku usisa crpke senzor pokazuje manometarski tlak $p_M=-20{,}0\\ \\text{kPa}$, odnosno podtlak od $20{,}0\\ \\text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\\ \\text{kPa}$. Gustoća vode je $\\rho=1000\\ \\text{kg/m}^3$, a tlak pare $p_v=2340\\ \\text{Pa}$. Prema zadanom nastavnom modelu karakteristike, početak kavitacije za oba razmatrana režima odgovara vrijednosti $\\sigma_{kr}=3{,}0$, uz iste referentne veličine. Ocjenjuje se samo taj kriterij; granična jednakost ne daje dodatnu pogonsku rezervu. Usporedi režime s brzinama $v_1=4{,}00\\ \\text{m/s}$ i $v_2=8{,}00\\ \\text{m/s}$ pri istom tlaku. **Traži se** 1. Najprije odredi apsolutni tlak i kavitacijski broj za brzinu $v_1$. 2. Zatim prosudi režim s brzinom $v_2$ pri istom očitanju tlaka. 3. Koji bi najmanji manometarski tlak senzor morao pokazivati pri $v_2$ da bi bio zadovoljen zadani kriterij $\\sigma_{kav}\\geq\\sigma_{kr}$?",
-        "sha256": "48a4a0157eeada466a73b613cf66c6ee72939d104df01de35d0e12b254b5def6",
+        "markdown": "**Tekst zadatka** Na referentnom presjeku, suženom ulazu u radno kolo crpke, senzor pokazuje manometarski tlak $p_M=-20{,}0\\ \\text{kPa}$, odnosno podtlak od $20{,}0\\ \\text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\\ \\text{kPa}$. Gustoća vode je $\\rho=1000\\ \\text{kg/m}^3$, a tlak pare $p_v=2340\\ \\text{Pa}$. Prema zadanom nastavnom modelu karakteristike, početak kavitacije za oba razmatrana režima odgovara vrijednosti $\\sigma_{kr}=3{,}0$, uz iste referentne veličine. Ocjenjuje se samo taj kriterij; granična jednakost ne daje dodatnu pogonsku rezervu. Usporedi režime s brzinama $v_1=4{,}00\\ \\text{m/s}$ i $v_2=8{,}00\\ \\text{m/s}$ pri istom tlaku. **Traži se** 1. Najprije odredi apsolutni tlak i kavitacijski broj za brzinu $v_1$. 2. Zatim prosudi režim s brzinom $v_2$ pri istom očitanju tlaka. 3. Koji bi najmanji manometarski tlak senzor morao pokazivati pri $v_2$ da bi bio zadovoljen zadani kriterij $\\sigma_{kav}\\geq\\sigma_{kr}$?",
+        "sha256": "a6564699bab1cded4a3bc53b13c1ec0b39c1f28611014ebc30e97bc2d269b7af",
         "authoritative": true
       },
       "input_data": {
@@ -24057,7 +24098,7 @@
       "assumptions": {
         "explicit": [
           {
-            "text": "Tekst zadatka** Na referentnom presjeku usisa crpke senzor pokazuje manometarski tlak $p_M=-20{,}0\\ \\text{kPa}$, odnosno podtlak od $20{,}0\\ \\text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\\ \\text{kPa}$.",
+            "text": "Tekst zadatka** Na referentnom presjeku, suženom ulazu u radno kolo crpke, senzor pokazuje manometarski tlak $p_M=-20{,}0\\ \\text{kPa}$, odnosno podtlak od $20{,}0\\ \\text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\\ \\text{kPa}$.",
             "provenance": {
               "kind": "task_statement",
               "line": 825
@@ -25629,7 +25670,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 456
+              "line": 458
             }
           },
           {
@@ -25646,7 +25687,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 457
+              "line": 459
             }
           },
           {
@@ -25663,7 +25704,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 458
+              "line": 460
             }
           },
           {
@@ -25680,7 +25721,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 459
+              "line": 461
             }
           }
         ]
@@ -25978,7 +26019,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 461
+              "line": 463
             }
           },
           {
@@ -25995,7 +26036,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 462
+              "line": 464
             }
           },
           {
@@ -26012,7 +26053,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 463
+              "line": 465
             }
           },
           {
@@ -26029,7 +26070,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 464
+              "line": 466
             }
           },
           {
@@ -26046,7 +26087,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 465
+              "line": 467
             }
           },
           {
@@ -26063,7 +26104,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 466
+              "line": 468
             }
           },
           {
@@ -26080,7 +26121,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 467
+              "line": 469
             }
           },
           {
@@ -26097,7 +26138,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 468
+              "line": 470
             }
           }
         ]
@@ -26301,7 +26342,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 480
+              "line": 482
             }
           },
           {
@@ -26318,7 +26359,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 488
+              "line": 490
             }
           },
           {
@@ -26335,7 +26376,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 496
+              "line": 498
             }
           },
           {
@@ -26346,7 +26387,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 713
+              "line": 715
             }
           },
           {
@@ -26357,7 +26398,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 719
+              "line": 721
             }
           }
         ]
@@ -26532,7 +26573,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 506
+              "line": 508
             }
           },
           {
@@ -26549,7 +26590,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 514
+              "line": 516
             }
           },
           {
@@ -26566,7 +26607,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 515
+              "line": 517
             }
           },
           {
@@ -26583,7 +26624,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 516
+              "line": 518
             }
           },
           {
@@ -26594,7 +26635,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 732
+              "line": 734
             }
           },
           {
@@ -26605,7 +26646,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 741
+              "line": 743
             }
           }
         ]
@@ -26830,7 +26871,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 520
+              "line": 522
             }
           },
           {
@@ -26847,7 +26888,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 521
+              "line": 523
             }
           },
           {
@@ -26864,7 +26905,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 522
+              "line": 524
             }
           },
           {
@@ -26881,7 +26922,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 530
+              "line": 532
             }
           },
           {
@@ -26898,7 +26939,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 540
+              "line": 542
             }
           },
           {
@@ -26909,7 +26950,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 760
+              "line": 762
             }
           }
         ]
@@ -27281,7 +27322,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 541
+              "line": 543
             }
           },
           {
@@ -27298,7 +27339,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 542
+              "line": 544
             }
           },
           {
@@ -27315,7 +27356,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 550
+              "line": 552
             }
           },
           {
@@ -27332,7 +27373,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 558
+              "line": 560
             }
           },
           {
@@ -27349,7 +27390,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 566
+              "line": 568
             }
           },
           {
@@ -27366,7 +27407,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 577
+              "line": 579
             }
           },
           {
@@ -27383,7 +27424,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 579
+              "line": 581
             }
           },
           {
@@ -27400,7 +27441,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 581
+              "line": 583
             }
           },
           {
@@ -27417,7 +27458,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 583
+              "line": 585
             }
           },
           {
@@ -27434,7 +27475,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 585
+              "line": 587
             }
           },
           {
@@ -27451,7 +27492,7 @@
             },
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 587
+              "line": 589
             }
           },
           {
@@ -27462,7 +27503,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 589
+              "line": 591
             }
           },
           {
@@ -27473,7 +27514,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 596
+              "line": 598
             }
           },
           {
@@ -27484,7 +27525,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 768
+              "line": 770
             }
           },
           {
@@ -27495,7 +27536,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 789
+              "line": 791
             }
           },
           {
@@ -27506,7 +27547,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 805
+              "line": 807
             }
           },
           {
@@ -27517,7 +27558,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 813
+              "line": 815
             }
           },
           {
@@ -27528,7 +27569,7 @@
             "failure_message_kind": "literal",
             "provenance": {
               "path": "tools/verify_u12_real_flow.py",
-              "line": 825
+              "line": 827
             }
           }
         ]
@@ -29950,7 +29991,7 @@
       "level": "T1",
       "source": {
         "path": "source/u14_turbostrojevi_i_propulzija.md",
-        "line": 702,
+        "line": 697,
         "anchor": "#task-propeler-isti-potisak-dva-promjera"
       },
       "statement": {
@@ -30036,21 +30077,21 @@
             "text": "Propeler modeliraj idealnim aktuatorskim diskom.",
             "provenance": {
               "kind": "task_statement",
-              "line": 702
+              "line": 697
             }
           },
           {
             "text": "Traži se** Za oba promjera odredi koeficijent opterećenja potiskom $C_{Th}$, idealnu učinkovitost $\\eta_i$ i idealnu snagu $P_i$, a zatim obrazloži što se dobiva većim promjerom.",
             "provenance": {
               "kind": "task_statement",
-              "line": 702
+              "line": 697
             }
           },
           {
             "text": "Idealna snaga jednaka je korisnoj snazi $F_Tv_A$ podijeljenoj s $\\eta_i$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 714
+              "line": 709
             }
           }
         ],
@@ -30065,7 +30106,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_turbostrojevi_i_propulzija.md",
-          "line": 720
+          "line": 715
         }
       },
       "tolerance": {
@@ -30337,7 +30378,7 @@
       "level": "T1",
       "source": {
         "path": "source/u14_turbostrojevi_i_propulzija.md",
-        "line": 729,
+        "line": 724,
         "anchor": "#task-pokretna-ploca-i-kolo-s-plocama"
       },
       "statement": {
@@ -30425,7 +30466,7 @@
             "text": "U oba slučaja fluid se uz ploču razlijeva okomito na smjer gibanja u sustavu ploče, tlak je svuda atmosferski, a trenje i težinu zanemari.",
             "provenance": {
               "kind": "task_statement",
-              "line": 729
+              "line": 724
             }
           }
         ],
@@ -30440,7 +30481,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_turbostrojevi_i_propulzija.md",
-          "line": 748
+          "line": 743
         }
       },
       "tolerance": {
@@ -30812,7 +30853,7 @@
       "level": "T2",
       "source": {
         "path": "source/u14_turbostrojevi_i_propulzija.md",
-        "line": 757,
+        "line": 752,
         "anchor": "#task-izlaz-lopatice-iz-izmjerene-sile"
       },
       "statement": {
@@ -30893,7 +30934,7 @@
             "text": "Tok je stacionaran u tom okviru, presjeci imaju jednolike brzine, tlakovi su atmosferski, a težinu zanemari.",
             "provenance": {
               "kind": "task_statement",
-              "line": 757
+              "line": 752
             }
           }
         ],
@@ -30908,7 +30949,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_turbostrojevi_i_propulzija.md",
-          "line": 778
+          "line": 773
         }
       },
       "tolerance": {
@@ -31194,7 +31235,7 @@
       "level": "T2",
       "source": {
         "path": "source/u14_turbostrojevi_i_propulzija.md",
-        "line": 787,
+        "line": 782,
         "anchor": "#task-dva-radijusa-i-rad-rotora"
       },
       "statement": {
@@ -31272,7 +31313,7 @@
             "text": "Tekst zadatka** Rotor ima $r_1=0{,}060\\ \\mathrm{m}$, $r_2=0{,}140\\ \\mathrm{m}$, $\\omega=200\\ \\mathrm{rad/s}$ i ukupni stacionarni maseni protok kroz rotor $\\dot m=3{,}00\\ \\mathrm{kg/s}$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 787
+              "line": 782
             }
           }
         ],
@@ -31287,7 +31328,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_turbostrojevi_i_propulzija.md",
-          "line": 808
+          "line": 803
         }
       },
       "tolerance": {
@@ -31598,7 +31639,7 @@
       "level": "T3",
       "source": {
         "path": "source/u14_turbostrojevi_i_propulzija.md",
-        "line": 817,
+        "line": 812,
         "anchor": "#task-vodomlazni-pogon-uz-ogranicenu-snagu"
       },
       "statement": {
@@ -31712,35 +31753,35 @@
             "text": "Zanemari razliku geodetskih visina, vanjske tlačne doprinose potisku, utjecaj traga trupa i gubitke u dovodu i sapnici.",
             "provenance": {
               "kind": "task_statement",
-              "line": 817
+              "line": 812
             }
           },
           {
             "text": "Na referentnim presjecima uzmi jednak, atmosferski tlak.",
             "provenance": {
               "kind": "task_statement",
-              "line": 817
+              "line": 812
             }
           },
           {
             "text": "Tok je stacionaran u brodskom okviru, uz jednak ulazni i izlazni maseni protok.",
             "provenance": {
               "kind": "task_statement",
-              "line": 817
+              "line": 812
             }
           },
           {
             "text": "Provjeri da je $\\eta_{prop}=2v_s/(v_j+v_s)$, dakle upravo Froudeova idealna učinkovitost iz jednadžbe [-@eq-idealna-ucinkovitost-propelera] uz $v_A=v_s$.",
             "provenance": {
               "kind": "task_statement",
-              "line": 817
+              "line": 812
             }
           },
           {
             "text": "Neovisna provjera: $P_h=F_Tv_s+\\rho Q(v_j-v_s)^2/2$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 834
+              "line": 829
             }
           }
         ],
@@ -31755,7 +31796,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_turbostrojevi_i_propulzija.md",
-          "line": 840
+          "line": 835
         }
       },
       "tolerance": {
@@ -32141,7 +32182,7 @@
       "level": "T4",
       "source": {
         "path": "source/u14_turbostrojevi_i_propulzija.md",
-        "line": 847,
+        "line": 842,
         "anchor": "#task-u12-mlazna-platforma-ukupne-mase-ima-cetiri-jednake"
       },
       "statement": {
@@ -32253,21 +32294,21 @@
             "text": "Izlazi su na atmosferskom tlaku.",
             "provenance": {
               "kind": "task_statement",
-              "line": 847
+              "line": 842
             }
           },
           {
             "text": "Primijeni kvazistacionarni model u trenutku kad platforma miruje, uz zanemarenu akumulaciju relativne količine gibanja u razdjelniku.",
             "provenance": {
               "kind": "task_statement",
-              "line": 847
+              "line": 842
             }
           },
           {
             "text": "Uz zadane pretpostavke vrijedi $F_T=\\rho Av^2$, masa lebdenja je $F_T/g$, a trenutačno ubrzanje $a=(F_T-mg)/m$.",
             "provenance": {
               "kind": "task_hint",
-              "line": 863
+              "line": 858
             }
           }
         ],
@@ -32282,7 +32323,7 @@
         "reason_if_absent": null,
         "provenance": {
           "path": "source/u14_turbostrojevi_i_propulzija.md",
-          "line": 869
+          "line": 864
         }
       },
       "tolerance": {

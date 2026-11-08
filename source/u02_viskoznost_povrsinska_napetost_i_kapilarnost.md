@@ -490,14 +490,14 @@ Pri punjenju je meniskus konkavan, pa je tlak vode neposredno ispod njega niži 
 :::
 
 ::: {#ex-u02-hladni-start-i-radna-temperatura-koliko-kosta .mf1-we}
-<p class="mf1-box-label">Utjecaj temperature na viskozni otpor ležaja statvene cijevi&nbsp;<span class="mf1-level">T2</span></p>
+<p class="mf1-box-label">Utjecaj temperature na viskozni otpor kliznog ležaja&nbsp;<span class="mf1-level">T2</span></p>
 
 
 **Tekst zadatka**
 
-Uljem podmazani koncentrični ležaj statvene cijevi manjeg plovila ima promjer osovine propelera $D = 50\ \text{mm}$, duljinu $L = 70\ \text{mm}$ i uljni procjep $\delta = 0{,}30\ \text{mm}$. Osovina se vrti brzinom $n = 2400\ \text{min}^{-1}$. Pri hladnom isplovljenju zimi ulje ima $T_1 = 10^\circ\text{C}$ i viskoznost $\mu_1 = 0{,}40\ \text{Pa s}$, a za zagrijano ulje uzmi $T_2 = 50^\circ\text{C}$ i $\mu_2 = 0{,}040\ \text{Pa s}$.
+Uljem podmazani koncentrični klizni ležaj vratila brodske pomoćne crpke ima promjer osovine $D = 50\ \text{mm}$, duljinu $L = 70\ \text{mm}$ i uljni procjep $\delta = 0{,}30\ \text{mm}$. Osovina se vrti brzinom $n = 2400\ \text{min}^{-1}$. Pri hladnom startu zimi ulje ima $T_1 = 10^\circ\text{C}$ i viskoznost $\mu_1 = 0{,}40\ \text{Pa s}$, a za zagrijano ulje uzmi $T_2 = 50^\circ\text{C}$ i $\mu_2 = 0{,}040\ \text{Pa s}$.
 
-U oba stanja primijeni Couetteov model s prianjanjem i linearnim profilom; koordinata $y$ raste od čahure prema osovini, a obodna brzina osovine je $u$. Geometrija i brzina vrtnje ostaju iste. Zanemari ekscentricitet, hidrodinamički klin, rubni tok i zagrijavanje smicanjem. Ovo je usporedba utjecaja zadane viskoznosti, a ne radna karta ležaja ni propisni proračun osovinskog voda.
+U oba stanja primijeni Couetteov model s prianjanjem i linearnim profilom; koordinata $y$ raste od čahure prema osovini, a obodna brzina osovine je $u$. Geometrija i brzina vrtnje ostaju iste. Zanemari ekscentricitet, hidrodinamički klin, rubni tok i zagrijavanje smicanjem. Ovo je usporedba utjecaja zadane viskoznosti, a ne radna karta ležaja ni propisni proračun ležaja.
 
 **Traži se**
 
@@ -506,7 +506,7 @@ U oba stanja primijeni Couetteov model s prianjanjem i linearnim profilom; koord
 3. Odredi zakretni moment trenja pri objema temperaturama.
 4. Odredi snagu koju pogon troši samo na svladavanje viskoznog trenja u ležaju pri objema temperaturama te omjer snaga pri nižoj i višoj temperaturi.
 
-![Isti ležaj statvene cijevi pri hladnom isplovljenju i zagrijanom ulju; ulje pruža otpor vrtnji osovine.](../assets/print/u02_fig_lezaj_temperatura.svg){#fig-u02-lezaj-temperatura fig-align="center" fig-alt="Dva razmotana uljna procjepa uz nepomičnu čahuru i osovinu koja se giba udesno, pri 10 °C i 50 °C, te poprečni presjek s promjerom osovine, smjerom vrtnje i momentom trenja."}
+![Isti klizni ležaj pri hladnom startu i zagrijanom ulju; ulje pruža otpor vrtnji osovine.](../assets/print/u02_fig_lezaj_temperatura.svg){#fig-u02-lezaj-temperatura fig-align="center" fig-alt="Dva razmotana uljna procjepa uz nepomičnu čahuru i osovinu koja se giba udesno, pri 10 °C i 50 °C, te poprečni presjek s promjerom osovine, smjerom vrtnje i momentom trenja."}
 
 **Veza s proračunom.** Koordinata $y$ raste od nepomične čahure prema osovini, čija obodna brzina $u$ daje brzinu fluida uz nju. Procjep je uvećan radi čitljivosti, a vektori sila nisu u zajedničkom mjerilu.
 
@@ -524,7 +524,7 @@ $$
 \frac{dv}{dy} \approx \frac{u}{\delta} = \frac{6{,}28}{0{,}30 \cdot 10^{-3}} \approx 2{,}09 \cdot 10^4\ \text{s}^{-1}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-02}
 
-Smično naprezanje pri hladnom isplovljenju ($T_1$):
+Smično naprezanje pri hladnom startu ($T_1$):
 
 $$
 \tau_1 = \mu_1 \frac{u}{\delta} \approx 8{,}38 \cdot 10^3\ \text{Pa}
@@ -542,7 +542,7 @@ $$
 A = \pi D L = \pi \cdot 0{,}050 \cdot 0{,}070 \approx 1{,}10 \cdot 10^{-2}\ \text{m}^2
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-05}
 
-Sila viskoznog trenja i zakretni moment pri hladnom isplovljenju:
+Sila viskoznog trenja i zakretni moment pri hladnom startu:
 
 $$
 F_1 = \tau_1 A \approx 92{,}1\ \text{N}, \qquad M_1 = F_1 \cdot \frac{D}{2} \approx 2{,}30\ \text{N m}
@@ -570,7 +570,7 @@ $$
 P_2 = M_2 \omega \approx 57{,}9\ \text{W}
 $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-10}
 
-Omjer snage pri hladnom isplovljenju i snage pri zagrijanom ulju:
+Omjer snage pri hladnom startu i snage pri zagrijanom ulju:
 
 $$
 \frac{P_1}{P_2} = \frac{\mu_1}{\mu_2} = 10
@@ -579,7 +579,7 @@ $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-11}
 **Provjera i tumačenje**
 
 1. Dva neovisna puta računa daju istu snagu: $F_1u\approx92{,}1\cdot6{,}28\approx579\ \text{W}=M_1\omega$. U ovom modelu naprezanje, moment i snaga linearno ovise o $\mu$, pa faktor 10 u viskoznosti daje faktor 10 u snazi samo zato što su geometrija i brzina zadržane jednakima. Viskoznost mineralnog ulja jako ovisi o temperaturi: između 0 °C i 90 °C mijenja se za red veličine 100, pa je zadani omjer 10 primjeren užem rasponu temperatura.
-2. Dobivenih $579\ \text{W}$ nije prognoza gubitka stvarnoga osovinskog voda; prema nastavnoj procjeni, u službi temperatura ulja statvene cijevi ovisi o opterećenju i hlađenju okolnim morem, a prekomjerna temperatura ležaja znak je za uzbunu, a ne radno stanje.
+2. Dobivenih $579\ \text{W}$ nije prognoza gubitka stvarnoga ležaja; u službi temperatura ulja ovisi o opterećenju i hlađenju, a prekomjerna temperatura ležaja znak je za uzbunu, a ne radno stanje.
 :::
 
 ::: {#ex-u02-mikrofluidicki-kanal-u-lab-on-chip-ure .mf1-we}

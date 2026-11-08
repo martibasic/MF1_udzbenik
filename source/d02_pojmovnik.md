@@ -25,7 +25,7 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Efektivno ubrzanje | Zbroj stvarnog i prividnog ubrzanja $\vec g_{eff}$ koji pri relativnom mirovanju određuje gradijent tlaka i oblik slobodne površine. | [4](u04_relativno_mirovanje_fluida.qmd) |
 | Energijska crta (EGL) | Crta energijske visine $H=z+p/(\rho g)+\alpha v^2/(2g)$; pada zbog disipacije, a raste na crpki. | [8](u08_energijska_jednadzba_i_bernoulli.qmd), [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Eulerov broj | $Eu=\Delta p/(\rho v^2)$, u knjizi bez faktora ½; bezdimenzijska razlika tlakova. | [11](u11_dimenzijska_analiza_i_slicnost.qmd) |
-| Eulerova jednadžba turbostroja | $M=\dot m(r_2c_{2t}-r_1c_{1t})$ i $H_{th}=(u_2c_{2t}-u_1c_{1t})/g$ iz bilance momenta količine gibanja. | [14](u14_turbostrojevi_i_propulzija.qmd) |
+| Eulerova turbinska jednadžba | $M=\dot m(r_2c_{2t}-r_1c_{1t})$ i $H_{th}=(u_2c_{2t}-u_1c_{1t})/g$ iz bilance momenta količine gibanja. | [14](u14_turbostrojevi_i_propulzija.qmd) |
 | Froudeov broj | $Fr=v/\sqrt{gL}$, omjer brzine toka i brzine gravitacijskog vala; u otvorenom toku $Fr=v/\sqrt{gy_h}$. | [11](u11_dimenzijska_analiza_i_slicnost.qmd), [15](u15_otvoreni_tokovi.qmd) |
 | Froudeova hipoteza | Rastav $C_T=C_F(Re)+C_R(Fr)$ za prijenos otpora modela na brod; radna hipoteza. | [11](u11_dimenzijska_analiza_i_slicnost.qmd) |
 | Gaz | Udaljenost $T$ od kobilice do vodne linije. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |

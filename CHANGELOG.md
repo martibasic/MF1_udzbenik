@@ -13,6 +13,16 @@ pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
   numeriranih jednadžbi), dvoznačne rečenice, nazivlje, ograde uz tvrdnje o praksi,
   cjeloviti ispis triju ključeva. Konačni i kontrolni rezultati nepromijenjeni.
 
+## Odluke recenzenta — 8. studenoga 2026.
+
+- **Tekst i brojevi**: pog. 2 klizni ležaj pomoćne crpke (hladni start); pog. 3 novi
+  odjeljak „Manometri i reference tlaka”, slika spojenih posuda uz izvod, $ho_{mv}=1025$
+  u P3, rezerva 3 % u Z6; pog. 6 P4 i P5 na razini T3; pog. 7 Z1 sa zimskim zrakom;
+  pog. 8 Venturijev pokus iza P5; pog. 10 reakcijska glava za ispiranje spremnika;
+  pog. 11 Z1 $B	imes H$; pog. 12 P4 s laminarnim $C_F$; pog. 14 bez ponovljenog okvira.
+- **Nazivlje i prikaz**: „Eulerova turbinska jednadžba”; upućivanje na poglavlje u tekstu
+  glasi „pog. N”.
+
 ## Brojevi, izvori i skice prema recenziji — 8. studenoga 2026.
 
 - **Brojevi i oznake**: pog. 2 (temperature ležaja 10 °C i 50 °C, $h_{kap}$), pog. 4

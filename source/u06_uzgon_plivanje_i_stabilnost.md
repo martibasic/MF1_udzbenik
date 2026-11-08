@@ -497,7 +497,7 @@ $$ {#eq-uzgon-stabilitet-rijeseni-primjer-plutajuca-servisna-platforma-s-08}
 :::
 
 ::: {#ex-u07-plutajuca-servisna-platforma-na-granici-ulja-i .mf1-ch}
-<p class="mf1-box-label">Plutajuća servisna platforma na granici ulja i vode&nbsp;<span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">Plutajuća servisna platforma na granici ulja i vode&nbsp;<span class="mf1-level">T3</span></p>
 
 **Tekst zadatka**
 
@@ -651,7 +651,7 @@ Pomak $y_B=4{,}35\ \text{cm}$ zbog $KG\ne KB_{eq}$ nije poluga momenta težine i
 :::
 
 ::: {#ex-u07-izolirani-puni-bocni-tank-kao-dodana-masa .mf1-ch}
-<p class="mf1-box-label">Izolirani puni bočni tank metodom dodane težine: gaz, nagib i početni stabilitet&nbsp;<span class="mf1-level">T4</span></p>
+<p class="mf1-box-label">Izolirani puni bočni tank metodom dodane težine: gaz, nagib i početni stabilitet&nbsp;<span class="mf1-level">T3</span></p>
 
 **Tekst zadatka**
 

@@ -38,7 +38,7 @@ class BookModelTests(unittest.TestCase):
             self.assertIn(Path(doc['path']).name,rendered['html5'])
         self.assertIn('#link(<sec-cfd-vv-paketi>)[section]',rendered['typst'])
         u03_anchor=index['documents']['u03']['sections'][0]['id']
-        self.assertIn('#link(<'+u03_anchor+'>)[pog.~3 ',rendered['typst'])
+        self.assertIn('#link(<'+u03_anchor+'>)[pog.~3]',rendered['typst'])
         self.assertIn('#link("https://example.org/external.qmd")[external]',rendered['typst'])
         self.assertEqual(rendered['typst'].count('.qmd'),1)
 

@@ -4,7 +4,7 @@
     "tools/build_print_figures.mjs": "4b695d1282ac4e91a26f75117596f0fd080dd3312ecc337536fd2be86e50a5e7",
     "assets/figure-tokens.json": "5d0e62e89920146860914f5b7fd267a3ab2c9d5ba72f2aa4478cc600358c83f8",
     "assets/figure-compositions.json": "1621c58a694c9cd2d3a10291771132fb12db3c0f9a0375eff6265e29755d5ed6",
-    "assets/print-layouts.json": "ce5367e0d065fe74cae75594f4017f47b14f978a6c289e33608c20c9cb14c292"
+    "assets/print-layouts.json": "421c4a19d2b3eed897fd0cb0bb1a12c9d4a9c86689906327768cbcb1068e9c4a"
   },
   "tokens": {
     "text-width-pt": 447.874,
@@ -1196,7 +1196,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "46eeb5cb890f6877a583468fda4e35dceb971ecfe43e945fd562e4b5528b3e37"
+          "sha256": "7f1fa865c609dd3d33a8b1ef598b3bf4183739bc5dce45adb012870a1c026b9d"
         }
       ],
       "kind": "standard",
@@ -1266,7 +1266,7 @@
           ]
         }
       ],
-      "source_sha1": "f9e415141360ac385485c597f483ba6f660fd28f"
+      "source_sha1": "d7728436129cbd3d49408fd1a3bd2f50e6de28e4"
     },
     "u02_fig_uvod_pregled.svg": {
       "rows": [
@@ -5380,7 +5380,7 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "bbdc6a08dc5f67d937e5ae126d3085ca4ee4545c688c425fe827fea3f3bfa0a4"
+          "sha256": "32fc5689fa8084628fdb56d07617d1321b9e8a73c1893159c8dfa07204eb6966"
         },
         {
           "file": "u08_vjezbe_skice--2.svg",
@@ -5609,7 +5609,7 @@
           ]
         }
       ],
-      "source_sha1": "565f6dff63b1ece64ecf97e50a18d8d1ad04ff7c"
+      "source_sha1": "ba3a724436d8d5fd9cd6d1570820f728bab726ab"
     },
     "u09_ch1_bypass_sifon_suzenje_mlaz.svg": {
       "rows": [
@@ -9663,7 +9663,7 @@
             1
           ],
           "keep_with_next": false,
-          "sha256": "c3f3dae964d8aef1eaa9d6a0ab5959a9b5009cff69e9fbb01a28d54b8ed4ea8f"
+          "sha256": "011088b45714d52bc3efe2c382d1ee3808d9f6c55280bb0dcc63f86de34ac679"
         },
         {
           "file": "u14_vjezbe_skice--2.svg",
@@ -9899,7 +9899,7 @@
           ]
         }
       ],
-      "source_sha1": "364433363bb473a9aec26a5fada5cf515e8d4427"
+      "source_sha1": "8d0816fd782c7fa0de7c028a21ff1243a311badd"
     },
     "u15_fig_uvod_otvoreni_tok.svg": {
       "rows": [
@@ -10320,7 +10320,7 @@
             0
           ],
           "keep_with_next": true,
-          "sha256": "e0dc721de078cbd260614c71cd645c7e5c8c90a5a0e1d9bcfe39a9d04e910759"
+          "sha256": "995401029b9e067e46cb3f830c9927ccce3391c3afa481b0bed686e18a658432"
         }
       ],
       "kind": "standard",
@@ -10376,7 +10376,7 @@
           ]
         }
       ],
-      "source_sha1": "40e66d7ad681f396ce3d769988892833dafbdc71"
+      "source_sha1": "f7af89ec5dafd46887ebcf727f9fe581d031fad7"
     }
   }
 }

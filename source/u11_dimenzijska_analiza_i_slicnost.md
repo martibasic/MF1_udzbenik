@@ -88,7 +88,7 @@ $$
 We = \frac{\rho v^2 L}{\sigma}, \qquad We = \frac{F_i}{F_\sigma}.
 $$ {#eq-slicnost-bezdimenzijske-grupe-kao-omjeri-mehanizama-05}
 
-Pri malom $We$ površinska napetost snažno se opire deformaciji, a pri velikom su inercijska naprezanja relativno veća. Prag raspada nije univerzalan: ovisi o vrsti raspada, omjeru gustoća i viskoznosti, Ohnesorgeovu broju, početnoj deformaciji i vremenu djelovanja. Vrijednost reda $We\approx12$ može služiti kao orijentir za određene režime aerodinamičkog raspada pojedinačne kapi, ali ne kao opći kriterij kvalitete atomizacije [@white2011].
+Pri malom $We$ površinska napetost snažno se opire deformaciji, a pri velikom su inercijska naprezanja relativno veća. Prag raspada nije univerzalan: ovisi o vrsti raspada, omjeru gustoća i viskoznosti, Ohnesorgeovu broju, početnoj deformaciji i vremenu djelovanja. Vrijednost reda $We\approx12$ ovdje je nastavni orijentir za aerodinamički raspad pojedinačne kapi, a ne opći kriterij kvalitete atomizacije.
 
 **Bondov (Eötvösov) broj** uspoređuje gravitaciju i površinsku napetost:
 
@@ -665,7 +665,7 @@ $$ {#eq-slicnost-3-sila-otpora-i-grupa-1-02}
 
 **Tekst zadatka**
 
-Razmotri dva neovisna slučaja. U zračnom vodu promjera $D = 80\ \text{mm}$ protoci su $Q_1 = 0{,}40\ \text{m}^3/\text{s}$ i $Q_2 = 0{,}80\ \text{m}^3/\text{s}$, a brzina zvuka $a = 340\ \text{m/s}$. Za procjenu stlačivosti upotrijebi orijentacijski prag $Ma=0{,}3$.
+Razmotri dva neovisna slučaja. Prvi kratko ponavlja procjenu iz primjera [-@ex-odabir-modela-kompresibilnosti]: u zračnom vodu promjera $D = 80\ \text{mm}$ protoci su $Q_1 = 0{,}40\ \text{m}^3/\text{s}$ i $Q_2 = 0{,}80\ \text{m}^3/\text{s}$, a brzina zvuka $a = 340\ \text{m/s}$. Za procjenu stlačivosti upotrijebi orijentacijski prag $Ma=0{,}3$.
 
 Dimnjak promjera $D_d = 2{,}0\ \text{m}$ izložen je vjetru brzine $v = 12\ \text{m/s}$. Uzmi $St \approx 0{,}2$ kao nastavnu projektnu procjenu i vlastitu frekvenciju konstrukcije $f_n = 0{,}6\ \text{Hz}$. Podudaranje frekvencija ovdje služi kao upozorenje; amplituda odziva nije predmet računa.
 
@@ -764,19 +764,19 @@ Najprije se popišu svi mehanizmi i bezdimenzijski rubni uvjeti koji mogu utjeca
 
 **Tekst zadatka**
 
-Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $a=0{,}400\ \text{m}$ i visine $b=0{,}200\ \text{m}$. Zrak kinematičke viskoznosti $\nu=1{,}50\cdot10^{-5}\ \text{m}^2/\text{s}$ struji volumenskim protokom $Q=0{,}640\ \text{m}^3/\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ oplakani opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno.
+Ventilacijski kanal strojarnice ima pravokutni unutarnji presjek širine $B=0{,}400\ \text{m}$ i visine $H=0{,}200\ \text{m}$. Zrak kinematičke viskoznosti $\nu=1{,}50\cdot10^{-5}\ \text{m}^2/\text{s}$ struji volumenskim protokom $Q=0{,}640\ \text{m}^3/\text{s}$. Za nekružni presjek u $Re$ ulazi hidraulički promjer $D_h=4A/P$, gdje je $A$ površina presjeka, a $P$ oplakani opseg. Orijentacijska područja režima 2300–4000 iz ovog poglavlja vrijede za kružnu cijev i na pravokutni se kanal prenose samo približno.
 
 **Traži se**
 
 1. Odredi srednju brzinu i hidraulički promjer.
 2. Odredi Reynoldsov broj i prosudi režim.
-3. Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $a$? Objasni zašto takav broj nije usporediv s dijagramom $\lambda(Re,k_s/D)$.
+3. Koliki bi se $Re$ dobio da se umjesto $D_h$ uzme dulja stranica $B$? Objasni zašto takav broj nije usporediv s dijagramom $\lambda(Re,k_s/D)$.
 
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Iz $A=ab$ i $P=2(a+b)$ slijedi $D_h=2ab/(a+b)$; za kvadrat se svodi na stranicu, a za kružnu cijev na $D$. Brzina je $v=Q/A$. Usporedi $Re$ dobiven s objema duljinama.
+Iz $A=BH$ i $P=2(B+H)$ slijedi $D_h=2BH/(B+H)$; za kvadrat se svodi na stranicu, a za kružnu cijev na $D$. Brzina je $v=Q/A$. Usporedi $Re$ dobiven s objema duljinama.
 :::
 ::::
 
@@ -826,7 +826,7 @@ $[n]=\mathsf{T}\,\mathsf{L}^{-1/3}$, jedinica $\text{s}/\text{m}^{1/3}$; jednad�
 
 **Tekst zadatka**
 
-Na referentnom presjeku usisa crpke senzor pokazuje manometarski tlak $p_M=-20{,}0\ \text{kPa}$, odnosno podtlak od $20{,}0\ \text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\ \text{kPa}$. Gustoća vode je $\rho=1000\ \text{kg/m}^3$, a tlak pare $p_v=2340\ \text{Pa}$. Prema zadanom nastavnom modelu karakteristike, početak kavitacije za oba razmatrana režima odgovara vrijednosti $\sigma_{kr}=3{,}0$, uz iste referentne veličine. Ocjenjuje se samo taj kriterij; granična jednakost ne daje dodatnu pogonsku rezervu.
+Na referentnom presjeku, suženom ulazu u radno kolo crpke, senzor pokazuje manometarski tlak $p_M=-20{,}0\ \text{kPa}$, odnosno podtlak od $20{,}0\ \text{kPa}$, pri atmosferskom tlaku $p_{atm}=100{,}0\ \text{kPa}$. Gustoća vode je $\rho=1000\ \text{kg/m}^3$, a tlak pare $p_v=2340\ \text{Pa}$. Prema zadanom nastavnom modelu karakteristike, početak kavitacije za oba razmatrana režima odgovara vrijednosti $\sigma_{kr}=3{,}0$, uz iste referentne veličine. Ocjenjuje se samo taj kriterij; granična jednakost ne daje dodatnu pogonsku rezervu.
 
 Usporedi režime s brzinama $v_1=4{,}00\ \text{m/s}$ i $v_2=8{,}00\ \text{m/s}$ pri istom tlaku.
 

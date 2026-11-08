@@ -108,6 +108,8 @@ Svaki obrazac javlja se u svim ili većini skupina; mjesta su u `PROVJERA.md`.
 
 ## 8. Odluke koje su autoričine
 
+Autorica je 8. 11. 2026. odluke prepustila recenzentu (jednostavnost i čitljivost); provedba je u odjeljku 10.
+
 1. Ciklus revizije zadataka Z1–Z6 za pog. 10, 14 i poglavlja u kojima Z ponavlja P (obrazac 4).
 2. Ravnoteža struka u pog. 1, 5 i 15 te lajtmotivi (offshore, dekarbonizacija).
 3. Vidljivost bloka „Provjeri sebe” (sada skriven svugdje).
@@ -183,3 +185,43 @@ definicija meridijanske komponente (pog. 14). Preskočeno ostaje: izvori za doda
 Nisu dodani: Virag, Dixon i Carlton (nepotpuni bibliografski podatci). Čekaju autoricu
 autorske odluke iz `PROVJERA.md` (G1-40, G1-43, G2-23, G2-24, G4-20), vidljivost „Provjeri
 sebe”, nazivlje „učinkovitost”/„stupanj djelovanja”, ravnoteža struka i licenca.
+
+**8. 11. 2026. — odluke recenzenta** (autorica je prepustila odluke recenzentu uz pravilo:
+jednostavnost i čitljivost). Provedene odluke:
+
+| # | Odluka |
+| --- | --- |
+| G1-13, G1-45 | Pog. 2: primjer je uljem podmazani klizni ležaj vratila brodske pomoćne crpke, a ne ležaj statvene cijevi; „hladni start” umjesto „hladnog isplovljenja”. Brojevi isti; uklonjene nepotvrđene tvrdnje o praksi. |
+| G1-38 | Upućivanje na poglavlje u tekstu glasi „pog. N”; naslov poglavlja ostaje kao naslov poveznice (`filters/mf1-components.lua`). |
+| G1-40 | Pog. 3 Z6: rezerva 3 %. Nominalno bi prošlo područje 0–140 kPa (139,34 kPa), a konzervativno ne prolazi (140,13 kPa), pa tolerancije mijenjaju odluku T4. Ključ i verifikator usklađeni. |
+| G1-41 | Pog. 3: novi odjeljak „Manometri i reference tlaka” (`sec-manometri-i-reference-tlaka`). |
+| G1-42 | Pog. 3: slika spojenih posuda i efektivnog polja premještena iz kraja poglavlja uz izvod; uklonjena rečenica „most prema pog. 4”. |
+| G1-43 | Pog. 3 P3: $\rho_{mv}=1025$ kg/m³ kao drugdje u knjizi, uz kontekst središnjeg hladnjaka; $p_1-p_2\approx3{,}43$ / $3{,}44$ kPa, zaključak isti. |
+| G2-15 | Pog. 6 P4 i P5: razina T3 (zadan model, bez odluke među alternativama). |
+| G2-16 | Pog. 8 Z6: tekst zadaje bilance kao model; naputak ih više ne ponavlja. Ostali Z6 pog. 6 i 7 nepromijenjeni. |
+| G2-23 | Pog. 7: „zahvatni usis (engl. *scoop*)”; pog. 8 izrijekom razlikuje koš u ravnini oplate od zahvatnog usisa. |
+| G2-24 | Pog. 7 Z1: zimski vanjski zrak 1,34 kg/m³ (oko −10 °C) zagrijan na 1,20 kg/m³ (oko 20 °C); $\dot m\approx4{,}82$ kg/s, $v_2\approx16{,}8$ m/s, $Q_2\approx4{,}02$ m³/s; skica, ključ i verifikator usklađeni. |
+| G2-31 | Pog. 8: Venturijev numerički pokus i CFD okvir premješteni iza primjera P5 koji ih uvodi. |
+| G3-08 | Pog. 11 P6: prvi slučaj izrijekom je kratko ponavljanje primjera P2 iz pog. 9. |
+| G3-09 | Pog. 12 P4: treći zahtjev uspoređuje turbulentni $C_{F,m}$ iz pog. 11 s laminarnim ($\approx4{,}04\cdot10^{-4}$, omjer oko 7,3) umjesto ponavljanja ITTC računa; verifikator usklađen. |
+| G3-16 | Pog. 11 Z1: stranice kanala $B\times H$ (tekst, naputak, skica). |
+| G3-21 | Pog. 11: $We\approx12$ označen kao nastavni orijentir, bez pripisivanja Whiteu. |
+| G3-22 | Pog. 10 P7: „Reakcijska glava za ispiranje spremnika” umjesto stroja za pranje tanka. |
+| G3-24 | Pog. 12: uvod govori o ulju u uskom procjepu, ne o nosivom filmu ležaja. |
+| G3-52 | Pog. 11 Z3: referentni presjek je suženi ulaz u radno kolo. |
+| G4-24 | Pog. 14: uklonjeni okvir i rečenica u uvodu koji su ponavljali da rad daje samo tangencijalna komponenta. |
+| G4-30 | Jedan naziv: „Eulerova turbinska jednadžba” (pog. 10, 14, pojmovnik). |
+
+Zadržano bez promjene (jednostavnije je ostaviti, a sadržaj je ispravan):
+
+| # | Razlog |
+| --- | --- |
+| G1-07, G3-07, G3-10, G4-20 | Jednostavni Z koji ponavljaju postupak primjera ostaju: upute traže čuvanje jednostavnih računskih zadataka, a T4 dodaju odluku. |
+| G1-15, G2-05, G3-53, G4-19, G4-21 | Ravnoteža struka: kurikularna matrica ne traži više brodskih primjera; nova primjena značila bi nove primjere. |
+| G2-21 | Zamjena riješenog primjera P izlazi iz dogovorenog opsega revizije. |
+| G4-22, G4-25, G4-35 | Dodatni sadržaj ili obrazac koji vrijedi u cijeloj knjizi; sažeto pravilo „Konvencija kuta” student smatra korisnim. |
+| Provjeri sebe | Ostaje skriven: autorski ugovor te skupove vodi kao arhivske, a iz svakog je jedno pitanje vidljivo kao „Zastani i promisli”; prikaz bi dodao stranice uz granicu od 355. |
+| Nazivlje | „Učinkovitost” je već jedini naziv u knjizi; „usisni koš” uz „engl. *sea chest*” ostaje. |
+
+Licenca nije pitanje čitljivosti: FESB-ov pravilnik (čl. 19(4)) za elektroničko izdanje
+traži CC-BY, a repozitorij koristi CC BY-NC-SA. Promjena je pravna odluka autorice pri predaji.

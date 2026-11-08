@@ -380,7 +380,7 @@ Sljedeći primjer veže kontrolni volumen uz brod koji plovi: kroz pomičnu kont
 
 **Tekst zadatka**
 
-Brod plovi stalnom brzinom $v_s = 18\ \text{čv}$ kroz mirno more gustoće $\rho = 1025\ \text{kg/m}^3$. Rashladna morska voda ulazi kroz zahvatni usis ispod vodne linije: otvor površine $A_u = 0{,}040\ \text{m}^2$ okrenut je prema pramcu, a zaštitna rešetka ostavlja slobodan udio $\psi = 0{,}55$ te površine. Mjerač protoka u rashladnom sustavu pokazuje volumenski protok $Q = 180\ \text{m}^3/\text{h}$. Model je jednodimenzijski i stacionaran u odnosu na brod; brzine su srednje po presjeku.
+Brod plovi stalnom brzinom $v_s = 18\ \text{čv}$ kroz mirno more gustoće $\rho = 1025\ \text{kg/m}^3$. Rashladna morska voda ulazi kroz zahvatni usis (engl. *scoop*) ispod vodne linije: otvor površine $A_u = 0{,}040\ \text{m}^2$ okrenut je prema pramcu, a zaštitna rešetka ostavlja slobodan udio $\psi = 0{,}55$ te površine. Mjerač protoka u rashladnom sustavu pokazuje volumenski protok $Q = 180\ \text{m}^3/\text{h}$. Model je jednodimenzijski i stacionaran u odnosu na brod; brzine su srednje po presjeku.
 
 **Traži se**
 
@@ -710,7 +710,7 @@ U nepomičnoj komori Z3 tok je stacionaran, voda nestlačiva i gustoće $\rho=99
 
 **Tekst zadatka**
 
-Zrak gustoće $\rho_1 = 1{,}20\ \text{kg/m}^3$ ulazi u grijač ventilacijskog kanala strojarnice srednjom brzinom $v_1 = 12{,}0\ \text{m/s}$ kroz presjek površine $A_1 = 0{,}30\ \text{m}^2$. Zagrijani zrak gustoće $\rho_2 = 1{,}02\ \text{kg/m}^3$ izlazi kroz presjek površine $A_2 = 0{,}24\ \text{m}^2$. Strujanje je stacionarno; nema drugih priključaka ni akumulacije.
+Zimski vanjski zrak gustoće $\rho_1 = 1{,}34\ \text{kg/m}^3$ (oko −10 °C) ulazi u grijač ventilacijskog kanala strojarnice srednjom brzinom $v_1 = 12{,}0\ \text{m/s}$ kroz presjek površine $A_1 = 0{,}30\ \text{m}^2$. Zagrijani zrak gustoće $\rho_2 = 1{,}20\ \text{kg/m}^3$ (oko 20 °C) izlazi kroz presjek površine $A_2 = 0{,}24\ \text{m}^2$. Strujanje je stacionarno; nema drugih priključaka ni akumulacije.
 
 **Traži se**
 
@@ -726,7 +726,7 @@ Masena bilanca $\rho_1 A_1 v_1 = \rho_2 A_2 v_2$ vrijedi i pri promjeni gustoće
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$\dot m = 4{,}32\ \text{kg/s}$; $v_2 \approx 17{,}6\ \text{m/s}$; $Q_1 = 3{,}60\ \text{m}^3/\text{s}$, $Q_2 \approx 4{,}24\ \text{m}^3/\text{s}$. Volumenski protok raste jer gustoća pada; jednak je samo maseni protok.
+$\dot m \approx 4{,}82\ \text{kg/s}$; $v_2 \approx 16{,}8\ \text{m/s}$; $Q_1 = 3{,}60\ \text{m}^3/\text{s}$, $Q_2 \approx 4{,}02\ \text{m}^3/\text{s}$. Volumenski protok raste jer gustoća pada; jednak je samo maseni protok.
 :::
 ::::
 

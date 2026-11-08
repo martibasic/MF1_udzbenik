@@ -221,7 +221,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "a3b48e55936b12372e404ed383a4641163d99954404fe4af3e68cdcfa24401a7",
+      "source_sha256": "dfc7a266c4254c2d3e66e62142c2c2c59e1e5b6f96f7a049ff23dec9ee927b9c",
       "sections": [
         {
           "id": "viskoznost",
@@ -354,7 +354,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "83cfc1d05ad2b28891e33939abd9e479da879174ca48db3ebad0933a59b2fd84",
+      "source_sha256": "7ae49f10a17c3046c2552e4b111439b9ff1fdadc121489d4d1208c2eff2ab03c",
       "sections": [
         {
           "id": "diferencijalna-jednadžba-hidrostatike",
@@ -369,22 +369,28 @@
           "number": "3.2"
         },
         {
+          "id": "sec-manometri-i-reference-tlaka",
+          "level": 2,
+          "title": "Manometri i reference tlaka",
+          "number": "3.3"
+        },
+        {
           "id": "riješeni-primjeri",
           "level": 2,
           "title": "Riješeni primjeri",
-          "number": "3.3"
+          "number": "3.4"
         },
         {
           "id": "sec-u03-zadatci",
           "level": 2,
           "title": "Zadatci za vježbu",
-          "number": "3.4"
+          "number": "3.5"
         },
         {
           "id": "sažetak",
           "level": 2,
           "title": "Sažetak",
-          "number": "3.5"
+          "number": "3.6"
         }
       ],
       "objects": [
@@ -435,13 +441,13 @@
         "eq-vodotoranj-razina-iz-tlaka-podnozja",
         "eq-hidrostatika-rijeseni-primjer-iot-tlacni-senzor-za-otkrivanje-04",
         "fig-uvod-u03",
+        "fig-u03-staticka-zamjena-za-ravnotezu-tlaka-i-efektivno",
         "fig-u03-zatvoreni-spremnik-tlak",
         "fig-u03-diferencijalni-manometar",
         "fig-sondiranje-teretnog-tanka",
         "fig-u03-pumpa-usis",
         "fig-u03-balastni-tank",
         "fig-u03-vjezbe",
-        "fig-u03-staticka-zamjena-za-ravnotezu-tlaka-i-efektivno",
         "ex-u03-tlak-u-prikljucku-zatvorenog-vodenog-spremnika-t1",
         "ex-u03-diferencijalni-manometar-izme-u-slatke-i-morske",
         "ex-sondiranje-teretnog-tanka-s-tlacnim-mjeracem-razine",
@@ -781,7 +787,7 @@
       "kind": "chapter",
       "number": "6",
       "part": "part-2",
-      "source_sha256": "dc1730e7c620d99457ed347b4f7a67a41d13791e43006799f2868788ff1f6430",
+      "source_sha256": "bbad763d32ec975d8258f7c453b2a123bf29cae4d3961b6718227846c6214be2",
       "sections": [
         {
           "id": "sila-uzgona",
@@ -941,7 +947,7 @@
       "kind": "chapter",
       "number": "7",
       "part": "part-3",
-      "source_sha256": "c4018bb9f976bebd67cc8771f34abc860cb1f95c12aa9311d7c1ee479332729d",
+      "source_sha256": "04f76229bcf091f5f50d414152af5066160a1089c2b5821026094aef01249687",
       "sections": [
         {
           "id": "kinematika-strujanja",
@@ -1104,7 +1110,7 @@
       "kind": "chapter",
       "number": "8",
       "part": "part-3",
-      "source_sha256": "96adbce4dabcc3959633a8ba01d98b60dd9afb604dcc114cdf8b21f89376ec56",
+      "source_sha256": "d1fc843802132bc28ae29912fb021055d2fb3aafd7e74e773cc12570f061e9b2",
       "sections": [
         {
           "id": "mehanička-energija-idealnoga-toka",
@@ -1361,7 +1367,7 @@
       "kind": "chapter",
       "number": "10",
       "part": "part-3",
-      "source_sha256": "478fdfc6f0e6f55f7ea3603339da410e100f10c887fc2ce09eb2f84ca2b8bb24",
+      "source_sha256": "af3ff211a491ba782efd49543e929cd02cead9fc5174f517f3c7a6f395375f2e",
       "sections": [
         {
           "id": "integralni-zakon-količine-gibanja",
@@ -1529,7 +1535,7 @@
       "kind": "chapter",
       "number": "11",
       "part": "part-4",
-      "source_sha256": "c14d51a8115bd84616359296f68472dc70a44319300273163b05399f83653ecf",
+      "source_sha256": "aee30dec06c3ecf652d14c767cfb671f78490b57958e08d6cd4c5a68591e4f56",
       "sections": [
         {
           "id": "svrha-bezdimenzijskog-opisa",
@@ -1684,7 +1690,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "ab14eea71a70a8a366c0f3c54b9e78f90e06eee391507ca238818a5da7cf5066",
+      "source_sha256": "1416f824d028c9abd814d60873d9eb948beff90c47501b18a3190acbd2a594fe",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1992,7 +1998,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "f051be63a46e87813776a9e96fc80952c1ab7c3f94c65bebda2b77c75b643e36",
+      "source_sha256": "049c115779dc6e8e1df3c75cd9a143055f8b8485329e39d16a570bb25329a500",
       "sections": [
         {
           "id": "od-lopatice-do-turbostroja",
@@ -2338,7 +2344,7 @@
       "kind": "appendix",
       "number": "B",
       "part": null,
-      "source_sha256": "e28cd640b27151188b1777453b9e63eb8e2ecf4c4b80973c0f87cab7355f8704",
+      "source_sha256": "5bea2f829716788f3b50a1ede713c436b2ae11817ec1100793b6fbae8da8d52e",
       "sections": [
         {
           "id": "sec-pojmovi-a-z",
@@ -2518,7 +2524,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "9751226b5a42b4efcdda85edca4400b254c09a6ee9b15d5e3c724adc509f6c0d",
+      "source_sha256": "94e6f11b131bab1bb9d0263282ce7a89af6e76be979fd191397392b789308c26",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -3623,7 +3629,7 @@
       "kind": "Figure",
       "document": "u02",
       "number": "2.6",
-      "caption": "Isti ležaj statvene cijevi pri hladnom isplovljenju i zagrijanom ulju; ulje pruža otpor vrtnji osovine.",
+      "caption": "Isti klizni ležaj pri hladnom startu i zagrijanom ulju; ulje pruža otpor vrtnji osovine.",
       "alt": "Dva razmotana uljna procjepa uz nepomičnu čahuru i osovinu koja se giba udesno, pri 10 °C i 50 °C, te poprečni presjek s promjerom osovine, smjerom vrtnje i momentom trenja.",
       "source": "../assets/print/u02_fig_lezaj_temperatura.svg",
       "type": "standard",
@@ -3687,7 +3693,7 @@
       "kind": "Example",
       "document": "u02",
       "number": "2.5",
-      "title": "Utjecaj temperature na viskozni otpor ležaja statvene cijevi",
+      "title": "Utjecaj temperature na viskozni otpor kliznog ležaja",
       "level": "T2",
       "label": "P5"
     },
@@ -3913,7 +3919,7 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.23",
-      "latex": "\\begin{aligned}\np_1 - p_2 &= 9{,}81\\left(13600 \\cdot 0{,}10 - 1035 \\cdot 0{,}40 - 1000 \\cdot 0{,}60\\right) \\\\\n&= 3394{,}26\\ \\text{Pa} \\approx 3{,}39\\ \\text{kPa}.\n\\end{aligned}"
+      "latex": "\\begin{aligned}\np_1 - p_2 &= 9{,}81\\left(13600 \\cdot 0{,}10 - 1025 \\cdot 0{,}40 - 1000 \\cdot 0{,}60\\right) \\\\\n&= 3433{,}50\\ \\text{Pa} \\approx 3{,}43\\ \\text{kPa}.\n\\end{aligned}"
     },
     "eq-hidrostatika-rijeseni-primjer-diferencijalni-manometar-izme-u-03": {
       "id": "eq-hidrostatika-rijeseni-primjer-diferencijalni-manometar-izme-u-03",
@@ -3927,14 +3933,14 @@
       "kind": "Equation",
       "document": "u03",
       "number": "3.25",
-      "latex": "\\begin{aligned}\np_1 - p_2 &= 9{,}81\\left(13600 \\cdot 0{,}10 + 1{,}2 \\cdot 0{,}70 - 1035 \\cdot 0{,}40 - 1000 \\cdot 0{,}60\\right) \\\\\n&\\approx 3402{,}50\\ \\text{Pa} \\approx 3{,}40\\ \\text{kPa}.\n\\end{aligned}"
+      "latex": "\\begin{aligned}\np_1 - p_2 &= 9{,}81\\left(13600 \\cdot 0{,}10 + 1{,}2 \\cdot 0{,}70 - 1025 \\cdot 0{,}40 - 1000 \\cdot 0{,}60\\right) \\\\\n&\\approx 3441{,}74\\ \\text{Pa} \\approx 3{,}44\\ \\text{kPa}.\n\\end{aligned}"
     },
     "eq-hidrostatika-rijeseni-primjer-diferencijalni-manometar-izme-u-05": {
       "id": "eq-hidrostatika-rijeseni-primjer-diferencijalni-manometar-izme-u-05",
       "kind": "Equation",
       "document": "u03",
       "number": "3.26",
-      "latex": "\\delta \\approx \\frac{8{,}24}{3402{,}50} \\cdot 100\\ \\% \\approx 0{,}24\\ \\%."
+      "latex": "\\delta \\approx \\frac{8{,}24}{3441{,}74} \\cdot 100\\ \\% \\approx 0{,}24\\ \\%."
     },
     "eq-sondiranje-lanac-tlaka-na-dnu": {
       "id": "eq-sondiranje-lanac-tlaka-na-dnu",
@@ -4090,11 +4096,25 @@
         "print_manifest": "assets/pdf-figures/manifest.json"
       }
     },
+    "fig-u03-staticka-zamjena-za-ravnotezu-tlaka-i-efektivno": {
+      "id": "fig-u03-staticka-zamjena-za-ravnotezu-tlaka-i-efektivno",
+      "kind": "Figure",
+      "document": "u03",
+      "number": "3.2",
+      "caption": "Jednak tlak na istoj dubini u spojenim posudama i nagnuta slobodna površina okomita na efektivno polje u ubrzanom spremniku.",
+      "alt": "Lijevo spojene posude s vodom i točkama A i B na istoj dubini h, desno ubrzani spremnik s nagnutom površinom i trokutom vektora g, minus a i g_eff s kutom theta.",
+      "source": "../assets/print/u03_balans_tlaka_i_geff.svg",
+      "type": "composite",
+      "variants": {
+        "web": "../assets/print/u03_balans_tlaka_i_geff.svg",
+        "print_manifest": "assets/pdf-figures/manifest.json"
+      }
+    },
     "fig-u03-zatvoreni-spremnik-tlak": {
       "id": "fig-u03-zatvoreni-spremnik-tlak",
       "kind": "Figure",
       "document": "u03",
-      "number": "3.2",
+      "number": "3.3",
       "caption": "Zatvoreni vodeni spremnik: plinski pretlak i dubina priključka A.",
       "alt": "Zatvoreni spremnik s plinskim prostorom iznad vode i bočnim priključkom A, s kotom njegove dubine ispod slobodne površine.",
       "source": "../assets/print/u03_fig_zatvoreni_spremnik_tlak.svg",
@@ -4108,7 +4128,7 @@
       "id": "fig-u03-diferencijalni-manometar",
       "kind": "Figure",
       "document": "u03",
-      "number": "3.3",
+      "number": "3.4",
       "caption": "Diferencijalni manometar sa živom i zračnim mostom između vodova slatke i morske vode.",
       "alt": "Živin U-manometar, obrnuti krak sa zrakom i silazni krak morske vode, s okomitim kotama četiriju segmenata na putu od tlaka p1 do tlaka p2.",
       "source": "../assets/print/u03_val1_diferencijalni_manometar.svg",
@@ -4122,7 +4142,7 @@
       "id": "fig-sondiranje-teretnog-tanka",
       "kind": "Figure",
       "document": "u03",
-      "number": "3.4",
+      "number": "3.5",
       "caption": "Teretni tank s inertnim plinom, uljem i vodenim talogom: ulažni otvor, sondiranje i tlačni mjerač na dnu.",
       "alt": "Presjek teretnog tanka: inertni plin iznad ulja, tanak sloj vode na dnu, ulažni otvor s referentnom točkom na palubi i tlačni mjerač razine na dnu, s kotama H_ref, U, h_u i h_v.",
       "source": "../assets/print/u03_ch1_zatvoreni_spremnik_ulje_ziva.svg",
@@ -4136,7 +4156,7 @@
       "id": "fig-u03-pumpa-usis",
       "kind": "Figure",
       "document": "u03",
-      "number": "3.5",
+      "number": "3.6",
       "caption": "Statički stupac ulja između slobodne površine i usisnog priključka crpke.",
       "alt": "Otvoreni spremnik ulja s uronjenim usisnim vodom i crpkom postavljenom na visini H iznad slobodne površine, bez protoka.",
       "source": "../assets/print/u03_fig_pumpa_usis.svg",
@@ -4150,7 +4170,7 @@
       "id": "fig-u03-balastni-tank",
       "kind": "Figure",
       "document": "u03",
-      "number": "3.6",
+      "number": "3.7",
       "caption": "Bočni balastni tank: more izvana i balast iznutra opterećuju oplatu dna i ploču P; sondna cijev i odzračnik otvoreni su prema palubi.",
       "alt": "Bočni balastni tank uz oplatu broda: more izvana, balastna voda iznutra, ploča oplate P, sondna cijev i otvoreni odzračnik; kote gaza, visine tanka i položaja ploče.",
       "source": "../assets/print/u03_fig_balastni_tank.svg",
@@ -4164,27 +4184,13 @@
       "id": "fig-u03-vjezbe",
       "kind": "Figure",
       "document": "u03",
-      "number": "3.7",
+      "number": "3.8",
       "caption": "Skice uz Z1–Z6: barometarska visina, spremnici, slojevi fluida i manometri.",
       "alt": "Skice uz Z1–Z6: dron s barometarskim senzorom iznad baze, određivanje razine iz razlike tlakova, nagnuti manometar s posudom, slojevi ulja i vode, mjerenje podtlaka i izbor apsolutnog senzora.",
       "source": "../assets/print/u03_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
         "web": "../assets/print/u03_vjezbe_skice.svg",
-        "print_manifest": "assets/pdf-figures/manifest.json"
-      }
-    },
-    "fig-u03-staticka-zamjena-za-ravnotezu-tlaka-i-efektivno": {
-      "id": "fig-u03-staticka-zamjena-za-ravnotezu-tlaka-i-efektivno",
-      "kind": "Figure",
-      "document": "u03",
-      "number": "3.8",
-      "caption": "Jednak tlak na istoj dubini u spojenim posudama i nagnuta slobodna površina okomita na efektivno polje u ubrzanom spremniku.",
-      "alt": "Lijevo spojene posude s vodom i točkama A i B na istoj dubini h, desno ubrzani spremnik s nagnutom površinom i trokutom vektora g, minus a i g_eff s kutom theta.",
-      "source": "../assets/print/u03_balans_tlaka_i_geff.svg",
-      "type": "composite",
-      "variants": {
-        "web": "../assets/print/u03_balans_tlaka_i_geff.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
       }
     },
@@ -6190,7 +6196,7 @@
       "document": "u06",
       "number": "6.4",
       "title": "Plutajuća servisna platforma na granici ulja i vode",
-      "level": "T4",
+      "level": "T3",
       "label": "P4"
     },
     "ex-u07-izolirani-puni-bocni-tank-kao-dodana-masa": {
@@ -6199,7 +6205,7 @@
       "document": "u06",
       "number": "6.5",
       "title": "Izolirani puni bočni tank metodom dodane težine: gaz, nagib i početni stabilitet",
-      "level": "T4",
+      "level": "T3",
       "label": "P5"
     },
     "ex-u07-plutajuci-vjetroagregat-tipa-cilindricne-plovne-osnove-t3": {
@@ -8471,7 +8477,7 @@
       "document": "u10",
       "number": "10.8",
       "caption": "Tlocrt rotirajuće mlaznice: dva kraka s tangencijalnim mlazovima, obodna brzina i moment oko osi.",
-      "alt": "Tlocrt glave za pranje tanka s dva kraka duljine r, mlazovima koji izlaze tangencijalno u suprotnim smjerovima i kutnom brzinom glave u suprotnom smjeru od mlazova.",
+      "alt": "Tlocrt glave za ispiranje spremnika s dva kraka duljine r, mlazovima koji izlaze tangencijalno u suprotnim smjerovima i kutnom brzinom glave u suprotnom smjeru od mlazova.",
       "source": "../assets/print/u11_val_rotirajuca_mlaznica.svg",
       "type": "standard",
       "variants": {
@@ -8552,7 +8558,7 @@
       "kind": "Example",
       "document": "u10",
       "number": "10.7",
-      "title": "Rotirajuća mlaznica za pranje tanka",
+      "title": "Reakcijska glava za ispiranje spremnika",
       "level": "T2",
       "label": "P7"
     },
@@ -9339,7 +9345,7 @@
       "kind": "Equation",
       "document": "u12",
       "number": "12.23",
-      "latex": "\\begin{aligned}\nC_{F,m}&=\\frac{0{,}075}{(\\log_{10}1{,}08\\cdot10^{7}-2)^2}\\approx2{,}96\\cdot10^{-3}, \\\\\nC_{F,s}&=\\frac{0{,}075}{(\\log_{10}1{,}35\\cdot10^{9}-2)^2}\\approx1{,}48\\cdot10^{-3}.\n\\end{aligned}"
+      "latex": "\\begin{aligned}\nC_{F,lam}&=\\frac{1{,}328}{\\sqrt{1{,}08\\cdot10^{7}}}\\approx4{,}04\\cdot10^{-4}, \\\\\n\\frac{C_{F,m}}{C_{F,lam}}&\\approx\\frac{2{,}96\\cdot10^{-3}}{4{,}04\\cdot10^{-4}}\\approx7{,}3.\n\\end{aligned}"
     },
     "eq-realni-tok-turbulentni-tok-srednja-vrijednost-nije-cijelo-p-01": {
       "id": "eq-realni-tok-turbulentni-tok-srednja-vrijednost-nije-cijelo-p-01",
@@ -11248,6 +11254,10 @@
     },
     {
       "document": "u08",
+      "target": "ex-u09-venturijeva-cijev-za-mjerenje-protoka-ulja-t2"
+    },
+    {
+      "document": "u08",
       "target": "eq-energijska-jednadzba-kv"
     },
     {
@@ -11460,6 +11470,10 @@
     },
     {
       "document": "u11",
+      "target": "ex-odabir-modela-kompresibilnosti"
+    },
+    {
+      "document": "u11",
       "target": "fig-u14-vjezbe"
     },
     {
@@ -11508,7 +11522,7 @@
     },
     {
       "document": "u12",
-      "target": "eq-ittc-1957"
+      "target": "ex-u14-froudeova-slicnost-model-broda-u-vucnom-bazenu"
     },
     {
       "document": "u12",

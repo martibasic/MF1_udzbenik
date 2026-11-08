@@ -4,7 +4,7 @@ Realni fluid prianja uz svaku krutu plohu i opire se smicanju. Uz trup broda, lo
 
 Poglavlje redom obrađuje materijalnu derivaciju, lokalne bilance i rubne uvjete, a zatim kanonska rješenja: tok između paralelnih ploča i Hagen–Poiseuilleov tok u cijevi, iz kojega slijedi $\lambda=64/Re$. Uz granični sloj uvode se smično naprezanje na stijenci $\tau_{st}$, Blasiusove procjene i odvajanje. Turbulentni tok opisujemo rastavom brzine na srednju vrijednost i fluktuaciju te Reynoldsovim naprezanjima, a završni odjeljak povezuje te jednadžbe s CFD-om. Reynoldsov broj povezuje poglavlje sa sličnošću iz []{.mf1-chapter-ref target="u11"}, a laminarni rezultat i $\tau_{st}$ polazište su modela gubitaka u []{.mf1-chapter-ref target="u13"}.
 
-Isti model opisuje uljni film kliznog ležaja, granični sloj na trupu modela u vučnom bazenu, rashladne kanale i ulazne uvjete ventilacijskog voda u CFD proračunu. Analitička rješenja vrijede samo uz pretpostavke iz kojih su izvedena. Turbulencijski model zatvara nepoznate korelacije, a diskretizacija u CFD-u ne uvodi novu fiziku, pa numerička konvergencija ne zamjenjuje validaciju.
+Isti model opisuje ulje u uskom procjepu, granični sloj na trupu modela u vučnom bazenu, rashladne kanale i ulazne uvjete ventilacijskog voda u CFD proračunu. Analitička rješenja vrijede samo uz pretpostavke iz kojih su izvedena. Turbulencijski model zatvara nepoznate korelacije, a diskretizacija u CFD-u ne uvodi novu fiziku, pa numerička konvergencija ne zamjenjuje validaciju.
 
 Slika [-@fig-realni-tok-pregled] povezuje tri razine opisa. Lijevo je zamišljeni element fluida dimenzija $dx$ i $dy$; njegovi rubovi nisu krute stijenke, a prikazane su samo $x$-komponente naprezanja: tlak $p$ i $p+dp$ na bočnim plohama te smično naprezanje $\tau_{xy}$ i $\tau_{xy}+d\tau_{xy}$ na donjoj i gornjoj plohi. U sredini je laminarni granični sloj uz ravnu plohu bez gradijenta tlaka ($dp/dx=0$): uz vanjsku brzinu $U_\infty$ njegova debljina $\delta_{99}$ raste s udaljenošću $x$ od prednjeg ruba kao $\delta_{99}\propto\sqrt{x}$, a okomito je mjerilo uvećano. Desno je signal brzine $v(t)=\overline{v}+v'(t)$ koji fluktuira oko srednje vrijednosti $\overline{v}=8{,}0\ \text{m/s}$; to je sintetička shema, a ne mjerenje.
 
@@ -303,7 +303,7 @@ Model broda iz primjera [-@ex-u14-froudeova-slicnost-model-broda-u-vucnom-bazenu
 
 1. Odredi $Re_x$ i laminarnu debljinu $\delta_B$ (Blasiusova procjena $\delta_{99}$) na udaljenosti $x_1=0{,}05L_m$ od pramca, gdje se obično ugrađuje stimulator turbulencije; objasni zašto se on ugrađuje.
 2. Odredi $Re_L$ i procijeni debljinu turbulentnog sloja na krmi prema $\delta\approx0{,}37x/Re_x^{1/5}$ (aproksimacija potencijskog profila $1/7$).
-3. Odredi $C_F$ prema liniji ITTC 1957 iz []{.mf1-chapter-ref target="u11"} (@eq-ittc-1957) za model i brod i protumači razliku.
+3. Usporedi turbulentni $C_{F,m}$ modela iz primjera [-@ex-u14-froudeova-slicnost-model-broda-u-vucnom-bazenu] s laminarnim $C_F=1{,}328/\sqrt{Re_L}$ i protumači razliku.
 
 **Rješenje**
 
@@ -327,15 +327,15 @@ $$ {#eq-granicni-sloj-trupa-modela-02}
 
 $$
 \begin{aligned}
-C_{F,m}&=\frac{0{,}075}{(\log_{10}1{,}08\cdot10^{7}-2)^2}\approx2{,}96\cdot10^{-3}, \\
-C_{F,s}&=\frac{0{,}075}{(\log_{10}1{,}35\cdot10^{9}-2)^2}\approx1{,}48\cdot10^{-3}.
+C_{F,lam}&=\frac{1{,}328}{\sqrt{1{,}08\cdot10^{7}}}\approx4{,}04\cdot10^{-4}, \\
+\frac{C_{F,m}}{C_{F,lam}}&\approx\frac{2{,}96\cdot10^{-3}}{4{,}04\cdot10^{-4}}\approx7{,}3.
 \end{aligned}
 $$ {#eq-granicni-sloj-trupa-modela-03}
 
 **Provjera i tumačenje**
 
 1. $Re_{x_1}=5{,}4\cdot10^{5}$ leži u području u kojem laminarni sloj na glatkoj ploči još može opstati (prirodni prijelaz približno između $3\cdot10^{5}$ i $3\cdot10^{6}$), dok je na brodu $Re_x$ na istom mjestu 125 puta veći. Zato se prijelaz na modelu izaziva žicom, trakom s pijeskom ili klinovima; bez toga bi $C_{F,m}$ bio manji od pretpostavljenog, a korekcija prema jednadžbi [-@eq-froudeova-hipoteza] bila bi pogrešna.
-2. $\delta/L_m\approx0{,}015\ll1$ potvrđuje aproksimaciju tankog sloja; $C_{F,m}/C_{F,s}\approx2{,}0$ pokazuje zašto se viskozni otpor ne skalira s $\lambda_L^3$. Model ravne ploče zanemaruje zakrivljenost trupa, gradijent tlaka i hrapavost.
+2. $\delta/L_m\approx0{,}015\ll1$ potvrđuje aproksimaciju tankog sloja; turbulentni $C_{F,m}$ oko 7 puta je veći od laminarnoga, pa bi model bez stimulatora jako podcijenio otpor trenja. Model ravne ploče zanemaruje zakrivljenost trupa, gradijent tlaka i hrapavost.
 :::
 
 ## Turbulentni tok: srednja vrijednost nije cijelo polje {#sec-turbulencija}

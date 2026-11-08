@@ -42,12 +42,12 @@
         <line x1="66" y1="170" x2="66" y2="188" stroke="#657781" stroke-width="1" />
         <line x1="230" y1="170" x2="230" y2="188" stroke="#657781" stroke-width="1" />
         <path id="u14vs_z1a" data-mf1-role="dimension" d="M66 183 L230 183" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text x="148" y="178" font-size="11" fill="#263746" text-anchor="middle" font-style="italic">a</text>
+        <text x="148" y="178" font-size="11" fill="#263746" text-anchor="middle" font-style="italic">B</text>
         <line x1="240" y1="76" x2="258" y2="76" stroke="#657781" stroke-width="1" />
         <line x1="240" y1="158" x2="258" y2="158" stroke="#657781" stroke-width="1" />
         <path id="u14vs_z1b" data-mf1-role="dimension" d="M253 76 L253 158" fill="none" stroke="#657781" stroke-width="1.4" marker-start="url(#u14vs_dim)" marker-end="url(#u14vs_dim)" />
-        <text x="257" y="121" font-size="11" fill="#263746" text-anchor="start" font-style="italic">b</text>
-        <text x="148" y="204" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">a</tspan> = 0,400 m; <tspan font-style="italic">b</tspan> = 0,200 m</text>
+        <text x="257" y="121" font-size="11" fill="#263746" text-anchor="start" font-style="italic">H</text>
+        <text x="148" y="204" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">B</tspan> = 0,400 m; <tspan font-style="italic">H</tspan> = 0,200 m</text>
         <text x="148" y="226" font-size="11" fill="#263746" text-anchor="middle">zrak: <tspan font-style="italic">Q</tspan> = 0,640 m³/s, <tspan font-style="italic">ν</tspan> = 1,50 · 10⁻⁵ m²/s</text>
         <text x="146" y="256" font-size="11" fill="#263746" text-anchor="middle">⊙ Tok prema promatraču.</text>
       </g>

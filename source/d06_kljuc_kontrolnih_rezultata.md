@@ -152,9 +152,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd#task-u03-zatvoreni-spremnik-s-vodom-ima-plinski-prostor)
 
-**Smjernica postupka.** Iz otvorenog manometra najprije odredi tlak u priključku, zatim se usponom kroz vodu vrati do plinskog prostora, a silaskom na dubinu $h_2$ dobij tlak u traženoj točki. Za konzervativnu gornju granicu istodobno uzmi najveće $p_{atm}$, $\Delta h$ i $h_2$, a najmanje $h_1$. Nakon toga primijeni zahtijevanu rezervu na mjerno područje; nominalna vrijednost sama nije dovoljna za izbor senzora.
+**Smjernica postupka.** Iz otvorenog manometra najprije odredi tlak u priključku, zatim se usponom kroz vodu vrati do plinskog prostora, a silaskom na dubinu $h_2$ dobij tlak u traženoj točki. Za konzervativnu gornju granicu istodobno uzmi najveće $p_{atm}$, $\Delta h$ i $h_2$, a najmanje $h_1$. Nakon toga primijeni zahtijevanu rezervu i usporedi izbor prema nominalnom i prema konzervativnom tlaku.
 
-**Kontrolni rezultat ili kriterij.** $p_{pl} \approx 122{,}6\ \text{kPa}$ (aps.); na dubini $1{,}30\ \text{m}$: $p \approx 135{,}3\ \text{kPa}$. Konzervativna gornja granica iznosi $p_{max}\approx136{,}05\ \text{kPa}$, pa uz rezervu od $5\ \%$ treba puna skala od najmanje $142{,}85\ \text{kPa}$. Pretvornik $0$–$140\ \text{kPa}$ nije dostatan; bira se područje $0$–$160\ \text{kPa}$.
+**Kontrolni rezultat ili kriterij.** $p_{pl} \approx 122{,}6\ \text{kPa}$ (aps.); na dubini $1{,}30\ \text{m}$: $p \approx 135{,}3\ \text{kPa}$. Nominalni tlak uz rezervu od $3\ \%$ traži punu skalu od $139{,}34\ \text{kPa}$, pa bi prošao pretvornik $0$–$140\ \text{kPa}$. Konzervativna gornja granica iznosi $p_{max}\approx136{,}05\ \text{kPa}$ i traži najmanje $140{,}13\ \text{kPa}$, pa zbog tolerancija treba područje $0$–$160\ \text{kPa}$.
 
 ## Relativno mirovanje fluida
 
@@ -314,7 +314,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Masena bilanca $\rho_1 A_1 v_1 = \rho_2 A_2 v_2$ vrijedi i pri promjeni gustoće; volumenska $Q_1 = Q_2$ samo kad je gustoća ista na oba presjeka.
 
-**Kontrolni rezultat ili kriterij.** $\dot m = 4{,}32\ \text{kg/s}$; $v_2 \approx 17{,}6\ \text{m/s}$; $Q_1 = 3{,}60\ \text{m}^3/\text{s}$, $Q_2 \approx 4{,}24\ \text{m}^3/\text{s}$. Volumenski protok raste jer gustoća pada; jednak je samo maseni protok.
+**Kontrolni rezultat ili kriterij.** $\dot m \approx 4{,}82\ \text{kg/s}$; $v_2 \approx 16{,}8\ \text{m/s}$; $Q_1 = 3{,}60\ \text{m}^3/\text{s}$, $Q_2 \approx 4{,}02\ \text{m}^3/\text{s}$. Volumenski protok raste jer gustoća pada; jednak je samo maseni protok.
 
 ### Z2. Protok kroz kosu kontrolnu plohu {#key-task-protok-kroz-kosu-kontrolnu-plohu .unnumbered .unlisted}
 
@@ -402,7 +402,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u08_energijska_jednadzba_i_bernoulli.qmd#task-u09-idealni-sifon-promjera-prazni-otvoreni-spremnik-tako)
 
-**Smjernica postupka.** Bernoullijevom jednadžbom između slobodne površine i izlaza odredi idealni $v$, a između slobodne površine i vrha sifona odredi tlak. Domet mlaza izračunaj prema modelu vodoravnog hica s visine $1{,}2\ \text{m}$. Za izvedeni sustav koristi $v=\sqrt{2g\Delta z/(1+\zeta_\Sigma)}$ i $p_{aps,C}=p_{atm}-\rho g[z_C+(1+\zeta_C)v^2/(2g)]$. Najmanji protok daje najveći $\zeta_\Sigma$; najmanji tlak u vrhu provjeri rubnim kombinacijama zadanih intervala, ne samo nominalnim koeficijentima.
+**Smjernica postupka.** Bernoullijevom jednadžbom između slobodne površine i izlaza odredi idealni $v$, a između slobodne površine i vrha sifona odredi tlak. Domet mlaza izračunaj prema modelu vodoravnog hica s visine $1{,}2\ \text{m}$. Za izvedeni sustav koristi zadane bilance s gubitcima. Najmanji protok daje najveći $\zeta_\Sigma$; najmanji tlak u vrhu provjeri rubnim kombinacijama zadanih intervala, ne samo nominalnim koeficijentima.
 
 **Kontrolni rezultat ili kriterij.** Idealno: $v\approx7{,}14$ m/s, $Q\approx27{,}5$ L/s, $p_{aps,C}\approx59{,}1$ kPa, $x\approx3{,}53$ m. Uz gubitke nominalno je $Q\approx15{,}9$ L/s i $p_{aps,C}\approx65{,}9$ kPa; intervali su $Q\in[14{,}7;17{,}4]$ L/s i $p_{aps,C}\in[59{,}1;70{,}8]$ kPa. Tlačni zahtjev prolazi, ali protok od 15,0 L/s nije zajamčen. Treba smanjiti gubitke, povećati promjer ili mjerenjem suziti interval.
 
@@ -512,7 +512,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u11_dimenzijska_analiza_i_slicnost.qmd#task-ventilacijski-kanal-hidraulicki-promjer)
 
-**Smjernica postupka.** Iz $A=ab$ i $P=2(a+b)$ slijedi $D_h=2ab/(a+b)$; za kvadrat se svodi na stranicu, a za kružnu cijev na $D$. Brzina je $v=Q/A$. Usporedi $Re$ dobiven s objema duljinama.
+**Smjernica postupka.** Iz $A=BH$ i $P=2(B+H)$ slijedi $D_h=2BH/(B+H)$; za kvadrat se svodi na stranicu, a za kružnu cijev na $D$. Brzina je $v=Q/A$. Usporedi $Re$ dobiven s objema duljinama.
 
 **Kontrolni rezultat ili kriterij.** $v=8{,}00\ \text{m/s}$, $D_h=0{,}2667\ \text{m}$, $Re=1{,}42\cdot10^5$: turbulentno. S duljom stranicom dobiva se $Re=2{,}13\cdot10^5$, 1,5 puta veći; dijagram $\lambda(Re,k_s/D)$ za nekružne presjeke definiran je s $D_h$, pa bi takav $Re$ dao pogrešan $\lambda$.
 
