@@ -624,7 +624,7 @@ $p_0=8{,}00\ \text{bar(abs)}$, $p^*\approx4{,}226\ \text{bar(abs)}$. I: $p_b=p_e
 
 [Razina: T2]{.mf1-task-level}
 
-### Geometrija ili koeficijent protoka? {#task-sapnica-model .unnumbered .unlisted}
+### Geometrija i koeficijent protoka zagušene sapnice {#task-sapnica-model .unnumbered .unlisted}
 
 **Tekst zadatka**
 

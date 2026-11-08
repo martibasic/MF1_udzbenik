@@ -21,7 +21,11 @@ Ovaj pregled služi za provjeru odabira modela, referentnog tlaka, kontrolnog vo
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Miješanje mase fluida s masom posude (tarom) te gustoće $\rho$ sa specifičnom težinom $\gamma$; zamjena omjera površina omjerom promjera (sila raste s $d^2$); očekivanje da preša istodobno povećava i silu i pomak; zanemarivanje stlačivosti samo zato što je promjena gustoće mala (Z4); tumačenje zbroja poteza crpke kao jednog hoda ili zbroja iznosa sila kao rezultantnog vektora (Z5).
+- Miješanje mase fluida s masom posude (tarom) te gustoće $\rho$ sa specifičnom težinom $\gamma$.
+- Zamjena omjera površina omjerom promjera (sila raste s $d^2$).
+- Očekivanje da preša istodobno povećava i silu i pomak.
+- Zanemarivanje stlačivosti samo zato što je promjena gustoće mala (Z4).
+- Tumačenje zbroja poteza crpke kao jednog hoda ili zbroja iznosa sila kao rezultantnog vektora (Z5).
 :::
 
 ::: {.mf1-error-column}
@@ -37,7 +41,12 @@ Oduzmi taru, provjeri površine, volumen i rad: $F_1s_1=F_2s_2$. Za pogrešku po
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Miješanje dinamičke i kinematičke viskoznosti i njihovih jedinica; pretpostavka jednakoga tlačnog skoka za kapljicu ($4\sigma/d$) i sapunasti mjehur ($8\sigma/d$); spajanje dvaju procjepa u jedan gradijent (Z3); zaključak o newtonskom ponašanju iz jedne mjerne točke (Z5); istodobno računanje konkavnoga meniskusa i izlazne kapljice kao neovisnih međupovršina (Z6); faktor 4 iz kapilare promjera $d$ primijenjen na procjep širine $b$, gdje vrijedi $h=2\sigma\cos\theta/(\rho gb)$.
+- Miješanje dinamičke i kinematičke viskoznosti i njihovih jedinica.
+- Pretpostavka jednakoga tlačnog skoka za kapljicu ($4\sigma/d$) i sapunasti mjehur ($8\sigma/d$).
+- Spajanje dvaju procjepa u jedan gradijent (Z3).
+- Zaključak o newtonskom ponašanju iz jedne mjerne točke (Z5).
+- Istodobno računanje konkavnoga meniskusa i izlazne kapljice kao neovisnih međupovršina (Z6).
+- Faktor 4 iz kapilare promjera $d$ primijenjen na procjep širine $b$, gdje vrijedi $h=2\sigma\cos\theta/(\rho gb)$.
 :::
 
 ::: {.mf1-error-column}
@@ -53,7 +62,15 @@ Utvrdi koja od veličina $\mu$, $\nu$ i $\sigma$ odgovara pojavi. Prebroji među
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Miješanje apsolutnog, manometarskog i vakuumskog tlaka; pogrešni predznaci pri prijelazu sa stupca na stupac; model stalne gustoće za stupac zraka visok stotine metara (Z1); kod nagnutog manometra očitanje uzduž cjevčice bez $\sin\alpha$ ili bez spuštanja razine u posudi (Z3); jedna gustoća za dva sloja (Z4); izbor manometra samo prema visini stupca, bez procjene tlačne pogreške očitanja (Z5); uporaba statičke usisne visine $p_{atm}/(\rho g)$ kao provjere crpke u radu; usporedba manometarskog tlaka s tlakom pare $p_v$, koji je apsolutan; računanje vodenog taloga u teretnom tanku kao da je ulje (bez sondiranja) i izostavljanje pretlaka inertnog plina $p_{M,pl}$ pri preračunu očitanja tlačnog mjerača razine.
+- Miješanje apsolutnog, manometarskog i vakuumskog tlaka.
+- Pogrešni predznaci pri prijelazu sa stupca na stupac.
+- Model stalne gustoće za stupac zraka visok stotine metara (Z1).
+- Kod nagnutog manometra očitanje uzduž cjevčice bez $\sin\alpha$ ili bez spuštanja razine u posudi (Z3).
+- Jedna gustoća za dva sloja (Z4).
+- Izbor manometra samo prema visini stupca, bez procjene tlačne pogreške očitanja (Z5).
+- Uporaba statičke usisne visine $p_{atm}/(\rho g)$ kao provjere crpke u radu.
+- Usporedba manometarskog tlaka s tlakom pare $p_v$, koji je apsolutan.
+- Računanje vodenog taloga u teretnom tanku kao da je ulje (bez sondiranja) i izostavljanje pretlaka inertnog plina $p_{M,pl}$ pri preračunu očitanja tlačnog mjerača razine.
 :::
 
 ::: {.mf1-error-column}
@@ -69,7 +86,13 @@ Odredi referencu i sve visinske razlike, uključujući položaj granice fluida u
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Zamjena smjera ubrzanja smjerom brzine (pri kočenju je $a<0$ iako je brzina pozitivna); linearna umjesto kvadratne ovisnosti o polumjeru pri vrtnji; zanemarivanje okomitog ubrzanja u nagibu i u efektivnoj težini, $\tan\theta=a_x/(g+a_z)$ (Z2); u potpuno punom zatvorenom spremniku referenca tlaka uzeta na gornjem rubu umjesto na odzračniku (P1); zaključak o smirivanju fluida iz jednog očitanja (Z5); daljnja primjena formule za puni paraboloid nakon prelijevanja ili ogoljavanja dna (Z6); prividna sila u zavoju usmjerena prema središtu zavoja umjesto od njega, pa se viša razina pojavi na pogrešnom boku tanka.
+- Zamjena smjera ubrzanja smjerom brzine (pri kočenju je $a<0$ iako je brzina pozitivna).
+- Linearna umjesto kvadratne ovisnosti o polumjeru pri vrtnji.
+- Zanemarivanje okomitog ubrzanja u nagibu i u efektivnoj težini, $\tan\theta=a_x/(g+a_z)$ (Z2).
+- U potpuno punom zatvorenom spremniku referenca tlaka uzeta na gornjem rubu umjesto na odzračniku (P1).
+- Zaključak o smirivanju fluida iz jednog očitanja (Z5).
+- Daljnja primjena formule za puni paraboloid nakon prelijevanja ili ogoljavanja dna (Z6).
+- Prividna sila u zavoju usmjerena prema središtu zavoja umjesto od njega, pa se viša razina pojavi na pogrešnom boku tanka.
 :::
 
 ::: {.mf1-error-column}
@@ -85,7 +108,15 @@ Najprije odredi $\vec g_{eff}$ i provjeri očuvanje volumena. Pri vrtnji uspored
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Smještanje hvatišta u težište plohe: kad tlak raste s dubinom, centar tlaka leži ispod težišta, $h_{CP}=h_C+I_G/(h_CA)$; uporaba te formule bez provjere referentnog tlaka (dodatni pretlak zahtijeva računanje momenta cijele raspodjele); računanje zakrivljene plohe kao ravne; određivanje predznaka $F_V$ samo iz pomoćnoga volumena; uvjet otvaranja zaklopke postavljen s težištem umjesto s centrom tlaka (Z3); zamjena težišta i $I_G$ trokuta vrijednostima za pravokutnik (Z4); poistovjećivanje osi u središtu kružnice sa zglobom na kraju luka (Z5); pretpostavka da rezultanta na bilo kojoj zakrivljenoj plohi prolazi kroz jednu točku, što vrijedi samo za kružni luk; $\sin\theta$ umjesto $\sin^2\theta$ u dubini centra tlaka nagnute plohe.
+- Smještanje hvatišta u težište plohe: kad tlak raste s dubinom, centar tlaka leži ispod težišta, $h_{CP}=h_C+I_G/(h_CA)$.
+- Uporaba te formule bez provjere referentnog tlaka (dodatni pretlak zahtijeva računanje momenta cijele raspodjele).
+- Računanje zakrivljene plohe kao ravne.
+- Određivanje predznaka $F_V$ samo iz pomoćnoga volumena.
+- Uvjet otvaranja zaklopke postavljen s težištem umjesto s centrom tlaka (Z3).
+- Zamjena težišta i $I_G$ trokuta vrijednostima za pravokutnik (Z4).
+- Poistovjećivanje osi u središtu kružnice sa zglobom na kraju luka (Z5).
+- Pretpostavka da rezultanta na bilo kojoj zakrivljenoj plohi prolazi kroz jednu točku, što vrijedi samo za kružni luk.
+- $\sin\theta$ umjesto $\sin^2\theta$ u dubini centra tlaka nagnute plohe.
 :::
 
 ::: {.mf1-error-column}
@@ -101,7 +132,17 @@ Utvrdi orijentaciju plohe i referentni tlak, zasebno zatvori bilancu sila i bila
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Zamjena volumena tijela istisninom; ista istisnina (umjesto iste mase) pri prelasku broda iz mora u rijeku (Z1); kod homogenog bloka zaključak o stabilitetu samo iz širine, bez usporedbe $KB+BM$ s $KG$ (Z2); miješanje ravnoteže sila s početnim stabilitetom; proglašavanje pozitivnoga $GM$ dokazom stabiliteta pri velikim kutovima ili u oštećenom stanju; zanemarivanje slobodne površine djelomično punih tankova, koja smanjuje efektivni $GM$ za $\rho_ti_t/(\rho V_{ist})$; zaključivanje samo iz sniženja $KG$, bez praćenja promjene $KB$, $BM$ i nadvođa (Z5); morski balast računan gustoćom slatke vode ($1000$ umjesto $1025\ \text{kg/m}^3$); poprečni pomak centra uzgona $y_B$ proglašen polugom stabiliteta $GZ$; $\sin\varphi_{lim}=2f/b$ umjesto $\tan\varphi_{lim}=2f/b$ za kut uronjenja ruba palube; masa uzeta kao nepromjenjiva neovisno o nesigurnim gazovima (Z6).
+- Zamjena volumena tijela istisninom.
+- Ista istisnina (umjesto iste mase) pri prelasku broda iz mora u rijeku (Z1).
+- Kod homogenog bloka zaključak o stabilitetu samo iz širine, bez usporedbe $KB+BM$ s $KG$ (Z2).
+- Miješanje ravnoteže sila s početnim stabilitetom.
+- Proglašavanje pozitivnoga $GM$ dokazom stabiliteta pri velikim kutovima ili u oštećenom stanju.
+- Zanemarivanje slobodne površine djelomično punih tankova, koja smanjuje efektivni $GM$ za $\rho_ti_t/(\rho V_{ist})$.
+- Zaključivanje samo iz sniženja $KG$, bez praćenja promjene $KB$, $BM$ i nadvođa (Z5).
+- Morski balast računan gustoćom slatke vode ($1000$ umjesto $1025\ \text{kg/m}^3$).
+- Poprečni pomak centra uzgona $y_B$ proglašen polugom stabiliteta $GZ$.
+- $\sin\varphi_{lim}=2f/b$ umjesto $\tan\varphi_{lim}=2f/b$ za kut uronjenja ruba palube.
+- Masa uzeta kao nepromjenjiva neovisno o nesigurnim gazovima (Z6).
 :::
 
 ::: {.mf1-error-column}
@@ -117,7 +158,12 @@ Računaj stvarnu istisninu i odvoji bilancu sila od bilance momenata. Pri pokusu
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Mehaničko pisanje $A_1v_1=A_2v_2$ bez kontrolnog volumena; zamjena kuta prema normali kutom prema plohi (Z2); zaboravljena akumulacija; uporaba apsolutne brzine kroz pomičnu plohu (Z5); vršna brzina u osi uzeta kao srednja ili profil integriran bez težine $2\pi r$ prstena (Z4); računanje porasta razine i nakon početka prelijevanja (Z6).
+- Mehaničko pisanje $A_1v_1=A_2v_2$ bez kontrolnog volumena.
+- Zamjena kuta prema normali kutom prema plohi (Z2).
+- Zaboravljena akumulacija.
+- Uporaba apsolutne brzine kroz pomičnu plohu (Z5).
+- Vršna brzina u osi uzeta kao srednja ili profil integriran bez težine $2\pi r$ prstena (Z4).
+- Računanje porasta razine i nakon početka prelijevanja (Z6).
 :::
 
 ::: {.mf1-error-column}
@@ -133,7 +179,14 @@ Označi vanjsku normalu, ulaze, izlaze i akumulaciju. Za kosu plohu koristi norm
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Pisanje Bernoullijeve jednadžbe bez odabira presjeka i strujnice; poistovjećivanje brzine mirne površine s brzinom izlaznog mlaza; vrijeme pražnjenja spremnika iz početnog protoka kao da je stalan, iako protok pada sa $\sqrt h$ (Z2); uporaba $\alpha=1$ bez provjere profila (za razvijeni laminarni tok u kružnoj cijevi $\alpha=2$); miješanje tlačne visine $p/(\rho g)$ s piezometarskom visinom $z+p/(\rho g)$ (Z3); zanemarivanje hidrostatičke korekcije senzora smještenog na drugoj visini (Z4); provjera samo jednog od dvaju pogonskih zahtjeva pri izboru elementa (Z5); primjena idealnog modela bez gubitaka na sifon, bez provjere najnižega apsolutnog tlaka u tjemenu (Z6).
+- Pisanje Bernoullijeve jednadžbe bez odabira presjeka i strujnice.
+- Poistovjećivanje brzine mirne površine s brzinom izlaznog mlaza.
+- Vrijeme pražnjenja spremnika iz početnog protoka kao da je stalan, iako protok pada sa $\sqrt h$ (Z2).
+- Uporaba $\alpha=1$ bez provjere profila (za razvijeni laminarni tok u kružnoj cijevi $\alpha=2$).
+- Miješanje tlačne visine $p/(\rho g)$ s piezometarskom visinom $z+p/(\rho g)$ (Z3).
+- Zanemarivanje hidrostatičke korekcije senzora smještenog na drugoj visini (Z4).
+- Provjera samo jednog od dvaju pogonskih zahtjeva pri izboru elementa (Z5).
+- Primjena idealnog modela bez gubitaka na sifon, bez provjere najnižega apsolutnog tlaka u tjemenu (Z6).
 :::
 
 ::: {.mf1-error-column}
@@ -149,7 +202,14 @@ Odvoji brzinu na površini od izlazne brzine; piezometarsku crtu računaj kao $z
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Miješanje brzine zvuka $a$ i brzine signala u odnosu na laboratorij $v\pm a$ (Z3); omjeri manometarskih umjesto apsolutnih tlakova; poistovjećivanje protutlaka $p_b$ s izlaznim tlakom zagušene sapnice (Z4); brkanje zagušenja (choking, $Ma=1$ u najužem presjeku) s prigušenjem ventilom; izentropska relacija primijenjena kroz udarni val ili nekorigirano očitanje Pitotove sonde u nadzvučnom toku (Z6); temperatura u °C uvrštena u $a=\sqrt{\kappa RT}$; kriterij zagušenja $p_b/p_0<0{,}528$ primijenjen s manometarskim tlakovima; izbor podzvučnog ili nadzvučnog korijena relacije $A/A^*$ bez provjere protutlaka.
+- Miješanje brzine zvuka $a$ i brzine signala u odnosu na laboratorij $v\pm a$ (Z3).
+- Omjeri manometarskih umjesto apsolutnih tlakova.
+- Poistovjećivanje protutlaka $p_b$ s izlaznim tlakom zagušene sapnice (Z4).
+- Brkanje zagušenja (engl. *choking*; $Ma=1$ u najužem presjeku) s prigušenjem ventilom.
+- Izentropska relacija primijenjena kroz udarni val ili nekorigirano očitanje Pitotove sonde u nadzvučnom toku (Z6).
+- Temperatura u °C uvrštena u $a=\sqrt{\kappa RT}$.
+- Kriterij zagušenja $p_b/p_0<0{,}528$ primijenjen s manometarskim tlakovima.
+- Izbor podzvučnog ili nadzvučnog korijena relacije $A/A^*$ bez provjere protutlaka.
 :::
 
 ::: {.mf1-error-column}
@@ -165,7 +225,15 @@ Razlikuj $a$ i $v\pm a$, koristi apsolutne tlakove i apsolutnu temperaturu te re
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Miješanje sile na fluid, sile na konstrukciju i reakcije oslonca (predznak sile na koljeno); tlačne sile $p_MA$ s pogrešnim smjerom (moraju biti usmjerene u kontrolni volumen) ili s apsolutnim umjesto manometarskim tlakom kad je okolina atmosferska; u okomitoj ravnini zaboravljena težina vode u elementu i pad tlaka zbog visine (Z3); uporaba $\beta=1$ za nejednolik profil; neoznačena ravnina skretanja; kosi razmak umjesto okomitog kraka u momentu (Z4); cijeli protok sapnice uzet u bilancu jedne pomične ploče (Z5); apsolutna umjesto relativne brzine u dotoku kroz pomičnu plohu ili relativna umjesto apsolutne brzine u toku količine gibanja i energije; RSS primijenjen na zajamčene granice (Z6).
+- Miješanje sile na fluid, sile na konstrukciju i reakcije oslonca (predznak sile na koljeno).
+- Tlačne sile $p_MA$ s pogrešnim smjerom (moraju biti usmjerene u kontrolni volumen) ili s apsolutnim umjesto manometarskim tlakom kad je okolina atmosferska.
+- U okomitoj ravnini zaboravljena težina vode u elementu i pad tlaka zbog visine (Z3).
+- Uporaba $\beta=1$ za nejednolik profil.
+- Neoznačena ravnina skretanja.
+- Kosi razmak umjesto okomitog kraka u momentu (Z4).
+- Cijeli protok sapnice uzet u bilancu jedne pomične ploče (Z5).
+- Apsolutna umjesto relativne brzine u dotoku kroz pomičnu plohu ili relativna umjesto apsolutne brzine u toku količine gibanja i energije.
+- RSS primijenjen na zajamčene granice (Z6).
 :::
 
 ::: {.mf1-error-column}
@@ -181,7 +249,15 @@ Nacrtaj tlocrt, označi osi i tlačne sile usmjeri prema KV-u. Razlikuj $\vec F$
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Empirijska jednadžba s dimenzijskim koeficijentom ($n$ u Manningovoj jednadžbi) uzeta kao homogena, pa se ista brojka uvrsti u drugim jedinicama (Z2); pretlak umjesto apsolutnog tlaka u kavitacijskom broju (Z3); prijenos sile faktorom $\lambda_L^3$ bez Froudeove sličnosti ili uz različite gustoće (Z4, Z6); zahtjev da model s istim fluidom pri drugom mjerilu istodobno zadovolji $Re$ i $Fr$, što nije moguće; brojčana vrijednost $St$ izvedena samo iz dimenzijske analize (Z5); izmjereni otpor modela broda pomnožen s $\lambda_L^3$ umjesto prijenosa preko $C_T=C_F+C_R$; promjer umjesto hidrauličkog promjera $D_h=4A/P$ kao karakteristična duljina nekružnog presjeka; miješanje koeficijenta otpora $C_D$ i koeficijenta istjecanja $C_d$; preklapanje intervala uzeto kao dokaz male mjerilne pogreške.
+- Empirijska jednadžba s dimenzijskim koeficijentom ($n$ u Manningovoj jednadžbi) uzeta kao homogena, pa se ista brojka uvrsti u drugim jedinicama (Z2).
+- Pretlak umjesto apsolutnog tlaka u kavitacijskom broju (Z3).
+- Prijenos sile faktorom $\lambda_L^3$ bez Froudeove sličnosti ili uz različite gustoće (Z4, Z6).
+- Zahtjev da model s istim fluidom pri drugom mjerilu istodobno zadovolji $Re$ i $Fr$, što nije moguće.
+- Brojčana vrijednost $St$ izvedena samo iz dimenzijske analize (Z5).
+- Izmjereni otpor modela broda pomnožen s $\lambda_L^3$ umjesto prijenosa preko $C_T=C_F+C_R$.
+- Promjer umjesto hidrauličkog promjera $D_h=4A/P$ kao karakteristična duljina nekružnog presjeka.
+- Miješanje koeficijenta otpora $C_D$ i koeficijenta istjecanja $C_d$.
+- Preklapanje intervala uzeto kao dokaz male mjerilne pogreške.
 :::
 
 ::: {.mf1-error-column}
@@ -197,7 +273,15 @@ Najprije provjeri dimenzijsku homogenost i jedinicu svakog empirijskog koeficije
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Izostavljanje nestacionarnoga ili konvektivnoga člana (Z1); miješanje strujnice i putanje čestice; rješavanje Navier–Stokesovih jednadžbi bez početnih i rubnih uvjeta; tumačenje vremenskog mjerila $H^2/\nu$ kao točnog vremena uspostave profila; Hagen–Poiseuilleov izraz primijenjen na turbulentni tok ili bilanca sila $\tau_{st}=\Delta p\,D/(4L)$ pogrešno ograničena na laminarni režim, visina prve ćelije odabrana bez brzine trenja (Z2); tumačenje lokalnog povratnog toka kao prolaza kroz stijenku (Z4); primjena Blasiusova rješenja uz gradijent tlaka ili hrapavost (Z5); poistovjećivanje numeričke konvergencije s validacijom (Z6); ulazna specifična disipacija $\omega$ proglašena „izmjerenom” iako senzor daje samo intenzitet $I_t$, a duljinska skala $\ell$ samo je pretpostavka.
+- Izostavljanje nestacionarnoga ili konvektivnoga člana (Z1).
+- Miješanje strujnice i putanje čestice.
+- Rješavanje Navier–Stokesovih jednadžbi bez početnih i rubnih uvjeta.
+- Tumačenje vremenskog mjerila $H^2/\nu$ kao točnog vremena uspostave profila.
+- Hagen–Poiseuilleov izraz primijenjen na turbulentni tok ili bilanca sila $\tau_{st}=\Delta p\,D/(4L)$ pogrešno ograničena na laminarni režim, visina prve ćelije odabrana bez brzine trenja (Z2).
+- Tumačenje lokalnog povratnog toka kao prolaza kroz stijenku (Z4).
+- Primjena Blasiusova rješenja uz gradijent tlaka ili hrapavost (Z5).
+- Poistovjećivanje numeričke konvergencije s validacijom (Z6).
+- Ulazna specifična disipacija $\omega$ proglašena „izmjerenom” iako senzor daje samo intenzitet $I_t$, a duljinska skala $\ell$ samo je pretpostavka.
 :::
 
 ::: {.mf1-error-column}
@@ -213,7 +297,13 @@ Zadrži lokalno i konvektivno ubrzanje dok ih pretpostavke izričito ne uklone t
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Uporaba $\lambda=64/Re$ bez provjere da je tok laminaran, ili turbulentne korelacije pri $Re<2300$ (Z2); zadržavanje istog $\lambda$ pri promjeni protoka (Z4) ili istog $\lambda$ za sve ponuđene promjere, iako se mijenjaju $Re$ i $k_s/D$; zbrajanje koeficijenata $\xi$ definiranih uz različite referentne brzine (proširenje, grananje) kao da vrijede za istu brzinu; prigušivanje već otpornijeg ogranka radi izjednačavanja protoka (Z3); miješanje razina snage $P_h$, $P_{vr}$, $P_{el}$ i jedinica (kW i W; $h_g$ u m i $\Delta p$ u Pa); manometarski tlak uvršten u $NPSH_a$; primjena istog $NPSH_r$ pri različitim brzinama vrtnje (Z6).
+- Uporaba $\lambda=64/Re$ bez provjere da je tok laminaran, ili turbulentne korelacije pri $Re<2300$ (Z2).
+- Zadržavanje istog $\lambda$ pri promjeni protoka (Z4) ili istog $\lambda$ za sve ponuđene promjere, iako se mijenjaju $Re$ i $k_s/D$.
+- Zbrajanje koeficijenata $\xi$ definiranih uz različite referentne brzine (proširenje, grananje) kao da vrijede za istu brzinu.
+- Prigušivanje već otpornijeg ogranka radi izjednačavanja protoka (Z3).
+- Miješanje razina snage $P_h$, $P_{vr}$, $P_{el}$ i jedinica (kW i W; $h_g$ u m i $\Delta p$ u Pa).
+- Manometarski tlak uvršten u $NPSH_a$.
+- Primjena istog $NPSH_r$ pri različitim brzinama vrtnje (Z6).
 :::
 
 ::: {.mf1-error-column}
@@ -229,7 +319,14 @@ Najprije odredi $Re$ i režim, zatim $\lambda$; zatvori bilancu kontinuiteta i g
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Zamjena relativnog dotoka na jednu lopaticu ili ploču punim protokom kola, pa pogrešan optimum $u=v/2$ umjesto $u=v/3$ za jednu ploču (Z2); prihvaćanje rekonstruiranog izlaza bez provjere gubitka i pasivnosti lopatice (Z3); isti polumjer u oba člana Eulerove jednadžbe (Z4); izostavljen ulazni tok količine gibanja $\dot mv_A$ u bilanci potiska (Z5); poistovjećivanje učinkovitosti pogona s propulzijskom učinkovitošću; kut lopatice $\beta_2$ zamijenjen korekcijskim faktorom $\beta$; snaga Peltonova kola računana s protokom jedne lopatice $\rho A(c_1-u)$ umjesto cijelog sapničkog protoka $\rho Ac_1$; relativna umjesto apsolutne brzine u energijskoj ili momentnoj provjeri rotora.
+- Zamjena relativnog dotoka na jednu lopaticu ili ploču punim protokom kola, pa pogrešan optimum $u=v/2$ umjesto $u=v/3$ za jednu ploču (Z2).
+- Prihvaćanje rekonstruiranog izlaza bez provjere gubitka i pasivnosti lopatice (Z3).
+- Isti polumjer u oba člana Eulerove jednadžbe (Z4).
+- Izostavljen ulazni tok količine gibanja $\dot mv_A$ u bilanci potiska (Z5).
+- Poistovjećivanje učinkovitosti pogona s propulzijskom učinkovitošću.
+- Kut lopatice $\beta_2$ zamijenjen korekcijskim faktorom $\beta$.
+- Snaga Peltonova kola računana s protokom jedne lopatice $\rho A(c_1-u)$ umjesto cijelog sapničkog protoka $\rho Ac_1$.
+- Relativna umjesto apsolutne brzine u energijskoj ili momentnoj provjeri rotora.
 :::
 
 ::: {.mf1-error-column}
@@ -245,7 +342,13 @@ Odaberi kontrolni volumen i tijelo na koje sila djeluje. Provjeri $\vec c=\vec u
 ::: {.mf1-error-column}
 **Česta pogreška**
 
-Zamjena hidrauličke dubine $y_h=A/T$ hidrauličkim radijusom $R_h=A/P$ ili hidrauličkim promjerom $D_h=4A/P$ u $Fr$ kanala (Z3); koeficijent kontrakcije $C_c$ (geometrija mlaza) poistovjećen s koeficijentom istjecanja $C_d$ ili zanemarena brzina dolaska uzvodno od ustave (Z2); izostavljanje povišenja dna ili proizvoljan izbor korijena energijske jednadžbe (Z4); primjena Bernoullijeve jednadžbe bez gubitaka kroz skok (Z5); $\alpha=1$ i $\beta=1$ bez navođenja te pretpostavke; tretiranje istog izmjerenog protoka u oba presjeka kao dviju neovisnih veličina; poistovjećivanje kapaciteta kanala sa stvarnim dotokom u bazen (Z6).
+- Zamjena hidrauličke dubine $y_h=A/T$ hidrauličkim radijusom $R_h=A/P$ ili hidrauličkim promjerom $D_h=4A/P$ u $Fr$ kanala (Z3).
+- Koeficijent kontrakcije $C_c$ (geometrija mlaza) poistovjećen s koeficijentom istjecanja $C_d$ ili zanemarena brzina dolaska uzvodno od ustave (Z2).
+- Izostavljanje povišenja dna ili proizvoljan izbor korijena energijske jednadžbe (Z4).
+- Primjena Bernoullijeve jednadžbe bez gubitaka kroz skok (Z5).
+- $\alpha=1$ i $\beta=1$ bez navođenja te pretpostavke.
+- Tretiranje istog izmjerenog protoka u oba presjeka kao dviju neovisnih veličina.
+- Poistovjećivanje kapaciteta kanala sa stvarnim dotokom u bazen (Z6).
 :::
 
 ::: {.mf1-error-column}

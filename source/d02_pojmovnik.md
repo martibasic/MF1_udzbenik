@@ -127,7 +127,7 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Učinak slobodne površine | Smanjenje efektivnog $GM$ zbog djelomično punog tanka, $\delta GM=-\rho_ti_t/(\rho V_{ist})$. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | Ulaž (engl. *ullage*) | Udaljenost $U$ od referentne točke ulažnog otvora do površine tereta u tanku. | [3](u03_hidrostaticka_raspodjela_tlaka_i_manometrija.qmd) |
 | Usisni koš (engl. *sea chest*) | Udubljenje u oplati ispod vodne linije, zaštićeno rešetkom, iz kojeg crpke usisavaju morsku vodu; otvor u oplati naziva se zahvatni usis. | [7](u07_kinematika_kontrolni_volumen_i_kontinuitet.qmd), [8](u08_energijska_jednadzba_i_bernoulli.qmd), [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
-| Uvjet prianjanja (no-slip) | Tangencijalna brzina viskoznog fluida jednaka je brzini nepropusne stijenke. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
+| Uvjet prianjanja (engl. *no-slip*) | Tangencijalna brzina viskoznog fluida jednaka je brzini nepropusne stijenke. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd), [12](u12_diferencijalni_opis_realnog_toka.qmd) |
 | Uzgon | Rezultanta hidrostatičkog tlaka jednaka težini istisnutog fluida i usmjerena suprotno gravitaciji. | [6](u06_uzgon_plivanje_i_stabilnost.qmd) |
 | Validacija | Procjena opisuje li model stvarni sustav dovoljno dobro za zadanu namjenu, provedena usporedbom s mjerenjem uz iskazanu nesigurnost. | [12](u12_diferencijalni_opis_realnog_toka.qmd), [D](d04_numericka_mehanika_fluida.qmd#sec-cfd-venturi) |
 | Venturijeva cijev | Suženje s difuzorom za mjerenje protoka iz razlike tlakova između ulaza i grla; u grlu je moguća kavitacija. | [8](u08_energijska_jednadzba_i_bernoulli.qmd), [11](u11_dimenzijska_analiza_i_slicnost.qmd), [D](d04_numericka_mehanika_fluida.qmd) |
@@ -136,7 +136,7 @@ Pojmovnik okuplja kratke **radne definicije** za brzo prisjećanje. Pretpostavke
 | Volumni modul elastičnosti | $K=-V\,dp/dV$ uz zadane toplinske uvjete; za mali porast tlaka $\Delta V_c\approx V_0\Delta p/K$. | [1](u01_osnove_fluida_i_pascalov_zakon.qmd) |
 | Weberov broj | $We=\rho v^2L/\sigma$; uspoređuje inercijski i kapilarni učinak. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd), [11](u11_dimenzijska_analiza_i_slicnost.qmd) |
 | Young–Laplaceova relacija | Skok tlaka preko zakrivljenog sučelja razmjeran je $\sigma$ i zbroju glavnih zakrivljenosti. | [2](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd) |
-| Zagušenje sapnice (choking) | Dosezanje najvećeg masenog protoka kad u najužem presjeku nastupi $Ma=1$; nije prigušenje ventilom (throttling). | [9](u09_kompresibilni_idealni_tok.qmd), [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
+| Zagušenje sapnice (engl. *choking*) | Dosezanje najvećeg masenog protoka kad u najužem presjeku nastupi $Ma=1$; nije prigušenje ventilom (engl. *throttling*). | [9](u09_kompresibilni_idealni_tok.qmd), [13](u13_gubici_cjevovodi_crpke_i_mreze.qmd) |
 | Zaustavna (stagnacijska) veličina | Vrijednost $p_0$, $T_0$, $\rho_0$ pri zamišljenom usporavanju do mirovanja; u kompresibilnom toku usporavanje je izentropsko. | [8](u08_energijska_jednadzba_i_bernoulli.qmd), [9](u09_kompresibilni_idealni_tok.qmd) |
 
 : {.mf1-reference-table tbl-colwidths="[24,60,16]"}

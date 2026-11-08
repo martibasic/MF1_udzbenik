@@ -210,5 +210,5 @@ Pri različitim mjerilima i istom $g$ Froudeova i Reynoldsova sličnost ne mogu 
 - gubitak $h_g$ u metrima nije isto što i pad tlaka u Pa, iako su povezani
 - $p_M$ nije $p_{aps}$: kavitacija, $NPSH_a$ i jednadžba stanja traže apsolutni tlak
 - $P_h$, $P_{vr}$ i $P_{el}$ razine su snage koje se ne smiju miješati; kW nije W
-- zagušenje (choking, $Ma=1$ u najužem presjeku) nije prigušenje ventilom (throttling)
+- zagušenje (engl. *choking*; $Ma=1$ u najužem presjeku) nije prigušenje ventilom (engl. *throttling*)
 - $C_d$ (istjecanje) nije $C_D$ (otpor)

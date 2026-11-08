@@ -90,7 +90,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Kontrolni rezultat ili kriterij.** $h=2\sigma\cos\theta/(\rho gb)$; $h_1\approx62{,}9\ \text{mm}$. Kružna formula s $d=b$ dala bi $125{,}7\ \text{mm}$, dvostruko više, jer kružni presjek ima dvostruko dulju kontaktnu liniju po jedinici površine presjeka. Za premaz $h_2\approx-18{,}8\ \text{mm}$: razina u procjepu spušta se ispod vanjske, a suh procjep voda ne puni bez nadtlaka od oko $189\ \text{Pa}$.
 
-### Z5. Može li se pretpostaviti stalna viskoznost? {#key-task-newtonski-model-iz-mjerenja .unnumbered .unlisted}
+### Z5. Newtonski model iz mjerenja dvaju uzoraka {#key-task-newtonski-model-iz-mjerenja .unnumbered .unlisted}
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-newtonski-model-iz-mjerenja)
 
@@ -190,7 +190,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Kontrolni rezultat ili kriterij.** $p_B-p_A = 1{,}60\ \text{kPa}$; $|\omega| \approx 7{,}91\ \text{rad/s}$; $n \approx 75{,}5\ \mathrm{min^{-1}}$. Zajednički pomak reference ne mijenja razliku tlakova ni rezultat. Smjer vrtnje ne može se odrediti jer tlak ovisi o $\omega^2$.
 
-### Z5. Je li se fluid smirio nakon ubrzanja? {#key-task-provjera-smirivanja-ubrzanog-fluida .unnumbered .unlisted}
+### Z5. Smirivanje vode u ubrzanom spremniku {#key-task-provjera-smirivanja-ubrzanog-fluida .unnumbered .unlisted}
 
 [Vrati se na zadatak](u04_relativno_mirovanje_fluida.qmd#task-provjera-smirivanja-ubrzanog-fluida)
 
@@ -440,7 +440,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Kontrolni rezultat ili kriterij.** $p_0=8{,}00\ \text{bar(abs)}$, $p^*\approx4{,}226\ \text{bar(abs)}$. I: $p_b=p_e=5{,}00\ \text{bar(abs)}$, $Ma_e\approx0{,}848$, nezagušen tok. II: $p_b=4{,}00\ \text{bar(abs)}$, $p_e=p^*$, $Ma_e=1$, zagušen tok. Dodatno snižavanje $p_b$ u II ne povećava protok pri istim $p_0$, $T_0$ i geometriji.
 
-### Z5. Geometrija ili koeficijent protoka? {#key-task-sapnica-model .unnumbered .unlisted}
+### Z5. Geometrija i koeficijent protoka zagušene sapnice {#key-task-sapnica-model .unnumbered .unlisted}
 
 [Vrati se na zadatak](u09_kompresibilni_idealni_tok.qmd#task-sapnica-model)
 

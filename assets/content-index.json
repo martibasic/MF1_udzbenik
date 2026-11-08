@@ -222,7 +222,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "65b2506ab11a7c073036ac2af67ca0f14bab8c6cbff865855c4d6be26c4681c6",
+      "source_sha256": "beae72ef6c2ef4670a86e4eddc118a35275ebffc81e421bf3676174ce4932260",
       "sections": [
         {
           "id": "viskoznost",
@@ -476,7 +476,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "416d5ecddf5c298bf5aaf0428a97d705175ce3c4d1169428e9c64adbf905a2aa",
+      "source_sha256": "727030195ec5c9851eb58a544ad1dbe5114884ee47d1d25379f37ea5272d648a",
       "sections": [
         {
           "id": "translatorno-ubrzanje",
@@ -1237,7 +1237,7 @@
       "kind": "chapter",
       "number": "9",
       "part": "part-3",
-      "source_sha256": "e528c0644a99ced5434a870f5cfb93697637db8d25635fceb496876a83904797",
+      "source_sha256": "257919c88d24b2de3ec44045b3ab19c9c1a99e852c9fd6334da8345de8b23c4f",
       "sections": [
         {
           "id": "sec-kompresibilni-motivacija",
@@ -1689,7 +1689,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "948bdb6b1b97e8f1bb198ac936e998088b89c037302bda6062d968b89fdc73c8",
+      "source_sha256": "ac00aefe5c4fd7c881233a6ac09bc5d2d9272c60b2f34de63e875568f8760f0b",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1995,7 +1995,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "840092664a8f5a3b5727e1d4b092bcc0c9c7cedc254c38e6e03e1e15252533e1",
+      "source_sha256": "88c3bd1b1dfe67d6b082cf50c4e6cf0d8f4109cdea50f3a5e1e1c2b53fe253a7",
       "sections": [
         {
           "id": "od-lopatice-do-turbostroja",
@@ -2253,7 +2253,7 @@
       "kind": "appendix",
       "number": "A",
       "part": null,
-      "source_sha256": "b6076062592e0385dbeb67b5321129840823ddef086dee3a3e6ba87d343c1924",
+      "source_sha256": "fe9c6d19184850723cd6be73a3ac6b94c982f394ecbd168234117e35d18652f5",
       "sections": [
         {
           "id": "najčešće-oznake",
@@ -2341,7 +2341,7 @@
       "kind": "appendix",
       "number": "B",
       "part": null,
-      "source_sha256": "05ba6be11cbade0885d1f35a98fa32923cd6ea40eae7394acd6d6f2693599318",
+      "source_sha256": "d8eadd91508eda383aa6f31f6743eb972de60be6a629a76f8cbe1f4cf4804610",
       "sections": [
         {
           "id": "sec-pojmovi-a-z",
@@ -2363,7 +2363,7 @@
       "kind": "appendix",
       "number": "C",
       "part": null,
-      "source_sha256": "2b7c611ca7ec825fa6a952a15b5b0a9bd9cd38a42dd7e56a54435f4e5def73b6",
+      "source_sha256": "bc6a6ec75d43c582019ca3cd70b430062656416f26d12a89a869902ec70a20f2",
       "sections": [
         {
           "id": "globalna-provjera-prije-računa",
@@ -2521,7 +2521,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "6c269378684582d103916315e33812c0455717becf9a2e6c882ca3e4b1a92248",
+      "source_sha256": "dd93b275e182e9082ba7f873a33369c8fc8c5af284aec55e20619748be42a8a0",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -3751,7 +3751,7 @@
       "kind": "Problem",
       "document": "u02",
       "number": "2.5",
-      "title": "Može li se pretpostaviti stalna viskoznost?",
+      "title": "Newtonski model iz mjerenja dvaju uzoraka",
       "level": "T3",
       "label": "Z5"
     },
@@ -4877,7 +4877,7 @@
       "kind": "Problem",
       "document": "u04",
       "number": "4.5",
-      "title": "Je li se fluid smirio nakon ubrzanja?",
+      "title": "Smirivanje vode u ubrzanom spremniku",
       "level": "T3",
       "label": "Z5"
     },
@@ -7860,7 +7860,7 @@
       "kind": "Problem",
       "document": "u09",
       "number": "9.5",
-      "title": "Geometrija ili koeficijent protoka?",
+      "title": "Geometrija i koeficijent protoka zagušene sapnice",
       "level": "T3",
       "label": "Z5"
     },

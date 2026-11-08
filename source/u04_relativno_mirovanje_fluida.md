@@ -767,7 +767,7 @@ $p_B-p_A = 1{,}60\ \text{kPa}$; $|\omega| \approx 7{,}91\ \text{rad/s}$; $n \app
 
 <span id="task-u04-cilindricna-posuda-radijusa-s-pocetnom-dubinom-vode"></span>
 
-### Je li se fluid smirio nakon ubrzanja? {#task-provjera-smirivanja-ubrzanog-fluida .unnumbered .unlisted}
+### Smirivanje vode u ubrzanom spremniku {#task-provjera-smirivanja-ubrzanog-fluida .unnumbered .unlisted}
 
 **Tekst zadatka**
 

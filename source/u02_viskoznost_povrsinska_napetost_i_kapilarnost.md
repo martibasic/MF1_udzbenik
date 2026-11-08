@@ -154,7 +154,7 @@ $$
 \tau_{ij} = \mu\!\left(\frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i}\right),
 $$ {#eq-reologija-dublje-tenzor-viskoznih-naprezanja-u-trodimenzij-01}
 
-gdje indeksi $i, j = 1, 2, 3$ označuju koordinatne smjerove. Komponenta $\tau_{ij}$ djeluje u smjeru osi $i$ na plohu okomitu na os $j$: izvandijagonalne komponente ($i\ne j$) smične su, a dijagonalne ($i=j$) viskozna normalna dodatna naprezanja.
+gdje indeksi $i,j=1;\,2;\,3$ označuju koordinatne smjerove. Komponenta $\tau_{ij}$ djeluje u smjeru osi $i$ na plohu okomitu na os $j$: izvandijagonalne komponente ($i\ne j$) smične su, a dijagonalne ($i=j$) viskozna normalna dodatna naprezanja.
 
 Tenzor je **simetričan** ($\tau_{ij} = \tau_{ji}$), što fizikalno znači da su odgovarajuće smične komponente naprezanja na međusobno okomitim plohama jednake — posljedica je to ravnoteže momenata na infinitezimalnom elementu fluida.
 
@@ -785,7 +785,7 @@ $h=2\sigma\cos\theta/(\rho gb)$; $h_1\approx62{,}9\ \text{mm}$. Kružna formula 
 
 <span id="task-u02-staklena-kapilara-promjera-uronjena-je-u-vodu"></span>
 
-### Može li se pretpostaviti stalna viskoznost? {#task-newtonski-model-iz-mjerenja .unnumbered .unlisted}
+### Newtonski model iz mjerenja dvaju uzoraka {#task-newtonski-model-iz-mjerenja .unnumbered .unlisted}
 
 **Tekst zadatka**
 

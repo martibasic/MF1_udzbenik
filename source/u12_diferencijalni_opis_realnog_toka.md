@@ -18,7 +18,7 @@ Integralne bilance odgovaraju na pitanje kolika je ukupna sila, protok ili snaga
 
 ## Materijalna derivacija {#sec-materijalna-derivacija}
 
-Brzina je polje $\vec v(\vec x,t)$ s komponentama $v_x,v_y,v_z$; u indeksnom zapisu pišemo $v_i$ s $i=1,2,3$ za tri koordinatne osi, a ponovljeni indeks u umnošku znači zbrajanje po svim trima vrijednostima. Brzina čestice koja se giba kroz to polje mijenja se zbog promjene polja u vremenu i zbog prelaska u područje druge brzine. Lančano pravilo daje
+Brzina je polje $\vec v(\vec x,t)$ s komponentama $v_x,v_y,v_z$; u indeksnom zapisu pišemo $v_i$ s $i=1;\,2;\,3$ za tri koordinatne osi, a ponovljeni indeks u umnošku znači zbrajanje po svim trima vrijednostima. Brzina čestice koja se giba kroz to polje mijenja se zbog promjene polja u vremenu i zbog prelaska u područje druge brzine. Lančano pravilo daje
 
 $$
 \frac{D\vec v}{Dt}=
@@ -26,7 +26,7 @@ $$
 \underbrace{(\vec v\cdot\nabla)\vec v}_{\text{konvektivno ubrzanje}}.
 $$ {#eq-materijalna-derivacija}
 
-Stacionarno strujanje ima $\partial\vec v/\partial t=0$, ali čestica može ubrzavati zbog promjene brzine duž svoje putanje, primjerice u suženju ili zavoju. Nejednolik profil sam po sebi ne znači ubrzanje: u potpuno razvijenom ravnom toku $\vec v=(v_x(y),0,0)$ vrijedi $(\vec v\cdot\nabla)\vec v=v_x\,\partial\vec v/\partial x=0$, iako je $dv_x/dy$ različit od nule. U stacionarnom polju putanje čestica poklapaju se sa strujnicama.
+Stacionarno strujanje ima $\partial\vec v/\partial t=0$, ali čestica može ubrzavati zbog promjene brzine duž svoje putanje, primjerice u suženju ili zavoju. Nejednolik profil sam po sebi ne znači ubrzanje: u potpuno razvijenom ravnom toku $\vec v=(v_x(y);\,0;\,0)$ vrijedi $(\vec v\cdot\nabla)\vec v=v_x\,\partial\vec v/\partial x=0$, iako je $dv_x/dy$ različit od nule. U stacionarnom polju putanje čestica poklapaju se sa strujnicama.
 
 ::: {#ex-konvektivno-ubrzanje .mf1-we}
 <p class="mf1-box-label">Ubrzanje u stacionarnom toku kroz suženje <span class="mf1-level">T1</span></p>
@@ -92,7 +92,7 @@ $$
 D_{ij}=\frac12\left(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i}\right),
 $$ {#eq-newtonska-konstitutivna-relacija}
 
-uz $\nabla\cdot\vec v=0$. Za jednostavno smicanje $\vec v=(v_x(y),0,0)$ ostaje samo $\tau_{xy}=\mu\,dv_x/dy$, što je zakon viskoznosti iz []{.mf1-chapter-ref target="u02"}.
+uz $\nabla\cdot\vec v=0$. Za jednostavno smicanje $\vec v=(v_x(y);\,0;\,0)$ ostaje samo $\tau_{xy}=\mu\,dv_x/dy$, što je zakon viskoznosti iz []{.mf1-chapter-ref target="u02"}.
 
 **Koraci.** Divergencija viskoznog naprezanja po komponentama glasi
 
@@ -141,7 +141,7 @@ Za proračun cijeloga rashladnog kruga protok određuje i crpka. U zatvorenoj ne
 
 ## Kanonsko rješenje: tok između paralelnih ploča {#sec-couette-poiseuille}
 
-Promatra se stacionarni, potpuno razvijeni, laminarni tok newtonskog fluida između ploča na $y=0$ i $y=H$. Brzina fluida je $\vec v=(v(y),0,0)$, gornja ploča giba se brzinom $u$ (oznaka $u$ ovdje je brzina krute granice, a $v$ brzina fluida), gravitacija u smjeru toka zanemariva, a gradijent tlaka konstantan. Navier–Stokesova jednadžba svodi se na
+Promatra se stacionarni, potpuno razvijeni, laminarni tok newtonskog fluida između ploča na $y=0$ i $y=H$. Brzina fluida je $\vec v=(v(y);\,0;\,0)$, gornja ploča giba se brzinom $u$ (oznaka $u$ ovdje je brzina krute granice, a $v$ brzina fluida), gravitacija u smjeru toka zanemariva, a gradijent tlaka konstantan. Navier–Stokesova jednadžba svodi se na
 
 $$
 0=-\frac{dp}{dx}+\mu\frac{d^2v}{dy^2}.
@@ -180,7 +180,7 @@ Negativan $dp/dx$ znači pad tlaka u pozitivnom $x$-smjeru i zato povećava brzi
 
 ## Hagen–Poiseuilleov tok i linearni gubitak {#sec-hagen-poiseuille}
 
-Za kružnu cijev polumjera $R$, uz $\vec v=(v(r),0,0)$ duž osi $x$, Navier–Stokesova jednadžba u cilindričnim koordinatama svodi se na
+Za kružnu cijev polumjera $R$, uz $\vec v=(v(r);\,0;\,0)$ duž osi $x$, Navier–Stokesova jednadžba u cilindričnim koordinatama svodi se na
 
 $$
 \frac{\mu}{r}\frac{d}{dr}\left(r\frac{dv}{dr}\right)=\frac{dp}{dx}=\text{konst.}

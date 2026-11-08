@@ -657,7 +657,9 @@ a.mf1-card .mf1-card-hint,
 .mf1-error-column { min-width: 0; }
 .mf1-error-column > p:first-child { font-family: var(--mf1-sans); font-size: 0.8rem; margin-bottom: 0.6rem; }
 .mf1-error-column > p:first-child strong { color: var(--mf1-muted); }
-.mf1-error-column p { font-size: 0.95rem; }
+.mf1-error-column p, .mf1-error-column li { font-size: 0.95rem; }
+.mf1-error-column ul { margin: 0; padding-left: 1.1rem; }
+.mf1-error-column li + li { margin-top: 0.3rem; }
 
 /* Ispisne tipke */
 .mf1-print-toolbar {
