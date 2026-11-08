@@ -43,8 +43,8 @@ odluku kad je donesena, ali je ne donosi sama.
 | Zamjena zadataka Z1–Z6 | protokol prerade, ne ovaj skill; nakon provedbe korak 6 |
 
 Mjesni ispravak ne pokreće recenziju cijele knjige. Opseg čitanja u koraku 4
-(broj agenata) dogovori s autoricom prije pokretanja: cijela knjiga traži
-osam do dvanaest čitanja.
+(broj agenata) dogovori s autoricom prije pokretanja: cijela knjiga uz opsege
+iz koraka 4 i provjeru iz koraka 5 traži oko 15–20 agenata.
 
 ## 1. Stanje i mjerenje
 
@@ -121,14 +121,22 @@ koraka 2 ni svoju procjenu: čitatelj koji dobije hipotezu vraća je potvrđenu.
 
 | Čitanje | Uputa | Opseg po agentu |
 | --- | --- | --- |
-| Stručni recenzent mehanike fluida | [references/struka.md](references/struka.md) | 4–5 poglavlja |
-| Primjenski recenzent (brodogradnja, strojarstvo) | [references/primjena.md](references/primjena.md) | cijela knjiga, samo primjene i zadatci |
-| Student koji uči iz knjige | [references/student.md](references/student.md) | 2–3 poglavlja |
-| Urednik i lektor | [references/urednik.md](references/urednik.md) | 5 poglavlja ili dodatci |
+| Stručni recenzent mehanike fluida | [references/struka.md](references/struka.md) | 3–4 poglavlja |
+| Primjenski recenzent (brodogradnja, strojarstvo) | [references/primjena.md](references/primjena.md) | 5 poglavlja, samo primjene i zadatci |
+| Student koji uči iz knjige | [references/student.md](references/student.md) | 1–2 poglavlja |
+| Urednik i lektor | [references/urednik.md](references/urednik.md) | 3–5 poglavlja ili dodatci |
 
-Prijelom PDF-a i weba provjeravaju postojeći audit alati i pregled renderiranih
-stranica (`docs/urednicki_stil.md`, odjeljak „Provjera”). Drugo neovisno čitanje
-istog dijela drugim modelom vrijedi napraviti prije predaje Povjerenstvu.
+Studentu daj PDF samo zadanih poglavlja i zaseban PDF njihova ključa (izdvoji
+stranice), ne izvor. Prijelom PDF-a i weba provjeravaju postojeći audit alati i
+pregled renderiranih stranica (`docs/urednicki_stil.md`, odjeljak „Provjera”).
+Drugo stručno čitanje drugim modelom vrijedi za teže skupine poglavlja; u
+pilotu je dodalo dva nova nalaza i jedan netočan.
+
+Pouke pilota na pog. 13 (`docs/radno/recenzija-2026-11/pog13/RECENZIJA.md`,
+odjeljak 10): sve brojeve potvrdila su sva stručna čitanja; student je dao
+najviše nalaza koji vrijede za cijelu knjigu; urednik bez ograničenja daje
+desetke nalaza P3; dva čitatelja neovisno su pogriješila jer nisu otvorila
+bilježnicu na koju tekst upućuje.
 
 ## 5. Provjera nalaza i trijaža
 
@@ -141,6 +149,12 @@ izvještaj:
 - nalaz o prijelomu potvrdi na renderu;
 - odbaci nalaz koji traži nešto što ugovor, matrica ili autoričina odluka
   izričito drukčije određuju, a sukob zapiši kao pitanje autorici.
+
+Dva čitatelja koja tvrde isto nisu dokaz: mogu dijeliti isti propust. Za više od
+dva-tri poglavlja provjeru razdijeli: po skupini poglavlja jedan svjež agent
+provjerava nalaze P0–P2 svih čitanja te skupine prema ovim pravilima i vraća
+potvrđeno, odbačeno ili nepotvrdivo s razlogom. Glavni agent provjerava sve P0
+i P1 sam.
 
 Zatim objedini nalaze svih čitanja, ukloni preklapanja i razvrstaj ih po P0–P3.
 Izvještaj ide u `docs/radno/recenzija-GGGG-MM/` (pojedinačna čitanja) i

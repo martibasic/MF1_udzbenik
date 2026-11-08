@@ -51,5 +51,7 @@ Izlaz:
 - za brojčane nalaze tvoj račun;
 - kratko: što je u ovim poglavljima posebno dobro.
 
+Prije nego proglasiš upućivanje, podatak ili oznaku pogrešnim, otvori ono na što
+tekst upućuje (bilježnicu u `notebooks/`, drugo poglavlje, ključ u dodatku F).
 Ne izmišljaj izvore ni podatke. Ako nisi siguran, napiši to i objasni zašto.
 Budi konkretan i ne nabrajaj općenitosti.

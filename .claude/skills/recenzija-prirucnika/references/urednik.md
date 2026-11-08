@@ -36,6 +36,7 @@ Provjeri, uz mjesto (`datoteka:redak`) i pravilo:
    oblike (zadatci, podatci, gubitci, izračunan-, oplakan-).
 
 Izlaz: tablica po poglavlju (mjesto, pravilo, sadašnji tekst, prijedlog,
-težina P1–P3). Prijedlog mora čuvati sve brojeve, uvjete, ograde i nijekanja
+težina) samo za nalaze P1 i P2. Nalaze P3 navedi skupno, najviše 15 redaka
+(obrazac, primjeri mjesta, broj pojava), a ne svaki zasebno. Prijedlog mora čuvati sve brojeve, uvjete, ograde i nijekanja
 izvornika; ako ih ne može sačuvati, ne predlaži zamjenu nego opiši problem.
 Na kraju navedi tri najčešća obrasca pogrešaka u ovim poglavljima.

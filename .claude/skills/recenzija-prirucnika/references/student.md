@@ -32,6 +32,8 @@ Radi ovim redom za svako poglavlje:
    veličine. Zatim riješi. Tek onda otvori naputak i kontrolni rezultat i
    usporedi. Zabilježi gdje si zapeo, je li naputak pomogao bez otkrivanja
    rješenja i je li nešto nedostajalo u tekstu zadatka.
+   Kad otvoriš ključ, zabilježi je li smjernica razumljiva bez poglavlja
+   (upućivanja na jednadžbe, oznake, kriteriji koje poglavlje ne spominje).
 4. **Provjeri sebe i Zastani i promisli.** Odgovori prije čitanja odgovora i
    reci je li pitanje provjerilo razumijevanje ili samo pamćenje.
 

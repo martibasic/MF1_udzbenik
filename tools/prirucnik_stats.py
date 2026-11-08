@@ -92,12 +92,17 @@ PRAVILA_TEKST: list[Pravilo] = [
     Pravilo("K12", "upućivanje „ispod/iznad”",
             _r(r"\b(slik\w*|skic\w*|tablic\w*|jednadžb\w*|formul\w*)\s+(ispod|iznad|dolje|gore)\b|\b(ispod|iznad)\s+(prikazan\w*|naveden\w*|dan[aeiou]?)\b"),
             "Uputi brojem: Slika [-@fig-…], jednadžba ([-@eq-…])."),
+    Pravilo("K12", "opisno upućivanje bez broja",
+            _r(r"\b(sljedeć\w*|prethodn\w*|ranij\w*|idućem|idućeg)\s+(poglavlj\w*|primjer\w*|zadat\w*)"),
+            "Uputi brojem: pog. N (chapter-ref), [-@ex-…] ili Zn uz broj poglavlja."),
 ]
 
 # Pravila nad matematikom ($…$ i $$…$$).
 PRAVILA_MATEMATIKA: list[Pravilo] = [
     Pravilo("K8", "decimalna točka u formuli", _r(r"(?<![\w.])\d+\.\d+(?![\w.])", 0), "decimalni zarez kao {,}: 9{,}81"),
     Pravilo("K8", "zarez bez {,} među znamenkama", _r(r"(?<=\d),\s*(?=\d)", 0), "decimale 9{,}81; popis (26;\\,0)"),
+    Pravilo("K8", "popis brojeva s kosom crtom", _r(r"\d\{,\}\d+\s*/\s*\d+(?:\{,\}\d+)?\s*/\s*\d", 0),
+            "Lanac a/b/c čita se kao dijeljenje; popis piši (a;\\,b;\\,c)."),
     Pravilo("K8", "konst. bez \\text", _r(r"(?<!\\text\{)\bkonst\b|\bconst\b", 0), "\\text{konst.}"),
 ]
 
