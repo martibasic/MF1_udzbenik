@@ -89,7 +89,7 @@ je li na snazi novija verzija i jesu li objavljeni obrasci iz čl. 22.
 
 | Zahtjev | Stanje u repozitoriju | Odluka |
 | --- | --- | --- |
-| CC-BY za elektroničku objavu (čl. 19(4)) | `CITATION.cff` i `README.md`: CC BY-NC-SA 4.0 | autoričina: zadržati NC-SA i dogovoriti iznimku ili prijeći na CC BY |
+| CC-BY za elektroničku objavu (čl. 19(4)) | `CITATION.cff`, `README.md` i impresum: CC BY 4.0 (od 8. 11. 2026.) | usklađeno |
 | Impresum s brojem odluke Senata, ISBN, CIP (čl. 18) | impresum u radnom stanju (završna recenzija, T6) | popuniti nakon odluka; ne izmišljati brojeve |
 | Lektura odobrena od glavnog urednika (čl. 15) | tri autorske i agentske lekture u Gitu | službena lektura ostaje obveza |
 | Rukopis za recenzente | PDF iz `scripts/build_book.py --render pdf` | recenzentima poslati PDF jednog označenog commita i web adresu |

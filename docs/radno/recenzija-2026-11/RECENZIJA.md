@@ -223,5 +223,5 @@ Zadržano bez promjene (jednostavnije je ostaviti, a sadržaj je ispravan):
 | Provjeri sebe | Ostaje skriven: autorski ugovor te skupove vodi kao arhivske, a iz svakog je jedno pitanje vidljivo kao „Zastani i promisli”; prikaz bi dodao stranice uz granicu od 355. |
 | Nazivlje | „Učinkovitost” je već jedini naziv u knjizi; „usisni koš” uz „engl. *sea chest*” ostaje. |
 
-Licenca nije pitanje čitljivosti: FESB-ov pravilnik (čl. 19(4)) za elektroničko izdanje
-traži CC-BY, a repozitorij koristi CC BY-NC-SA. Promjena je pravna odluka autorice pri predaji.
+Licenca: na autoričin zahtjev priručnik je prešao na CC BY 4.0 (impresum, `README.md`,
+`CITATION.cff`), kako traži čl. 19(4) FESB-ova pravilnika.

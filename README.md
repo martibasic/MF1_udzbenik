@@ -148,5 +148,6 @@ U prijavi navedite stabilni ID sadržaja i inačicu izdanja. Potvrđene ispravke
 objavljuju se u [javnoj evidenciji errate](docs/errata.md) i
 [dnevniku promjena](CHANGELOG.md).
 
-Autorica: Martina Bašić. U mrežnom izdanju navedena je licenca
-[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.hr).
+Autorica: Martina Bašić. Priručnik je objavljen pod licencom
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.hr), kako za elektroničko
+izdanje traži čl. 19(4) FESB-ova pravilnika o izdavačkoj djelatnosti.

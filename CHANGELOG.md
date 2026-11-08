@@ -13,6 +13,12 @@ pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
   numeriranih jednadžbi), dvoznačne rečenice, nazivlje, ograde uz tvrdnje o praksi,
   cjeloviti ispis triju ključeva. Konačni i kontrolni rezultati nepromijenjeni.
 
+## Licenca CC BY 4.0 — 8. studenoga 2026.
+
+- Priručnik se objavljuje pod licencom CC BY 4.0 umjesto CC BY-NC-SA 4.0, kako za
+  elektroničko izdanje traži čl. 19(4) FESB-ova pravilnika (impresum, `README.md`,
+  `CITATION.cff`).
+
 ## Odluke recenzenta — 8. studenoga 2026.
 
 - **Tekst i brojevi**: pog. 2 klizni ležaj pomoćne crpke (hladni start); pog. 3 novi
