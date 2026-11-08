@@ -152,6 +152,24 @@ def run():
     check(float(node(intro,'u11intro_flangeleft').get('x'))+float(node(intro,'u11intro_flangeleft').get('width'))<=293
           and float(node(intro,'u11intro_flangeright').get('x'))>=349,
           'Uvod: prirubnica mora ostaviti cijeli otvor 56 px')
+    # Težina F_G djeluje na okomitom pravcu kroz težište fluida u KV. Težište
+    # L-ispune leži uz unutarnju stijenku, pa su hvatište i cijela strelica na
+    # tom pravcu, ali unutar fluida (ne polaze sa stijenke i ne izlaze iz cijevi).
+    poly=path(node(intro,'u11intro_pipefluid'));area=cx=cy=0.
+    for (x1,y1),(x2,y2) in zip(poly,poly[1:]+poly[:1]):
+        c=x1*y2-x2*y1;area+=c;cx+=(x1+x2)*c;cy+=(y1+y2)*c
+    cx/=3*area;cy/=3*area
+    dot=node(intro,'u11intro_centroid');gx,gy=float(dot.get('cx')),float(dot.get('cy'))
+    (wx,wy),(hx,hy)=line(node(intro,'u11intro_weight'))
+    check(abs(gx-cx)<0.2 and abs(wx-cx)<0.2 and wx==hx and hy>wy,
+          'Uvod: F_G mora djelovati prema dolje na pravcu kroz težište fluida u KV')
+    check(abs(wx-gx)<1e-9 and abs(wy-gy)<1e-9,'Uvod: F_G polazi iz označenog hvatišta')
+    inside=lambda x,y:sum(1 for (x1,y1),(x2,y2) in zip(poly,poly[1:]+poly[:1])
+                          if (y1>y)!=(y2>y) and x<x1+(y-y1)*(x2-x1)/(y2-y1))%2==1
+    walls=[path(node(intro,'u11intro_pipewall'+i)) for i in '01']
+    for p,gap in (((gx,gy),8),((hx,hy),5)):
+        check(inside(*p) and min(distance_to_path(p,w) for w in walls)>gap,
+              'Uvod: hvatište i vrh F_G moraju biti u fluidu, odmaknuti od stijenke')
     # P1: Peltonova lopatica u gibanju. Mlaz ulazi na osi, razdjelni greben lezi
     # na osi, oba izlaza su otvorena i skrenuta za 165 stupnjeva (15 stupnjeva
     # prema dolaznom mlazu); lopatica je simetricna oko osi mlaza.

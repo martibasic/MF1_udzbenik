@@ -447,7 +447,7 @@ Kapljicu na izlazu održava pretlak $p_M$ iznad vode u spremniku; njegov se izno
 
 **Traži se**
 
-1. Odredi prirodni kapilarni uspon $h_{cap}$ kada je spremnik otvoren i provjeri doseže li meniskus izlaz.
+1. Odredi prirodni kapilarni uspon $h_{kap}$ kada je spremnik otvoren i provjeri doseže li meniskus izlaz.
 2. Odredi tlačni skok i apsolutni tlak u idealiziranoj kapljici.
 
 ![Dva odvojena stanja mikrodozatora: prirodni uspon s konkavnim meniskusom i puna kapilara s izlaznom kapljicom.](../assets/print/u02_ch1_kapilarni_mikrodozator_kapljica.svg){#fig-u02-kapilarni-mikrodozator-s-izlaznom-kapljicom fig-alt="Lijevo kapilara s konkavnim meniskusom ispod izlaza pri otvorenom spremniku, desno puna kapilara s konveksnom kapljicom na izlazu, visina H iznad slobodne površine spremnika."}
@@ -461,12 +461,12 @@ Kapljicu na izlazu održava pretlak $p_M$ iznad vode u spremniku; njegov se izno
 Pri otvorenom spremniku i potpunom kvašenju vrijedi
 
 $$
-h_{cap}=\frac{4\sigma\cos\theta}{\rho gd}
+h_{kap}=\frac{4\sigma\cos\theta}{\rho gd}
 =\frac{4\cdot0{,}072}{998\cdot9{,}81\cdot0{,}80\cdot10^{-3}}
 \approx36{,}8\ \mathrm{mm}.
 $$ {#eq-reologija-1-kapilarni-uspon-01}
 
-Budući da je $h_{cap}\approx36{,}8\ \mathrm{mm}<H=60\ \mathrm{mm}$, sama kapilarnost ne dovodi meniskus do izlaza; za to je potreban dodatni pretlak spremnika.
+Budući da je $h_{kap}\approx36{,}8\ \mathrm{mm}<H=60\ \mathrm{mm}$, sama kapilarnost ne dovodi meniskus do izlaza; za to je potreban dodatni pretlak spremnika.
 
 ### 2. Tlačni skok na kapljici {#tlacni-skok-na-kapljici .unnumbered .unlisted .mf1-step}
 
@@ -486,7 +486,7 @@ $$ {#eq-reologija-2-tlakovni-skok-na-kapljici-02}
 
 **Provjera i tumačenje**
 
-Pri punjenju je meniskus konkavan, pa je tlak vode neposredno ispod njega niži od okolnoga za $4\sigma/d=360\ \mathrm{Pa}$, što je upravo hidrostatički tlak stupca $\rho gh_{cap}\approx360\ \mathrm{Pa}$. Formirana kapljica konveksna je, pa je tlak u njoj viši od okolnoga za $120\ \mathrm{Pa}$: ista međupovršina mijenja predznak tlačnog skoka kad promijeni smjer zakrivljenosti.
+Pri punjenju je meniskus konkavan, pa je tlak vode neposredno ispod njega niži od okolnoga za $4\sigma/d=360\ \mathrm{Pa}$, što je upravo hidrostatički tlak stupca $\rho gh_{kap}\approx360\ \mathrm{Pa}$. Formirana kapljica konveksna je, pa je tlak u njoj viši od okolnoga za $120\ \mathrm{Pa}$: ista međupovršina mijenja predznak tlačnog skoka kad promijeni smjer zakrivljenosti.
 :::
 
 ::: {#ex-u02-hladni-start-i-radna-temperatura-koliko-kosta .mf1-we}
@@ -495,7 +495,7 @@ Pri punjenju je meniskus konkavan, pa je tlak vode neposredno ispod njega niži 
 
 **Tekst zadatka**
 
-Uljem podmazani koncentrični ležaj statvene cijevi manjeg plovila ima promjer osovine propelera $D = 50\ \text{mm}$, duljinu $L = 70\ \text{mm}$ i uljni procjep $\delta = 0{,}30\ \text{mm}$. Osovina se vrti brzinom $n = 2400\ \text{min}^{-1}$. Pri hladnom isplovljenju zimi ulje ima $T_1 = 0^\circ\text{C}$ i viskoznost $\mu_1 = 0{,}40\ \text{Pa s}$, a za gornju nastavnu granicu zagrijanog ulja uzmi $T_2 = 90^\circ\text{C}$ i $\mu_2 = 0{,}040\ \text{Pa s}$.
+Uljem podmazani koncentrični ležaj statvene cijevi manjeg plovila ima promjer osovine propelera $D = 50\ \text{mm}$, duljinu $L = 70\ \text{mm}$ i uljni procjep $\delta = 0{,}30\ \text{mm}$. Osovina se vrti brzinom $n = 2400\ \text{min}^{-1}$. Pri hladnom isplovljenju zimi ulje ima $T_1 = 10^\circ\text{C}$ i viskoznost $\mu_1 = 0{,}40\ \text{Pa s}$, a za zagrijano ulje uzmi $T_2 = 50^\circ\text{C}$ i $\mu_2 = 0{,}040\ \text{Pa s}$.
 
 U oba stanja primijeni Couetteov model s prianjanjem i linearnim profilom; koordinata $y$ raste od čahure prema osovini, a obodna brzina osovine je $u$. Geometrija i brzina vrtnje ostaju iste. Zanemari ekscentricitet, hidrodinamički klin, rubni tok i zagrijavanje smicanjem. Ovo je usporedba utjecaja zadane viskoznosti, a ne radna karta ležaja ni propisni proračun osovinskog voda.
 
@@ -506,7 +506,7 @@ U oba stanja primijeni Couetteov model s prianjanjem i linearnim profilom; koord
 3. Odredi zakretni moment trenja pri objema temperaturama.
 4. Odredi snagu koju pogon troši samo na svladavanje viskoznog trenja u ležaju pri objema temperaturama te omjer snaga pri nižoj i višoj temperaturi.
 
-![Isti ležaj statvene cijevi pri hladnom isplovljenju i zagrijanom ulju; ulje pruža otpor vrtnji osovine.](../assets/print/u02_fig_lezaj_temperatura.svg){#fig-u02-lezaj-temperatura fig-align="center" fig-alt="Dva razmotana uljna procjepa uz nepomičnu čahuru i osovinu koja se giba udesno, pri 0 °C i 90 °C, te poprečni presjek s promjerom osovine, smjerom vrtnje i momentom trenja."}
+![Isti ležaj statvene cijevi pri hladnom isplovljenju i zagrijanom ulju; ulje pruža otpor vrtnji osovine.](../assets/print/u02_fig_lezaj_temperatura.svg){#fig-u02-lezaj-temperatura fig-align="center" fig-alt="Dva razmotana uljna procjepa uz nepomičnu čahuru i osovinu koja se giba udesno, pri 10 °C i 50 °C, te poprečni presjek s promjerom osovine, smjerom vrtnje i momentom trenja."}
 
 **Veza s proračunom.** Koordinata $y$ raste od nepomične čahure prema osovini, čija obodna brzina $u$ daje brzinu fluida uz nju. Procjep je uvećan radi čitljivosti, a vektori sila nisu u zajedničkom mjerilu.
 
@@ -578,8 +578,8 @@ $$ {#eq-reologija-rijeseni-primjer-hladni-start-i-radna-temperatur-11}
 
 **Provjera i tumačenje**
 
-1. Dva neovisna puta računa daju istu snagu: $F_1u\approx92{,}1\cdot6{,}28\approx579\ \text{W}=M_1\omega$. U ovom modelu naprezanje, moment i snaga linearno ovise o $\mu$, pa faktor 10 u viskoznosti daje faktor 10 u snazi samo zato što su geometrija i brzina zadržane jednakima.
-2. Dobivenih $579\ \text{W}$ nije prognoza gubitka stvarnoga osovinskog voda; prema nastavnoj procjeni, u službi ulje statvene cijevi obično radi hladnije od gornje nastavne granice, a prekomjerna temperatura ležaja znak je za uzbunu, a ne radno stanje.
+1. Dva neovisna puta računa daju istu snagu: $F_1u\approx92{,}1\cdot6{,}28\approx579\ \text{W}=M_1\omega$. U ovom modelu naprezanje, moment i snaga linearno ovise o $\mu$, pa faktor 10 u viskoznosti daje faktor 10 u snazi samo zato što su geometrija i brzina zadržane jednakima. Viskoznost mineralnog ulja jako ovisi o temperaturi: između 0 °C i 90 °C mijenja se za red veličine 100, pa je zadani omjer 10 primjeren užem rasponu temperatura.
+2. Dobivenih $579\ \text{W}$ nije prognoza gubitka stvarnoga osovinskog voda; prema nastavnoj procjeni, u službi temperatura ulja statvene cijevi ovisi o opterećenju i hlađenju okolnim morem, a prekomjerna temperatura ležaja znak je za uzbunu, a ne radno stanje.
 :::
 
 ::: {#ex-u02-mikrofluidicki-kanal-u-lab-on-chip-ure .mf1-we}
@@ -853,13 +853,13 @@ Dostupni regulatori imaju raspone $0$–$0{,}50\ \text{kPa}$ i $0$–$0{,}60\ \t
 :::: {.content-visible .mf1-hint-online when-format="html"}
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
-Prvo stanje: $h_{cap}=4\sigma\cos\theta/(\rho gd)$ i $p_{M,1}=\max(0,\rho gH-4\sigma\cos\theta/d)$. Drugo stanje: $p_{M,2}=\rho gH+4\sigma/D$. Te relacije opisuju različite oblike jedne međupovršine. Za izbor regulatora provjeri oba kraja intervala promjera; hidrostatičku promjenu tlaka kroz visinu kapljice usporedi s rezervom modela.
+Prvo stanje: $h_{kap}=4\sigma\cos\theta/(\rho gd)$ i $p_{M,1}=\max(0,\rho gH-4\sigma\cos\theta/d)$. Drugo stanje: $p_{M,2}=\rho gH+4\sigma/D$. Te relacije opisuju različite oblike jedne međupovršine. Za izbor regulatora provjeri oba kraja intervala promjera; hidrostatičku promjenu tlaka kroz visinu kapljice usporedi s rezervom modela.
 :::
 ::::
 :::: {.content-visible .mf1-answer-online when-format="html"}
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
-$h_{cap}\approx58{,}8\ \mathrm{mm}$; $p_{M,1}=0$. Nominalno $p_{M,2}\approx0{,}571\ \mathrm{kPa}$, raspon $0{,}555$–$0{,}591\ \mathrm{kPa}$ (maksimum pri $D_{min}$). Samo regulator do $0{,}60\ \mathrm{kPa}$ pokriva model, uz rezervu $8{,}8\ \mathrm{Pa}$. Procjena $\rho gD_{max}\approx19{,}6\ \mathrm{Pa}$ veća je od rezerve: stvarni uređaj treba precizniji model. Nema dodatnog konkavnog meniskusa; prijelaz i protočni gubitci nisu provjereni.
+$h_{kap}\approx58{,}8\ \mathrm{mm}$; $p_{M,1}=0$. Nominalno $p_{M,2}\approx0{,}571\ \mathrm{kPa}$, raspon $0{,}555$–$0{,}591\ \mathrm{kPa}$ (maksimum pri $D_{min}$). Samo regulator do $0{,}60\ \mathrm{kPa}$ pokriva model, uz rezervu $8{,}8\ \mathrm{Pa}$. Procjena $\rho gD_{max}\approx19{,}6\ \mathrm{Pa}$ veća je od rezerve: stvarni uređaj treba precizniji model. Nema dodatnog konkavnog meniskusa; prijelaz i protočni gubitci nisu provjereni.
 :::
 ::::
 

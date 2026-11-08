@@ -102,9 +102,9 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u02_viskoznost_povrsinska_napetost_i_kapilarnost.qmd#task-u02-kapilarna-igla-unutarnjeg-promjera-spojena-je-na)
 
-**Smjernica postupka.** Prvo stanje: $h_{cap}=4\sigma\cos\theta/(\rho gd)$ i $p_{M,1}=\max(0,\rho gH-4\sigma\cos\theta/d)$. Drugo stanje: $p_{M,2}=\rho gH+4\sigma/D$. Te relacije opisuju različite oblike jedne međupovršine. Za izbor regulatora provjeri oba kraja intervala promjera; hidrostatičku promjenu tlaka kroz visinu kapljice usporedi s rezervom modela.
+**Smjernica postupka.** Prvo stanje: $h_{kap}=4\sigma\cos\theta/(\rho gd)$ i $p_{M,1}=\max(0,\rho gH-4\sigma\cos\theta/d)$. Drugo stanje: $p_{M,2}=\rho gH+4\sigma/D$. Te relacije opisuju različite oblike jedne međupovršine. Za izbor regulatora provjeri oba kraja intervala promjera; hidrostatičku promjenu tlaka kroz visinu kapljice usporedi s rezervom modela.
 
-**Kontrolni rezultat ili kriterij.** $h_{cap}\approx58{,}8\ \mathrm{mm}$; $p_{M,1}=0$. Nominalno $p_{M,2}\approx0{,}571\ \mathrm{kPa}$, raspon $0{,}555$–$0{,}591\ \mathrm{kPa}$ (maksimum pri $D_{min}$). Samo regulator do $0{,}60\ \mathrm{kPa}$ pokriva model, uz rezervu $8{,}8\ \mathrm{Pa}$. Procjena $\rho gD_{max}\approx19{,}6\ \mathrm{Pa}$ veća je od rezerve: stvarni uređaj treba precizniji model. Nema dodatnog konkavnog meniskusa; prijelaz i protočni gubitci nisu provjereni.
+**Kontrolni rezultat ili kriterij.** $h_{kap}\approx58{,}8\ \mathrm{mm}$; $p_{M,1}=0$. Nominalno $p_{M,2}\approx0{,}571\ \mathrm{kPa}$, raspon $0{,}555$–$0{,}591\ \mathrm{kPa}$ (maksimum pri $D_{min}$). Samo regulator do $0{,}60\ \mathrm{kPa}$ pokriva model, uz rezervu $8{,}8\ \mathrm{Pa}$. Procjena $\rho gD_{max}\approx19{,}6\ \mathrm{Pa}$ veća je od rezerve: stvarni uređaj treba precizniji model. Nema dodatnog konkavnog meniskusa; prijelaz i protočni gubitci nisu provjereni.
 
 ## Hidrostatička raspodjela tlaka i manometrija
 
@@ -196,7 +196,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Najprije upotrijebi nagib slobodne površine i očuvanje volumena. Zatim odvojeno provjeri odstupanje od predviđenih razina i promjenjivost očitanja kroz vrijeme; jedna podudarna točka ili prosjek nisu dovoljni.
 
-**Kontrolni rezultat ili kriterij.** Referentne dubine: $h_{str}\approx0{,}45291$ m, $h_{pred}\approx0{,}14709$ m. Niz I: najveće odstupanje 72,91 mm, raspon 140 mm; ne prolazi. Niz II: najveće odstupanje 1,095 mm, raspon 2,0 mm; zadovoljava oba kriterija. Referentni profil ostaje ispod vrha boka. Očitanja ipak ne dokazuju mirovanje cijelog fluida ni izostanak prolaznog prelijevanja; treba pratiti slobodnu površinu i relativno gibanje kroz vrijeme.
+**Kontrolni rezultat ili kriterij.** Referentne dubine: $h_{str}\approx0{,}453$ m, $h_{pred}\approx0{,}147$ m. Niz I: najveće odstupanje 72,9 mm, raspon 140 mm; ne prolazi. Niz II: najveće odstupanje 1,10 mm, raspon 2,0 mm; zadovoljava oba kriterija. Referentni profil ostaje ispod vrha boka. Očitanja ipak ne dokazuju mirovanje cijelog fluida ni izostanak prolaznog prelijevanja; treba pratiti slobodnu površinu i relativno gibanje kroz vrijeme.
 
 ### Z6. Rotirajući spremnik i prelijevanje {#key-task-u04-otvoreni-cilindricni-spremnik-polumjera-i-visine-ispunjen .unnumbered .unlisted}
 
@@ -204,7 +204,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** U graničnom stanju vrijedi $h_R = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni režim najprije nađi $\Delta h = \omega^2 R^2/(2g)$, zatim dubinu u osi $h_C$ i uz stijenku $h_R$, a tlakove iz $p_M = \rho_v gh$. U provjeri tolerancije koristi $\omega=1{,}05k\omega_{max}$ i iz uvjeta $h_C\ge0{,}350\ \text{m}$ riješi gornju granicu za $k$.
 
-**Kontrolni rezultat ili kriterij.** $\omega_{max}\approx7{,}83$ rad/s. Za $k=0{,}80$: dubine (os, rub) ≈ (0,3576; 0,5624) m, tlakovi ≈ (3,51; 5,52) kPa. Uz +5 % brzine: omjer 0,84, dubine ≈ (0,3471; 0,5729) m; nema prelijevanja, ali dubina u osi nije dovoljna. $k_{max}\approx0{,}790$. Preporuka $k=0{,}78$: pri najvećem odstupanju dubine ≈ (0,35268; 0,56732) m, rezerva 2,68 mm. Vrijedi za ustaljeni model sa zatvorenim usisom.
+**Kontrolni rezultat ili kriterij.** $\omega_{max}\approx7{,}83$ rad/s. Za $k=0{,}80$: dubine (os, rub) ≈ (0,358; 0,562) m, tlakovi ≈ (3,51; 5,52) kPa. Uz +5 % brzine: omjer 0,84, dubine ≈ (0,347; 0,573) m; nema prelijevanja, ali dubina u osi nije dovoljna. $k_{max}\approx0{,}790$. Preporuka $k=0{,}78$: pri najvećem odstupanju dubine ≈ (0,353; 0,567) m, rezerva oko 2,7 mm. Vrijedi za ustaljeni model sa zatvorenim usisom.
 
 ## Hidrostatičke sile na ravne i zakrivljene plohe
 
@@ -580,7 +580,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Smjernica postupka.** Riješi izraz $Q=\pi D^4\Delta p/(128\mu L)$ po viskoznosti. Za neovisne standardne nesigurnosti vrijedi $[s(\mu)/\mu]^2=[4s(D)/D]^2+[s(\Delta p)/\Delta p]^2+[s(L)/L]^2+[s(Q)/Q]^2$.
 
-**Kontrolni rezultat ili kriterij.** $\mu\approx1{,}000\ \text{mPa s}$, $s(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Doprinos samog promjera relativnoj standardnoj nesigurnosti iznosi $4\,\%$, pa je on najveći doprinos ukupnoj mjernoj nesigurnosti.
+**Kontrolni rezultat ili kriterij.** $\mu\approx4{,}00\ \text{mPa s}$, $s(\mu)\approx0{,}11\ \text{mPa s}$ i $Re\approx8{,}4$. Doprinos samog promjera relativnoj standardnoj nesigurnosti iznosi $2{,}5\,\%$ od ukupnih $2{,}8\,\%$, pa je on najveći doprinos ukupnoj mjernoj nesigurnosti.
 
 ### Z4. Povratni tok između ploča {#key-task-couette-povrat .unnumbered .unlisted}
 
@@ -736,7 +736,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-kontrolni-presjek-na-pragu)
 
-**Smjernica postupka.** Između presjeka zbroj $z+E$ ostaje stalan. Na tjemenu je $E_t=E_1-\Delta z$, a minimum specifične energije granica je prolaza. Korijene traži s obiju strana $y_c$; neprekinuti potkritični dotok bira dublju granu. Pri graničnoj visini praga obje se grane spajaju.
+**Smjernica postupka.** Između presjeka zbroj $z+E$ ostaje stalan. Na tjemenu je $E_t=E_0-\Delta z$, a minimum specifične energije granica je prolaza. Korijene traži s obiju strana $y_c$; neprekinuti potkritični dotok bira dublju granu. Pri graničnoj visini praga obje se grane spajaju.
 
 **Kontrolni rezultat ili kriterij.** $y_c\approx0{,}790179\ \mathrm{m}$, $E_{min}\approx1{,}185268\ \mathrm{m}$ i $\Delta z_{max}\approx0{,}186042\ \mathrm{m}$. Za zadani prag $E_t\approx1{,}251310\ \mathrm{m}$; korijeni su $0{,}630231$ i $1{,}009009\ \mathrm{m}$. Odabire se $y_t\approx1{,}009009\ \mathrm{m}$, uz $Fr_t\approx0{,}6930$. Viši prag zahtijeva uzvodni uspor ili promjenu protoka; prvotno stanje tada više nije moguće.
 
@@ -744,7 +744,7 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 [Vrati se na zadatak](u15_otvoreni_tokovi.qmd#task-skok-mjerenje)
 
-**Smjernica postupka.** Model: bilanca količine gibanja s impulsnom funkcijom iz jednadžbe [(15.18)](u15_otvoreni_tokovi.qmd#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01) u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti prema vodiču (engl. *Guide to the Expression of Uncertainty in Measurement*, GUM) i sukladnost ako je $|\Delta_I|\le2s_{\Delta}$; slaganje ne dokazuje pretpostavke modela.
+**Smjernica postupka.** Model: bilanca količine gibanja s impulsnom funkcijom iz jednadžbe [(15.18)](u15_otvoreni_tokovi.qmd#eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01) u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti prema vodiču (engl. *Guide to the Expression of Uncertainty in Measurement*, GUM) [@jcgm100-2008] i sukladnost ako je $|\Delta_I|\le2s_{\Delta}$; slaganje ne dokazuje pretpostavke modela.
 
 **Kontrolni rezultat ili kriterij.** $q=1{,}5000\ \mathrm{m^2/s}$, $s_q\approx0{,}01546\ \mathrm{m^2/s}$, $\Delta_I\approx-0{,}01648\ \mathrm{m^2}$ i $s_{\Delta}\approx0{,}02010\ \mathrm{m^2}$. Omjer je $|\Delta_I|/s_{\Delta}\approx0{,}820<2$, pa su mjerenja prema zadanom kriteriju sukladna bilanci. Teorijska spregnuta dubina iznosi $1{,}2353\ \mathrm{m}$. Slaganje samo po sebi ne dokazuje sve pretpostavke modela. Najveći doprinos nesigurnosti $s_{\Delta}$ daje zajednički $q$, pa bi za strožu provjeru trebalo točnije izmjeriti protok.
 

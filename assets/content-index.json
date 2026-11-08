@@ -221,7 +221,7 @@
       "kind": "chapter",
       "number": "2",
       "part": "part-1",
-      "source_sha256": "5f75d43db37268d0778ec268f6e33d5b919bc1f0a59c2225215140ee1ba2e67b",
+      "source_sha256": "a3b48e55936b12372e404ed383a4641163d99954404fe4af3e68cdcfa24401a7",
       "sections": [
         {
           "id": "viskoznost",
@@ -354,7 +354,7 @@
       "kind": "chapter",
       "number": "3",
       "part": "part-2",
-      "source_sha256": "74696561c834bcaff63495786ce434f818c8f576d4f90847410b84eb6b72d7b1",
+      "source_sha256": "83cfc1d05ad2b28891e33939abd9e479da879174ca48db3ebad0933a59b2fd84",
       "sections": [
         {
           "id": "diferencijalna-jednadžba-hidrostatike",
@@ -475,7 +475,7 @@
       "kind": "chapter",
       "number": "4",
       "part": "part-2",
-      "source_sha256": "4b9b212ed57390b3592c032c483de8cda4a7fb83b3f22acdaec1b7934583056b",
+      "source_sha256": "a875b519a9b612eb1aa6f689d9cf4152009adbbb7ccba7789c4f6abab2fcbd8f",
       "sections": [
         {
           "id": "translatorno-ubrzanje",
@@ -1684,7 +1684,7 @@
       "kind": "chapter",
       "number": "12",
       "part": "part-4",
-      "source_sha256": "2f38b46da50c56a68bd699ef8d2c625bb8b39edfc49604030c46eb81fa9f398b",
+      "source_sha256": "ab14eea71a70a8a366c0f3c54b9e78f90e06eee391507ca238818a5da7cf5066",
       "sections": [
         {
           "id": "sec-realni-tok-motivacija",
@@ -1992,7 +1992,7 @@
       "kind": "chapter",
       "number": "14",
       "part": "part-5",
-      "source_sha256": "bc7d0b5bfb0783b1bf102977e7bf175dabb7aac423ed17d96d5a61b0ab04a70a",
+      "source_sha256": "f051be63a46e87813776a9e96fc80952c1ab7c3f94c65bebda2b77c75b643e36",
       "sections": [
         {
           "id": "od-lopatice-do-turbostroja",
@@ -2128,7 +2128,7 @@
       "kind": "chapter",
       "number": "15",
       "part": "part-5",
-      "source_sha256": "30350feb0299a67f3742d05c3d6ba7e249d1e2e20d2d4798f76ce15f48468c74",
+      "source_sha256": "d1607937736c64962a26acccc55706aeaa4b2aa8857755f6715574a803b55514",
       "sections": [
         {
           "id": "sec-otvoreni-tok-motivacija",
@@ -2394,7 +2394,7 @@
       "kind": "appendix",
       "number": "D",
       "part": null,
-      "source_sha256": "38cc17451710ab71f21b92b7bd09216f2c986ac73110ced39796bc7ce80a0d06",
+      "source_sha256": "073a01d3716fcfe6df47d798c266a96dbf097ad25e1c75e1e5e2cd2db792bea4",
       "sections": [
         {
           "id": "dodatne-kratice-numeričkih-metoda",
@@ -2466,7 +2466,7 @@
       "kind": "appendix",
       "number": "E",
       "part": null,
-      "source_sha256": "982dc22f76849ef5cba7044bb4a2f1a379c2973812cd880357a09240f5576d32",
+      "source_sha256": "3443f92aae45ef09b4d79d38eb64bf1798f9f7fc5d59b151dee61b3a7da5aecd",
       "sections": [
         {
           "id": "temelji-i-integralne-bilance",
@@ -2518,7 +2518,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "6403222be144b752ba118e5af4a3cec8b66676f6043f4fe09b08a4c7334957b1",
+      "source_sha256": "9751226b5a42b4efcdda85edca4400b254c09a6ee9b15d5e3c724adc509f6c0d",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -3420,7 +3420,7 @@
       "kind": "Equation",
       "document": "u02",
       "number": "2.35",
-      "latex": "h_{cap}=\\frac{4\\sigma\\cos\\theta}{\\rho gd}\n=\\frac{4\\cdot0{,}072}{998\\cdot9{,}81\\cdot0{,}80\\cdot10^{-3}}\n\\approx36{,}8\\ \\mathrm{mm}."
+      "latex": "h_{kap}=\\frac{4\\sigma\\cos\\theta}{\\rho gd}\n=\\frac{4\\cdot0{,}072}{998\\cdot9{,}81\\cdot0{,}80\\cdot10^{-3}}\n\\approx36{,}8\\ \\mathrm{mm}."
     },
     "eq-reologija-2-tlakovni-skok-na-kapljici-01": {
       "id": "eq-reologija-2-tlakovni-skok-na-kapljici-01",
@@ -3624,7 +3624,7 @@
       "document": "u02",
       "number": "2.6",
       "caption": "Isti ležaj statvene cijevi pri hladnom isplovljenju i zagrijanom ulju; ulje pruža otpor vrtnji osovine.",
-      "alt": "Dva razmotana uljna procjepa uz nepomičnu čahuru i osovinu koja se giba udesno, pri 0 °C i 90 °C, te poprečni presjek s promjerom osovine, smjerom vrtnje i momentom trenja.",
+      "alt": "Dva razmotana uljna procjepa uz nepomičnu čahuru i osovinu koja se giba udesno, pri 10 °C i 50 °C, te poprečni presjek s promjerom osovine, smjerom vrtnje i momentom trenja.",
       "source": "../assets/print/u02_fig_lezaj_temperatura.svg",
       "type": "standard",
       "variants": {
@@ -7305,7 +7305,7 @@
       "caption": "Usisni vod rashladne crpke morske vode: usisni koš ispod vodne linije i crpka iznad nje.",
       "alt": "Presjek boka broda s vodnom linijom, usisnim košem ispod vodne linije, usisnim vodom koji se uspinje do crpke iznad vodne linije i označenim kotama z_u i z_P.",
       "source": "../assets/print/u09_ch1_bypass_sifon_suzenje_mlaz.svg",
-      "type": "standard",
+      "type": "wide",
       "variants": {
         "web": "../assets/print/u09_ch1_bypass_sifon_suzenje_mlaz.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"
@@ -9010,7 +9010,7 @@
       "caption": "Venturijevo suženje i granica valjanosti jednofaznog modela.",
       "alt": "Venturijevo suženje s osi apsolutnog tlaka ispod geometrije, na kojoj je dio ispod tlaka pare isprekidan.",
       "source": "../assets/print/u14_val3_venturi_kavitacija.svg",
-      "type": "standard",
+      "type": "wide",
       "variants": {
         "web": "../assets/print/u14_val3_venturi_kavitacija.svg",
         "print_manifest": "assets/pdf-figures/manifest.json"

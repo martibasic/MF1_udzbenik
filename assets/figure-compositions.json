@@ -178,6 +178,23 @@
     },
     "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
+  "u09_vjezbe_skice.svg": {
+    "spatial_text": [
+      25,
+      26,
+      28,
+      29
+    ],
+    "canvas_insets_pt": {
+      "0": {
+        "left": 16
+      },
+      "5": {
+        "left": 16
+      }
+    },
+    "reason": "Oznake kota H u Z1 i z_C u Z6 stoje lijevo od krajnje lijeve kotne crte; lijevi odmak platna daje im mjesta da u tisku ne prijeđu preko kotne crte; oznake v_2, 1, D_1 i D_2 u Z3 ostaju uz svoj presjek umjesto da postanu naslov ili podnožje panela (recenzija G2-39)."
+  },
   "u01_val1_klip_manometar.svg": {
     "caption_anchor_panel": 0,
     "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
@@ -311,8 +328,13 @@
     "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
   },
   "u09_ch1_bypass_sifon_suzenje_mlaz.svg": {
+    "rows": [
+      [
+        "wide"
+      ]
+    ],
     "caption_anchor_panel": 0,
-    "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+    "reason": "Složen povezani sustav (bok, usisni koš, cjevovod, crpka, dvije razine) s mnogo kota: u STANDARD formatu oznake od 9 pt prekrivale su kote i stijenke (recenzija G2-39), pa se slaže u WIDE formatu."
   },
   "u09_fig_venturijeva_cijev.svg": {
     "caption_anchor_panel": 0,
@@ -371,6 +393,14 @@
       ]
     },
     "reason": "Oznake ostaju uz pripadni prizor; objašnjenja i relacije premješteni su u tekst ispod slike. Posebni odmaci čuvaju čitljivost oznaka."
+  },
+  "u14_val3_venturi_kavitacija.svg": {
+    "rows": [
+      [
+        "wide"
+      ]
+    ],
+    "reason": "Geometrija i numerički graf tlaka dijele os x; u STANDARD formatu razmak oznaka osi (50 kPa) bio je manji od visine oznake od 9 pt, pa su se oznake 50 i 0 razmicale i preklapale (recenzija G3-15). WIDE format čuva ravnomjernu podjelu osi."
   },
   "u12_val1_vodilica_mlaza.svg": {
     "caption_anchor_panel": 0,

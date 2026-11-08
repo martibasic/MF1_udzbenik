@@ -13,6 +13,16 @@ pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
   numeriranih jednadžbi), dvoznačne rečenice, nazivlje, ograde uz tvrdnje o praksi,
   cjeloviti ispis triju ključeva. Konačni i kontrolni rezultati nepromijenjeni.
 
+## Brojevi, izvori i skice prema recenziji — 8. studenoga 2026.
+
+- **Brojevi i oznake**: pog. 2 (temperature ležaja 10 °C i 50 °C, $h_{kap}$), pog. 4
+  (širina $b_t$, zaokruživanje ključa Z5 i Z6), pog. 12 Z3 s vlastitim podatcima
+  (glikolna otopina), pog. 15 Z4 ($y_0$, $E_0$).
+- **Literatura**: Versteeg i Malalasekera, Ferziger, Perić i Street, GUM, MAN Energy
+  Solutions, McGeorge, Taylor i ISGOTT, uz citate u pog. 3, 14, 15 i dodatcima.
+- **Skice**: uklonjena preklapanja oznaka na sl. 5.8, 8.5, 8.7, 10.1, 10.9, 11.4, 14.5,
+  14.7, 15.2 i skicama pog. 2; sl. 8.5 i 11.4 u PDF-u su široke.
+
 ## Recenzija cijele knjige i ispravci pog. 13 — 8. studenoga 2026.
 
 - **Recenzija**: 17 neovisnih čitanja (struka, primjena, urednik, simulirani

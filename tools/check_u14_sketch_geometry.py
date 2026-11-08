@@ -217,6 +217,18 @@ def main():
             rad = (math.cos(phi), math.sin(phi))
             ang = math.atan2(d[0]*rad[0]+d[1]*rad[1], -(d[0]*t[0]+d[1]*t[1]))
             close(ang, beta, 'P3: kut lopatice od smjera -u iz podataka', tol=1e-6)
+        # Kutovi na krajevima ne smiju se postići degeneriranom krivuljom (kontrolna
+        # točka uz kraj daje gotovo ravnu lopaticu): oba kraka kontrolnog poligona
+        # su znatna, lopatica se unatrag namata za 60-120 stupnjeva, a polumjer raste
+        # monotono od r1 do r2.
+        chord = math.dist(P0, P2)
+        check(min(math.dist(P0, P1), math.dist(P1, P2)) > .25*chord, 'P3: lopatica mora biti stvarno zakrivljena')
+        phi0, phi2 = (math.atan2(p[1]-centre[1], p[0]-centre[0]) for p in (P0, P2))
+        wrap = math.degrees((phi0-phi2) % (2*math.pi))
+        check(60 <= wrap <= 120, 'P3: unatrag zakrivljena lopatica (namatanje suprotno vrtnji)')
+        radii = [math.dist(((1-t)**2*P0[0]+2*t*(1-t)*P1[0]+t*t*P2[0], (1-t)**2*P0[1]+2*t*(1-t)*P1[1]+t*t*P2[1]), centre)
+                 for t in (i/40 for i in range(41))]
+        check(all(b >= a-1e-9 for a, b in zip(radii, radii[1:])), 'P3: polumjer duž lopatice raste od r1 do r2')
     rotation = path(node(p3, 'u14p3_rotation'))
     a, b = rotation[-2:]
     check((a[0]-centre[0])*(b[1]-a[1])-(a[1]-centre[1])*(b[0]-a[0]) > 0, 'P3: vrtnja u smjeru kazaljke, kao pozitivni tangencijalni smjer')

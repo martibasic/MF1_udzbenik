@@ -6,7 +6,7 @@ Pri stalnoj vrtnji kutnom brzinom $\omega$ oko okomite osi centrifugalno ubrzanj
 
 Poglavlje najprije izvodi ravnotežu u neinercijskom sustavu i nagib površine pri translatornom ubrzanju, uključujući okomitu komponentu, a zatim paraboloid pri krutoj vrtnji i razine koje zbog očuvanja volumena zadovoljavaju $(h_C+h_R)/2=h_0$. Izrazi vrijede samo uz stalno ubrzanje ili stalnu kutnu brzinu. Prije primjene treba provjeriti prelijevanje i ogoljavanje dna jer nakon prvog praga formule za punu površinu više ne vrijede. Integraciju raspodijeljenog tlaka u silu na stijenku obrađuje []{.mf1-chapter-ref target="u05"}, a utjecaj pomaka tekućine na stabilitet broda razmatra se u []{.mf1-chapter-ref target="u06"}.
 
-Slika [-@fig-uvod-u04] prikazuje oba slučaja. Lijevo je poprečni presjek broda u zavoju sa spremnikom čija je mjera prema središtu zavoja $L$: ubrzanje $\vec a$ usmjereno je prema središtu zavoja, pa je $\vec g_{eff}$ otklonjeno prema vanjskoj strani. Površina okomita na to polje zatvara s mirnom razinom $h_0$ kut $\theta$ te se na vanjskoj strani podiže za $\Delta h/2$, a na unutarnjoj za isto toliko spušta. Desno je otvoreni spremnik polumjera $R$ koji se vrti kutnom brzinom $\omega$ oko svoje osi. Polje $\vec g_{eff}$ okomito je na lokalnu paraboloidnu površinu, a na osi se svodi na $\vec g$. Površina je na osi na visini $h_C$, uz stijenku na visini $h_R$, a razlika tih visina iznosi $\Delta h$.
+Slika [-@fig-uvod-u04] prikazuje oba slučaja. Lijevo je poprečni presjek broda u zavoju sa spremnikom čija je širina prema središtu zavoja $b_t$: ubrzanje $\vec a$ usmjereno je prema središtu zavoja, pa je $\vec g_{eff}$ otklonjeno prema vanjskoj strani. Površina okomita na to polje zatvara s mirnom razinom $h_0$ kut $\theta$ te se na vanjskoj strani podiže za $\Delta h/2$, a na unutarnjoj za isto toliko spušta. Desno je otvoreni spremnik polumjera $R$ koji se vrti kutnom brzinom $\omega$ oko svoje osi. Polje $\vec g_{eff}$ okomito je na lokalnu paraboloidnu površinu, a na osi se svodi na $\vec g$. Površina je na osi na visini $h_C$, uz stijenku na visini $h_R$, a razlika tih visina iznosi $\Delta h$.
 
 ![Nagnuta slobodna površina u zavoju i paraboloid u rotirajućem spremniku.](../assets/print/u04_fig_uvod_pregled.svg){#fig-uvod-u04 fig-align="center" fig-alt="Lijevo poprečni presjek broda u zavoju s tankom čija je površina viša na vanjskoj strani, desno otvoreni spremnik u krutoj vrtnji s paraboloidnom površinom i strelicama polja okomitima na nju."}
 
@@ -808,7 +808,7 @@ Najprije upotrijebi nagib slobodne površine i očuvanje volumena. Zatim odvojen
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-Referentne dubine: $h_{str}\approx0{,}45291$ m, $h_{pred}\approx0{,}14709$ m. Niz I: najveće odstupanje 72,91 mm, raspon 140 mm; ne prolazi. Niz II: najveće odstupanje 1,095 mm, raspon 2,0 mm; zadovoljava oba kriterija. Referentni profil ostaje ispod vrha boka. Očitanja ipak ne dokazuju mirovanje cijelog fluida ni izostanak prolaznog prelijevanja; treba pratiti slobodnu površinu i relativno gibanje kroz vrijeme.
+Referentne dubine: $h_{str}\approx0{,}453$ m, $h_{pred}\approx0{,}147$ m. Niz I: najveće odstupanje 72,9 mm, raspon 140 mm; ne prolazi. Niz II: najveće odstupanje 1,10 mm, raspon 2,0 mm; zadovoljava oba kriterija. Referentni profil ostaje ispod vrha boka. Očitanja ipak ne dokazuju mirovanje cijelog fluida ni izostanak prolaznog prelijevanja; treba pratiti slobodnu površinu i relativno gibanje kroz vrijeme.
 :::
 ::::
 
@@ -840,7 +840,7 @@ U graničnom stanju vrijedi $h_R = H = h_0 + \omega_{max}^2 R^2/(4g)$; za radni 
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$\omega_{max}\approx7{,}83$ rad/s. Za $k=0{,}80$: dubine (os, rub) ≈ (0,3576; 0,5624) m, tlakovi ≈ (3,51; 5,52) kPa. Uz +5 % brzine: omjer 0,84, dubine ≈ (0,3471; 0,5729) m; nema prelijevanja, ali dubina u osi nije dovoljna. $k_{max}\approx0{,}790$. Preporuka $k=0{,}78$: pri najvećem odstupanju dubine ≈ (0,35268; 0,56732) m, rezerva 2,68 mm. Vrijedi za ustaljeni model sa zatvorenim usisom.
+$\omega_{max}\approx7{,}83$ rad/s. Za $k=0{,}80$: dubine (os, rub) ≈ (0,358; 0,562) m, tlakovi ≈ (3,51; 5,52) kPa. Uz +5 % brzine: omjer 0,84, dubine ≈ (0,347; 0,573) m; nema prelijevanja, ali dubina u osi nije dovoljna. $k_{max}\approx0{,}790$. Preporuka $k=0{,}78$: pri najvećem odstupanju dubine ≈ (0,353; 0,567) m, rezerva oko 2,7 mm. Vrijedi za ustaljeni model sa zatvorenim usisom.
 :::
 ::::
 

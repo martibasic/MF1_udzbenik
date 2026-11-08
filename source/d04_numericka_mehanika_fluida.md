@@ -180,7 +180,7 @@ Pokus s profilom NACA 0012 u zraku ne validira kavitaciju, slobodnu površinu ni
 
 ## Što čitati dalje
 
-Za nastavak odaberi pripremljeni laminarni paket, objasni njegovu bilancu i pogrešku, pa pročitaj [NASA-in vodič za V&V](https://www.grc.nasa.gov/www/wind/valid/tutorial/tutorial.html). Za dublje upoznavanje s diskretizacijom poslužit će Versteeg i Malalasekera, *An Introduction to Computational Fluid Dynamics: The Finite Volume Method*, ili Ferziger, Perić i Street, *Computational Methods for Fluid Dynamics*. Programske postavke, koje nisu preduvjet za ovaj priručnik, provjeri u [službenom vodiču OpenFOAM-a](https://doc.cfd.direct/openfoam/user-guide).
+Za nastavak odaberi pripremljeni laminarni paket, objasni njegovu bilancu i pogrešku, pa pročitaj [NASA-in vodič za V&V](https://www.grc.nasa.gov/www/wind/valid/tutorial/tutorial.html). Za dublje upoznavanje s diskretizacijom poslužit će Versteeg i Malalasekera [@versteeg2007] ili Ferziger, Perić i Street [@ferziger2020]. Programske postavke, koje nisu preduvjet za ovaj priručnik, provjeri u [službenom vodiču OpenFOAM-a](https://doc.cfd.direct/openfoam/user-guide).
 
 ::: {.callout-note icon="false"}
 ## Završna poruka dodatka

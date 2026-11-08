@@ -365,8 +365,8 @@ def verify():
     z5 = zadatak_5()
     _check(out, "U04.Z5.h_back_m", z5["h_str"], .45291, "m", rel=.00002)
     _check(out, "U04.Z5.h_front_m", z5["h_pred"], .14709, "m", rel=.00004)
-    _check(out, "U04.Z5.error_i_mm", z5["errors"][0]*1000, 72.91, "mm", rel=.0001)
-    _check(out, "U04.Z5.error_ii_mm", z5["errors"][1]*1000, 1.095, "mm", rel=.0002)
+    _check(out, "U04.Z5.error_i_mm", z5["errors"][0]*1000, 72.9, "mm", rel=.001)
+    _check(out, "U04.Z5.error_ii_mm", z5["errors"][1]*1000, 1.10, "mm", rel=.005)
     _check(out, "U04.Z5.spread_i_mm", z5["spreads"][0]*1000, 140, "mm", rel=1e-9)
     _check(out, "U04.Z5.spread_ii_mm", z5["spreads"][1]*1000, 2, "mm", rel=1e-9)
     _invariant(out, "U04.Z5.series_selection",

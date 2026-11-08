@@ -166,3 +166,20 @@ trenja (pog. 8), samousisna izvedba ili zalijevanje u pog. 8 P4, ograde „nasta
 „kao orijentacija” (pog. 6–8, pog. 3 ulaž), ograda „otvor malen prema uzvodnoj dubini” (pog. 15),
 definicija meridijanske komponente (pog. 14). Preskočeno ostaje: izvori za dodatak E
 (`references.bib`), skice, promjene brojeva i autorske odluke iz `PROVJERA.md`.
+
+**8. 11. 2026. — brojevi, izvori i skice** (verifikatori, auditi, oba rendera i pregled PDF-a prolaze; PDF 353 str.)
+
+| # | Provedeno |
+| --- | --- |
+| G1-10 | Pog. 4 ključ Z5 i Z6: jedna razina zaokruživanja (K8); `verify_u04.py` usklađen. |
+| G1-11 | Pog. 4 uvod: mjerodavna je širina spremnika prema središtu zavoja $b_t$; sl. 4.1 usklađena. |
+| G1-12 | Pog. 2 ležaj: temperature 10 °C i 50 °C odgovaraju zadanom omjeru viskoznosti 10; dodana rečenica o rasponu 0–90 °C; rezultati nepromijenjeni. |
+| G1-30 | Pog. 2: $h_{kap}$ umjesto $h_{cap}$. |
+| G3-06 | Pog. 12 Z3: vlastiti podatci (glikolna otopina) umjesto podataka primjera P3: $\mu\approx4{,}00$ mPa s, $s(\mu)\approx0{,}11$ mPa s, $Re\approx8{,}4$; verifikator i bilježnica usklađeni (`docs/radno/revizija_u12.md`). |
+| G4-16 | Pog. 15 Z4: $y_0$ i $E_0$ za mirnu uzvodnu dubinu; skica, naputak i ključ usklađeni. |
+| Literatura | Dodano sedam provjerenih izvora (Versteeg i Malalasekera, Ferziger i dr., GUM, MAN Energy Solutions, McGeorge, Taylor, ISGOTT) s citatima u pog. 3, 14, 15 i dodatcima D i E (`LITERATURA_PRIJEDLOG.md`). |
+| Skice | Dvanaest zahvata u `SKICE_PROVEDBA.md` (preklapanja oznaka na sl. 5.8, 8.5, 8.7, 10.1, 10.9, 11.4, 14.5, 14.7, 15.2, skici ležaja i mikrodozatora; oznaka „2” na sl. 13.2). Sl. 8.5 i 11.4 sada su široke (WIDE). |
+
+Nisu dodani: Virag, Dixon i Carlton (nepotpuni bibliografski podatci). Čekaju autoricu
+autorske odluke iz `PROVJERA.md` (G1-40, G1-43, G2-23, G2-24, G4-20), vidljivost „Provjeri
+sebe”, nazivlje „učinkovitost”/„stupanj djelovanja”, ravnoteža struka i licenca.

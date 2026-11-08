@@ -590,7 +590,7 @@ $\tau_{st}=\Delta p\,D/(4L)=10{,}0\ \text{Pa}$, $u_\tau=\sqrt{\tau_{st}/\rho}=0{
 
 **Tekst zadatka**
 
-Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Sintetički nastavni podatci su $Q=0{,}300\pm0{,}003\ \text{mL/min}$, $\Delta p=p_1-p_2=652\pm5\ \text{Pa}$, $L=0{,}200\pm0{,}001\ \text{m}$ i $D=0{,}500\pm0{,}005\ \text{mm}$. Znakovi $\pm$ označuju neovisne standardne nesigurnosti; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$ jer u ovom poglavlju $u$ označuje brzinu ploče. Newtonski fluid ima gustoću $\rho=998\ \text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini.
+Dinamička viskoznost određuje se iz protoka i razlike tlakova između dvaju priključaka na vodoravnoj kapilari. Sintetički nastavni podatci su $Q=1{,}20\pm0{,}012\ \text{mL/min}$, $\Delta p=p_1-p_2=1990\pm10\ \text{Pa}$, $L=0{,}250\pm0{,}001\ \text{m}$ i $D=0{,}800\pm0{,}005\ \text{mm}$. Znakovi $\pm$ označuju neovisne standardne nesigurnosti; standardnu nesigurnost veličine $x$ označujemo sa $s(x)$ jer u ovom poglavlju $u$ označuje brzinu ploče. Newtonski fluid, vodena otopina glikola, ima gustoću $\rho=1060\ \text{kg/m}^3$; njezinu nesigurnost zanemari. Duljina $L$ mjeri se između tlačnih priključaka na istoj visini.
 
 U tom dijelu kružne kapilare pretpostavi potpuno razvijen laminarni tok uz prianjanje uz stijenku, a ulazne učinke smatraj ograničenima na dio ispred mjernog razmaka.
 
@@ -610,7 +610,7 @@ Riješi izraz $Q=\pi D^4\Delta p/(128\mu L)$ po viskoznosti. Za neovisne standar
 ::: {.callout-tip collapse="true" data-answer-key="true"}
 ### Kontrolni rezultat
 
-$\mu\approx1{,}000\ \text{mPa s}$, $s(\mu)\approx0{,}042\ \text{mPa s}$ i $Re\approx12{,}7$. Doprinos samog promjera relativnoj standardnoj nesigurnosti iznosi $4\,\%$, pa je on najveći doprinos ukupnoj mjernoj nesigurnosti.
+$\mu\approx4{,}00\ \text{mPa s}$, $s(\mu)\approx0{,}11\ \text{mPa s}$ i $Re\approx8{,}4$. Doprinos samog promjera relativnoj standardnoj nesigurnosti iznosi $2{,}5\,\%$ od ukupnih $2{,}8\,\%$, pa je on najveći doprinos ukupnoj mjernoj nesigurnosti.
 :::
 ::::
 

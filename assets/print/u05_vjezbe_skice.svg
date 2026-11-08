@@ -52,13 +52,12 @@
       <line x1="125" y1="198" x2="161.8" y2="198" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" />
       <text x="143.4" y="214" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan></text>
       <text x="80" y="80" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">morska voda</text>
-      <text x="262" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">b</tspan> = 0,80 m; <tspan font-style="italic">H</tspan> = 1,60 m</text>
-      <text x="262" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,40 m</text>
+      <text x="262" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">b</tspan> = 0,80 m</text>
+      <text x="262" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan> = 1,60 m</text>
       <text x="262" y="85" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">ρ</tspan> = 1025 kg/m³</text>
-      <text x="262" y="104" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">pogled s naplavljene</text>
-      <text x="262" y="119" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">strane</text>
-      <text x="262" y="138" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start" id="u05vs_z1_unknown"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = ?</text>
-      <text x="262" y="157" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">suha strana: zrak</text>
+      <text x="262" y="104" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = 1,40 m</text>
+      <text x="262" y="123" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start" id="u05vs_z1_unknown"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = ?</text>
+      <text x="142" y="234" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">pogled s naplavljene strane; suha strana: zrak</text>
     </g>
   </g>
   <g id="u05vs_title-scene-2" transform="translate(-68.0000 -13.7445)">
@@ -87,13 +86,15 @@
       <line x1="156" y1="29" x2="156" y2="39" stroke="#657781" stroke-width="0.8" />
       <line x1="48" y1="34" x2="156" y2="34" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" />
       <text x="102" y="46" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan></text>
-      <text x="120" y="204" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan>: okomito na presjek</text>
+      <text x="120" y="211" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan>: okomito na presjek</text>
       <text x="102" y="168" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">voda</text>
       <text x="82" y="120" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">suhi kanal</text>
-      <text x="240" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">L</tspan> = 1,20 m; <tspan font-style="italic">H</tspan> = 0,90 m</text>
-      <text x="240" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">b</tspan> = 1,50 m (okomito)</text>
-      <text x="240" y="123" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start" id="u05vs_z2_unknown"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = ?; <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">z</tspan> = ?</text>
-      <text x="240" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">+<tspan font-style="italic">x</tspan> udesno, +<tspan font-style="italic">z</tspan> prema gore</text>
+      <text x="250" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">L</tspan> = 1,20 m</text>
+      <text x="250" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan> = 0,90 m</text>
+      <text x="250" y="85" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">b</tspan> = 1,50 m</text>
+      <text x="250" y="104" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start" id="u05vs_z2_unknown"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">x</tspan> = ?; <tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">z</tspan> = ?</text>
+      <text x="250" y="123" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">+<tspan font-style="italic">x</tspan> udesno,</text>
+      <text x="250" y="142" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start">+<tspan font-style="italic">z</tspan> prema gore</text>
     </g>
   </g>
   <g id="u05vs_title-scene-3" transform="translate(-8.0000 -0.7445)">
@@ -154,9 +155,9 @@
       <line x1="218" y1="199" x2="218" y2="209" stroke="#657781" stroke-width="0.8" />
       <line x1="70" y1="204" x2="218" y2="204" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" />
       <text x="144.0" y="222" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan></text>
-      <text x="267" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan> = 1,50 m</text>
-      <text x="267" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 0,40 m</text>
-      <text x="267" y="85" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> = 12,00 kN</text>
+      <text x="302" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan> = 1,50 m</text>
+      <text x="302" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">0</tspan> = 0,40 m</text>
+      <text x="302" y="85" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">max</tspan> = 12,00 kN</text>
     </g>
   </g>
   <g id="u05vs_title-scene-5" transform="translate(-16.9787 24.2555)">
@@ -183,7 +184,7 @@
       <line id="u05vs_z5_FG" x1="180.64705882352942" y1="118" x2="180.64705882352942" y2="154" stroke="#356b83" stroke-width="2.8" marker-end="url(#u05vs_force)" data-mf1-vector="force" />
       <text x="172.64705882352942" y="130" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end"><tspan font-weight="700" font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em" font-weight="700">G</tspan></text>
       <line id="u05vs_z5_T" x1="207" y1="173" x2="151" y2="173" stroke="#356b83" stroke-width="2.8" marker-end="url(#u05vs_green)" data-mf1-vector="force" />
-      <text x="153" y="188" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle" font-weight="700"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan></text>
+      <text x="146" y="180" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="end" font-weight="700"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">s</tspan></text>
       <line x1="140.53196256846454" y1="169.46803743153546" x2="157.50252531694167" y2="152.49747468305833" stroke="#356b83" stroke-width="1.5" marker-end="url(#u05vs_normal)" id="u05vs_z5_normal" data-mf1-vector="pressure" />
       <text x="111" y="153" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">d</tspan><tspan font-weight="700" font-style="italic">F</tspan></text>
       <text x="173" y="96" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">R</tspan></text>
@@ -220,17 +221,18 @@
       <line x1="24" y1="110.29411764705881" x2="34" y2="110.29411764705881" stroke="#657781" stroke-width="0.8" />
       <line x1="29" y1="51" x2="29" y2="110.29411764705881" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" />
       <text x="10" y="83.6470588235294" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan></text>
-      <line x1="240" y1="110.29411764705881" x2="250" y2="110.29411764705881" stroke="#657781" stroke-width="0.8" />
-      <line x1="240" y1="163.0" x2="250" y2="163.0" stroke="#657781" stroke-width="0.8" />
-      <line x1="245" y1="110.29411764705881" x2="245" y2="163.0" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" />
-      <text x="252" y="140.6470588235294" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan></text>
+      <line x1="24" y1="110.29411764705881" x2="34" y2="110.29411764705881" stroke="#657781" stroke-width="0.8" />
+      <line x1="24" y1="163.0" x2="34" y2="163.0" stroke="#657781" stroke-width="0.8" />
+      <line x1="29" y1="110.29411764705881" x2="29" y2="163.0" stroke="#657781" stroke-width="1.2" marker-start="url(#u05vs_dimL)" marker-end="url(#u05vs_dim)" data-mf1-role="dimension" />
+      <text x="12" y="140.6470588235294" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan></text>
       <text x="112" y="90" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">voda</text>
       <text x="108" y="210" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan>: okomito na presjek</text>
-      <text x="267" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">b</tspan> = 1,20 m; <tspan font-style="italic">H</tspan> = 0,80 m</text>
-      <text x="267" y="66" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = (0,90 ± 0,02) m</text>
-      <text x="267" y="85" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">ρ</tspan> = (998 ± 3) kg/m³</text>
-      <text x="267" y="104" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">m</tspan> = (11,60 ± 0,30) kN</text>
-      <text x="267" y="123" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start" id="u05vs_z6_unknown"><tspan font-style="italic">F</tspan> = ?</text>
+      <text x="267" y="47" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">b</tspan> = 1,20 m</text>
+      <text x="267" y="68" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">H</tspan> = 0,80 m</text>
+      <text x="267" y="89" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">h</tspan><tspan baseline-shift="sub" font-size="0.7em">1</tspan> = (0,90 ± 0,02) m</text>
+      <text x="267" y="110" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">ρ</tspan> = (998 ± 3) kg/m³</text>
+      <text x="267" y="131" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start"><tspan font-style="italic">F</tspan><tspan baseline-shift="sub" font-size="0.7em">m</tspan> = (11,60 ± 0,30) kN</text>
+      <text x="267" y="152" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="start" id="u05vs_z6_unknown"><tspan font-style="italic">F</tspan> = ?</text>
     </g>
   </g>
 </svg>

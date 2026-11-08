@@ -153,3 +153,12 @@ Zahtjev autorice: zadatci su prelagani i prečesto ponavljaju riješene primjere
 Skica Z2 (`u12_realni_tok_vjezbe_skice.svg`): cijev s dva otvorena priključka, $\tau_{st}$ na fluid suprotno toku, crtkana prva ćelija; `check_u12_sketch_geometry.py` Z2. `verify_u12_real_flow.py`: `exercise_wall_shear_first_cell`, `U12.REAL.INV.z2_force_balance`. D03 §12 dopunjen ($H^2/\nu$ ostaje kao opća pogreška bez oznake zadatka).
 
 Prošlo nakon zahvata: pripadni `verify_*`, `verify_all`, `audit_publication`, `qa_audit`, `audit_sketch_design` (s `check_u*_sketch_geometry`), `audit_print_layouts`; D06 i manifest regenerirani generatorima, `print-layouts.json` hash obnovljen. Vizualna provjera skice obavljena headless renderom u PNG. Didaktička procjena je autorska; studentski pilot nije proveden.
+
+## Revizija nakon recenzije (8. studenoga 2026.)
+
+Nalaz G3-06 (`docs/radno/recenzija-2026-11/G3/PROVJERA.md`): Z3 je imao iste $D$, $L$, $Q$ i
+$\Delta p$ kao P3, pa su tražene $\mu$ i $Re$ bile tiskane u primjeru.
+
+| Mjesto | Postojeći ID i uloga | Odluka / studentska aktivnost | Razina | Završni ID | Povezane provjere | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Z3 | `task-poiseuille-inverzni`; obrnuti Poiseuille s nesigurnošću | PREPRAVITI podatke: vodena otopina glikola, $D=0{,}800$ mm, $L=0{,}250$ m, $Q=1{,}20$ mL/min, $\Delta p=1990$ Pa; $\mu\approx4{,}00$ mPa s, $s(\mu)\approx0{,}11$ mPa s, $Re\approx8{,}4$; promjer i dalje najveći doprinos | T2 | isti | `verify_u12_real_flow.py` (`exercise_inverse_poiseuille`), bilježnica `u12_poiseuille_konvergencija.ipynb`, D06 | provedeno |

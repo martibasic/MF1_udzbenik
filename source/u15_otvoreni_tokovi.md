@@ -519,7 +519,7 @@ $A=3{,}375\ \mathrm{m^2}$, $T=5{,}100\ \mathrm{m}$, $P\approx5{,}645\ \mathrm{m}
 
 **Tekst zadatka**
 
-Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Pravokutni kanal stalne širine vodi $q=2{,}20\ \mathrm{m^2/s}$ pri potkritičnoj uzvodnoj dubini $y_1=1{,}200\ \mathrm{m}$. Dno na tjemenu praga više je za $\Delta z=0{,}120\ \mathrm{m}$. Zanemari gubitke; tlak je približno hidrostatički, a $\alpha=1$. Nizvodni uvjet dopušta glatki potkritični nastavak. Promatraj presjeke daleko od lokalne zakrivljenosti prijelaza. Za odabrani korijen zahtijevaj energijski rezidual manji od $\varepsilon_E=10^{-6}\ \mathrm{m}$.
+Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Pravokutni kanal stalne širine vodi $q=2{,}20\ \mathrm{m^2/s}$ pri potkritičnoj uzvodnoj dubini $y_0=1{,}200\ \mathrm{m}$. Dno na tjemenu praga više je za $\Delta z=0{,}120\ \mathrm{m}$. Zanemari gubitke; tlak je približno hidrostatički, a $\alpha=1$. Nizvodni uvjet dopušta glatki potkritični nastavak. Promatraj presjeke daleko od lokalne zakrivljenosti prijelaza. Za odabrani korijen zahtijevaj energijski rezidual manji od $\varepsilon_E=10^{-6}\ \mathrm{m}$.
 
 **Traži se**
 
@@ -531,7 +531,7 @@ Povišenje dna smanjuje raspoloživu specifičnu energiju toka. Pravokutni kanal
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Između presjeka zbroj $z+E$ ostaje stalan. Na tjemenu je $E_t=E_1-\Delta z$, a minimum specifične energije granica je prolaza. Korijene traži s obiju strana $y_c$; neprekinuti potkritični dotok bira dublju granu. Pri graničnoj visini praga obje se grane spajaju.
+Između presjeka zbroj $z+E$ ostaje stalan. Na tjemenu je $E_t=E_0-\Delta z$, a minimum specifične energije granica je prolaza. Korijene traži s obiju strana $y_c$; neprekinuti potkritični dotok bira dublju granu. Pri graničnoj visini praga obje se grane spajaju.
 :::
 ::::
 
@@ -561,7 +561,7 @@ Zadano je $Q=1{,}800\pm0{,}018\ \mathrm{m^3/s}$, $b=1{,}200\pm0{,}003\ \mathrm{m
 ::: {.callout-note collapse="true" data-hint-key="true"}
 ### Naputak
 
-Model: bilanca količine gibanja s impulsnom funkcijom iz jednadžbe [-@eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01] u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti prema vodiču (engl. *Guide to the Expression of Uncertainty in Measurement*, GUM) i sukladnost ako je $|\Delta_I|\le2s_{\Delta}$; slaganje ne dokazuje pretpostavke modela.
+Model: bilanca količine gibanja s impulsnom funkcijom iz jednadžbe [-@eq-otvoreni-tokovi-hidraulicki-skok-energija-se-gubi-kolicina-giban-01] u rubnim presjecima izvan valjka, uz zajednički $q=Q/b$ u oba presjeka i hidrostatičke sile suprotnih smjerova. Kriterij: linearna propagacija standardnih nesigurnosti prema vodiču (engl. *Guide to the Expression of Uncertainty in Measurement*, GUM) [@jcgm100-2008] i sukladnost ako je $|\Delta_I|\le2s_{\Delta}$; slaganje ne dokazuje pretpostavke modela.
 :::
 ::::
 

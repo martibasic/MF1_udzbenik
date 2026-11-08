@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 694 438" role="img" aria-labelledby="u04fup_title u04fup_desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;max-width:694px;height:auto;">
   <title id="u04fup_title">Nagnuta slobodna površina u zavoju i paraboloid u rotirajućem spremniku</title>
-  <desc id="u04fup_desc">Lijevo: poprečni presjek broda u zavoju u lokalnoj aproksimaciji stalnog ubrzanja a prema središtu zavoja; površina je viša na vanjskoj strani. Desno: aksijalni presjek otvorenog spremnika u krutoj vrtnji s paraboloidom; h_0 je mirna razina, a h_C i h_R dubine u osi i uz stijenku, (h_C + h_R)/2 = h_0. Ubrzanja a, g_eff i g crtkane su strelice s punim vrhom; g_eff i g crtani su u istom mjerilu. Kutna brzina omega tanka je strelica s otvorenim vrhom. Efektivna gravitacija okomita je na lokalnu slobodnu površinu. Dubina h mjeri se okomito pri nultom okomitom ubrzanju.</desc>
+  <desc id="u04fup_desc">Lijevo: poprečni presjek broda u zavoju u lokalnoj aproksimaciji stalnog ubrzanja a prema središtu zavoja; površina je viša na vanjskoj strani; b_t je širina tanka mjerena prema središtu zavoja. Desno: aksijalni presjek otvorenog spremnika u krutoj vrtnji s paraboloidom; h_0 je mirna razina, a h_C i h_R dubine u osi i uz stijenku, (h_C + h_R)/2 = h_0. Ubrzanja a, g_eff i g crtkane su strelice s punim vrhom; g_eff i g crtani su u istom mjerilu. Kutna brzina omega tanka je strelica s otvorenim vrhom. Efektivna gravitacija okomita je na lokalnu slobodnu površinu. Dubina h mjeri se okomito pri nultom okomitom ubrzanju.</desc>
   <defs>
     <marker id="u04fup_aR" markerWidth="7" markerHeight="5" refX="6.5" refY="2.5" orient="auto">
       <path d="M0,0 L0,5 L7,2.5 z" fill="#356b83" />
@@ -53,7 +53,7 @@
     <text x="160" y="296" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746" text-anchor="end"><tspan font-weight="700" font-style="italic">g</tspan><tspan baseline-shift="sub" font-size="0.7em">eff</tspan></text>
     <text x="204" y="182" font-family="Arial, Liberation Sans, sans-serif" font-size="12" fill="#263746"><tspan font-weight="700" font-style="italic">a</tspan> prema središtu zavoja</text>
     <text x="306" y="244" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle">Δ<tspan font-style="italic">h</tspan>/2</text>
-    <text x="184" y="378" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">L</tspan></text>
+    <text x="184" y="378" font-family="Arial, Liberation Sans, sans-serif" font-size="11" fill="#263746" text-anchor="middle"><tspan font-style="italic">b</tspan><tspan baseline-shift="sub" font-size="0.7em">t</tspan></text>
   </g>
   <g id="u04fup_title-scene-2" transform="translate(-260.2500 -44.0000)">
     <line x1="790" y1="156" x2="790" y2="402" stroke="#356b83" stroke-width="1.0" stroke-dasharray="5,4" />

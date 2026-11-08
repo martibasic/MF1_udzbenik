@@ -172,6 +172,9 @@ def main():
     crest_depth=(at(bed,248)-at(surface,248))/scale
     check(abs(crest_depth-yt_result)>.05*yt_result,'Z4: nacrtana dubina na tjemenu nije traženi y_t')
     check(any(t=='yt = ?' for t in texts(node(ex,p+'z4'))),'Z4: nepoznanica y_t = ?')
+    z4labels=texts(node(ex,p+'z4'))
+    check(any(t.startswith('y0 = 1,200') for t in z4labels) and 'v0' in z4labels and not any(t.startswith(('y1','v1')) for t in z4labels),
+          'Z4: uzvodni mirni presjek ima indeks 0 (y0, v0), kao u uvodu')
     close(math.hypot(*delta(node(ex,p+'z4inflow'))),math.hypot(*delta(node(ex,p+'z4crestVelocity'))),
           'Z4: shematske jednake brzine ne otkrivaju omjer v_t/v_1')
     crest=line(node(ex,p+'z4crestSection'))

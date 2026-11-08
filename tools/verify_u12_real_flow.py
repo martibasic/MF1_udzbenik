@@ -240,13 +240,13 @@ def exercise_wall_shear_first_cell(
 
 
 def exercise_inverse_poiseuille(
-    volume_flow_ml_min: float = 0.300,
-    pressure_drop: float = 652.0,
-    length: float = 0.200,
-    diameter_mm: float = 0.500,
-    density: float = 998.0,
-    u_volume_flow_ml_min: float = 0.003,
-    u_pressure_drop: float = 5.0,
+    volume_flow_ml_min: float = 1.20,
+    pressure_drop: float = 1990.0,
+    length: float = 0.250,
+    diameter_mm: float = 0.800,
+    density: float = 1060.0,
+    u_volume_flow_ml_min: float = 0.012,
+    u_pressure_drop: float = 10.0,
     u_length: float = 0.001,
     u_diameter_mm: float = 0.005,
 ) -> dict[str, float]:
@@ -481,23 +481,23 @@ def verify() -> list[dict[str, str]]:
         out,
         "U12.REAL.Z3.mu_mPas",
         z3["viscosity_mpas"],
-        1.000,
+        4.00,
         "mPa s",
-        abs_tol=0.0005,
+        abs_tol=0.005,
     )
     _check(
         out,
         "U12.REAL.Z3.u_mu_mPas",
         z3["u_viscosity_mpas"],
-        0.042,
+        0.11,
         "mPa s",
-        abs_tol=0.0005,
+        abs_tol=0.005,
     )
     _check(
         out,
         "U12.REAL.Z3.Re",
         z3["reynolds"],
-        12.7,
+        8.4,
         "",
         abs_tol=0.05,
     )
