@@ -3,6 +3,19 @@
 Ovaj dokument prati sadržajne i tehničke promjene javnih izdanja. Potvrđene
 pogreške pojedinih izdanja dodatno se vode u [errati](docs/errata.md).
 
+## Konvencije pisanja i skill za recenziju — 8. studenoga 2026.
+
+- **Pravila i postupak**: `docs/konvencije_pisanja.md` (pravila K1–K16), skill
+  `.claude/skills/recenzija-prirucnika/` (postupak recenzije, upute za
+  neovisna čitanja, postupak FESB-a, obrazac recenzije, odgovor recenzentu) i
+  alat `tools/prirucnik_stats.py` (profil teksta, nalazi, obrnuti nacrt,
+  provjera značenja nakon prerade).
+- **Ispravci nađeni alatom**: popisi brojeva u formulama s točkom-zarezom
+  (pog. 2 i 12); naslovi triju zadataka Z5 bez pitanja (pog. 2, 4, 9; ID-jevi
+  nepromijenjeni); engleski izrazi uz „engl.” (dodatci A–C, pog. 14); u
+  dodatku C pogreške po poglavljima kao natuknice umjesto jedne rečenice s
+  točkom-zarezom. Brojevi i ID-jevi nepromijenjeni.
+
 ## Provedba završne recenzije — 17. listopada 2026.
 
 Ispravci prema `RECENZIJA_ZAVRSNA.md`; izvještaji po područjima u `docs/radno/provedba-recenzije-2026-10/`.
