@@ -1,4 +1,4 @@
-"""Čita četiri stvarna SVG-a U13: topologija toka, petlja, kote, profili i krivulje.
+"""Čita četiri stvarna SVG-a U13: topologija toka, petlja, kote, profili i prizori vježbi.
 
 Ne ovisi o privremenom generatoru skica. Kvantitativne krivulje provjerava
 iz njihovih nacrtanih koordinata i izvornih jednadžbi zadatka.
@@ -65,6 +65,155 @@ def reservoir_wall_and_openings(root, prefix, surface_id, ports):
               'Svi preostali dijelovi stijenke moraju biti omočen rub')
         e.set('d', 'M'+' L'.join(f'{x} {y}' for x,y in points))
     wall_and_openings(wet, prefix, ports)
+
+
+def inside(point,poly):
+    """Točka unutar zatvorenog poligona (pravilo parnosti presjeka)."""
+    x,y=point;hit=False
+    for (x0,y0),(x1,y1) in zip(poly,poly[1:]):
+        if (y0>y)!=(y1>y) and x<x0+(y-y0)*(x1-x0)/(y1-y0):hit=not hit
+    return hit
+
+
+def ground_y(ground,x):
+    for (x0,y0),(x1,y1) in zip(ground,ground[1:]):
+        if min(x0,x1)<=x<=max(x0,x1) and x1!=x0:
+            return y0+(y1-y0)*(x-x0)/(x1-x0)
+    return None
+
+
+def sample(points,step=2.0):
+    out=[]
+    for a,b in zip(points,points[1:]):
+        n=max(1,int(math.dist(a,b)/step))
+        out+=[(a[0]+(b[0]-a[0])*i/n,a[1]+(b[1]-a[1])*i/n) for i in range(n+1)]
+    return out
+
+
+def submerged(end,fluid_poly,surface_y,bore,message):
+    check(inside(end,fluid_poly),message+': kraj cijevi leži u fluidu')
+    check(end[1]-surface_y>=bore,message+': kraj je uronjen ispod slobodne površine')
+    bottom=max(y for _,y in fluid_poly)
+    check(bottom-end[1]>=bore,message+': kraj je odmaknut od dna')
+
+
+def above_ground(c,pipe_id,ground_ids,outer,message):
+    pts=[pt for part in subpaths(node(c,pipe_id+'fluid')) for pt in sample(part)]
+    for gid in ground_ids:
+        g=path(node(c,gid))
+        for x,y in pts:
+            yg=ground_y(g,x)
+            if yg is not None and not (x in (g[0][0],g[-1][0])):
+                check(y+outer/2<=yg+0.6,message+f': vod ne smije prolaziti kroz tlo ({x:.0f}, {y:.0f})')
+
+
+def on_pipe(c,pipe_id,point,message):
+    parts=subpaths(node(c,pipe_id+'fluid'))
+    check(min(distance_to_path(point,part) for part in parts)<0.02,message)
+
+
+def labels_clear(c,group,pipe_id,outer,message):
+    parts=subpaths(node(c,pipe_id+'fluid'))
+    for t in node(c,group).iter():
+        if t.tag.endswith('text') and t.get('x'):
+            pt=(float(t.get('x')),float(t.get('y')))
+            check(all(distance_to_path(pt,part)>outer/2 for part in parts),
+                  message+': oznaka ne leži na vodu: '+''.join(t.itertext()))
+
+
+def circle_centre(e):return float(e.get('cx')),float(e.get('cy'))
+
+
+def check_exercise_scenes(c,p):
+    """Prizori Z1, Z2, Z4, Z5 i Z6: otvoreni uronjeni krajevi, tok iznad tla i razine."""
+    # Z1: jezero -> crpka -> uz brdo do kuća; točka 2 na vodu.
+    parts,bore=graph(c,p+'z1pipe');outer=float(node(c,p+'z1pipeouter').get('stroke-width'))
+    lake=path(node(c,p+'z1lake'));ys=line(node(c,p+'z1lakeSurface'))[0][1]
+    close(min(y for _,y in lake),ys,'Z1: slobodna površina jezera je gornji rub vode')
+    submerged(parts[0][0],lake,ys,bore,'Z1 usis')
+    above_ground(c,p+'z1pipe',[p+'z1ground'],outer,'Z1')
+    on_pipe(c,p+'z1pipe',circle_centre(node(c,p+'z1point2')),'Z1: točka 2 leži na osi voda')
+    on_pipe(c,p+'z1pipe',circle_centre(node(c,p+'z1pumpSymbol')),'Z1: crpka leži na vodu')
+    check(node(c,p+'z1pumpSymbol').get('fill')=='none','Z1: simbol crpke ne zatvara vod')
+    check(circle_centre(node(c,p+'z1point2'))[1]<ys,'Z1: točka 2 je iznad razine jezera')
+    a,b=line(node(c,p+'z1velocity'));seg=(parts[0][2],parts[0][3])
+    angle=lambda u,v:math.atan2(v[1]-u[1],v[0]-u[0])
+    check(abs(angle(a,b)-angle(*seg))<math.radians(0.5) and (b[0]-a[0])>0,
+          'Z1: strelica protoka usporedna je s vodom uz brdo i pokazuje prema kućama')
+    labels_clear(c,p+'z1',p+'z1pipe',outer,'Z1')
+
+    # Z2: ulje iz donjeg u gornji spremnik; oba kraja uronjena.
+    parts,bore=graph(c,p+'z2pipe');outer=float(node(c,p+'z2pipeouter').get('stroke-width'))
+    low=path(node(c,p+'z2lowfluid'));up=path(node(c,p+'z2upfluid'))
+    yl=line(node(c,p+'z2lowsurface'))[0][1];yu=line(node(c,p+'z2upsurface'))[0][1]
+    submerged(parts[0][0],low,yl,bore,'Z2 usis')
+    submerged(parts[0][-1],up,yu,bore,'Z2 izlaz')
+    for t in ('low','up'):
+        wall_and_openings_free(c,p+'z2'+t)
+    dim=line(node(c,p+'z2dz'))
+    close(dim[0][1],yu,'Z2: Δz počinje na slobodnoj površini taložnog tanka')
+    close(dim[1][1],yl,'Z2: Δz završava na slobodnoj površini donjeg spremnika')
+    on_pipe(c,p+'z2pipe',circle_centre(node(c,p+'z2pumpSymbol')),'Z2: crpka leži na vodu')
+    check(node(c,p+'z2pipefluid').get('stroke')=='#eadfc5','Z2: vod je ispunjen istim uljem kao spremnici')
+    labels_clear(c,p+'z2',p+'z2pipe',outer,'Z2')
+
+    # Z4: jezero -> crpka -> vodosprema; izlaz uronjen, vod iznad tla i iznad stijenke.
+    parts,bore=graph(c,p+'z4pipe');outer=float(node(c,p+'z4pipeouter').get('stroke-width'))
+    lake=path(node(c,p+'z4lake'));ys=line(node(c,p+'z4lakeSurface'))[0][1]
+    submerged(parts[0][0],lake,ys,bore,'Z4 usis')
+    tank=path(node(c,p+'z4tankfluid'));yt=line(node(c,p+'z4tanksurface'))[0][1]
+    submerged(parts[0][-1],tank,yt,bore,'Z4 izlaz u vodospremu')
+    top=path(node(c,p+'z4tankwall0'))[0][1]
+    check(min(y for _,y in parts[0])+outer/2<top,'Z4: vod prelazi iznad ruba vodospreme')
+    above_ground(c,p+'z4pipe',[p+'z4ground'],outer,'Z4')
+    g=path(node(c,p+'z4ground'))
+    close(ground_y(g,(tank[0][0]+tank[1][0])/2),max(y for _,y in tank),'Z4: vodosprema leži na tlu brda')
+    check(yt<ys,'Z4: razina vodospreme iznad razine jezera')
+    on_pipe(c,p+'z4pipe',circle_centre(node(c,p+'z4pumpSymbol')),'Z4: crpka leži na vodu')
+    labels_clear(c,p+'z4',p+'z4pipe',outer,'Z4')
+
+    # Z5: potopna crpka u bunaru, dugi vod do ulaza N.
+    parts,bore=graph(c,p+'z5pipe');outer=float(node(c,p+'z5pipeouter').get('stroke-width'))
+    well=path(node(c,p+'z5well'));yw=line(node(c,p+'z5wellSurface'))[0][1]
+    pump=node(c,p+'z5pumpSymbol');pc=circle_centre(pump);r=float(pump.get('r'))
+    check(inside(pc,well) and pc[1]-r>yw and pc[1]+r<max(y for _,y in well),'Z5: potopna crpka je cijela pod vodom i iznad dna')
+    close(math.dist(parts[0][0],pc),0,'Z5: tlačni vod počinje na crpki')
+    x0,x1=min(x for x,_ in well),max(x for x,_ in well)
+    check(x0+outer/2<parts[0][0][0]<x1-outer/2,'Z5: vod prolazi oknom bunara bez dodira stijenki')
+    above_ground(c,p+'z5pipe',[p+'z5groundR'],outer,'Z5')
+    N=circle_centre(node(c,p+'z5pointN'))
+    on_pipe(c,p+'z5pipe',N,'Z5: ulaz N leži na vodu');check(N[1]<yw,'Z5: N je iznad razine u bunaru')
+    labels_clear(c,p+'z5',p+'z5pipe',outer,'Z5')
+
+    # Z6: jezero, vodosprema i naselje; omjer razina 62 : 20 i otvoren izlaz L3.
+    parts,bore=graph(c,p+'z6pipe');outer=float(node(c,p+'z6pipeouter').get('stroke-width'))
+    lake=path(node(c,p+'z6lake'));ys=line(node(c,p+'z6lakeSurface'))[0][1]
+    submerged(parts[0][0],lake,ys,bore,'Z6 usis')
+    tank=path(node(c,p+'z6tankfluid'));yt=line(node(c,p+'z6tanksurface'))[0][1]
+    submerged(parts[1][-1],tank,yt,bore,'Z6 izlaz L1 u vodospremu')
+    w0=path(node(c,p+'z6tankwall0'));w1=path(node(c,p+'z6tankwall1'))
+    xr=max(x for x,_ in tank);start=parts[3][0]
+    close(start[0],xr,'Z6: L3 počinje na desnoj stijenci vodospreme')
+    close(w0[-1][1]-w1[-1][1],bore,'Z6: otvor u stijenci ima puni provrt L3')
+    close((w0[-1][1]+w1[-1][1])/2,start[1],'Z6: otvor je centriran na os L3')
+    check(yt<start[1]<max(y for _,y in tank),'Z6: izlaz L3 je ispod razine vode i iznad dna')
+    N=circle_centre(node(c,p+'z6pointN'))
+    on_pipe(c,p+'z6pipe',N,'Z6: ulaz N leži na vodu')
+    close((ys-yt)/(ys-N[1]),62/20,'Z6: visine vodospreme i naselja u omjeru 62 : 20',tol=1e-3)
+    above_ground(c,p+'z6pipe',[p+'z6groundA',p+'z6groundC'],outer,'Z6')
+    on_pipe(c,p+'z6pipe',circle_centre(node(c,p+'z6pumpSymbol')),'Z6: crpka leži na vodu')
+    labels_clear(c,p+'z6',p+'z6pipe',outer,'Z6')
+
+
+def wall_and_openings_free(c,prefix):
+    """Otvoreni spremnik: stijenke prate rub fluida, a vrh ostaje otvoren."""
+    fluid=path(node(c,prefix+'fluid'));ys=line(node(c,prefix+'surface'))[0][1]
+    xs=[x for x,_ in fluid];bottom=max(y for _,y in fluid)
+    w0=path(node(c,prefix+'wall0'));w1=path(node(c,prefix+'wall1'))
+    close(w0[0][0],min(xs),prefix+': lijeva stijenka na rubu fluida')
+    close(w1[0][0],max(xs),prefix+': desna stijenka na rubu fluida')
+    check(w0[0][1]<ys and w1[0][1]<ys,prefix+': stijenke se nastavljaju iznad slobodne površine')
+    close(w0[1][1],bottom,prefix+': dno spremnika na rubu fluida')
 
 
 def main():
@@ -137,72 +286,12 @@ def main():
 
     p='u13ex_'
     for n in range(1,7):node(c,p+f'z{n}')
-    for n in (1,2):
-        wall_and_openings(c,p+f'z{n}',[(46,151),(392,151)])
-        close(delta(node(c,p+f'z{n}D'))[1],48,'Z1/Z2: D je unutarnji razmak')
-        dim=line(node(c,p+f'z{n}L'))
-        for j in (1,2):close(dim[j-1][0],line(node(c,p+f'z{n}section{j}'))[0][0],'L spaja referentne presjeke')
+    check_exercise_scenes(c,p)
     parts,_=graph(c,p+'z3pipe')
     for name,x in [('A',106),('B',340)]:
         e=node(c,p+'z3'+name);point=float(e.get('cx')),float(e.get('cy'))
         close(point[0],x,'Z3: čvor je u stvarnom spoju')
         check(sum(distance_to_path(point,part)<1e-6 for part in parts)>=2,'Z3: čvor spaja dovod/odvod i oba ogranka')
-    # Recover SI inputs from actual plotted q (L/s), H (m) coordinates.
-    def inverse(point):return (point[0]-61)/10*1e-3,(239-point[1])/4.1
-    for x,y in path(node(c,p+'z4pump')):
-        Q,H=inverse((x,y));close(H,30-30000*Q*Q,'Z4: crpkina krivulja i jedinice osi',tol=1e-6)
-    close(inverse((61,line(node(c,p+'z4staticHead'))[0][1]))[1],8,'Z4: stvarna statička visina 8 m')
-    # Z4 traži radnu točku: skica smije pokazati samo zadanu krivulju crpke i
-    # statičku visinu, ne krivulju sustava (Colebrook) ni presjecište.
-    z4=node(c,p+'z4')
-    for hidden in ('z4system','z4operatingPoint'):
-        check(all(e.get('id')!=p+hidden for e in c.iter()),'Z4: skica ne smije prikazati '+hidden)
-    check(not any(e.tag.endswith(('circle','ellipse','polyline','polygon')) for e in z4.iter()),
-          'Z4: nema označene radne točke ni dodatne krivulje')
-    curves=[e.get('id') for e in z4.iter() if e.tag.endswith('path') and len(path(e))>2]
-    check(curves==[p+'z4pump'],'Z4: jedina nacrtana krivulja je zadana karakteristika crpke')
-    for e in z4.iter():
-        if e.tag.endswith('line') and e.get('id')!=p+'z4staticHead':
-            a,b=line(e)
-            check(math.dist(a,b)<=6+1e-9,'Z4: osim statičke visine nema pomoćnih crta (npr. prema Q_op ili H_op)')
-    unknown=''.join(node(c,p+'z4unknown').itertext())
-    check(unknown.endswith('= ?') and 'radna točka' in unknown,'Z4: krivulja sustava i radna točka označene su kao nepoznanica')
-    check(not any(''.join(t.itertext()).strip()=='Hs' for t in z4.iter() if t.tag.endswith('text')),
-          'Z4: nema oznake nacrtane krivulje sustava')
-    radii=[]
-    for i,D in enumerate((80,100,125)):
-        e=node(c,p+f'z5bore{i}');radius=float(e.get('r'));cx=float(e.get('cx'));radii.append(radius)
-        dim=line(node(c,p+f'z5D{i}'))
-        close(dim[0][0],cx-radius,'Z5: prvi kraj unutarnjeg promjera')
-        close(dim[1][0],cx+radius,'Z5: drugi kraj unutarnjeg promjera')
-        close(radius/D,.29,'Z5: točan međusobni omjer ponuđenih promjera')
-    # Z6: balastna crpka s napunjenim usisom kroz usisni koš u oplati.
-    parts,width=graph(c,p+'z6pipe');inlet=parts[0][0]
-    waterline=line(node(c,p+'z6waterline'));y_wl=waterline[0][1]
-    close(waterline[1][1],y_wl,'Z6: vodna linija je vodoravna')
-    sea=rect(node(c,p+'z6seaFluid'))
-    close(sea[1],y_wl,'Z6: more počinje na vodnoj liniji')
-    close(sea[0]+sea[2],inlet[0],'Z6: more doseže oplatu na mjestu usisnog koša')
-    close(waterline[1][0],inlet[0],'Z6: vodna linija završava na oplati')
-    check(y_wl+width/2<inlet[1]<sea[1]+sea[3]-width/2,'Z6: usisni koš je ispod vodne linije i iznad dna prikaza')
-    upper=path(node(c,p+'z6hullWall0'));lower=path(node(c,p+'z6hullWall1'))
-    close(upper[-1][0],inlet[0],'Z6: gornja oplata leži na usisnom košu');close(lower[0][0],inlet[0],'Z6: donja oplata leži na usisnom košu')
-    close(lower[0][1]-upper[-1][1],width+4,'Z6: otvor koša propušta puni provrt usisa')
-    close((lower[0][1]+upper[-1][1])/2,inlet[1],'Z6: koš centriran na usisni vod')
-    check(upper[0][1]<y_wl,'Z6: oplata se nastavlja iznad vodne linije')
-    S=node(c,p+'z6S');dim=line(node(c,p+'z6zs'))
-    close(float(S.get('cy')),inlet[1],'Z6: referentni presjek S na osi usisnog voda')
-    close(dim[0][1],float(S.get('cy')),'Z6: kota počinje na visini referentnog usisa')
-    close(dim[1][1],y_wl,'Z6: kota završava na vodnoj liniji')
-    close(dim[0][1]-dim[1][1],1.8*38,'Z6: S je 1,8 m ispod vodne linije (napunjen usis)')
-    # z_s je visina usisnog presjeka iznad slobodne površine (P6, jednadžba NPSH_a):
-    # kod napunjenog usisa oznaka mora nositi negativan predznak.
-    zs_labels=[''.join(t.itertext()) for t in node(c,p+'z6').iter() if t.tag.endswith('text') and ''.join(t.itertext()).startswith('zs')]
-    check(zs_labels==['zs = −1,8 m'],'Z6: z_s = −1,8 m (presjek ispod vodne linije)')
-    for name in ('z6inletVelocity','z6velocity'):
-        dx,dy=delta(node(c,p+name));check(dx>0 and dy==0,'Z6: tok ulazi iz mora prema crpki')
-    check(node(c,p+'z6pumpSymbol').get('fill')=='none','Z6: simbol crpke nije pregrada')
-
     # P3: petlja gradske mreže.
     d=ET.parse(ROOT/'u13_ch1_serijsko_paralelna_mreza.svg').getroot()
     ids=[e.get('id') for e in d.iter() if e.get('id')]
@@ -250,7 +339,7 @@ def main():
         if t.tag.endswith('text') and t.get('x'):
             pt=(float(t.get('x')),float(t.get('y')))
             check(all(distance_to_path(pt,line(outer[k]))>ow[k]/2 for k in pipes),'P3: oznaka ne leži na cijevi: '+''.join(t.itertext()))
-    print('U13 SVG PASS: 4 slike; otvoreni spojeni vodovi, petlja gradske mreže, napunjen brodski usis, kote, profili, kružno koljeno, EGL/HGL te kvantitativna crpna krivulja Z4 bez otkrivene krivulje sustava i radne točke.')
+    print('U13 SVG PASS: 4 slike; otvoreni spojeni vodovi, petlja gradske mreže, kote, profili, kružno koljeno, EGL/HGL te prizori vježbi Z1–Z6: uronjeni usisi i izlazi, vodovi iznad tla, otvoren izlaz vodospreme i omjer razina 62 : 20.')
 
 
 if __name__=='__main__':main()

@@ -1833,7 +1833,7 @@
       "kind": "chapter",
       "number": "13",
       "part": "part-5",
-      "source_sha256": "0dc58bc04e20ef113884cdf17727336f9b0ea6ac93e8af09b42acd292bda2782",
+      "source_sha256": "2e8f3170579c4381222276ec15429243708534a71654459c35ba761fe21b2c62",
       "sections": [
         {
           "id": "sec-realna-energijska-bilanca",
@@ -1969,12 +1969,12 @@
         "ex-radna-tocka-vfd",
         "ex-energijski-ledger-hladenja",
         "ex-npsha-usisne-crpke",
-        "task-dopusteni-pad-tlaka-dionice",
-        "task-dva-fluida-isti-vod",
+        "task-tlak-vode-u-zaselku",
+        "task-ulje-topli-rad-hladni-start",
         "task-uravnotezenje-paralelnih-grana",
-        "task-radna-tocka-hrapavog-voda",
-        "task-robustan-izbor-promjera",
-        "task-balastna-crpka-regulacija-npsh"
+        "task-crpka-puni-vodospremu",
+        "task-rekonstrukcija-voda-naselja",
+        "task-nocno-punjenje-vodospreme"
       ]
     },
     "u14": {
@@ -2524,7 +2524,7 @@
       "kind": "appendix",
       "number": "F",
       "part": null,
-      "source_sha256": "94e6f11b131bab1bb9d0263282ce7a89af6e76be979fd191397392b789308c26",
+      "source_sha256": "c01c6448922a4e91f6b01ddc5ae3791479d45456970a99f75f1c6d85bf6afcc1",
       "sections": [
         {
           "id": "ključ-smjernica-i-kontrolnih-rezultata",
@@ -9978,8 +9978,8 @@
       "kind": "Figure",
       "document": "u13",
       "number": "13.4",
-      "caption": "Skice uz Z1–Z6: cjevovodi, paralelne grane, radna točka, izbor promjera i usis balastne crpke.",
-      "alt": "Šest panela prikazuje vodoravnu dionicu s ventilom, vod za dva fluida, dva paralelna ogranka između čvorova A i B, dijagram krivulje crpke sa statičkom visinom, tri ponuđena presjeka cijevi i balastnu crpku koja kroz usisni koš u oplati broda usisava ispod vodne linije.",
+      "caption": "Skice uz Z1–Z6: zaselak na brdu, pretakanje ulja, paralelni ogranci, punjenje vodospreme, rekonstrukcija voda iz bunara i noćno punjenje vodospreme.",
+      "alt": "Šest panela: crpka uz jezero tlači vodu uz brdo do kuća; crpka pretače ulje iz donjeg spremnika u viši taložni tank; dva paralelna ogranka između čvorova A i B; crpka uz jezero puni vodospremu na brdu iznad naselja; potopna crpka u bunaru tlači vodu dugim vodom do naselja; crpka uz jezero ili izravno opskrbljuje naselje ili puni vodospremu iz koje voda gravitacijski teče u naselje.",
       "source": "../assets/print/u13_mreze_vjezbe_skice.svg",
       "type": "composite",
       "variants": {
@@ -10041,21 +10041,21 @@
       "level": "T3",
       "label": "P6"
     },
-    "task-dopusteni-pad-tlaka-dionice": {
-      "id": "task-dopusteni-pad-tlaka-dionice",
+    "task-tlak-vode-u-zaselku": {
+      "id": "task-tlak-vode-u-zaselku",
       "kind": "Problem",
       "document": "u13",
       "number": "13.1",
-      "title": "Dopušteni pad tlaka dionice",
+      "title": "Crpka za zaselak na brdu",
       "level": "T1",
       "label": "Z1"
     },
-    "task-dva-fluida-isti-vod": {
-      "id": "task-dva-fluida-isti-vod",
+    "task-ulje-topli-rad-hladni-start": {
+      "id": "task-ulje-topli-rad-hladni-start",
       "kind": "Problem",
       "document": "u13",
       "number": "13.2",
-      "title": "Isti vod, dva fluida i dva režima",
+      "title": "Ulje pri toplom radu i hladnom startu",
       "level": "T1",
       "label": "Z2"
     },
@@ -10068,30 +10068,30 @@
       "level": "T2",
       "label": "Z3"
     },
-    "task-radna-tocka-hrapavog-voda": {
-      "id": "task-radna-tocka-hrapavog-voda",
+    "task-crpka-puni-vodospremu": {
+      "id": "task-crpka-puni-vodospremu",
       "kind": "Problem",
       "document": "u13",
       "number": "13.4",
-      "title": "Radna točka hrapavog voda",
+      "title": "Crpka puni vodospremu naselja",
       "level": "T2",
       "label": "Z4"
     },
-    "task-robustan-izbor-promjera": {
-      "id": "task-robustan-izbor-promjera",
+    "task-rekonstrukcija-voda-naselja": {
+      "id": "task-rekonstrukcija-voda-naselja",
       "kind": "Problem",
       "document": "u13",
       "number": "13.5",
-      "title": "Najmanji promjer uz dopušteni gubitak",
+      "title": "Rekonstrukcija voda za veće naselje",
       "level": "T3",
       "label": "Z5"
     },
-    "task-balastna-crpka-regulacija-npsh": {
-      "id": "task-balastna-crpka-regulacija-npsh",
+    "task-nocno-punjenje-vodospreme": {
+      "id": "task-nocno-punjenje-vodospreme",
       "kind": "Problem",
       "document": "u13",
       "number": "13.6",
-      "title": "Regulacija balastne crpke i usisna rezerva",
+      "title": "Noćno punjenje vodospreme",
       "level": "T4",
       "label": "Z6"
     },
@@ -11614,15 +11614,11 @@
     },
     {
       "document": "u13",
+      "target": "eq-realna-energijska-bilanca"
+    },
+    {
+      "document": "u13",
       "target": "eq-swamee-jain"
-    },
-    {
-      "document": "u13",
-      "target": "eq-npsha-spremnik"
-    },
-    {
-      "document": "u13",
-      "target": "eq-npsha-spremnik"
     },
     {
       "document": "u14",

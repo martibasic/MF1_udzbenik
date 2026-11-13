@@ -148,3 +148,46 @@ novi alias bez sadržajne koristi.
 Bez strukturnih izmjena: Z1 (inverzni dopušteni pad tlaka), Z2 (dva fluida, dva režima), Z3 (paralelne grane s ventilom), Z4 (radna točka s Colebrookom), Z5 (izbor promjera i starenje), Z6 (regulacija balastne crpke i NPSH) ne ponavljaju primjere i pokrivaju cjelinu poglavlja.
 
 Provjere ponovno prošle u sklopu cjelokupnog ciklusa (verify_all, audit_publication, qa_audit, audit_sketch_design).
+
+## Revizija 11. 11. 2026. — prepoznatljivi prizori i jasniji tekst (odobreno u razgovoru)
+
+Povod: autorica je ocijenila da su zadatci za vježbu U13 previše generički, a tekst
+ponekad nejasan (što je zadano, o čemu je riječ). Kao smjernica za vrstu primjera i
+stil teksta poslužili su autoričini kolokviji i ispiti iz 2026. (crpka i naselje,
+vodosprema, rekonstrukcija voda, akumulacija s tarifama, ulje u laminarnom vodu).
+Zadatci nisu preuzeti: prizori, brojevi, pitanja i skice su novi.
+
+Dijagnoza: Z1 je obrnuti P1, Z2 ponavlja laminarni P2 uz Blasiusa, Z5 tri puta
+ponavlja P1, a Z6 zbraja P4, P5 i P6 (afinitet, energija, NPSH). Nijedan P ni Z
+nije imao potpunu bilancu s visinom terena i traženim tlakom kod potrošača, a
+Z4 je ishod iterativne radne točke skrivao iza reziduala i obveznog alata.
+
+| Mjesto | Prije (ID, razina) | Odluka i didaktička korist | Poslije (ID, razina) | Provjere |
+| --- | --- | --- | --- | --- |
+| Z1 | `task-dopusteni-pad-tlaka-dionice`, T1 | ZAMIJENITI: puna energijska bilanca jezero → kuće s tlakom u točki 2 i raspodjelom visine dobave | `task-tlak-vode-u-zaselku`, T1; aliasi oba stara ID-ja | verifier, SVG, D06 |
+| Z2 | `task-dva-fluida-isti-vod`, T1 | ZAMIJENITI: ulje topao rad / hladni start; provjera režima i $h_l\propto\nu$, porast tlaka u crpki | `task-ulje-topli-rad-hladni-start`, T1; aliasi | verifier (Hagen–Poiseuille), SVG, D06 |
+| Z3 | `task-uravnotezenje-paralelnih-grana`, T2 | ZADRŽATI | isti | — |
+| Z4 | `task-radna-tocka-hrapavog-voda`, T2 | PREPRAVITI u prizor: crpka puni vodospremu; ručna iteracija λ→Q sa Swamee–Jainom, tri snage, sati rada i dnevna energija | `task-crpka-puni-vodospremu`, T2; aliasi | verifier (bisekcija, Colebrook), notebook `u10_moody_dijagram`, SVG, D06 |
+| Z5 | `task-robustan-izbor-promjera`, T3 | ZAMIJENITI: dijagnoza ostarjelog voda iz današnjeg stanja i karakteristike crpke, zatim izbor promjera za veći protok | `task-rekonstrukcija-voda-naselja`, T3; alias | verifier, SVG, D06 |
+| Z6 | `task-balastna-crpka-regulacija-npsh`, T4 | ZAMIJENITI: izravna opskrba ili noćno punjenje vodospreme; trošak naspram energije, granična tarifa, tlak pri gravitacijskoj opskrbi, volumen i kriteriji izvan modela | `task-nocno-punjenje-vodospreme`, T4; aliasi | verifier, notebook `u13_paralelne_grane`, SVG, D06 |
+
+NPSH ostaje pokriven primjerom P6 i samoprovjerom; brodska primjena ostaje u Z2.
+`rewrite_status`: complete; `rewrite_level`: selective; `sketch_requirement`:
+zajednička slika vježbi, pet novih panela (Z3 nepromijenjen), Z6 izričito shematski.
+
+Neovisno riješeno prije pisanja (Python, scratchpad): Z1 $H_p=80{,}60$ m;
+Z2 $h_l=3{,}634/29{,}07$ m; Z4 $Q=27{,}590$ L/s (Colebrook 27,644 L/s);
+Z5 $\lambda_0=0{,}03109$, odabir 200 mm uz 3,444 bar; Z6 trošak 39,71 / 36,32 €
+dnevno, granična noćna cijena 0,1350 €/kWh, $p_N=3{,}974$ bar, 691,2 m³.
+Verifier je ispravio objavljenu promjenu protoka u drugom koraku Z4 s 0,66 na 0,65 %.
+
+Provjere 11. 11. 2026.: `verify_u13_integrated.py` 134 OK / 0 FAIL;
+`verify_all.py`, `audit_publication.py` (90 zadataka), `qa_audit.py`,
+`audit_typst.py`, `audit_architecture.py`, `test_book_model.py`,
+`audit_sketch_design.py` (s novim provjerama prizora), `audit_print_layouts.mjs`
+i oba notebooka: PASS. Ručni mutacijski test (izlaz Z4 iznad razine vode) ruši
+provjeru skice, kako i treba. Tiskovna kompozicija pregledana je u stvarnom PDF-u;
+nakon prvog rendera oznake su razmaknute od usisa, stijenki i kuća jer ih ispis
+relativno povećava oko 1,7 puta. Puni `scripts/check_publication.py`: PASS (906 s),
+PDF ima 354 stranice kao i prije.
+Provjere ne zamjenjuju autoričinu procjenu, stručnu recenziju ni studentski pilot.

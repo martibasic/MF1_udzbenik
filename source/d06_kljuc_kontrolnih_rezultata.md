@@ -608,21 +608,21 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 ## Gubitci, cjevovodi, crpke i mreže
 
-### Z1. Dopušteni pad tlaka dionice {#key-task-dopusteni-pad-tlaka-dionice .unnumbered .unlisted}
+### Z1. Crpka za zaselak na brdu {#key-task-tlak-vode-u-zaselku .unnumbered .unlisted}
 
-[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-dopusteni-pad-tlaka-dionice)
+[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-tlak-vode-u-zaselku)
 
-**Smjernica postupka.** Pretvori $\Delta p_{dop}$ u visinu $h_g$, sastavi $\zeta=\lambda L/D+\sum\xi$ i iz $h_g=\zeta v^2/(2g)$ izrazi $v$; tek zatim izračunaj $Q=vA$. Udio linijskog gubitka je $(\lambda L/D)/\zeta$.
+**Smjernica postupka.** Postavi energijsku bilancu [(13.1)](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-realna-energijska-bilanca) od slobodne površine jezera do točke 2. Na površini jezera su manometarski tlak, brzina i visina jednaki nuli. Gubitak cijelog voda je $h_g=(\lambda L/D+\sum\xi)\,v^2/(2g)$.
 
-**Kontrolni rezultat ili kriterij.** $h_g=2{,}554\ \mathrm{m}$, $\zeta=16{,}5$, $v=1{,}743\ \mathrm{m/s}$ i $Q_{max}=13{,}69\ \mathrm{L/s}$. Linijski gubitak čini $75{,}8\ \%$ ukupnog. Provjeri unatrag daje li $\zeta v^2/(2g)$ ponovno $h_g$.
+**Kontrolni rezultat ili kriterij.** $v=1{,}146\ \mathrm{m/s}$, $v^2/(2g)=0{,}067\ \mathrm{m}$, $h_g=13{,}05\ \mathrm{m}$ i $p_M/(\rho g)=25{,}48\ \mathrm{m}$. Visina dobave je $H_p=80{,}6\ \mathrm{m}$, a $P_h=7{,}12\ \mathrm{kW}$. Geodetska visina čini 52 %, tlak u točki 2 32 %, a gubitci 16 % visine dobave; brzinska visina je zanemariva.
 
-### Z2. Isti vod, dva fluida i dva režima {#key-task-dva-fluida-isti-vod .unnumbered .unlisted}
+### Z2. Ulje pri toplom radu i hladnom startu {#key-task-ulje-topli-rad-hladni-start .unnumbered .unlisted}
 
-[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-dva-fluida-isti-vod)
+[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-ulje-topli-rad-hladni-start)
 
-**Smjernica postupka.** Brzina je ista za oba fluida; razlikuju se $Re$ (dakle režim i $\lambda$) i gustoća. Za $Re<2300$ upotrijebi $\lambda=64/Re$, a za $Re>4000$ u glatkoj cijevi Blasiusov zapis $\lambda=0{,}3164\,Re^{-1/4}$. Za drugi dio izrazi $\Delta p$ kao potenciju od $Q$ za svaki zapis $\lambda$.
+**Smjernica postupka.** Brzina je ista u oba stanja; mijenja se samo $\nu$. Prije izbora zapisa za $\lambda$ provjeri $Re$. Između dviju slobodnih površina visina dobave je $H_p=\Delta z+h_l$.
 
-**Kontrolni rezultat ili kriterij.** $v=0{,}597\ \mathrm{m/s}$. A: $Re=796$ (laminarno), $\lambda=0{,}0804$, $\Delta p_A=7{,}73\ \mathrm{kPa}$. B: $Re=4775$ (turbulentno), $\lambda=0{,}0381$, $\Delta p_B=3{,}38\ \mathrm{kPa}$. Pri $2Q$: $\Delta p_A=15{,}5\ \mathrm{kPa}$ (ostaje laminarno, $Re=1592$), $\Delta p_B\approx11{,}4\ \mathrm{kPa}$.
+**Kontrolni rezultat ili kriterij.** $v=0{,}796\ \mathrm{m/s}$. Toplo: $Re=398$ (laminarno), $\lambda=0{,}161$, $h_l=3{,}63\ \mathrm{m}$, $H_p=8{,}63\ \mathrm{m}$ i $\Delta p_p=0{,}745\ \mathrm{bar}$. Hladno: $Re=49{,}7$, $\lambda=1{,}29$, $h_l=29{,}1\ \mathrm{m}$, $H_p=34{,}1\ \mathrm{m}$ i $\Delta p_p=2{,}94\ \mathrm{bar}$. Gubitak je točno 8 puta veći: u laminarnom toku pri istom protoku vrijedi $h_l\propto\nu$.
 
 ### Z3. Uravnoteženje paralelnih grana {#key-task-uravnotezenje-paralelnih-grana .unnumbered .unlisted}
 
@@ -632,29 +632,29 @@ Rezultat usporedi tek nakon vlastitog pokušaja. Provjeri i model, pretpostavke,
 
 **Kontrolni rezultat ili kriterij.** Bez ventila $Q_1=13{,}33$ i $Q_2=6{,}67\ \mathrm{L/s}$, $h_{AB}=2{,}13\ \mathrm{m}$. Ventil ide u granu 1: $R_V=36\,000\ \mathrm{s^2/m^5}$. Vrijedi $Q_1=Q_2=10{,}00\ \mathrm{L/s}$, $h_{AB}=4{,}80\ \mathrm{m}$ i $h_{g,V}=3{,}60\ \mathrm{m}$. Provjera: $(R_1+R_V)Q_1^2=R_2Q_2^2$ i $Q_1+Q_2=Q$.
 
-### Z4. Radna točka hrapavog voda {#key-task-radna-tocka-hrapavog-voda .unnumbered .unlisted}
+### Z4. Crpka puni vodospremu naselja {#key-task-crpka-puni-vodospremu .unnumbered .unlisted}
 
-[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-radna-tocka-hrapavog-voda)
+[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-crpka-puni-vodospremu)
 
-**Smjernica postupka.** Za probni $Q$ odredi $v$, $Re$ i $\lambda$, pa $H_s=\Delta z+(\lambda L/D+\sum\xi)v^2/(2g)$. Mijenjaj $Q$ dok $H_p-H_s$ ne iščezne. Provjeri i izvorni Colebrookov rezidual. Zatim $P_h=\rho gQH_p$, $P_{vr}=P_h/\eta_p$ i $P_{el}=P_{vr}/\eta_m$.
+**Smjernica postupka.** Potrebna visina sustava je $H_s=\Delta z+(\lambda L/D+\sum\xi)\,8Q^2/(\pi^2gD^4)$. Uz poznat $\lambda$ jednakost $H_p=H_s$ daje kvadratnu jednadžbu po $Q$. Snage slijede iz $P_h=\rho gQH_p$, $P_{vr}=P_h/\eta_p$ i $P_{el}=P_{vr}/\eta_m$.
 
-**Kontrolni rezultat ili kriterij.** $Q_{op}\approx19{,}030\ \mathrm{L/s}$, $H_{op}\approx19{,}136\ \mathrm{m}$, $Re\approx2{,}423\cdot10^5$ i $\lambda\approx0{,}020812$. Snage su $P_h\approx3{,}572\ \mathrm{kW}$, $P_{vr}\approx4{,}700\ \mathrm{kW}$ i $P_{el}\approx5{,}109\ \mathrm{kW}$. Oba reziduala provjeravaju se s nezaokruženim rješenjem; vrijedi $P_h<P_{vr}<P_{el}$.
+**Kontrolni rezultat ili kriterij.** Prvi korak, s $\lambda=0{,}02$, daje $Q=27{,}41\ \mathrm{L/s}$, $Re=2{,}33\cdot10^5$ i novi $\lambda=0{,}01954$. Drugi korak daje $Q=27{,}59\ \mathrm{L/s}$ (promjena 0,65 %), a treći isti protok. Radna točka: $Q=27{,}6\ \mathrm{L/s}$, $H_p=39{,}1\ \mathrm{m}$, $Re=2{,}34\cdot10^5$ i $\lambda=0{,}0195$. Snage su $P_h=10{,}6\ \mathrm{kW}$, $P_{vr}=14{,}3\ \mathrm{kW}$ i $P_{el}=15{,}4\ \mathrm{kW}$. Crpka radi oko $15{,}1\ \mathrm{h}$ dnevno i troši oko $233\ \mathrm{kWh}$.
 
-### Z5. Najmanji promjer uz dopušteni gubitak {#key-task-robustan-izbor-promjera .unnumbered .unlisted}
+### Z5. Rekonstrukcija voda za veće naselje {#key-task-rekonstrukcija-voda-naselja .unnumbered .unlisted}
 
-[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-robustan-izbor-promjera)
+[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-rekonstrukcija-voda-naselja)
 
-**Smjernica postupka.** Za svaki $D$: $v=4Q/(\pi D^2)$, $Re=vD/\nu$, $k_s/D$, pa $\lambda$ iz jednadžbe [(13.16)](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-swamee-jain) i $h_g=(\lambda L/D+\sum\xi)v^2/(2g)$. I $Re$ i $k_s/D$ mijenjaju se s promjerom, pa se mijenja i $\lambda$. Odluku donesi prema najmanjem promjeru s $h_g\le15\ \mathrm{m}$, a zatim ponovi račun s većom hrapavošću.
+**Smjernica postupka.** Za današnje stanje crpka daje $H_p(Q_0)$. Energijska bilanca od razine u bunaru do točke N tada ima samo jednu nepoznanicu, $\lambda_0$. Za novi vod odredi $H_p(Q_1)$, a zatim za svaki promjer $Re$, $\lambda$ i tlak u točki N.
 
-**Kontrolni rezultat ili kriterij.** Nova cijev, za $D=80$; $100$ i $125\ \mathrm{mm}$: $\lambda\approx(0{,}0238;\,0{,}0228;\,0{,}0221)$ i $h_g\approx(33{,}1;\,10{,}8;\,3{,}56)\ \mathrm{m}$; svi su tokovi turbulentni ($Re\approx1{,}8$–$2{,}9\cdot10^5$). Najmanji dopušteni promjer je 100 mm. Nakon starenja ($k_s=0{,}50\ \mathrm{mm}$) za 100 mm je $\lambda\approx0{,}0309$ i $h_g\approx14{,}0\ \mathrm{m}$, još unutar granice, ali s rezervom od samo $1\ \mathrm{m}$.
+**Kontrolni rezultat ili kriterij.** Danas $H_p=80{,}0\ \mathrm{m}$, $v_0=1{,}13\ \mathrm{m/s}$ i $\lambda_0=0{,}0311$; novi vod istog promjera imao bi $\lambda=0{,}0183$. Pri $Q_1$ crpka daje $H_p=67{,}5\ \mathrm{m}$, a stari bi vod trebao $110{,}5\ \mathrm{m}$, dakle $43\ \mathrm{m}$ više. Novi vod promjera 150 mm daje $\lambda=0{,}0176$ i samo $1{,}12\ \mathrm{bar}$. Vod promjera 200 mm daje $\lambda=0{,}0176$ i $3{,}44\ \mathrm{bar}$, a vod promjera 250 mm $3{,}93\ \mathrm{bar}$. Odabire se 200 mm.
 
-### Z6. Regulacija balastne crpke i usisna rezerva {#key-task-balastna-crpka-regulacija-npsh .unnumbered .unlisted}
+### Z6. Noćno punjenje vodospreme {#key-task-nocno-punjenje-vodospreme .unnumbered .unlisted}
 
-[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-balastna-crpka-regulacija-npsh)
+[Vrati se na zadatak](u13_gubici_cjevovodi_crpke_i_mreze.qmd#task-nocno-punjenje-vodospreme)
 
-**Smjernica postupka.** Model: presjecište $H_p=H_{s,V}$, afinitetno skaliranje $H_{p,2}(Q)=s^2H_p(Q/s)$ pri istom $Q$, $P_{el}=\rho gQH/\eta$ (s $Q$ u $\mathrm{m^3/s}$) i usisna bilanca prema jednadžbi [(13.28)](u13_gubici_cjevovodi_crpke_i_mreze.qmd#eq-npsha-spremnik) uz $z_s<0$ (napunjen usis). Kriterij: $NPSH_a-NPSH_r$ uz marginu proizvođača; potrebni NPSH vrijedi samo pri nazivnoj brzini.
+**Smjernica postupka.** Pri izravnoj opskrbi bilanca ide od površine jezera do točke N, s pretlakom i brzinskom visinom u N. Pri punjenju ide od površine jezera do površine vode u vodospremi. Noćni protok je $Q_n\cdot24/8$. Vodosprema mora pokriti 16 dnevnih sati bez crpke. Isplativost usporedi preko dnevnog troška, ne preko utrošene energije.
 
-**Kontrolni rezultat ili kriterij.** $Q\approx22{,}36\ \mathrm{L/s}$; $(H_V;\,H_s)\approx(17{,}00;\,11{,}50)\ \mathrm{m}$ i $s\approx0{,}866$. $(E_V;\,E_n;\,\Delta E)\approx(8{,}19;\,5{,}54;\,2{,}65)\ \mathrm{MWh/god}$. Pri nazivnoj brzini $(NPSH_a;\,NPSH_r;\,NPSH_a-NPSH_r)\approx(10{,}06;\,4{,}50;\,5{,}56)\ \mathrm{m}$; pri najmanjem gazu $NPSH_a\approx8{,}66\ \mathrm{m}$. Za odluku nedostaju kriterij margine proizvođača, $NPSH_r(Q,n_2)$ za sniženu brzinu, stvarni porast $h_{g,s}$ zbog zaprljanog filtra te provjera uvlačenja zraka pri ljuljanju i trimu, što NPSH ne opisuje.
+**Kontrolni rezultat ili kriterij.** Danas: $H_p=52{,}7\ \mathrm{m}$, $P_{el}=9{,}55\ \mathrm{kW}$, $E=229\ \mathrm{kWh}$ i trošak $39{,}7$ € dnevno. Noćno punjenje: $Q=36\ \mathrm{L/s}$, $H_p=69{,}6\ \mathrm{m}$, $P_{el}=37{,}8\ \mathrm{kW}$, $E=303\ \mathrm{kWh}$ i trošak $36{,}3$ € dnevno. Energija raste za 32 %, a trošak pada za 8,5 %, oko $3{,}4$ € dnevno. Noćno punjenje isplati se dok je noćna cijena niža od $0{,}135$ €/kWh. Pri gravitacijskoj opskrbi pretlak u točki N je $3{,}97\ \mathrm{bar}$, a vodosprema mora imati korisni volumen najmanje $691\ \mathrm{m^3}$. Preporuka ovisi o kriterijima koje model ne sadrži: cijeni gradnje vodospreme i vodova, padu razine u vodospremi tijekom dana, učinkovitosti veće crpke te pričuvi za požar i nestanak struje.
 
 ## Turbostrojevi i propulzija
 
